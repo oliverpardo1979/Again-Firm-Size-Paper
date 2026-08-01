@@ -1,0 +1,35 @@
+# LaTeX build artifacts
+build/
+*.aux
+*.bbl
+*.bcf
+*.blg
+*.fdb_latexmk
+*.fls
+*.lof
+*.log
+*.lot
+*.out
+*.run.xml
+*.synctex.gz
+*.toc
+
+# Raw and processed data should not be stored in this manuscript repository
+Datos/
+Data/
+data/
+raw/
+processed/
+*.dta
+*.rds
+*.RData
+*.RDataTmp
+*.sav
+*.parquet
+*.feather
+
+# Local project and OS files
+.Rproj.user/
+*.Rproj
+.DS_Store
+Thumbs.db

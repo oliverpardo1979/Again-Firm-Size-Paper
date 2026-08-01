@@ -1,0 +1,25 @@
+\begin{table}[htbp]
+  \centering
+  \caption{Testing whether the firm-size wage premium changed over time}
+  \label{tab:firm-size-premium-trend-test}
+  \small
+  \begin{tabular}{lcccc}
+    \toprule
+    Firm size & Annual trend & S.E. & $p$-value & Implied 2008--2025 change \\
+    \midrule
+    2-3 & 0.0033 & (0.0028) & 0.262 & 5.7\% \\
+    4-5 & 0.0032 & (0.0031) & 0.314 & 5.6\% \\
+    6-10 & 0.0021 & (0.0034) & 0.536 & 3.7\% \\
+    11-19 & 0.0027 & (0.0039) & 0.494 & 4.7\% \\
+    20-30 & 0.0018 & (0.0041) & 0.661 & 3.2\% \\
+    31-50 & 0.0027 & (0.0044) & 0.542 & 4.7\% \\
+    51-100 & 0.0026 & (0.0042) & 0.549 & 4.5\% \\
+    101+ & 0.0045 & (0.0043) & 0.314 & 7.9\% \\
+    \bottomrule
+  \end{tabular}
+  \vspace{0.3em}
+  \begin{minipage}{0.95\textwidth}
+  \footnotesize
+  Notes: The annual trend is the coefficient on the interaction between firm-size category and a linear year trend, with solo workers as the omitted category. The specification controls for gender, age, age squared, education, formality, and sector-year fixed effects, and uses GEIH expansion weights. Standard errors are clustered by sector. The $p$-value corresponds to the two-sided test that the trend differs from zero. The final column reports $100\times[\exp(17\hat{\delta})-1]$, the implied change in the firm-size wage ratio between 2008 and 2025.
+  \end{minipage}
+\end{table}

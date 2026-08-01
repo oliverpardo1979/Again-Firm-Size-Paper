@@ -1,0 +1,97 @@
+\section{Methodology}
+
+\subsection{Main Specification}
+
+The main econometric exercise estimates the conditional firm-size wage premium in a log-wage model. The baseline specification is:
+\begin{equation}\label{eq:main}
+  \ln(w_{ist}) =
+  \alpha
+  + \sum_{g \neq g_0} \beta_g \mathbf{1}\{Size_{ist}=g\}
+  + X_{ist}'\gamma
+  + \lambda_{s \times t}
+  + \varepsilon_{ist},    
+\end{equation}
+where \(w_{ist}\) is real hourly labor income for worker \(i\) in sector \(s\) in year \(t\), \(Size_{ist}\) is the harmonized firm-size category, and \(g_0\) is the reference group. We use solo workers as the reference group. This choice makes each coefficient directly interpretable as the conditional wage gap between workers in firm-size group \(g\) and workers at the bottom of the firm-size distribution. 
+
+The vector \(X_{ist}\) includes a female-worker indicator, age, age squared, education dummies, and a formal-employment indicator. The fixed effect \(\lambda_{s \times t}\) absorbs sector-year conditions, allowing each broad sector to have its own wage level in each year. The model is estimated with GEIH expansion weights, and standard errors are clustered by sector.
+
+The coefficients \(\beta_g\) are log-point differences relative to solo workers. For interpretation, we transform them into percentage premiums:
+\begin{equation}
+  Premium_g = 100 \times \left(\exp(\hat{\beta}_g)-1\right).    
+\end{equation}
+
+\subsection{Dynamic Premiums and Trend Test}
+
+The same framework can be extended to study the evolution of the premium over time by interacting firm-size categories with year indicators:
+\begin{equation}
+  \ln(w_{ist}) =
+  \alpha
+  + \sum_{\tau}\sum_{g \neq g_0}
+    \beta_{g\tau}\mathbf{1}\{Size_{ist}=g\}\mathbf{1}\{Year_{t}=\tau\}
+  + X_{ist}'\gamma
+  + \lambda_{s \times t}
+  + \varepsilon_{ist}.    
+\end{equation}
+
+This dynamic specification produces a sequence of firm-size premiums by year and can be used to assess whether the premium has widened, narrowed, or remained stable. We also estimate a more parsimonious trend specification:
+\begin{equation}
+  \ln(w_{ist}) =
+  \alpha
+  + \sum_{g \neq g_0} \left(\beta_g
+  +  \delta_g
+    Trend_t\right)\mathbf{1}\{Size_{ist}=g\}
+  + X_{ist}'\gamma
+  + \lambda_{s \times t}
+  + \varepsilon_{ist},
+\end{equation}
+where \(Trend_t\) is a linear year trend normalized to zero in 2008. The parameter \(\delta_g\) measures whether the wage premium for firm-size group \(g\) changed over time relative to solo workers. Positive values of \(\delta_g\) imply a steeper association between firm size and wages, while negative values imply a flatter one.
+
+
+\subsection{Firm-Size Nonlinearities by Formality Status}
+
+The descriptive evidence suggests that the relationship between firm size and
+hourly income may differ between formal and informal workers. We therefore
+estimate a specification that interacts all firm-size categories with formal
+employment:
+
+\begin{equation}\label{eq:formality-interaction}
+  \ln(w_{ist}) =
+  \alpha
+  + \phi Formal_{ist}
+  + \sum_{g \neq g_0} \left(\beta_g 
+  + \theta_g
+     Formal_{ist}\right)\mathbf{1}\{Size_{ist}=g\}
+  + X_{ist}'\gamma
+  + \lambda_{s \times t}
+  + \varepsilon_{ist}.    
+\end{equation}
+
+The coefficients \(\beta_g\) measure the firm-size premium among informal workers, relative to informal solo workers. The corresponding premium among formal workers is \(\beta_g+\theta_g\), relative to formal solo workers. The coefficient \(\phi\) measures the formal-informal wage gap among solo workers, while \(\phi+\theta_g\) measures the formal-informal wage gap within firm-size group \(g\).
+
+\subsection{Approximate Firm-Size Elasticities}
+
+The main specifications treat firm size as a set of categories because this is
+how firm size is reported in GEIH and because the largest category is top-coded.
+This categorical approach is the most transparent way to estimate the Colombian
+firm-size wage premium. However, much of the employer-size wage effect
+literature reports a continuous elasticity of wages with respect to employer
+size. To compare the Colombian evidence with those benchmarks, we also estimate
+an approximate log-log specification:
+\begin{equation}\label{eq:elasticity}
+  \ln(w_{ist}) =
+  \alpha
+  + \eta \ln(\widetilde{Size}_{ist})
+  + X_{ist}'\gamma
+  + \lambda_{s \times t}
+  + \varepsilon_{ist}.
+\end{equation}
+
+The variable \(\widetilde{Size}_{ist}\) assigns representative values to the
+harmonized firm-size bins: 1 for solo workers, 2.5 for firms with 2--3 workers,
+4.5 for 4--5 workers, 8 for 6--10 workers, 15 for 11--19 workers, 25 for
+20--30 workers, 40.5 for 31--50 workers, 75.5 for 51--100 workers, and 150 for
+the top-coded 101+ category. The coefficient \(\eta\) is therefore an
+approximate elasticity: it measures the log-wage slope associated with assigned
+firm size. Because the underlying variable is grouped and top-coded, these
+elasticities are used only as benchmarking statistics. The categorical
+specifications remain the main empirical estimates.

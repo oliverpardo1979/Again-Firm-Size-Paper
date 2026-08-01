@@ -1,0 +1,16 @@
+\section{Data}
+
+The empirical analysis uses microdata from the Gran Encuesta Integrada de Hogares (GEIH), Colombia's nationally representative labor force survey produced by DANE. The current harmonized file covers the years 2008--2019 and 2021--2025. We exclude 2020 because the COVID-19 pandemic disrupted both labor-market outcomes and survey collection, raising comparability and data-quality concerns. The analysis therefore focuses on non-pandemic survey years. The main qualitative patterns documented below are visible on both sides of the excluded year: the firm-size wage premium is positive in the pre-pandemic period and remains positive after 2020. The working sample contains 5,237,255 worker-year observations with valid real hourly labor income and positive expansion weights. The baseline regression sample contains 5,154,213 observations after requiring non-missing values for the controls used in the econometric specification.
+
+The sample is restricted to employed workers with positive labor income, valid weekly hours, and positive survey expansion factors. Monthly labor income is converted to annual labor income and divided by annual hours, computed as weekly hours times 52. We then express hourly labor income in constant 2025 Colombian pesos using the end-of-the-year Consumer Price Index:
+
+\begin{equation}
+  w_{it} =
+  \frac{12 \times MonthlyIncome_{it}}{52 \times WeeklyHours_{it}}\times
+  \frac{CPI_{2025}}{CPI_t}.    
+\end{equation}
+
+Firm size is measured using the worker-reported firm-size variable in GEIH. The construction harmonizes the categories into the following ordered groups: Solo, 2-3, 4-5, 6-10, 11-19, 20-30, 31-50, 51-100, and 101+. When the newer questionnaire separates 101-200 and 201+ workers, both categories are collapsed into 101+ to maintain comparability with earlier years. Firm size is therefore reported by workers, and the data do not identify firms.
+
+The control variables are also harmonized across survey changes. Education is grouped into comparable categories: no education, preschool, primary, lower secondary, upper secondary, and higher education. Formality is defined using pension contribution status: workers who contribute to pensions are classified as formal, while workers who do not contribute are classified as informal. This definition follows the social-protection approach commonly used in Latin American labor-market measurement, which identifies informality through lack of access to social-security benefits such as pension or health insurance \citep{WorldBankLACInformality2026}. Economic activity is harmonized across CIIU revisions into broad sectors, which allows the regressions to absorb sector-year shocks.
+

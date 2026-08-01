@@ -1,0 +1,35 @@
+\begin{table}[htbp]
+  \centering
+  \caption{Conditional formal-informal wage gap by firm size}
+  \label{tab:formal-wage-gap-by-size}
+  \small
+  \begin{tabular}{lccc}
+    \toprule
+    Firm size & Log gap & Premium & $p$-value \\
+    \midrule
+    Solo & 0.524*** & 68.8\% & $<0.001$ \\
+     & (0.063) &  &  \\
+    2-3 & 0.348*** & 41.6\% & $<0.001$ \\
+     & (0.018) &  &  \\
+    4-5 & 0.205*** & 22.8\% & $<0.001$ \\
+     & (0.036) &  &  \\
+    6-10 & 0.155*** & 16.7\% & $<0.001$ \\
+     & (0.031) &  &  \\
+    11-19 & 0.149*** & 16.1\% & $<0.001$ \\
+     & (0.024) &  &  \\
+    20-30 & 0.145*** & 15.6\% & $<0.001$ \\
+     & (0.018) &  &  \\
+    31-50 & 0.165*** & 17.9\% & $<0.001$ \\
+     & (0.014) &  &  \\
+    51-100 & 0.181*** & 19.9\% & $<0.001$ \\
+     & (0.019) &  &  \\
+    101+ & 0.341*** & 40.6\% & $<0.001$ \\
+     & (0.043) &  &  \\
+    \bottomrule
+  \end{tabular}
+  \vspace{0.3em}
+  \begin{minipage}{0.92\textwidth}
+  \footnotesize
+  Notes: Each row reports the estimated wage gap between formal and informal workers within the same firm-size category from Equation~(\ref{eq:formality-interaction}). For solo workers, the gap is $\hat{\phi}$; for all other categories, it is $\hat{\phi}+\hat{\theta}_g$. Premiums are computed as $100\times[\exp(\widehat{gap})-1]$. Standard errors, clustered by sector, are reported in parentheses below the log gap. The specification controls for gender, age, age squared, education, and sector-year fixed effects. Significance levels: * $p<0.10$, ** $p<0.05$, *** $p<0.01$.
+  \end{minipage}
+\end{table}

@@ -1,0 +1,33 @@
+\begin{table}[htbp]
+  \centering
+  \caption{Firm-size coefficients by formality status}
+  \label{tab:formality-interaction-coefficients}
+  \small
+  \begin{tabular}{lccc}
+    \toprule
+    Firm size & $\hat{\beta}_g$ & $\hat{\theta}_g$ & $\hat{\beta}_g+\hat{\theta}_g$ \\
+    \midrule
+    2-3 & 0.197*** & -0.176*** & 0.021 \\
+     & (0.026) & (0.062) & (0.067) \\
+    4-5 & 0.343*** & -0.318*** & 0.024 \\
+     & (0.027) & (0.085) & (0.089) \\
+    6-10 & 0.392*** & -0.369*** & 0.023 \\
+     & (0.032) & (0.081) & (0.087) \\
+    11-19 & 0.409*** & -0.374*** & 0.035 \\
+     & (0.037) & (0.076) & (0.080) \\
+    20-30 & 0.402*** & -0.379*** & 0.023 \\
+     & (0.035) & (0.072) & (0.079) \\
+    31-50 & 0.401*** & -0.359*** & 0.041 \\
+     & (0.038) & (0.067) & (0.076) \\
+    51-100 & 0.410*** & -0.342*** & 0.068 \\
+     & (0.044) & (0.067) & (0.075) \\
+    101+ & 0.336*** & -0.183** & 0.153* \\
+     & (0.046) & (0.083) & (0.088) \\
+    \bottomrule
+  \end{tabular}
+  \vspace{0.3em}
+  \begin{minipage}{0.92\textwidth}
+  \footnotesize
+  Notes: Estimates correspond to Equation~(\ref{eq:formality-interaction}). The omitted category is solo workers within each formality group. $\hat{\beta}_g$ is the firm-size coefficient among informal workers. $\hat{\theta}_g$ is the additional coefficient for formal workers in the same firm-size category. $\hat{\beta}_g+\hat{\theta}_g$ is the implied firm-size coefficient among formal workers. All coefficients are in log points. Standard errors, clustered by sector, are reported in parentheses. The specification controls for gender, age, age squared, education, and sector-year fixed effects. Significance levels: * $p<0.10$, ** $p<0.05$, *** $p<0.01$.
+  \end{minipage}
+\end{table}

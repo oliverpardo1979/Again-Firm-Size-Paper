@@ -1,0 +1,126 @@
+\section{Results}
+
+\subsection{Main Results}
+
+Table~\ref{tab:firm-size-wage-premium-regressions} reports the regression results from the main specification in Equation~(\ref{eq:main}). Column (1) shows the raw log-wage gap by firm size. The coefficient for firms with 101 or more workers is 1.019 log points, consistent with the large raw wage premium shown in the descriptive statistics. Column (2) adds sector-year fixed effects, reducing the coefficient for 101+ firms to 0.819 log points. Column (3) adds gender, age, age squared, and education controls, lowering the coefficient to 0.598. Column (4) adds formality, reducing the coefficient further to 0.359 log points, or 43.2 percent. Thus, roughly two thirds of the raw 101+ wage gap is absorbed by sector-year conditions and observed differences in worker and job characteristics, including gender, age, education, and formality. Nonetheless, a positive and statistically significant conditional premium remains after these controls.
+
+\input{Paper/sections/regression_firm_size_table}
+
+This attenuation pattern is consistent with the classic firm-size wage premium literature. \citet{BrownMedoff1989} show that large employers pay more even after accounting for several observable worker and job characteristics, and \citet{troske1999evidence} reaches a similar conclusion using matched worker-establishment data. Evidence from developing economies also points to sizable large-employer wage gaps. \citet{Schaffner1998} documents premiums to employment in larger establishments in Peru, \citet{SoderbomTealWambugu2005} find that the earnings-firm size relationship remains substantial after accounting for individual fixed effects in Kenya and Ghana, and \citet{reed2019large} show that the large-firm wage premium is widespread across developing economies. The Colombian context adds a further margin because firm size and formality are tightly connected. \citet{ElBadaouiStroblWalsh2010} show for Ecuador that what appears to be a formal-sector wage premium can be largely a firm-size wage differential, and Colombian firm-survey evidence emphasizes the role of firm characteristics in wage differentials within the formal labor market \citep{iregui2012diferenciales}. Our estimates fit this broader pattern. The fall in the coefficient after adding formality shows that the raw firm-size gap partly reflects segmentation between formal and informal jobs; the remaining premium shows that the Colombian firm-size wage gap is not only a formal-informal contrast.
+
+Figure~\ref{fig:firm-size-wage-premium} transforms the coefficients of column (4) in Table~\ref{tab:firm-size-wage-premium-regressions} into percentage premiums. Relative to solo workers, the conditional premium is 20.7 percent for firms with 2--3 workers, 36.0 percent for firms with 4--5 workers, 37.3 percent for firms with 6--10 workers, roughly 31--35 percent for intermediate-size categories, and 43.2 percent for firms with 101 or more workers. All confidence intervals exclude zero.
+
+Appendix Table~\ref{tab:firm-size-local-geography-robustness} shows that this result is not driven by broad geographic differences across departments. The 101+ coefficient remains positive and statistically significant after adding department-year fixed effects, after absorbing sector-department-year fixed effects, and after adding occupational-position controls to that local-geography specification.
+
+\begin{figure}[htbp]
+  \centering
+  \includegraphics[width=0.9\textwidth]{fig57_\figurelang.png}
+  \caption{Conditional firm-size wage premium relative to solo workers}
+  \label{fig:firm-size-wage-premium}
+\end{figure}
+
+\subsection{Dynamic Results}
+
+The dynamic exercise asks whether the firm-size wage gap steepened, flattened,
+or remained stable over time. A steepening premium means that firm size became
+more strongly associated with wages. A flattening premium means that the
+association weakened, although it does not identify whether the change came from
+faster wage growth in smaller firms or slower wage growth in larger firms.
+
+Figure~\ref{fig:firm-size-wage-premium-over-time} estimates the full specification separately by interacting firm-size categories with year indicators. The conditional premium is positive throughout the sample period in all firm-size categories. The largest firms display the highest premiums in most years, although the confidence intervals are wider for these categories.
+
+\begin{figure}[htbp]
+  \centering
+  \includegraphics[width=0.95\textwidth]{fig59_\figurelang.png}
+  \caption{Conditional firm-size wage premium over time}
+  \label{fig:firm-size-wage-premium-over-time}
+\end{figure}
+
+Table~\ref{tab:firm-size-premium-trend-test} formally tests whether the premium changed over time using a linear trend interacted with firm-size categories. The estimated trend coefficients are positive for all size categories. The implied increase between 2008 and 2025 ranges from 3.2 percent for firms with 20--30 workers to 7.9 percent for firms with 101 or more workers. However, the two-sided tests do not reject a zero trend at the 5 percent level. The point estimates therefore suggest widening rather than narrowing, but they do not provide statistically conclusive evidence of a trend.
+
+The evidence on the evolution of the large-firm wage premium over time is mixed. For the United States, \citet{BloomGuvenenSmithSongVonWachter2018} document a steady decline in the large-firm wage premium. \citet{reed2019large} shows that large-firm wage premia are also common in developing economies, but tend to decline with national income and over time. Cross-country evidence points to heterogeneity rather than a single trajectory: \citet{ColonnelliTagWebbWolter2018} find a large-firm wage premium in Brazil, Germany, Sweden, and the United Kingdom, but no common time path across countries. Evidence from Brazil also shows that firm-related wage differences can compress when institutions and labor-market conditions raise wages at the lower end of the distribution \citep{AlvarezBenguriaEngbomMoser2018,EngbomMoser2022}. Against this background, Colombia looks less like a case of clear convergence or clear divergence and more like a case of persistence: firm scale remains strongly associated with hourly wages throughout the period, the point estimates suggest some widening, but the two-sided tests do not support the stronger claim that the premium systematically intensified.
+
+\input{Paper/sections/regression_firm_size_trend_test}
+
+\subsection{Formality Nonlinearities}
+
+Table~\ref{tab:formality-interaction-coefficients} reports the coefficients behind Equation~(\ref{eq:formality-interaction}). The estimates of \(\beta_g\), which measure the firm-size premium among informal workers, are positive and statistically significant in every firm-size category. The estimates of \(\theta_g\) are negative in every category, showing that the formal-worker profile is flatter than the informal-worker profile. The implied formal-worker premium \(\beta_g+\theta_g\) is small and not statistically different from zero at the 5 percent level when formal solo workers are the reference category. This pattern shows a robust size premium among informal workers but a much flatter profile among formal workers.
+
+\input{Paper/sections/regression_formality_interaction_coefficients_table}
+
+Figure~\ref{fig:firm-size-formality-premium} translates these estimates into percentage premiums relative to solo workers within each formality group. Among informal workers, the conditional premium is positive and statistically significant in every firm-size category: it is 21.7 percent in firms with 2--3 workers, rises to about 48--51 percent across most categories from 6 to 100 workers, and remains 40.0 percent in firms with 101 or more workers. Among formal workers, the within-formality profile is much flatter and less precisely estimated: the estimated premium ranges from 2.1 to 7.0 percent for most categories and is 16.5 percent for firms with 101 or more workers, but the confidence intervals include zero throughout when each category is compared with formal solo workers.
+
+\begin{figure}[htbp]
+  \centering
+  \includegraphics[width=0.95\textwidth]{fig74_\figurelang.png}
+  \caption{Conditional firm-size wage premium by formality status}
+  \label{fig:firm-size-formality-premium}
+\end{figure}
+
+This does not mean, however, that there is no evidence of conditional premiums within the formal sector. The U-shape in Figure~\ref{fig:income-formality-comparison} points to a different comparison: formal workers in 101+ firms versus formal workers in intermediate-size firms. Direct contrasts from the interacted model show that formal workers in 101+ firms earn between 8.9 and 14.2 percent more than formal workers in every smaller non-solo category, and all of these non-solo contrasts are statistically significant, as reported in Table~\ref{tab:formal-101-contrasts}. Thus, the estimates show a large-firm premium relative to the middle of the formal firm-size distribution. The informal sector, by contrast, displays a robust conditional firm-size premium relative to solo work.
+
+\input{Paper/sections/regression_formal_101_contrasts_table}
+
+Table~\ref{tab:formal-wage-gap-by-size} reports the other side of the same specification: the conditional wage gap between formal and informal workers within each firm-size category. Formal workers earn more than informal workers in every category, and the differences are statistically significant throughout. The formal premium is 68.8 percent among solo workers, falls to roughly 16--23 percent through most intermediate firm-size categories, and rises again to 40.6 percent among workers in firms with 101 or more employees. Thus, the flatter formal-worker firm-size profile does not mean that formality is unimportant. Rather, formal employment shifts the wage level upward within each firm-size category, while the firm-size premium itself is much steeper among informal workers.
+
+\input{Paper/sections/regression_formality_gap_by_size_table}
+
+Figure~\ref{fig:adjusted-formality-endpoints} asks whether the adjusted formality-specific profiles changed between 2008 and 2025. The figure estimates the firm-size-by-formality specification separately for each endpoint year, controlling for gender, age, age squared, education, and sector fixed effects, and plots the implied premium relative to solo workers within the same formality-year group. Among formal workers, the adjusted profile is flat in both years: in 2025, the estimates for all categories below 101+ range from -3.7 to 0.6 percent, and the 101+ estimate is 10.5 percent with a confidence interval that includes zero. Among informal workers, by contrast, the adjusted size profile is steep in both years and higher at the 2025 endpoint: in 2025, the premium rises from 24.3 percent in firms with 2--3 workers to 53.6 percent in firms with 101 or more workers. The figure therefore suggests that the strong conditional size premium within informal employment persists across the endpoints, while the formal-sector profile remains flat.
+
+\begin{figure}[htbp]
+  \centering
+  \includegraphics[width=0.95\textwidth]{fig76_\figurelang.png}
+  \caption{Adjusted firm-size wage premium by formality status, 2008 and 2025}
+  \label{fig:adjusted-formality-endpoints}
+\end{figure}
+
+
+
+Figure~\ref{fig:large-firm-formality-premium-over-time} examines whether the
+pooled formal-worker result masks time variation. The figure plots the adjusted
+premium for firms with 101 or more workers relative to solo workers, separately
+within formal and informal employment in each year. The evidence does not show a
+reappearance of a statistically significant large-firm premium among formal
+workers in the most recent years. The formal 101+ premium is positive and
+significant in several earlier years, especially 2009--2013 and 2017, but after
+2021 the point estimates are smaller and the confidence intervals include zero;
+in 2025, the estimate is 10.5 percent with a confidence interval from -8.2 to
+33.0 percent. By contrast, the informal 101+ premium is positive and significant
+throughout the period, rising from 39.4 percent in 2008 to 53.6 percent in
+2025.
+
+\begin{figure}[htbp]
+  \centering
+  \includegraphics[width=0.95\textwidth]{fig75_\figurelang.png}
+  \caption{Adjusted large-firm wage premium by formality status over time; 2020 is omitted}
+  \label{fig:large-firm-formality-premium-over-time}
+\end{figure}
+
+This formal-informal contrast connects directly with the literature on formality and firm size. Formality can mediate the firm-size wage premium because larger firms are more visible to the state, more likely to comply with labor regulation, and more likely to offer jobs covered by social protection. Colombian evidence already points to persistent formal-informal wage gaps and to productivity differences associated with registration and regulatory compliance among microfirms \citep{DazaGamboa2013,GutierrezRodriguezLesmes2023}. In that sense, part of the raw premium may reflect the fact that large-firm jobs are disproportionately formal jobs. From the complementary angle, \citet{ElBadaouiStroblWalsh2010} show for Ecuador that what appears to be a formal-sector wage premium can be largely explained by firm size. Formality can also moderate the firm-size premium: the wage gap by firm size need not be the same within formal and informal employment. \citet{BalkanTumen2016} show for Turkey that the firm-size wage gap is more pronounced among informal jobs than among formal jobs. Our results are close to this second pattern. Adding formality in Table~\ref{tab:firm-size-wage-premium-regressions} reduces the overall 101+ coefficient substantially, which shows that formality mediates part of the aggregate size gap. Figures~\ref{fig:firm-size-formality-premium} and \ref{fig:adjusted-formality-endpoints} show the complementary result: the conditional size premium remains especially strong among informal workers, while the formal-worker profile is much flatter when each category is compared with formal solo workers.
+
+\subsection{Benchmarking the Firm-Size Wage Elasticity}
+\label{subsec:elasticity-benchmark}
+
+Table~\ref{tab:firm-size-elasticity-benchmark} reports the approximate
+elasticity estimates from Equation~(\ref{eq:elasticity}) and compares them with
+the two most directly comparable benchmarks from the meta-analysis of
+\citet{DiegmannMullerSchoefer2026}: specifications without worker-heterogeneity
+controls and specifications with observable worker controls. The comparison
+should be read as a magnitude check rather than as a direct meta-analytic test:
+the Colombian estimates are based on worker-reported firm-size bins, while the
+studies summarized by \citet{DiegmannMullerSchoefer2026} estimate continuous
+employer-size elasticities with different data structures and controls.
+
+\input{Paper/sections/regression_elasticity_benchmark_table}
+
+The Colombian raw binned elasticity is 0.203, far above the mean no-controls
+elasticity of 0.062 in the literature summarized by
+\citet{DiegmannMullerSchoefer2026}. After sector-year effects, worker controls,
+and formality are added, the full-sample Colombian elasticity falls to 0.071,
+but remains above their observable-controls benchmark of 0.036. The formality
+split helps interpret why the Colombian full-sample elasticity is high relative
+to that benchmark. The difference is not driven equally by formal and informal
+employment. Among formal workers, the estimated elasticity is 0.026, close to
+the benchmark. Among informal workers, it is 0.130, more than three times the
+benchmark. Thus, the comparison with the meta-analysis clarifies that
+Colombia's high conditional elasticity is mainly an informal-sector phenomenon.
