@@ -1,7 +1,6 @@
 \documentclass[aspectratio=169,11pt]{beamer}
 
 \usepackage[utf8]{inputenc}
-\usepackage[spanish]{babel}
 \usepackage{amsmath}
 \usepackage{booktabs}
 \usepackage{array}
@@ -41,7 +40,7 @@
 \setbeamertemplate{itemize item}{\color{cjcblue}$\blacktriangleright$}
 \setbeamertemplate{itemize subitem}{\color{cjcblue}$\bullet$}
 
-\newcommand{\fuente}[1]{\vspace{0.12cm}{\tiny\color{cjcgray}#1}}
+\newcommand{\source}[1]{\vspace{0.12cm}{\tiny\color{cjcgray}#1}}
 \newcommand{\idea}[1]{\textbf{\color{cjcblue}#1}}
 \newcommand{\cjcbar}{\textcolor{cjcyellow}{\rule{0.18\textwidth}{1.6pt}}\hspace{0.3em}\textcolor{cjcblue}{\rule{0.72\textwidth}{1.6pt}}}
 \newcommand{\bigstat}[3]{%
@@ -60,10 +59,10 @@
 }
 
 \title{Beyond Formality: The Firm-Size Wage Premium in Colombia}
-\subtitle{Presentación académica}
+\subtitle{Faculty of Economics}
 \author{Oliver Pardo \and Jorge Orozco}
 \institute{Centro Javeriano de Competitividad \\ Pontificia Universidad Javeriana}
-\date{Facultad de Ciencias Económicas \\ 2026}
+\date{2026}
 
 \begin{document}
 
@@ -72,8 +71,7 @@
   \includegraphics[height=1.35cm]{logo_cjc_palatino_horizontal.png}
 
   \vspace{0.75cm}
-  {\large\color{cjcgray}Presentación académica}\\[0.15cm]
-  {\large\color{cjcgray}Facultad de Ciencias Económicas}\\[0.35cm]
+  {\large\color{cjcgray}Faculty of Economics}\\[0.35cm]
   \cjcbar
 
   \vspace{0.75cm}
@@ -84,107 +82,107 @@
   {\normalsize Centro Javeriano de Competitividad}
 \end{frame}
 
-\begin{frame}{La pregunta}
-  \idea{El paper pregunta si los trabajadores colombianos ganan más en empresas más grandes y qué queda de esa diferencia después de controlar por composición.}
+\begin{frame}{The Question}
+  \idea{The paper asks whether Colombian workers earn more in larger firms, and what remains of that gap after accounting for worker composition.}
 
   \vspace{0.35cm}
   \begin{itemize}
-    \item ¿Cuánto mayor es la remuneración por hora en empresas grandes frente a trabajo solo y microfirmas?
-    \item ¿Cuánto de esa brecha se explica por sector, educación, edad, sexo y formalidad?
-    \item ¿La brecha aumentó o disminuyó entre 2008 y 2025?
-    \item ¿La relación entre tamaño de empresa y remuneración es la misma dentro del empleo formal e informal?
+    \item How much higher is real hourly pay in large firms relative to solo work and micro-firms?
+    \item How much of the gap is explained by sector, education, age, sex, and formality?
+    \item Did the gap widen or narrow between 2008 and 2025?
+    \item Does the size-wage relationship differ between formal and informal employment?
   \end{itemize}
 \end{frame}
 
-\begin{frame}{El argumento en una diapositiva}
+\begin{frame}{The Argument in One Slide}
   \begin{columns}[T,totalwidth=\textwidth]
     \begin{column}{0.49\textwidth}
-      \idea{Hecho empírico}
+      \idea{Empirical fact}
       \vspace{0.25cm}
       \begin{itemize}
-        \item La remuneración real por hora aumenta con el tamaño de empresa.
-        \item La relación sobrevive a controles por características observables.
-        \item La prima es mucho más fuerte dentro del empleo informal.
+        \item Real hourly pay rises with firm size.
+        \item The relationship survives controls for observable characteristics.
+        \item The premium is much stronger within informal employment.
       \end{itemize}
     \end{column}
     \begin{column}{0.49\textwidth}
-      \idea{Interpretación}
+      \idea{Interpretation}
       \vspace{0.25cm}
       \begin{itemize}
-        \item La prima no prueba causalidad ni misallocation por sí sola.
-        \item Sí es una magnitud diagnóstica de desigualdad, segmentación y posibles fricciones.
-        \item La política debe mirar formalización y crecimiento de unidades productivas informales, no solo ``empresas grandes''.
+        \item The premium does not prove causality or misallocation by itself.
+        \item It is a diagnostic magnitude for wage inequality, segmentation, and possible frictions.
+        \item The policy discussion should focus on formalization and the growth of productive informal units, not on firm size alone.
       \end{itemize}
     \end{column}
   \end{columns}
 \end{frame}
 
-\begin{frame}{Plan de la charla}
+\begin{frame}{Roadmap}
   \begin{enumerate}
-    \item Motivación y datos.
-    \item Hechos descriptivos.
-    \item Prima condicional por tamaño de empresa.
-    \item Evolución en el tiempo.
-    \item Formalidad y no linealidades.
-    \item Interpretación, límites e implicaciones de política.
+    \item Motivation and data.
+    \item Descriptive facts.
+    \item Conditional firm-size wage premium.
+    \item Evolution over time.
+    \item Formality and nonlinearities.
+    \item Interpretation, limitations, and policy implications.
   \end{enumerate}
 \end{frame}
 
-\sectionframe{1. Motivación y datos}
+\sectionframe{1. Motivation and Data}
 
-\begin{frame}{Por qué mirar tamaño de empresa}
-  \idea{El tamaño de empresa resume una parte visible de la estructura productiva.}
-
-  \vspace{0.35cm}
-  \begin{itemize}
-    \item En Colombia una fracción grande del empleo está en trabajo por cuenta propia y microfirmas.
-    \item Si los salarios por hora son sistemáticamente mayores en empresas grandes, la distribución del empleo por tamaño importa para la desigualdad salarial.
-    \item La relación también puede ser informativa sobre fricciones: barreras para crecer, formalizarse, conectarse a mercados o reasignar trabajadores hacia mejores firmas.
-  \end{itemize}
-\end{frame}
-
-\begin{frame}{La cautela central}
-  \idea{Una prima salarial condicional no es un efecto causal del tamaño de empresa.}
+\begin{frame}{Why Firm Size Matters}
+  \idea{Firm size captures a visible dimension of the productive structure.}
 
   \vspace{0.35cm}
   \begin{itemize}
-    \item La prima condicional significa que trabajadores observacionalmente similares ganan más en empresas más grandes.
-    \item No prueba que mover al mismo trabajador a una empresa grande aumente el producto agregado.
-    \item La diferencia restante puede reflejar selección no observada, calidad del match, rentas, políticas salariales de la firma o productividad.
-    \item Por eso interpretamos la prima como una estadística diagnóstica, no como una prueba directa de eficiencia o ineficiencia.
+    \item In Colombia, a large share of employment is concentrated in own-account work and micro-firms.
+    \item If hourly pay is systematically higher in larger firms, the firm-size distribution matters for wage inequality.
+    \item The relationship can also be informative about frictions: barriers to growth, formalization, market access, or worker reallocation toward better firms.
   \end{itemize}
 \end{frame}
 
-\begin{frame}{Datos}
-  \idea{Usamos la GEIH porque permite observar trabajadores en todo el mercado laboral, no solo en empresas formales.}
+\begin{frame}{The Central Caution}
+  \idea{A conditional wage premium is not a causal effect of firm size.}
+
+  \vspace{0.35cm}
+  \begin{itemize}
+    \item The conditional premium means that observationally similar workers earn more in larger firms.
+    \item It does not prove that moving the same worker to a larger firm would raise aggregate output.
+    \item The remaining gap may reflect unobserved selection, match quality, rents, firm wage policies, or productivity.
+    \item We therefore interpret the premium as a diagnostic statistic, not as direct proof of efficiency or inefficiency.
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{Data}
+  \idea{We use GEIH because it covers the broader labor market, not only formal firms.}
 
   \vspace{0.3cm}
   \begin{itemize}
-    \item Fuente: Gran Encuesta Integrada de Hogares, DANE.
-    \item Periodo: 2008--2019 y 2021--2025.
-    \item Se excluye 2020 por la disrupción de la pandemia sobre resultados laborales y recolección de la encuesta.
-    \item Muestra de trabajo: 5,24 millones de observaciones trabajador-año con ingreso laboral por hora válido y factores de expansión positivos.
-    \item Muestra de regresión: 5,15 millones de observaciones con controles completos.
+    \item Source: Gran Encuesta Integrada de Hogares, DANE.
+    \item Period: 2008--2019 and 2021--2025.
+    \item We exclude 2020 because the pandemic disrupted labor-market outcomes and survey collection.
+    \item Working sample: 5.24 million worker-year observations with valid hourly labor income and positive expansion weights.
+    \item Regression sample: 5.15 million observations with complete controls.
   \end{itemize}
 \end{frame}
 
-\begin{frame}{Variables principales}
+\begin{frame}{Main Variables}
   \begin{columns}[T,totalwidth=\textwidth]
     \begin{column}{0.48\textwidth}
-      \idea{Remuneración}
+      \idea{Hourly pay}
       \vspace{0.25cm}
       \[
         w_{it} =
-        \frac{12 \times IngresoMensual_{it}}
-        {52 \times HorasSemanales_{it}}
+        \frac{12 \times MonthlyIncome_{it}}
+        {52 \times WeeklyHours_{it}}
         \times
-        \frac{IPC_{2025}}{IPC_t}
+        \frac{CPI_{2025}}{CPI_t}
       \]
       \vspace{0.1cm}
-      {\small Ingreso laboral por hora en pesos constantes de 2025.}
+      {\small Real hourly labor income in constant 2025 Colombian pesos.}
     \end{column}
     \begin{column}{0.48\textwidth}
-      \idea{Tamaño de empresa}
+      \idea{Firm size}
       \vspace{0.25cm}
       \begin{itemize}
         \item Solo
@@ -192,35 +190,35 @@
         \item 11--19, 20--30, 31--50, 51--100
         \item 101+
       \end{itemize}
-      {\small La categoría 101+ armoniza cambios del cuestionario.}
+      {\small The 101+ category harmonizes questionnaire changes.}
     \end{column}
   \end{columns}
 \end{frame}
 
-\begin{frame}{Formalidad}
-  \idea{Definimos formalidad por cotización a pensión.}
+\begin{frame}{Formality}
+  \idea{We define formality through pension contribution.}
 
   \vspace{0.35cm}
   \begin{itemize}
-    \item Un trabajador es formal si cotiza a pensión.
-    \item Un trabajador es informal si no cotiza a pensión.
-    \item La definición captura acceso a seguridad social contributiva.
-    \item La definición no usa tamaño de empresa, lo cual es importante porque el tamaño de empresa es la variable que queremos estudiar.
+    \item A worker is formal if the worker contributes to pensions.
+    \item A worker is informal if the worker does not contribute to pensions.
+    \item The definition captures access to contributory social security.
+    \item The definition does not use firm size, which is important because firm size is the variable we want to study.
   \end{itemize}
 \end{frame}
 
-\sectionframe{2. Hechos descriptivos}
+\sectionframe{2. Descriptive Facts}
 
-\begin{frame}{Primer hecho: el empleo sigue concentrado abajo}
+\begin{frame}{First Fact: Employment Remains Concentrated at the Bottom}
   \begin{columns}[T,totalwidth=\textwidth]
     \begin{column}{0.32\textwidth}
-      \bigstat{35\%}{del empleo en 2025 estaba en trabajo solo}{cjcblue}
+      \bigstat{35\%}{of employment in 2025 was solo work}{cjcblue}
     \end{column}
     \begin{column}{0.32\textwidth}
-      \bigstat{61\%}{estaba en trabajo solo o firmas de hasta diez trabajadores}{cjcblue}
+      \bigstat{61\%}{was in solo work or firms with up to ten workers}{cjcblue}
     \end{column}
     \begin{column}{0.32\textwidth}
-      \bigstat{25\%}{estaba en firmas de 101 o más trabajadores}{cjcgreen}
+      \bigstat{25\%}{was in firms with 101 or more workers}{cjcgreen}
     \end{column}
   \end{columns}
 
@@ -229,45 +227,45 @@
   \small
   \begin{tabular}{lrr}
     \toprule
-    Tamaño de empresa & Participación 2008 & Participación 2025 \\
+    Firm size & Employment share 2008 & Employment share 2025 \\
     \midrule
-    Solo & 36,1\% & 34,7\% \\
-    2--10 trabajadores & 32,8\% & 26,6\% \\
-    11--100 trabajadores & 12,3\% & 13,7\% \\
-    101+ trabajadores & 18,8\% & 25,2\% \\
+    Solo & 36.1\% & 34.7\% \\
+    2--10 workers & 32.8\% & 26.6\% \\
+    11--100 workers & 12.3\% & 13.7\% \\
+    101+ workers & 18.8\% & 25.2\% \\
     \bottomrule
   \end{tabular}
   \end{center}
 
-  \fuente{Fuente: cálculos propios con GEIH.}
+  \source{Source: authors' calculations using GEIH.}
 \end{frame}
 
-\begin{frame}{Segundo hecho: la remuneración por hora aumenta con el tamaño}
-  \idea{En 2025, el ingreso por hora en firmas de 101+ trabajadores fue 2,6 veces el ingreso de los trabajadores solos.}
+\begin{frame}{Second Fact: Hourly Pay Rises with Firm Size}
+  \idea{In 2025, hourly income in 101+ firms was 2.6 times hourly income among solo workers.}
 
   \vspace{0.25cm}
   \begin{center}
   \small
   \begin{tabular}{lrrrr}
     \toprule
-    Tamaño de empresa & Ingreso 2008 & Ingreso 2025 & Ratio 2025 & Crec. anual \\
+    Firm size & Income 2008 & Income 2025 & Ratio 2025 & Annual growth \\
     \midrule
-    Solo & 5.388 & 6.534 & 1,0 & 1,1\% \\
-    2--3 & 6.242 & 7.242 & 1,1 & 0,9\% \\
-    6--10 & 7.543 & 9.663 & 1,5 & 1,5\% \\
-    51--100 & 10.682 & 13.217 & 2,0 & 1,3\% \\
-    101+ & 12.943 & 16.859 & 2,6 & 1,6\% \\
+    Solo & 5,388 & 6,534 & 1.0 & 1.1\% \\
+    2--3 & 6,242 & 7,242 & 1.1 & 0.9\% \\
+    6--10 & 7,543 & 9,663 & 1.5 & 1.5\% \\
+    51--100 & 10,682 & 13,217 & 2.0 & 1.3\% \\
+    101+ & 12,943 & 16,859 & 2.6 & 1.6\% \\
     \addlinespace
-    Todos & 7.752 & 10.295 & 1,6 & 1,7\% \\
+    All workers & 7,752 & 10,295 & 1.6 & 1.7\% \\
     \bottomrule
   \end{tabular}
   \end{center}
 
-  \fuente{Ingreso por hora en pesos constantes de 2025. Fuente: cálculos propios con GEIH.}
+  \source{Hourly income in constant 2025 pesos. Source: authors' calculations using GEIH.}
 \end{frame}
 
-\begin{frame}{La prima por tamaño frente a otras brechas}
-  \idea{La brecha bruta por tamaño es comparable a la brecha formal-informal y menor que las mayores brechas por educación y sector.}
+\begin{frame}{The Size Gap Relative to Other Wage Gaps}
+  \idea{The raw firm-size gap is comparable to the formal-informal gap and smaller than the largest education and sector gaps.}
 
   \vspace{0.25cm}
   \begin{center}
@@ -275,89 +273,89 @@
   \setlength{\tabcolsep}{3pt}
   \begin{tabular}{p{0.38\textwidth}rp{0.30\textwidth}}
     \toprule
-    Comparación en 2025 & Ratio entre extremos & Lectura \\
+    2025 comparison & Ratio between extremes & Reading \\
     \midrule
-    Mujer / hombre & 1,01 & Brecha pequeña en promedios ponderados \\
-    Formal / informal & 2,43 & Brecha muy grande \\
-    Educación superior / preescolar o menos & 4,08 & Brecha mayor que tamaño \\
-    Información y comunicaciones / agro & 3,63 & Brecha sectorial muy grande \\
-    101+ / solo & 2,58 & Brecha de tamaño grande \\
+    Women / men & 1.01 & Small gap in weighted means \\
+    Formal / informal & 2.43 & Very large gap \\
+    Higher education / preschool or less & 4.08 & Larger than the size gap \\
+    Information and communication / agriculture & 3.63 & Very large sector gap \\
+    101+ / solo & 2.58 & Large firm-size gap \\
     \bottomrule
   \end{tabular}
   \end{center}
 
-  \fuente{Ratios calculados con ingreso laboral por hora en pesos constantes de 2025.}
+  \source{Ratios are based on real hourly labor income in constant 2025 pesos.}
 \end{frame}
 
-\begin{frame}{Por qué la relación bruta no basta}
-  \idea{Las empresas grandes emplean una fuerza laboral muy distinta.}
+\begin{frame}{Why the Raw Relationship Is Not Enough}
+  \idea{Large firms employ a very different workforce.}
 
   \vspace{0.25cm}
   \begin{center}
   \small
   \begin{tabular}{lrrrr}
     \toprule
-    Tamaño & Mujeres & Formales & Educación superior & Edad promedio \\
+    Firm size & Women & Formal & Higher education & Mean age \\
     \midrule
-    Solo & 39,0\% & 8,3\% & 16,7\% & 47,2 \\
-    6--10 & 42,4\% & 46,6\% & 35,6\% & 38,8 \\
-    51--100 & 42,6\% & 82,8\% & 53,4\% & 37,6 \\
-    101+ & 45,8\% & 98,0\% & 62,9\% & 38,0 \\
+    Solo & 39.0\% & 8.3\% & 16.7\% & 47.2 \\
+    6--10 & 42.4\% & 46.6\% & 35.6\% & 38.8 \\
+    51--100 & 42.6\% & 82.8\% & 53.4\% & 37.6 \\
+    101+ & 45.8\% & 98.0\% & 62.9\% & 38.0 \\
     \bottomrule
   \end{tabular}
   \end{center}
 
   \vspace{0.25cm}
-  {\small La pregunta econométrica es cuánto queda de la prima por tamaño después de controlar por estas diferencias.}
+  {\small The econometric question is how much of the firm-size premium remains after controlling for these differences.}
 
-  \fuente{Fuente: cálculos propios con GEIH, 2025.}
+  \source{Source: authors' calculations using GEIH, 2025.}
 \end{frame}
 
-\begin{frame}{Tamaño de empresa y formalidad}
+\begin{frame}{Firm Size and Formality}
   \centering
-  \includegraphics[width=0.94\textwidth,height=0.79\textheight,keepaspectratio]{fig69_es.png}
+  \includegraphics[width=0.94\textwidth,height=0.79\textheight,keepaspectratio]{fig69_en.png}
 
-  \fuente{La burbuja representa la participación dentro de cada grupo formalidad-año.}
+  \source{Bubble size represents the employment share within each formality-year group.}
 \end{frame}
 
-\begin{frame}{Cómo leer la U de los formales}
-  \idea{La U entre trabajadores formales no debe leerse como si todos los formales solos fueran profesionales de altos ingresos.}
+\begin{frame}{How to Read the U-Shape among Formal Workers}
+  \idea{The U-shape among formal workers should not be read as evidence that all formal solo workers are high-earning professionals.}
 
   \vspace{0.35cm}
   \begin{itemize}
-    \item El trabajo formal solo es una categoría seleccionada y heterogénea.
-    \item En 2025, 82,1\% de los formales solos eran trabajadores por cuenta propia.
-    \item 50,9\% tenía educación superior.
-    \item Pero también había concentración en servicio doméstico y transporte.
-    \item Por eso la U descriptiva puede reflejar composición del grupo de formales solos, no una prima pura del trabajo solo formal.
+    \item Formal solo work is a selected but heterogeneous category.
+    \item In 2025, 82.1\% of formal solo workers were own-account workers.
+    \item 50.9\% had higher education.
+    \item But there was also a concentration in domestic work and transport.
+    \item The descriptive U-shape may therefore reflect composition within formal solo work, not a pure premium for formal solo work.
   \end{itemize}
 \end{frame}
 
-\begin{frame}{La prima bruta aparece dentro de hombres y mujeres}
+\begin{frame}{The Raw Premium Appears within Men and Women}
   \centering
-  \includegraphics[width=0.94\textwidth,height=0.79\textheight,keepaspectratio]{fig70_es.png}
+  \includegraphics[width=0.94\textwidth,height=0.79\textheight,keepaspectratio]{fig70_en.png}
 
-  \fuente{La brecha por sexo dentro de cada tamaño es pequeña frente a la brecha entre trabajo solo y firmas grandes.}
+  \source{The sex gap within each size category is small relative to the gap between solo work and large-firm employment.}
 \end{frame}
 
-\begin{frame}{La prima bruta aparece dentro de cada nivel educativo}
+\begin{frame}{The Raw Premium Appears within Each Education Group}
   \centering
-  \includegraphics[width=0.96\textwidth,height=0.79\textheight,keepaspectratio]{fig72_es.png}
+  \includegraphics[width=0.96\textwidth,height=0.79\textheight,keepaspectratio]{fig72_en.png}
 
-  \fuente{La prima 101+/solo fue 2,1 para preescolar o menos, 1,8 para primaria, 1,5 para secundaria y 1,7 para educación superior.}
+  \source{The 101+/solo ratio was 2.1 for preschool or less, 1.8 for primary, 1.5 for secondary, and 1.7 for higher education.}
 \end{frame}
 
-\begin{frame}{La prima también aparece en la mayoría de sectores}
+\begin{frame}{The Premium Also Appears in Most Sectors}
   \centering
-  \includegraphics[width=0.98\textwidth,height=0.80\textheight,keepaspectratio]{fig71_es.png}
+  \includegraphics[width=0.98\textwidth,height=0.80\textheight,keepaspectratio]{fig71_en.png}
 
-  \fuente{En 2025, la remuneración en 101+ superó la de trabajo solo en los 16 sectores incluidos.}
+  \source{In 2025, hourly pay in 101+ firms exceeded solo-worker pay in all 16 included sectors.}
 \end{frame}
 
-\sectionframe{3. Prima condicional por tamaño de empresa}
+\sectionframe{3. Conditional Firm-Size Wage Premium}
 
-\begin{frame}{Especificación principal}
-  \idea{Estimamos brechas salariales condicionales, no efectos causales.}
+\begin{frame}{Main Specification}
+  \idea{We estimate conditional wage gaps, not causal effects.}
 
   \vspace{0.2cm}
   \[
@@ -371,15 +369,15 @@
 
   \vspace{0.25cm}
   \begin{itemize}
-    \item \(w_{ist}\): ingreso laboral real por hora.
-    \item \(X_{ist}\): sexo, edad, edad al cuadrado, educación y formalidad.
-    \item \(\lambda_{s \times t}\): efectos fijos sector-año.
-    \item Los coeficientes se transforman como \(100 \times [\exp(\hat{\beta}_g)-1]\).
+    \item \(w_{ist}\): real hourly labor income.
+    \item \(X_{ist}\): sex, age, age squared, education, and formality.
+    \item \(\lambda_{s \times t}\): sector-year fixed effects.
+    \item Coefficients are transformed as \(100 \times [\exp(\hat{\beta}_g)-1]\).
   \end{itemize}
 \end{frame}
 
-\begin{frame}{Qué pasa cuando agregamos controles}
-  \idea{La prima de las firmas 101+ cae mucho, pero no desaparece.}
+\begin{frame}{What Happens When We Add Controls}
+  \idea{The 101+ premium falls substantially, but it does not disappear.}
 
   \vspace{0.25cm}
   \begin{center}
@@ -387,12 +385,12 @@
   \setlength{\tabcolsep}{3pt}
   \begin{tabular}{p{0.34\textwidth}cp{0.38\textwidth}}
     \toprule
-    Especificación & Coeficiente 101+ & Interpretación \\
+    Specification & 101+ coefficient & Interpretation \\
     \midrule
-    Sin controles & 1,019 & Brecha bruta muy grande \\
-    + efectos fijos sector-año & 0,819 & Parte responde al sector y al año \\
-    + sexo, edad y educación & 0,598 & Parte responde a composición del trabajador \\
-    + formalidad & 0,359 & Prima condicional de 43,2\% \\
+    No controls & 1.019 & Very large raw gap \\
+    + sector-year fixed effects & 0.819 & Part of the gap reflects sector and year \\
+    + sex, age, and education & 0.598 & Part reflects worker composition \\
+    + formality & 0.359 & Conditional premium of 43.2\% \\
     \bottomrule
   \end{tabular}
   \end{center}
@@ -401,90 +399,90 @@
   \begin{center}
   \begin{minipage}{0.88\textwidth}
   \scriptsize
-  Aproximadamente dos terceras partes de la brecha bruta 101+ se absorben al agregar controles observables.
+  Roughly two thirds of the raw 101+ gap are absorbed by observable controls.
   \end{minipage}
   \end{center}
 \end{frame}
 
-\begin{frame}{Prima condicional por tamaño}
+\begin{frame}{Conditional Firm-Size Premium}
   \centering
-  \includegraphics[width=0.92\textwidth,height=0.80\textheight,keepaspectratio]{fig57_es.png}
+  \includegraphics[width=0.92\textwidth,height=0.80\textheight,keepaspectratio]{fig57_en.png}
 
-  \fuente{Prima relativa a trabajadores solos, después de controles por sexo, edad, educación, formalidad y efectos fijos sector-año.}
+  \source{Premium relative to solo workers after controls for sex, age, education, formality, and sector-year fixed effects.}
 \end{frame}
 
-\begin{frame}{Resultado principal}
+\begin{frame}{Main Result}
   \begin{columns}[T,totalwidth=\textwidth]
     \begin{column}{0.38\textwidth}
-      \bigstat{43,2\%}{prima condicional en firmas de 101+ frente a trabajadores solos}{cjcblue}
+      \bigstat{43.2\%}{conditional premium in 101+ firms relative to solo workers}{cjcblue}
     \end{column}
     \begin{column}{0.58\textwidth}
       \vspace{0.25cm}
       \begin{itemize}
-        \item La prima condicional es positiva en todas las categorías de tamaño.
-        \item Los intervalos de confianza excluyen cero en la especificación principal.
-        \item El resultado no se explica solo por la diferencia formal-informal.
-        \item Tampoco debe interpretarse como un experimento donde el mismo trabajador cambia de firma.
+        \item The conditional premium is positive in all size categories.
+        \item Confidence intervals exclude zero in the main specification.
+        \item The result is not only a formal-informal difference.
+        \item It should not be read as an experiment where the same worker moves across firms.
       \end{itemize}
     \end{column}
   \end{columns}
 \end{frame}
 
-\sectionframe{4. Evolución en el tiempo}
+\sectionframe{4. Evolution over Time}
 
-\begin{frame}{Qué significa que la prima se empine o se aplane}
-  \idea{La evolución de la prima mide si el tamaño de empresa se volvió más o menos asociado con la remuneración.}
+\begin{frame}{What It Means for the Premium to Steepen or Flatten}
+  \idea{The evolution of the premium asks whether firm size became more or less strongly associated with wages.}
 
   \vspace{0.35cm}
   \begin{itemize}
-    \item Una prima más empinada significa que las diferencias salariales por tamaño aumentaron.
-    \item Una prima más plana significa que las diferencias salariales por tamaño se redujeron.
-    \item La prueba no identifica por sí sola si el cambio viene de salarios más altos abajo, salarios más bajos arriba o cambios de composición.
+    \item A steeper premium means that wage differences by firm size increased.
+    \item A flatter premium means that wage differences by firm size declined.
+    \item The test does not identify whether the change came from faster wage growth at the bottom, slower wage growth at the top, or changes in composition.
   \end{itemize}
 \end{frame}
 
-\begin{frame}{Prima condicional a través del tiempo}
+\begin{frame}{Conditional Premium over Time}
   \centering
-  \includegraphics[width=0.96\textwidth,height=0.80\textheight,keepaspectratio]{fig59_es.png}
+  \includegraphics[width=0.96\textwidth,height=0.80\textheight,keepaspectratio]{fig59_en.png}
 
-  \fuente{Estimaciones anuales de la especificación principal. Se omite 2020.}
+  \source{Annual estimates of the main specification. 2020 is omitted.}
 \end{frame}
 
-\begin{frame}{La evidencia sugiere persistencia, no una tendencia clara}
-  \idea{Los puntos estimados sugieren aumento, pero las pruebas no permiten afirmar que la prima se haya empinado de manera sistemática.}
+\begin{frame}{The Evidence Suggests Persistence, Not a Clear Trend}
+  \idea{The point estimates suggest widening, but the tests do not support the stronger claim that the premium systematically intensified.}
 
   \vspace{0.3cm}
   \begin{center}
   \small
   \begin{tabular}{lcc}
     \toprule
-    Tamaño & Cambio implícito 2008--2025 & Lectura \\
+    Firm size & Implied change 2008--2025 & Reading \\
     \midrule
-    20--30 & 3,2\% & No significativo al 5\% \\
-    51--100 & 6,7\% & No significativo al 5\% \\
-    101+ & 7,9\% & No significativo al 5\% \\
+    20--30 & 3.2\% & Not significant at 5\% \\
+    51--100 & 6.7\% & Not significant at 5\% \\
+    101+ & 7.9\% & Not significant at 5\% \\
     \bottomrule
   \end{tabular}
   \end{center}
 
   \vspace{0.35cm}
-  {\small Colombia no se ve como un caso de convergencia clara ni de divergencia estadísticamente concluyente. El resultado más defendible es persistencia.}
+  {\small Colombia does not look like a case of clear convergence or statistically conclusive divergence. The defensible result is persistence.}
 \end{frame}
 
-\sectionframe{5. Formalidad y no linealidades}
+\sectionframe{5. Formality and Nonlinearities}
 
-\begin{frame}{Por qué separar formales e informales}
-  \idea{La formalidad puede mediar y modificar la prima por tamaño.}
+\begin{frame}{Why Split Formal and Informal Workers}
+  \idea{Formality can both mediate and modify the firm-size premium.}
 
   \vspace{0.35cm}
   \begin{itemize}
-    \item Puede mediarla porque las firmas grandes tienen más probabilidad de ofrecer empleos formales.
-    \item Puede modificarla porque la relación entre tamaño y salarios puede ser distinta dentro del empleo formal e informal.
-    \item Si el tamaño importa sobre todo dentro del empleo informal, la discusión de política cambia.
+    \item It can mediate the premium because large firms are more likely to offer formal jobs.
+    \item It can modify the premium because the size-wage relationship may differ within formal and informal employment.
+    \item If firm size matters mainly within informal employment, the policy interpretation changes.
   \end{itemize}
 \end{frame}
 
-\begin{frame}{Especificación con interacción por formalidad}
+\begin{frame}{Specification with Firm Size by Formality}
   \[
     \ln(w_{ist}) =
     \alpha + \phi Formal_{ist}
@@ -497,216 +495,216 @@
 
   \vspace{0.25cm}
   \begin{itemize}
-    \item \(\beta_g\): prima por tamaño entre informales.
-    \item \(\beta_g+\theta_g\): prima por tamaño entre formales.
-    \item \(\phi+\theta_g\): brecha formal-informal dentro del tamaño \(g\).
+    \item \(\beta_g\): firm-size premium among informal workers.
+    \item \(\beta_g+\theta_g\): firm-size premium among formal workers.
+    \item \(\phi+\theta_g\): formal-informal wage gap within size group \(g\).
   \end{itemize}
 \end{frame}
 
-\begin{frame}{La prima condicional es mucho más fuerte entre informales}
+\begin{frame}{The Conditional Premium Is Much Stronger among Informal Workers}
   \centering
-  \includegraphics[width=0.94\textwidth,height=0.80\textheight,keepaspectratio]{fig74_es.png}
+  \includegraphics[width=0.94\textwidth,height=0.80\textheight,keepaspectratio]{fig74_en.png}
 
-  \fuente{Prima relativa a trabajadores solos dentro del mismo grupo de formalidad.}
+  \source{Premium relative to solo workers within the same formality group.}
 \end{frame}
 
-\begin{frame}{Lectura de la figura por formalidad}
+\begin{frame}{Reading the Formality Figure}
   \begin{columns}[T,totalwidth=\textwidth]
     \begin{column}{0.48\textwidth}
-      \idea{Informales}
+      \idea{Informal workers}
       \vspace{0.25cm}
       \begin{itemize}
-        \item La prima es positiva y significativa en todas las categorías.
-        \item En 6--100 trabajadores está alrededor de 48--51\%.
-        \item En 101+ sigue siendo alta: 40,0\%.
+        \item The premium is positive and significant in all categories.
+        \item It is around 48--51\% across the 6--100 worker categories.
+        \item It remains high in 101+ firms: 40.0\%.
       \end{itemize}
     \end{column}
     \begin{column}{0.48\textwidth}
-      \idea{Formales}
+      \idea{Formal workers}
       \vspace{0.25cm}
       \begin{itemize}
-        \item La prima frente a formales solos es pequeña y menos precisa.
-        \item La estimación para 101+ es 16,5\%, pero no significativa al 5\%.
-        \item La comparación relevante dentro del formal también puede ser 101+ frente a firmas formales intermedias.
+        \item The premium relative to formal solo workers is smaller and less precise.
+        \item The 101+ estimate is 16.5\%, but not significant at 5\%.
+        \item A relevant formal-sector comparison is also 101+ firms relative to intermediate formal firms.
       \end{itemize}
     \end{column}
   \end{columns}
 \end{frame}
 
-\begin{frame}{Dentro del empleo formal sí hay una comparación relevante}
-  \idea{Los trabajadores formales en firmas 101+ ganan más que trabajadores formales en firmas intermedias.}
+\begin{frame}{There Is Still a Relevant Comparison within Formal Employment}
+  \idea{Formal workers in 101+ firms earn more than formal workers in intermediate-size firms.}
 
   \vspace{0.25cm}
   \begin{center}
   \small
   \begin{tabular}{lcc}
     \toprule
-    Comparación & Prima 101+ & Significancia \\
+    Comparison & 101+ premium & Significance \\
     \midrule
-    101+ frente a formal solo & 16,5\% & No significativa al 5\% \\
-    101+ frente a 2--3 & 14,2\% & Significativa \\
-    101+ frente a 6--10 & 13,9\% & Significativa \\
-    101+ frente a 20--30 & 13,9\% & Significativa \\
-    101+ frente a 51--100 & 8,9\% & Significativa \\
+    101+ vs. formal solo & 16.5\% & Not significant at 5\% \\
+    101+ vs. 2--3 & 14.2\% & Significant \\
+    101+ vs. 6--10 & 13.9\% & Significant \\
+    101+ vs. 20--30 & 13.9\% & Significant \\
+    101+ vs. 51--100 & 8.9\% & Significant \\
     \bottomrule
   \end{tabular}
   \end{center}
 
   \vspace{0.25cm}
-  {\small La conclusión no es que el tamaño no importe dentro del sector formal. La conclusión es que la prima formal es mucho menos general que la prima informal.}
+  {\small The conclusion is not that size never matters within formal employment. The conclusion is that the formal premium is less general than the informal premium.}
 \end{frame}
 
-\begin{frame}{Formalidad aumenta el nivel salarial dentro de cada tamaño}
-  \idea{La prima por tamaño es más fuerte entre informales, pero la formalidad sigue siendo central.}
+\begin{frame}{Formality Raises Wage Levels within Each Size Category}
+  \idea{The firm-size premium is stronger among informal workers, but formality still matters.}
 
   \vspace{0.25cm}
   \begin{center}
   \small
   \begin{tabular}{lcc}
     \toprule
-    Tamaño & Prima formal-informal condicional & Lectura \\
+    Firm size & Conditional formal-informal premium & Reading \\
     \midrule
-    Solo & 68,8\% & Muy alta \\
-    2--3 & 20,7\% & Positiva \\
-    6--10 & 16,6\% & Positiva \\
-    31--50 & 22,8\% & Positiva \\
-    101+ & 40,6\% & Alta \\
+    Solo & 68.8\% & Very high \\
+    2--3 & 20.7\% & Positive \\
+    6--10 & 16.6\% & Positive \\
+    31--50 & 22.8\% & Positive \\
+    101+ & 40.6\% & High \\
     \bottomrule
   \end{tabular}
   \end{center}
 
   \vspace{0.25cm}
-  {\small Los formales ganan más que los informales dentro de cada categoría de tamaño.}
+  {\small Formal workers earn more than informal workers within every firm-size category.}
 \end{frame}
 
-\begin{frame}{La diferencia por formalidad también se ve en 2008 y 2025}
+\begin{frame}{The Formality Difference Is Visible in Both 2008 and 2025}
   \centering
-  \includegraphics[width=0.95\textwidth,height=0.80\textheight,keepaspectratio]{fig76_es.png}
+  \includegraphics[width=0.95\textwidth,height=0.80\textheight,keepaspectratio]{fig76_en.png}
 
-  \fuente{Estimaciones separadas para 2008 y 2025 con controles por sexo, edad, educación y sector.}
+  \source{Separate estimates for 2008 and 2025 with controls for sex, age, education, and sector.}
 \end{frame}
 
-\begin{frame}{La prima 101+ por formalidad a través del tiempo}
+\begin{frame}{The 101+ Premium by Formality over Time}
   \centering
-  \includegraphics[width=0.95\textwidth,height=0.80\textheight,keepaspectratio]{fig75_es.png}
+  \includegraphics[width=0.95\textwidth,height=0.80\textheight,keepaspectratio]{fig75_en.png}
 
-  \fuente{Prima de 101+ frente a solo, estimada dentro de cada grupo de formalidad. Se omite 2020.}
+  \source{101+ premium relative to solo workers, estimated within each formality group. 2020 is omitted.}
 \end{frame}
 
-\sectionframe{6. Elasticidad y comparación con la literatura}
+\sectionframe{6. Elasticity and Literature Benchmark}
 
-\begin{frame}{Por qué estimar una elasticidad aproximada}
-  \idea{El paper usa categorías de tamaño, pero la literatura suele reportar elasticidades salario-tamaño.}
+\begin{frame}{Why Estimate an Approximate Elasticity}
+  \idea{The paper uses firm-size categories, but much of the literature reports wage-size elasticities.}
 
   \vspace{0.35cm}
   \begin{itemize}
-    \item La GEIH reporta tamaño de empresa por intervalos.
-    \item Asignamos valores representativos a cada intervalo: 1, 2,5, 4,5, 8, 15, 25, 40,5, 75,5 y 150.
-    \item La elasticidad es solo un ejercicio de comparación con la literatura.
-    \item Las estimaciones categóricas siguen siendo el resultado principal.
+    \item GEIH reports firm size in intervals.
+    \item We assign representative values to each interval: 1, 2.5, 4.5, 8, 15, 25, 40.5, 75.5, and 150.
+    \item The elasticity is only a benchmarking exercise.
+    \item The categorical estimates remain the main empirical results.
   \end{itemize}
 \end{frame}
 
-\begin{frame}{Benchmark internacional}
-  \idea{La elasticidad condicional colombiana es alta frente a la literatura, y esa diferencia viene principalmente del empleo informal.}
+\begin{frame}{International Benchmark}
+  \idea{Colombia's conditional elasticity is high relative to the literature, and the difference mainly comes from informal employment.}
 
   \vspace{0.25cm}
   \begin{center}
   \small
   \begin{tabular}{lcc}
     \toprule
-    Especificación & Elasticidad & Lectura \\
+    Specification & Elasticity & Reading \\
     \midrule
-    Literatura: sin controles por heterogeneidad & 0,062 & Diegmann et al. \\
-    Literatura: controles observables & 0,036 & Diegmann et al. \\
-    Colombia: sin controles & 0,203 & Muy alta \\
-    Colombia: muestra completa con controles & 0,071 & Alta frente al benchmark \\
-    Colombia: formales con controles & 0,026 & Cerca del benchmark \\
-    Colombia: informales con controles & 0,130 & Muy por encima del benchmark \\
+    Literature: no worker-heterogeneity controls & 0.062 & Diegmann et al. \\
+    Literature: observable worker controls & 0.036 & Diegmann et al. \\
+    Colombia: no controls & 0.203 & Very high \\
+    Colombia: full sample with controls & 0.071 & High relative to benchmark \\
+    Colombia: formal workers with controls & 0.026 & Close to benchmark \\
+    Colombia: informal workers with controls & 0.130 & Far above benchmark \\
     \bottomrule
   \end{tabular}
   \end{center}
 \end{frame}
 
-\sectionframe{7. Interpretación e implicaciones}
+\sectionframe{7. Interpretation and Implications}
 
-\begin{frame}{Qué sabemos}
+\begin{frame}{What We Know}
   \begin{itemize}
-    \item El ingreso real por hora aumenta con el tamaño de empresa.
-    \item La prima se reduce mucho con controles, pero permanece positiva.
-    \item No hay evidencia estadísticamente concluyente de declive secular.
-    \item La prima condicional es especialmente fuerte dentro del empleo informal.
-    \item La formalidad eleva el nivel salarial dentro de cada tamaño de empresa.
+    \item Real hourly income rises with firm size.
+    \item The premium falls substantially with controls, but remains positive.
+    \item There is no statistically conclusive evidence of secular decline.
+    \item The conditional premium is especially strong within informal employment.
+    \item Formality raises wage levels within every firm-size category.
   \end{itemize}
 \end{frame}
 
-\begin{frame}{Qué no sabemos con estos datos}
-  \idea{La GEIH no identifica firmas ni observa producto, capital o productividad marginal.}
+\begin{frame}{What These Data Cannot Tell Us}
+  \idea{GEIH does not identify firms or observe output, capital, or marginal products.}
 
   \vspace{0.35cm}
   \begin{itemize}
-    \item No podemos separar completamente selección no observada de diferencias del lado de la firma.
-    \item No podemos estimar efectos fijos de empleador.
-    \item No podemos medir directamente productos marginales.
-    \item Por eso hablamos de marcadores de fricciones, no de una prueba directa de misallocation.
+    \item We cannot fully separate unobserved selection from firm-side differences.
+    \item We cannot estimate employer fixed effects.
+    \item We cannot directly measure marginal products.
+    \item This is why we talk about markers of frictions, not direct proof of misallocation.
   \end{itemize}
 \end{frame}
 
-\begin{frame}{Implicación de política}
-  \idea{La conclusión no es favorecer empresas grandes por ser grandes.}
+\begin{frame}{Policy Implication}
+  \idea{The conclusion is not to favor large firms because they are large.}
 
   \vspace{0.35cm}
   \begin{itemize}
-    \item El objetivo relevante es reducir barreras que mantienen pequeñas, informales o desconectadas a unidades productivas con potencial.
-    \item Como la formalidad eleva salarios dentro de cada tamaño, mover empleos hacia la formalidad sigue siendo una prioridad.
-    \item Como la prima por tamaño es más fuerte entre informales, también importa que las unidades informales productivas puedan crecer, organizarse y conectarse a mercados.
-    \item Ese apoyo debe ser una ruta hacia formalización, no un subsidio a permanecer informal.
+    \item The relevant objective is to reduce barriers that keep productive units small, informal, or disconnected from markets.
+    \item Because formality raises wages within each firm-size category, moving jobs toward formality remains a policy priority.
+    \item Because the firm-size premium is strongest among informal workers, it also matters that productive informal units can grow, organize, and connect to markets.
+    \item This support should be a path toward formalization, not a subsidy for remaining informal.
   \end{itemize}
 \end{frame}
 
-\begin{frame}{Una mala lectura de política}
-  \idea{Subsidios que preservan la pequeña escala pueden reforzar el problema que el paper documenta.}
+\begin{frame}{A Bad Policy Reading}
+  \idea{Subsidies that preserve small scale may reinforce the structure documented in the paper.}
 
   \vspace{0.35cm}
   \begin{itemize}
-    \item No basta con apoyar pequeñas empresas si el apoyo no cambia productividad, formalización o acceso a mercados.
-    \item No conviene crear umbrales regulatorios que hagan costoso crecer.
-    \item Tampoco conviene incentivar que firmas formales se vuelvan informales para recibir beneficios.
-    \item El foco debe estar en productividad, formalización, gestión, tecnología y conexión con clientes más grandes.
+    \item Supporting small firms is not enough if support does not affect productivity, formalization, or market access.
+    \item Policy should avoid regulatory thresholds that make growth costly.
+    \item Policy should also avoid incentives for formal firms to become informal in order to receive benefits.
+    \item The focus should be productivity, formalization, management, technology, and access to larger customers.
   \end{itemize}
 \end{frame}
 
-\begin{frame}{Conclusión}
-  \idea{El tamaño de empresa está estrechamente asociado con la remuneración por hora en Colombia.}
+\begin{frame}{Conclusion}
+  \idea{Firm size is closely associated with real hourly pay in Colombia.}
 
   \vspace{0.35cm}
   \begin{itemize}
-    \item La prima 101+ frente a trabajo solo es grande en promedios brutos y sigue siendo de 43,2\% con controles.
-    \item El patrón no es solo una diferencia formal-informal.
-    \item La prima más fuerte está dentro del empleo informal.
-    \item El resultado central para política no es mover trabajadores mecánicamente a empresas grandes, sino entender por qué tantos trabajadores permanecen en unidades pequeñas, informales y de baja remuneración.
+    \item The 101+ premium relative to solo workers is large in raw averages and remains 43.2\% after controls.
+    \item The pattern is not only a formal-informal difference.
+    \item The strongest premium is within informal employment.
+    \item The policy question is not how to move workers mechanically into large firms, but why so many workers remain in small, informal, low-paying units.
   \end{itemize}
 \end{frame}
 
-\begin{frame}{Para discusión}
+\begin{frame}{Questions for Discussion}
   \begin{enumerate}
-    \item ¿Cuánto de la prima condicional refleja selección no observada y cuánto refleja diferencias del lado de la firma?
-    \item ¿Qué políticas ayudan a crecer a unidades informales productivas sin subsidiar la informalidad?
-    \item ¿Qué datos permitirían pasar de una estadística diagnóstica a una prueba más directa de eficiencia allocativa?
-    \item ¿Cómo conectar este resultado con productividad, educación, regulación y acceso a mercados?
+    \item How much of the conditional premium reflects unobserved selection, and how much reflects firm-side differences?
+    \item Which policies help productive informal units grow without subsidizing informality?
+    \item What data would allow us to move from a diagnostic statistic to a more direct test of allocative efficiency?
+    \item How should this evidence be connected to productivity, education, regulation, and market access?
   \end{enumerate}
 \end{frame}
 
-\begin{frame}{Referencias mencionadas}
+\begin{frame}{References Mentioned}
   \scriptsize
   \begin{itemize}
-    \item Abowd, Kramarz y Margolis (1999). High wage workers and high wage firms.
-    \item Balkan y Tumen (2016). Firm-size wage gaps and informality in Turkey.
-    \item Brown y Medoff (1989). The employer size-wage effect.
-    \item Card, Heining y Kline (2013). Workplace heterogeneity and wage inequality.
-    \item Diegmann, Müller y Schoefer (2026). The disappearing large-firm wage premium.
-    \item El Badaoui, Strobl y Walsh (2010). Is there an informal employment wage penalty?
-    \item Hsieh y Klenow (2009). Misallocation and manufacturing TFP.
+    \item Abowd, Kramarz, and Margolis (1999). High wage workers and high wage firms.
+    \item Balkan and Tumen (2016). Firm-size wage gaps and informality in Turkey.
+    \item Brown and Medoff (1989). The employer size-wage effect.
+    \item Card, Heining, and Kline (2013). Workplace heterogeneity and wage inequality.
+    \item Diegmann, Muller, and Schoefer (2026). The disappearing large-firm wage premium.
+    \item El Badaoui, Strobl, and Walsh (2010). Is there an informal employment wage penalty?
+    \item Hsieh and Klenow (2009). Misallocation and manufacturing TFP.
     \item Reed (2019). The firm-size wage premium in developing economies.
   \end{itemize}
 \end{frame}
