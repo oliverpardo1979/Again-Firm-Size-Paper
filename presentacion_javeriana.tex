@@ -52,6 +52,7 @@
 \newcommand{\regnote}[1]{%
   \vspace{0.08cm}{\tiny\color{cjcgray}#1}
 }
+\newcommand{\sereg}[1]{{\fontsize{5.2pt}{5.6pt}\selectfont\color{cjcgray}(#1)}}
 \newcommand{\sectionframe}[1]{%
   \begin{frame}[plain]
     \vfill
@@ -391,14 +392,14 @@
     \cmidrule(lr){2-5}
     & (1) & (2) & (3) & (4) \\
     \midrule
-    Firm size: 2--3 & 0.183*** {\scriptsize(0.034)} & 0.242*** {\scriptsize(0.030)} & 0.209*** {\scriptsize(0.027)} & 0.188*** {\scriptsize(0.029)} \\
-    Firm size: 4--5 & 0.363*** {\scriptsize(0.035)} & 0.408*** {\scriptsize(0.030)} & 0.361*** {\scriptsize(0.029)} & 0.307*** {\scriptsize(0.038)} \\
-    Firm size: 6--10 & 0.500*** {\scriptsize(0.029)} & 0.502*** {\scriptsize(0.033)} & 0.422*** {\scriptsize(0.037)} & 0.317*** {\scriptsize(0.050)} \\
-    Firm size: 11--19 & 0.627*** {\scriptsize(0.034)} & 0.577*** {\scriptsize(0.040)} & 0.458*** {\scriptsize(0.042)} & 0.303*** {\scriptsize(0.051)} \\
-    Firm size: 20--30 & 0.689*** {\scriptsize(0.046)} & 0.604*** {\scriptsize(0.045)} & 0.463*** {\scriptsize(0.046)} & 0.271*** {\scriptsize(0.050)} \\
-    Firm size: 31--50 & 0.760*** {\scriptsize(0.056)} & 0.651*** {\scriptsize(0.049)} & 0.488*** {\scriptsize(0.047)} & 0.272*** {\scriptsize(0.048)} \\
-    Firm size: 51--100 & 0.820*** {\scriptsize(0.063)} & 0.699*** {\scriptsize(0.052)} & 0.519*** {\scriptsize(0.048)} & 0.289*** {\scriptsize(0.047)} \\
-    Firm size: 101+ & 1.019*** {\scriptsize(0.102)} & 0.819*** {\scriptsize(0.067)} & 0.598*** {\scriptsize(0.061)} & 0.359*** {\scriptsize(0.059)} \\
+    Firm size: 2--3 & 0.183*** \sereg{0.034} & 0.242*** \sereg{0.030} & 0.209*** \sereg{0.027} & 0.188*** \sereg{0.029} \\
+    Firm size: 4--5 & 0.363*** \sereg{0.035} & 0.408*** \sereg{0.030} & 0.361*** \sereg{0.029} & 0.307*** \sereg{0.038} \\
+    Firm size: 6--10 & 0.500*** \sereg{0.029} & 0.502*** \sereg{0.033} & 0.422*** \sereg{0.037} & 0.317*** \sereg{0.050} \\
+    Firm size: 11--19 & 0.627*** \sereg{0.034} & 0.577*** \sereg{0.040} & 0.458*** \sereg{0.042} & 0.303*** \sereg{0.051} \\
+    Firm size: 20--30 & 0.689*** \sereg{0.046} & 0.604*** \sereg{0.045} & 0.463*** \sereg{0.046} & 0.271*** \sereg{0.050} \\
+    Firm size: 31--50 & 0.760*** \sereg{0.056} & 0.651*** \sereg{0.049} & 0.488*** \sereg{0.047} & 0.272*** \sereg{0.048} \\
+    Firm size: 51--100 & 0.820*** \sereg{0.063} & 0.699*** \sereg{0.052} & 0.519*** \sereg{0.048} & 0.289*** \sereg{0.047} \\
+    Firm size: 101+ & 1.019*** \sereg{0.102} & 0.819*** \sereg{0.067} & 0.598*** \sereg{0.061} & 0.359*** \sereg{0.059} \\
     \midrule
     Gender, age, education & No & No & Yes & Yes \\
     Formality & No & No & No & Yes \\
@@ -571,14 +572,14 @@
     \toprule
     Firm size & Informal coefficient $\hat{\beta}_g$ & Interaction $\hat{\theta}_g$ & Formal coefficient $\hat{\beta}_g+\hat{\theta}_g$ \\
     \midrule
-    2--3 & 0.197*** {\scriptsize(0.026)} & -0.176*** {\scriptsize(0.062)} & 0.021 {\scriptsize(0.067)} \\
-    4--5 & 0.343*** {\scriptsize(0.027)} & -0.318*** {\scriptsize(0.085)} & 0.024 {\scriptsize(0.089)} \\
-    6--10 & 0.392*** {\scriptsize(0.032)} & -0.369*** {\scriptsize(0.081)} & 0.023 {\scriptsize(0.087)} \\
-    11--19 & 0.409*** {\scriptsize(0.037)} & -0.374*** {\scriptsize(0.076)} & 0.035 {\scriptsize(0.080)} \\
-    20--30 & 0.402*** {\scriptsize(0.035)} & -0.379*** {\scriptsize(0.072)} & 0.023 {\scriptsize(0.079)} \\
-    31--50 & 0.401*** {\scriptsize(0.038)} & -0.359*** {\scriptsize(0.067)} & 0.041 {\scriptsize(0.076)} \\
-    51--100 & 0.410*** {\scriptsize(0.044)} & -0.342*** {\scriptsize(0.067)} & 0.068 {\scriptsize(0.075)} \\
-    101+ & 0.336*** {\scriptsize(0.046)} & -0.183** {\scriptsize(0.083)} & 0.153* {\scriptsize(0.088)} \\
+    2--3 & 0.197*** \sereg{0.026} & -0.176*** \sereg{0.062} & 0.021 \sereg{0.067} \\
+    4--5 & 0.343*** \sereg{0.027} & -0.318*** \sereg{0.085} & 0.024 \sereg{0.089} \\
+    6--10 & 0.392*** \sereg{0.032} & -0.369*** \sereg{0.081} & 0.023 \sereg{0.087} \\
+    11--19 & 0.409*** \sereg{0.037} & -0.374*** \sereg{0.076} & 0.035 \sereg{0.080} \\
+    20--30 & 0.402*** \sereg{0.035} & -0.379*** \sereg{0.072} & 0.023 \sereg{0.079} \\
+    31--50 & 0.401*** \sereg{0.038} & -0.359*** \sereg{0.067} & 0.041 \sereg{0.076} \\
+    51--100 & 0.410*** \sereg{0.044} & -0.342*** \sereg{0.067} & 0.068 \sereg{0.075} \\
+    101+ & 0.336*** \sereg{0.046} & -0.183** \sereg{0.083} & 0.153* \sereg{0.088} \\
     \bottomrule
   \end{tabular}}
 
@@ -693,15 +694,15 @@
     \toprule
     Firm size & Log gap & Premium & $p$-value \\
     \midrule
-    Solo & 0.524*** (0.063) & 68.8\% & $<0.001$ \\
-    2--3 & 0.348*** (0.018) & 41.6\% & $<0.001$ \\
-    4--5 & 0.205*** (0.036) & 22.8\% & $<0.001$ \\
-    6--10 & 0.155*** (0.031) & 16.7\% & $<0.001$ \\
-    11--19 & 0.149*** (0.024) & 16.1\% & $<0.001$ \\
-    20--30 & 0.145*** (0.018) & 15.6\% & $<0.001$ \\
-    31--50 & 0.165*** (0.014) & 17.9\% & $<0.001$ \\
-    51--100 & 0.181*** (0.019) & 19.9\% & $<0.001$ \\
-    101+ & 0.341*** (0.043) & 40.6\% & $<0.001$ \\
+    Solo & 0.524*** \sereg{0.063} & 68.8\% & $<0.001$ \\
+    2--3 & 0.348*** \sereg{0.018} & 41.6\% & $<0.001$ \\
+    4--5 & 0.205*** \sereg{0.036} & 22.8\% & $<0.001$ \\
+    6--10 & 0.155*** \sereg{0.031} & 16.7\% & $<0.001$ \\
+    11--19 & 0.149*** \sereg{0.024} & 16.1\% & $<0.001$ \\
+    20--30 & 0.145*** \sereg{0.018} & 15.6\% & $<0.001$ \\
+    31--50 & 0.165*** \sereg{0.014} & 17.9\% & $<0.001$ \\
+    51--100 & 0.181*** \sereg{0.019} & 19.9\% & $<0.001$ \\
+    101+ & 0.341*** \sereg{0.043} & 40.6\% & $<0.001$ \\
     \bottomrule
   \end{tabular}
 
