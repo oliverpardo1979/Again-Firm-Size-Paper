@@ -49,6 +49,9 @@
     {\small #2}
   \end{center}
 }
+\newcommand{\regnote}[1]{%
+  \vspace{0.08cm}{\tiny\color{cjcgray}#1}
+}
 \newcommand{\sectionframe}[1]{%
   \begin{frame}[plain]
     \vfill
@@ -376,6 +379,38 @@
   \end{itemize}
 \end{frame}
 
+\begin{frame}{Regression Output: Main Specification}
+  \centering
+  \tiny
+  \setlength{\tabcolsep}{2.5pt}
+  \renewcommand{\arraystretch}{0.98}
+  \resizebox{0.98\textwidth}{!}{%
+  \begin{tabular}{lcccc}
+    \toprule
+    & \multicolumn{4}{c}{Dependent variable: log real hourly labor income} \\
+    \cmidrule(lr){2-5}
+    & (1) & (2) & (3) & (4) \\
+    \midrule
+    Firm size: 2--3 & 0.183*** {\scriptsize(0.034)} & 0.242*** {\scriptsize(0.030)} & 0.209*** {\scriptsize(0.027)} & 0.188*** {\scriptsize(0.029)} \\
+    Firm size: 4--5 & 0.363*** {\scriptsize(0.035)} & 0.408*** {\scriptsize(0.030)} & 0.361*** {\scriptsize(0.029)} & 0.307*** {\scriptsize(0.038)} \\
+    Firm size: 6--10 & 0.500*** {\scriptsize(0.029)} & 0.502*** {\scriptsize(0.033)} & 0.422*** {\scriptsize(0.037)} & 0.317*** {\scriptsize(0.050)} \\
+    Firm size: 11--19 & 0.627*** {\scriptsize(0.034)} & 0.577*** {\scriptsize(0.040)} & 0.458*** {\scriptsize(0.042)} & 0.303*** {\scriptsize(0.051)} \\
+    Firm size: 20--30 & 0.689*** {\scriptsize(0.046)} & 0.604*** {\scriptsize(0.045)} & 0.463*** {\scriptsize(0.046)} & 0.271*** {\scriptsize(0.050)} \\
+    Firm size: 31--50 & 0.760*** {\scriptsize(0.056)} & 0.651*** {\scriptsize(0.049)} & 0.488*** {\scriptsize(0.047)} & 0.272*** {\scriptsize(0.048)} \\
+    Firm size: 51--100 & 0.820*** {\scriptsize(0.063)} & 0.699*** {\scriptsize(0.052)} & 0.519*** {\scriptsize(0.048)} & 0.289*** {\scriptsize(0.047)} \\
+    Firm size: 101+ & 1.019*** {\scriptsize(0.102)} & 0.819*** {\scriptsize(0.067)} & 0.598*** {\scriptsize(0.061)} & 0.359*** {\scriptsize(0.059)} \\
+    \midrule
+    Gender, age, education & No & No & Yes & Yes \\
+    Formality & No & No & No & Yes \\
+    Sector-year fixed effects & No & Yes & Yes & Yes \\
+    Observations & 5,154,213 & 5,154,213 & 5,154,213 & 5,154,213 \\
+    $R^2$ & 0.213 & 0.271 & 0.376 & 0.386 \\
+    \bottomrule
+  \end{tabular}}
+
+  \regnote{Omitted category: solo workers. GEIH expansion weights used. Standard errors clustered by sector.}
+\end{frame}
+
 \begin{frame}{What Happens When We Add Controls}
   \idea{The 101+ premium falls substantially, but it does not disappear.}
 
@@ -448,6 +483,31 @@
   \source{Annual estimates of the main specification. 2020 is omitted.}
 \end{frame}
 
+\begin{frame}{Regression Output: Trend Test}
+  \idea{The point estimates are positive, but the two-sided tests do not reject zero.}
+
+  \vspace{0.15cm}
+  \centering
+  \scriptsize
+  \setlength{\tabcolsep}{4pt}
+  \begin{tabular}{lccc}
+    \toprule
+    Firm size & Annual trend & $p$-value & Implied 2008--2025 change \\
+    \midrule
+    2--3 & 0.0033 & 0.262 & 5.7\% \\
+    4--5 & 0.0032 & 0.314 & 5.6\% \\
+    6--10 & 0.0021 & 0.536 & 3.7\% \\
+    11--19 & 0.0027 & 0.494 & 4.7\% \\
+    20--30 & 0.0018 & 0.661 & 3.2\% \\
+    31--50 & 0.0027 & 0.542 & 4.7\% \\
+    51--100 & 0.0026 & 0.549 & 4.5\% \\
+    101+ & 0.0045 & 0.314 & 7.9\% \\
+    \bottomrule
+  \end{tabular}
+
+  \regnote{Specification includes the main controls and sector-year fixed effects. The $p$-values correspond to two-sided tests.}
+\end{frame}
+
 \begin{frame}{The Evidence Suggests Persistence, Not a Clear Trend}
   \idea{The point estimates suggest widening, but the tests do not support the stronger claim that the premium systematically intensified.}
 
@@ -499,6 +559,30 @@
     \item \(\beta_g+\theta_g\): firm-size premium among formal workers.
     \item \(\phi+\theta_g\): formal-informal wage gap within size group \(g\).
   \end{itemize}
+\end{frame}
+
+\begin{frame}{Regression Output: Firm Size by Formality}
+  \centering
+  \tiny
+  \setlength{\tabcolsep}{4pt}
+  \renewcommand{\arraystretch}{0.98}
+  \resizebox{0.94\textwidth}{!}{%
+  \begin{tabular}{lccc}
+    \toprule
+    Firm size & Informal coefficient $\hat{\beta}_g$ & Interaction $\hat{\theta}_g$ & Formal coefficient $\hat{\beta}_g+\hat{\theta}_g$ \\
+    \midrule
+    2--3 & 0.197*** {\scriptsize(0.026)} & -0.176*** {\scriptsize(0.062)} & 0.021 {\scriptsize(0.067)} \\
+    4--5 & 0.343*** {\scriptsize(0.027)} & -0.318*** {\scriptsize(0.085)} & 0.024 {\scriptsize(0.089)} \\
+    6--10 & 0.392*** {\scriptsize(0.032)} & -0.369*** {\scriptsize(0.081)} & 0.023 {\scriptsize(0.087)} \\
+    11--19 & 0.409*** {\scriptsize(0.037)} & -0.374*** {\scriptsize(0.076)} & 0.035 {\scriptsize(0.080)} \\
+    20--30 & 0.402*** {\scriptsize(0.035)} & -0.379*** {\scriptsize(0.072)} & 0.023 {\scriptsize(0.079)} \\
+    31--50 & 0.401*** {\scriptsize(0.038)} & -0.359*** {\scriptsize(0.067)} & 0.041 {\scriptsize(0.076)} \\
+    51--100 & 0.410*** {\scriptsize(0.044)} & -0.342*** {\scriptsize(0.067)} & 0.068 {\scriptsize(0.075)} \\
+    101+ & 0.336*** {\scriptsize(0.046)} & -0.183** {\scriptsize(0.083)} & 0.153* {\scriptsize(0.088)} \\
+    \bottomrule
+  \end{tabular}}
+
+  \regnote{Omitted category: solo workers within each formality group. Controls: sex, age, age squared, education, and sector-year fixed effects.}
 \end{frame}
 
 \begin{frame}{The Conditional Premium Is Much Stronger among Informal Workers}
@@ -554,6 +638,30 @@
   {\small The conclusion is not that size never matters within formal employment. The conclusion is that the formal premium is less general than the informal premium.}
 \end{frame}
 
+\begin{frame}{Regression Output: Formal 101+ Contrasts}
+  \idea{The 101+ category is not statistically different from formal solo work at 5\%, but it is above the intermediate formal categories.}
+
+  \vspace{0.15cm}
+  \centering
+  \scriptsize
+  \begin{tabular}{lcc}
+    \toprule
+    Reference category & 101+ premium & $p$-value \\
+    \midrule
+    Solo workers & 16.5\% & 0.082 \\
+    2--3 & 14.2\% & $<0.001$ \\
+    4--5 & 13.8\% & $<0.001$ \\
+    6--10 & 13.9\% & $<0.001$ \\
+    11--19 & 12.6\% & 0.004 \\
+    20--30 & 13.9\% & 0.001 \\
+    31--50 & 11.8\% & 0.002 \\
+    51--100 & 8.9\% & 0.004 \\
+    \bottomrule
+  \end{tabular}
+
+  \regnote{Each row compares formal workers in 101+ firms with formal workers in the reference category.}
+\end{frame}
+
 \begin{frame}{Formality Raises Wage Levels within Each Size Category}
   \idea{The firm-size premium is stronger among informal workers, but formality still matters.}
 
@@ -575,6 +683,29 @@
 
   \vspace{0.25cm}
   {\small Formal workers earn more than informal workers within every firm-size category.}
+\end{frame}
+
+\begin{frame}{Regression Output: Formal-Informal Gap by Firm Size}
+  \centering
+  \scriptsize
+  \setlength{\tabcolsep}{4pt}
+  \begin{tabular}{lccc}
+    \toprule
+    Firm size & Log gap & Premium & $p$-value \\
+    \midrule
+    Solo & 0.524*** (0.063) & 68.8\% & $<0.001$ \\
+    2--3 & 0.348*** (0.018) & 41.6\% & $<0.001$ \\
+    4--5 & 0.205*** (0.036) & 22.8\% & $<0.001$ \\
+    6--10 & 0.155*** (0.031) & 16.7\% & $<0.001$ \\
+    11--19 & 0.149*** (0.024) & 16.1\% & $<0.001$ \\
+    20--30 & 0.145*** (0.018) & 15.6\% & $<0.001$ \\
+    31--50 & 0.165*** (0.014) & 17.9\% & $<0.001$ \\
+    51--100 & 0.181*** (0.019) & 19.9\% & $<0.001$ \\
+    101+ & 0.341*** (0.043) & 40.6\% & $<0.001$ \\
+    \bottomrule
+  \end{tabular}
+
+  \regnote{The gap compares formal and informal workers within each firm-size category. Standard errors in parentheses.}
 \end{frame}
 
 \begin{frame}{The Formality Difference Is Visible in Both 2008 and 2025}
@@ -611,18 +742,20 @@
   \vspace{0.25cm}
   \begin{center}
   \small
-  \begin{tabular}{lcc}
+  \setlength{\tabcolsep}{4pt}
+  \resizebox{0.96\textwidth}{!}{%
+  \begin{tabular}{lccc}
     \toprule
-    Specification & Elasticity & Reading \\
+    Specification & Elasticity & S.E. & Reading \\
     \midrule
-    Literature: no worker-heterogeneity controls & 0.062 & Diegmann et al. \\
-    Literature: observable worker controls & 0.036 & Diegmann et al. \\
-    Colombia: no controls & 0.203 & Very high \\
-    Colombia: full sample with controls & 0.071 & High relative to benchmark \\
-    Colombia: formal workers with controls & 0.026 & Close to benchmark \\
-    Colombia: informal workers with controls & 0.130 & Far above benchmark \\
+    Literature: no worker-heterogeneity controls & 0.062 & n.a. & Diegmann et al. \\
+    Literature: observable worker controls & 0.036 & n.a. & Diegmann et al. \\
+    Colombia: no controls & 0.203*** & (0.019) & Very high \\
+    Colombia: full sample with controls & 0.071*** & (0.013) & High relative to benchmark \\
+    Colombia: formal workers with controls & 0.026** & (0.011) & Close to benchmark \\
+    Colombia: informal workers with controls & 0.130*** & (0.015) & Far above benchmark \\
     \bottomrule
-  \end{tabular}
+  \end{tabular}}
   \end{center}
 \end{frame}
 
