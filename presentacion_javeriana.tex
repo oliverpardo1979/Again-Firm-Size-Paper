@@ -890,6 +890,35 @@
   \regnote{Same descriptive table as Paper Table 1, but wage ratios use 101+ workers as the reference category.}
 \end{frame}
 
+\begin{frame}{Appendix Table: Hourly Income Relative to 11--19 Workers}
+  \centering
+  \tiny
+  \setlength{\tabcolsep}{2.8pt}
+  \renewcommand{\arraystretch}{0.95}
+  \resizebox{0.99\textwidth}{!}{%
+  \begin{tabular}{lrrrrrrr}
+    \toprule
+    & \multicolumn{2}{c}{Employment share} & \multicolumn{2}{c}{Mean hourly income} & \multicolumn{2}{c}{Wage ratio to 11--19} & Wage growth \\
+    \cmidrule(lr){2-3} \cmidrule(lr){4-5} \cmidrule(lr){6-7} \cmidrule(lr){8-8}
+    Firm size & 2008 & 2025 & 2008 & 2025 & 2008 & 2025 & Annualized \\
+    \midrule
+    Solo & 36.1\% & 34.7\% & 5,388 & 6,534 & 0.62 & 0.56 & 1.1\% \\
+    2--3 & 19.6\% & 13.8\% & 6,242 & 7,242 & 0.72 & 0.62 & 0.9\% \\
+    4--5 & 7.3\% & 7.0\% & 7,196 & 8,242 & 0.83 & 0.71 & 0.8\% \\
+    6--10 & 5.9\% & 5.8\% & 7,543 & 9,663 & 0.87 & 0.83 & 1.5\% \\
+    11--19 & 3.4\% & 3.9\% & 8,679 & 11,634 & 1.00 & 1.00 & 1.7\% \\
+    20--30 & 3.3\% & 3.3\% & 8,905 & 11,201 & 1.03 & 0.96 & 1.4\% \\
+    31--50 & 2.6\% & 3.0\% & 10,424 & 12,574 & 1.20 & 1.08 & 1.1\% \\
+    51--100 & 3.0\% & 3.5\% & 10,682 & 13,217 & 1.23 & 1.14 & 1.3\% \\
+    101+ & 18.8\% & 25.2\% & 12,943 & 16,859 & 1.49 & 1.45 & 1.6\% \\
+    \addlinespace
+    All workers & 100.0\% & 100.0\% & 7,752 & 10,295 & 0.89 & 0.88 & 1.7\% \\
+    \bottomrule
+  \end{tabular}}
+
+  \regnote{Same descriptive table as Paper Table 1, but wage ratios use the 11--19 category as the reference.}
+\end{frame}
+
 \begin{frame}{Paper Table 2: Wage Gaps by Worker Group, 2025}
   \centering
   \tiny
@@ -1032,6 +1061,38 @@
   \regnote{Omitted category: workers in firms with 101 or more workers. Negative coefficients mean lower wages than 101+ workers.}
 \end{frame}
 
+\begin{frame}{Appendix Table: Main Regression with 11--19 Reference}
+  \centering
+  \tiny
+  \setlength{\tabcolsep}{2.5pt}
+  \renewcommand{\arraystretch}{0.98}
+  \resizebox{0.98\textwidth}{!}{%
+  \begin{tabular}{lcccc}
+    \toprule
+    & \multicolumn{4}{c}{Dependent variable: log real hourly labor income} \\
+    \cmidrule(lr){2-5}
+    & (1) & (2) & (3) & (4) \\
+    \midrule
+    Firm size: Solo & -0.625*** \sereg{0.034} & -0.575*** \sereg{0.040} & -0.457*** \sereg{0.042} & -0.302*** \sereg{0.050} \\
+    Firm size: 2--3 & -0.442*** \sereg{0.029} & -0.333*** \sereg{0.033} & -0.248*** \sereg{0.028} & -0.114*** \sereg{0.030} \\
+    Firm size: 4--5 & -0.262*** \sereg{0.028} & -0.167*** \sereg{0.021} & -0.096*** \sereg{0.021} & 0.005 \sereg{0.020} \\
+    Firm size: 6--10 & -0.127*** \sereg{0.016} & -0.075*** \sereg{0.010} & -0.035*** \sereg{0.010} & 0.014 \sereg{0.010} \\
+    Firm size: 20--30 & 0.062*** \sereg{0.016} & 0.028*** \sereg{0.008} & 0.005 \sereg{0.006} & -0.031*** \sereg{0.005} \\
+    Firm size: 31--50 & 0.134*** \sereg{0.027} & 0.075*** \sereg{0.014} & 0.030*** \sereg{0.009} & -0.031*** \sereg{0.007} \\
+    Firm size: 51--100 & 0.193*** \sereg{0.035} & 0.123*** \sereg{0.024} & 0.061*** \sereg{0.017} & -0.014 \sereg{0.015} \\
+    Firm size: 101+ & 0.391*** \sereg{0.082} & 0.242*** \sereg{0.055} & 0.141*** \sereg{0.041} & 0.057 \sereg{0.039} \\
+    \midrule
+    Gender, age, education & No & No & Yes & Yes \\
+    Formality & No & No & No & Yes \\
+    Sector-year fixed effects & No & Yes & Yes & Yes \\
+    Observations & 5,268,514 & 5,268,514 & 5,268,514 & 5,268,514 \\
+    $R^2$ & 0.213 & 0.271 & 0.376 & 0.386 \\
+    \bottomrule
+  \end{tabular}}
+
+  \regnote{Omitted category: workers in firms with 11--19 workers. Positive coefficients mean higher wages than this mid-size reference.}
+\end{frame}
+
 \begin{frame}{Appendix Table: Trend Test with 101+ Reference}
   \centering
   \scriptsize
@@ -1052,6 +1113,28 @@
   \end{tabular}
 
   \regnote{Omitted category: 101+ workers. A negative trend means that the listed category lost ground relative to 101+ workers.}
+\end{frame}
+
+\begin{frame}{Appendix Table: Trend Test with 11--19 Reference}
+  \centering
+  \scriptsize
+  \setlength{\tabcolsep}{3.5pt}
+  \begin{tabular}{lcccc}
+    \toprule
+    Firm size & Annual trend & S.E. & $p$-value & Implied 2008--2025 change \\
+    \midrule
+    Solo & -0.0027 & (0.0039) & 0.491 & -4.5\% \\
+    2--3 & 0.0005 & (0.0016) & 0.746 & 0.9\% \\
+    4--5 & 0.0005 & (0.0014) & 0.736 & 0.8\% \\
+    6--10 & -0.0006 & (0.0011) & 0.611 & -1.0\% \\
+    20--30 & -0.0009 & (0.0010) & 0.392 & -1.5\% \\
+    31--50 & 0.0000 & (0.0012) & 0.988 & 0.0\% \\
+    51--100 & -0.0001 & (0.0014) & 0.940 & -0.2\% \\
+    101+ & 0.0017 & (0.0012) & 0.175 & 3.0\% \\
+    \bottomrule
+  \end{tabular}
+
+  \regnote{Omitted category: 11--19 workers. Relative to this mid-size group, the 101+ trend is positive but not statistically significant.}
 \end{frame}
 
 \begin{frame}{Appendix Table: Firm Size by Formality with 101+ Reference}
@@ -1076,6 +1159,30 @@
   \end{tabular}}
 
   \regnote{Omitted category: 101+ workers within each formality group. Negative coefficients mean lower wages than 101+ workers in the same formality group.}
+\end{frame}
+
+\begin{frame}{Appendix Table: Firm Size by Formality with 11--19 Reference}
+  \centering
+  \tiny
+  \setlength{\tabcolsep}{4pt}
+  \renewcommand{\arraystretch}{0.98}
+  \resizebox{0.94\textwidth}{!}{%
+  \begin{tabular}{lccc}
+    \toprule
+    Firm size & Informal coefficient $\hat{\beta}_g$ & Interaction $\hat{\theta}_g$ & Formal coefficient $\hat{\beta}_g+\hat{\theta}_g$ \\
+    \midrule
+    Solo & -0.408*** \sereg{0.037} & 0.373*** \sereg{0.076} & -0.035 \sereg{0.080} \\
+    2--3 & -0.211*** \sereg{0.025} & 0.198*** \sereg{0.022} & -0.013 \sereg{0.025} \\
+    4--5 & -0.065*** \sereg{0.019} & 0.055*** \sereg{0.017} & -0.010 \sereg{0.018} \\
+    6--10 & -0.016 \sereg{0.010} & 0.004 \sereg{0.011} & -0.012 \sereg{0.012} \\
+    20--30 & -0.007 \sereg{0.006} & -0.005 \sereg{0.009} & -0.011** \sereg{0.005} \\
+    31--50 & -0.009 \sereg{0.010} & 0.015 \sereg{0.014} & 0.007 \sereg{0.008} \\
+    51--100 & 0.001 \sereg{0.023} & 0.033 \sereg{0.026} & 0.034** \sereg{0.015} \\
+    101+ & -0.072*** \sereg{0.027} & 0.191*** \sereg{0.044} & 0.119*** \sereg{0.041} \\
+    \bottomrule
+  \end{tabular}}
+
+  \regnote{Omitted category: 11--19 workers within each formality group.}
 \end{frame}
 
 \begin{frame}{Appendix Table: Robustness to Local Geography}
@@ -1140,6 +1247,38 @@
   \end{tabular}}
 
   \regnote{Omitted category: workers in firms with 101 or more workers. Standard errors are clustered by sector-department cells.}
+\end{frame}
+
+\begin{frame}{Appendix Table: Local Geography with 11--19 Reference}
+  \centering
+  \scriptsize
+  \setlength{\tabcolsep}{2.6pt}
+  \renewcommand{\arraystretch}{0.96}
+  \resizebox{0.99\textwidth}{!}{%
+  \begin{tabular}{lcccc}
+    \toprule
+    & \multicolumn{4}{c}{Dependent variable: log real hourly labor income} \\
+    \cmidrule(lr){2-5}
+    & (1) & (2) & (3) & (4) \\
+    \midrule
+    Firm size: Solo & -0.302*** \sereg{0.018} & -0.272*** \sereg{0.017} & -0.267*** \sereg{0.017} & -0.272*** \sereg{0.015} \\
+    Firm size: 2--3 & -0.114*** \sereg{0.013} & -0.104*** \sereg{0.011} & -0.100*** \sereg{0.011} & -0.170*** \sereg{0.009} \\
+    Firm size: 4--5 & 0.005 \sereg{0.008} & 0.005 \sereg{0.008} & 0.006 \sereg{0.008} & -0.047*** \sereg{0.007} \\
+    Firm size: 6--10 & 0.014*** \sereg{0.005} & 0.010** \sereg{0.005} & 0.011** \sereg{0.005} & -0.007 \sereg{0.004} \\
+    Firm size: 20--30 & -0.031*** \sereg{0.004} & -0.031*** \sereg{0.004} & -0.030*** \sereg{0.004} & -0.014*** \sereg{0.004} \\
+    Firm size: 31--50 & -0.031*** \sereg{0.005} & -0.027*** \sereg{0.005} & -0.027*** \sereg{0.005} & -0.008* \sereg{0.004} \\
+    Firm size: 51--100 & -0.014* \sereg{0.007} & -0.010 \sereg{0.007} & -0.010 \sereg{0.007} & 0.010 \sereg{0.007} \\
+    Firm size: 101+ & 0.057*** \sereg{0.014} & 0.066*** \sereg{0.015} & 0.058*** \sereg{0.015} & 0.066*** \sereg{0.013} \\
+    \midrule
+    Worker and formality controls & Yes & Yes & Yes & Yes \\
+    Occupational-position controls & No & No & No & Yes \\
+    Fixed effects & $s\times t$ & $s\times t$, $d\times t$ & $s\times d\times t$ & $s\times d\times t$ \\
+    Observations & 5,268,514 & 5,268,514 & 5,268,375 & 5,268,375 \\
+    $R^2$ & 0.386 & 0.404 & 0.414 & 0.429 \\
+    \bottomrule
+  \end{tabular}}
+
+  \regnote{Omitted category: workers in firms with 11--19 workers. Standard errors are clustered by sector-department cells.}
 \end{frame}
 
 \begin{frame}{References Mentioned}
