@@ -136,3 +136,36 @@ employment. Among formal workers, the estimated elasticity is 0.026, close to
 the benchmark. Among informal workers, it is 0.130, more than three times the
 benchmark. Thus, the comparison with the meta-analysis clarifies that
 Colombia's high conditional elasticity is mainly an informal-sector phenomenon.
+
+Table~\ref{tab:polynomial-size-profile} and
+Figure~\ref{fig:polynomial-size-profile} report the quadratic approximation in
+Equation~(\ref{eq:polynomial-size-profile}). The raw polynomial profile implies
+a 175.8 percent wage premium for assigned 101+ workers relative to solo workers.
+After sector-year effects, worker controls, and formality are added, the
+implied full-sample 101+/solo premium falls to 41.0 percent, close to the 43.2
+percent estimate from the categorical specification in
+Table~\ref{tab:firm-size-wage-premium-regressions}. The quadratic term is
+negative and statistically significant in the full-sample specification,
+consistent with a concave profile: the fitted wage premium rises with assigned
+firm size but at a decreasing rate.
+
+\input{Paper/sections/regression_polynomial_size_profile_table}
+
+The formality split is more informative than the full-sample curve. Among
+formal workers, the polynomial coefficients do not point to a statistically
+significant 101+/solo premium; the implied premium is 8.6 percent and is not
+significant. Among informal workers, the log-size coefficient is positive, the
+quadratic term is negative, and the implied 101+/solo premium is 46.9 percent.
+The polynomial approximation therefore reinforces the main formality result:
+the conditional size-wage relationship is not an artifact of estimating a
+separate dummy for every size bin, but the steep part of that relationship is
+concentrated in informal employment. At the same time, the approximation smooths
+over nonmonotonicities in the categorical estimates, so it should be read as a
+shape check rather than as a replacement for the main tables.
+
+\begin{figure}[htbp]
+  \centering
+  \includegraphics[width=0.95\textwidth]{fig78_\figurelang.png}
+  \caption{Polynomial approximation to the firm-size wage profile}
+  \label{fig:polynomial-size-profile}
+\end{figure}
