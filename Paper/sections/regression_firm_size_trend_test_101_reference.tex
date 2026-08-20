@@ -1,0 +1,25 @@
+\begin{table}[htbp]
+  \centering
+  \caption{Testing whether wage gaps relative to 101+ workers changed over time}
+  \label{tab:firm-size-premium-trend-test-101-reference}
+  \small
+  \begin{tabular}{lcccc}
+    \toprule
+    Firm size & Annual trend & S.E. & $p$-value & Implied 2008--2025 change \\
+    \midrule
+    Solo & -0.0045 & (0.0043) & 0.313 & -7.3\% \\
+    2-3 & -0.0012 & (0.0023) & 0.612 & -2.0\% \\
+    4-5 & -0.0013 & (0.0023) & 0.587 & -2.1\% \\
+    6-10 & -0.0023 & (0.0017) & 0.190 & -3.9\% \\
+    11-19 & -0.0017 & (0.0012) & 0.175 & -2.9\% \\
+    20-30 & -0.0026 & (0.0009) & 0.012 & -4.3\% \\
+    31-50 & -0.0017 & (0.0009) & 0.065 & -2.9\% \\
+    51-100 & -0.0018 & (0.0013) & 0.181 & -3.1\% \\
+    \bottomrule
+  \end{tabular}
+  \vspace{0.3em}
+  \begin{minipage}{0.95\textwidth}
+  \footnotesize
+  Notes: The annual trend is the coefficient on the interaction between firm-size category and a linear year trend, with workers in firms with 101 or more workers as the omitted category. The specification controls for gender, age, age squared, education, formality, and sector-year fixed effects, and uses GEIH expansion weights. Standard errors are clustered by sector. The $p$-value corresponds to the two-sided test that the trend differs from zero. A negative trend means that the listed category lost ground relative to 101+ workers. The final column reports $100\times[\exp(17\hat{\delta})-1]$, the implied change in the wage ratio between the listed category and 101+ workers between 2008 and 2025.
+  \end{minipage}
+\end{table}
