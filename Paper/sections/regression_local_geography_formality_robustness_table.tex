@@ -1,0 +1,44 @@
+\begin{table}[p]
+  \centering
+  \caption{Firm-size-by-formality robustness checks}
+  \label{tab:firm-size-local-geography-formality-robustness}
+  \scriptsize
+  \begin{tabular}{lcccc}
+    \toprule
+    & \multicolumn{4}{c}{Dependent variable: log real hourly labor income} \\
+    \cmidrule(lr){2-5}
+    & (1) & (2) & (3) & (4) \\
+    \midrule
+    \multicolumn{5}{l}{\textit{Informal workers}} \\
+    Firm size: 2-3 & 0.197*** {\footnotesize (0.010)} & 0.176*** {\footnotesize (0.010)} & 0.176*** {\footnotesize (0.010)} & 0.113*** {\footnotesize (0.013)} \\
+    Firm size: 4-5 & 0.343*** {\footnotesize (0.012)} & 0.311*** {\footnotesize (0.011)} & 0.308*** {\footnotesize (0.011)} & 0.256*** {\footnotesize (0.016)} \\
+    Firm size: 6-10 & 0.392*** {\footnotesize (0.013)} & 0.352*** {\footnotesize (0.012)} & 0.349*** {\footnotesize (0.012)} & 0.324*** {\footnotesize (0.017)} \\
+    Firm size: 11-19 & 0.408*** {\footnotesize (0.016)} & 0.368*** {\footnotesize (0.014)} & 0.364*** {\footnotesize (0.014)} & 0.354*** {\footnotesize (0.018)} \\
+    Firm size: 20-30 & 0.401*** {\footnotesize (0.016)} & 0.359*** {\footnotesize (0.013)} & 0.354*** {\footnotesize (0.014)} & 0.362*** {\footnotesize (0.017)} \\
+    Firm size: 31-50 & 0.399*** {\footnotesize (0.018)} & 0.359*** {\footnotesize (0.018)} & 0.351*** {\footnotesize (0.018)} & 0.363*** {\footnotesize (0.020)} \\
+    Firm size: 51-100 & 0.409*** {\footnotesize (0.020)} & 0.369*** {\footnotesize (0.019)} & 0.359*** {\footnotesize (0.019)} & 0.373*** {\footnotesize (0.020)} \\
+    Firm size: 101+ & 0.336*** {\footnotesize (0.020)} & 0.304*** {\footnotesize (0.020)} & 0.288*** {\footnotesize (0.019)} & 0.316*** {\footnotesize (0.019)} \\
+    \midrule
+    \multicolumn{5}{l}{\textit{Formal workers}} \\
+    Firm size: 2-3 & 0.022 {\footnotesize (0.029)} & 0.024 {\footnotesize (0.029)} & 0.021 {\footnotesize (0.029)} & -0.072** {\footnotesize (0.029)} \\
+    Firm size: 4-5 & 0.025 {\footnotesize (0.037)} & 0.027 {\footnotesize (0.037)} & 0.023 {\footnotesize (0.037)} & -0.022 {\footnotesize (0.033)} \\
+    Firm size: 6-10 & 0.023 {\footnotesize (0.036)} & 0.023 {\footnotesize (0.037)} & 0.019 {\footnotesize (0.037)} & 0.013 {\footnotesize (0.034)} \\
+    Firm size: 11-19 & 0.035 {\footnotesize (0.034)} & 0.038 {\footnotesize (0.035)} & 0.033 {\footnotesize (0.034)} & 0.040 {\footnotesize (0.032)} \\
+    Firm size: 20-30 & 0.024 {\footnotesize (0.034)} & 0.025 {\footnotesize (0.034)} & 0.021 {\footnotesize (0.034)} & 0.039 {\footnotesize (0.031)} \\
+    Firm size: 31-50 & 0.042 {\footnotesize (0.033)} & 0.045 {\footnotesize (0.033)} & 0.040 {\footnotesize (0.033)} & 0.060* {\footnotesize (0.031)} \\
+    Firm size: 51-100 & 0.069** {\footnotesize (0.032)} & 0.071** {\footnotesize (0.033)} & 0.066** {\footnotesize (0.033)} & 0.085*** {\footnotesize (0.031)} \\
+    Firm size: 101+ & 0.154*** {\footnotesize (0.038)} & 0.161*** {\footnotesize (0.040)} & 0.147*** {\footnotesize (0.039)} & 0.153*** {\footnotesize (0.037)} \\
+    \midrule
+    Worker controls & Yes & Yes & Yes & Yes \\
+    Occupational-position controls & No & No & No & Yes \\
+    Fixed effects & $s\times t$ & $s\times t$, $d\times t$ & $s\times d\times t$ & $s\times d\times t$ \\
+    Observations & 5,268,514 & 5,268,514 & 5,268,375 & 5,268,375 \\
+    $R^2$ & 0.388 & 0.406 & 0.416 & 0.431 \\
+    \bottomrule
+  \end{tabular}
+  \vspace{0.3em}
+  \begin{minipage}{0.95\textwidth}
+  \footnotesize
+  Notes: The omitted categories are solo workers within each formality group. Coefficients are log-point differences within the same formality group. Standard errors, clustered by sector-department cells, are reported in parentheses. Worker controls include a female-worker indicator, age, age squared, and education dummies. The local geography $d$ is the department, treating Bogot\'a as a department-equivalent Capital District. Column (3) absorbs sector-department-year fixed effects. Column (4) adds occupational-position controls to this most stringent local-geography specification. Significance levels: * $p<0.10$, ** $p<0.05$, *** $p<0.01$.
+  \end{minipage}
+\end{table}

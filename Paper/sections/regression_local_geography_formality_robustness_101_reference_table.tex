@@ -1,0 +1,44 @@
+\begin{table}[p]
+  \centering
+  \caption{Firm-size-by-formality robustness checks: 101+ workers as reference}
+  \label{tab:firm-size-local-geography-formality-robustness-101-reference}
+  \scriptsize
+  \begin{tabular}{lcccc}
+    \toprule
+    & \multicolumn{4}{c}{Dependent variable: log real hourly labor income} \\
+    \cmidrule(lr){2-5}
+    & (1) & (2) & (3) & (4) \\
+    \midrule
+    \multicolumn{5}{l}{\textit{Informal workers}} \\
+    Firm size: Solo & -0.336*** {\footnotesize (0.020)} & -0.304*** {\footnotesize (0.020)} & -0.288*** {\footnotesize (0.019)} & -0.316*** {\footnotesize (0.019)} \\
+    Firm size: 2-3 & -0.139*** {\footnotesize (0.017)} & -0.127*** {\footnotesize (0.017)} & -0.112*** {\footnotesize (0.016)} & -0.203*** {\footnotesize (0.016)} \\
+    Firm size: 4-5 & 0.007 {\footnotesize (0.016)} & 0.007 {\footnotesize (0.016)} & 0.020 {\footnotesize (0.016)} & -0.061*** {\footnotesize (0.017)} \\
+    Firm size: 6-10 & 0.056*** {\footnotesize (0.016)} & 0.048*** {\footnotesize (0.016)} & 0.060*** {\footnotesize (0.016)} & 0.008 {\footnotesize (0.017)} \\
+    Firm size: 11-19 & 0.072*** {\footnotesize (0.016)} & 0.065*** {\footnotesize (0.016)} & 0.075*** {\footnotesize (0.016)} & 0.038** {\footnotesize (0.017)} \\
+    Firm size: 20-30 & 0.066*** {\footnotesize (0.016)} & 0.055*** {\footnotesize (0.016)} & 0.066*** {\footnotesize (0.016)} & 0.046*** {\footnotesize (0.017)} \\
+    Firm size: 31-50 & 0.064*** {\footnotesize (0.016)} & 0.056*** {\footnotesize (0.015)} & 0.063*** {\footnotesize (0.015)} & 0.047*** {\footnotesize (0.016)} \\
+    Firm size: 51-100 & 0.073*** {\footnotesize (0.016)} & 0.065*** {\footnotesize (0.015)} & 0.071*** {\footnotesize (0.015)} & 0.057*** {\footnotesize (0.015)} \\
+    \midrule
+    \multicolumn{5}{l}{\textit{Formal workers}} \\
+    Firm size: Solo & -0.154*** {\footnotesize (0.038)} & -0.161*** {\footnotesize (0.040)} & -0.147*** {\footnotesize (0.039)} & -0.153*** {\footnotesize (0.037)} \\
+    Firm size: 2-3 & -0.132*** {\footnotesize (0.018)} & -0.137*** {\footnotesize (0.018)} & -0.126*** {\footnotesize (0.018)} & -0.225*** {\footnotesize (0.018)} \\
+    Firm size: 4-5 & -0.129*** {\footnotesize (0.012)} & -0.133*** {\footnotesize (0.012)} & -0.124*** {\footnotesize (0.012)} & -0.175*** {\footnotesize (0.012)} \\
+    Firm size: 6-10 & -0.131*** {\footnotesize (0.012)} & -0.137*** {\footnotesize (0.013)} & -0.128*** {\footnotesize (0.012)} & -0.140*** {\footnotesize (0.011)} \\
+    Firm size: 11-19 & -0.119*** {\footnotesize (0.015)} & -0.123*** {\footnotesize (0.016)} & -0.114*** {\footnotesize (0.016)} & -0.113*** {\footnotesize (0.014)} \\
+    Firm size: 20-30 & -0.130*** {\footnotesize (0.015)} & -0.136*** {\footnotesize (0.016)} & -0.126*** {\footnotesize (0.015)} & -0.114*** {\footnotesize (0.013)} \\
+    Firm size: 31-50 & -0.112*** {\footnotesize (0.014)} & -0.115*** {\footnotesize (0.015)} & -0.107*** {\footnotesize (0.014)} & -0.093*** {\footnotesize (0.012)} \\
+    Firm size: 51-100 & -0.085*** {\footnotesize (0.012)} & -0.090*** {\footnotesize (0.013)} & -0.081*** {\footnotesize (0.013)} & -0.067*** {\footnotesize (0.011)} \\
+    \midrule
+    Worker controls & Yes & Yes & Yes & Yes \\
+    Occupational-position controls & No & No & No & Yes \\
+    Fixed effects & $s\times t$ & $s\times t$, $d\times t$ & $s\times d\times t$ & $s\times d\times t$ \\
+    Observations & 5,268,514 & 5,268,514 & 5,268,375 & 5,268,375 \\
+    $R^2$ & 0.388 & 0.406 & 0.416 & 0.431 \\
+    \bottomrule
+  \end{tabular}
+  \vspace{0.3em}
+  \begin{minipage}{0.95\textwidth}
+  \footnotesize
+  Notes: The omitted categories are workers in firms with 101 or more workers within each formality group. Negative coefficients indicate that workers in the listed firm-size category earn less than workers in the 101+ category within the same formality group. Coefficients are log-point differences within the same formality group. Standard errors, clustered by sector-department cells, are reported in parentheses. Worker controls include a female-worker indicator, age, age squared, and education dummies. The local geography $d$ is the department, treating Bogot\'a as a department-equivalent Capital District. Column (3) absorbs sector-department-year fixed effects. Column (4) adds occupational-position controls to this most stringent local-geography specification. Significance levels: * $p<0.10$, ** $p<0.05$, *** $p<0.01$.
+  \end{minipage}
+\end{table}
