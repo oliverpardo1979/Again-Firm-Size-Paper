@@ -1,0 +1,74 @@
+We also ask whether two parameters per formality group can summarize the
+eight size contrasts in the preferred categorical model.
+\citet{FairDominguez1991} restrict coefficients on age-group population
+shares to a quadratic polynomial and normalize them to sum to zero.
+We adapt their polynomial restriction to firm-size coefficients, using log
+assigned size rather than a category index. We retain solo work as the
+reference instead of imposing a sum-zero normalization. This changes the
+functional form, not the identification of the wage relationship.
+
+Let \(z_i=\ln(\widetilde{Size}_i)\), using the assigned sizes in
+Section~\ref{sec:methodology}. The quadratic model is
+\begin{equation}\label{eq:polynomial-size-profile}
+  \ln(w_{isdt})=\alpha+\phi F_{isdt}
+  +\sum_{k=1}^{2}(a_k+b_k F_{isdt})z_i^k
+  +X_{isdt}'\gamma+\rho_{o(i)}+\lambda_{s\times d\times t}
+  +\varepsilon_{isdt}.
+\end{equation}
+The sample, worker and occupational-position controls, fixed effects, weights,
+and baseline clustering are the same as in Equation~(\ref{eq:main}). Both
+formality profiles come from one regression, not separate fits. For status
+\(f\in\{0,1\}\), write \(a_{kf}=a_k+b_k f\). The log-wage contrast
+relative to solo work is \(q_f(z)=a_{1f}z+a_{2f}z^2\), which is zero at
+the assigned solo size of one. Its implied elasticity is
+\(a_{1f}+2a_{2f}z\), not a constant elasticity. The curve between assigned
+sizes is imposed by the quadratic rather than observed in the data.
+
+\input{Paper/sections/regression_preferred_quadratic_table}
+
+Table~\ref{tab:polynomial-size-profile} reports the quadratic coefficients
+when 101+ is assigned 150 workers. Figure~\ref{fig:polynomial-size-profile}
+overlays the resulting curves and pointwise 95 percent confidence bands on
+the preferred categorical estimates and their intervals. The informal curve
+rises rapidly at small sizes and then bends downward, while the formal curve
+has a much smaller initial decline followed by an increase. The quadratic
+does not reproduce every categorical comparison. For formal 2--3 workers,
+it predicts a -0.1 percent gap relative to solo work, compared with -6.9 percent
+in the categorical model. Its informal 101+/solo premium is 41.9 percent,
+compared with 37.2 percent in the categorical model. The corresponding formal
+101+/solo estimates are 18.9 and 16.5 percent.
+
+\begin{figure}[htbp]
+  \centering
+  \includegraphics[width=0.95\textwidth]{preferred_quadratic_\figurelang.png}
+  \caption{Quadratic and categorical firm-size profiles with preferred controls}
+  \label{fig:polynomial-size-profile}
+\end{figure}
+
+Table~\ref{tab:quadratic-preferred-sensitivity} tests the functional-form
+restriction and varies the size assigned to 101+. A quadratic constrains
+eight within-formality categorical contrasts to depend on two coefficients,
+imposing six restrictions per group and twelve jointly. We test those linear
+restrictions using the unrestricted categorical estimates and their full
+clustered covariance matrix. With 150 assigned to 101+, the sector-department
+Wald \(F\)-statistics are 20.51 for formal workers and 22.89 for informal
+workers, with six numerator and 558 denominator degrees of freedom.
+Both tests reject the quadratic restriction at 1 percent, as does the joint
+test. This result does not depend on comparing separate confidence intervals.
+
+\input{Paper/sections/regression_preferred_quadratic_sensitivity_table}
+
+Assigning 101, 150, or 250 workers to the open-ended category gives formal
+101+/solo premiums of 17.9, 18.9, and 19.8 percent, respectively.
+The informal counterparts are 43.2, 41.9, and 40.5 percent. The quadratic
+restrictions are rejected at 1 percent under every assignment with either
+sector-department or sector clustering. The latter tests use only 17 clusters
+and should be read as approximate sensitivity checks. The shallow formal dip
+under the baseline assignment lies between assigned sizes one and 2.5.
+It disappears when 101+ is assigned 250, so it is not stable evidence of a
+U-shaped conditional relationship. Confidence bands hold the size assignments
+fixed and do not incorporate this uncertainty. The quadratic summarizes the
+broad contrast between formality groups but misses statistically detectable
+differences across categories. We therefore retain the categorical model as
+the preferred specification.
+\FloatBarrier

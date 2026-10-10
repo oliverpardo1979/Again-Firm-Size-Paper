@@ -149,25 +149,5 @@ which omit the constant formality indicator. All use sector clustering.
 
 \input{Paper/sections/regression_elasticity_benchmark_table}
 
-The supplementary quadratic approximation is
-\begin{equation}\label{eq:polynomial-size-profile}
-  \ln(w_{ist}) = \alpha+\rho_1\ln(\widetilde{Size}_{ist})
-  +\rho_2[\ln(\widetilde{Size}_{ist})]^2
-  +X_{ist}'\gamma+\phi F_{ist}
-  +\lambda_{s\times t}+\varepsilon_{ist}.
-\end{equation}
-It uses the same simpler controls, with separate formal and informal fits.
-Its implied elasticity is \(\rho_1+2\rho_2\ln(\widetilde{Size})\).
-The functional form smooths over differences between categories and is not
-the preferred specification. \citet{Terza1987} studies estimation with ordinal
-qualitative regressors, but we do not implement that estimator. This exercise
-instead assigns fixed numerical values to the GEIH size intervals.
-
-\input{Paper/sections/regression_polynomial_size_profile_table}
-\begin{figure}[htbp]
-  \centering
-  \includegraphics[width=0.95\textwidth]{fig78_\figurelang.png}
-  \caption{Polynomial approximation under sector-year comparison controls}
-  \label{fig:polynomial-size-profile}
-\end{figure}
 \FloatBarrier
+\input{Paper/sections/quadratic_preferred_appendix}

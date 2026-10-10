@@ -52,6 +52,43 @@ and covariance matrices, recalculates t tests and confidence intervals, checks
 endpoint/annual equivalence, and checks the manuscript's references, bilingual
 figure paths, and preservation of the approved abstract.
 
+## Quadratic Approximation with Preferred Controls
+
+After `preferred_extensions.R`, run:
+
+```sh
+Rscript --vanilla replication/quadratic_preferred.R /path/to/Paper-GEIH_base_modelo_personas_2008_2025.dta
+python replication/build_quadratic_tables.py
+Rscript --vanilla replication/plot_quadratic_preferred.R
+python replication/validate_quadratic_preferred.py
+```
+
+This exercise estimates only a quadratic, not a cubic or spline. Each model
+interacts log assigned size and its square with formality in one regression.
+It retains the preferred sample, controls, weights, fixed effects, and clustering.
+The baseline size assigned to 101+ is 150, with 101 and 250 as sensitivity checks.
+Other bin assignments are unchanged. The profile is anchored at solo work because
+log(1) is zero. Fair and Dominguez (1991) motivate the polynomial restriction,
+but their sum-zero normalization is not imposed in addition to our reference.
+
+The unrestricted categorical model supplies the Wald tests. For each formality
+group, the eight log contrasts must lie in the span of log assigned size and its
+square, giving six linear restrictions. The joint test imposes twelve. Tests use
+the full contrast covariance, including formal-informal covariance in the joint
+test, and an approximate F(q, G-1) distribution. Both sector-department and sector
+clustering are reported, with 559 and 17 clusters, respectively. They are not
+tests that the quadratic coefficient alone is zero.
+
+`quadratic_output/` contains aggregate coefficients, covariance matrices, curves,
+category predictions, restriction tests, and provenance. Model caches and all
+microdata remain excluded from Git. The independent Python validator reconstructs
+all predictions and intervals and repeats the Wald tests using a different
+restriction matrix based on two anchor categories rather than R's QR basis.
+The bilingual figure overlays the baseline quadratic with the preferred
+categorical estimates. Confidence bands are pointwise and conditional on the
+assigned sizes. The older sector-year quadratic files remain reproducible
+historical outputs, but are no longer included in the paper.
+
 ## Synchronized Regression Outputs
 
 The comparison tables and figures are generated from one estimation
