@@ -19,20 +19,20 @@ employment in larger units. The premium relative to informal solo workers is
 12.0 percent in firms with 2--3 workers, 29.1 percent in firms with 4--5 workers,
 and 38.3 percent in firms with 6--10 workers. It reaches 42.5--45.2 percent
 across the 11--100 categories and is 37.2 percent in 101+ firms. All these
-comparisons with informal solo work are statistically significant. The profile
-therefore rises sharply out of solo work and the smallest units, but it does
-not increase monotonically through the largest category.
+comparisons with informal solo work are statistically significant. The premium
+therefore rises sharply across the smallest categories, but does not increase
+monotonically through the largest category.
 
 Among formal workers, the preferred estimates also reveal a large-firm
-advantage. Formal workers in 101+ firms earn 16.5 percent more than comparable
+advantage. Formal workers in 101+ firms earn 16.5 percent more than observably comparable
 formal solo workers, and this difference is statistically significant at the
 1 percent level. The 51--100 category has an 8.9 percent premium over formal
 solo work, also significant at the 1 percent level. The smaller categories
 do not form a uniformly increasing sequence relative to solo work. In
-particular, the 2--3 category is 6.9 percent below formal solo workers, while
-most intermediate categories have smaller and less precisely estimated
-differences from solo work. Thus, the preferred specification does not support
-a blanket conclusion that the formal size premium is absent.
+particular, the 2--3 category is 6.9 percent below formal solo workers.
+The estimates for 4--50 workers range from -2.2 to 6.2 percent and are not
+statistically different from zero at the 5 percent level. The evidence of a
+formal premium relative to solo work is strongest in the two largest categories.
 
 Table~\ref{tab:firm-size-local-geography-formality-robustness-101-reference}
 reports the same models with 101+ workers as the reference within each
@@ -53,7 +53,7 @@ in firms with 11--19 workers. Informal 101+ workers, however, earn 0.038 log
 points, or approximately 3.7 percent, less than informal workers in that
 reference category. Both contrasts are statistically significant at the
 5 percent level. The same regression therefore implies different answers
-depending on both formality and the origin and destination sizes. These are
+depending on both formality and the sizes being compared. These are
 alternative normalizations of each specification, not separate robustness
 checks. In particular, column (4) in all three tables comes from the same
 preferred regression.
@@ -68,8 +68,8 @@ statistically significant advantage of the largest formal employers over
 smaller formal categories. This distinction complements evidence that firm
 size and formality are closely related in Colombia
 \citep{OteroCortesEtAl2025,DazaGamboa2013,GutierrezRodriguezLesmes2023} and the
-Ecuadorian evidence that firm size can account for much of an apparent
-formal-sector wage premium \citep{ElBadaouiStroblWalsh2010}. The Colombian
+Ecuadorian evidence that controlling for firm size can eliminate an apparent
+formal-sector premium in wages net of taxes \citep{ElBadaouiStroblWalsh2010}. The Colombian
 within-formality size comparisons cannot be reduced to a contrast between
 formal and informal employment.
 
@@ -87,22 +87,24 @@ restriction, rather than either of the preferred within-formality estimates.
 
 \input{Paper/sections/regression_firm_size_table}
 
-Roughly two thirds of the raw log-wage gap is absorbed by these controls.
+Adding these controls reduces the raw 101+-to-solo log-wage coefficient by
+roughly two thirds.
 This attenuation is consistent with the classic firm-size wage premium
 literature \citep{BrownMedoff1989,troske1999evidence}. Studies of Peru, Kenya
 and Ghana, and a broader set of developing economies also document sizeable
 large-employer wage differences after accounting for worker characteristics
 \citep{Schaffner1998,SoderbomTealWambugu2005,reed2019large}. Colombian
 firm-survey evidence emphasizes firm characteristics in wage differentials
-\citep{iregui2012diferenciales}. In our data, the remaining common-premium
-coefficient motivates the less restrictive formal and informal comparisons
-reported above.
+\citep{iregui2012diferenciales}. The separate estimates reported in
+Section~\ref{subsec:preferred-results} show why this single common premium
+does not describe the formal and informal comparisons equally well.
 
 Figure~\ref{fig:firm-size-wage-premium} expresses column (4) of
 Table~\ref{tab:firm-size-wage-premium-regressions} as percentage premiums.
 The estimates are 20.7 percent for 2--3 workers, 36.0 percent for 4--5,
 37.3 percent for 6--10, roughly 31--35 percent for intermediate sizes,
-and 43.2 percent for 101+. All intervals exclude zero. The figure summarizes
+and 43.2 percent for 101+. All pointwise 95 percent confidence intervals
+exclude zero. The figure summarizes
 the common-premium benchmark and should not be read as the preferred
 formality-specific profile.
 
@@ -133,9 +135,10 @@ Table~\ref{tab:formality-interaction-coefficients} reports the simpler
 size-by-formality model in Equation~(\ref{eq:formality-interaction}), with
 worker controls and sector-year effects, but no occupational-position or
 department controls. Its informal size coefficients are positive and
-significant throughout. The formal interaction terms are negative, implying
-a flatter formal profile relative to solo work. In this comparison model,
-none of the formal within-group premiums differs from zero at the
+significant throughout. The formal interaction terms are negative: each
+size-to-solo log-wage gap is smaller among formal workers than among informal
+workers. In this comparison model, none of the formal premiums relative to
+formal solo workers differs from zero at the
 5 percent level with sector-clustered standard errors.
 
 \input{Paper/sections/regression_formality_interaction_coefficients_table}
@@ -187,8 +190,9 @@ contrasts.
 
 The dynamic comparisons ask whether the firm-size wage gap widened or narrowed
 over time. Widening means that wages in a given size category rose relative to
-solo-worker wages. Narrowing means that the ratio fell, without identifying
-whether this came from faster growth at the bottom or slower growth at the top.
+solo-worker wages, after the included controls. Narrowing means that this
+conditional wage ratio fell. The ratio alone does not show whether wages rose
+or fell in either group.
 These exercises retain the sector-year comparison controls described in
 Section~\ref{sec:methodology}. They do not estimate the preferred model
 separately by year.
@@ -270,8 +274,9 @@ elasticities in Equation~(\ref{eq:elasticity}) with the no-controls and
 observable-controls means reported by \citet{DiegmannMullerSchoefer2026}.
 These are magnitude comparisons across different data and specifications,
 not tests against a common population parameter. The Colombian elasticities
-use assigned values for worker-reported size bins and the sector-year
-comparison controls. They do not include the preferred model's department
+use assigned values for worker-reported size bins. Except for the raw
+regression, they include the sector-year comparison controls. They do not
+include the preferred model's department
 and occupational-position controls.
 
 \input{Paper/sections/regression_elasticity_benchmark_table}
@@ -328,21 +333,28 @@ already in the destination category retain their baseline predictions.
 Let \(\widehat{\ell}_i\) be fitted log hourly income from
 Equation~(\ref{eq:main}), including the fixed effects. We construct baseline
 hourly income as \(\widehat w_i=S\exp(\widehat{\ell}_i)\), where \(S\) is the
-survey-weighted mean of exponentiated residuals in 2025. This retransformation
-assumes a common residual factor across workers and destinations. If scenario
-\(c\) changes worker \(i\)'s size-formality component by
+survey-weighted mean of exponentiated residuals in 2025. This factor accounts
+for the fact that exponentiating a mean log income does not generally recover
+mean income in levels. We assume the same factor across workers and
+destinations. If scenario \(c\) changes worker \(i\)'s size-formality component
+\(\phi F_i+\beta_{g(i)}+\theta_{g(i)}F_i\) by
 \(\widehat\Delta_i^c\), counterfactual hourly income is
 \(\widehat w_i^c=\widehat w_i\exp(\widehat\Delta_i^c)\).
-The contrasts are those in Equation~(\ref{eq:preferred-contrasts}). With
-expansion weight \(a_i\) and weekly hours \(h_i\), the reported change is
+For a change in size or formality alone, this difference is one of the
+contrasts in Equation~(\ref{eq:preferred-contrasts}). For a joint change, we
+subtract the origin component from the destination component directly. Let
+\(\mathcal I_{2025}\) denote the 2025 estimation sample. With expansion weight
+\(a_i\) and weekly hours \(h_i\), the reported change is
 \begin{equation}\label{eq:income-counterfactual}
   G_c=100\left[
-  \frac{\sum_{i\in2025}a_i h_i\widehat w_i
+  \frac{\sum_{i\in\mathcal I_{2025}}a_i h_i\widehat w_i
         \exp(\widehat\Delta_i^c)}
-       {\sum_{i\in2025}a_i h_i\widehat w_i}-1\right].
+       {\sum_{i\in\mathcal I_{2025}}a_i h_i\widehat w_i}-1\right].
 \end{equation}
-Thus, the outcome is total predicted weekly labor income, not the unweighted
-average of individual percentage wage changes. The common factor \(S\)
+Thus, the outcome is total predicted weekly labor income. Its percentage
+change weights each individual's percentage change by that individual's share
+of baseline income, including survey weights and hours. It is not the average
+percentage wage change across workers. The common factor \(S\)
 cancels from this ratio. The target-group calculation restricts both sums to
 workers initially in the relevant formality group, including those already
 at the destination.
@@ -355,8 +367,9 @@ for 32.2 percent of baseline predicted labor income, despite representing
 55.1 percent of workers. Assigning all formal workers to formal 101+ employment
 raises formal workers' predicted income by 5.4 percent and total income by
 3.6 percent. This is smaller than the 16.5 percent formal 101+/solo premium
-because 54.9 percent of formal workers are already in 101+ firms and most
-remaining formal workers start in non-solo categories.
+in part because 54.9 percent of formal workers are already in 101+ firms and
+receive no increase. The remaining workers face different estimated gaps, and
+their contributions depend on their shares of baseline income.
 
 \input{Paper/sections/income_counterfactuals_2025_table}
 
@@ -366,13 +379,16 @@ does not raise every informal worker's predicted income. The estimated informal
 profile is higher in several intermediate categories than in 101+, so workers
 starting in those categories receive lower predictions. Finally, assigning
 everyone to formal 101+ employment raises total predicted income by
-25.4 percent. This combined scenario is calculated directly, not by adding
-the preceding percentages, because changing formality also changes the
-estimated size premium.
+25.4 percent. This combined scenario is calculated directly. The separate
+percentages cannot simply be added: informal workers undergo both changes,
+the corresponding wage ratios compound multiplicatively, and the estimated
+size premium itself depends on formality.
 
 Appendix Table~\ref{tab:income-counterfactual-sensitivity} reports alternative
-destinations and a calculation that preserves each worker's observed log-wage
-residual. The latter gives similar aggregate changes. Appendix
+destinations and a calculation that starts from observed rather than predicted
+income. Multiplying observed income by the estimated destination-to-origin
+wage ratio preserves each worker's residual, the difference between observed
+and fitted log income. This alternative gives similar aggregate changes. Appendix
 Table~\ref{tab:income-counterfactual-support} examines how strongly the
 scenarios extrapolate beyond observed destination groups. For example,
 39.1 percent of intended movers to informal 101+ employment have no observed

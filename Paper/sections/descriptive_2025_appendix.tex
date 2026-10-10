@@ -1,7 +1,7 @@
 \section{Additional Tables}
 \label{app:additional-tables}
 
-This appendix reports the minimum-wage distribution tables, alternative-reference tables, comparison specifications, and income-scenario checks referenced in the main text. Table~\ref{tab:minimum-wage-bunching-2025} complements Figure~\ref{fig:minwage-distribution-formality-size} by quantifying the share of workers below, near, and above the statutory hourly minimum wage in 2025. Table~\ref{tab:minimum-wage-monthly-bunching-2025} reports the analogous exercise using implied monthly labor income relative to the monthly minimum wage. The alternative-reference tables use workers in firms with 101 or more workers or with 11--19 workers as the reference category. These changes alter the normalization but do not change the underlying empirical specifications. In each table, the sign of a coefficient indicates whether the listed category is above or below the omitted category under the same controls.
+This appendix reports the minimum-wage distribution tables, alternative-reference tables, comparison specifications, and income-scenario checks referenced in the main text. Table~\ref{tab:minimum-wage-bunching-2025} complements Figure~\ref{fig:minwage-distribution-formality-size} by quantifying the share of workers below, near, and above the hourly minimum-wage benchmark in 2025. Table~\ref{tab:minimum-wage-monthly-bunching-2025} reports the analogous exercise using implied monthly labor income relative to the monthly minimum wage. The alternative-reference tables use workers in firms with 101 or more workers or with 11--19 workers as the reference category. These changes alter the normalization but do not change the underlying empirical specifications. In the wage-level regressions, positive and negative size coefficients indicate higher and lower conditional wages relative to the omitted category. In the trend tables, the sign instead indicates whether that relative wage ratio rises or falls over time. In the interaction tables, the middle column is the difference between the formal and informal size coefficients, not a wage gap relative to the reference category on its own.
 
 \input{Paper/sections/minimum_wage_bunching_2025_table}
 
@@ -23,7 +23,7 @@ This appendix reports the minimum-wage distribution tables, alternative-referenc
 
 \input{Paper/sections/regression_formality_interaction_coefficients_11_19_reference}
 
-Table~\ref{tab:firm-size-local-geography-robustness} adds geographic and occupational-position controls to the common-premium comparison model. Its final column absorbs sector-department-year fixed effects and controls for occupational position. It constrains the size premium to be the same for formal and informal workers. Under this restriction, workers in firms with 101 or more employees earn about 40.2 percent more than comparable solo workers, a statistically significant difference. Tables~\ref{tab:firm-size-local-geography-robustness-101-reference} and \ref{tab:firm-size-local-geography-robustness-11-19-reference} report the same models with alternative reference categories. The preferred model relaxes the common-premium restriction and is reported in Table~\ref{tab:firm-size-local-geography-formality-robustness} in the main text.
+Table~\ref{tab:firm-size-local-geography-robustness} adds geographic and occupational-position controls to the common-premium comparison model. Its final column absorbs sector-department-year fixed effects and controls for occupational position. It constrains the size premium to be the same for formal and informal workers. Under this restriction, workers in firms with 101 or more workers earn about 40.2 percent more than observably comparable solo workers, a statistically significant difference. Tables~\ref{tab:firm-size-local-geography-robustness-101-reference} and \ref{tab:firm-size-local-geography-robustness-11-19-reference} report the same specifications with alternative reference categories. The preferred model relaxes the common-premium restriction and is reported in Table~\ref{tab:firm-size-local-geography-formality-robustness} in the main text.
 
 \input{Paper/sections/regression_local_geography_robustness_table}
 
@@ -43,13 +43,16 @@ workers and 51--100 for informal workers. Assigning informal workers to
 to their respective selected destinations raises it by 13.7 percent without
 changing formality. This exercise includes movement from informal 101+ to
 51--100 and therefore is not uniformly a move toward larger firms. The
-destinations maximize the estimated group profiles, not each worker's
-individual comparative advantage.
+destinations maximize the model's fitted income within each formality group.
+Because the size coefficients do not interact with other worker characteristics,
+the selected size is the same for all workers of a given formality status,
+not an individually estimated best job.
 
 \input{Paper/sections/income_counterfactual_sensitivity_table}
 
-Table~\ref{tab:income-counterfactual-support} reports destination-cell counts
-and restricted versions of the same scenarios. For each intended move, we
+Table~\ref{tab:income-counterfactual-support} reports the share of intended
+movers with no observed destination counterpart and scenarios restricted by
+the number of destination observations. For each intended move, we
 check whether workers with the same sector, department, and occupational
 position are observed in the destination size-formality category. Panel A
 shows that absent destinations are especially common for assignments to
