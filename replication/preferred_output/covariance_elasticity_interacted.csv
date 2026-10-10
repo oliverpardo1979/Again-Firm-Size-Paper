@@ -1,0 +1,801 @@
+"clustering","term1","term2","covariance"
+"Sector-department","log_size_midpoint","log_size_midpoint",1.67371235102465e-05
+"Sector-department","formal","log_size_midpoint",2.95031081868854e-05
+"Sector-department","mujer","log_size_midpoint",-1.15083626300103e-05
+"Sector-department","edad","log_size_midpoint",-5.10738748685414e-07
+"Sector-department","edad2","log_size_midpoint",7.80856960641477e-09
+"Sector-department","educacion::Básica primaria","log_size_midpoint",-2.22928660859724e-06
+"Sector-department","educacion::Media","log_size_midpoint",-3.19911316058428e-06
+"Sector-department","educacion::Ninguno","log_size_midpoint",3.22440749061541e-07
+"Sector-department","educacion::No sabe, no informa","log_size_midpoint",2.14937051634026e-05
+"Sector-department","educacion::Preescolar","log_size_midpoint",2.79262231005736e-05
+"Sector-department","educacion::Superior o universitaria","log_size_midpoint",3.71185132066678e-06
+"Sector-department","posicion_ocupacional_label::Jornalero o peón","log_size_midpoint",6.82501255522699e-06
+"Sector-department","posicion_ocupacional_label::Obrero o empleado de empresa particular","log_size_midpoint",2.78306277286511e-06
+"Sector-department","posicion_ocupacional_label::Obrero o empleado del gobierno","log_size_midpoint",-1.82034308178964e-05
+"Sector-department","posicion_ocupacional_label::Otro","log_size_midpoint",-2.94159348060997e-05
+"Sector-department","posicion_ocupacional_label::Patrón o empleador","log_size_midpoint",1.47405757244345e-05
+"Sector-department","posicion_ocupacional_label::Trabajador familiar sin remuneración","log_size_midpoint",2.09175523494029e-05
+"Sector-department","posicion_ocupacional_label::Trabajador por cuenta propia","log_size_midpoint",2.17834047372523e-05
+"Sector-department","posicion_ocupacional_label::Trabajador sin remuneración en otros hogares","log_size_midpoint",1.61432005992192e-05
+"Sector-department","log_size_midpoint:formal","log_size_midpoint",-1.11518637382733e-05
+"Sector-department","log_size_midpoint","formal",2.95031081868854e-05
+"Sector-department","formal","formal",0.000237840823241817
+"Sector-department","mujer","formal",-2.65728245283196e-05
+"Sector-department","edad","formal",-1.03804846881459e-06
+"Sector-department","edad2","formal",1.50532498776493e-08
+"Sector-department","educacion::Básica primaria","formal",-7.06788593542345e-06
+"Sector-department","educacion::Media","formal",4.17365889962468e-06
+"Sector-department","educacion::Ninguno","formal",1.63639211800427e-05
+"Sector-department","educacion::No sabe, no informa","formal",-4.91580459120486e-05
+"Sector-department","educacion::Preescolar","formal",0.000198950791403056
+"Sector-department","educacion::Superior o universitaria","formal",9.26389427434168e-05
+"Sector-department","posicion_ocupacional_label::Jornalero o peón","formal",0.00017430040385801
+"Sector-department","posicion_ocupacional_label::Obrero o empleado de empresa particular","formal",0.000137321483146859
+"Sector-department","posicion_ocupacional_label::Obrero o empleado del gobierno","formal",0.000147057561453908
+"Sector-department","posicion_ocupacional_label::Otro","formal",3.08600224162165e-05
+"Sector-department","posicion_ocupacional_label::Patrón o empleador","formal",0.000199097891771406
+"Sector-department","posicion_ocupacional_label::Trabajador familiar sin remuneración","formal",0.000319078755391827
+"Sector-department","posicion_ocupacional_label::Trabajador por cuenta propia","formal",0.000231975812575114
+"Sector-department","posicion_ocupacional_label::Trabajador sin remuneración en otros hogares","formal",0.000177775972254384
+"Sector-department","log_size_midpoint:formal","formal",-7.03291617836937e-05
+"Sector-department","log_size_midpoint","mujer",-1.15083626300103e-05
+"Sector-department","formal","mujer",-2.65728245283196e-05
+"Sector-department","mujer","mujer",8.6975216030727e-05
+"Sector-department","edad","mujer",7.33222430339532e-07
+"Sector-department","edad2","mujer",-2.44148526732176e-09
+"Sector-department","educacion::Básica primaria","mujer",4.74086592041134e-06
+"Sector-department","educacion::Media","mujer",-1.07260178582137e-05
+"Sector-department","educacion::Ninguno","mujer",5.18612826149812e-06
+"Sector-department","educacion::No sabe, no informa","mujer",7.66813282480565e-06
+"Sector-department","educacion::Preescolar","mujer",-9.66304506572661e-05
+"Sector-department","educacion::Superior o universitaria","mujer",3.28315399719316e-05
+"Sector-department","posicion_ocupacional_label::Jornalero o peón","mujer",-2.24598109354283e-05
+"Sector-department","posicion_ocupacional_label::Obrero o empleado de empresa particular","mujer",-4.81439358739212e-05
+"Sector-department","posicion_ocupacional_label::Obrero o empleado del gobierno","mujer",-0.000157607246143408
+"Sector-department","posicion_ocupacional_label::Otro","mujer",-2.45473248574814e-05
+"Sector-department","posicion_ocupacional_label::Patrón o empleador","mujer",-7.2498813573367e-05
+"Sector-department","posicion_ocupacional_label::Trabajador familiar sin remuneración","mujer",-0.000102501555263924
+"Sector-department","posicion_ocupacional_label::Trabajador por cuenta propia","mujer",-1.40712753374815e-05
+"Sector-department","posicion_ocupacional_label::Trabajador sin remuneración en otros hogares","mujer",-1.20737014514994e-05
+"Sector-department","log_size_midpoint:formal","mujer",5.75066423471156e-06
+"Sector-department","log_size_midpoint","edad",-5.10738748685414e-07
+"Sector-department","formal","edad",-1.03804846881459e-06
+"Sector-department","mujer","edad",7.33222430339532e-07
+"Sector-department","edad","edad",1.35868154317871e-06
+"Sector-department","edad2","edad",-1.35719201173074e-08
+"Sector-department","educacion::Básica primaria","edad",-3.32943929531738e-06
+"Sector-department","educacion::Media","edad",2.9410295294831e-06
+"Sector-department","educacion::Ninguno","edad",-8.64321980690699e-06
+"Sector-department","educacion::No sabe, no informa","edad",4.45237104539236e-06
+"Sector-department","educacion::Preescolar","edad",-2.16115420372036e-05
+"Sector-department","educacion::Superior o universitaria","edad",1.31744946993521e-05
+"Sector-department","posicion_ocupacional_label::Jornalero o peón","edad",1.30598322341422e-06
+"Sector-department","posicion_ocupacional_label::Obrero o empleado de empresa particular","edad",-6.00820016058856e-06
+"Sector-department","posicion_ocupacional_label::Obrero o empleado del gobierno","edad",-1.5595062472498e-05
+"Sector-department","posicion_ocupacional_label::Otro","edad",1.33524295020011e-06
+"Sector-department","posicion_ocupacional_label::Patrón o empleador","edad",9.04812379223979e-07
+"Sector-department","posicion_ocupacional_label::Trabajador familiar sin remuneración","edad",-1.3949283378939e-05
+"Sector-department","posicion_ocupacional_label::Trabajador por cuenta propia","edad",2.79494715707239e-06
+"Sector-department","posicion_ocupacional_label::Trabajador sin remuneración en otros hogares","edad",6.43432601873304e-07
+"Sector-department","log_size_midpoint:formal","edad",3.97804261242585e-07
+"Sector-department","log_size_midpoint","edad2",7.80856960641477e-09
+"Sector-department","formal","edad2",1.50532498776493e-08
+"Sector-department","mujer","edad2",-2.44148526732176e-09
+"Sector-department","edad","edad2",-1.35719201173074e-08
+"Sector-department","edad2","edad2",1.43969868947023e-10
+"Sector-department","educacion::Básica primaria","edad2",3.66302358609188e-08
+"Sector-department","educacion::Media","edad2",-3.33451556300942e-08
+"Sector-department","educacion::Ninguno","edad2",9.45156352475683e-08
+"Sector-department","educacion::No sabe, no informa","edad2",-3.26105149605536e-08
+"Sector-department","educacion::Preescolar","edad2",2.54611783409309e-07
+"Sector-department","educacion::Superior o universitaria","edad2",-1.03928483016031e-07
+"Sector-department","posicion_ocupacional_label::Jornalero o peón","edad2",-2.88937623380664e-09
+"Sector-department","posicion_ocupacional_label::Obrero o empleado de empresa particular","edad2",4.7511836587508e-08
+"Sector-department","posicion_ocupacional_label::Obrero o empleado del gobierno","edad2",1.29228006772592e-07
+"Sector-department","posicion_ocupacional_label::Otro","edad2",-2.92049306300957e-08
+"Sector-department","posicion_ocupacional_label::Patrón o empleador","edad2",-1.50668242459711e-08
+"Sector-department","posicion_ocupacional_label::Trabajador familiar sin remuneración","edad2",1.58460090774671e-07
+"Sector-department","posicion_ocupacional_label::Trabajador por cuenta propia","edad2",-2.07760869844416e-08
+"Sector-department","posicion_ocupacional_label::Trabajador sin remuneración en otros hogares","edad2",1.50414718487311e-08
+"Sector-department","log_size_midpoint:formal","edad2",-5.71251548706343e-09
+"Sector-department","log_size_midpoint","educacion::Básica primaria",-2.22928660859724e-06
+"Sector-department","formal","educacion::Básica primaria",-7.06788593542345e-06
+"Sector-department","mujer","educacion::Básica primaria",4.74086592041134e-06
+"Sector-department","edad","educacion::Básica primaria",-3.32943929531738e-06
+"Sector-department","edad2","educacion::Básica primaria",3.66302358609188e-08
+"Sector-department","educacion::Básica primaria","educacion::Básica primaria",2.80113126742994e-05
+"Sector-department","educacion::Media","educacion::Básica primaria",-1.40020884637443e-05
+"Sector-department","educacion::Ninguno","educacion::Básica primaria",5.29160708452459e-05
+"Sector-department","educacion::No sabe, no informa","educacion::Básica primaria",-1.19731362029493e-05
+"Sector-department","educacion::Preescolar","educacion::Básica primaria",7.43187795525754e-05
+"Sector-department","educacion::Superior o universitaria","educacion::Básica primaria",-1.58127995973555e-05
+"Sector-department","posicion_ocupacional_label::Jornalero o peón","educacion::Básica primaria",-5.21445725420828e-05
+"Sector-department","posicion_ocupacional_label::Obrero o empleado de empresa particular","educacion::Básica primaria",-3.25374696907802e-05
+"Sector-department","posicion_ocupacional_label::Obrero o empleado del gobierno","educacion::Básica primaria",-5.41570882081856e-06
+"Sector-department","posicion_ocupacional_label::Otro","educacion::Básica primaria",-5.44281592808453e-05
+"Sector-department","posicion_ocupacional_label::Patrón o empleador","educacion::Básica primaria",-6.72906339918239e-05
+"Sector-department","posicion_ocupacional_label::Trabajador familiar sin remuneración","educacion::Básica primaria",1.53098340130257e-05
+"Sector-department","posicion_ocupacional_label::Trabajador por cuenta propia","educacion::Básica primaria",-5.23562929296027e-05
+"Sector-department","posicion_ocupacional_label::Trabajador sin remuneración en otros hogares","educacion::Básica primaria",-4.8884861661928e-05
+"Sector-department","log_size_midpoint:formal","educacion::Básica primaria",1.60880016435333e-06
+"Sector-department","log_size_midpoint","educacion::Media",-3.19911316058428e-06
+"Sector-department","formal","educacion::Media",4.17365889962468e-06
+"Sector-department","mujer","educacion::Media",-1.07260178582137e-05
+"Sector-department","edad","educacion::Media",2.9410295294831e-06
+"Sector-department","edad2","educacion::Media",-3.33451556300942e-08
+"Sector-department","educacion::Básica primaria","educacion::Media",-1.40020884637443e-05
+"Sector-department","educacion::Media","educacion::Media",3.07257775815376e-05
+"Sector-department","educacion::Ninguno","educacion::Media",-3.50994982388114e-05
+"Sector-department","educacion::No sabe, no informa","educacion::Media",3.1189339914298e-06
+"Sector-department","educacion::Preescolar","educacion::Media",-9.07574084715744e-05
+"Sector-department","educacion::Superior o universitaria","educacion::Media",3.47568441686436e-05
+"Sector-department","posicion_ocupacional_label::Jornalero o peón","educacion::Media",3.65930795471362e-05
+"Sector-department","posicion_ocupacional_label::Obrero o empleado de empresa particular","educacion::Media",1.2200268376355e-05
+"Sector-department","posicion_ocupacional_label::Obrero o empleado del gobierno","educacion::Media",6.08397059556748e-05
+"Sector-department","posicion_ocupacional_label::Otro","educacion::Media",4.40627764788145e-05
+"Sector-department","posicion_ocupacional_label::Patrón o empleador","educacion::Media",6.4352487634708e-05
+"Sector-department","posicion_ocupacional_label::Trabajador familiar sin remuneración","educacion::Media",-8.25545178243975e-05
+"Sector-department","posicion_ocupacional_label::Trabajador por cuenta propia","educacion::Media",3.0537619298282e-05
+"Sector-department","posicion_ocupacional_label::Trabajador sin remuneración en otros hogares","educacion::Media",3.3261673951473e-05
+"Sector-department","log_size_midpoint:formal","educacion::Media",-1.32526271343286e-06
+"Sector-department","log_size_midpoint","educacion::Ninguno",3.22440749061541e-07
+"Sector-department","formal","educacion::Ninguno",1.63639211800427e-05
+"Sector-department","mujer","educacion::Ninguno",5.18612826149812e-06
+"Sector-department","edad","educacion::Ninguno",-8.64321980690699e-06
+"Sector-department","edad2","educacion::Ninguno",9.45156352475683e-08
+"Sector-department","educacion::Básica primaria","educacion::Ninguno",5.29160708452459e-05
+"Sector-department","educacion::Media","educacion::Ninguno",-3.50994982388114e-05
+"Sector-department","educacion::Ninguno","educacion::Ninguno",0.000166354766807177
+"Sector-department","educacion::No sabe, no informa","educacion::Ninguno",-3.40295646683221e-05
+"Sector-department","educacion::Preescolar","educacion::Ninguno",0.000216242209600148
+"Sector-department","educacion::Superior o universitaria","educacion::Ninguno",-3.80327003699809e-05
+"Sector-department","posicion_ocupacional_label::Jornalero o peón","educacion::Ninguno",-2.68962220069428e-05
+"Sector-department","posicion_ocupacional_label::Obrero o empleado de empresa particular","educacion::Ninguno",2.40653981710211e-05
+"Sector-department","posicion_ocupacional_label::Obrero o empleado del gobierno","educacion::Ninguno",5.80335158608166e-05
+"Sector-department","posicion_ocupacional_label::Otro","educacion::Ninguno",-2.63319298520329e-05
+"Sector-department","posicion_ocupacional_label::Patrón o empleador","educacion::Ninguno",-5.88242374581651e-05
+"Sector-department","posicion_ocupacional_label::Trabajador familiar sin remuneración","educacion::Ninguno",0.000191730140182988
+"Sector-department","posicion_ocupacional_label::Trabajador por cuenta propia","educacion::Ninguno",-3.12321606691619e-05
+"Sector-department","posicion_ocupacional_label::Trabajador sin remuneración en otros hogares","educacion::Ninguno",-1.34421972453608e-05
+"Sector-department","log_size_midpoint:formal","educacion::Ninguno",-3.67995132923806e-06
+"Sector-department","log_size_midpoint","educacion::No sabe, no informa",2.14937051634026e-05
+"Sector-department","formal","educacion::No sabe, no informa",-4.91580459120486e-05
+"Sector-department","mujer","educacion::No sabe, no informa",7.66813282480565e-06
+"Sector-department","edad","educacion::No sabe, no informa",4.45237104539236e-06
+"Sector-department","edad2","educacion::No sabe, no informa",-3.26105149605536e-08
+"Sector-department","educacion::Básica primaria","educacion::No sabe, no informa",-1.19731362029493e-05
+"Sector-department","educacion::Media","educacion::No sabe, no informa",3.1189339914298e-06
+"Sector-department","educacion::Ninguno","educacion::No sabe, no informa",-3.40295646683221e-05
+"Sector-department","educacion::No sabe, no informa","educacion::No sabe, no informa",0.00237909856199757
+"Sector-department","educacion::Preescolar","educacion::No sabe, no informa",-0.000769530327867333
+"Sector-department","educacion::Superior o universitaria","educacion::No sabe, no informa",2.31539417735518e-06
+"Sector-department","posicion_ocupacional_label::Jornalero o peón","educacion::No sabe, no informa",5.3065519100227e-05
+"Sector-department","posicion_ocupacional_label::Obrero o empleado de empresa particular","educacion::No sabe, no informa",6.14937228697475e-05
+"Sector-department","posicion_ocupacional_label::Obrero o empleado del gobierno","educacion::No sabe, no informa",8.55434549865317e-05
+"Sector-department","posicion_ocupacional_label::Otro","educacion::No sabe, no informa",-6.97632451838325e-05
+"Sector-department","posicion_ocupacional_label::Patrón o empleador","educacion::No sabe, no informa",5.90734292794654e-05
+"Sector-department","posicion_ocupacional_label::Trabajador familiar sin remuneración","educacion::No sabe, no informa",-2.53360907580535e-05
+"Sector-department","posicion_ocupacional_label::Trabajador por cuenta propia","educacion::No sabe, no informa",0.000121413897535154
+"Sector-department","posicion_ocupacional_label::Trabajador sin remuneración en otros hogares","educacion::No sabe, no informa",0.000463984737469288
+"Sector-department","log_size_midpoint:formal","educacion::No sabe, no informa",5.18733849227982e-06
+"Sector-department","log_size_midpoint","educacion::Preescolar",2.79262231005736e-05
+"Sector-department","formal","educacion::Preescolar",0.000198950791403056
+"Sector-department","mujer","educacion::Preescolar",-9.66304506572661e-05
+"Sector-department","edad","educacion::Preescolar",-2.16115420372036e-05
+"Sector-department","edad2","educacion::Preescolar",2.54611783409309e-07
+"Sector-department","educacion::Básica primaria","educacion::Preescolar",7.43187795525754e-05
+"Sector-department","educacion::Media","educacion::Preescolar",-9.07574084715744e-05
+"Sector-department","educacion::Ninguno","educacion::Preescolar",0.000216242209600148
+"Sector-department","educacion::No sabe, no informa","educacion::Preescolar",-0.000769530327867333
+"Sector-department","educacion::Preescolar","educacion::Preescolar",0.00310507318305787
+"Sector-department","educacion::Superior o universitaria","educacion::Preescolar",-2.23099812985961e-05
+"Sector-department","posicion_ocupacional_label::Jornalero o peón","educacion::Preescolar",4.90378928756035e-05
+"Sector-department","posicion_ocupacional_label::Obrero o empleado de empresa particular","educacion::Preescolar",-1.59016061007818e-06
+"Sector-department","posicion_ocupacional_label::Obrero o empleado del gobierno","educacion::Preescolar",-5.39510128413323e-06
+"Sector-department","posicion_ocupacional_label::Otro","educacion::Preescolar",-0.000192771810937578
+"Sector-department","posicion_ocupacional_label::Patrón o empleador","educacion::Preescolar",-3.05522047099854e-05
+"Sector-department","posicion_ocupacional_label::Trabajador familiar sin remuneración","educacion::Preescolar",0.00065367361715721
+"Sector-department","posicion_ocupacional_label::Trabajador por cuenta propia","educacion::Preescolar",-7.74002652168372e-05
+"Sector-department","posicion_ocupacional_label::Trabajador sin remuneración en otros hogares","educacion::Preescolar",-6.89788940777676e-05
+"Sector-department","log_size_midpoint:formal","educacion::Preescolar",-5.13868134949814e-05
+"Sector-department","log_size_midpoint","educacion::Superior o universitaria",3.71185132066678e-06
+"Sector-department","formal","educacion::Superior o universitaria",9.26389427434168e-05
+"Sector-department","mujer","educacion::Superior o universitaria",3.28315399719316e-05
+"Sector-department","edad","educacion::Superior o universitaria",1.31744946993521e-05
+"Sector-department","edad2","educacion::Superior o universitaria",-1.03928483016031e-07
+"Sector-department","educacion::Básica primaria","educacion::Superior o universitaria",-1.58127995973555e-05
+"Sector-department","educacion::Media","educacion::Superior o universitaria",3.47568441686436e-05
+"Sector-department","educacion::Ninguno","educacion::Superior o universitaria",-3.80327003699809e-05
+"Sector-department","educacion::No sabe, no informa","educacion::Superior o universitaria",2.31539417735518e-06
+"Sector-department","educacion::Preescolar","educacion::Superior o universitaria",-2.23099812985961e-05
+"Sector-department","educacion::Superior o universitaria","educacion::Superior o universitaria",0.000380754517209937
+"Sector-department","posicion_ocupacional_label::Jornalero o peón","educacion::Superior o universitaria",9.7035121237929e-05
+"Sector-department","posicion_ocupacional_label::Obrero o empleado de empresa particular","educacion::Superior o universitaria",-0.000116870571074938
+"Sector-department","posicion_ocupacional_label::Obrero o empleado del gobierno","educacion::Superior o universitaria",-0.000159727444564329
+"Sector-department","posicion_ocupacional_label::Otro","educacion::Superior o universitaria",-3.3064622510361e-05
+"Sector-department","posicion_ocupacional_label::Patrón o empleador","educacion::Superior o universitaria",4.55015097668619e-05
+"Sector-department","posicion_ocupacional_label::Trabajador familiar sin remuneración","educacion::Superior o universitaria",6.46288920712475e-05
+"Sector-department","posicion_ocupacional_label::Trabajador por cuenta propia","educacion::Superior o universitaria",0.000134339972457239
+"Sector-department","posicion_ocupacional_label::Trabajador sin remuneración en otros hogares","educacion::Superior o universitaria",0.000100398941268855
+"Sector-department","log_size_midpoint:formal","educacion::Superior o universitaria",-2.62516803374929e-05
+"Sector-department","log_size_midpoint","posicion_ocupacional_label::Jornalero o peón",6.82501255522699e-06
+"Sector-department","formal","posicion_ocupacional_label::Jornalero o peón",0.00017430040385801
+"Sector-department","mujer","posicion_ocupacional_label::Jornalero o peón",-2.24598109354283e-05
+"Sector-department","edad","posicion_ocupacional_label::Jornalero o peón",1.30598322341422e-06
+"Sector-department","edad2","posicion_ocupacional_label::Jornalero o peón",-2.88937623380664e-09
+"Sector-department","educacion::Básica primaria","posicion_ocupacional_label::Jornalero o peón",-5.21445725420828e-05
+"Sector-department","educacion::Media","posicion_ocupacional_label::Jornalero o peón",3.65930795471362e-05
+"Sector-department","educacion::Ninguno","posicion_ocupacional_label::Jornalero o peón",-2.68962220069428e-05
+"Sector-department","educacion::No sabe, no informa","posicion_ocupacional_label::Jornalero o peón",5.3065519100227e-05
+"Sector-department","educacion::Preescolar","posicion_ocupacional_label::Jornalero o peón",4.90378928756035e-05
+"Sector-department","educacion::Superior o universitaria","posicion_ocupacional_label::Jornalero o peón",9.7035121237929e-05
+"Sector-department","posicion_ocupacional_label::Jornalero o peón","posicion_ocupacional_label::Jornalero o peón",0.00223810802006707
+"Sector-department","posicion_ocupacional_label::Obrero o empleado de empresa particular","posicion_ocupacional_label::Jornalero o peón",0.00182561868845596
+"Sector-department","posicion_ocupacional_label::Obrero o empleado del gobierno","posicion_ocupacional_label::Jornalero o peón",0.00181588100750131
+"Sector-department","posicion_ocupacional_label::Otro","posicion_ocupacional_label::Jornalero o peón",0.00196907503143599
+"Sector-department","posicion_ocupacional_label::Patrón o empleador","posicion_ocupacional_label::Jornalero o peón",0.00187844276574736
+"Sector-department","posicion_ocupacional_label::Trabajador familiar sin remuneración","posicion_ocupacional_label::Jornalero o peón",0.00184241633832978
+"Sector-department","posicion_ocupacional_label::Trabajador por cuenta propia","posicion_ocupacional_label::Jornalero o peón",0.00188138203824471
+"Sector-department","posicion_ocupacional_label::Trabajador sin remuneración en otros hogares","posicion_ocupacional_label::Jornalero o peón",0.00192841210885118
+"Sector-department","log_size_midpoint:formal","posicion_ocupacional_label::Jornalero o peón",-4.0171568277486e-05
+"Sector-department","log_size_midpoint","posicion_ocupacional_label::Obrero o empleado de empresa particular",2.78306277286511e-06
+"Sector-department","formal","posicion_ocupacional_label::Obrero o empleado de empresa particular",0.000137321483146859
+"Sector-department","mujer","posicion_ocupacional_label::Obrero o empleado de empresa particular",-4.81439358739212e-05
+"Sector-department","edad","posicion_ocupacional_label::Obrero o empleado de empresa particular",-6.00820016058856e-06
+"Sector-department","edad2","posicion_ocupacional_label::Obrero o empleado de empresa particular",4.7511836587508e-08
+"Sector-department","educacion::Básica primaria","posicion_ocupacional_label::Obrero o empleado de empresa particular",-3.25374696907802e-05
+"Sector-department","educacion::Media","posicion_ocupacional_label::Obrero o empleado de empresa particular",1.2200268376355e-05
+"Sector-department","educacion::Ninguno","posicion_ocupacional_label::Obrero o empleado de empresa particular",2.40653981710211e-05
+"Sector-department","educacion::No sabe, no informa","posicion_ocupacional_label::Obrero o empleado de empresa particular",6.14937228697475e-05
+"Sector-department","educacion::Preescolar","posicion_ocupacional_label::Obrero o empleado de empresa particular",-1.59016061007818e-06
+"Sector-department","educacion::Superior o universitaria","posicion_ocupacional_label::Obrero o empleado de empresa particular",-0.000116870571074938
+"Sector-department","posicion_ocupacional_label::Jornalero o peón","posicion_ocupacional_label::Obrero o empleado de empresa particular",0.00182561868845596
+"Sector-department","posicion_ocupacional_label::Obrero o empleado de empresa particular","posicion_ocupacional_label::Obrero o empleado de empresa particular",0.00197117538851174
+"Sector-department","posicion_ocupacional_label::Obrero o empleado del gobierno","posicion_ocupacional_label::Obrero o empleado de empresa particular",0.00203200038612295
+"Sector-department","posicion_ocupacional_label::Otro","posicion_ocupacional_label::Obrero o empleado de empresa particular",0.00200240799058971
+"Sector-department","posicion_ocupacional_label::Patrón o empleador","posicion_ocupacional_label::Obrero o empleado de empresa particular",0.0018120825378087
+"Sector-department","posicion_ocupacional_label::Trabajador familiar sin remuneración","posicion_ocupacional_label::Obrero o empleado de empresa particular",0.00189111886264634
+"Sector-department","posicion_ocupacional_label::Trabajador por cuenta propia","posicion_ocupacional_label::Obrero o empleado de empresa particular",0.00180462095353125
+"Sector-department","posicion_ocupacional_label::Trabajador sin remuneración en otros hogares","posicion_ocupacional_label::Obrero o empleado de empresa particular",0.00181773224316784
+"Sector-department","log_size_midpoint:formal","posicion_ocupacional_label::Obrero o empleado de empresa particular",-3.38596147009452e-05
+"Sector-department","log_size_midpoint","posicion_ocupacional_label::Obrero o empleado del gobierno",-1.82034308178964e-05
+"Sector-department","formal","posicion_ocupacional_label::Obrero o empleado del gobierno",0.000147057561453908
+"Sector-department","mujer","posicion_ocupacional_label::Obrero o empleado del gobierno",-0.000157607246143408
+"Sector-department","edad","posicion_ocupacional_label::Obrero o empleado del gobierno",-1.5595062472498e-05
+"Sector-department","edad2","posicion_ocupacional_label::Obrero o empleado del gobierno",1.29228006772592e-07
+"Sector-department","educacion::Básica primaria","posicion_ocupacional_label::Obrero o empleado del gobierno",-5.41570882081856e-06
+"Sector-department","educacion::Media","posicion_ocupacional_label::Obrero o empleado del gobierno",6.08397059556748e-05
+"Sector-department","educacion::Ninguno","posicion_ocupacional_label::Obrero o empleado del gobierno",5.80335158608166e-05
+"Sector-department","educacion::No sabe, no informa","posicion_ocupacional_label::Obrero o empleado del gobierno",8.55434549865317e-05
+"Sector-department","educacion::Preescolar","posicion_ocupacional_label::Obrero o empleado del gobierno",-5.39510128413323e-06
+"Sector-department","educacion::Superior o universitaria","posicion_ocupacional_label::Obrero o empleado del gobierno",-0.000159727444564329
+"Sector-department","posicion_ocupacional_label::Jornalero o peón","posicion_ocupacional_label::Obrero o empleado del gobierno",0.00181588100750131
+"Sector-department","posicion_ocupacional_label::Obrero o empleado de empresa particular","posicion_ocupacional_label::Obrero o empleado del gobierno",0.00203200038612295
+"Sector-department","posicion_ocupacional_label::Obrero o empleado del gobierno","posicion_ocupacional_label::Obrero o empleado del gobierno",0.00384938658685494
+"Sector-department","posicion_ocupacional_label::Otro","posicion_ocupacional_label::Obrero o empleado del gobierno",0.00214064199890788
+"Sector-department","posicion_ocupacional_label::Patrón o empleador","posicion_ocupacional_label::Obrero o empleado del gobierno",0.00184935097638014
+"Sector-department","posicion_ocupacional_label::Trabajador familiar sin remuneración","posicion_ocupacional_label::Obrero o empleado del gobierno",0.00186306667959854
+"Sector-department","posicion_ocupacional_label::Trabajador por cuenta propia","posicion_ocupacional_label::Obrero o empleado del gobierno",0.00179207999731962
+"Sector-department","posicion_ocupacional_label::Trabajador sin remuneración en otros hogares","posicion_ocupacional_label::Obrero o empleado del gobierno",0.00180252724831306
+"Sector-department","log_size_midpoint:formal","posicion_ocupacional_label::Obrero o empleado del gobierno",-5.88808833569343e-05
+"Sector-department","log_size_midpoint","posicion_ocupacional_label::Otro",-2.94159348060997e-05
+"Sector-department","formal","posicion_ocupacional_label::Otro",3.08600224162165e-05
+"Sector-department","mujer","posicion_ocupacional_label::Otro",-2.45473248574814e-05
+"Sector-department","edad","posicion_ocupacional_label::Otro",1.33524295020011e-06
+"Sector-department","edad2","posicion_ocupacional_label::Otro",-2.92049306300957e-08
+"Sector-department","educacion::Básica primaria","posicion_ocupacional_label::Otro",-5.44281592808453e-05
+"Sector-department","educacion::Media","posicion_ocupacional_label::Otro",4.40627764788145e-05
+"Sector-department","educacion::Ninguno","posicion_ocupacional_label::Otro",-2.63319298520329e-05
+"Sector-department","educacion::No sabe, no informa","posicion_ocupacional_label::Otro",-6.97632451838325e-05
+"Sector-department","educacion::Preescolar","posicion_ocupacional_label::Otro",-0.000192771810937578
+"Sector-department","educacion::Superior o universitaria","posicion_ocupacional_label::Otro",-3.3064622510361e-05
+"Sector-department","posicion_ocupacional_label::Jornalero o peón","posicion_ocupacional_label::Otro",0.00196907503143599
+"Sector-department","posicion_ocupacional_label::Obrero o empleado de empresa particular","posicion_ocupacional_label::Otro",0.00200240799058971
+"Sector-department","posicion_ocupacional_label::Obrero o empleado del gobierno","posicion_ocupacional_label::Otro",0.00214064199890788
+"Sector-department","posicion_ocupacional_label::Otro","posicion_ocupacional_label::Otro",0.00340982291893414
+"Sector-department","posicion_ocupacional_label::Patrón o empleador","posicion_ocupacional_label::Otro",0.00195083841734937
+"Sector-department","posicion_ocupacional_label::Trabajador familiar sin remuneración","posicion_ocupacional_label::Otro",0.00197668191368079
+"Sector-department","posicion_ocupacional_label::Trabajador por cuenta propia","posicion_ocupacional_label::Otro",0.00190803955711322
+"Sector-department","posicion_ocupacional_label::Trabajador sin remuneración en otros hogares","posicion_ocupacional_label::Otro",0.00182580071934126
+"Sector-department","log_size_midpoint:formal","posicion_ocupacional_label::Otro",1.28192813192993e-05
+"Sector-department","log_size_midpoint","posicion_ocupacional_label::Patrón o empleador",1.47405757244345e-05
+"Sector-department","formal","posicion_ocupacional_label::Patrón o empleador",0.000199097891771406
+"Sector-department","mujer","posicion_ocupacional_label::Patrón o empleador",-7.2498813573367e-05
+"Sector-department","edad","posicion_ocupacional_label::Patrón o empleador",9.04812379223979e-07
+"Sector-department","edad2","posicion_ocupacional_label::Patrón o empleador",-1.50668242459711e-08
+"Sector-department","educacion::Básica primaria","posicion_ocupacional_label::Patrón o empleador",-6.72906339918239e-05
+"Sector-department","educacion::Media","posicion_ocupacional_label::Patrón o empleador",6.4352487634708e-05
+"Sector-department","educacion::Ninguno","posicion_ocupacional_label::Patrón o empleador",-5.88242374581651e-05
+"Sector-department","educacion::No sabe, no informa","posicion_ocupacional_label::Patrón o empleador",5.90734292794654e-05
+"Sector-department","educacion::Preescolar","posicion_ocupacional_label::Patrón o empleador",-3.05522047099854e-05
+"Sector-department","educacion::Superior o universitaria","posicion_ocupacional_label::Patrón o empleador",4.55015097668619e-05
+"Sector-department","posicion_ocupacional_label::Jornalero o peón","posicion_ocupacional_label::Patrón o empleador",0.00187844276574736
+"Sector-department","posicion_ocupacional_label::Obrero o empleado de empresa particular","posicion_ocupacional_label::Patrón o empleador",0.0018120825378087
+"Sector-department","posicion_ocupacional_label::Obrero o empleado del gobierno","posicion_ocupacional_label::Patrón o empleador",0.00184935097638014
+"Sector-department","posicion_ocupacional_label::Otro","posicion_ocupacional_label::Patrón o empleador",0.00195083841734937
+"Sector-department","posicion_ocupacional_label::Patrón o empleador","posicion_ocupacional_label::Patrón o empleador",0.00200576687357129
+"Sector-department","posicion_ocupacional_label::Trabajador familiar sin remuneración","posicion_ocupacional_label::Patrón o empleador",0.00179294889022003
+"Sector-department","posicion_ocupacional_label::Trabajador por cuenta propia","posicion_ocupacional_label::Patrón o empleador",0.00184382701020424
+"Sector-department","posicion_ocupacional_label::Trabajador sin remuneración en otros hogares","posicion_ocupacional_label::Patrón o empleador",0.00186490429964714
+"Sector-department","log_size_midpoint:formal","posicion_ocupacional_label::Patrón o empleador",-4.6921740711991e-05
+"Sector-department","log_size_midpoint","posicion_ocupacional_label::Trabajador familiar sin remuneración",2.09175523494029e-05
+"Sector-department","formal","posicion_ocupacional_label::Trabajador familiar sin remuneración",0.000319078755391827
+"Sector-department","mujer","posicion_ocupacional_label::Trabajador familiar sin remuneración",-0.000102501555263924
+"Sector-department","edad","posicion_ocupacional_label::Trabajador familiar sin remuneración",-1.3949283378939e-05
+"Sector-department","edad2","posicion_ocupacional_label::Trabajador familiar sin remuneración",1.58460090774671e-07
+"Sector-department","educacion::Básica primaria","posicion_ocupacional_label::Trabajador familiar sin remuneración",1.53098340130257e-05
+"Sector-department","educacion::Media","posicion_ocupacional_label::Trabajador familiar sin remuneración",-8.25545178243975e-05
+"Sector-department","educacion::Ninguno","posicion_ocupacional_label::Trabajador familiar sin remuneración",0.000191730140182988
+"Sector-department","educacion::No sabe, no informa","posicion_ocupacional_label::Trabajador familiar sin remuneración",-2.53360907580535e-05
+"Sector-department","educacion::Preescolar","posicion_ocupacional_label::Trabajador familiar sin remuneración",0.00065367361715721
+"Sector-department","educacion::Superior o universitaria","posicion_ocupacional_label::Trabajador familiar sin remuneración",6.46288920712475e-05
+"Sector-department","posicion_ocupacional_label::Jornalero o peón","posicion_ocupacional_label::Trabajador familiar sin remuneración",0.00184241633832978
+"Sector-department","posicion_ocupacional_label::Obrero o empleado de empresa particular","posicion_ocupacional_label::Trabajador familiar sin remuneración",0.00189111886264634
+"Sector-department","posicion_ocupacional_label::Obrero o empleado del gobierno","posicion_ocupacional_label::Trabajador familiar sin remuneración",0.00186306667959854
+"Sector-department","posicion_ocupacional_label::Otro","posicion_ocupacional_label::Trabajador familiar sin remuneración",0.00197668191368079
+"Sector-department","posicion_ocupacional_label::Patrón o empleador","posicion_ocupacional_label::Trabajador familiar sin remuneración",0.00179294889022003
+"Sector-department","posicion_ocupacional_label::Trabajador familiar sin remuneración","posicion_ocupacional_label::Trabajador familiar sin remuneración",0.00407217923858606
+"Sector-department","posicion_ocupacional_label::Trabajador por cuenta propia","posicion_ocupacional_label::Trabajador familiar sin remuneración",0.00189573103272438
+"Sector-department","posicion_ocupacional_label::Trabajador sin remuneración en otros hogares","posicion_ocupacional_label::Trabajador familiar sin remuneración",0.00178481802455123
+"Sector-department","log_size_midpoint:formal","posicion_ocupacional_label::Trabajador familiar sin remuneración",-5.58185903190244e-05
+"Sector-department","log_size_midpoint","posicion_ocupacional_label::Trabajador por cuenta propia",2.17834047372523e-05
+"Sector-department","formal","posicion_ocupacional_label::Trabajador por cuenta propia",0.000231975812575114
+"Sector-department","mujer","posicion_ocupacional_label::Trabajador por cuenta propia",-1.40712753374815e-05
+"Sector-department","edad","posicion_ocupacional_label::Trabajador por cuenta propia",2.79494715707239e-06
+"Sector-department","edad2","posicion_ocupacional_label::Trabajador por cuenta propia",-2.07760869844416e-08
+"Sector-department","educacion::Básica primaria","posicion_ocupacional_label::Trabajador por cuenta propia",-5.23562929296027e-05
+"Sector-department","educacion::Media","posicion_ocupacional_label::Trabajador por cuenta propia",3.0537619298282e-05
+"Sector-department","educacion::Ninguno","posicion_ocupacional_label::Trabajador por cuenta propia",-3.12321606691619e-05
+"Sector-department","educacion::No sabe, no informa","posicion_ocupacional_label::Trabajador por cuenta propia",0.000121413897535154
+"Sector-department","educacion::Preescolar","posicion_ocupacional_label::Trabajador por cuenta propia",-7.74002652168372e-05
+"Sector-department","educacion::Superior o universitaria","posicion_ocupacional_label::Trabajador por cuenta propia",0.000134339972457239
+"Sector-department","posicion_ocupacional_label::Jornalero o peón","posicion_ocupacional_label::Trabajador por cuenta propia",0.00188138203824471
+"Sector-department","posicion_ocupacional_label::Obrero o empleado de empresa particular","posicion_ocupacional_label::Trabajador por cuenta propia",0.00180462095353125
+"Sector-department","posicion_ocupacional_label::Obrero o empleado del gobierno","posicion_ocupacional_label::Trabajador por cuenta propia",0.00179207999731962
+"Sector-department","posicion_ocupacional_label::Otro","posicion_ocupacional_label::Trabajador por cuenta propia",0.00190803955711322
+"Sector-department","posicion_ocupacional_label::Patrón o empleador","posicion_ocupacional_label::Trabajador por cuenta propia",0.00184382701020424
+"Sector-department","posicion_ocupacional_label::Trabajador familiar sin remuneración","posicion_ocupacional_label::Trabajador por cuenta propia",0.00189573103272438
+"Sector-department","posicion_ocupacional_label::Trabajador por cuenta propia","posicion_ocupacional_label::Trabajador por cuenta propia",0.00193051457160273
+"Sector-department","posicion_ocupacional_label::Trabajador sin remuneración en otros hogares","posicion_ocupacional_label::Trabajador por cuenta propia",0.00187652643330711
+"Sector-department","log_size_midpoint:formal","posicion_ocupacional_label::Trabajador por cuenta propia",-5.94051983792094e-05
+"Sector-department","log_size_midpoint","posicion_ocupacional_label::Trabajador sin remuneración en otros hogares",1.61432005992192e-05
+"Sector-department","formal","posicion_ocupacional_label::Trabajador sin remuneración en otros hogares",0.000177775972254384
+"Sector-department","mujer","posicion_ocupacional_label::Trabajador sin remuneración en otros hogares",-1.20737014514994e-05
+"Sector-department","edad","posicion_ocupacional_label::Trabajador sin remuneración en otros hogares",6.43432601873304e-07
+"Sector-department","edad2","posicion_ocupacional_label::Trabajador sin remuneración en otros hogares",1.50414718487311e-08
+"Sector-department","educacion::Básica primaria","posicion_ocupacional_label::Trabajador sin remuneración en otros hogares",-4.8884861661928e-05
+"Sector-department","educacion::Media","posicion_ocupacional_label::Trabajador sin remuneración en otros hogares",3.3261673951473e-05
+"Sector-department","educacion::Ninguno","posicion_ocupacional_label::Trabajador sin remuneración en otros hogares",-1.34421972453608e-05
+"Sector-department","educacion::No sabe, no informa","posicion_ocupacional_label::Trabajador sin remuneración en otros hogares",0.000463984737469288
+"Sector-department","educacion::Preescolar","posicion_ocupacional_label::Trabajador sin remuneración en otros hogares",-6.89788940777676e-05
+"Sector-department","educacion::Superior o universitaria","posicion_ocupacional_label::Trabajador sin remuneración en otros hogares",0.000100398941268855
+"Sector-department","posicion_ocupacional_label::Jornalero o peón","posicion_ocupacional_label::Trabajador sin remuneración en otros hogares",0.00192841210885118
+"Sector-department","posicion_ocupacional_label::Obrero o empleado de empresa particular","posicion_ocupacional_label::Trabajador sin remuneración en otros hogares",0.00181773224316784
+"Sector-department","posicion_ocupacional_label::Obrero o empleado del gobierno","posicion_ocupacional_label::Trabajador sin remuneración en otros hogares",0.00180252724831306
+"Sector-department","posicion_ocupacional_label::Otro","posicion_ocupacional_label::Trabajador sin remuneración en otros hogares",0.00182580071934126
+"Sector-department","posicion_ocupacional_label::Patrón o empleador","posicion_ocupacional_label::Trabajador sin remuneración en otros hogares",0.00186490429964714
+"Sector-department","posicion_ocupacional_label::Trabajador familiar sin remuneración","posicion_ocupacional_label::Trabajador sin remuneración en otros hogares",0.00178481802455123
+"Sector-department","posicion_ocupacional_label::Trabajador por cuenta propia","posicion_ocupacional_label::Trabajador sin remuneración en otros hogares",0.00187652643330711
+"Sector-department","posicion_ocupacional_label::Trabajador sin remuneración en otros hogares","posicion_ocupacional_label::Trabajador sin remuneración en otros hogares",0.0022169245426374
+"Sector-department","log_size_midpoint:formal","posicion_ocupacional_label::Trabajador sin remuneración en otros hogares",-4.6736549612941e-05
+"Sector-department","log_size_midpoint","log_size_midpoint:formal",-1.11518637382733e-05
+"Sector-department","formal","log_size_midpoint:formal",-7.03291617836937e-05
+"Sector-department","mujer","log_size_midpoint:formal",5.75066423471156e-06
+"Sector-department","edad","log_size_midpoint:formal",3.97804261242585e-07
+"Sector-department","edad2","log_size_midpoint:formal",-5.71251548706343e-09
+"Sector-department","educacion::Básica primaria","log_size_midpoint:formal",1.60880016435333e-06
+"Sector-department","educacion::Media","log_size_midpoint:formal",-1.32526271343286e-06
+"Sector-department","educacion::Ninguno","log_size_midpoint:formal",-3.67995132923806e-06
+"Sector-department","educacion::No sabe, no informa","log_size_midpoint:formal",5.18733849227982e-06
+"Sector-department","educacion::Preescolar","log_size_midpoint:formal",-5.13868134949814e-05
+"Sector-department","educacion::Superior o universitaria","log_size_midpoint:formal",-2.62516803374929e-05
+"Sector-department","posicion_ocupacional_label::Jornalero o peón","log_size_midpoint:formal",-4.0171568277486e-05
+"Sector-department","posicion_ocupacional_label::Obrero o empleado de empresa particular","log_size_midpoint:formal",-3.38596147009452e-05
+"Sector-department","posicion_ocupacional_label::Obrero o empleado del gobierno","log_size_midpoint:formal",-5.88808833569343e-05
+"Sector-department","posicion_ocupacional_label::Otro","log_size_midpoint:formal",1.28192813192993e-05
+"Sector-department","posicion_ocupacional_label::Patrón o empleador","log_size_midpoint:formal",-4.6921740711991e-05
+"Sector-department","posicion_ocupacional_label::Trabajador familiar sin remuneración","log_size_midpoint:formal",-5.58185903190244e-05
+"Sector-department","posicion_ocupacional_label::Trabajador por cuenta propia","log_size_midpoint:formal",-5.94051983792094e-05
+"Sector-department","posicion_ocupacional_label::Trabajador sin remuneración en otros hogares","log_size_midpoint:formal",-4.6736549612941e-05
+"Sector-department","log_size_midpoint:formal","log_size_midpoint:formal",2.80253780138156e-05
+"Sector","log_size_midpoint","log_size_midpoint",6.35971523297593e-05
+"Sector","formal","log_size_midpoint",6.29070990708402e-05
+"Sector","mujer","log_size_midpoint",-7.07471154129983e-06
+"Sector","edad","log_size_midpoint",6.37805877681198e-06
+"Sector","edad2","log_size_midpoint",-4.22302294168366e-08
+"Sector","educacion::Básica primaria","log_size_midpoint",-2.79766668715466e-05
+"Sector","educacion::Media","log_size_midpoint",-9.14784255932579e-06
+"Sector","educacion::Ninguno","log_size_midpoint",-6.05542365706028e-05
+"Sector","educacion::No sabe, no informa","log_size_midpoint",9.75590344143799e-05
+"Sector","educacion::Preescolar","log_size_midpoint",-0.000125750368016811
+"Sector","educacion::Superior o universitaria","log_size_midpoint",0.000107281290103863
+"Sector","posicion_ocupacional_label::Jornalero o peón","log_size_midpoint",-7.07744881589535e-05
+"Sector","posicion_ocupacional_label::Obrero o empleado de empresa particular","log_size_midpoint",-9.81676494735178e-05
+"Sector","posicion_ocupacional_label::Obrero o empleado del gobierno","log_size_midpoint",-0.000282494531779671
+"Sector","posicion_ocupacional_label::Otro","log_size_midpoint",-0.000385814486148968
+"Sector","posicion_ocupacional_label::Patrón o empleador","log_size_midpoint",-0.000141444748179346
+"Sector","posicion_ocupacional_label::Trabajador familiar sin remuneración","log_size_midpoint",-7.28340916910776e-05
+"Sector","posicion_ocupacional_label::Trabajador por cuenta propia","log_size_midpoint",1.7772275702164e-05
+"Sector","posicion_ocupacional_label::Trabajador sin remuneración en otros hogares","log_size_midpoint",-4.24662763742076e-05
+"Sector","log_size_midpoint:formal","log_size_midpoint",-2.56789242250604e-05
+"Sector","log_size_midpoint","formal",6.29070990708402e-05
+"Sector","formal","formal",0.000877969478381486
+"Sector","mujer","formal",0.000127509868089371
+"Sector","edad","formal",-3.05811458699451e-06
+"Sector","edad2","formal",1.00321744794385e-07
+"Sector","educacion::Básica primaria","formal",8.69488262120606e-06
+"Sector","educacion::Media","formal",6.70411630691174e-05
+"Sector","educacion::Ninguno","formal",0.000230110932212727
+"Sector","educacion::No sabe, no informa","formal",-0.000331875314733616
+"Sector","educacion::Preescolar","formal",0.000291238664671431
+"Sector","educacion::Superior o universitaria","formal",0.00101994263873396
+"Sector","posicion_ocupacional_label::Jornalero o peón","formal",0.000357095271329829
+"Sector","posicion_ocupacional_label::Obrero o empleado de empresa particular","formal",-6.20020836330521e-05
+"Sector","posicion_ocupacional_label::Obrero o empleado del gobierno","formal",-0.000518994939166735
+"Sector","posicion_ocupacional_label::Otro","formal",-0.00062520946332438
+"Sector","posicion_ocupacional_label::Patrón o empleador","formal",0.000111777789793021
+"Sector","posicion_ocupacional_label::Trabajador familiar sin remuneración","formal",0.000882622477535131
+"Sector","posicion_ocupacional_label::Trabajador por cuenta propia","formal",0.000483334889685944
+"Sector","posicion_ocupacional_label::Trabajador sin remuneración en otros hogares","formal",0.000360271866609224
+"Sector","log_size_midpoint:formal","formal",-0.000259855841466369
+"Sector","log_size_midpoint","mujer",-7.07471154129982e-06
+"Sector","formal","mujer",0.000127509868089371
+"Sector","mujer","mujer",0.000656506793120545
+"Sector","edad","mujer",-3.78329346413319e-05
+"Sector","edad2","mujer",4.88298746917158e-07
+"Sector","educacion::Básica primaria","mujer",0.000223666688050134
+"Sector","educacion::Media","mujer",-0.000230162834180685
+"Sector","educacion::Ninguno","mujer",0.000443017618456149
+"Sector","educacion::No sabe, no informa","mujer",0.000215478533916594
+"Sector","educacion::Preescolar","mujer",0.000183254560086838
+"Sector","educacion::Superior o universitaria","mujer",0.000329384473128743
+"Sector","posicion_ocupacional_label::Jornalero o peón","mujer",-1.48779803053466e-05
+"Sector","posicion_ocupacional_label::Obrero o empleado de empresa particular","mujer",-0.000307560359110713
+"Sector","posicion_ocupacional_label::Obrero o empleado del gobierno","mujer",-0.0008380033411418
+"Sector","posicion_ocupacional_label::Otro","mujer",-0.000173323823110488
+"Sector","posicion_ocupacional_label::Patrón o empleador","mujer",-0.000659380965312782
+"Sector","posicion_ocupacional_label::Trabajador familiar sin remuneración","mujer",0.00068562861465776
+"Sector","posicion_ocupacional_label::Trabajador por cuenta propia","mujer",2.89969546954398e-05
+"Sector","posicion_ocupacional_label::Trabajador sin remuneración en otros hogares","mujer",1.83168870780756e-05
+"Sector","log_size_midpoint:formal","mujer",-3.37947478396614e-05
+"Sector","log_size_midpoint","edad",6.37805877681198e-06
+"Sector","formal","edad",-3.0581145869945e-06
+"Sector","mujer","edad",-3.78329346413319e-05
+"Sector","edad","edad",1.09622849337982e-05
+"Sector","edad2","edad",-1.16309508720924e-07
+"Sector","educacion::Básica primaria","edad",-4.72784398011743e-05
+"Sector","educacion::Media","edad",3.69364093038623e-05
+"Sector","educacion::Ninguno","edad",-0.000129567829135226
+"Sector","educacion::No sabe, no informa","edad",2.14865396829806e-05
+"Sector","educacion::Preescolar","edad",-0.00019310314209601
+"Sector","educacion::Superior o universitaria","edad",4.37954776818638e-05
+"Sector","posicion_ocupacional_label::Jornalero o peón","edad",-8.83896313808245e-06
+"Sector","posicion_ocupacional_label::Obrero o empleado de empresa particular","edad",-5.6698242733308e-05
+"Sector","posicion_ocupacional_label::Obrero o empleado del gobierno","edad",-0.00010312103256338
+"Sector","posicion_ocupacional_label::Otro","edad",-2.24799741877438e-05
+"Sector","posicion_ocupacional_label::Patrón o empleador","edad",4.14842436097544e-05
+"Sector","posicion_ocupacional_label::Trabajador familiar sin remuneración","edad",-0.000173166481466879
+"Sector","posicion_ocupacional_label::Trabajador por cuenta propia","edad",2.96451473763264e-05
+"Sector","posicion_ocupacional_label::Trabajador sin remuneración en otros hogares","edad",-4.6545947556811e-06
+"Sector","log_size_midpoint:formal","edad",3.76928718378402e-07
+"Sector","log_size_midpoint","edad2",-4.22302294168366e-08
+"Sector","formal","edad2",1.00321744794385e-07
+"Sector","mujer","edad2",4.88298746917158e-07
+"Sector","edad","edad2",-1.16309508720924e-07
+"Sector","edad2","edad2",1.28982255957743e-09
+"Sector","educacion::Básica primaria","edad2",5.21265983048165e-07
+"Sector","educacion::Media","edad2",-4.32214467722494e-07
+"Sector","educacion::Ninguno","edad2",1.40502534840456e-06
+"Sector","educacion::No sabe, no informa","edad2",-1.79057222053887e-07
+"Sector","educacion::Preescolar","edad2",2.14915077742299e-06
+"Sector","educacion::Superior o universitaria","edad2",-1.98224959262557e-07
+"Sector","posicion_ocupacional_label::Jornalero o peón","edad2",6.72604456153059e-08
+"Sector","posicion_ocupacional_label::Obrero o empleado de empresa particular","edad2",4.16059481410974e-07
+"Sector","posicion_ocupacional_label::Obrero o empleado del gobierno","edad2",9.47474907248932e-07
+"Sector","posicion_ocupacional_label::Otro","edad2",1.20408164372593e-07
+"Sector","posicion_ocupacional_label::Patrón o empleador","edad2",-6.07706958763591e-07
+"Sector","posicion_ocupacional_label::Trabajador familiar sin remuneración","edad2",2.09326090596104e-06
+"Sector","posicion_ocupacional_label::Trabajador por cuenta propia","edad2",-2.93602451246659e-07
+"Sector","posicion_ocupacional_label::Trabajador sin remuneración en otros hogares","edad2",4.01638031668647e-08
+"Sector","log_size_midpoint:formal","edad2",-1.63544579866821e-08
+"Sector","log_size_midpoint","educacion::Básica primaria",-2.79766668715466e-05
+"Sector","formal","educacion::Básica primaria",8.69488262120603e-06
+"Sector","mujer","educacion::Básica primaria",0.000223666688050134
+"Sector","edad","educacion::Básica primaria",-4.72784398011743e-05
+"Sector","edad2","educacion::Básica primaria",5.21265983048165e-07
+"Sector","educacion::Básica primaria","educacion::Básica primaria",0.000303644058988163
+"Sector","educacion::Media","educacion::Básica primaria",-0.000224127718592469
+"Sector","educacion::Ninguno","educacion::Básica primaria",0.000661480977717862
+"Sector","educacion::No sabe, no informa","educacion::Básica primaria",3.70917899334135e-05
+"Sector","educacion::Preescolar","educacion::Básica primaria",0.000753276189632724
+"Sector","educacion::Superior o universitaria","educacion::Básica primaria",-6.78515036706947e-05
+"Sector","posicion_ocupacional_label::Jornalero o peón","educacion::Básica primaria",-9.97887638903736e-05
+"Sector","posicion_ocupacional_label::Obrero o empleado de empresa particular","educacion::Básica primaria",2.72790591072664e-05
+"Sector","posicion_ocupacional_label::Obrero o empleado del gobierno","educacion::Básica primaria",-4.96066787226513e-06
+"Sector","posicion_ocupacional_label::Otro","educacion::Básica primaria",-0.000134949709528355
+"Sector","posicion_ocupacional_label::Patrón o empleador","educacion::Básica primaria",-0.000430507032126719
+"Sector","posicion_ocupacional_label::Trabajador familiar sin remuneración","educacion::Básica primaria",0.000889749933801168
+"Sector","posicion_ocupacional_label::Trabajador por cuenta propia","educacion::Básica primaria",-0.000234110175403175
+"Sector","posicion_ocupacional_label::Trabajador sin remuneración en otros hogares","educacion::Básica primaria",-9.98448840206389e-05
+"Sector","log_size_midpoint:formal","educacion::Básica primaria",2.65188905878969e-06
+"Sector","log_size_midpoint","educacion::Media",-9.14784255932579e-06
+"Sector","formal","educacion::Media",6.70411630691174e-05
+"Sector","mujer","educacion::Media",-0.000230162834180685
+"Sector","edad","educacion::Media",3.69364093038623e-05
+"Sector","edad2","educacion::Media",-4.32214467722494e-07
+"Sector","educacion::Básica primaria","educacion::Media",-0.000224127718592469
+"Sector","educacion::Media","educacion::Media",0.000231277392577579
+"Sector","educacion::Ninguno","educacion::Media",-0.000516657402994427
+"Sector","educacion::No sabe, no informa","educacion::Media",-4.8816213115145e-05
+"Sector","educacion::Preescolar","educacion::Media",-0.000604092669970648
+"Sector","educacion::Superior o universitaria","educacion::Media",0.000123108259775057
+"Sector","posicion_ocupacional_label::Jornalero o peón","educacion::Media",0.000141243518457545
+"Sector","posicion_ocupacional_label::Obrero o empleado de empresa particular","educacion::Media",7.19414347507298e-06
+"Sector","posicion_ocupacional_label::Obrero o empleado del gobierno","educacion::Media",0.000274418984223904
+"Sector","posicion_ocupacional_label::Otro","educacion::Media",5.16729629866662e-05
+"Sector","posicion_ocupacional_label::Patrón o empleador","educacion::Media",0.000519515635103642
+"Sector","posicion_ocupacional_label::Trabajador familiar sin remuneración","educacion::Media",-0.000695438007591986
+"Sector","posicion_ocupacional_label::Trabajador por cuenta propia","educacion::Media",0.000240184359943834
+"Sector","posicion_ocupacional_label::Trabajador sin remuneración en otros hogares","educacion::Media",0.000132801309177073
+"Sector","log_size_midpoint:formal","educacion::Media",-1.87162893658407e-05
+"Sector","log_size_midpoint","educacion::Ninguno",-6.05542365706028e-05
+"Sector","formal","educacion::Ninguno",0.000230110932212727
+"Sector","mujer","educacion::Ninguno",0.000443017618456149
+"Sector","edad","educacion::Ninguno",-0.000129567829135226
+"Sector","edad2","educacion::Ninguno",1.40502534840456e-06
+"Sector","educacion::Básica primaria","educacion::Ninguno",0.000661480977717862
+"Sector","educacion::Media","educacion::Ninguno",-0.000516657402994427
+"Sector","educacion::Ninguno","educacion::Ninguno",0.00182041989657945
+"Sector","educacion::No sabe, no informa","educacion::Ninguno",-0.00044496139938495
+"Sector","educacion::Preescolar","educacion::Ninguno",0.00250398245464475
+"Sector","educacion::Superior o universitaria","educacion::Ninguno",-0.000255597208935969
+"Sector","posicion_ocupacional_label::Jornalero o peón","educacion::Ninguno",0.000117419220925544
+"Sector","posicion_ocupacional_label::Obrero o empleado de empresa particular","educacion::Ninguno",0.000619371398518144
+"Sector","posicion_ocupacional_label::Obrero o empleado del gobierno","educacion::Ninguno",0.000423989780835805
+"Sector","posicion_ocupacional_label::Otro","educacion::Ninguno",0.000248318098208352
+"Sector","posicion_ocupacional_label::Patrón o empleador","educacion::Ninguno",-0.000688781317849236
+"Sector","posicion_ocupacional_label::Trabajador familiar sin remuneración","educacion::Ninguno",0.00275311384344601
+"Sector","posicion_ocupacional_label::Trabajador por cuenta propia","educacion::Ninguno",-0.000372029201492363
+"Sector","posicion_ocupacional_label::Trabajador sin remuneración en otros hogares","educacion::Ninguno",6.1990694289945e-05
+"Sector","log_size_midpoint:formal","educacion::Ninguno",-3.62377818728631e-05
+"Sector","log_size_midpoint","educacion::No sabe, no informa",9.75590344143799e-05
+"Sector","formal","educacion::No sabe, no informa",-0.000331875314733616
+"Sector","mujer","educacion::No sabe, no informa",0.000215478533916594
+"Sector","edad","educacion::No sabe, no informa",2.14865396829806e-05
+"Sector","edad2","educacion::No sabe, no informa",-1.79057222053887e-07
+"Sector","educacion::Básica primaria","educacion::No sabe, no informa",3.70917899334135e-05
+"Sector","educacion::Media","educacion::No sabe, no informa",-4.8816213115145e-05
+"Sector","educacion::Ninguno","educacion::No sabe, no informa",-0.00044496139938495
+"Sector","educacion::No sabe, no informa","educacion::No sabe, no informa",0.00148531998512065
+"Sector","educacion::Preescolar","educacion::No sabe, no informa",-0.00136362883299285
+"Sector","educacion::Superior o universitaria","educacion::No sabe, no informa",0.00019536971930335
+"Sector","posicion_ocupacional_label::Jornalero o peón","educacion::No sabe, no informa",-0.000231604984309862
+"Sector","posicion_ocupacional_label::Obrero o empleado de empresa particular","educacion::No sabe, no informa",-0.000630453494953887
+"Sector","posicion_ocupacional_label::Obrero o empleado del gobierno","educacion::No sabe, no informa",-0.000165771232473845
+"Sector","posicion_ocupacional_label::Otro","educacion::No sabe, no informa",-0.00160900256092038
+"Sector","posicion_ocupacional_label::Patrón o empleador","educacion::No sabe, no informa",-0.000370440413209904
+"Sector","posicion_ocupacional_label::Trabajador familiar sin remuneración","educacion::No sabe, no informa",-0.000860269133981113
+"Sector","posicion_ocupacional_label::Trabajador por cuenta propia","educacion::No sabe, no informa",0.00023095140963425
+"Sector","posicion_ocupacional_label::Trabajador sin remuneración en otros hogares","educacion::No sabe, no informa",-6.6569395943291e-05
+"Sector","log_size_midpoint:formal","educacion::No sabe, no informa",0.000114818123767178
+"Sector","log_size_midpoint","educacion::Preescolar",-0.000125750368016811
+"Sector","formal","educacion::Preescolar",0.000291238664671431
+"Sector","mujer","educacion::Preescolar",0.000183254560086838
+"Sector","edad","educacion::Preescolar",-0.00019310314209601
+"Sector","edad2","educacion::Preescolar",2.14915077742299e-06
+"Sector","educacion::Básica primaria","educacion::Preescolar",0.000753276189632725
+"Sector","educacion::Media","educacion::Preescolar",-0.000604092669970648
+"Sector","educacion::Ninguno","educacion::Preescolar",0.00250398245464475
+"Sector","educacion::No sabe, no informa","educacion::Preescolar",-0.00136362883299285
+"Sector","educacion::Preescolar","educacion::Preescolar",0.00611516430295199
+"Sector","educacion::Superior o universitaria","educacion::Preescolar",-0.000324435899663063
+"Sector","posicion_ocupacional_label::Jornalero o peón","educacion::Preescolar",0.000250068838730689
+"Sector","posicion_ocupacional_label::Obrero o empleado de empresa particular","educacion::Preescolar",0.00104781104823098
+"Sector","posicion_ocupacional_label::Obrero o empleado del gobierno","educacion::Preescolar",0.000582923412546187
+"Sector","posicion_ocupacional_label::Otro","educacion::Preescolar",0.000778339104497438
+"Sector","posicion_ocupacional_label::Patrón o empleador","educacion::Preescolar",0.000100143193123785
+"Sector","posicion_ocupacional_label::Trabajador familiar sin remuneración","educacion::Preescolar",0.00422727120581899
+"Sector","posicion_ocupacional_label::Trabajador por cuenta propia","educacion::Preescolar",-0.000838781610510166
+"Sector","posicion_ocupacional_label::Trabajador sin remuneración en otros hogares","educacion::Preescolar",3.75311347575535e-05
+"Sector","log_size_midpoint:formal","educacion::Preescolar",-2.42391054262304e-06
+"Sector","log_size_midpoint","educacion::Superior o universitaria",0.000107281290103863
+"Sector","formal","educacion::Superior o universitaria",0.00101994263873396
+"Sector","mujer","educacion::Superior o universitaria",0.000329384473128743
+"Sector","edad","educacion::Superior o universitaria",4.37954776818638e-05
+"Sector","edad2","educacion::Superior o universitaria",-1.98224959262557e-07
+"Sector","educacion::Básica primaria","educacion::Superior o universitaria",-6.78515036706948e-05
+"Sector","educacion::Media","educacion::Superior o universitaria",0.000123108259775057
+"Sector","educacion::Ninguno","educacion::Superior o universitaria",-0.000255597208935969
+"Sector","educacion::No sabe, no informa","educacion::Superior o universitaria",0.00019536971930335
+"Sector","educacion::Preescolar","educacion::Superior o universitaria",-0.000324435899663063
+"Sector","educacion::Superior o universitaria","educacion::Superior o universitaria",0.00242102420666152
+"Sector","posicion_ocupacional_label::Jornalero o peón","educacion::Superior o universitaria",0.000292712843562343
+"Sector","posicion_ocupacional_label::Obrero o empleado de empresa particular","educacion::Superior o universitaria",-0.00124883808975809
+"Sector","posicion_ocupacional_label::Obrero o empleado del gobierno","educacion::Superior o universitaria",-0.000818428052535842
+"Sector","posicion_ocupacional_label::Otro","educacion::Superior o universitaria",-0.00116439075283513
+"Sector","posicion_ocupacional_label::Patrón o empleador","educacion::Superior o universitaria",-0.000113696537098133
+"Sector","posicion_ocupacional_label::Trabajador familiar sin remuneración","educacion::Superior o universitaria",0.00116454237524756
+"Sector","posicion_ocupacional_label::Trabajador por cuenta propia","educacion::Superior o universitaria",0.000799365761573751
+"Sector","posicion_ocupacional_label::Trabajador sin remuneración en otros hogares","educacion::Superior o universitaria",0.000388086547619267
+"Sector","log_size_midpoint:formal","educacion::Superior o universitaria",-0.000199338729256917
+"Sector","log_size_midpoint","posicion_ocupacional_label::Jornalero o peón",-7.07744881589535e-05
+"Sector","formal","posicion_ocupacional_label::Jornalero o peón",0.000357095271329829
+"Sector","mujer","posicion_ocupacional_label::Jornalero o peón",-1.48779803053466e-05
+"Sector","edad","posicion_ocupacional_label::Jornalero o peón",-8.83896313808245e-06
+"Sector","edad2","posicion_ocupacional_label::Jornalero o peón",6.7260445615306e-08
+"Sector","educacion::Básica primaria","posicion_ocupacional_label::Jornalero o peón",-9.97887638903736e-05
+"Sector","educacion::Media","posicion_ocupacional_label::Jornalero o peón",0.000141243518457545
+"Sector","educacion::Ninguno","posicion_ocupacional_label::Jornalero o peón",0.000117419220925544
+"Sector","educacion::No sabe, no informa","posicion_ocupacional_label::Jornalero o peón",-0.000231604984309862
+"Sector","educacion::Preescolar","posicion_ocupacional_label::Jornalero o peón",0.000250068838730689
+"Sector","educacion::Superior o universitaria","posicion_ocupacional_label::Jornalero o peón",0.000292712843562343
+"Sector","posicion_ocupacional_label::Jornalero o peón","posicion_ocupacional_label::Jornalero o peón",0.00156232413045214
+"Sector","posicion_ocupacional_label::Obrero o empleado de empresa particular","posicion_ocupacional_label::Jornalero o peón",0.00145546121612992
+"Sector","posicion_ocupacional_label::Obrero o empleado del gobierno","posicion_ocupacional_label::Jornalero o peón",0.00130177998508682
+"Sector","posicion_ocupacional_label::Otro","posicion_ocupacional_label::Jornalero o peón",0.00171256277441193
+"Sector","posicion_ocupacional_label::Patrón o empleador","posicion_ocupacional_label::Jornalero o peón",0.00144533910904196
+"Sector","posicion_ocupacional_label::Trabajador familiar sin remuneración","posicion_ocupacional_label::Jornalero o peón",0.00205460064004725
+"Sector","posicion_ocupacional_label::Trabajador por cuenta propia","posicion_ocupacional_label::Jornalero o peón",0.00146807910479572
+"Sector","posicion_ocupacional_label::Trabajador sin remuneración en otros hogares","posicion_ocupacional_label::Jornalero o peón",0.0015240536990499
+"Sector","log_size_midpoint:formal","posicion_ocupacional_label::Jornalero o peón",-3.56727371604994e-05
+"Sector","log_size_midpoint","posicion_ocupacional_label::Obrero o empleado de empresa particular",-9.81676494735178e-05
+"Sector","formal","posicion_ocupacional_label::Obrero o empleado de empresa particular",-6.20020836330521e-05
+"Sector","mujer","posicion_ocupacional_label::Obrero o empleado de empresa particular",-0.000307560359110713
+"Sector","edad","posicion_ocupacional_label::Obrero o empleado de empresa particular",-5.6698242733308e-05
+"Sector","edad2","posicion_ocupacional_label::Obrero o empleado de empresa particular",4.16059481410974e-07
+"Sector","educacion::Básica primaria","posicion_ocupacional_label::Obrero o empleado de empresa particular",2.72790591072664e-05
+"Sector","educacion::Media","posicion_ocupacional_label::Obrero o empleado de empresa particular",7.19414347507298e-06
+"Sector","educacion::Ninguno","posicion_ocupacional_label::Obrero o empleado de empresa particular",0.000619371398518144
+"Sector","educacion::No sabe, no informa","posicion_ocupacional_label::Obrero o empleado de empresa particular",-0.000630453494953887
+"Sector","educacion::Preescolar","posicion_ocupacional_label::Obrero o empleado de empresa particular",0.00104781104823098
+"Sector","educacion::Superior o universitaria","posicion_ocupacional_label::Obrero o empleado de empresa particular",-0.00124883808975809
+"Sector","posicion_ocupacional_label::Jornalero o peón","posicion_ocupacional_label::Obrero o empleado de empresa particular",0.00145546121612992
+"Sector","posicion_ocupacional_label::Obrero o empleado de empresa particular","posicion_ocupacional_label::Obrero o empleado de empresa particular",0.00265855125453451
+"Sector","posicion_ocupacional_label::Obrero o empleado del gobierno","posicion_ocupacional_label::Obrero o empleado de empresa particular",0.00220155615622058
+"Sector","posicion_ocupacional_label::Otro","posicion_ocupacional_label::Obrero o empleado de empresa particular",0.00254777368529582
+"Sector","posicion_ocupacional_label::Patrón o empleador","posicion_ocupacional_label::Obrero o empleado de empresa particular",0.00141774243140774
+"Sector","posicion_ocupacional_label::Trabajador familiar sin remuneración","posicion_ocupacional_label::Obrero o empleado de empresa particular",0.00201174529313978
+"Sector","posicion_ocupacional_label::Trabajador por cuenta propia","posicion_ocupacional_label::Obrero o empleado de empresa particular",0.000925836272649881
+"Sector","posicion_ocupacional_label::Trabajador sin remuneración en otros hogares","posicion_ocupacional_label::Obrero o empleado de empresa particular",0.00134151900235436
+"Sector","log_size_midpoint:formal","posicion_ocupacional_label::Obrero o empleado de empresa particular",-2.8589200074996e-05
+"Sector","log_size_midpoint","posicion_ocupacional_label::Obrero o empleado del gobierno",-0.000282494531779671
+"Sector","formal","posicion_ocupacional_label::Obrero o empleado del gobierno",-0.000518994939166735
+"Sector","mujer","posicion_ocupacional_label::Obrero o empleado del gobierno",-0.0008380033411418
+"Sector","edad","posicion_ocupacional_label::Obrero o empleado del gobierno",-0.00010312103256338
+"Sector","edad2","posicion_ocupacional_label::Obrero o empleado del gobierno",9.47474907248932e-07
+"Sector","educacion::Básica primaria","posicion_ocupacional_label::Obrero o empleado del gobierno",-4.96066787226518e-06
+"Sector","educacion::Media","posicion_ocupacional_label::Obrero o empleado del gobierno",0.000274418984223904
+"Sector","educacion::Ninguno","posicion_ocupacional_label::Obrero o empleado del gobierno",0.000423989780835805
+"Sector","educacion::No sabe, no informa","posicion_ocupacional_label::Obrero o empleado del gobierno",-0.000165771232473845
+"Sector","educacion::Preescolar","posicion_ocupacional_label::Obrero o empleado del gobierno",0.000582923412546188
+"Sector","educacion::Superior o universitaria","posicion_ocupacional_label::Obrero o empleado del gobierno",-0.000818428052535842
+"Sector","posicion_ocupacional_label::Jornalero o peón","posicion_ocupacional_label::Obrero o empleado del gobierno",0.00130177998508682
+"Sector","posicion_ocupacional_label::Obrero o empleado de empresa particular","posicion_ocupacional_label::Obrero o empleado del gobierno",0.00220155615622058
+"Sector","posicion_ocupacional_label::Obrero o empleado del gobierno","posicion_ocupacional_label::Obrero o empleado del gobierno",0.0167260768610343
+"Sector","posicion_ocupacional_label::Otro","posicion_ocupacional_label::Obrero o empleado del gobierno",0.00393034884433751
+"Sector","posicion_ocupacional_label::Patrón o empleador","posicion_ocupacional_label::Obrero o empleado del gobierno",0.00122526820040329
+"Sector","posicion_ocupacional_label::Trabajador familiar sin remuneración","posicion_ocupacional_label::Obrero o empleado del gobierno",0.00158651853821188
+"Sector","posicion_ocupacional_label::Trabajador por cuenta propia","posicion_ocupacional_label::Obrero o empleado del gobierno",0.000851739464051346
+"Sector","posicion_ocupacional_label::Trabajador sin remuneración en otros hogares","posicion_ocupacional_label::Obrero o empleado del gobierno",0.00124411445524383
+"Sector","log_size_midpoint:formal","posicion_ocupacional_label::Obrero o empleado del gobierno",0.000161521713967909
+"Sector","log_size_midpoint","posicion_ocupacional_label::Otro",-0.000385814486148968
+"Sector","formal","posicion_ocupacional_label::Otro",-0.00062520946332438
+"Sector","mujer","posicion_ocupacional_label::Otro",-0.000173323823110488
+"Sector","edad","posicion_ocupacional_label::Otro",-2.24799741877438e-05
+"Sector","edad2","posicion_ocupacional_label::Otro",1.20408164372593e-07
+"Sector","educacion::Básica primaria","posicion_ocupacional_label::Otro",-0.000134949709528355
+"Sector","educacion::Media","posicion_ocupacional_label::Otro",5.16729629866663e-05
+"Sector","educacion::Ninguno","posicion_ocupacional_label::Otro",0.000248318098208352
+"Sector","educacion::No sabe, no informa","posicion_ocupacional_label::Otro",-0.00160900256092038
+"Sector","educacion::Preescolar","posicion_ocupacional_label::Otro",0.000778339104497438
+"Sector","educacion::Superior o universitaria","posicion_ocupacional_label::Otro",-0.00116439075283513
+"Sector","posicion_ocupacional_label::Jornalero o peón","posicion_ocupacional_label::Otro",0.00171256277441193
+"Sector","posicion_ocupacional_label::Obrero o empleado de empresa particular","posicion_ocupacional_label::Otro",0.00254777368529582
+"Sector","posicion_ocupacional_label::Obrero o empleado del gobierno","posicion_ocupacional_label::Otro",0.00393034884433751
+"Sector","posicion_ocupacional_label::Otro","posicion_ocupacional_label::Otro",0.00728269872499719
+"Sector","posicion_ocupacional_label::Patrón o empleador","posicion_ocupacional_label::Otro",0.00150585257676034
+"Sector","posicion_ocupacional_label::Trabajador familiar sin remuneración","posicion_ocupacional_label::Otro",0.00261015572313813
+"Sector","posicion_ocupacional_label::Trabajador por cuenta propia","posicion_ocupacional_label::Otro",0.000812243284347107
+"Sector","posicion_ocupacional_label::Trabajador sin remuneración en otros hogares","posicion_ocupacional_label::Otro",0.00144063373060946
+"Sector","log_size_midpoint:formal","posicion_ocupacional_label::Otro",0.000181960793829562
+"Sector","log_size_midpoint","posicion_ocupacional_label::Patrón o empleador",-0.000141444748179346
+"Sector","formal","posicion_ocupacional_label::Patrón o empleador",0.000111777789793021
+"Sector","mujer","posicion_ocupacional_label::Patrón o empleador",-0.000659380965312782
+"Sector","edad","posicion_ocupacional_label::Patrón o empleador",4.14842436097544e-05
+"Sector","edad2","posicion_ocupacional_label::Patrón o empleador",-6.07706958763591e-07
+"Sector","educacion::Básica primaria","posicion_ocupacional_label::Patrón o empleador",-0.000430507032126719
+"Sector","educacion::Media","posicion_ocupacional_label::Patrón o empleador",0.000519515635103642
+"Sector","educacion::Ninguno","posicion_ocupacional_label::Patrón o empleador",-0.000688781317849237
+"Sector","educacion::No sabe, no informa","posicion_ocupacional_label::Patrón o empleador",-0.000370440413209904
+"Sector","educacion::Preescolar","posicion_ocupacional_label::Patrón o empleador",0.000100143193123785
+"Sector","educacion::Superior o universitaria","posicion_ocupacional_label::Patrón o empleador",-0.000113696537098133
+"Sector","posicion_ocupacional_label::Jornalero o peón","posicion_ocupacional_label::Patrón o empleador",0.00144533910904196
+"Sector","posicion_ocupacional_label::Obrero o empleado de empresa particular","posicion_ocupacional_label::Patrón o empleador",0.00141774243140774
+"Sector","posicion_ocupacional_label::Obrero o empleado del gobierno","posicion_ocupacional_label::Patrón o empleador",0.00122526820040329
+"Sector","posicion_ocupacional_label::Otro","posicion_ocupacional_label::Patrón o empleador",0.00150585257676034
+"Sector","posicion_ocupacional_label::Patrón o empleador","posicion_ocupacional_label::Patrón o empleador",0.00261584954277104
+"Sector","posicion_ocupacional_label::Trabajador familiar sin remuneración","posicion_ocupacional_label::Patrón o empleador",0.000245940963221784
+"Sector","posicion_ocupacional_label::Trabajador por cuenta propia","posicion_ocupacional_label::Patrón o empleador",0.00129667170009436
+"Sector","posicion_ocupacional_label::Trabajador sin remuneración en otros hogares","posicion_ocupacional_label::Patrón o empleador",0.00133458056913556
+"Sector","log_size_midpoint:formal","posicion_ocupacional_label::Patrón o empleador",5.51004334498577e-05
+"Sector","log_size_midpoint","posicion_ocupacional_label::Trabajador familiar sin remuneración",-7.28340916910776e-05
+"Sector","formal","posicion_ocupacional_label::Trabajador familiar sin remuneración",0.000882622477535131
+"Sector","mujer","posicion_ocupacional_label::Trabajador familiar sin remuneración",0.000685628614657761
+"Sector","edad","posicion_ocupacional_label::Trabajador familiar sin remuneración",-0.000173166481466879
+"Sector","edad2","posicion_ocupacional_label::Trabajador familiar sin remuneración",2.09326090596104e-06
+"Sector","educacion::Básica primaria","posicion_ocupacional_label::Trabajador familiar sin remuneración",0.000889749933801168
+"Sector","educacion::Media","posicion_ocupacional_label::Trabajador familiar sin remuneración",-0.000695438007591986
+"Sector","educacion::Ninguno","posicion_ocupacional_label::Trabajador familiar sin remuneración",0.00275311384344601
+"Sector","educacion::No sabe, no informa","posicion_ocupacional_label::Trabajador familiar sin remuneración",-0.000860269133981113
+"Sector","educacion::Preescolar","posicion_ocupacional_label::Trabajador familiar sin remuneración",0.00422727120581899
+"Sector","educacion::Superior o universitaria","posicion_ocupacional_label::Trabajador familiar sin remuneración",0.00116454237524756
+"Sector","posicion_ocupacional_label::Jornalero o peón","posicion_ocupacional_label::Trabajador familiar sin remuneración",0.00205460064004725
+"Sector","posicion_ocupacional_label::Obrero o empleado de empresa particular","posicion_ocupacional_label::Trabajador familiar sin remuneración",0.00201174529313978
+"Sector","posicion_ocupacional_label::Obrero o empleado del gobierno","posicion_ocupacional_label::Trabajador familiar sin remuneración",0.00158651853821188
+"Sector","posicion_ocupacional_label::Otro","posicion_ocupacional_label::Trabajador familiar sin remuneración",0.00261015572313813
+"Sector","posicion_ocupacional_label::Patrón o empleador","posicion_ocupacional_label::Trabajador familiar sin remuneración",0.000245940963221784
+"Sector","posicion_ocupacional_label::Trabajador familiar sin remuneración","posicion_ocupacional_label::Trabajador familiar sin remuneración",0.00824525178351115
+"Sector","posicion_ocupacional_label::Trabajador por cuenta propia","posicion_ocupacional_label::Trabajador familiar sin remuneración",0.00140877986387455
+"Sector","posicion_ocupacional_label::Trabajador sin remuneración en otros hogares","posicion_ocupacional_label::Trabajador familiar sin remuneración",0.0020081472972141
+"Sector","log_size_midpoint:formal","posicion_ocupacional_label::Trabajador familiar sin remuneración",-5.391707895784e-05
+"Sector","log_size_midpoint","posicion_ocupacional_label::Trabajador por cuenta propia",1.7772275702164e-05
+"Sector","formal","posicion_ocupacional_label::Trabajador por cuenta propia",0.000483334889685944
+"Sector","mujer","posicion_ocupacional_label::Trabajador por cuenta propia",2.89969546954397e-05
+"Sector","edad","posicion_ocupacional_label::Trabajador por cuenta propia",2.96451473763264e-05
+"Sector","edad2","posicion_ocupacional_label::Trabajador por cuenta propia",-2.93602451246659e-07
+"Sector","educacion::Básica primaria","posicion_ocupacional_label::Trabajador por cuenta propia",-0.000234110175403175
+"Sector","educacion::Media","posicion_ocupacional_label::Trabajador por cuenta propia",0.000240184359943834
+"Sector","educacion::Ninguno","posicion_ocupacional_label::Trabajador por cuenta propia",-0.000372029201492363
+"Sector","educacion::No sabe, no informa","posicion_ocupacional_label::Trabajador por cuenta propia",0.00023095140963425
+"Sector","educacion::Preescolar","posicion_ocupacional_label::Trabajador por cuenta propia",-0.000838781610510166
+"Sector","educacion::Superior o universitaria","posicion_ocupacional_label::Trabajador por cuenta propia",0.000799365761573751
+"Sector","posicion_ocupacional_label::Jornalero o peón","posicion_ocupacional_label::Trabajador por cuenta propia",0.00146807910479572
+"Sector","posicion_ocupacional_label::Obrero o empleado de empresa particular","posicion_ocupacional_label::Trabajador por cuenta propia",0.000925836272649881
+"Sector","posicion_ocupacional_label::Obrero o empleado del gobierno","posicion_ocupacional_label::Trabajador por cuenta propia",0.000851739464051346
+"Sector","posicion_ocupacional_label::Otro","posicion_ocupacional_label::Trabajador por cuenta propia",0.000812243284347107
+"Sector","posicion_ocupacional_label::Patrón o empleador","posicion_ocupacional_label::Trabajador por cuenta propia",0.00129667170009436
+"Sector","posicion_ocupacional_label::Trabajador familiar sin remuneración","posicion_ocupacional_label::Trabajador por cuenta propia",0.00140877986387455
+"Sector","posicion_ocupacional_label::Trabajador por cuenta propia","posicion_ocupacional_label::Trabajador por cuenta propia",0.00172730954990033
+"Sector","posicion_ocupacional_label::Trabajador sin remuneración en otros hogares","posicion_ocupacional_label::Trabajador por cuenta propia",0.00151372530454183
+"Sector","log_size_midpoint:formal","posicion_ocupacional_label::Trabajador por cuenta propia",-6.9442778600846e-05
+"Sector","log_size_midpoint","posicion_ocupacional_label::Trabajador sin remuneración en otros hogares",-4.24662763742076e-05
+"Sector","formal","posicion_ocupacional_label::Trabajador sin remuneración en otros hogares",0.000360271866609224
+"Sector","mujer","posicion_ocupacional_label::Trabajador sin remuneración en otros hogares",1.83168870780756e-05
+"Sector","edad","posicion_ocupacional_label::Trabajador sin remuneración en otros hogares",-4.6545947556811e-06
+"Sector","edad2","posicion_ocupacional_label::Trabajador sin remuneración en otros hogares",4.01638031668646e-08
+"Sector","educacion::Básica primaria","posicion_ocupacional_label::Trabajador sin remuneración en otros hogares",-9.98448840206389e-05
+"Sector","educacion::Media","posicion_ocupacional_label::Trabajador sin remuneración en otros hogares",0.000132801309177073
+"Sector","educacion::Ninguno","posicion_ocupacional_label::Trabajador sin remuneración en otros hogares",6.1990694289945e-05
+"Sector","educacion::No sabe, no informa","posicion_ocupacional_label::Trabajador sin remuneración en otros hogares",-6.6569395943291e-05
+"Sector","educacion::Preescolar","posicion_ocupacional_label::Trabajador sin remuneración en otros hogares",3.75311347575535e-05
+"Sector","educacion::Superior o universitaria","posicion_ocupacional_label::Trabajador sin remuneración en otros hogares",0.000388086547619267
+"Sector","posicion_ocupacional_label::Jornalero o peón","posicion_ocupacional_label::Trabajador sin remuneración en otros hogares",0.0015240536990499
+"Sector","posicion_ocupacional_label::Obrero o empleado de empresa particular","posicion_ocupacional_label::Trabajador sin remuneración en otros hogares",0.00134151900235436
+"Sector","posicion_ocupacional_label::Obrero o empleado del gobierno","posicion_ocupacional_label::Trabajador sin remuneración en otros hogares",0.00124411445524383
+"Sector","posicion_ocupacional_label::Otro","posicion_ocupacional_label::Trabajador sin remuneración en otros hogares",0.00144063373060946
+"Sector","posicion_ocupacional_label::Patrón o empleador","posicion_ocupacional_label::Trabajador sin remuneración en otros hogares",0.00133458056913556
+"Sector","posicion_ocupacional_label::Trabajador familiar sin remuneración","posicion_ocupacional_label::Trabajador sin remuneración en otros hogares",0.0020081472972141
+"Sector","posicion_ocupacional_label::Trabajador por cuenta propia","posicion_ocupacional_label::Trabajador sin remuneración en otros hogares",0.00151372530454183
+"Sector","posicion_ocupacional_label::Trabajador sin remuneración en otros hogares","posicion_ocupacional_label::Trabajador sin remuneración en otros hogares",0.00151447289116829
+"Sector","log_size_midpoint:formal","posicion_ocupacional_label::Trabajador sin remuneración en otros hogares",-3.47231104543521e-05
+"Sector","log_size_midpoint","log_size_midpoint:formal",-2.56789242250604e-05
+"Sector","formal","log_size_midpoint:formal",-0.000259855841466369
+"Sector","mujer","log_size_midpoint:formal",-3.37947478396614e-05
+"Sector","edad","log_size_midpoint:formal",3.76928718378402e-07
+"Sector","edad2","log_size_midpoint:formal",-1.63544579866821e-08
+"Sector","educacion::Básica primaria","log_size_midpoint:formal",2.65188905878969e-06
+"Sector","educacion::Media","log_size_midpoint:formal",-1.87162893658407e-05
+"Sector","educacion::Ninguno","log_size_midpoint:formal",-3.62377818728631e-05
+"Sector","educacion::No sabe, no informa","log_size_midpoint:formal",0.000114818123767178
+"Sector","educacion::Preescolar","log_size_midpoint:formal",-2.42391054262303e-06
+"Sector","educacion::Superior o universitaria","log_size_midpoint:formal",-0.000199338729256917
+"Sector","posicion_ocupacional_label::Jornalero o peón","log_size_midpoint:formal",-3.56727371604994e-05
+"Sector","posicion_ocupacional_label::Obrero o empleado de empresa particular","log_size_midpoint:formal",-2.8589200074996e-05
+"Sector","posicion_ocupacional_label::Obrero o empleado del gobierno","log_size_midpoint:formal",0.000161521713967909
+"Sector","posicion_ocupacional_label::Otro","log_size_midpoint:formal",0.000181960793829562
+"Sector","posicion_ocupacional_label::Patrón o empleador","log_size_midpoint:formal",5.51004334498577e-05
+"Sector","posicion_ocupacional_label::Trabajador familiar sin remuneración","log_size_midpoint:formal",-5.391707895784e-05
+"Sector","posicion_ocupacional_label::Trabajador por cuenta propia","log_size_midpoint:formal",-6.9442778600846e-05
+"Sector","posicion_ocupacional_label::Trabajador sin remuneración en otros hogares","log_size_midpoint:formal",-3.47231104543521e-05
+"Sector","log_size_midpoint:formal","log_size_midpoint:formal",0.000120482685494381

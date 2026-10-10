@@ -1,9 +1,61 @@
 # Regression Replication and Income Counterfactuals
 
+## Preferred-Model Extensions
+
+The main results now use the preferred controls for within-formality premiums,
+formal-informal gaps, dynamics, and approximate elasticities. The earlier
+sector-year specifications remain reproducible comparisons in the appendix.
+After the synchronized regression steps below, run:
+
+```sh
+Rscript --vanilla replication/preferred_extensions.R /path/to/Paper-GEIH_base_modelo_personas_2008_2025.dta
+python replication/build_preferred_tables.py
+Rscript --vanilla replication/plot_preferred_extensions.R
+python replication/validate_preferred_extensions.py
+```
+
+`preferred_output/` contains aggregate coefficients, selected full covariance
+matrices, profiles, endpoint changes, elasticities, and clustering checks.
+Local model caches in `build/preferred_extensions/` and the aggregate RDS files
+are excluded from Git. The script verifies that the pooled preferred model
+reproduces the existing coefficients and covariance matrix. It does not change
+the estimates used by the income scenarios.
+
+- The common estimation sample excludes singleton sector-department-year cells
+  and contains 5,268,375 observations. Control-set comparisons use this same
+  sample so changes in inference do not reflect a sample change.
+- Annual regressions include all preferred controls and allow all slopes to
+  vary across years. They are the blockwise estimate of the fully year-interacted
+  extension. This avoids constructing a large, mostly zero full-period design
+  matrix while retaining the intended year-specific conditional comparisons.
+- A joint 2008/2025 model interacts every non-fixed-effect regressor with the
+  endpoint indicator. Its coefficients reproduce the separate endpoint fits.
+  Tests of changes use the joint covariance matrix, not independence between
+  years or overlapping confidence intervals. The table reports differences
+  between percentage premiums in percentage points, while p-values test zero
+  differences between their underlying log contrasts.
+- The baseline covariance clusters by sector-department, with an additional
+  sector-clustering sensitivity on the identical fitted coefficients. In the
+  pooled preferred model the formal 101+/solo p-value is below 0.001 under the
+  former and 0.113 under the latter. The informal 101+/solo endpoint-change
+  p-values are 0.011 and 0.090. The manuscript reports this sensitivity.
+- Preferred elasticities by formality are contrasts from one log-size-by-formality
+  interaction regression, not separate regressions. The older separate-sample
+  estimates remain in the comparison appendix. Assigned size values remain
+  1, 2.5, 4.5, 8, 15, 25, 40.5, 75.5, and 150.
+- All tests are two-sided. Endpoint tests are pointwise and not adjusted for
+  multiple comparisons. The annual, pooled, and endpoint regressions use their
+  respective cluster counts, rather than borrowing one degree-of-freedom value.
+
+The independent validator reconstructs contrasts from the exported coefficient
+and covariance matrices, recalculates t tests and confidence intervals, checks
+endpoint/annual equivalence, and checks the manuscript's references, bilingual
+figure paths, and preservation of the approved abstract.
+
 ## Synchronized Regression Outputs
 
-The manuscript's regression tables and figures are generated from one estimation
-run, using the same harmonized input file. The three reference categories are
+The comparison tables and figures are generated from one estimation
+run, using the same harmonized input file as the preferred extensions. The three reference categories are
 linear contrasts of each fitted model, not independent data-processing runs.
 Run these steps in order:
 

@@ -1,0 +1,173 @@
+Appendix Table~\ref{tab:preferred-clustering-sensitivity} holds the sample
+fixed across three control sets. Its two inference columns use exactly the
+same coefficients and different clustering levels. In the preferred model,
+sector clustering changes the formal 101+/solo standard error from 0.037
+to 0.091 log points, without changing the 16.5 percent estimate.
+Table~\ref{tab:preferred-extension-clustering} applies the same comparison
+to endpoint changes and elasticities. The informal endpoint change has
+\(p=0.011\) under sector-department clustering and \(p=0.090\) under sector
+clustering. Both elasticity estimates remain positive and significant
+under both conventions.
+
+\input{Paper/sections/regression_preferred_clustering_table}
+\input{Paper/sections/regression_preferred_extension_clustering_table}
+\FloatBarrier
+
+The common-premium comparison model is
+\begin{equation}\label{eq:common-premium}
+  \ln(w_{ist}) = \alpha
+  + \sum_{g\neq g_0} b_g D_{ig}
+  + X_{ist}'\gamma + \phi F_{ist}
+  + \lambda_{s\times t}+\varepsilon_{ist}.
+\end{equation}
+This model constrains the size coefficients to be the same for formal and
+informal workers and omits occupational-position controls.
+Table~\ref{tab:firm-size-wage-premium-regressions} starts with size indicators
+alone, then adds sector-year effects, worker characteristics, and formality.
+Figure~\ref{fig:firm-size-wage-premium} expresses the final column as
+percentage premiums. The following alternative-reference tables retain
+the same estimates and change only their normalization.
+
+\input{Paper/sections/regression_firm_size_table}
+\begin{figure}[htbp]
+  \centering
+  \includegraphics[width=0.9\textwidth]{fig57_\figurelang.png}
+  \caption{Common-premium benchmark relative to solo workers}
+  \label{fig:firm-size-wage-premium}
+\end{figure}
+\input{Paper/sections/regression_firm_size_table_101_reference}
+\input{Paper/sections/regression_firm_size_table_11_19_reference}
+
+Tables~\ref{tab:firm-size-local-geography-robustness},
+\ref{tab:firm-size-local-geography-robustness-101-reference}, and
+\ref{tab:firm-size-local-geography-robustness-11-19-reference} add geographic
+and occupational-position controls while retaining the common-premium
+restriction. Their final columns give a 40.2 percent 101+/solo premium.
+Unlike the preferred model, these regressions do not allow the formal and
+informal size profiles to differ.
+
+\input{Paper/sections/regression_local_geography_robustness_table}
+\input{Paper/sections/regression_local_geography_robustness_101_reference_table}
+\input{Paper/sections/regression_local_geography_robustness_11_19_reference_table}
+\FloatBarrier
+
+The simpler interacted comparison model is
+\begin{equation}\label{eq:formality-interaction}
+  \ln(w_{ist}) = \alpha + \widetilde{\phi}F_{ist}
+  + \sum_{g\neq g_0}(\widetilde{\beta}_g+
+       \widetilde{\theta}_g F_{ist})D_{ig}
+  + X_{ist}'\gamma+\lambda_{s\times t}+\varepsilon_{ist}.
+\end{equation}
+Tildes distinguish these coefficients from the preferred model's coefficients.
+This regression includes worker characteristics and sector-year effects, but
+not occupational-position or department controls. Its inference clusters by
+sector. The informal 101+/solo premium is 39.9 percent, and the formal
+premium is 16.6 percent, with a sector-clustered \(p\)-value of 0.1001 for the
+latter. Formal 101+ workers nevertheless earn 8.9--14.1 percent more than
+workers in the smaller non-solo formal categories, with significant direct
+contrasts. The associated formal-informal gaps and alternative normalizations
+are reported below. These estimates are not the source of the preferred
+income scenarios.
+
+\input{Paper/sections/regression_formality_interaction_coefficients_table}
+\begin{figure}[htbp]
+  \centering
+  \includegraphics[width=0.95\textwidth]{fig74_\figurelang.png}
+  \caption{Firm-size premiums by formality in the sector-year comparison model}
+  \label{fig:firm-size-formality-premium}
+\end{figure}
+\input{Paper/sections/regression_formal_101_contrasts_table}
+\input{Paper/sections/regression_formality_gap_by_size_table}
+\input{Paper/sections/regression_formality_interaction_coefficients_101_reference}
+\input{Paper/sections/regression_formality_interaction_coefficients_11_19_reference}
+\FloatBarrier
+
+The earlier dynamic benchmark interacts size with year but constrains the
+premium to be common across formality groups:
+\begin{equation}\label{eq:dynamic-benchmark}
+  \ln(w_{ist}) = \alpha
+  + \sum_{\tau}\sum_{g\neq g_0} b_{g\tau}D_{ig}\mathbf{1}\{t=\tau\}
+  + X_{ist}'\gamma+\phi F_{ist}
+  + \lambda_{s\times t}+\varepsilon_{ist}.
+\end{equation}
+Its linear-trend counterpart is
+\begin{equation}\label{eq:trend-benchmark}
+  \ln(w_{ist}) = \alpha
+  + \sum_{g\neq g_0}(b_g+\delta_g Trend_t)D_{ig}
+  + X_{ist}'\gamma+\phi F_{ist}
+  + \lambda_{s\times t}+\varepsilon_{ist},
+\end{equation}
+where \(Trend_t=t-2008\). Two-sided tests of \(H_0:\delta_g=0\) do not reject
+zero trends at 5 percent. These common-premium trends differ from the preferred
+within-formality endpoint contrasts. The alternative-reference trend tables
+use 101+ and 11--19 workers as the respective bases.
+
+\begin{figure}[htbp]
+  \centering
+  \includegraphics[width=0.95\textwidth]{fig59_\figurelang.png}
+  \caption{Common-premium benchmark over time}
+  \label{fig:firm-size-wage-premium-over-time}
+\end{figure}
+\input{Paper/sections/regression_firm_size_trend_test}
+\input{Paper/sections/regression_firm_size_trend_test_101_reference}
+\input{Paper/sections/regression_firm_size_trend_test_11_19_reference}
+
+The next two figures estimate Equation~(\ref{eq:formality-interaction})
+separately by year, replacing sector-year effects with sector effects.
+They omit occupational-position and department controls and use
+sector-clustered inference. The 2025 formal 101+/solo estimate is
+10.5 percent and its interval includes zero, whereas the informal estimate
+is 53.6 percent. These simpler profiles are retained to make the specification
+comparison reproducible.
+
+\begin{figure}[htbp]
+  \centering
+  \includegraphics[width=0.95\textwidth]{fig76_\figurelang.png}
+  \caption{Sector-control comparison of formality-specific premiums, 2008 and 2025}
+  \label{fig:adjusted-formality-endpoints}
+\end{figure}
+
+\begin{figure}[htbp]
+  \centering
+  \includegraphics[width=0.95\textwidth]{fig75_\figurelang.png}
+  \caption{Sector-control comparison of large-firm premiums by formality over time}
+  \label{fig:large-firm-formality-premium-over-time}
+\end{figure}
+\FloatBarrier
+
+The earlier log-log comparison uses the same assigned sizes as the preferred
+elasticity exercise but retains the simpler controls:
+\begin{equation}\label{eq:elasticity}
+  \ln(w_{ist}) = \alpha+\eta\ln(\widetilde{Size}_{ist})
+  + X_{ist}'\gamma+\phi F_{ist}
+  + \lambda_{s\times t}+\varepsilon_{ist}.
+\end{equation}
+The raw model includes assigned log size only. The controlled model includes
+worker characteristics, formality, and sector-year effects. Formal and
+informal slopes in this earlier exercise come from separate regressions,
+which omit the constant formality indicator. All use sector clustering.
+
+\input{Paper/sections/regression_elasticity_benchmark_table}
+
+The supplementary quadratic approximation is
+\begin{equation}\label{eq:polynomial-size-profile}
+  \ln(w_{ist}) = \alpha+\rho_1\ln(\widetilde{Size}_{ist})
+  +\rho_2[\ln(\widetilde{Size}_{ist})]^2
+  +X_{ist}'\gamma+\phi F_{ist}
+  +\lambda_{s\times t}+\varepsilon_{ist}.
+\end{equation}
+It uses the same simpler controls, with separate formal and informal fits.
+Its implied elasticity is \(\rho_1+2\rho_2\ln(\widetilde{Size})\).
+The functional form smooths over differences between categories and is not
+the preferred specification. \citet{Terza1987} studies estimation with ordinal
+qualitative regressors, but we do not implement that estimator. This exercise
+instead assigns fixed numerical values to the GEIH size intervals.
+
+\input{Paper/sections/regression_polynomial_size_profile_table}
+\begin{figure}[htbp]
+  \centering
+  \includegraphics[width=0.95\textwidth]{fig78_\figurelang.png}
+  \caption{Polynomial approximation under sector-year comparison controls}
+  \label{fig:polynomial-size-profile}
+\end{figure}
+\FloatBarrier

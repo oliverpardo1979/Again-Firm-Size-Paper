@@ -80,109 +80,79 @@ Section~\ref{subsec:income-counterfactuals} uses these contrasts in illustrative
 income scenarios for the 2025 workforce, holding hours and the estimated wage
 structure fixed.
 
-\subsection{Comparison Specifications}
+\subsection{Inference and Comparison Specifications}
 
-We retain a common-premium model to show how the overall size-wage association
-changes as controls are added:
-\begin{equation}\label{eq:common-premium}
-  \ln(w_{ist}) = \alpha
-  + \sum_{g\neq g_0} b_g D_{ig}
-  + X_{ist}'\gamma + \phi F_{ist}
-  + \lambda_{s\times t}+\varepsilon_{ist}.
+Our main standard errors allow residual dependence across workers and years
+within each sector-department cell. They do not allow unrestricted dependence
+across departments within a sector. We therefore also report sector-clustered
+inference, which permits that broader dependence but has only 17 clusters.
+Appendix Table~\ref{tab:preferred-clustering-sensitivity} holds the estimation
+sample fixed and separates changes in the controls from changes in clustering.
+Appendix Table~\ref{tab:preferred-extension-clustering} applies the same
+sensitivity check to the endpoint changes and elasticities. These comparisons
+keep the point estimates fixed when changing the covariance estimator.
+
+For comparison, the appendix retains a model with a common size premium across
+formality groups and a size-by-formality model with sector-year effects but
+without occupational-position or department controls. Equations~(\ref{eq:common-premium})
+and (\ref{eq:formality-interaction}) define those models. They document how
+conditional comparisons change with controls, rather than supplying the main
+within-formality estimates.
+
+\subsection{Changes over Time}
+
+We extend Equation~(\ref{eq:main}) by allowing the firm-size premiums, the
+formality coefficient, and all worker and occupational-position coefficients
+to vary by year:
+\begin{equation}\label{eq:preferred-dynamics}
+  \ln(w_{isdt}) = \phi_t F_{isdt}
+  + \sum_{g\neq g_0}(\beta_{gt}+\theta_{gt}F_{isdt})D_{ig}
+  + X_{isdt}'\gamma_t+\rho_{o(i),t}
+  + \lambda_{s\times d\times t}+\varepsilon_{isdt}.
 \end{equation}
-Unlike Equation~(\ref{eq:main}), this model constrains the size coefficients to
-be the same for formal and informal workers and omits occupational-position
-controls. Table~\ref{tab:firm-size-wage-premium-regressions} starts with size
-indicators alone, then adds sector-year fixed effects, worker characteristics,
-and formality. This sequence is a descriptive benchmark, not the preferred
-specification.
+The fixed effects absorb the intercepts. Estimating this model separately by
+year gives the annual profiles. Each regression includes the preferred worker
+and occupational-position controls and sector-department fixed effects.
+The annual samples partition the preferred pooled sample. This extension
+allows changes in other conditional wage differences rather than forcing
+them into the estimated size premiums.
 
-A second comparison retains size-by-formality interactions but uses the simpler
-sector-year controls:
-\begin{equation}\label{eq:formality-interaction}
-  \ln(w_{ist}) = \alpha + \widetilde{\phi}F_{ist}
-  + \sum_{g\neq g_0}(\widetilde{\beta}_g+
-       \widetilde{\theta}_g F_{ist})D_{ig}
-  + X_{ist}'\gamma+\lambda_{s\times t}+\varepsilon_{ist}.
-\end{equation}
-The tildes distinguish these coefficients from the preferred model's estimates.
-Tables~\ref{tab:formality-interaction-coefficients} and
-\ref{tab:formal-wage-gap-by-size} report coefficients and formal-informal
-gaps from this comparison model.
-Both comparison models use GEIH weights and
-sector-clustered standard errors. The preferred model additionally changes the
-clustering level to sector-department, so differences in statistical significance
-across the tables cannot be attributed only to the additional controls.
-In particular, column (1) of
-Table~\ref{tab:firm-size-local-geography-formality-robustness} and
-Table~\ref{tab:formality-interaction-coefficients} report the same point
-estimates. Their standard errors differ because the former clusters by
-sector-department and the latter by sector.
-
-\subsection{Dynamic Comparisons and Trend Test}
-
-The dynamic exercises retain the sector-year benchmark controls. They describe
-time variation in those conditional gaps and are not year-specific estimates
-of Equation~(\ref{eq:main}). We first interact size categories with year:
-\begin{equation}\label{eq:dynamic-benchmark}
-  \ln(w_{ist}) = \alpha
-  + \sum_{\tau}\sum_{g\neq g_0} b_{g\tau}D_{ig}\mathbf{1}\{t=\tau\}
-  + X_{ist}'\gamma+\phi F_{ist}
-  + \lambda_{s\times t}+\varepsilon_{ist}.
-\end{equation}
-We also estimate a linear trend in each common size premium:
-\begin{equation}\label{eq:trend-benchmark}
-  \ln(w_{ist}) = \alpha
-  + \sum_{g\neq g_0}(b_g+\delta_g Trend_t)D_{ig}
-  + X_{ist}'\gamma+\phi F_{ist}
-  + \lambda_{s\times t}+\varepsilon_{ist},
-\end{equation}
-where \(Trend_t=t-2008\). Positive values of \(\delta_g\) indicate a widening
-gap relative to solo workers, and negative values indicate narrowing. We use
-two-sided tests of \(H_0:\delta_g=0\).
-
-For the formality-specific time profiles, we estimate the simpler interacted
-model in Equation~(\ref{eq:formality-interaction}) separately by year, replacing
-sector-year effects with sector effects. These exercises include sex, age, age
-squared, and education, but not occupational-position or department controls.
-They allow the size profiles to vary over time without imposing a linear trend.
+To test the change between 2008 and 2025, we estimate both years jointly,
+interacting all non-fixed-effect regressors with the 2025 indicator. The
+point estimates reproduce the separate endpoint regressions. Joint estimation
+also retains the covariance between the endpoint estimates within a
+sector-department cluster. For informal workers, the null is
+\(H_0:\beta_{g,2025}-\beta_{g,2008}=0\). For formal workers, it is
+\(H_0:(\beta_{g,2025}+\theta_{g,2025})-(\beta_{g,2008}+\theta_{g,2008})=0\).
+Tests are two-sided and pointwise. A positive difference means that the
+conditional size-to-solo wage ratio increased. It does not establish a steady
+annual rise or identify which group's wages changed.
 
 \subsection{Approximate Firm-Size Elasticities}
 
-The preferred model treats size as categorical, as reported by GEIH. To compare
-with studies reporting continuous employer-size elasticities, we also estimate
-an approximate log-log benchmark:
-\begin{equation}\label{eq:elasticity}
-  \ln(w_{ist}) = \alpha+\eta\ln(\widetilde{Size}_{ist})
-  + X_{ist}'\gamma+\phi F_{ist}
-  + \lambda_{s\times t}+\varepsilon_{ist}.
+GEIH reports firm size in categories. To compare our magnitudes with studies
+reporting a continuous employer-size elasticity, we assign sizes of 1, 2.5,
+4.5, 8, 15, 25, 40.5, 75.5, and 150 to the nine harmonized categories and estimate
+\begin{equation}\label{eq:preferred-elasticity}
+  \ln(w_{isdt})=\alpha+\phi F_{isdt}
+  +(\eta+\kappa F_{isdt})\ln(\widetilde{Size}_{isdt})
+  +X_{isdt}'\gamma+\rho_{o(i)}+\lambda_{s\times d\times t}
+  +\varepsilon_{isdt}.
 \end{equation}
-Assigned sizes are 1, 2.5, 4.5, 8, 15, 25, 40.5, 75.5, and 150 for the nine
-harmonized categories from solo work through 101+. The elasticity depends on
-these assignments, particularly for the open-ended 101+ category. We report a
-raw estimate, the controlled full-sample estimate, and separate regressions for
-formal and informal workers. The within-formality regressions omit the constant
-formality indicator. The coefficient \(\eta\) is the approximate percentage
-difference in hourly income associated with a 1 percent difference in assigned
-firm size, holding the included controls fixed. The raw regression includes
-only assigned log size. The controlled regressions include sector-year effects
-and worker controls, but not occupational position or department. All use GEIH
-weights and sector-clustered standard errors. We compare their magnitudes with
-the literature summarized by \citet{DiegmannMullerSchoefer2026}, while recognizing
-that bin assignments and control sets differ across studies.
+The coefficients \(\eta\) and \(\eta+\kappa\) are the informal and formal
+elasticities, respectively. Both come from a single interacted regression,
+with the preferred sample, controls, weights, and clustering. The coefficient
+\(\kappa\) tests whether the slopes differ between formality groups. We also
+report a raw log-log regression and a common-slope version imposing
+\(\kappa=0\), with formality and the preferred controls included in the latter.
 
-We also fit a quadratic in assigned log size:
-\begin{equation}\label{eq:polynomial-size-profile}
-  \ln(w_{ist}) = \alpha+\rho_1\ln(\widetilde{Size}_{ist})
-  +\rho_2[\ln(\widetilde{Size}_{ist})]^2
-  +X_{ist}'\gamma+\phi F_{ist}
-  +\lambda_{s\times t}+\varepsilon_{ist}.
-\end{equation}
-This exercise asks whether a smooth curve summarizes the differences across
-size bins under the same comparison controls as the elasticity exercise.
-\citet{Terza1987} studies estimation with ordinal qualitative regressors, but
-we do not implement that estimator. Our quadratic instead uses fixed numerical
-values assigned to the GEIH intervals. Its implied elasticity is
-\(\rho_1+2\rho_2\ln(\widetilde{Size})\), so the association may vary with size.
-Neither the assigned sizes nor the polynomial replace the preferred
-categorical specification.
+These slopes are approximate percentage wage differences associated with a
+1 percent difference in assigned size, not elasticities based on observed
+worker counts. They depend on the bin assignments, especially the value
+assigned to 101+. They also impose a constant slope within each formality
+group, whereas Equation~(\ref{eq:main}) allows each category to differ.
+We compare them with the literature means reported by
+\citet{DiegmannMullerSchoefer2026}, recognizing differences in populations and
+controls. The appendix retains the simpler elasticity and quadratic models
+in Equations~(\ref{eq:elasticity}) and (\ref{eq:polynomial-size-profile}) as
+comparisons, not as the preferred estimates.
