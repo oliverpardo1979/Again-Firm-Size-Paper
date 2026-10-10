@@ -1,117 +1,152 @@
 \section{Methodology}
 
-\subsection{Main Specification}
+\subsection{Preferred Specification}
+\label{subsec:preferred-specification}
 
-The main econometric exercise estimates the conditional firm-size wage premium in a log-wage model. The baseline specification is:
+Our preferred specification allows the firm-size wage premium to differ between
+formal and informal workers. It also accounts for occupational position and
+compares workers within the same economic sector, department, and year:
 \begin{equation}\label{eq:main}
-  \ln(w_{ist}) =
-  \alpha
-  + \sum_{g \neq g_0} \beta_g \mathbf{1}\{Size_{ist}=g\}
-  + X_{ist}'\gamma
-  + \lambda_{s \times t}
-  + \varepsilon_{ist},    
+  \ln(w_{isdt}) = \alpha + \phi F_{isdt}
+  + \sum_{g\neq g_0}(\beta_g+\theta_g F_{isdt})D_{ig}
+  + X_{isdt}'\gamma + \rho_{o(i)} + \lambda_{s\times d\times t}
+  + \varepsilon_{isdt}.
 \end{equation}
-where \(w_{ist}\) is real hourly labor income for worker \(i\) in sector \(s\) in year \(t\), \(Size_{ist}\) is the harmonized firm-size category, and \(g_0\) is the reference group. We use solo workers as the reference group. This choice makes each coefficient directly interpretable as the conditional wage gap between workers in firm-size group \(g\) and workers at the bottom of the firm-size distribution. 
+Here, \(w_{isdt}\) is real hourly labor income, \(F_{isdt}\) indicates pension
+contribution, and \(D_{ig}\) indicates firm-size category \(g\). The reference
+category \(g_0\) is solo work. The vector \(X\) contains a female-worker
+indicator, age, age squared, and education dummies. Occupational-position fixed
+effects \(\rho_{o(i)}\) distinguish employment relationships, including
+own-account work, employer status, and private- and public-sector wage
+employment. Departments are Colombia's first-level territorial units, with
+Bogot\'a treated as a department-equivalent Capital District.
 
-The vector \(X_{ist}\) includes a female-worker indicator, age, age squared, education dummies, and a formal-employment indicator. The fixed effect \(\lambda_{s \times t}\) absorbs sector-year conditions, allowing each broad sector to have its own wage level in each year. The model is estimated with GEIH expansion weights, and standard errors are clustered by sector.
+The sector-department-year fixed effects absorb wage differences common to
+workers in each local sector in each year. The coefficients therefore compare
+workers of the same formality status and observed characteristics, including
+occupational position, within these cells. Controlling for occupational position
+is relevant because solo work and employment in larger firms differ substantially
+in the prevalence of own-account and wage employment. These controls describe
+conditional comparisons, rather than identifying the total effect of moving
+from own-account work to a salaried job.
 
-The coefficients \(\beta_g\) are log-point differences relative to solo workers. For interpretation, we transform them into percentage premiums:
-\begin{equation}
-  Premium_g = 100 \times \left(\exp(\hat{\beta}_g)-1\right).    
+We estimate the model with GEIH expansion weights and cluster standard errors
+by sector-department cells. Column (4) of
+Table~\ref{tab:firm-size-local-geography-formality-robustness} reports this
+preferred specification. Columns (1)--(3) provide comparisons with progressively
+more detailed geographic controls. The estimation sample for column (4)
+contains 5,268,375 observations.
+
+Within informal employment, the log-wage gap relative to solo work is
+\(\beta_g\). Within formal employment, it is \(\beta_g+\theta_g\). For any
+estimated log-wage contrast \(\widehat{\Delta}\), we report the percentage gap
+as \(100[\exp(\widehat{\Delta})-1]\). Statistical tests use the variance of the
+full linear contrast, including the covariances between its coefficients.
+
+The model also distinguishes three comparisons. For an origin size \(g\) and a
+larger destination size \(h\), they are:
+\begin{align}
+  \Delta^{F}_{g\to h} &= (\beta_h+\theta_h)-(\beta_g+\theta_g), \nonumber\\
+  \Delta^{I}_{g\to h} &= \beta_h-\beta_g, \label{eq:preferred-contrasts}\\
+  \Delta^{I\to F}_{g} &= \phi+\theta_g. \nonumber
+\end{align}
+The first two compare firm sizes within formal and informal employment,
+respectively. The third compares formal with informal employment at the same
+firm size, with informal workers as the denominator. We set
+\(\beta_{g_0}=\theta_{g_0}=0\). Changing the omitted size category to 101+ or
+11--19 workers leaves these contrasts, fitted wages, and their uncertainty
+unchanged. These are adjusted wage comparisons. Interpreting them as the gains
+from actual worker movements requires additional assumptions about selection
+and the response of employers and wages, discussed in Section~\ref{sec:discussion}.
+
+\subsection{Comparison Specifications}
+
+We retain a common-premium model to show how the overall size-wage association
+changes as controls are added:
+\begin{equation}\label{eq:common-premium}
+  \ln(w_{ist}) = \alpha
+  + \sum_{g\neq g_0} b_g D_{ig}
+  + X_{ist}'\gamma + \phi F_{ist}
+  + \lambda_{s\times t}+\varepsilon_{ist}.
 \end{equation}
+Unlike Equation~(\ref{eq:main}), this model constrains the size coefficients to
+be the same for formal and informal workers and omits occupational-position
+controls. Table~\ref{tab:firm-size-wage-premium-regressions} starts with size
+indicators alone, then adds sector-year fixed effects, worker characteristics,
+and formality. This sequence is a descriptive benchmark, not the preferred
+specification.
 
-\subsection{Dynamic Premiums and Trend Test}
-
-The same framework can be extended to study the evolution of the premium over time by interacting firm-size categories with year indicators:
-\begin{equation}
-  \ln(w_{ist}) =
-  \alpha
-  + \sum_{\tau}\sum_{g \neq g_0}
-    \beta_{g\tau}\mathbf{1}\{Size_{ist}=g\}\mathbf{1}\{Year_{t}=\tau\}
-  + X_{ist}'\gamma
-  + \lambda_{s \times t}
-  + \varepsilon_{ist}.    
-\end{equation}
-
-This dynamic specification produces a sequence of firm-size premiums by year and can be used to assess whether the premium has widened, narrowed, or remained stable. We also estimate a more parsimonious trend specification:
-\begin{equation}
-  \ln(w_{ist}) =
-  \alpha
-  + \sum_{g \neq g_0} \left(\beta_g
-  +  \delta_g
-    Trend_t\right)\mathbf{1}\{Size_{ist}=g\}
-  + X_{ist}'\gamma
-  + \lambda_{s \times t}
-  + \varepsilon_{ist},
-\end{equation}
-where \(Trend_t\) is a linear year trend normalized to zero in 2008. The parameter \(\delta_g\) measures whether the wage premium for firm-size group \(g\) changed over time relative to solo workers. Positive values of \(\delta_g\) imply a steeper association between firm size and wages, while negative values imply a flatter one.
-
-
-\subsection{Firm-Size Nonlinearities by Formality Status}
-
-The descriptive evidence suggests that the relationship between firm size and
-hourly income may differ between formal and informal workers. We therefore
-estimate a specification that interacts all firm-size categories with formal
-employment:
-
+A second comparison retains size-by-formality interactions but uses the simpler
+sector-year controls:
 \begin{equation}\label{eq:formality-interaction}
-  \ln(w_{ist}) =
-  \alpha
-  + \phi Formal_{ist}
-  + \sum_{g \neq g_0} \left(\beta_g 
-  + \theta_g
-     Formal_{ist}\right)\mathbf{1}\{Size_{ist}=g\}
-  + X_{ist}'\gamma
-  + \lambda_{s \times t}
-  + \varepsilon_{ist}.    
+  \ln(w_{ist}) = \alpha + \widetilde{\phi}F_{ist}
+  + \sum_{g\neq g_0}(\widetilde{\beta}_g+
+       \widetilde{\theta}_g F_{ist})D_{ig}
+  + X_{ist}'\gamma+\lambda_{s\times t}+\varepsilon_{ist}.
 \end{equation}
+The tildes distinguish these coefficients from the preferred model's estimates.
+The coefficient and formal-informal gap tables report this comparison model.
+Both comparison models use GEIH weights and
+sector-clustered standard errors. The preferred model additionally changes the
+clustering level to sector-department, so differences in statistical significance
+across the tables cannot be attributed only to the additional controls.
 
-The coefficients \(\beta_g\) measure the firm-size premium among informal workers, relative to informal solo workers. The corresponding premium among formal workers is \(\beta_g+\theta_g\), relative to formal solo workers. The coefficient \(\phi\) measures the formal-informal wage gap among solo workers, while \(\phi+\theta_g\) measures the formal-informal wage gap within firm-size group \(g\).
+\subsection{Dynamic Comparisons and Trend Test}
+
+The dynamic exercises retain the sector-year benchmark controls. They describe
+time variation in those conditional gaps and are not year-specific estimates
+of Equation~(\ref{eq:main}). We first interact size categories with year:
+\begin{equation}\label{eq:dynamic-benchmark}
+  \ln(w_{ist}) = \alpha
+  + \sum_{\tau}\sum_{g\neq g_0} b_{g\tau}D_{ig}\mathbf{1}\{t=\tau\}
+  + X_{ist}'\gamma+\phi F_{ist}
+  + \lambda_{s\times t}+\varepsilon_{ist}.
+\end{equation}
+We also estimate a linear trend in each common size premium:
+\begin{equation}\label{eq:trend-benchmark}
+  \ln(w_{ist}) = \alpha
+  + \sum_{g\neq g_0}(b_g+\delta_g Trend_t)D_{ig}
+  + X_{ist}'\gamma+\phi F_{ist}
+  + \lambda_{s\times t}+\varepsilon_{ist},
+\end{equation}
+where \(Trend_t=t-2008\). Positive values of \(\delta_g\) indicate a widening
+gap relative to solo workers, and negative values indicate narrowing. We use
+two-sided tests of \(H_0:\delta_g=0\).
+
+For the formality-specific time profiles, we estimate the simpler interacted
+model in Equation~(\ref{eq:formality-interaction}) separately by year, replacing
+sector-year effects with sector effects. These exercises include sex, age, age
+squared, and education, but not occupational-position or department controls.
+They allow the size profiles to vary over time without imposing a linear trend.
 
 \subsection{Approximate Firm-Size Elasticities}
 
-The main specifications treat firm size as a set of categories because this is
-how firm size is reported in GEIH and because the largest category is top-coded.
-This categorical approach is the most transparent way to estimate the Colombian
-firm-size wage premium. However, much of the employer-size wage effect
-literature reports a continuous elasticity of wages with respect to employer
-size. To compare the Colombian evidence with those benchmarks, we also estimate
-an approximate log-log specification:
+The preferred model treats size as categorical, as reported by GEIH. To compare
+with studies reporting continuous employer-size elasticities, we also estimate
+an approximate log-log benchmark:
 \begin{equation}\label{eq:elasticity}
-  \ln(w_{ist}) =
-  \alpha
-  + \eta \ln(\widetilde{Size}_{ist})
-  + X_{ist}'\gamma
-  + \lambda_{s \times t}
-  + \varepsilon_{ist}.
+  \ln(w_{ist}) = \alpha+\eta\ln(\widetilde{Size}_{ist})
+  + X_{ist}'\gamma+\phi F_{ist}
+  + \lambda_{s\times t}+\varepsilon_{ist}.
 \end{equation}
+Assigned sizes are 1, 2.5, 4.5, 8, 15, 25, 40.5, 75.5, and 150 for the nine
+harmonized categories from solo work through 101+. The elasticity depends on
+these assignments, particularly for the open-ended 101+ category. We report a
+raw estimate, the controlled full-sample estimate, and separate regressions for
+formal and informal workers. The within-formality regressions omit the constant
+formality indicator. These estimates use sector-year effects and sector-clustered
+standard errors, without occupational-position or department controls, to retain
+the benchmark comparison with \citet{DiegmannMullerSchoefer2026}.
 
-The variable \(\widetilde{Size}_{ist}\) assigns representative values to the
-harmonized firm-size bins: 1 for solo workers, 2.5 for firms with 2--3 workers,
-4.5 for 4--5 workers, 8 for 6--10 workers, 15 for 11--19 workers, 25 for
-20--30 workers, 40.5 for 31--50 workers, 75.5 for 51--100 workers, and 150 for
-the top-coded 101+ category. The coefficient \(\eta\) is therefore an
-approximate elasticity: it measures the log-wage slope associated with assigned
-firm size. Because the underlying variable is grouped and top-coded, these
-elasticities are used only as benchmarking statistics. The categorical
-specifications remain the main empirical estimates.
-
-We also estimate a quadratic approximation to the size-wage profile:
+We also fit a quadratic in assigned log size:
 \begin{equation}\label{eq:polynomial-size-profile}
-  \ln(w_{ist}) =
-  \alpha
-  + \rho_1 \ln(\widetilde{Size}_{ist})
-  + \rho_2 [\ln(\widetilde{Size}_{ist})]^2
-  + X_{ist}'\gamma
-  + \lambda_{s \times t}
-  + \varepsilon_{ist}.
+  \ln(w_{ist}) = \alpha+\rho_1\ln(\widetilde{Size}_{ist})
+  +\rho_2[\ln(\widetilde{Size}_{ist})]^2
+  +X_{ist}'\gamma+\phi F_{ist}
+  +\lambda_{s\times t}+\varepsilon_{ist}.
 \end{equation}
-This specification is motivated by the econometric literature on ordinal
-qualitative regressors, which asks how much structure can be imposed on ordered
-categories relative to a conventional dummy-variable specification
-\citep{Terza1987}. In our setting, the quadratic approximation asks whether the
-sequence of categorical estimates can be summarized by a smooth size-wage
-profile. It is not a more precise measure of firm size: it relies on the same
-assigned values for grouped and top-coded firm-size categories. The categorical
-specifications therefore remain the main estimates, and the polynomial
-specification is used as a robustness and shape check.
+This shape check is motivated by the literature on ordinal qualitative
+regressors \citep{Terza1987} and uses the same comparison controls as the
+elasticity exercise. It asks whether a smooth function summarizes the binned
+relationship. Neither the assigned sizes nor the polynomial replace the
+preferred categorical specification.
