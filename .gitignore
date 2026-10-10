@@ -33,3 +33,9 @@ processed/
 *.Rproj
 .DS_Store
 Thumbs.db
+
+# Counterfactual microdata cache, detailed support cells, and local run metadata
+replication/output/private_cache/
+replication/output/destination_support_cells_2025.csv
+replication/output/occupation_size_formality_counts.csv
+replication/output/run_metadata.txt

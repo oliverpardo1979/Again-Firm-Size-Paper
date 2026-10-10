@@ -1,7 +1,7 @@
 \section{Additional Tables}
 \label{app:additional-tables}
 
-This appendix reports the minimum-wage distribution tables, alternative-reference tables, and comparison specifications referenced in the main text. Table~\ref{tab:minimum-wage-bunching-2025} complements Figure~\ref{fig:minwage-distribution-formality-size} by quantifying the share of workers below, near, and above the statutory hourly minimum wage in 2025. Table~\ref{tab:minimum-wage-monthly-bunching-2025} reports the analogous exercise using implied monthly labor income relative to the monthly minimum wage. The alternative-reference tables use workers in firms with 101 or more workers or with 11--19 workers as the reference category. These changes alter the normalization but do not change the underlying empirical specifications. In each table, the sign of a coefficient indicates whether the listed category is above or below the omitted category under the same controls.
+This appendix reports the minimum-wage distribution tables, alternative-reference tables, comparison specifications, and income-scenario checks referenced in the main text. Table~\ref{tab:minimum-wage-bunching-2025} complements Figure~\ref{fig:minwage-distribution-formality-size} by quantifying the share of workers below, near, and above the statutory hourly minimum wage in 2025. Table~\ref{tab:minimum-wage-monthly-bunching-2025} reports the analogous exercise using implied monthly labor income relative to the monthly minimum wage. The alternative-reference tables use workers in firms with 101 or more workers or with 11--19 workers as the reference category. These changes alter the normalization but do not change the underlying empirical specifications. In each table, the sign of a coefficient indicates whether the listed category is above or below the omitted category under the same controls.
 
 \input{Paper/sections/minimum_wage_bunching_2025_table}
 
@@ -30,3 +30,40 @@ Table~\ref{tab:firm-size-local-geography-robustness} adds geographic and occupat
 \input{Paper/sections/regression_local_geography_robustness_101_reference_table}
 
 \input{Paper/sections/regression_local_geography_robustness_11_19_reference_table}
+
+\FloatBarrier
+Table~\ref{tab:income-counterfactual-sensitivity} extends the income scenarios
+in Section~\ref{subsec:income-counterfactuals}. Preserving observed log-wage
+residuals gives aggregate changes close to those based on fitted income.
+For example, the combined formal-101+ scenario yields 25.0 percent rather than
+25.4 percent. The last two rows select the highest estimated size component
+within each formality group. The selected destinations are 101+ for formal
+workers and 51--100 for informal workers. Assigning informal workers to
+51--100 raises total predicted income by 10.0 percent. Assigning both groups
+to their respective selected destinations raises it by 13.7 percent without
+changing formality. This exercise includes movement from informal 101+ to
+51--100 and therefore is not uniformly a move toward larger firms. The
+destinations maximize the estimated group profiles, not each worker's
+individual comparative advantage.
+
+\input{Paper/sections/income_counterfactual_sensitivity_table}
+
+Table~\ref{tab:income-counterfactual-support} reports destination-cell counts
+and restricted versions of the same scenarios. For each intended move, we
+check whether workers with the same sector, department, and occupational
+position are observed in the destination size-formality category. Panel A
+shows that absent destinations are especially common for assignments to
+large informal categories. Panel B leaves workers at their origin whenever
+the destination has fewer than the stated number of observations. Requiring
+30 observations in the pooled sample reduces the total predicted income
+change for assignment to informal 101+ from 7.7 to 3.7 percent. Requiring
+30 observations in 2025 permits no such moves. There are 1,843 informal 101+
+observations in 2025, but no destination sector-department-occupation cell
+contains more than 25. The restricted scenarios thus change who is assigned
+to a destination, not the estimated coefficients. Their smaller changes do
+not establish smaller returns for an otherwise identical reallocation.
+The screens are diagnostics of extrapolation, not tests that a job transition
+is feasible or that workers are comparable on all characteristics.
+
+\input{Paper/sections/income_counterfactual_support_table}
+\FloatBarrier

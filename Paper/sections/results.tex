@@ -54,8 +54,9 @@ points, or approximately 3.7 percent, less than informal workers in that
 reference category. Both contrasts are statistically significant at the
 5 percent level. The same regression therefore implies different answers
 depending on both formality and the origin and destination sizes. These are
-alternative comparisons from one model, not independent estimates of three
-different models.
+alternative normalizations of each specification, not separate robustness
+checks. In particular, column (4) in all three tables comes from the same
+preferred regression.
 
 \input{Paper/sections/regression_local_geography_formality_robustness_11_19_reference_table}
 
@@ -189,7 +190,8 @@ over time. Widening means that wages in a given size category rose relative to
 solo-worker wages. Narrowing means that the ratio fell, without identifying
 whether this came from faster growth at the bottom or slower growth at the top.
 These exercises retain the sector-year comparison controls described in
-Section~4. They do not estimate the preferred model separately by year.
+Section~\ref{sec:methodology}. They do not estimate the preferred model
+separately by year.
 
 Figure~\ref{fig:firm-size-wage-premium-over-time} reports
 Equation~(\ref{eq:dynamic-benchmark}). The common size premiums are positive
@@ -290,8 +292,8 @@ in Equation~(\ref{eq:polynomial-size-profile}). Its raw 101+/solo premium is
 175.8 percent. With the sector-year comparison controls, the common-premium
 estimate falls to 41.0 percent, close to the 43.2 percent categorical
 benchmark in Table~\ref{tab:firm-size-wage-premium-regressions}.
-The quadratic term is negative and significant, implying a concave fitted
-relationship in assigned log size.
+In the controlled full-sample regression, the quadratic term is negative and
+significant, implying a concave fitted relationship in assigned log size.
 
 \input{Paper/sections/regression_polynomial_size_profile_table}
 
@@ -308,3 +310,75 @@ category-specific differences and remains a supplementary shape check.
   \caption{Polynomial approximation under sector-year comparison controls}
   \label{fig:polynomial-size-profile}
 \end{figure}
+
+\FloatBarrier
+\subsection{Illustrative Income Counterfactuals}
+\label{subsec:income-counterfactuals}
+
+The preferred estimates describe wage differences between groups. We now ask
+how much total predicted labor income would change if workers received the
+pay associated with another firm-size or formality category. We apply the
+pooled coefficients from column (4) of
+Table~\ref{tab:firm-size-local-geography-formality-robustness} to the 341,282
+observations in the 2025 estimation sample. Each scenario changes only firm
+size, formality, or both. Worker characteristics, occupational position,
+sector, department, weekly hours, and survey weights remain fixed. Workers
+already in the destination category retain their baseline predictions.
+
+Let \(\widehat{\ell}_i\) be fitted log hourly income from
+Equation~(\ref{eq:main}), including the fixed effects. We construct baseline
+hourly income as \(\widehat w_i=S\exp(\widehat{\ell}_i)\), where \(S\) is the
+survey-weighted mean of exponentiated residuals in 2025. This retransformation
+assumes a common residual factor across workers and destinations. If scenario
+\(c\) changes worker \(i\)'s size-formality component by
+\(\widehat\Delta_i^c\), counterfactual hourly income is
+\(\widehat w_i^c=\widehat w_i\exp(\widehat\Delta_i^c)\).
+The contrasts are those in Equation~(\ref{eq:preferred-contrasts}). With
+expansion weight \(a_i\) and weekly hours \(h_i\), the reported change is
+\begin{equation}\label{eq:income-counterfactual}
+  G_c=100\left[
+  \frac{\sum_{i\in2025}a_i h_i\widehat w_i
+        \exp(\widehat\Delta_i^c)}
+       {\sum_{i\in2025}a_i h_i\widehat w_i}-1\right].
+\end{equation}
+Thus, the outcome is total predicted weekly labor income, not the unweighted
+average of individual percentage wage changes. The common factor \(S\)
+cancels from this ratio. The target-group calculation restricts both sums to
+workers initially in the relevant formality group, including those already
+at the destination.
+
+Table~\ref{tab:income-counterfactuals-2025} reports four scenarios. Assigning
+informal workers the formal pay prediction at their current firm size raises
+their group's predicted income by 41.9 percent and total predicted income by
+13.5 percent. The aggregate change is smaller because informal workers account
+for 32.2 percent of baseline predicted labor income, despite representing
+55.1 percent of workers. Assigning all formal workers to formal 101+ employment
+raises formal workers' predicted income by 5.4 percent and total income by
+3.6 percent. This is smaller than the 16.5 percent formal 101+/solo premium
+because 54.9 percent of formal workers are already in 101+ firms and most
+remaining formal workers start in non-solo categories.
+
+\input{Paper/sections/income_counterfactuals_2025_table}
+
+Assigning informal workers to informal 101+ employment raises their group's
+predicted income by 23.9 percent and total income by 7.7 percent. This scenario
+does not raise every informal worker's predicted income. The estimated informal
+profile is higher in several intermediate categories than in 101+, so workers
+starting in those categories receive lower predictions. Finally, assigning
+everyone to formal 101+ employment raises total predicted income by
+25.4 percent. This combined scenario is calculated directly, not by adding
+the preceding percentages, because changing formality also changes the
+estimated size premium.
+
+Appendix Table~\ref{tab:income-counterfactual-sensitivity} reports alternative
+destinations and a calculation that preserves each worker's observed log-wage
+residual. The latter gives similar aggregate changes. Appendix
+Table~\ref{tab:income-counterfactual-support} examines how strongly the
+scenarios extrapolate beyond observed destination groups. For example,
+39.1 percent of intended movers to informal 101+ employment have no observed
+counterpart with the same sector, department, and occupational position in
+that destination in 2025. These scenarios quantify changes in predicted labor
+income under a fixed estimated wage structure. They are not causal estimates
+of reallocation or formalization, and they do not incorporate adjustments in
+wages, employment, or production. Section~\ref{sec:discussion} discusses their
+interpretation.
