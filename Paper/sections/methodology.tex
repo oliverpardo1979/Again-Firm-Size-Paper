@@ -53,6 +53,12 @@ incomes. Translating fitted log incomes into levels for the income scenarios
 requires the additional retransformation assumption described in
 Section~\ref{subsec:income-counterfactuals}. Statistical tests use the variance of the
 full linear contrast, including the covariances between its coefficients.
+For all regression specifications, two-sided tests and 95 percent confidence
+intervals use a Student t distribution with \(G-1\) degrees of freedom, where
+\(G\) is the number of clusters in the estimation sample. This gives 16 degrees
+of freedom in the sector-clustered comparison models and 558 in the preferred
+sector-department-clustered model. The same rule applies to coefficients and their linear
+combinations, regardless of the reference category.
 
 The model also distinguishes three comparisons. For an origin size \(g\) and a
 destination size \(h\), which may be larger or smaller, they are:
@@ -107,6 +113,11 @@ Both comparison models use GEIH weights and
 sector-clustered standard errors. The preferred model additionally changes the
 clustering level to sector-department, so differences in statistical significance
 across the tables cannot be attributed only to the additional controls.
+In particular, column (1) of
+Table~\ref{tab:firm-size-local-geography-formality-robustness} and
+Table~\ref{tab:formality-interaction-coefficients} report the same point
+estimates. Their standard errors differ because the former clusters by
+sector-department and the latter by sector.
 
 \subsection{Dynamic Comparisons and Trend Test}
 

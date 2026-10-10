@@ -1,4 +1,71 @@
-# Illustrative Income Counterfactuals
+# Regression Replication and Income Counterfactuals
+
+## Synchronized Regression Outputs
+
+The manuscript's regression tables and figures are generated from one estimation
+run, using the same harmonized input file. The three reference categories are
+linear contrasts of each fitted model, not independent data-processing runs.
+Run these steps in order:
+
+```sh
+Rscript --vanilla replication/reconcile_regressions.R /path/to/Paper-GEIH_base_modelo_personas_2008_2025.dta
+python replication/validate_regression_outputs.py
+python replication/update_regression_tables.py
+Rscript --vanilla replication/plot_reconciled_regressions.R
+Rscript --vanilla replication/check_descriptive_reference.R
+python replication/validate_regression_tables.py
+```
+
+The R scripts require `haven`, `dplyr`, `fixest`, `ggplot2`, and `scales`.
+The independent Python validator requires `scipy`. The table updater uses only
+Python's standard library and changes numerical rows without replacing captions
+or explanatory notes. English and Spanish figures are generated together.
+
+Aggregate coefficients, contrasts, sample fingerprints, input-file fingerprint,
+package versions, and validation checks are saved in `regression_output/`.
+All tests are two-sided and use the model's cluster-based Student t degrees of
+freedom, including linear combinations and transformed confidence intervals.
+The script checks that changing only the clustering convention leaves the point
+estimates unchanged. It also re-estimates selected models with a different base
+to verify the algebraic contrasts and their standard errors independently.
+
+`build/regression_sample.rds` is a local microdata cache and is excluded from Git.
+It must not be published. Delete this cache after changing sample-construction
+code. Its size-and-modification-time signature automatically invalidates it when
+the input data file changes.
+
+The optional second argument to `reconcile_regressions.R` is a historical input
+file for diagnosing old outputs. It is not used to generate the current tables.
+This optional diagnostic also requires the archived interaction-coefficient CSV
+in the sibling CJC-Monitor checkout.
+
+### Numerical Reconciliation on 2026-10-10
+
+The old sector-year interaction table reproduced a historical data file with
+5,154,213 estimation observations. The current file gives 5,268,514 observations
+for the same specification. Re-estimating the old input reproduced all eight
+archived informal coefficients to numerical precision, identifying mixed data
+versions as the source of the coefficient discrepancy. The historical input's
+SHA256 is `908ad64d932c204f697932cc0ce86bedcb88c0abd829ad33aa6eddfb85067112`.
+The current input's SHA256 is
+`4d5132a74396cf91fc3ee180905d8dab5d17c082ac83099383ecf4a52d2720ef`.
+See `regression_output/historical_data_check.csv` for the direct comparison.
+
+There was a separate inference inconsistency. Some hand-built contrasts used
+normal critical values, whereas coefficient tables used cluster-based t tests.
+All regression contrasts now use the latter convention, including 16 degrees
+of freedom for the 17-sector comparison models. The preferred specification has
+559 sector-department clusters and 558 degrees of freedom. Earlier geographic
+columns without singleton removal have 561 clusters and 560 degrees of freedom.
+
+The 19 regression tables were regenerated together. Six associated figures were
+regenerated in both languages, and the results text was synchronized. The
+preferred coefficients and standard errors reproduce their previous values
+within `1e-7`, so the income scenarios and the abstract's main magnitudes do not
+change. The earlier editorial audit is a historical record. Its numerical
+pending item is resolved by this reconciliation.
+
+## Illustrative Income Counterfactuals
 
 The exercise applies the preferred pooled size-by-formality model to the 2025 estimation sample. It includes sex, age, age squared, education, occupational-position controls, and sector-department-year fixed effects. Estimation uses GEIH expansion weights and sector-department clustering.
 

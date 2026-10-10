@@ -1,0 +1,44 @@
+{
+  "status": "resolved",
+  "previous_audit_commit": "e556b37",
+  "cause": {
+    "coefficient_discrepancy": "Outputs generated from different versions of the harmonized input were mixed in the manuscript.",
+    "historical_input_sha256": "908ad64d932c204f697932cc0ce86bedcb88c0abd829ad33aa6eddfb85067112",
+    "current_input_sha256": "4d5132a74396cf91fc3ee180905d8dab5d17c082ac83099383ecf4a52d2720ef",
+    "historical_sector_year_estimation_n": 5154213,
+    "current_sector_year_estimation_n": 5268514,
+    "historical_replication": "All eight archived informal coefficients were reproduced from the historical input within 1e-7.",
+    "inference_discrepancy": "Some manually assembled linear contrasts used normal critical values while standard coefficient tables used cluster-based Student t inference."
+  },
+  "correction": {
+    "current_models_reestimated": 40,
+    "regression_tables_regenerated": 19,
+    "figures_regenerated_per_language": 6,
+    "languages": ["English", "Spanish"],
+    "contrast_tests": "Two-sided Student t with model-specific cluster degrees of freedom.",
+    "normalizations": "Solo, 101+, and 11-19 reference categories are computed from each model's coefficient vector and full covariance matrix.",
+    "text": "Updated benchmark coefficients, formality premiums, annual significance statements, confidence intervals, and inference explanations. Clarified that the 2025 informal endpoint profile reaches its highest point estimate at 11-19 workers, not 101+."
+  },
+  "selected_changes": [
+    {"quantity": "Raw 101+/solo log coefficient", "before": 1.019, "after": 1.017},
+    {"quantity": "Sector-year-adjusted 101+/solo log coefficient", "before": 0.819, "after": 0.817},
+    {"quantity": "Simpler-model formal 101+/solo premium, percent", "before": 16.5, "after": 16.6},
+    {"quantity": "Simpler-model formal 101+/solo two-sided p-value", "before": 0.082, "after": 0.10009361883258},
+    {"quantity": "2025 formal 101+/solo 95% confidence interval, percent", "before": [-8.2, 33.0], "after": [-9.6, 35.1]}
+  ],
+  "unchanged": [
+    "Preferred coefficients and standard errors, including all those used by the income scenarios.",
+    "Preferred 101+/solo premiums of 37.2 percent among informal workers and 16.5 percent among formal workers.",
+    "Income-counterfactual magnitudes and the abstract.",
+    "Endpoint descriptive table, independently checked against the current sample."
+  ],
+  "checks": {
+    "contrasts_validated": 576,
+    "coefficient_se_significance_cells_read_back_from_latex": 477,
+    "independent_rebased_regression_fits": 4,
+    "same_coefficients_under_different_clustering": "passed",
+    "preferred_replication_tolerance": 1e-7,
+    "reproducible_evidence_directory": "replication/regression_output"
+  },
+  "scope": "Current paper, appendices, and anonymized manuscript. The older presentation was not rebuilt."
+}
