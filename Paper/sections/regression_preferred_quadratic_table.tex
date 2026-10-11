@@ -1,0 +1,21 @@
+\begin{table}[htbp]
+  \centering
+  \caption{Quadratic size profiles with preferred controls}
+  \label{tab:polynomial-size-profile}
+  \small
+  \begin{tabular}{lcc}
+    \toprule
+    Term & Formal workers & Informal workers \\[0.25em]
+    \midrule
+    Log assigned size ($a_{1f}$) & \shortstack{-0.0095\\{\scriptsize (0.0148)}} & \shortstack{0.1947***\\{\scriptsize (0.0133)}} \\[0.25em]
+    Squared log assigned size ($a_{2f}$) & \shortstack{0.0088***\\{\scriptsize (0.0021)}} & \shortstack{-0.0250***\\{\scriptsize (0.0025)}} \\[0.25em]
+    \midrule
+    Implied 101+/solo premium (\%) & 18.8 & 41.8 \\[0.25em]
+    \bottomrule
+  \end{tabular}
+  \vspace{0.3em}
+  \begin{minipage}{0.95\textwidth}
+  \footnotesize
+  Notes: The columns report linear combinations from one interacted regression, Equation~(\ref{eq:polynomial-size-profile}), on the preferred sample of 5,268,375 observations. It includes sex, age, age squared, education, occupational position, and sector-department-year fixed effects, with GEIH weights. Assigned sizes are 1, 2.5, 4.5, 8, 15, 25, 40.5, 75.5, and 150. The reference is solo work within the same formality group. Parentheses contain sector-department-clustered standard errors. The last row is $100[\exp(a_{1f}\ln150+a_{2f}(\ln150)^2)-1]$. Two-sided coefficient tests use 558 degrees of freedom. * $p<0.10$, ** $p<0.05$, *** $p<0.01$.
+  \end{minipage}
+\end{table}

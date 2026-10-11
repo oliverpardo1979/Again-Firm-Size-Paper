@@ -140,7 +140,7 @@ sensitivity = table(
     "Income scenarios with alternative baselines and destinations",
     "tab:income-counterfactual-sensitivity", r">{\raggedright\arraybackslash}p{0.52\textwidth}cc", "\n".join(body),
     r"All entries are percentage changes in total weekly labor income for the entire 2025 estimation sample. "
-    r"The predicted baseline uses exponentiated fitted log income with a common smearing factor. The observed baseline "
+    r"The predicted baseline uses exponentiated fitted log income multiplied by the common retransformation factor defined in Section~\ref{subsec:income-counterfactuals}. The observed baseline "
     r"multiplies observed income by the same estimated destination-to-origin wage ratio, preserving each worker's log residual. "
     r"Both calculations use fixed hours and GEIH weights. In the last two rows, the destination maximizes the estimated size component "
     r"within each formality group. These destinations are 101+ for formal workers and 51--100 for informal workers. "
@@ -179,7 +179,7 @@ support = table(
     r"stated unweighted observation count. Otherwise the worker stays at origin. The all-worker income denominator is unchanged. "
     r"\textit{None} means that no intended move qualifies, not that the estimated wage contrast is zero. "
     r"For the joint selected-destination scenario, the 2025 $n\geq30$ column contains only formal moves. "
-    r"These thresholds are illustrative diagnostics, not identification criteria. They do not establish overlap in every worker characteristic.", "p")
+    r"These thresholds check whether the destination category is represented in the sample. They do not establish that a transition is feasible or that origin and destination workers have the same characteristics.", "p")
 (SECTIONS / "income_counterfactual_support_table.tex").write_text(support, encoding="utf-8")
 print(f"Validated {len(validation)} aggregate changes and generated three tables.")
 print(f"Maximum independent error: {max(abs(r['error_pp']) for r in validation):.3g} pp")

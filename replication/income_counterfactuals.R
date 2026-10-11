@@ -5,6 +5,7 @@ if (.Platform$OS.type == "windows") {
 script_arg <- grep("^--file=", commandArgs(), value = TRUE)
 stopifnot(length(script_arg) == 1)
 paper <- dirname(dirname(normalizePath(sub("^--file=", "", script_arg), winslash = "/")))
+source(file.path(paper, "replication/harmonize_occupation.R"))
 root <- file.path(dirname(paper), "CJC-Monitor")
 data_path <- normalizePath(if (length(args)) args[1] else
   file.path(root, "Datos/Processed/Paper-GEIH_base_modelo_personas_2008_2025.dta"),
@@ -25,7 +26,7 @@ sizes <- c("Solo", "2-3", "4-5", "6-10", "11-19", "20-30", "31-50", "51-100", "1
 write_table <- function(x, name) write.csv(x, file.path(out, name), row.names = FALSE, fileEncoding = "UTF-8")
 message("Input: ", data_path)
 data_info <- file.info(data_path)
-signature <- list(size = data_info$size, mtime = as.numeric(data_info$mtime),
+signature <- list(size = data_info$size, mtime = as.numeric(data_info$mtime), occupation = occupation_harmonization_version,
                   reference = unname(tools::md5sum(file.path(paper, "Paper/tables/regression_local_geography_formality_robustness.csv"))))
 cache_path <- file.path(cache, "preferred_fit_and_2025.rds")
 saved <- if (file.exists(cache_path)) readRDS(cache_path) else NULL
@@ -34,7 +35,7 @@ if (is.null(saved) || !identical(saved$signature, signature)) {
   cols <- c("anio", "depto", "edad", "sector", "tamano_empresa", "educacion",
             "posicion_ocupacional_label", "mujer", "formal", "fex", "horas",
             "ingreso_hora_real", "log_ingreso_hora_real", "pensionado_ocupado")
-  d <- read_dta(data_path, col_select = all_of(cols))
+  d <- harmonize_occupation(read_dta(data_path, col_select = all_of(cols)))
   raw_n <- nrow(d)
   message("Read ", raw_n, " rows")
   d <- d %>% mutate(

@@ -1,0 +1,413 @@
+{
+  "base_commit": "9633d3c31684c465a972eccc63cf4e7f385a3959",
+  "title": "Auditoría editorial del manuscrito",
+  "date": "10 de octubre de 2026",
+  "criteria": {
+    "S": "Sentido: la afirmacion dice algo concreto y es correcta.",
+    "T": "Terminología: cada término necesario tiene un significado identificable.",
+    "R": "Coherencia retrospectiva: el lector dispone de las definiciones y antecedentes necesarios.",
+    "P": "Coherencia prospectiva: la frase coincide con los resultados y explicaciones que siguen."
+  },
+  "corrections": [
+    {
+      "section": "Abstract",
+      "file": "main.tex",
+      "before": "The informal premium rises sharply out of solo work and the smallest units",
+      "after": "The informal premium rises sharply across the smallest size categories",
+      "criteria": "S,T",
+      "reason": "Se reemplazo una metáfora espacial por una comparación entre categorías. Se sincronizo la versión anónima y se conservo literalmente la última frase del abstract."
+    },
+    {
+      "section": "Introducción",
+      "file": "Paper/sections/introduction.tex",
+      "before": "help identify where questions about firm growth, worker allocation, and wage inequality are most relevant",
+      "after": "motivates asking whether firm growth or worker reallocation could improve earnings",
+      "criteria": "S,T,P",
+      "reason": "La motivacion anterior remitía a preguntas sin formular una relación concreta. La nueva versión plantea la pregunta sin afirmar que la regresion identifica un efecto causal."
+    },
+    {
+      "section": "Introducción",
+      "file": "Paper/sections/introduction.tex",
+      "before": "how much of that gap is explained by observable worker characteristics",
+      "after": "how much of that gap is associated with observable worker characteristics",
+      "criteria": "S,P",
+      "reason": "La caída de un coeficiente al agregar controles no identifica una descomposición causal. La redacción ahora coincide con el alcance de las estimaciones."
+    },
+    {
+      "section": "Introducción",
+      "file": "Paper/sections/introduction.tex",
+      "before": "employment remains concentrated outside the largest-firm categories",
+      "after": "Documenting the wage gap within formality groups and after worker controls helps distinguish these observable differences from the remaining association with firm size.",
+      "criteria": "S,R,P",
+      "reason": "Se sustituyo una ubicacion demasiado amplia por el vinculo entre el diagnostico colombiano del parrafo y la pregunta econometrica. La referencia a Chen se conserva donde se discute la participacion de empresas grandes."
+    },
+    {
+      "section": "Introducción",
+      "file": "Paper/sections/introduction.tex",
+      "before": "We study these questions using harmonized microdata",
+      "after": "Throughout the paper, ``wages'' refers to hourly labor income, including earnings from self-employment.",
+      "criteria": "T,R,P",
+      "reason": "Se añadió la convencion terminológica al presentar los datos. El resultado no mide exclusivamente salarios de empleados dependientes."
+    },
+    {
+      "section": "Introducción y datos",
+      "file": "Paper/sections/introduction.tex",
+      "before": "Our preferred specification interacts firm size with formality",
+      "after": "``Solo workers'' are workers who report working alone, not necessarily own-account workers.",
+      "criteria": "T,R,P",
+      "reason": "Se define el grupo base antes de presentar resultados. Evita confundir tamaño de la unidad con posición ocupacional, distincion central en las tablas posteriores."
+    },
+    {
+      "section": "Introducción",
+      "file": "Paper/sections/introduction.tex",
+      "before": "including unobserved sorting and employer wage-setting differences",
+      "after": "Larger firms may hire workers with higher unmeasured skills, or employers may pay differently even for similar workers.",
+      "criteria": "T,R",
+      "reason": "Los dos conceptos se explican en palabras, en vez de introducir etiquetas sin definir. Se mantienen las referencias y la distincion entre asociacion y causalidad."
+    },
+    {
+      "section": "Introducción",
+      "file": "Paper/sections/introduction.tex",
+      "before": "using the simpler common-premium specification",
+      "after": "a complementary dynamic exercise constrains the size premium to be the same for formal and informal workers",
+      "criteria": "T,R,P",
+      "reason": "Se define la restriccion del modelo antes de usar su nombre. El resultado dinámico no se presenta como una estimación anual del nuevo modelo preferido."
+    },
+    {
+      "section": "Datos",
+      "file": "Paper/sections/data.tex",
+      "before": "raising comparability and data-quality concerns",
+      "after": "DANE introduced telephone interviews in urban areas and reduced the questionnaire in March and April",
+      "criteria": "S,T,P",
+      "reason": "Se sustituyo una justificación genérica por cambios documentados en una fuente primaria de DANE, incorporada a la bibliografía. Se aclara que no se hizo una prueba incluyendo 2020."
+    },
+    {
+      "section": "Datos",
+      "file": "Paper/sections/data.tex",
+      "before": "worker-year observations",
+      "after": "The data are repeated cross-sections, not a panel following the same workers.",
+      "criteria": "S,T,P",
+      "reason": "Worker-year podía sugerir un panel. Se aclara la unidad observacional y se prepara al lector para la imposibilidad de estimar efectos fijos individuales."
+    },
+    {
+      "section": "Datos",
+      "file": "Paper/sections/data.tex",
+      "before": "uses 5,268,375 observations",
+      "after": "after excluding 139 observations in sector-department-year cells containing only one observation",
+      "criteria": "S,R,P",
+      "reason": "La comprobacion de los datos confirmo 139 celdas unipersonales y ausencia de valores faltantes en departamento y posición dentro de la muestra de comparación. Ahora se explica la diferencia entre muestras."
+    },
+    {
+      "section": "Datos",
+      "file": "Paper/sections/data.tex",
+      "before": "Monthly labor income is converted to annual labor income",
+      "after": "These are conversion factors, not observations of each worker's annual earnings or hours.",
+      "criteria": "S,T",
+      "reason": "Se distingue una conversión de unidades de ingresos y horas anuales observados. Tambien se explican los indices de la ecuación y la sigla CPI."
+    },
+    {
+      "section": "Datos",
+      "file": "Paper/sections/data.tex",
+      "before": "Education is grouped into comparable categories",
+      "after": "They also retain a separate ``does not know/not reported'' category, containing 437 observations in the comparison sample.",
+      "criteria": "S,P",
+      "reason": "Hallazgo verificado en los datos y el código: las regresiones contienen seis categorías sustantivas y una residual. Se explica por que las comparaciones descriptivas muestran cuatro grupos, mientras las regresiones distinguen más categorías."
+    },
+    {
+      "section": "Datos",
+      "file": "Paper/sections/data.tex",
+      "before": "The preferred regressions interact sector, department, and year fixed effects",
+      "after": "The preferred regressions include one fixed effect for each sector-department-year combination",
+      "criteria": "T,R,P",
+      "reason": "Se evita confundir efectos aditivos con efectos para cada combinacion. Tambien se desarrollan DANE y CIIU, y se reemplaza la sigla ESPE sin explicar por una descripcion del estudio citado."
+    },
+    {
+      "section": "Estadísticas descriptivas",
+      "file": "Paper/sections/descriptive_statistics.tex",
+      "before": "mean real hourly income rises sharply with firm size",
+      "after": "mean real hourly income is substantially higher in large firms than in solo work",
+      "criteria": "S,P",
+      "reason": "La tabla muestra un contraste claro entre extremos, pero no un aumento en cada categoría. La nueva afirmacion no exige monotonicidad que la tabla no presenta."
+    },
+    {
+      "section": "Estadísticas descriptivas",
+      "file": "Paper/sections/descriptive_statistics.tex",
+      "before": "so real hourly wages grew faster than implied labor income per worker",
+      "after": "This decline helps explain why real hourly income grew faster than implied monthly labor income per worker",
+      "criteria": "S,T",
+      "reason": "La relación entre promedios no es una identidad obtenida dividiendo ingresos medios por horas medias. Se precisa la periodicidad mensual y se advierte que horas e ingreso mensual no aparecen en la tabla."
+    },
+    {
+      "section": "Estadísticas descriptivas",
+      "file": "Paper/sections/descriptive_statistics.tex",
+      "before": "workers in firms with up to ten workers accounted for 61 percent",
+      "after": "Together with workers in firms with 2--10 workers, they accounted for 61 percent.",
+      "criteria": "S,R",
+      "reason": "Se hace explicito que el 61 por ciento incluye a los solo workers. Se separan los parrafos sobre ingresos y participaciones para evitar confundir denominadores."
+    },
+    {
+      "section": "Estadísticas descriptivas",
+      "file": "Paper/sections/descriptive_statistics.tex",
+      "before": "this transformation remains incomplete",
+      "after": "worker-reported size bins do not identify changes in the distribution of firms within the open-ended 101+ category or test the mechanism in that model",
+      "criteria": "S,T,P",
+      "reason": "No se había definido una transformación completa ni un tamaño óptimo. Se conserva el vinculo con Chen, pero se distingue participacion de trabajadores de distribucion de empresas."
+    },
+    {
+      "section": "Estadísticas descriptivas",
+      "file": "Paper/sections/descriptive_statistics.tex",
+      "before": "Formal workers earn 48.0 percent above the overall mean",
+      "after": "Formal workers earn 2.43 times as much as informal workers",
+      "criteria": "S,R",
+      "reason": "El texto comparaba desviaciones respecto del promedio con cocientes entre grupos. Ahora usa cocientes homogeneos: 2.43 en formalidad, 4.08 en educación y 3.63 entre los sectores extremos."
+    },
+    {
+      "section": "Estadísticas descriptivas",
+      "file": "Paper/sections/descriptive_statistics.tex",
+      "before": "Higher education also rises strongly with firm size",
+      "after": "The share of workers with higher education also rises strongly with firm size",
+      "criteria": "S,T",
+      "reason": "Lo que aumenta es la proporción de trabajadores, no la educación como magnitud indefinida. Se precisa el sujeto de la afirmacion."
+    },
+    {
+      "section": "Estadísticas descriptivas",
+      "file": "Paper/sections/descriptive_statistics.tex",
+      "before": "with a sizable concentration in professional and administrative services",
+      "after": "By sector, 22.8 percent work in professional and administrative services and 15.6 percent in transport.",
+      "criteria": "S,R,P",
+      "reason": "Se reemplaza sizable por el dato de la tabla. Se separan posición ocupacional, educación y sector, aclarando que son dimensiones diferentes y no grupos excluyentes."
+    },
+    {
+      "section": "Estadísticas descriptivas y apendice",
+      "file": "Paper/sections/descriptive_statistics.tex",
+      "before": "relative to the statutory hourly minimum",
+      "after": "It is an annual approximation, not a worker-specific legal compliance threshold.",
+      "criteria": "S,T,P",
+      "reason": "El código convierte el mínimo mensual mediante 45 horas semanales. Se explicita esa construccion, el eje logarítmico y que las participaciones provienen de las etiquetas, no de la altura de los kernels. Las notas y la leyenda externa usan benchmark."
+    },
+    {
+      "section": "Estadísticas descriptivas",
+      "file": "Paper/sections/descriptive_statistics.tex",
+      "before": "the minimum wage appears as a visible compression benchmark in formal wage setting",
+      "after": "The figure therefore shows concentration near the minimum among intermediate-size formal categories",
+      "criteria": "S,P",
+      "reason": "La gráfica describe concentración, pero no identifica un mecanismo de fijacion salarial. La hipótesis de compresion y sus límites se mantienen en la discusion."
+    },
+    {
+      "section": "Estadísticas descriptivas",
+      "file": "Paper/sections/descriptive_statistics.tex",
+      "before": "The large-firm advantage is therefore very similar for both sexes",
+      "after": "The absolute large-firm gaps are similar: 10,113 pesos for men and 10,644 pesos for women.",
+      "criteria": "S,T",
+      "reason": "Se distingue similitud en pesos de similitud proporcional. Se reportan también las razones 2.5 y 2.7, calculadas con los valores del texto."
+    },
+    {
+      "section": "Estadísticas descriptivas",
+      "file": "Paper/sections/descriptive_statistics.tex",
+      "before": "premium is visible within every education group",
+      "after": "premium is visible within every education group in 2025",
+      "criteria": "R,P",
+      "reason": "Se identifica el año de las razones reportadas, puesto que la figura contiene dos años. Las leyendas de sexo y educación también identifican ambos años."
+    },
+    {
+      "section": "Estadísticas descriptivas",
+      "file": "Paper/sections/descriptive_statistics.tex",
+      "before": "The size premium is especially pronounced",
+      "after": "The 2025 ratio of 101+ to solo-worker income ranges from 1.06 in information and communication to 4.42 in utilities and water.",
+      "criteria": "S,T,P",
+      "reason": "Se reemplazan rangos cualitativos sin métrica por razones verificadas en el CSV de la figura. Se conserva el resultado 14 de 16 sectores en 2008 y 16 de 16 en 2025, distinguiendolo de monotonicidad entre todos los tamaños."
+    },
+    {
+      "section": "Metodología",
+      "file": "Paper/sections/methodology.tex",
+      "before": "workers of the same formality status and observed characteristics",
+      "after": "This is regression adjustment, not exact matching of workers on every characteristic.",
+      "criteria": "S,T,P",
+      "reason": "Los controles no implican encontrar pares idénticos. Se definen los indices, las variables indicadoras y la posición ocupacional antes de interpretar los coeficientes."
+    },
+    {
+      "section": "Metodología",
+      "file": "Paper/sections/methodology.tex",
+      "before": "we report the percentage gap as",
+      "after": "These are ratios of exponentiated conditional mean log incomes, not automatically ratios of arithmetic mean incomes.",
+      "criteria": "S,P",
+      "reason": "Se precisa el objeto econometrico de exp(coeficiente)-1 y se anticipa la retransformación necesaria en los contrafactuales, sin cambiar las estimaciones."
+    },
+    {
+      "section": "Metodología",
+      "file": "Paper/sections/methodology.tex",
+      "before": "a larger destination size",
+      "after": "destination size",
+      "criteria": "S,P",
+      "reason": "El apendice incluye movimientos de informales 101+ a 51--100. La definición general ya no exige un destino mayor. Se precisa ademas que cambiar la base conserva un mismo contraste y su error estándar, no cada coeficiente presentado."
+    },
+    {
+      "section": "Metodología",
+      "file": "Paper/sections/methodology.tex",
+      "before": "The coefficient and formal-informal gap tables report this comparison model.",
+      "after": "Tables~\\ref{tab:formality-interaction-coefficients} and \\ref{tab:formal-wage-gap-by-size} report coefficients and formal-informal gaps from this comparison model.",
+      "criteria": "R,P",
+      "reason": "La referencia genérica podía incluir las tablas del modelo preferido. Se indican las tablas exactas a las que corresponde la ecuación simplificada."
+    },
+    {
+      "section": "Metodología y resultados",
+      "file": "Paper/sections/methodology.tex",
+      "before": "These estimates use sector-year effects",
+      "after": "The raw regression includes only assigned log size.",
+      "criteria": "S,P",
+      "reason": "La afirmacion anterior también abarcaba incorrectamente la estimación sin controles. Se separan especificaciones, se define elasticidad y se explicita la dependencia de los tamaños imputados."
+    },
+    {
+      "section": "Metodología",
+      "file": "Paper/sections/methodology.tex",
+      "before": "This shape check is motivated by the literature on ordinal qualitative regressors",
+      "after": "we do not implement that estimator",
+      "criteria": "S,T,P",
+      "reason": "La referencia a Terza podía sugerir que el polinomio implementaba su estimador. Se mantiene la referencia, pero se describe exactamente la aproximacion utilizada y su elasticidad variable."
+    },
+    {
+      "section": "Resultados preferidos",
+      "file": "Paper/sections/results.tex",
+      "before": "smaller and less precisely estimated differences from solo work",
+      "after": "The estimates for 4--50 workers range from -2.2 to 6.2 percent and are not statistically different from zero at the 5 percent level.",
+      "criteria": "S,P",
+      "reason": "No significativo no equivale a menos preciso. Los errores estándar de varias categorías intermedias son menores que el de 101+. La nueva frase separa magnitud, precision y significancia."
+    },
+    {
+      "section": "Resultados de comparación",
+      "file": "Paper/sections/results.tex",
+      "before": "the remaining common-premium coefficient motivates the less restrictive formal and informal comparisons reported above",
+      "after": "The separate estimates reported in Section~\\ref{subsec:preferred-results} show why this single common premium does not describe the formal and informal comparisons equally well.",
+      "criteria": "R,P",
+      "reason": "Se corrige una transicion que motivaba retrospectivamente una sección ya presentada. Se precisa que la atenuación de dos tercios corresponde al coeficiente logarítmico 101+/Solo."
+    },
+    {
+      "section": "Resultados de comparación",
+      "file": "Paper/sections/results.tex",
+      "before": "implying a flatter formal profile relative to solo work",
+      "after": "each size-to-solo log-wage gap is smaller among formal workers than among informal workers",
+      "criteria": "S,T",
+      "reason": "Interacciones negativas comparan brechas respecto de la base, no garantizan una pendiente menor entre todos los tamaños consecutivos. Se aclara también que los contrastes no significativos son respecto de solo formales."
+    },
+    {
+      "section": "Resultados dinamicos",
+      "file": "Paper/sections/results.tex",
+      "before": "whether this came from faster growth at the bottom or slower growth at the top",
+      "after": "The ratio alone does not show whether wages rose or fell in either group.",
+      "criteria": "S,T",
+      "reason": "La versión previa presentaba solo dos casos. Una brecha puede cerrarse mientras ambos grupos aumentan, ambos caen o se mueven en sentidos opuestos."
+    },
+    {
+      "section": "Contrafactuales",
+      "file": "Paper/sections/results.tex",
+      "before": "This retransformation assumes a common residual factor",
+      "after": "This factor accounts for the fact that exponentiating a mean log income does not generally recover mean income in levels.",
+      "criteria": "T,R,P",
+      "reason": "Se explica para que sirve el factor antes de imponer que sea comun. Se define el componente de tamaño-formalidad, el cambio conjunto y el conjunto de observaciones de 2025."
+    },
+    {
+      "section": "Contrafactuales",
+      "file": "Paper/sections/results.tex",
+      "before": "not the unweighted average of individual percentage wage changes",
+      "after": "Its percentage change weights each individual's percentage change by that individual's share of baseline income",
+      "criteria": "S,T,R",
+      "reason": "Se dice positivamente como se agrega, incluyendo horas y factores de expansion. Introducción y conclusion especifican que el denominador es ingreso semanal total de todos los trabajadores."
+    },
+    {
+      "section": "Contrafactuales",
+      "file": "Paper/sections/results.tex",
+      "before": "because changing formality also changes the estimated size premium",
+      "after": "the corresponding wage ratios compound multiplicatively",
+      "criteria": "S,P",
+      "reason": "La falta de aditividad no se debe solamente a la interacción. Los cambios de quienes experimentan ambos movimientos se componen multiplicativamente y los porcentajes tienen denominadores específicos."
+    },
+    {
+      "section": "Contrafactuales",
+      "file": "Paper/sections/results.tex",
+      "before": "a calculation that preserves each worker's observed log-wage residual",
+      "after": "a calculation that starts from observed rather than predicted income",
+      "criteria": "T,R",
+      "reason": "Se explica primero la operacion observable y luego se define residuo como observado menos ajustado en logaritmos. La nota del apendice usa el mismo término para el factor de retransformación."
+    },
+    {
+      "section": "Discusión",
+      "file": "Paper/sections/discussion.tex",
+      "before": "The preferred results identify wage differences within both formal and informal employment",
+      "after": "The preferred results do not support treating firm growth as the same wage comparison for every worker.",
+      "criteria": "S,R,P",
+      "reason": "Se evita repetir el resumen de resultados y se abre con su implicacion interpretativa: importan la formalidad y el tamaño inicial, no solo el destino 101+."
+    },
+    {
+      "section": "Discusión",
+      "file": "Paper/sections/discussion.tex",
+      "before": "an employer-associated component of wages",
+      "after": "wage differences associated with the employer after worker fixed effects",
+      "criteria": "T,S",
+      "reason": "Se define el componente estadistico en vez de dejar la etiqueta sola. Song se discute por separado, porque concentración de trabajadores de altos ingresos y efectos de empleador no son lo mismo. Se define también establecimiento y se explica el contraste de Diegmann et al."
+    },
+    {
+      "section": "Discusión",
+      "file": "Paper/sections/discussion.tex",
+      "before": "The link with allocative efficiency comes from the marginal-product condition.",
+      "after": "output lost because labor is not allocated to its most productive uses",
+      "criteria": "T,R,P",
+      "reason": "Se define misallocation y se explica el valor del producto marginal como valor del producto adicional por unidad de trabajo. Se conserva la lectura de marcador, no prueba, sin convertir los contrafactuales en estimaciones de productividad."
+    },
+    {
+      "section": "Discusión",
+      "file": "Paper/sections/discussion.tex",
+      "before": "rather than assign an arbitrary share to new jobs",
+      "after": "The model then determines how sectoral employment shares change.",
+      "criteria": "S,T,P",
+      "reason": "Se describe la metodologia de Pulido y Gonzalez en vez de contrastarla con una alternativa indefinida. Se explica por que 35 y 41 por ciento son límites inferiores y que calificación significa título universitario, segun la fuente."
+    },
+    {
+      "section": "Discusión y conclusion",
+      "file": "Paper/sections/discussion.tex",
+      "before": "It excludes implementation costs, feasible job creation",
+      "after": "The scenarios do not account for implementation costs or worker selection, establish that enough destination jobs could be created",
+      "criteria": "S,T",
+      "reason": "No se excluye una variable llamada creacion factible. El ejercicio no establece si existen o pueden crearse suficientes empleos de destino. Se reemplaza better firm matches por empleos mejor remunerados."
+    },
+    {
+      "section": "Conclusión",
+      "file": "Paper/sections/conclusion.tex",
+      "before": "The intermediate categories remain thin.",
+      "after": "Firms with 11--100 workers account for only 14 percent of employment in 2025.",
+      "criteria": "T,R",
+      "reason": "La expresion thin se reemplaza por grupo, porcentaje y año. El resultado de elasticidades se presenta como una comprobacion complementaria con controles distintos, no como una propuesta de analisis aun pendiente."
+    },
+    {
+      "section": "Apéndice",
+      "file": "Paper/sections/descriptive_2025_appendix.tex",
+      "before": "In each table, the sign of a coefficient indicates whether the listed category is above or below the omitted category",
+      "after": "In the trend tables, the sign instead indicates whether that relative wage ratio rises or falls over time.",
+      "criteria": "S,P",
+      "reason": "La regla general era falsa para tendencias e interacciones. Se distinguen expresamente coeficientes de nivel, cambios temporales y diferencias entre brechas formal e informal."
+    },
+    {
+      "section": "Apéndice",
+      "file": "Paper/sections/descriptive_2025_appendix.tex",
+      "before": "reports destination-cell counts",
+      "after": "reports the share of intended movers with no observed destination counterpart",
+      "criteria": "S,P",
+      "reason": "La tabla no presenta los conteos de cada celda. Presenta porcentajes de ausencia y resultados bajo umbrales de conteo. Se explica también por que el destino elegido es comun a cada grupo y no una recomendacion individual."
+    },
+    {
+      "section": "Tablas y notas",
+      "file": "Paper/sections/regression_formal_101_contrasts_table.tex",
+      "before": "\\exp(\\hat{\\beta})",
+      "after": "\\exp(\\widehat{\\Delta})",
+      "criteria": "T,R,P",
+      "reason": "El premium de la tabla es un contraste lineal completo, no necesariamente un beta individual. Se usa la notación definida en metodologia. Se armonizan sex, las unidades de trabajadores y la denominacion de los modelos de comparación."
+    },
+    {
+      "section": "Disponibilidad de código",
+      "file": "main.tex",
+      "before": "Replication code and materials are available in the",
+      "after": "Code and materials for the original working-paper version are archived in the",
+      "criteria": "S,R,P",
+      "reason": "El tag histórico no se presenta como si contuviera todas las adiciones actuales. Se identifica aparte el código del modelo preferido y los contrafactuales. La versión anónima explica la omisión de enlaces, sin prometer una publicación futura de código ya público."
+    }
+  ]
+}

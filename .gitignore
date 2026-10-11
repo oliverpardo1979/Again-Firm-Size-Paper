@@ -33,6 +33,7 @@ processed/
 *.Rproj
 .DS_Store
 Thumbs.db
+__pycache__/
 
 # Counterfactual microdata cache, detailed support cells, and local run metadata
 replication/output/private_cache/

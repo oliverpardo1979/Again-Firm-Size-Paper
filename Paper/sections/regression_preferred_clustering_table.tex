@@ -1,0 +1,26 @@
+\begin{table}[htbp]
+  \centering
+  \caption{Separating controls from clustering in the 101+/solo comparison}
+  \label{tab:preferred-clustering-sensitivity}
+  \scriptsize
+  \begin{tabular}{lrrrrr}
+    \toprule
+    Controls & Premium (\%) & S.E. (SD) & $p$ (SD) & S.E. (S) & $p$ (S) \\
+    \midrule
+    \multicolumn{6}{l}{\textit{Formal workers}} \\
+    Sector-year FE & 16.6 & 0.038 & $<0.001$ & 0.088 & 0.100 \\
+    Sector-department-year FE & 15.8 & 0.039 & $<0.001$ & 0.093 & 0.135 \\
+    + Occupational position & 16.5 & 0.037 & $<0.001$ & 0.091 & 0.113 \\
+    \midrule
+    \multicolumn{6}{l}{\textit{Informal workers}} \\
+    Sector-year FE & 39.9 & 0.020 & $<0.001$ & 0.046 & $<0.001$ \\
+    Sector-department-year FE & 33.4 & 0.019 & $<0.001$ & 0.043 & $<0.001$ \\
+    + Occupational position & 37.1 & 0.019 & $<0.001$ & 0.039 & $<0.001$ \\
+    \bottomrule
+  \end{tabular}
+  \vspace{0.3em}
+  \begin{minipage}{0.95\textwidth}
+  \footnotesize
+  Notes: All rows use the same 5,268,375 observations, GEIH weights, size-by-formality interactions, and sex, age, age squared, and education controls. The reference is solo work within each formality group. SD denotes sector-department clustering and S denotes sector clustering. Standard errors are in log points. Changing clustering leaves the coefficient unchanged. Two-sided tests use 558 and 16 degrees of freedom, respectively. The last row in each panel is the preferred specification.
+  \end{minipage}
+\end{table}

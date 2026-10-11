@@ -6,6 +6,8 @@
 \usepackage{array}
 \usepackage{graphicx}
 \usepackage{xcolor}
+\usepackage{adjustbox}
+\usepackage{appendixnumberbeamer}
 
 \graphicspath{{Paper/figures/}{figures/}}
 
@@ -40,7 +42,7 @@
 \setbeamertemplate{itemize item}{\color{cjcblue}$\blacktriangleright$}
 \setbeamertemplate{itemize subitem}{\color{cjcblue}$\bullet$}
 
-\newcommand{\source}[1]{\vspace{0.12cm}{\tiny\color{cjcgray}#1}}
+\newcommand{\source}[1]{\par\vspace{0.12cm}{\tiny\color{cjcgray}#1\par}}
 \newcommand{\idea}[1]{\textbf{\color{cjcblue}#1}}
 \newcommand{\cjcbar}{\textcolor{cjcyellow}{\rule{0.18\textwidth}{1.6pt}}\hspace{0.3em}\textcolor{cjcblue}{\rule{0.72\textwidth}{1.6pt}}}
 \newcommand{\bigstat}[3]{%
@@ -50,7 +52,7 @@
   \end{center}
 }
 \newcommand{\regnote}[1]{%
-  \vspace{0.08cm}{\tiny\color{cjcgray}#1}
+  \par\vspace{0.08cm}{\tiny\color{cjcgray}#1\par}
 }
 \newcommand{\sereg}[1]{{\fontsize{5.2pt}{5.6pt}\selectfont\color{cjcgray}(#1)}}
 \newcommand{\sectionframe}[1]{%
@@ -75,7 +77,7 @@
   \includegraphics[height=1.35cm]{logo_cjc_palatino_horizontal.png}
 
   \vspace{0.75cm}
-  {\large\color{cjcgray}Facultad de Ciencias Económicas}\\[0.35cm]
+  {\large\color{cjcgray}Faculty of Economics}\\[0.35cm]
   \cjcbar
 
   \vspace{0.75cm}
@@ -92,7 +94,7 @@
   \vspace{0.35cm}
   \begin{itemize}
     \item How much higher is real hourly pay in large firms relative to solo work and micro-firms?
-    \item How much of the gap is explained by sector, education, age, sex, and formality?
+    \item How much remains after accounting for worker characteristics, occupational position, and local sector-year conditions?
     \item Did the gap widen or narrow between 2008 and 2025?
     \item Does the size-wage relationship differ between formal and informal employment?
   \end{itemize}
@@ -106,7 +108,7 @@
       \begin{itemize}
         \item Real hourly pay rises with firm size.
         \item The relationship survives controls for observable characteristics.
-        \item The premium is much stronger within informal employment.
+        \item The full-sample 101+/solo premium is 37.1\% among informal and 16.5\% among formal workers.
       \end{itemize}
     \end{column}
     \begin{column}{0.49\textwidth}
@@ -115,7 +117,7 @@
       \begin{itemize}
         \item The premium does not prove causality or misallocation by itself.
         \item It is a diagnostic magnitude for wage inequality, segmentation, and possible frictions.
-        \item The policy discussion should focus on formalization and the growth of productive informal units, not on firm size alone.
+        \item The salaried-only comparison qualifies the full-sample contrast between formal and informal workers.
       \end{itemize}
     \end{column}
   \end{columns}
@@ -126,9 +128,9 @@
     \item Motivation and data.
     \item Descriptive facts.
     \item Conditional firm-size wage premium.
-    \item Evolution over time.
-    \item Formality and nonlinearities.
-    \item Interpretation, limitations, and policy implications.
+    \item Salaried workers.
+    \item Dynamics, elasticities, and illustrative income scenarios.
+    \item Interpretation and policy implications.
   \end{enumerate}
 \end{frame}
 
@@ -165,7 +167,7 @@
     \item Source: Gran Encuesta Integrada de Hogares, DANE.
     \item Period: 2008--2019 and 2021--2025.
     \item We exclude 2020 because the pandemic disrupted labor-market outcomes and survey collection.
-    \item Working sample: 5.35 million worker-year observations with valid hourly labor income and positive expansion weights.
+    \item Working sample: 5.35 million worker observations pooled across repeated cross-sections, not a worker panel.
     \item Regression sample: 5.27 million observations with complete controls.
   \end{itemize}
 \end{frame}
@@ -206,6 +208,7 @@
   \begin{itemize}
     \item A worker is formal if the worker contributes to pensions.
     \item A worker is informal if the worker does not contribute to pensions.
+    \item Employed pension recipients are excluded from the formal-informal comparisons.
     \item The definition captures access to contributory social security.
     \item The definition does not use firm size, which is important because firm size is the variable we want to study.
   \end{itemize}
@@ -301,9 +304,9 @@
     \toprule
     Firm size & Women & Formal & Higher education & Mean age \\
     \midrule
-    Solo & 39.0\% & 8.3\% & 16.7\% & 47.2 \\
-    6--10 & 42.4\% & 46.6\% & 35.6\% & 38.8 \\
-    51--100 & 42.6\% & 82.8\% & 53.4\% & 37.6 \\
+    Solo & 41.3\% & 8.3\% & 16.7\% & 44.5 \\
+    6--10 & 40.5\% & 46.6\% & 29.9\% & 37.0 \\
+    51--100 & 43.7\% & 94.3\% & 53.4\% & 37.5 \\
     101+ & 45.8\% & 98.0\% & 62.9\% & 38.0 \\
     \bottomrule
   \end{tabular}
@@ -324,9 +327,9 @@
 
 \begin{frame}{Minimum Wage Bunching by Firm Size and Formality}
   \centering
-  \includegraphics[width=0.96\textwidth,height=0.80\textheight,keepaspectratio]{fig77_en.png}
+  \includegraphics[width=0.96\textwidth,height=0.76\textheight,keepaspectratio]{fig77_en.png}
 
-  \source{Hourly income divided by the statutory hourly minimum in 2025. Labels report employment share within each formality group.}
+  \source{Hourly income divided by an annual minimum-wage conversion benchmark, not an individual legal compliance threshold. Labels show employment shares within formality groups.}
 \end{frame}
 
 \begin{frame}{How to Read the U-Shape among Formal Workers}
@@ -363,943 +366,11 @@
   \source{In 2025, hourly pay in 101+ firms exceeded solo-worker pay in all 16 included sectors.}
 \end{frame}
 
-\sectionframe{3. Conditional Firm-Size Wage Premium}
-
-\begin{frame}{Main Specification}
-  \idea{We estimate conditional wage gaps, not causal effects.}
-
-  \vspace{0.2cm}
-  \[
-    \ln(w_{ist}) =
-    \alpha
-    + \sum_{g \neq Solo} \beta_g \mathbf{1}\{Size_{ist}=g\}
-    + X_{ist}'\gamma
-    + \lambda_{s \times t}
-    + \varepsilon_{ist}
-  \]
-
-  \vspace{0.25cm}
-  \begin{itemize}
-    \item \(w_{ist}\): real hourly labor income.
-    \item \(X_{ist}\): sex, age, age squared, education, and formality.
-    \item \(\lambda_{s \times t}\): sector-year fixed effects.
-    \item Coefficients are transformed as \(100 \times [\exp(\hat{\beta}_g)-1]\).
-  \end{itemize}
-\end{frame}
-
-\begin{frame}{Regression Output: Main Specification}
-  \centering
-  \tiny
-  \setlength{\tabcolsep}{2.5pt}
-  \renewcommand{\arraystretch}{0.98}
-  \resizebox{0.98\textwidth}{!}{%
-  \begin{tabular}{lcccc}
-    \toprule
-    & \multicolumn{4}{c}{Dependent variable: log real hourly labor income} \\
-    \cmidrule(lr){2-5}
-    & (1) & (2) & (3) & (4) \\
-    \midrule
-    Firm size: 2--3 & 0.183*** \sereg{0.034} & 0.242*** \sereg{0.030} & 0.209*** \sereg{0.027} & 0.188*** \sereg{0.029} \\
-    Firm size: 4--5 & 0.363*** \sereg{0.035} & 0.408*** \sereg{0.030} & 0.361*** \sereg{0.029} & 0.307*** \sereg{0.038} \\
-    Firm size: 6--10 & 0.500*** \sereg{0.029} & 0.502*** \sereg{0.033} & 0.422*** \sereg{0.037} & 0.317*** \sereg{0.050} \\
-    Firm size: 11--19 & 0.627*** \sereg{0.034} & 0.577*** \sereg{0.040} & 0.458*** \sereg{0.042} & 0.303*** \sereg{0.051} \\
-    Firm size: 20--30 & 0.689*** \sereg{0.046} & 0.604*** \sereg{0.045} & 0.463*** \sereg{0.046} & 0.271*** \sereg{0.050} \\
-    Firm size: 31--50 & 0.760*** \sereg{0.056} & 0.651*** \sereg{0.049} & 0.488*** \sereg{0.047} & 0.272*** \sereg{0.048} \\
-    Firm size: 51--100 & 0.820*** \sereg{0.063} & 0.699*** \sereg{0.052} & 0.519*** \sereg{0.048} & 0.289*** \sereg{0.047} \\
-    Firm size: 101+ & 1.019*** \sereg{0.102} & 0.819*** \sereg{0.067} & 0.598*** \sereg{0.061} & 0.359*** \sereg{0.059} \\
-    \midrule
-    Gender, age, education & No & No & Yes & Yes \\
-    Formality & No & No & No & Yes \\
-    Sector-year fixed effects & No & Yes & Yes & Yes \\
-    Observations & 5,268,514 & 5,268,514 & 5,268,514 & 5,268,514 \\
-    $R^2$ & 0.213 & 0.271 & 0.376 & 0.386 \\
-    \bottomrule
-  \end{tabular}}
-
-  \regnote{Omitted category: solo workers. GEIH expansion weights used. Standard errors clustered by sector.}
-\end{frame}
-
-\begin{frame}{What Happens When We Add Controls}
-  \idea{The 101+ premium falls substantially, but it does not disappear.}
-
-  \vspace{0.25cm}
-  \begin{center}
-  \scriptsize
-  \setlength{\tabcolsep}{3pt}
-  \begin{tabular}{p{0.34\textwidth}cp{0.38\textwidth}}
-    \toprule
-    Specification & 101+ coefficient & Interpretation \\
-    \midrule
-    No controls & 1.019 & Very large raw gap \\
-    + sector-year fixed effects & 0.819 & Part of the gap reflects sector and year \\
-    + sex, age, and education & 0.598 & Part reflects worker composition \\
-    + formality & 0.359 & Conditional premium of 43.2\% \\
-    \bottomrule
-  \end{tabular}
-  \end{center}
-
-  \vspace{0.35cm}
-  \begin{center}
-  \begin{minipage}{0.88\textwidth}
-  \scriptsize
-  Roughly two thirds of the raw 101+ gap are absorbed by observable controls.
-  \end{minipage}
-  \end{center}
-\end{frame}
-
-\begin{frame}{Conditional Firm-Size Premium}
-  \centering
-  \includegraphics[width=0.92\textwidth,height=0.80\textheight,keepaspectratio]{fig57_en.png}
-
-  \source{Premium relative to solo workers after controls for sex, age, education, formality, and sector-year fixed effects.}
-\end{frame}
-
-\begin{frame}{Main Result}
-  \begin{columns}[T,totalwidth=\textwidth]
-    \begin{column}{0.38\textwidth}
-      \bigstat{43.2\%}{conditional premium in 101+ firms relative to solo workers}{cjcblue}
-    \end{column}
-    \begin{column}{0.58\textwidth}
-      \vspace{0.25cm}
-      \begin{itemize}
-        \item The conditional premium is positive in all size categories.
-        \item Confidence intervals exclude zero in the main specification.
-        \item The result is not only a formal-informal difference.
-        \item It should not be read as an experiment where the same worker moves across firms.
-      \end{itemize}
-    \end{column}
-  \end{columns}
-\end{frame}
-
-\sectionframe{4. Evolution over Time}
-
-\begin{frame}{What It Means for the Premium to Steepen or Flatten}
-  \idea{The evolution of the premium asks whether firm size became more or less strongly associated with wages.}
-
-  \vspace{0.35cm}
-  \begin{itemize}
-    \item A steeper premium means that wage differences by firm size increased.
-    \item A flatter premium means that wage differences by firm size declined.
-    \item The test does not identify whether the change came from faster wage growth at the bottom, slower wage growth at the top, or changes in composition.
-  \end{itemize}
-\end{frame}
-
-\begin{frame}{Conditional Premium over Time}
-  \centering
-  \includegraphics[width=0.96\textwidth,height=0.80\textheight,keepaspectratio]{fig59_en.png}
-
-  \source{Annual estimates of the main specification. 2020 is omitted.}
-\end{frame}
-
-\begin{frame}{Regression Output: Trend Test}
-  \idea{The point estimates are positive, but the two-sided tests do not reject zero.}
-
-  \vspace{0.15cm}
-  \centering
-  \scriptsize
-  \setlength{\tabcolsep}{3.5pt}
-  \begin{tabular}{lcccc}
-    \toprule
-    Firm size & Annual trend & S.E. & $p$-value & Implied 2008--2025 change \\
-    \midrule
-    2--3 & 0.0033 & (0.0028) & 0.262 & 5.7\% \\
-    4--5 & 0.0032 & (0.0031) & 0.314 & 5.6\% \\
-    6--10 & 0.0021 & (0.0034) & 0.536 & 3.7\% \\
-    11--19 & 0.0027 & (0.0039) & 0.494 & 4.7\% \\
-    20--30 & 0.0018 & (0.0041) & 0.661 & 3.2\% \\
-    31--50 & 0.0027 & (0.0044) & 0.542 & 4.7\% \\
-    51--100 & 0.0026 & (0.0042) & 0.549 & 4.5\% \\
-    101+ & 0.0045 & (0.0043) & 0.314 & 7.9\% \\
-    \bottomrule
-  \end{tabular}
-
-  \regnote{Specification includes the main controls and sector-year fixed effects. The $p$-values correspond to two-sided tests.}
-\end{frame}
-
-\begin{frame}{The Evidence Suggests Persistence, Not a Clear Trend}
-  \idea{The point estimates suggest widening, but the tests do not support the stronger claim that the premium systematically intensified.}
-
-  \vspace{0.3cm}
-  \begin{center}
-  \small
-  \begin{tabular}{lcc}
-    \toprule
-    Firm size & Implied change 2008--2025 & Reading \\
-    \midrule
-    20--30 & 3.2\% & Not significant at 5\% \\
-    51--100 & 6.7\% & Not significant at 5\% \\
-    101+ & 7.9\% & Not significant at 5\% \\
-    \bottomrule
-  \end{tabular}
-  \end{center}
-
-  \vspace{0.35cm}
-  {\small Colombia does not look like a case of clear convergence or statistically conclusive divergence. The defensible result is persistence.}
-\end{frame}
-
-\sectionframe{5. Formality and Nonlinearities}
-
-\begin{frame}{Why Split Formal and Informal Workers}
-  \idea{Formality can both mediate and modify the firm-size premium.}
-
-  \vspace{0.35cm}
-  \begin{itemize}
-    \item It can mediate the premium because large firms are more likely to offer formal jobs.
-    \item It can modify the premium because the size-wage relationship may differ within formal and informal employment.
-    \item If firm size matters mainly within informal employment, the policy interpretation changes.
-  \end{itemize}
-\end{frame}
-
-\begin{frame}{Specification with Firm Size by Formality}
-  \[
-    \ln(w_{ist}) =
-    \alpha + \phi Formal_{ist}
-    + \sum_{g \neq Solo}(\beta_g + \theta_g Formal_{ist})
-      \mathbf{1}\{Size_{ist}=g\}
-    + X_{ist}'\gamma
-    + \lambda_{s \times t}
-    + \varepsilon_{ist}
-  \]
-
-  \vspace{0.25cm}
-  \begin{itemize}
-    \item \(\beta_g\): firm-size premium among informal workers.
-    \item \(\beta_g+\theta_g\): firm-size premium among formal workers.
-    \item \(\phi+\theta_g\): formal-informal wage gap within size group \(g\).
-  \end{itemize}
-\end{frame}
-
-\begin{frame}{Regression Output: Firm Size by Formality}
-  \centering
-  \tiny
-  \setlength{\tabcolsep}{4pt}
-  \renewcommand{\arraystretch}{0.98}
-  \resizebox{0.94\textwidth}{!}{%
-  \begin{tabular}{lccc}
-    \toprule
-    Firm size & Informal coefficient $\hat{\beta}_g$ & Interaction $\hat{\theta}_g$ & Formal coefficient $\hat{\beta}_g+\hat{\theta}_g$ \\
-    \midrule
-    2--3 & 0.197*** \sereg{0.026} & -0.176*** \sereg{0.062} & 0.021 \sereg{0.067} \\
-    4--5 & 0.343*** \sereg{0.027} & -0.318*** \sereg{0.085} & 0.024 \sereg{0.089} \\
-    6--10 & 0.392*** \sereg{0.032} & -0.369*** \sereg{0.081} & 0.023 \sereg{0.087} \\
-    11--19 & 0.409*** \sereg{0.037} & -0.374*** \sereg{0.076} & 0.035 \sereg{0.080} \\
-    20--30 & 0.402*** \sereg{0.035} & -0.379*** \sereg{0.072} & 0.023 \sereg{0.079} \\
-    31--50 & 0.401*** \sereg{0.038} & -0.359*** \sereg{0.067} & 0.041 \sereg{0.076} \\
-    51--100 & 0.410*** \sereg{0.044} & -0.342*** \sereg{0.067} & 0.068 \sereg{0.075} \\
-    101+ & 0.336*** \sereg{0.046} & -0.183** \sereg{0.083} & 0.153* \sereg{0.088} \\
-    \bottomrule
-  \end{tabular}}
-
-  \regnote{Omitted category: solo workers within each formality group. Controls: sex, age, age squared, education, and sector-year fixed effects.}
-\end{frame}
-
-\begin{frame}{The Conditional Premium Is Much Stronger among Informal Workers}
-  \centering
-  \includegraphics[width=0.94\textwidth,height=0.80\textheight,keepaspectratio]{fig74_en.png}
-
-  \source{Premium relative to solo workers within the same formality group.}
-\end{frame}
-
-\begin{frame}{Reading the Formality Figure}
-  \begin{columns}[T,totalwidth=\textwidth]
-    \begin{column}{0.48\textwidth}
-      \idea{Informal workers}
-      \vspace{0.25cm}
-      \begin{itemize}
-        \item The premium is positive and significant in all categories.
-        \item It is around 48--51\% across the 6--100 worker categories.
-        \item It remains high in 101+ firms: 40.0\%.
-      \end{itemize}
-    \end{column}
-    \begin{column}{0.48\textwidth}
-      \idea{Formal workers}
-      \vspace{0.25cm}
-      \begin{itemize}
-        \item The premium relative to formal solo workers is smaller and less precise.
-        \item The 101+ estimate is 16.5\%, but not significant at 5\%.
-        \item A relevant formal-sector comparison is also 101+ firms relative to intermediate formal firms.
-      \end{itemize}
-    \end{column}
-  \end{columns}
-\end{frame}
-
-\begin{frame}{There Is Still a Relevant Comparison within Formal Employment}
-  \idea{Formal workers in 101+ firms earn more than formal workers in intermediate-size firms.}
-
-  \vspace{0.25cm}
-  \begin{center}
-  \small
-  \begin{tabular}{lcc}
-    \toprule
-    Comparison & 101+ premium & Significance \\
-    \midrule
-    101+ vs. formal solo & 16.5\% & Not significant at 5\% \\
-    101+ vs. 2--3 & 14.2\% & Significant \\
-    101+ vs. 6--10 & 13.9\% & Significant \\
-    101+ vs. 20--30 & 13.9\% & Significant \\
-    101+ vs. 51--100 & 8.9\% & Significant \\
-    \bottomrule
-  \end{tabular}
-  \end{center}
-
-  \vspace{0.25cm}
-  {\small The conclusion is not that size never matters within formal employment. The conclusion is that the formal premium is less general than the informal premium.}
-\end{frame}
-
-\begin{frame}{Regression Output: Formal 101+ Contrasts}
-  \idea{The 101+ category is not statistically different from formal solo work at 5\%, but it is above the intermediate formal categories.}
-
-  \vspace{0.15cm}
-  \centering
-  \scriptsize
-  \begin{tabular}{lcc}
-    \toprule
-    Reference category & 101+ premium & $p$-value \\
-    \midrule
-    Solo workers & 16.5\% & 0.082 \\
-    2--3 & 14.2\% & $<0.001$ \\
-    4--5 & 13.8\% & $<0.001$ \\
-    6--10 & 13.9\% & $<0.001$ \\
-    11--19 & 12.6\% & 0.004 \\
-    20--30 & 13.9\% & 0.001 \\
-    31--50 & 11.8\% & 0.002 \\
-    51--100 & 8.9\% & 0.004 \\
-    \bottomrule
-  \end{tabular}
-
-  \regnote{Each row compares formal workers in 101+ firms with formal workers in the reference category.}
-\end{frame}
-
-\begin{frame}{Formality Raises Wage Levels within Each Size Category}
-  \idea{The firm-size premium is stronger among informal workers, but formality still matters.}
-
-  \vspace{0.25cm}
-  \begin{center}
-  \small
-  \begin{tabular}{lcc}
-    \toprule
-    Firm size & Conditional formal-informal premium & Reading \\
-    \midrule
-    Solo & 68.8\% & Very high \\
-    2--3 & 20.7\% & Positive \\
-    6--10 & 16.6\% & Positive \\
-    31--50 & 22.8\% & Positive \\
-    101+ & 40.6\% & High \\
-    \bottomrule
-  \end{tabular}
-  \end{center}
-
-  \vspace{0.25cm}
-  {\small Formal workers earn more than informal workers within every firm-size category.}
-\end{frame}
-
-\begin{frame}{Regression Output: Formal-Informal Gap by Firm Size}
-  \centering
-  \scriptsize
-  \setlength{\tabcolsep}{4pt}
-  \begin{tabular}{lccc}
-    \toprule
-    Firm size & Log gap & Premium & $p$-value \\
-    \midrule
-    Solo & 0.524*** \sereg{0.063} & 68.8\% & $<0.001$ \\
-    2--3 & 0.348*** \sereg{0.018} & 41.6\% & $<0.001$ \\
-    4--5 & 0.205*** \sereg{0.036} & 22.8\% & $<0.001$ \\
-    6--10 & 0.155*** \sereg{0.031} & 16.7\% & $<0.001$ \\
-    11--19 & 0.149*** \sereg{0.024} & 16.1\% & $<0.001$ \\
-    20--30 & 0.145*** \sereg{0.018} & 15.6\% & $<0.001$ \\
-    31--50 & 0.165*** \sereg{0.014} & 17.9\% & $<0.001$ \\
-    51--100 & 0.181*** \sereg{0.019} & 19.9\% & $<0.001$ \\
-    101+ & 0.341*** \sereg{0.043} & 40.6\% & $<0.001$ \\
-    \bottomrule
-  \end{tabular}
-
-  \regnote{The gap compares formal and informal workers within each firm-size category. Standard errors in parentheses.}
-\end{frame}
-
-\begin{frame}{The Formality Difference Is Visible in Both 2008 and 2025}
-  \centering
-  \includegraphics[width=0.95\textwidth,height=0.80\textheight,keepaspectratio]{fig76_en.png}
-
-  \source{Separate estimates for 2008 and 2025 with controls for sex, age, education, and sector.}
-\end{frame}
-
-\begin{frame}{The 101+ Premium by Formality over Time}
-  \centering
-  \includegraphics[width=0.95\textwidth,height=0.80\textheight,keepaspectratio]{fig75_en.png}
-
-  \source{101+ premium relative to solo workers, estimated within each formality group. 2020 is omitted.}
-\end{frame}
-
-\sectionframe{6. Elasticity and Literature Benchmark}
-
-\begin{frame}{Why Estimate an Approximate Elasticity}
-  \idea{The paper uses firm-size categories, but much of the literature reports wage-size elasticities.}
-
-  \vspace{0.35cm}
-  \begin{itemize}
-    \item GEIH reports firm size in intervals.
-    \item We assign representative values to each interval: 1, 2.5, 4.5, 8, 15, 25, 40.5, 75.5, and 150.
-    \item The elasticity is only a benchmarking exercise.
-    \item The categorical estimates remain the main empirical results.
-  \end{itemize}
-\end{frame}
-
-\begin{frame}{International Benchmark}
-  \idea{Colombia's conditional elasticity is high relative to the literature, and the difference mainly comes from informal employment.}
-
-  \vspace{0.25cm}
-  \begin{center}
-  \small
-  \setlength{\tabcolsep}{4pt}
-  \resizebox{0.96\textwidth}{!}{%
-  \begin{tabular}{lccc}
-    \toprule
-    Specification & Elasticity & S.E. & Reading \\
-    \midrule
-    Literature: no worker-heterogeneity controls & 0.062 & n.a. & Diegmann et al. \\
-    Literature: observable worker controls & 0.036 & n.a. & Diegmann et al. \\
-    Colombia: no controls & 0.203*** & (0.019) & Very high \\
-    Colombia: full sample with controls & 0.071*** & (0.013) & High relative to benchmark \\
-    Colombia: formal workers with controls & 0.026** & (0.011) & Close to benchmark \\
-    Colombia: informal workers with controls & 0.130*** & (0.015) & Far above benchmark \\
-    \bottomrule
-  \end{tabular}}
-  \end{center}
-\end{frame}
-
-\sectionframe{7. Interpretation and Implications}
-
-\begin{frame}{What We Know}
-  \begin{itemize}
-    \item Real hourly income rises with firm size.
-    \item The premium falls substantially with controls, but remains positive.
-    \item There is no statistically conclusive evidence of secular decline.
-    \item The conditional premium is especially strong within informal employment.
-    \item Formality raises wage levels within every firm-size category.
-  \end{itemize}
-\end{frame}
-
-\begin{frame}{What These Data Cannot Tell Us}
-  \idea{GEIH does not identify firms or observe output, capital, or marginal products.}
-
-  \vspace{0.35cm}
-  \begin{itemize}
-    \item We cannot fully separate unobserved selection from firm-side differences.
-    \item We cannot estimate employer fixed effects.
-    \item We cannot directly measure marginal products.
-    \item This is why we talk about markers of frictions, not direct proof of misallocation.
-  \end{itemize}
-\end{frame}
-
-\begin{frame}{Policy Implication}
-  \idea{The conclusion is not to favor large firms because they are large.}
-
-  \vspace{0.35cm}
-  \begin{itemize}
-    \item The relevant objective is to reduce barriers that keep productive units small, informal, or disconnected from markets.
-    \item Because formality raises wages within each firm-size category, moving jobs toward formality remains a policy priority.
-    \item Because the firm-size premium is strongest among informal workers, it also matters that productive informal units can grow, organize, and connect to markets.
-    \item This support should be a path toward formalization, not a subsidy for remaining informal.
-  \end{itemize}
-\end{frame}
-
-\begin{frame}{A Bad Policy Reading}
-  \idea{Subsidies that preserve small scale may reinforce the structure documented in the paper.}
-
-  \vspace{0.35cm}
-  \begin{itemize}
-    \item Supporting small firms is not enough if support does not affect productivity, formalization, or market access.
-    \item Policy should avoid regulatory thresholds that make growth costly.
-    \item Policy should also avoid incentives for formal firms to become informal in order to receive benefits.
-    \item The focus should be productivity, formalization, management, technology, and access to larger customers.
-  \end{itemize}
-\end{frame}
-
-\begin{frame}{Conclusion}
-  \idea{Firm size is closely associated with real hourly pay in Colombia.}
-
-  \vspace{0.35cm}
-  \begin{itemize}
-    \item The 101+ premium relative to solo workers is large in raw averages and remains 43.2\% after controls.
-    \item The pattern is not only a formal-informal difference.
-    \item The strongest premium is within informal employment.
-    \item The policy question is not how to move workers mechanically into large firms, but why so many workers remain in small, informal, low-paying units.
-  \end{itemize}
-\end{frame}
-
-\begin{frame}{Questions for Discussion}
-  \begin{enumerate}
-    \item How much of the conditional premium reflects unobserved selection, and how much reflects firm-side differences?
-    \item Which policies help productive informal units grow without subsidizing informality?
-    \item What data would allow us to move from a diagnostic statistic to a more direct test of allocative efficiency?
-    \item How should this evidence be connected to productivity, education, regulation, and market access?
-  \end{enumerate}
-\end{frame}
+\input{Slides/main_results}
 
 \appendix
+\input{Slides/backup_figures}
 \sectionframe{Appendix. Complete Paper Tables}
-
-\begin{frame}{Paper Table 1: Employment Shares and Hourly Income}
-  \centering
-  \tiny
-  \setlength{\tabcolsep}{2.8pt}
-  \renewcommand{\arraystretch}{0.95}
-  \resizebox{0.99\textwidth}{!}{%
-  \begin{tabular}{lrrrrrrr}
-    \toprule
-    & \multicolumn{2}{c}{Employment share} & \multicolumn{2}{c}{Mean hourly income} & \multicolumn{2}{c}{Wage ratio to solo} & Wage growth \\
-    \cmidrule(lr){2-3} \cmidrule(lr){4-5} \cmidrule(lr){6-7} \cmidrule(lr){8-8}
-    Firm size & 2008 & 2025 & 2008 & 2025 & 2008 & 2025 & Annualized \\
-    \midrule
-    Solo & 36.1\% & 34.7\% & 5,388 & 6,534 & 1.0 & 1.0 & 1.1\% \\
-    2--3 & 19.6\% & 13.8\% & 6,242 & 7,242 & 1.2 & 1.1 & 0.9\% \\
-    4--5 & 7.3\% & 7.0\% & 7,196 & 8,242 & 1.3 & 1.3 & 0.8\% \\
-    6--10 & 5.9\% & 5.8\% & 7,543 & 9,663 & 1.4 & 1.5 & 1.5\% \\
-    11--19 & 3.4\% & 3.9\% & 8,679 & 11,634 & 1.6 & 1.8 & 1.7\% \\
-    20--30 & 3.3\% & 3.3\% & 8,905 & 11,201 & 1.7 & 1.7 & 1.4\% \\
-    31--50 & 2.6\% & 3.0\% & 10,424 & 12,574 & 1.9 & 1.9 & 1.1\% \\
-    51--100 & 3.0\% & 3.5\% & 10,682 & 13,217 & 2.0 & 2.0 & 1.3\% \\
-    101+ & 18.8\% & 25.2\% & 12,943 & 16,859 & 2.4 & 2.6 & 1.6\% \\
-    \addlinespace
-    All workers & 100.0\% & 100.0\% & 7,752 & 10,295 & 1.4 & 1.6 & 1.7\% \\
-    \bottomrule
-  \end{tabular}}
-
-  \regnote{Mean hourly income is expressed in constant 2025 pesos. Wage ratios divide each firm-size mean by the solo-worker mean in the same year.}
-\end{frame}
-
-\begin{frame}{Appendix Table: Hourly Income Relative to 101+ Workers}
-  \centering
-  \tiny
-  \setlength{\tabcolsep}{2.8pt}
-  \renewcommand{\arraystretch}{0.95}
-  \resizebox{0.99\textwidth}{!}{%
-  \begin{tabular}{lrrrrrrr}
-    \toprule
-    & \multicolumn{2}{c}{Employment share} & \multicolumn{2}{c}{Mean hourly income} & \multicolumn{2}{c}{Wage ratio to 101+} & Wage growth \\
-    \cmidrule(lr){2-3} \cmidrule(lr){4-5} \cmidrule(lr){6-7} \cmidrule(lr){8-8}
-    Firm size & 2008 & 2025 & 2008 & 2025 & 2008 & 2025 & Annualized \\
-    \midrule
-    Solo & 36.1\% & 34.7\% & 5,388 & 6,534 & 0.42 & 0.39 & 1.1\% \\
-    2--3 & 19.6\% & 13.8\% & 6,242 & 7,242 & 0.48 & 0.43 & 0.9\% \\
-    4--5 & 7.3\% & 7.0\% & 7,196 & 8,242 & 0.56 & 0.49 & 0.8\% \\
-    6--10 & 5.9\% & 5.8\% & 7,543 & 9,663 & 0.58 & 0.57 & 1.5\% \\
-    11--19 & 3.4\% & 3.9\% & 8,679 & 11,634 & 0.67 & 0.69 & 1.7\% \\
-    20--30 & 3.3\% & 3.3\% & 8,905 & 11,201 & 0.69 & 0.66 & 1.4\% \\
-    31--50 & 2.6\% & 3.0\% & 10,424 & 12,574 & 0.81 & 0.75 & 1.1\% \\
-    51--100 & 3.0\% & 3.5\% & 10,682 & 13,217 & 0.83 & 0.78 & 1.3\% \\
-    101+ & 18.8\% & 25.2\% & 12,943 & 16,859 & 1.00 & 1.00 & 1.6\% \\
-    \addlinespace
-    All workers & 100.0\% & 100.0\% & 7,752 & 10,295 & 0.60 & 0.61 & 1.7\% \\
-    \bottomrule
-  \end{tabular}}
-
-  \regnote{Same descriptive table as Paper Table 1, but wage ratios use 101+ workers as the reference category.}
-\end{frame}
-
-\begin{frame}{Appendix Table: Hourly Income Relative to 11--19 Workers}
-  \centering
-  \tiny
-  \setlength{\tabcolsep}{2.8pt}
-  \renewcommand{\arraystretch}{0.95}
-  \resizebox{0.99\textwidth}{!}{%
-  \begin{tabular}{lrrrrrrr}
-    \toprule
-    & \multicolumn{2}{c}{Employment share} & \multicolumn{2}{c}{Mean hourly income} & \multicolumn{2}{c}{Wage ratio to 11--19} & Wage growth \\
-    \cmidrule(lr){2-3} \cmidrule(lr){4-5} \cmidrule(lr){6-7} \cmidrule(lr){8-8}
-    Firm size & 2008 & 2025 & 2008 & 2025 & 2008 & 2025 & Annualized \\
-    \midrule
-    Solo & 36.1\% & 34.7\% & 5,388 & 6,534 & 0.62 & 0.56 & 1.1\% \\
-    2--3 & 19.6\% & 13.8\% & 6,242 & 7,242 & 0.72 & 0.62 & 0.9\% \\
-    4--5 & 7.3\% & 7.0\% & 7,196 & 8,242 & 0.83 & 0.71 & 0.8\% \\
-    6--10 & 5.9\% & 5.8\% & 7,543 & 9,663 & 0.87 & 0.83 & 1.5\% \\
-    11--19 & 3.4\% & 3.9\% & 8,679 & 11,634 & 1.00 & 1.00 & 1.7\% \\
-    20--30 & 3.3\% & 3.3\% & 8,905 & 11,201 & 1.03 & 0.96 & 1.4\% \\
-    31--50 & 2.6\% & 3.0\% & 10,424 & 12,574 & 1.20 & 1.08 & 1.1\% \\
-    51--100 & 3.0\% & 3.5\% & 10,682 & 13,217 & 1.23 & 1.14 & 1.3\% \\
-    101+ & 18.8\% & 25.2\% & 12,943 & 16,859 & 1.49 & 1.45 & 1.6\% \\
-    \addlinespace
-    All workers & 100.0\% & 100.0\% & 7,752 & 10,295 & 0.89 & 0.88 & 1.7\% \\
-    \bottomrule
-  \end{tabular}}
-
-  \regnote{Same descriptive table as Paper Table 1, but wage ratios use the 11--19 category as the reference.}
-\end{frame}
-
-\begin{frame}{Paper Table 2: Wage Gaps by Worker Group, 2025}
-  \centering
-  \tiny
-  \setlength{\tabcolsep}{3pt}
-  \renewcommand{\arraystretch}{0.95}
-  \resizebox{0.98\textwidth}{!}{%
-  \begin{tabular}{llrrrr}
-    \toprule
-    Dimension & Group & Employment share & Mean income & Gap & Ratio \\
-    \midrule
-    Sex & Men & 58.8\% & 10,236 & -0.6\% & 1.00 \\
-        & Women & 41.2\% & 10,379 & 0.8\% & 1.01 \\
-    \midrule
-    Formality & Formal & 44.9\% & 15,241 & 48.0\% & 2.43 \\
-              & Informal & 55.1\% & 6,271 & -39.1\% & 1.00 \\
-    \midrule
-    Education & Preschool or less & 2.9\% & 4,333 & -57.9\% & 1.00 \\
-              & Primary & 18.1\% & 5,693 & -44.7\% & 1.31 \\
-              & Secondary & 45.5\% & 7,085 & -31.2\% & 1.63 \\
-              & Higher education & 33.5\% & 17,667 & 71.6\% & 4.08 \\
-    \bottomrule
-  \end{tabular}}
-
-  \regnote{The gap is the percent difference relative to the overall 2025 weighted mean. The ratio uses the lowest mean within each dimension as reference.}
-\end{frame}
-
-\begin{frame}{Paper Table 2: Sector Wage Gaps, 2025}
-  \centering
-  \tiny
-  \setlength{\tabcolsep}{2.4pt}
-  \renewcommand{\arraystretch}{0.88}
-  \resizebox{0.98\textwidth}{!}{%
-  \begin{tabular}{lrrrr}
-    \toprule
-    Activity & Employment share & Mean income & Gap & Ratio \\
-    \midrule
-    A - Agriculture & 13.8\% & 6,036 & -41.4\% & 1.00 \\
-    T - Household employers & 3.1\% & 6,454 & -37.3\% & 1.07 \\
-    I - Accommodation and food & 7.6\% & 6,930 & -32.7\% & 1.15 \\
-    H - Transport & 7.8\% & 7,775 & -24.5\% & 1.29 \\
-    F - Construction & 6.9\% & 8,406 & -18.3\% & 1.39 \\
-    G - Commerce & 17.0\% & 8,535 & -17.1\% & 1.41 \\
-    R/S - Arts and other services & 5.4\% & 8,765 & -14.9\% & 1.45 \\
-    C - Manufacturing & 11.0\% & 9,591 & -6.8\% & 1.59 \\
-    D/E - Utilities and water & 1.3\% & 11,295 & 9.7\% & 1.87 \\
-    B - Mining & 1.3\% & 11,441 & 11.1\% & 1.90 \\
-    L/M/N - Business services & 9.0\% & 13,459 & 30.7\% & 2.23 \\
-    Q - Health & 4.4\% & 14,859 & 44.3\% & 2.46 \\
-    P - Education & 4.2\% & 19,980 & 94.1\% & 3.31 \\
-    K - Finance and insurance & 1.9\% & 21,389 & 107.8\% & 3.54 \\
-    O - Public administration & 3.6\% & 21,508 & 108.9\% & 3.56 \\
-    J - Information and communication & 1.7\% & 21,903 & 112.8\% & 3.63 \\
-    \bottomrule
-  \end{tabular}}
-
-  \regnote{Sector rows omit extraterritorial organizations. Mean income is real hourly labor income in constant 2025 pesos.}
-\end{frame}
-
-\begin{frame}{Paper Table 3: Worker Characteristics by Firm Size, 2025}
-  \centering
-  \scriptsize
-  \setlength{\tabcolsep}{5pt}
-  \renewcommand{\arraystretch}{0.95}
-  \begin{tabular}{lrrrr}
-    \toprule
-    Firm size & Women & Formal & Higher education & Mean age \\
-    \midrule
-    Solo & 41.3\% & 8.3\% & 16.7\% & 44.5 \\
-    2--3 & 34.6\% & 13.0\% & 17.0\% & 41.3 \\
-    4--5 & 36.5\% & 24.2\% & 20.2\% & 37.6 \\
-    6--10 & 40.5\% & 46.6\% & 29.9\% & 37.0 \\
-    11--19 & 40.4\% & 64.4\% & 38.8\% & 37.2 \\
-    20--30 & 42.7\% & 81.2\% & 45.4\% & 37.0 \\
-    31--50 & 41.2\% & 90.4\% & 51.0\% & 37.5 \\
-    51--100 & 43.7\% & 94.3\% & 53.4\% & 37.5 \\
-    101+ & 45.8\% & 98.0\% & 62.9\% & 38.0 \\
-    \bottomrule
-  \end{tabular}
-
-  \regnote{Statistics use 2025 observations and GEIH expansion weights. Higher education corresponds to superior or university education.}
-\end{frame}
-
-\begin{frame}{Paper Table 4: Profile of Formal Workers, 2025}
-  \centering
-  \tiny
-  \setlength{\tabcolsep}{4pt}
-  \renewcommand{\arraystretch}{0.90}
-  \resizebox{0.98\textwidth}{!}{%
-  \begin{tabular}{lrrr}
-    \toprule
-    Characteristic & Formal solo & Formal 2--100 & Formal 101+ \\
-    \midrule
-    Share of formal workers & 6.4\% & 38.7\% & 54.9\% \\
-    Mean real hourly income & 15,990 & 12,696 & 16,944 \\
-    Mean age & 44.9 & 38.3 & 37.9 \\
-    Women & 43.3\% & 41.9\% & 45.7\% \\
-    Higher education & 50.9\% & 48.2\% & 63.4\% \\
-    Own-account workers & 82.1\% & 7.7\% & 9.6\% \\
-    Domestic workers & 16.2\% & 0.9\% & 0.0\% \\
-    Professional and administrative services & 22.8\% & 14.6\% & 9.4\% \\
-    Transport and storage & 15.6\% & 5.5\% & 5.6\% \\
-    Commerce and repair & 14.7\% & 21.1\% & 10.1\% \\
-    Health and social assistance & 5.2\% & 6.5\% & 10.6\% \\
-    Households as employers & 16.2\% & 0.9\% & 0.0\% \\
-    \bottomrule
-  \end{tabular}}
-
-  \regnote{The 2--100 column pools formal workers in firm-size categories from 2--3 through 51--100 workers.}
-\end{frame}
-
-\begin{frame}{Appendix Table: Main Regression with 101+ Reference}
-  \centering
-  \tiny
-  \setlength{\tabcolsep}{2.5pt}
-  \renewcommand{\arraystretch}{0.98}
-  \resizebox{0.98\textwidth}{!}{%
-  \begin{tabular}{lcccc}
-    \toprule
-    & \multicolumn{4}{c}{Dependent variable: log real hourly labor income} \\
-    \cmidrule(lr){2-5}
-    & (1) & (2) & (3) & (4) \\
-    \midrule
-    Firm size: Solo & -1.017*** \sereg{0.102} & -0.817*** \sereg{0.067} & -0.598*** \sereg{0.061} & -0.359*** \sereg{0.059} \\
-    Firm size: 2--3 & -0.833*** \sereg{0.097} & -0.575*** \sereg{0.056} & -0.389*** \sereg{0.046} & -0.171*** \sereg{0.042} \\
-    Firm size: 4--5 & -0.654*** \sereg{0.099} & -0.409*** \sereg{0.052} & -0.237*** \sereg{0.040} & -0.052 \sereg{0.032} \\
-    Firm size: 6--10 & -0.518*** \sereg{0.093} & -0.317*** \sereg{0.051} & -0.176*** \sereg{0.037} & -0.043 \sereg{0.033} \\
-    Firm size: 11--19 & -0.391*** \sereg{0.082} & -0.242*** \sereg{0.055} & -0.141*** \sereg{0.041} & -0.057 \sereg{0.039} \\
-    Firm size: 20--30 & -0.330*** \sereg{0.070} & -0.214*** \sereg{0.051} & -0.135*** \sereg{0.039} & -0.088** \sereg{0.038} \\
-    Firm size: 31--50 & -0.258*** \sereg{0.060} & -0.167*** \sereg{0.045} & -0.110*** \sereg{0.034} & -0.088** \sereg{0.034} \\
-    Firm size: 51--100 & -0.198*** \sereg{0.052} & -0.119*** \sereg{0.036} & -0.079** \sereg{0.027} & -0.070** \sereg{0.028} \\
-    \midrule
-    Gender, age, education & No & No & Yes & Yes \\
-    Formality & No & No & No & Yes \\
-    Sector-year fixed effects & No & Yes & Yes & Yes \\
-    Observations & 5,268,514 & 5,268,514 & 5,268,514 & 5,268,514 \\
-    $R^2$ & 0.213 & 0.271 & 0.376 & 0.386 \\
-    \bottomrule
-  \end{tabular}}
-
-  \regnote{Omitted category: workers in firms with 101 or more workers. Negative coefficients mean lower wages than 101+ workers.}
-\end{frame}
-
-\begin{frame}{Appendix Table: Main Regression with 11--19 Reference}
-  \centering
-  \tiny
-  \setlength{\tabcolsep}{2.5pt}
-  \renewcommand{\arraystretch}{0.98}
-  \resizebox{0.98\textwidth}{!}{%
-  \begin{tabular}{lcccc}
-    \toprule
-    & \multicolumn{4}{c}{Dependent variable: log real hourly labor income} \\
-    \cmidrule(lr){2-5}
-    & (1) & (2) & (3) & (4) \\
-    \midrule
-    Firm size: Solo & -0.625*** \sereg{0.034} & -0.575*** \sereg{0.040} & -0.457*** \sereg{0.042} & -0.302*** \sereg{0.050} \\
-    Firm size: 2--3 & -0.442*** \sereg{0.029} & -0.333*** \sereg{0.033} & -0.248*** \sereg{0.028} & -0.114*** \sereg{0.030} \\
-    Firm size: 4--5 & -0.262*** \sereg{0.028} & -0.167*** \sereg{0.021} & -0.096*** \sereg{0.021} & 0.005 \sereg{0.020} \\
-    Firm size: 6--10 & -0.127*** \sereg{0.016} & -0.075*** \sereg{0.010} & -0.035*** \sereg{0.010} & 0.014 \sereg{0.010} \\
-    Firm size: 20--30 & 0.062*** \sereg{0.016} & 0.028*** \sereg{0.008} & 0.005 \sereg{0.006} & -0.031*** \sereg{0.005} \\
-    Firm size: 31--50 & 0.134*** \sereg{0.027} & 0.075*** \sereg{0.014} & 0.030*** \sereg{0.009} & -0.031*** \sereg{0.007} \\
-    Firm size: 51--100 & 0.193*** \sereg{0.035} & 0.123*** \sereg{0.024} & 0.061*** \sereg{0.017} & -0.014 \sereg{0.015} \\
-    Firm size: 101+ & 0.391*** \sereg{0.082} & 0.242*** \sereg{0.055} & 0.141*** \sereg{0.041} & 0.057 \sereg{0.039} \\
-    \midrule
-    Gender, age, education & No & No & Yes & Yes \\
-    Formality & No & No & No & Yes \\
-    Sector-year fixed effects & No & Yes & Yes & Yes \\
-    Observations & 5,268,514 & 5,268,514 & 5,268,514 & 5,268,514 \\
-    $R^2$ & 0.213 & 0.271 & 0.376 & 0.386 \\
-    \bottomrule
-  \end{tabular}}
-
-  \regnote{Omitted category: workers in firms with 11--19 workers. Positive coefficients mean higher wages than this mid-size reference.}
-\end{frame}
-
-\begin{frame}{Appendix Table: Trend Test with 101+ Reference}
-  \centering
-  \scriptsize
-  \setlength{\tabcolsep}{3.5pt}
-  \begin{tabular}{lcccc}
-    \toprule
-    Firm size & Annual trend & S.E. & $p$-value & Implied 2008--2025 change \\
-    \midrule
-    Solo & -0.0045 & (0.0043) & 0.313 & -7.3\% \\
-    2--3 & -0.0012 & (0.0023) & 0.612 & -2.0\% \\
-    4--5 & -0.0013 & (0.0023) & 0.587 & -2.1\% \\
-    6--10 & -0.0023 & (0.0017) & 0.190 & -3.9\% \\
-    11--19 & -0.0017 & (0.0012) & 0.175 & -2.9\% \\
-    20--30 & -0.0026 & (0.0009) & 0.012 & -4.3\% \\
-    31--50 & -0.0017 & (0.0009) & 0.065 & -2.9\% \\
-    51--100 & -0.0018 & (0.0013) & 0.181 & -3.1\% \\
-    \bottomrule
-  \end{tabular}
-
-  \regnote{Omitted category: 101+ workers. A negative trend means that the listed category lost ground relative to 101+ workers.}
-\end{frame}
-
-\begin{frame}{Appendix Table: Trend Test with 11--19 Reference}
-  \centering
-  \scriptsize
-  \setlength{\tabcolsep}{3.5pt}
-  \begin{tabular}{lcccc}
-    \toprule
-    Firm size & Annual trend & S.E. & $p$-value & Implied 2008--2025 change \\
-    \midrule
-    Solo & -0.0027 & (0.0039) & 0.491 & -4.5\% \\
-    2--3 & 0.0005 & (0.0016) & 0.746 & 0.9\% \\
-    4--5 & 0.0005 & (0.0014) & 0.736 & 0.8\% \\
-    6--10 & -0.0006 & (0.0011) & 0.611 & -1.0\% \\
-    20--30 & -0.0009 & (0.0010) & 0.392 & -1.5\% \\
-    31--50 & 0.0000 & (0.0012) & 0.988 & 0.0\% \\
-    51--100 & -0.0001 & (0.0014) & 0.940 & -0.2\% \\
-    101+ & 0.0017 & (0.0012) & 0.175 & 3.0\% \\
-    \bottomrule
-  \end{tabular}
-
-  \regnote{Omitted category: 11--19 workers. Relative to this mid-size group, the 101+ trend is positive but not statistically significant.}
-\end{frame}
-
-\begin{frame}{Appendix Table: Firm Size by Formality with 101+ Reference}
-  \centering
-  \tiny
-  \setlength{\tabcolsep}{4pt}
-  \renewcommand{\arraystretch}{0.98}
-  \resizebox{0.94\textwidth}{!}{%
-  \begin{tabular}{lccc}
-    \toprule
-    Firm size & Informal coefficient $\hat{\beta}_g$ & Interaction $\hat{\theta}_g$ & Formal coefficient $\hat{\beta}_g+\hat{\theta}_g$ \\
-    \midrule
-    Solo & -0.336*** \sereg{0.046} & 0.182** \sereg{0.083} & -0.154* \sereg{0.088} \\
-    2--3 & -0.139*** \sereg{0.034} & 0.007 \sereg{0.047} & -0.132*** \sereg{0.040} \\
-    4--5 & 0.007 \sereg{0.031} & -0.136*** \sereg{0.048} & -0.129*** \sereg{0.033} \\
-    6--10 & 0.056* \sereg{0.029} & -0.187*** \sereg{0.046} & -0.131*** \sereg{0.035} \\
-    11--19 & 0.072*** \sereg{0.027} & -0.191*** \sereg{0.044} & -0.119*** \sereg{0.041} \\
-    20--30 & 0.066*** \sereg{0.024} & -0.196*** \sereg{0.042} & -0.130*** \sereg{0.040} \\
-    31--50 & 0.064*** \sereg{0.022} & -0.175*** \sereg{0.041} & -0.112*** \sereg{0.036} \\
-    51--100 & 0.073*** \sereg{0.021} & -0.158*** \sereg{0.039} & -0.085*** \sereg{0.030} \\
-    \bottomrule
-  \end{tabular}}
-
-  \regnote{Omitted category: 101+ workers within each formality group. Negative coefficients mean lower wages than 101+ workers in the same formality group.}
-\end{frame}
-
-\begin{frame}{Appendix Table: Firm Size by Formality with 11--19 Reference}
-  \centering
-  \tiny
-  \setlength{\tabcolsep}{4pt}
-  \renewcommand{\arraystretch}{0.98}
-  \resizebox{0.94\textwidth}{!}{%
-  \begin{tabular}{lccc}
-    \toprule
-    Firm size & Informal coefficient $\hat{\beta}_g$ & Interaction $\hat{\theta}_g$ & Formal coefficient $\hat{\beta}_g+\hat{\theta}_g$ \\
-    \midrule
-    Solo & -0.408*** \sereg{0.037} & 0.373*** \sereg{0.076} & -0.035 \sereg{0.080} \\
-    2--3 & -0.211*** \sereg{0.025} & 0.198*** \sereg{0.022} & -0.013 \sereg{0.025} \\
-    4--5 & -0.065*** \sereg{0.019} & 0.055*** \sereg{0.017} & -0.010 \sereg{0.018} \\
-    6--10 & -0.016 \sereg{0.010} & 0.004 \sereg{0.011} & -0.012 \sereg{0.012} \\
-    20--30 & -0.007 \sereg{0.006} & -0.005 \sereg{0.009} & -0.011** \sereg{0.005} \\
-    31--50 & -0.009 \sereg{0.010} & 0.015 \sereg{0.014} & 0.007 \sereg{0.008} \\
-    51--100 & 0.001 \sereg{0.023} & 0.033 \sereg{0.026} & 0.034** \sereg{0.015} \\
-    101+ & -0.072*** \sereg{0.027} & 0.191*** \sereg{0.044} & 0.119*** \sereg{0.041} \\
-    \bottomrule
-  \end{tabular}}
-
-  \regnote{Omitted category: 11--19 workers within each formality group.}
-\end{frame}
-
-\begin{frame}{Appendix Table: Robustness to Local Geography}
-  \centering
-  \scriptsize
-  \setlength{\tabcolsep}{2.6pt}
-  \renewcommand{\arraystretch}{0.96}
-  \resizebox{0.99\textwidth}{!}{%
-  \begin{tabular}{lcccc}
-    \toprule
-    & \multicolumn{4}{c}{Dependent variable: log real hourly labor income} \\
-    \cmidrule(lr){2-5}
-    & (1) & (2) & (3) & (4) \\
-    \midrule
-    Firm size: 2--3 & 0.188*** \sereg{0.011} & 0.168*** \sereg{0.011} & 0.167*** \sereg{0.011} & 0.102*** \sereg{0.013} \\
-    Firm size: 4--5 & 0.307*** \sereg{0.014} & 0.277*** \sereg{0.014} & 0.273*** \sereg{0.014} & 0.226*** \sereg{0.015} \\
-    Firm size: 6--10 & 0.316*** \sereg{0.018} & 0.282*** \sereg{0.017} & 0.278*** \sereg{0.017} & 0.265*** \sereg{0.016} \\
-    Firm size: 11--19 & 0.302*** \sereg{0.018} & 0.272*** \sereg{0.017} & 0.267*** \sereg{0.017} & 0.272*** \sereg{0.015} \\
-    Firm size: 20--30 & 0.271*** \sereg{0.019} & 0.241*** \sereg{0.017} & 0.237*** \sereg{0.017} & 0.258*** \sereg{0.015} \\
-    Firm size: 31--50 & 0.271*** \sereg{0.018} & 0.245*** \sereg{0.017} & 0.240*** \sereg{0.017} & 0.264*** \sereg{0.015} \\
-    Firm size: 51--100 & 0.289*** \sereg{0.018} & 0.262*** \sereg{0.017} & 0.257*** \sereg{0.017} & 0.282*** \sereg{0.015} \\
-    Firm size: 101+ & 0.359*** \sereg{0.023} & 0.338*** \sereg{0.024} & 0.325*** \sereg{0.024} & 0.338*** \sereg{0.022} \\
-    \midrule
-    Worker and formality controls & Yes & Yes & Yes & Yes \\
-    Occupational-position controls & No & No & No & Yes \\
-    Fixed effects & $s\times t$ & $s\times t$, $d\times t$ & $s\times d\times t$ & $s\times d\times t$ \\
-    Observations & 5,268,514 & 5,268,514 & 5,268,375 & 5,268,375 \\
-    $R^2$ & 0.386 & 0.404 & 0.414 & 0.429 \\
-    \bottomrule
-  \end{tabular}}
-
-  \regnote{Column (4) adds occupational-position controls to the sector-department-year fixed-effects specification.}
-\end{frame}
-
-\begin{frame}{Appendix Table: Local Geography with 101+ Reference}
-  \centering
-  \scriptsize
-  \setlength{\tabcolsep}{2.6pt}
-  \renewcommand{\arraystretch}{0.96}
-  \resizebox{0.99\textwidth}{!}{%
-  \begin{tabular}{lcccc}
-    \toprule
-    & \multicolumn{4}{c}{Dependent variable: log real hourly labor income} \\
-    \cmidrule(lr){2-5}
-    & (1) & (2) & (3) & (4) \\
-    \midrule
-    Firm size: Solo & -0.359*** \sereg{0.023} & -0.338*** \sereg{0.024} & -0.325*** \sereg{0.024} & -0.338*** \sereg{0.022} \\
-    Firm size: 2--3 & -0.171*** \sereg{0.018} & -0.171*** \sereg{0.018} & -0.158*** \sereg{0.018} & -0.236*** \sereg{0.016} \\
-    Firm size: 4--5 & -0.052*** \sereg{0.014} & -0.061*** \sereg{0.015} & -0.052*** \sereg{0.014} & -0.113*** \sereg{0.014} \\
-    Firm size: 6--10 & -0.043*** \sereg{0.012} & -0.056*** \sereg{0.013} & -0.047*** \sereg{0.013} & -0.073*** \sereg{0.012} \\
-    Firm size: 11--19 & -0.057*** \sereg{0.014} & -0.066*** \sereg{0.015} & -0.058*** \sereg{0.015} & -0.066*** \sereg{0.013} \\
-    Firm size: 20--30 & -0.088*** \sereg{0.014} & -0.097*** \sereg{0.015} & -0.088*** \sereg{0.015} & -0.080*** \sereg{0.013} \\
-    Firm size: 31--50 & -0.088*** \sereg{0.013} & -0.093*** \sereg{0.014} & -0.085*** \sereg{0.014} & -0.075*** \sereg{0.012} \\
-    Firm size: 51--100 & -0.070*** \sereg{0.012} & -0.076*** \sereg{0.013} & -0.068*** \sereg{0.012} & -0.056*** \sereg{0.011} \\
-    \midrule
-    Worker and formality controls & Yes & Yes & Yes & Yes \\
-    Occupational-position controls & No & No & No & Yes \\
-    Fixed effects & $s\times t$ & $s\times t$, $d\times t$ & $s\times d\times t$ & $s\times d\times t$ \\
-    Observations & 5,268,514 & 5,268,514 & 5,268,375 & 5,268,375 \\
-    $R^2$ & 0.386 & 0.404 & 0.414 & 0.429 \\
-    \bottomrule
-  \end{tabular}}
-
-  \regnote{Omitted category: workers in firms with 101 or more workers. Standard errors are clustered by sector-department cells.}
-\end{frame}
-
-\begin{frame}{Appendix Table: Local Geography with 11--19 Reference}
-  \centering
-  \scriptsize
-  \setlength{\tabcolsep}{2.6pt}
-  \renewcommand{\arraystretch}{0.96}
-  \resizebox{0.99\textwidth}{!}{%
-  \begin{tabular}{lcccc}
-    \toprule
-    & \multicolumn{4}{c}{Dependent variable: log real hourly labor income} \\
-    \cmidrule(lr){2-5}
-    & (1) & (2) & (3) & (4) \\
-    \midrule
-    Firm size: Solo & -0.302*** \sereg{0.018} & -0.272*** \sereg{0.017} & -0.267*** \sereg{0.017} & -0.272*** \sereg{0.015} \\
-    Firm size: 2--3 & -0.114*** \sereg{0.013} & -0.104*** \sereg{0.011} & -0.100*** \sereg{0.011} & -0.170*** \sereg{0.009} \\
-    Firm size: 4--5 & 0.005 \sereg{0.008} & 0.005 \sereg{0.008} & 0.006 \sereg{0.008} & -0.047*** \sereg{0.007} \\
-    Firm size: 6--10 & 0.014*** \sereg{0.005} & 0.010** \sereg{0.005} & 0.011** \sereg{0.005} & -0.007 \sereg{0.004} \\
-    Firm size: 20--30 & -0.031*** \sereg{0.004} & -0.031*** \sereg{0.004} & -0.030*** \sereg{0.004} & -0.014*** \sereg{0.004} \\
-    Firm size: 31--50 & -0.031*** \sereg{0.005} & -0.027*** \sereg{0.005} & -0.027*** \sereg{0.005} & -0.008* \sereg{0.004} \\
-    Firm size: 51--100 & -0.014* \sereg{0.007} & -0.010 \sereg{0.007} & -0.010 \sereg{0.007} & 0.010 \sereg{0.007} \\
-    Firm size: 101+ & 0.057*** \sereg{0.014} & 0.066*** \sereg{0.015} & 0.058*** \sereg{0.015} & 0.066*** \sereg{0.013} \\
-    \midrule
-    Worker and formality controls & Yes & Yes & Yes & Yes \\
-    Occupational-position controls & No & No & No & Yes \\
-    Fixed effects & $s\times t$ & $s\times t$, $d\times t$ & $s\times d\times t$ & $s\times d\times t$ \\
-    Observations & 5,268,514 & 5,268,514 & 5,268,375 & 5,268,375 \\
-    $R^2$ & 0.386 & 0.404 & 0.414 & 0.429 \\
-    \bottomrule
-  \end{tabular}}
-
-  \regnote{Omitted category: workers in firms with 11--19 workers. Standard errors are clustered by sector-department cells.}
-\end{frame}
-
-\begin{frame}{References Mentioned}
-  \scriptsize
-  \begin{itemize}
-    \item Abowd, Kramarz, and Margolis (1999). High wage workers and high wage firms.
-    \item Balkan and Tumen (2016). Firm-size wage gaps and informality in Turkey.
-    \item Brown and Medoff (1989). The employer size-wage effect.
-    \item Card, Heining, and Kline (2013). Workplace heterogeneity and wage inequality.
-    \item Diegmann, Muller, and Schoefer (2026). The disappearing large-firm wage premium.
-    \item El Badaoui, Strobl, and Walsh (2010). Is there an informal employment wage penalty?
-    \item Hsieh and Klenow (2009). Misallocation and manufacturing TFP.
-    \item Reed (2019). The firm-size wage premium in developing economies.
-  \end{itemize}
-\end{frame}
+\input{Slides/generated/all_paper_tables}
 
 \end{document}
