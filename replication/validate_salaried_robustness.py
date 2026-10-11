@@ -9,7 +9,7 @@ ROOT = Path(__file__).resolve().parents[1]
 OUT = ROOT / "replication/salaried_output"
 sys.path.insert(0, str(ROOT / "build/qa_dependencies"))
 import numpy as np
-from scipy.stats import t
+from scipy.stats import t, f
 
 
 def read(name):
@@ -74,6 +74,38 @@ for row in read("reference_invariance_check"):
 for row in read("unaffected_model_checks"):
     assert max(abs(float(row[k])) for k in ("max_coef_error", "max_covariance_error")) < 1e-7
 
+tests = read("formality_equality_tests")
+assert len(tests) == 8
+for row in tests:
+    sample, clustering = row["sample"], row["clustering"]
+    names = list(coefs[sample])
+    b = np.array([coefs[sample][name] for name in names])
+    V = np.array([[covariance[sample][clustering, a, c] for c in names] for a in names])
+    df = float(models[sample]["df_sector" if clustering == "Sector" else "df"])
+    assert float(row["df_den"]) == df
+    if row["test"] == "101+/solo equality":
+        parts = [(profile(sample, "101+", "Formal"), 1), (profile(sample, "Solo", "Formal"), -1),
+                 (profile(sample, "101+", "Informal"), -1), (profile(sample, "Solo", "Informal"), 1)]
+        z = np.array([sum(sign*p.get(name, 0) for p, sign in parts) for name in names])
+        estimate, se = float(z@b), math.sqrt(float(z@V@z))
+        assert abs(estimate-float(row["estimate"])) < 1e-10
+        assert abs(se-float(row["std.error"])) < 1e-10
+        statistic, p = estimate/se, 2*t.sf(abs(estimate/se), df)
+    else:
+        assert row["test"] == "Joint profile equality"
+        # Test the eight interaction coefficients directly in the fitted base.
+        # This is equivalent to R's eight differences of solo-based contrasts.
+        indices = [i for i, name in enumerate(names) if "tamano_empresa::" in name
+                   and (name.endswith(":formal") or name.startswith("formal:"))]
+        assert len(indices) == int(row["df_num"]) == 8
+        d = b[indices]
+        C = V[np.ix_(indices, indices)]
+        assert np.linalg.matrix_rank(C) == 8
+        statistic = float(d@np.linalg.solve(C, d)/8)
+        p = f.sf(statistic, 8, df)
+    assert abs(statistic-float(row["statistic"])) < 1e-8
+    assert abs(p-float(row["p.value"])) < 1e-10
+
 # Check every displayed coefficient, star, and standard error against the CSV.
 lookup = {(r["sample"], r["group"], r["size"]): r for r in contrasts
           if r["reference"] == "11-19" and r["clustering"] == "Sector-department"}
@@ -94,10 +126,24 @@ for i, line in enumerate(lines):
         assert abs(float(se)-float(row["std.error"])) <= .000501
         checked += 1
 assert checked == 32
-summary = next(line for line in lines if "101+/solo premium" in line)
-displayed = [float(x.strip()) for x in summary.strip().removesuffix(r"\\").split("&")[1:]]
-for (sample, group), value in zip([(s, g) for s in models for g in ("Informal", "Formal")], displayed):
-    row = next(r for r in contrasts if r["sample"] == sample and r["group"] == group and r["size"] == "101+"
-               and r["reference"] == "Solo" and r["clustering"] == "Sector-department")
-    assert abs(value-float(row["premium"])) < .05001
-print(f"PASS: {len(contrasts)} full-covariance contrasts, {checked} table coefficients, sample accounting, harmonization, and reference invariance.")
+for size in ("11-19", "101+"):
+    summary = next(line for line in lines if size.replace("-", "--")+"/solo premium" in line)
+    displayed = [float(x.strip()) for x in summary.strip().removesuffix(r"\\").split("&")[1:]]
+    for (sample, group), value in zip([(s, g) for s in models for g in ("Informal", "Formal")], displayed):
+        row = next(r for r in contrasts if r["sample"] == sample and r["group"] == group and r["size"] == size
+                   and r["reference"] == "Solo" and r["clustering"] == "Sector-department")
+        assert abs(value-float(row["premium"])) < .05001
+for label, test in [("Equal 101+/solo premiums", "101+/solo equality"), ("Equal size profiles", "Joint profile equality")]:
+    line = next(line for line in lines if label in line)
+    cells = re.findall(r"\\multicolumn\{2\}\{c\}\{([^}]+)\}", line)
+    assert len(cells) == 2
+    for sample, cell in zip(("All", "Salaried"), cells):
+        p = float(next(r for r in tests if r["sample"] == sample and r["test"] == test
+                       and r["clustering"] == "Sector-department")["p.value"])
+        assert cell == ("$<0.001$" if p < .001 else f"{p:.3f}")
+results = (ROOT / "Paper/sections/results.tex").read_text(encoding="utf-8")
+table_input = r"\input{Paper/sections/regression_salaried_robustness_table}"
+assert results.count(table_input) == 1
+assert results.index(table_input) < results.index(r"\subsection{Dynamic Results}")
+assert table_input not in (ROOT / "Paper/sections/comparison_results_appendix.tex").read_text(encoding="utf-8")
+print(f"PASS: {len(contrasts)} full-covariance contrasts, {checked} table coefficients, eight equality tests, summary rows, sample accounting, and main-text placement.")

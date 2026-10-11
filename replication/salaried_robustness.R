@@ -145,6 +145,7 @@ if (file.exists(old_path)) {
   write_csv(invariance, "unaffected_model_checks")
 }
 saveRDS(models, file.path(out, "aggregate_models.rds"))
+source(file.path(paper, "replication/salaried_formality_tests.R"))
 writeLines(c(paste("Occupation harmonization:", occupation_harmonization_version),
   "Employees: private-sector, government, domestic, and day laborers. Formal and informal workers retained.",
   "Same pooled preferred controls. One size-by-formality regression for the employee sample.",

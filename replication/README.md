@@ -52,6 +52,22 @@ contrasts and standard errors. The Python validator reconstructs them using
 the full covariance matrices and checks every displayed coefficient and S.E.
 These are sample-sensitivity comparisons, not causal decompositions.
 
+The table is in the main results, immediately before Dynamic Results. Its
+summary rows distinguish the 101+/solo comparison from the full size profile.
+`salaried_formality_tests.R` computes a two-sided test of equality of formal and
+informal 101+/solo log contrasts and an eight-restriction joint Wald F test of
+equality of the solo-based size profiles. It uses the full coefficient covariance,
+with both sector-department and sector clustering. The salaried script calls it
+automatically. To rerun these tests without refitting the regressions, run
+`Rscript --vanilla replication/salaried_formality_tests.R` after generating
+the local aggregate-model cache. Results are committed in
+`salaried_output/formality_equality_tests.csv`.
+The Python validator independently tests the eight interaction coefficients
+in the fitted reference category, rather than R's solo-based contrast matrix,
+and verifies the displayed p-values. Among salaried workers, the baseline
+101+/solo equality test has p = 0.897, but the joint profile test has p < 0.001.
+Failing to reject the former is not proof that the two premiums are identical.
+
 For a complete rebuild, run the regression table updater before
 `income_counterfactuals.R`, then build its tables before running
 `validate_regression_outputs.py`. That validator checks agreement between
