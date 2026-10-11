@@ -146,4 +146,30 @@ table_input = r"\input{Paper/sections/regression_salaried_robustness_table}"
 assert results.count(table_input) == 1
 assert results.index(table_input) < results.index(r"\subsection{Dynamic Results}")
 assert table_input not in (ROOT / "Paper/sections/comparison_results_appendix.tex").read_text(encoding="utf-8")
-print(f"PASS: {len(contrasts)} full-covariance contrasts, {checked} table coefficients, eight equality tests, summary rows, sample accounting, and main-text placement.")
+
+# Verify all plotted values and the common vertical scale against the source CSVs.
+plot_rows = read("figure_profiles")
+assert len(plot_rows) == len({(r["group"], r["size"]) for r in plot_rows}) == 16
+solo_rows = {(r["group"], r["size"]): r for r in contrasts if r["sample"] == "Salaried"
+             and r["reference"] == "Solo" and r["clustering"] == "Sector-department"}
+with (ROOT / "replication/preferred_output/profiles.csv").open(encoding="utf-8-sig", newline="") as stream:
+    full = [r for r in csv.DictReader(stream) if r["reference"] == "Solo"]
+bounds = [0] + [float(r[k]) for r in full for k in ("ci_low", "ci_high")]
+bounds += [max(float(r["ci_high"])+2.5, 4) for r in full]
+low, high = min(bounds), max(bounds)
+for row in plot_rows:
+    source = solo_rows[row["group"], row["size"]]
+    for key in ("estimate", "std.error", "premium", "ci_low", "ci_high", "p.value", "df"):
+        assert abs(float(row[key])-float(source[key])) < 1e-10
+    assert row["label"] == f'{float(source["premium"]):.1f}%'
+    assert (row["significant"] == "TRUE") == (float(source["p.value"]) < .05)
+    assert abs(float(row["axis_min"])-(low-.07*(high-low))) < 1e-9
+    assert abs(float(row["axis_max"])-(high+.14*(high-low))) < 1e-9
+    assert float(row["axis_min"]) <= float(row["ci_low"]) <= float(row["ci_high"]) <= float(row["axis_max"])
+from PIL import Image
+for lang in ("en", "es"):
+    with Image.open(ROOT / f"Paper/figures/salaried_formality_premiums_{lang}.png") as picture:
+        assert picture.size == (3600, 1800)
+assert results.count(r"\label{fig:salaried-formality-premium}") == 1
+assert r"Figure~\ref{fig:salaried-formality-premium}" in results
+print(f"PASS: {len(contrasts)} full-covariance contrasts, {checked} table coefficients, eight equality tests, 16 plotted estimates and intervals, common figure scale, sample accounting, and main-text placement.")

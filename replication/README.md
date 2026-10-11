@@ -37,6 +37,7 @@ After `reconcile_regressions.R` and `preferred_extensions.R`, run:
 ```sh
 Rscript --vanilla replication/salaried_robustness.R
 python replication/build_salaried_table.py
+Rscript --vanilla replication/plot_salaried_robustness.R
 python replication/validate_salaried_robustness.py
 ```
 
@@ -67,6 +68,15 @@ in the fitted reference category, rather than R's solo-based contrast matrix,
 and verifies the displayed p-values. Among salaried workers, the baseline
 101+/solo equality test has p = 0.897, but the joint profile test has p < 0.001.
 Failing to reject the former is not proof that the two premiums are identical.
+
+The accompanying figure plots the salaried-only model's contrasts relative to
+solo employees within each formality group, using sector-department-clustered
+95 percent confidence intervals. `plot_salaried_robustness.R` generates English
+and Spanish PNGs in `Paper/figures` without refitting any regression. It preserves
+the full-sample preferred figure's category order, styling, and vertical scale.
+The plotted estimates, bounds, labels, and axis limits are recorded in
+`salaried_output/figure_profiles.csv` and checked against the regression outputs
+by the validator. Both figures remain in the main text.
 
 For a complete rebuild, run the regression table updater before
 `income_counterfactuals.R`, then build its tables before running
