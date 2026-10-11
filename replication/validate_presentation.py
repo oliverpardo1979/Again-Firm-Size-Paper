@@ -6,7 +6,7 @@ import json
 import re
 from pathlib import Path
 
-from build_presentation_assets import ROOT, command, group, merge_se_rows, rows
+from build_presentation_assets import ROOT, expand, group, merge_se_rows, rows
 
 
 def read(path):
@@ -46,6 +46,9 @@ def validate():
     results = read(ROOT / "Slides/main_results.tex")
     backup = read(ROOT / "Slides/backup_figures.tex")
     all_slides = main + results + backup
+    references = read(ROOT / "Slides/generated/paper_references.tex")
+    for label in re.findall(r"\\paperref\{([^}]+)\}", all_slides):
+        assert "paperref@" + label + r"\endcsname" in references, label
     for figure in manifest["figures"]:
         assert figure["file"] in all_slides, figure
     for entry in manifest["tables"]:
@@ -79,6 +82,25 @@ def validate():
     characteristics = selected_rows(read(ROOT / "Paper/sections/descriptive_worker_characteristics_2025_table.tex"))
     for size, cells in selected_rows(frame(main, "Why the Raw Relationship Is Not Enough")).items():
         assert cells == characteristics[size], (size, cells)
+
+    for alias, source in (
+        ("sequential_controls", "regression_firm_size_table"),
+        ("common_geography", "regression_local_geography_robustness_table"),
+    ):
+        assert selected_rows(read(ROOT / f"Slides/generated/{alias}.tex")) == selected_rows(
+            read(ROOT / f"Paper/sections/{source}.tex")), alias
+    titles = ["Start with the Simplest Specification", "Adding Controls Reduces the 101+/Solo Premium",
+              "Then Add Geography and Occupational Position", "The Preferred Specification"]
+    positions = [results.index(r"\begin{frame}{" + title + "}") for title in titles]
+    assert positions == sorted(positions)
+    paper = expand(ROOT / "main.tex")
+    sequence = ["tab:firm-size-wage-premium-regressions", "tab:firm-size-local-geography-robustness",
+                "tab:firm-size-local-geography-formality-robustness"]
+    table_positions = [paper.index(r"\label{" + label + "}") for label in sequence]
+    assert table_positions == sorted(table_positions)
+    assert table_positions[-1] < paper.index(r"\appendix")
+    for label in sequence + ["eq:common-premium", "eq:main"]:
+        assert paper.count(r"\label{" + label + "}") == 1, label
 
     log_path = ROOT / "build/presentacion_javeriana.log"
     if log_path.exists():

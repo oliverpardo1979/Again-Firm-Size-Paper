@@ -1,10 +1,50 @@
 \section{Results}
 
+\subsection{From Raw to Conditional Wage Gaps}
+\label{subsec:sequential-results}
+
+Table~\ref{tab:firm-size-wage-premium-regressions} begins with the simplest
+specification and adds controls in successive columns. In column (1), which
+contains only firm-size indicators, the 101+/solo coefficient is 1.017 log
+points. Adding sector-year fixed effects lowers it to 0.817 in column (2).
+Adding sex, age, age squared, and education lowers it to 0.598 in column (3),
+and adding formality lowers it to 0.359 in column (4). The final coefficient
+corresponds to a conditional premium of 43.2 percent. All four estimates are
+statistically significant, and all four columns use the same sample.
+The reduction therefore reflects the added controls rather than changes in
+which observations enter the regressions.
+
+\input{Paper/sections/regression_firm_size_table}
+
+Observed worker characteristics, sector-year conditions, and formality account
+for a substantial part of the raw association between size and pay. A positive
+conditional gap remains. This pattern is consistent with evidence that worker
+composition accounts for part, but not all, of size-related wage differences
+\citep{BrownMedoff1989,troske1999evidence,Schaffner1998,
+SoderbomTealWambugu2005,reed2019large,iregui2012diferenciales}.
+The model still constrains the size coefficients to be common across formality
+groups. Adding formality as a control allows a level difference between formal
+and informal workers, but does not allow their firm-size premiums to differ.
+
+Table~\ref{tab:firm-size-local-geography-robustness} keeps that restriction
+and adds geographic and occupational-position controls. The 101+/solo
+coefficient is 0.359 with sector-year effects, 0.338 after adding department-year
+effects, and 0.325 with sector-department-year effects. Adding occupational
+position gives 0.338, equivalent to a 40.2 percent premium. Thus, more detailed
+controls do not eliminate the common-premium estimate, although it does not
+decline at every step. The next subsection asks whether a common size premium
+adequately describes formal and informal employment.
+
+\input{Paper/sections/regression_local_geography_robustness_table}
+\FloatBarrier
+
 \subsection{Preferred Firm-Size Premiums by Formality}
 \label{subsec:preferred-results}
 
-Table~\ref{tab:firm-size-local-geography-formality-robustness} reports the
-size-by-formality specifications. Column (4), our preferred model in
+Table~\ref{tab:firm-size-local-geography-formality-robustness} relaxes the
+common-premium restriction by interacting each size indicator with formality.
+Its four columns use the same control sequence as
+Table~\ref{tab:firm-size-local-geography-robustness}. Column (4), our preferred model in
 Equation~(\ref{eq:main}), includes worker characteristics, occupational-position
 controls, and sector-department-year fixed effects. Columns (1)--(3) show how
 the estimates change as geographic controls are added before controlling for
@@ -107,21 +147,14 @@ formal-sector premium in wages net of taxes \citep{ElBadaouiStroblWalsh2010}. Th
 within-formality size comparisons cannot be reduced to a contrast between
 formal and informal employment.
 
-The appendix retains the simpler models as comparisons.
-Table~\ref{tab:firm-size-wage-premium-regressions} and
-Figure~\ref{fig:firm-size-wage-premium} impose a common size premium across
-formality groups. The 101+ coefficient falls from 1.017 log points without
-controls to 0.359 after worker controls, sector-year effects, and formality,
-equivalent to 43.2 percent. This attenuation is consistent with evidence
-that worker composition accounts for part, but not all, of size-related pay
-differences \citep{BrownMedoff1989,troske1999evidence,Schaffner1998,
-SoderbomTealWambugu2005,reed2019large,iregui2012diferenciales}.
+Appendix Figure~\ref{fig:firm-size-wage-premium} displays the common-premium
+estimates from column (4) of Table~\ref{tab:firm-size-wage-premium-regressions}.
 Appendix Tables~\ref{tab:firm-size-wage-premium-regressions-101-reference}
 and \ref{tab:firm-size-wage-premium-regressions-11-19-reference} change its base.
-Tables~\ref{tab:firm-size-local-geography-robustness},
-\ref{tab:firm-size-local-geography-robustness-101-reference}, and
-\ref{tab:firm-size-local-geography-robustness-11-19-reference} add geographic
-and occupational-position controls while retaining that common-premium restriction.
+Tables~\ref{tab:firm-size-local-geography-robustness-101-reference} and
+\ref{tab:firm-size-local-geography-robustness-11-19-reference} do the same for
+the geographic and occupational-position specifications in
+Table~\ref{tab:firm-size-local-geography-robustness}.
 
 Appendix Table~\ref{tab:formality-interaction-coefficients} and
 Figure~\ref{fig:firm-size-formality-premium} relax the common-premium restriction

@@ -13,22 +13,13 @@ under both conventions.
 \input{Paper/sections/regression_preferred_extension_clustering_table}
 \FloatBarrier
 
-The common-premium comparison model is
-\begin{equation}\label{eq:common-premium}
-  \ln(w_{ist}) = \alpha
-  + \sum_{g\neq g_0} b_g D_{ig}
-  + X_{ist}'\gamma + \phi F_{ist}
-  + \lambda_{s\times t}+\varepsilon_{ist}.
-\end{equation}
-This model constrains the size coefficients to be the same for formal and
-informal workers and omits occupational-position controls.
-Table~\ref{tab:firm-size-wage-premium-regressions} starts with size indicators
-alone, then adds sector-year effects, worker characteristics, and formality.
-Figure~\ref{fig:firm-size-wage-premium} expresses the final column as
-percentage premiums. The following alternative-reference tables retain
-the same estimates and change only their normalization.
+The common-premium model in Equation~(\ref{eq:common-premium}) is estimated
+with sequential controls in Section~\ref{subsec:sequential-results}.
+Figure~\ref{fig:firm-size-wage-premium} expresses the final column of
+Table~\ref{tab:firm-size-wage-premium-regressions} as percentage premiums.
+The following alternative-reference tables retain the same estimates and
+change only their normalization.
 
-\input{Paper/sections/regression_firm_size_table}
 \begin{figure}[htbp]
   \centering
   \includegraphics[width=0.9\textwidth]{fig57_\figurelang.png}
@@ -38,15 +29,14 @@ the same estimates and change only their normalization.
 \input{Paper/sections/regression_firm_size_table_101_reference}
 \input{Paper/sections/regression_firm_size_table_11_19_reference}
 
-Tables~\ref{tab:firm-size-local-geography-robustness},
-\ref{tab:firm-size-local-geography-robustness-101-reference}, and
-\ref{tab:firm-size-local-geography-robustness-11-19-reference} add geographic
-and occupational-position controls while retaining the common-premium
-restriction. Their final columns give a 40.2 percent 101+/solo premium.
-Unlike the preferred model, these regressions do not allow the formal and
-informal size profiles to differ.
+Tables~\ref{tab:firm-size-local-geography-robustness-101-reference} and
+\ref{tab:firm-size-local-geography-robustness-11-19-reference} change the
+reference category in the common-premium models with geographic and
+occupational-position controls reported in
+Table~\ref{tab:firm-size-local-geography-robustness}. Unlike the preferred
+model, these regressions do not allow formal and informal size profiles
+to differ.
 
-\input{Paper/sections/regression_local_geography_robustness_table}
 \input{Paper/sections/regression_local_geography_robustness_101_reference_table}
 \input{Paper/sections/regression_local_geography_robustness_11_19_reference_table}
 \FloatBarrier

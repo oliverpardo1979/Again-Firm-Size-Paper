@@ -1,14 +1,23 @@
-% Generated from Paper/sections/regression_salaried_robustness_table.tex
-\begin{tabular}{lrrrr}
+% Generated from Paper/sections/regression_local_geography_formality_robustness_11_19_reference_table.tex
+\begin{tabular}{lcccc}
 \toprule
-    & \multicolumn{2}{c}{All workers} & \multicolumn{2}{c}{Salaried workers} \\
-    \cmidrule(lr){2-3}\cmidrule(lr){4-5}
-    Firm size & Informal & Formal & Informal & Formal \\
+    & \multicolumn{4}{c}{Dependent variable: log real hourly labor income} \\
+    \cmidrule(lr){2-5}
+    & (1) & (2) & (3) & \textbf{(4)} \\
     \midrule
-
-    11--19/solo premium (\%) & 42.4 & 4.0 & 24.7 & 6.5 \\
-101+/solo premium (\%) & 37.1 & 16.5 & 20.6 & 20.2 \\
-Equal 101+/solo premiums: $p$ & \multicolumn{2}{c}{$<0.001$} & \multicolumn{2}{c}{0.897} \\
-Equal size profiles: $p$ & \multicolumn{2}{c}{$<0.001$} & \multicolumn{2}{c}{$<0.001$} \\
-Observations & \multicolumn{2}{c}{5,268,375} & \multicolumn{2}{c}{2,682,009}\\
+\multicolumn{5}{l}{\textit{Formal workers}} \\
+Firm size: Solo & -0.035 \sereg{0.034} & -0.038 \sereg{0.035} & -0.033 \sereg{0.034} & -0.039 \sereg{0.032} \\
+Firm size: 2-3 & -0.013 \sereg{0.014} & -0.014 \sereg{0.014} & -0.013 \sereg{0.013} & -0.112*** \sereg{0.014} \\
+Firm size: 4-5 & -0.010 \sereg{0.009} & -0.011 \sereg{0.008} & -0.010 \sereg{0.008} & -0.062*** \sereg{0.008} \\
+Firm size: 6-10 & -0.012* \sereg{0.007} & -0.015** \sereg{0.007} & -0.014** \sereg{0.007} & -0.027*** \sereg{0.006} \\
+Firm size: 20-30 & -0.011** \sereg{0.005} & -0.013*** \sereg{0.004} & -0.012*** \sereg{0.004} & -0.000 \sereg{0.004} \\
+Firm size: 31-50 & 0.007 \sereg{0.005} & 0.008 \sereg{0.005} & 0.007 \sereg{0.005} & 0.020*** \sereg{0.005} \\
+Firm size: 51-100 & 0.034*** \sereg{0.007} & 0.033*** \sereg{0.007} & 0.033*** \sereg{0.007} & 0.046*** \sereg{0.007} \\
+Firm size: 101+ & 0.119*** \sereg{0.015} & 0.123*** \sereg{0.016} & 0.114*** \sereg{0.016} & 0.113*** \sereg{0.014} \\
+\midrule
+    Worker controls & Yes & Yes & Yes & Yes \\
+Occupational-position controls & No & No & No & Yes \\
+Fixed effects & $s\times t$ & $s\times t$, $d\times t$ & $s\times d\times t$ & $s\times d\times t$ \\
+Observations & 5,268,514 & 5,268,514 & 5,268,375 & 5,268,375 \\
+$R^2$ & 0.388 & 0.406 & 0.416 & 0.431\\
 \bottomrule\end{tabular}

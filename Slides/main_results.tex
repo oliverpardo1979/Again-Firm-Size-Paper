@@ -1,5 +1,42 @@
 \sectionframe{3. Conditional Firm-Size Premiums}
 
+\begin{frame}{Start with the Simplest Specification}
+  \[
+  \ln w_{ist}=\alpha+\sum_{g\ne Solo}b_g D_{ig}+\epsilon_{ist}.
+  \]
+  \begin{enumerate}
+    \item Start with firm-size indicators alone.
+    \item Add sector-year fixed effects.
+    \item Add sex, age, age squared, and education.
+    \item Add formality as a level control.
+  \end{enumerate}
+  \vspace{0.2cm}
+  \idea{This sequence still imposes the same size coefficients on formal and informal workers.}
+  \source{Paper Table~\paperref{tab:firm-size-wage-premium-regressions}. The four columns use the same 5,268,514 observations and GEIH expansion weights.}
+\end{frame}
+
+\begin{frame}{Adding Controls Reduces the 101+/Solo Premium}
+  \centering\begingroup\fontsize{8.5}{10}\selectfont
+  \setlength{\tabcolsep}{4pt}
+  \begin{adjustbox}{max width=\textwidth,max totalheight=0.68\textheight}
+    \input{Slides/generated/sequential_controls}
+  \end{adjustbox}\endgroup
+  \par\vspace{0.15cm}
+  {\small The 101+/solo coefficient falls from 1.017 to 0.359 log points. The latter corresponds to a 43.2\% premium.}
+  \source{Paper Table~\paperref{tab:firm-size-wage-premium-regressions}. Reference is solo work. Sector-clustered SEs in parentheses. * $p<0.10$, ** $p<0.05$, *** $p<0.01$.}
+\end{frame}
+
+\begin{frame}{Then Add Geography and Occupational Position}
+  \centering\begingroup\fontsize{8.5}{10}\selectfont
+  \setlength{\tabcolsep}{4pt}
+  \begin{adjustbox}{max width=\textwidth,max totalheight=0.68\textheight}
+    \input{Slides/generated/common_geography}
+  \end{adjustbox}\endgroup
+  \par\vspace{0.15cm}
+  {\small The final 101+/solo coefficient is 0.338, or 40.2\%. But should one size premium describe both formal and informal employment?}
+  \source{Paper Table~\paperref{tab:firm-size-local-geography-robustness}. Same common-premium restriction. SEs now cluster by sector-department. Columns (3)--(4) exclude 139 singleton observations.}
+\end{frame}
+
 \begin{frame}{The Preferred Specification}
   \small
   \begin{align*}
@@ -14,7 +51,7 @@
     \item $\lambda_{s\times d\times t}$ compares workers within the same sector, department, and year.
     \item GEIH expansion weights. 5,268,375 observations.
   \end{itemize}
-  \source{Paper Equation (2) and Table 5, column (4). Baseline inference clusters by sector-department (559 clusters).}
+  \source{Paper Equation~(\paperref{eq:main}) and Table~\paperref{tab:firm-size-local-geography-formality-robustness}, column (4). Baseline inference clusters by sector-department (559 clusters).}
 \end{frame}
 
 \begin{frame}{What the Coefficients Compare}
@@ -56,13 +93,13 @@
   \end{tabular}
   \par\vspace{0.25cm}
   {\small Reference: solo workers of the same formality status.}
-  \regnote{Paper Table 5, column (4). Log-point contrasts, not percent premiums. Standard errors in parentheses are clustered by sector-department. * $p<0.10$, ** $p<0.05$, *** $p<0.01$.}
+  \regnote{Paper Table~\paperref{tab:firm-size-local-geography-formality-robustness}, column (4). Log-point contrasts, not percent premiums. Standard errors in parentheses are clustered by sector-department. * $p<0.10$, ** $p<0.05$, *** $p<0.01$.}
 \end{frame}
 
 \begin{frame}{Adjusted Premiums by Formality}
   \centering
   \includegraphics[width=0.98\textwidth,height=0.80\textheight,keepaspectratio]{preferred_formality_premiums_en.png}
-  \source{Paper Figure 6. Preferred controls. Reference is solo work within each formality group. Bars show 95\% confidence intervals.}
+  \source{Paper Figure~\paperref{fig:preferred-formality-premium}. Preferred controls. Reference is solo work within each formality group. Bars show 95\% confidence intervals.}
 \end{frame}
 
 \begin{frame}{The Comparison Depends on the Starting Size}
@@ -81,7 +118,7 @@
     \item Informal premiums rise sharply across the smallest sizes, then flatten and fall at 101+.
     \item A larger informal 101+/solo premium does not imply gains at every step toward larger firms.
   \end{itemize}
-  \source{Paper Tables 5--7. Both 101+/11--19 contrasts are significant at 5\% with sector-department clustering.}
+  \source{Paper Tables~\paperref{tab:firm-size-local-geography-formality-robustness}--\paperref{tab:firm-size-local-geography-formality-robustness-11-19-reference}. Both 101+/11--19 contrasts are significant at 5\% with sector-department clustering.}
 \end{frame}
 
 \begin{frame}{Formal Workers Earn More at Each Firm Size}
@@ -99,7 +136,7 @@
     \item All are positive and significant under baseline inference.
     \item The size premium is not just a comparison between formal and informal jobs.
   \end{itemize}
-  \source{Paper Table 8. Formal relative to informal workers, conditional on preferred controls. These are associations, not effects of formalization.}
+  \source{Paper Table~\paperref{tab:preferred-formality-gap}. Formal relative to informal workers, conditional on preferred controls. These are associations, not effects of formalization.}
 \end{frame}
 
 \begin{frame}{Inference Depends on the Clustering Assumption}
@@ -118,7 +155,7 @@
     \item There are 559 sector-department clusters but only 17 sector clusters.
     \item The informal 101+/solo premium remains significant under both conventions.
   \end{itemize}
-  \source{Paper Table 17. Two-sided tests with cluster-based degrees of freedom.}
+  \source{Paper Table~\paperref{tab:preferred-clustering-sensitivity}. Two-sided tests with cluster-based degrees of freedom.}
 \end{frame}
 
 \sectionframe{4. Salaried Workers}
@@ -132,13 +169,13 @@
   \end{itemize}
   \vspace{0.2cm}
   \idea{Controlling for occupational position is not equivalent to restricting the sample to employees.}
-  \source{Paper Section 5.2 and Table 9. Occupational codes are harmonized across questionnaire changes.}
+  \source{Paper Section~\paperref{subsec:salaried-workers} and Table~\paperref{tab:salaried-robustness}. Occupational codes are harmonized across questionnaire changes.}
 \end{frame}
 
 \begin{frame}{Adjusted Premiums among Salaried Workers}
   \centering
   \includegraphics[width=0.98\textwidth,height=0.80\textheight,keepaspectratio]{salaried_formality_premiums_en.png}
-  \source{Paper Figure 7. Same vertical scale as Figure 6. Reference is solo employees within each formality group.}
+  \source{Paper Figure~\paperref{fig:salaried-formality-premium}. Same vertical scale as Figure~\paperref{fig:preferred-formality-premium}. Reference is solo employees within each formality group.}
 \end{frame}
 
 \begin{frame}{Salaried-Worker Regression Output}
@@ -159,7 +196,7 @@
   \bottomrule
   \end{tabular}
   \par\vspace{0.15cm}
-  \regnote{Paper Table 9, salaried-only columns. Log contrasts relative to 11--19 employees of the same formality status. Standard errors use 555 sector-department clusters. * $p<0.10$, ** $p<0.05$, *** $p<0.01$.}
+  \regnote{Paper Table~\paperref{tab:salaried-robustness}, salaried-only columns. Log contrasts relative to 11--19 employees of the same formality status. Standard errors use 555 sector-department clusters. * $p<0.10$, ** $p<0.05$, *** $p<0.01$.}
 \end{frame}
 
 \begin{frame}{Similar Endpoints Do Not Mean Identical Profiles}
@@ -179,7 +216,7 @@
     \item Equality of all eight size contrasts is rejected jointly ($p<0.001$).
     \item Both conclusions hold with sector clustering too.
   \end{itemize}
-  \source{Paper Table 9. The restricted-sample comparison does not identify a causal contribution of self-employment.}
+  \source{Paper Table~\paperref{tab:salaried-robustness}. The restricted-sample comparison does not identify a causal contribution of self-employment.}
 \end{frame}
 
 \sectionframe{5. Dynamics and Elasticities}
@@ -193,13 +230,13 @@
   \end{itemize}
   \vspace{0.2cm}
   \idea{All change tests are two-sided. Widening and narrowing are both possible.}
-  \source{Paper Equation (4). A change in the gap does not by itself identify which group's wage growth caused it.}
+  \source{Paper Equation~(\paperref{eq:preferred-dynamics}). A change in the gap does not by itself identify which group's wage growth caused it.}
 \end{frame}
 
 \begin{frame}{Adjusted Profiles in 2008 and 2025}
   \centering
   \includegraphics[width=0.98\textwidth,height=0.80\textheight,keepaspectratio]{preferred_formality_endpoints_en.png}
-  \source{Paper Figure 8. Each premium is relative to solo work in the same formality-year group.}
+  \source{Paper Figure~\paperref{fig:preferred-formality-endpoints}. Each premium is relative to solo work in the same formality-year group.}
 \end{frame}
 
 \begin{frame}{Endpoint Changes Differ by Formality}
@@ -218,13 +255,13 @@
     \item The informal 101+/solo gap widens, but its $p$-value rises to 0.090 with sector clustering.
     \item The endpoint comparison is not a test of a steady linear trend.
   \end{itemize}
-  \source{Paper Tables 10 and 18. Changes are computed before rounding. Baseline $p$-values use sector-department clustering.}
+  \source{Paper Tables~\paperref{tab:preferred-endpoint-changes} and \paperref{tab:preferred-extension-clustering}. Changes are computed before rounding. Baseline $p$-values use sector-department clustering.}
 \end{frame}
 
 \begin{frame}{The Annual Path Is Not a Steady Trend}
   \centering
   \includegraphics[width=0.98\textwidth,height=0.80\textheight,keepaspectratio]{preferred_large_firm_dynamics_en.png}
-  \source{Paper Figure 9. Annual 101+/solo contrasts with preferred controls. 2020 is excluded.}
+  \source{Paper Figure~\paperref{fig:preferred-large-firm-dynamics}. Annual 101+/solo contrasts with preferred controls. 2020 is excluded.}
 \end{frame}
 
 \begin{frame}{Contrast with Previous Evidence on Changes over Time}
@@ -256,13 +293,13 @@
 \begin{frame}{Benchmarking the Elasticities}
   \centering\small
   \setlength{\tabcolsep}{4pt}
-  \input{Slides/generated/table_11_1}
+  \input{Slides/generated/preferred_elasticities}
   \par\vspace{0.2cm}
   \begin{itemize}
     \item The informal slope exceeds the formal slope by 0.057 ($p<0.001$).
     \item Different populations and controls limit the benchmark to a comparison of magnitudes.
   \end{itemize}
-  \source{Paper Table 11. Standard errors use sector-department clustering. Literature means from Diegmann et al. (2026).}
+  \source{Paper Table~\paperref{tab:preferred-elasticities}. Standard errors use sector-department clustering. Literature means from Diegmann et al. (2026).}
 \end{frame}
 
 \sectionframe{6. Illustrative Income Scenarios}
@@ -291,7 +328,7 @@
     \item $G_c$ measures the change in total predicted weekly labor income, not the average percentage change across workers.
     \item Baseline income uses a common retransformation factor, which cancels from the ratio.
   \end{itemize}
-  \source{Paper Section 5.5. The target-group calculation restricts both sums to that group's initial members.}
+  \source{Paper Section~\paperref{subsec:income-counterfactuals}. The target-group calculation restricts both sums to that group's initial members.}
 \end{frame}
 
 \begin{frame}{Illustrative Income Changes in 2025}
@@ -312,7 +349,7 @@
     \item Some intermediate-size informal workers receive lower predictions when assigned to 101+.
     \item The combined scenario is calculated directly. The separate percentages cannot be added.
   \end{itemize}
-  \source{Paper Table 12. Percent changes in total predicted labor income, with hours and the estimated wage structure fixed.}
+  \source{Paper Table~\paperref{tab:income-counterfactuals-2025}. Percent changes in total predicted labor income, with hours and the estimated wage structure fixed.}
 \end{frame}
 
 \begin{frame}{The Scenarios Extrapolate Beyond Observed Jobs}
@@ -322,7 +359,7 @@
     \item Requiring 30 destination observations in 2025 permits no such moves.
     \item These checks change who is reassigned. They do not establish whether transitions are feasible.
   \end{itemize}
-  \source{Paper Table 37. No adjustment of wages, job availability, capital, or production is modeled.}
+  \source{Paper Table~\paperref{tab:income-counterfactual-support}. No adjustment of wages, job availability, capital, or production is modeled.}
 \end{frame}
 
 \sectionframe{7. Interpretation and Conclusions}
@@ -334,7 +371,7 @@
     \item Concentration around a common wage floor could compress differences across intermediate formal sizes.
     \item The distributions do not identify the causal effect of the minimum wage on the size premium.
   \end{itemize}
-  \source{Paper Figure 2 and Tables 13--14. Monthly and hourly comparisons use different benchmarks.}
+  \source{Paper Figure~\paperref{fig:minwage-distribution-formality-size} and Tables~\paperref{tab:minimum-wage-bunching-2025}--\paperref{tab:minimum-wage-monthly-bunching-2025}. Monthly and hourly comparisons use different benchmarks.}
 \end{frame}
 
 \begin{frame}{What the Findings Say about Allocative Frictions}

@@ -129,23 +129,33 @@ def table_parts(block):
     return output
 
 
-def slide_notes(number, original):
+def slide_notes(label, original):
     stars = r" SEs in parentheses. * $p<0.10$, ** $p<0.05$, *** $p<0.01$."
-    if number in (5, 6, 7):
-        base = {5: "solo", 6: "101+", 7: "11--19"}[number]
+    preferred_bases = {
+        "tab:firm-size-local-geography-formality-robustness": "solo",
+        "tab:firm-size-local-geography-formality-robustness-101-reference": "101+",
+        "tab:firm-size-local-geography-formality-robustness-11-19-reference": "11--19",
+    }
+    common_bases = {
+        "tab:firm-size-local-geography-robustness": "solo",
+        "tab:firm-size-local-geography-robustness-101-reference": "101+",
+        "tab:firm-size-local-geography-robustness-11-19-reference": "11--19",
+    }
+    if label in preferred_bases:
+        base = preferred_bases[label]
         return ("Within-formality log contrasts relative to " + base + " workers. "
                 r"All columns include worker controls and GEIH weights. FE: (1) $s\times t$, "
                 r"(2) $s\times t$ and $d\times t$, (3)--(4) $s\times d\times t$. "
                 "Column (4) adds occupational position and is preferred. "
                 "SEs cluster by sector-department." + stars)
-    if number == 9:
+    if label == "tab:salaried-robustness":
         return (r"Main rows are log contrasts relative to 11--19 workers within formality. "
                 r"Summary premiums instead use solo work. Same preferred controls and weights. "
                 r"Salaried workers include private, government, and domestic employees and day laborers. "
                 r"SEs cluster by sector-department (559 full-sample, 555 salaried clusters). "
                 r"Equality tests use the full covariance matrix." + stars)
-    if number in (22, 23, 24):
-        base = {22: "solo", 23: "101+", 24: "11--19"}[number]
+    if label in common_bases:
+        base = common_bases[label]
         return ("Common-premium model with " + base + " as the reference. "
                 "All columns include worker characteristics and formality. "
                 r"FE: (1) $s\times t$, (2) $s\times t$ and $d\times t$, "
@@ -160,6 +170,16 @@ def main():
     aux = (ROOT / "build/main.aux").read_text(encoding="utf-8")
     refs = dict(re.findall(r"\\newlabel\{([^}]+)\}\{\{([^}]+)\}", aux))
     citations = {"DiegmannMullerSchoefer2026": "Diegmann et al. (2026)"}
+    reference_tex = [r"\newcommand{\paperref}[1]{\csname paperref@#1\endcsname}"]
+    reference_tex += [r"\expandafter\def\csname paperref@" + key + r"\endcsname{" + value + "}"
+                      for key, value in refs.items()]
+    (OUT / "paper_references.tex").write_text("\n".join(reference_tex) + "\n", encoding="utf-8")
+    aliases = {
+        "tab:firm-size-wage-premium-regressions": "sequential_controls.tex",
+        "tab:firm-size-local-geography-robustness": "common_geography.tex",
+        "tab:preferred-elasticities": "preferred_elasticities.tex",
+    }
+    expected_files = set()
 
     def resolve(text):
         text = re.sub(r"\\ref\{([^}]+)\}", lambda m: refs[m[1]], text)
@@ -171,6 +191,9 @@ def main():
         label, caption = command(block, "label"), command(block, "caption")
         assert str(number) == refs[label], (number, label, refs[label])
         parts = table_parts(block)
+        if label in aliases:
+            assert len(parts) == 1, label
+            (OUT / aliases[label]).write_text(resolve(parts[0]) + "\n", encoding="utf-8")
         notes_match = re.search(r"Notes:\s*(.*?)\\end\{minipage\}", block, re.S)
         notes = resolve(notes_match[1].strip()) if notes_match else ""
         entry = {"number": number, "label": label, "source": SOURCES[label],
@@ -179,9 +202,14 @@ def main():
         entries.append(entry)
         for i, tabular in enumerate(parts, 1):
             filename = f"table_{number:02d}_{i}.tex"
+            expected_files.add(filename)
             (OUT / filename).write_text("% Generated from " + SOURCES[label] + "\n" + resolve(tabular) + "\n", encoding="utf-8")
             suffix = f" ({i}/{len(parts)})" if len(parts) > 1 else ""
-            comparison = "Comparison specification. " if 19 <= number <= 33 else ""
+            comparison = "Comparison specification. " if label.startswith((
+                "tab:firm-size-wage-premium-regressions-", "tab:firm-size-local-geography-robustness-",
+                "tab:formality-interaction-coefficients", "tab:firm-size-premium-trend-test"
+            )) or label in {"tab:formal-101-contrasts", "tab:formal-wage-gap-by-size",
+                           "tab:firm-size-elasticity-benchmark"} else ""
             frame = (r"\begin{frame}{Paper Table " + str(number) + suffix + "}\n"
                      + r"\begin{minipage}{\textwidth}\small\textbf{" + resolve(caption) + "}"
                      + r"\end{minipage}\par\vspace{0.15cm}" + "\n"
@@ -190,7 +218,7 @@ def main():
                      + r"\begin{adjustbox}{max width=\textwidth,max totalheight=0.64\textheight}" + "\n"
                      + r"\input{Slides/generated/" + filename + "}\n"
                      + r"\end{adjustbox}\endgroup\par\vspace{0.10cm}" + "\n"
-                     + r"{\fontsize{6.5}{7.5}\selectfont\raggedright " + comparison + slide_notes(number, notes) + r"\par}" + "\n"
+                     + r"{\fontsize{6.5}{7.5}\selectfont\raggedright " + comparison + slide_notes(label, notes) + r"\par}" + "\n"
                      + r"\note{" + notes + "}\n"
                      + r"\end{frame}" + "\n")
             frames.append(frame)
@@ -204,6 +232,12 @@ def main():
         assert (ROOT / "Paper/figures" / name).exists(), name
         figures.append({"number": number, "label": label, "file": name})
     (OUT / "all_paper_tables.tex").write_text("% Generated by replication/build_presentation_assets.py\n" + "\n".join(frames), encoding="utf-8")
+    # Remove only obsolete files owned by this exporter after table renumbering.
+    for stale in OUT.glob("table_[0-9][0-9]_*.tex"):
+        if stale.name not in expected_files:
+            assert stale.resolve().parent == OUT.resolve()
+            assert stale.read_text(encoding="utf-8").startswith("% Generated from ")
+            stale.unlink()
     (OUT / "coverage.json").write_text(json.dumps({"tables": entries, "figures": figures}, indent=2) + "\n", encoding="utf-8")
     print(f"Exported {len(entries)} paper tables to {len(frames)} backup frames.")
     print(json.dumps(figures, indent=2))

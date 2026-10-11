@@ -18,5 +18,11 @@ smaller font than coefficients. Long tables are split into consecutive slides.
 `coverage.json` records all figure files, table sources, labels, paper numbers,
 and source hashes. Unreferenced or silenced paper tables are not exported.
 
+The main results proceed from sequential worker controls to geographic and
+occupational controls, and then to the preferred formality interaction.
+Paper references in slides use `\paperref{label}`. The exporter obtains their
+numbers from `build/main.aux`, so moving paper tables does not require manually
+renumbering the slides. The main-talk table aliases are also label-based.
+
 Generated files are committed so Overleaf needs neither Python nor the raw
 microdata. Figures remain linked to the same English assets used in the paper.
