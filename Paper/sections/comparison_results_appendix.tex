@@ -13,6 +13,21 @@ under both conventions.
 \input{Paper/sections/regression_preferred_extension_clustering_table}
 \FloatBarrier
 
+Table~\ref{tab:salaried-robustness} compares the full-sample model
+with a regression restricted to salaried workers. Both use 11--19 workers
+as the reference within each formality group and retain the same controls,
+weights, and fixed-effect structure. The salaried restriction leaves
+2,682,075 observations before removing 66 additional singleton
+sector-department-year cells, for a final sample of 2,682,009.
+Standard errors use 555 sector-department clusters in this restricted
+sample, compared with 559 in the full sample. The formal 101+ log contrast
+is 0.121 in the restricted sample, equivalent to a 12.9 percent premium
+over formal 11--19 workers. The informal contrast is -0.033 log points,
+equivalent to a 3.2 percent shortfall relative to informal 11--19 workers.
+
+\input{Paper/sections/regression_salaried_robustness_table}
+\FloatBarrier
+
 The common-premium comparison model is
 \begin{equation}\label{eq:common-premium}
   \ln(w_{ist}) = \alpha

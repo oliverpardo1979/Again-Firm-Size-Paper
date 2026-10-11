@@ -1,5 +1,62 @@
 # Regression Replication and Income Counterfactuals
 
+## Occupational-Position Harmonization and Salaried Robustness
+
+`harmonize_occupation.R` corrects P6430 at input time without overwriting the
+supplied microdata. The supplied file labels the raw codes using the old
+questionnaire in every year. In the 2008--2019 framework, 7 denotes unpaid work
+in other households, 8 day laborers, and 9 other workers. In the 2021--2025
+Marco 2018 files used here, 7 denotes day laborers and 8 other workers.
+The shared helper aligns the latter two categories with harmonized codes 8 and
+9 and preserves the raw code separately. All estimators and microdata caches
+include the harmonization version in their signatures.
+
+The new mapping is documented in the [2025 questionnaire](https://microdatos.dane.gov.co/index.php/catalog/853/download/24257)
+and [2025 data dictionary](https://microdatos.dane.gov.co/index.php/catalog/853/download/24735).
+The old [2018 P6430 metadata](https://microdatos.dane.gov.co/index.php/catalog/608/variable/F2/V44?name=P6430)
+document the previous coding. Some later catalog variable pages and the 2021
+dictionary retain the old labels. We therefore also checked the original
+2021 Marco 2018 microdata. In all twelve months, code 7 follows the employee
+salary questions and code 8 the independent/other income questions. The
+aggregate routing audit is in `salaried_output/raw_2021_routing_audit.csv`.
+To repeat that source check, run `audit_occupation_codes.py` with the two
+original 2021 semester ZIP paths. It writes only aggregate counts.
+
+This correction affects pooled occupational-position controls, not merely
+display labels. On 2026-10-11, all regression pipelines and income scenarios
+were rerun. The full-sample preferred 101+/solo premium changes from 37.1873
+to 37.1271 percent among informal workers and from 16.5218 to 16.4893 percent
+among formal workers. Annual profiles are unchanged because the recoding only
+renames categories within a year. `salaried_output/harmonization_impact.csv`
+and `unaffected_model_checks.csv` record these comparisons. The October 10
+reconciliation below is a historical record, not a claim that the subsequent
+coding correction leaves all pooled coefficients identical.
+
+After `reconcile_regressions.R` and `preferred_extensions.R`, run:
+
+```sh
+Rscript --vanilla replication/salaried_robustness.R
+python replication/build_salaried_table.py
+python replication/validate_salaried_robustness.py
+```
+
+Salaried workers comprise private-sector employees, government employees,
+domestic workers, and day laborers. Both formality groups are retained. The
+restricted model uses the preferred controls, weights, fixed-effect structure,
+and sector-department clustering, with 11--19 as its fitted reference. It
+contains 2,682,009 observations and 555 clusters after removing 66 additional
+singleton cells. The table compares this model with the corrected full sample.
+CSV contrasts additionally provide solo and 101+ references and sector-clustered
+inference. A second fit with solo as the reference independently verifies the
+contrasts and standard errors. The Python validator reconstructs them using
+the full covariance matrices and checks every displayed coefficient and S.E.
+These are sample-sensitivity comparisons, not causal decompositions.
+
+For a complete rebuild, run the regression table updater before
+`income_counterfactuals.R`, then build its tables before running
+`validate_regression_outputs.py`. That validator checks agreement between
+the regression and income-scenario outputs from the same harmonization version.
+
 ## Preferred-Model Extensions
 
 The main results now use the preferred controls for within-formality premiums,
@@ -18,8 +75,8 @@ python replication/validate_preferred_extensions.py
 matrices, profiles, endpoint changes, elasticities, and clustering checks.
 Local model caches in `build/preferred_extensions/` and the aggregate RDS files
 are excluded from Git. The script verifies that the pooled preferred model
-reproduces the existing coefficients and covariance matrix. It does not change
-the estimates used by the income scenarios.
+reproduces the coefficients and covariance matrix from `reconcile_regressions.R`.
+The income scenarios must be regenerated whenever those coefficients change.
 
 - The common estimation sample excludes singleton sector-department-year cells
   and contains 5,268,375 observations. Control-set comparisons use this same
@@ -120,8 +177,8 @@ to verify the algebraic contrasts and their standard errors independently.
 
 `build/regression_sample.rds` is a local microdata cache and is excluded from Git.
 It must not be published. Delete this cache after changing sample-construction
-code. Its size-and-modification-time signature automatically invalidates it when
-the input data file changes.
+code. Its signature includes input size, modification time, and the occupational
+harmonization version and invalidates it when any of these change.
 
 The optional second argument to `reconcile_regressions.R` is a historical input
 file for diagnosing old outputs. It is not used to generate the current tables.

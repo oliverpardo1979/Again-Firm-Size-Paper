@@ -1,0 +1,39 @@
+\begin{table}[htbp]
+  \centering
+  \caption{Firm-size premiums in the full and salaried-only samples}
+  \label{tab:salaried-robustness}
+  \small
+  \begin{tabular}{lrrrr}
+    \toprule
+    & \multicolumn{2}{c}{All workers} & \multicolumn{2}{c}{Salaried workers} \\
+    \cmidrule(lr){2-3}\cmidrule(lr){4-5}
+    Firm size & Informal & Formal & Informal & Formal \\
+    \midrule
+    Solo & -0.354*** & -0.039 & -0.221*** & -0.063*** \\
+     & (0.018) & (0.032) & (0.016) & (0.022) \\
+    2--3 & -0.240*** & -0.112*** & -0.178*** & -0.080*** \\
+     & (0.011) & (0.014) & (0.010) & (0.013) \\
+    4--5 & -0.099*** & -0.062*** & -0.081*** & -0.056*** \\
+     & (0.007) & (0.008) & (0.007) & (0.007) \\
+    6--10 & -0.030*** & -0.027*** & -0.029*** & -0.021*** \\
+     & (0.006) & (0.006) & (0.005) & (0.005) \\
+    11--19 & Reference & Reference & Reference & Reference \\
+    20--30 & 0.008 & -0.000 & 0.007 & 0.009*** \\
+     & (0.007) & (0.004) & (0.007) & (0.003) \\
+    31--50 & 0.009 & 0.020*** & 0.009 & 0.032*** \\
+     & (0.010) & (0.005) & (0.010) & (0.004) \\
+    51--100 & 0.019 & 0.046*** & 0.023* & 0.060*** \\
+     & (0.013) & (0.007) & (0.013) & (0.006) \\
+    101+ & -0.038** & 0.113*** & -0.033** & 0.121*** \\
+     & (0.017) & (0.014) & (0.016) & (0.012) \\
+    \midrule
+    101+/solo premium (\%) & 37.1 & 16.5 & 20.6 & 20.2 \\
+    Observations & \multicolumn{2}{c}{5,268,375} & \multicolumn{2}{c}{2,682,009} \\
+    \bottomrule
+  \end{tabular}
+  \vspace{0.3em}
+  \begin{minipage}{0.95\textwidth}
+  \footnotesize
+  Notes: The main rows are log-wage contrasts relative to workers in firms with 11--19 workers within the same formality group. The summary row instead compares 101+ with solo work in percent within each group. Each pair of columns comes from one size-by-formality regression. Salaried workers comprise private-sector employees, government employees, domestic workers, and day laborers. Both models include sex, age, age squared, education, occupational-position controls, and sector-department-year fixed effects, and use GEIH expansion weights. Singleton fixed-effect cells are removed separately in each sample. Standard errors in parentheses are clustered by sector-department. Two-sided tests use each sample's cluster count. Percent gaps are $100[\exp(b)-1]$. * $p<0.10$, ** $p<0.05$, *** $p<0.01$.
+  \end{minipage}
+\end{table}

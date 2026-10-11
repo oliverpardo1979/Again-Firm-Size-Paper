@@ -2,6 +2,7 @@ args <- commandArgs(trailingOnly = TRUE)
 if (.Platform$OS.type == "windows") invisible(Sys.setlocale("LC_CTYPE", "English_United States.utf8"))
 script <- sub("^--file=", "", grep("^--file=", commandArgs(), value = TRUE))
 paper <- dirname(dirname(normalizePath(script, winslash = "/")))
+source(file.path(paper, "replication/harmonize_occupation.R"))
 cjc <- file.path(dirname(paper), "CJC-Monitor")
 input <- if (length(args)) args[1] else file.path(cjc, "Datos/Processed/Paper-GEIH_base_modelo_personas_2008_2025.dta")
 .libPaths(c(file.path(cjc, ".Rlib"), .libPaths()))
@@ -14,12 +15,12 @@ dir.create(cache, recursive = TRUE, showWarnings = FALSE)
 write_csv <- function(x, name) write.csv(x, file.path(out, paste0(name, ".csv")), row.names = FALSE, fileEncoding = "UTF-8")
 sizes <- c("Solo", "2-3", "4-5", "6-10", "11-19", "20-30", "31-50", "51-100", "101+")
 assignments <- c(101, 150, 250)
-signature <- c(file.info(input)$size, as.numeric(file.info(input)$mtime))
+signature <- list(file.info(input)$size, as.numeric(file.info(input)$mtime), occupation_harmonization_version)
 sample_path <- file.path(paper, "build/regression_sample.rds")
 d <- if (file.exists(sample_path)) readRDS(sample_path) else NULL
 if (is.null(d) || !identical(attr(d, "cache_signature"), signature)) {
   cols <- c("anio", "depto", "edad", "sector", "tamano_empresa", "educacion", "posicion_ocupacional_label", "mujer", "formal", "fex", "log_ingreso_hora_real")
-  d <- read_dta(input, col_select = all_of(cols)) %>%
+  d <- harmonize_occupation(read_dta(input, col_select = all_of(cols))) %>%
     mutate(across(c(anio, depto, sector, educacion, posicion_ocupacional_label), factor),
       edad = as.numeric(edad), edad2 = edad^2, tamano_empresa = factor(tamano_empresa, levels = sizes)) %>%
     filter(is.finite(log_ingreso_hora_real), !is.na(tamano_empresa), !is.na(mujer), is.finite(edad),
@@ -149,6 +150,7 @@ write_csv(bind_rows(tests), "restriction_tests")
 write_csv(bind_rows(summaries), "summaries")
 saveRDS(models, file.path(out, "aggregate_models.rds"))
 writeLines(c(paste("Input MD5:", input_md5), paste("N:", nrow(d)),
+  paste("Occupation harmonization:", occupation_harmonization_version),
   "Quadratic only. One interacted regression per assigned 101+ size (101, 150, 250).",
   "Same preferred controls, estimation sample, GEIH weights, and sector-department inference.",
   "Wald F tests use the unrestricted preferred categorical model: 6 restrictions per group, 12 jointly.",

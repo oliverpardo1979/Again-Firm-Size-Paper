@@ -2,6 +2,7 @@ args <- commandArgs(trailingOnly = TRUE)
 if (.Platform$OS.type == "windows") invisible(Sys.setlocale("LC_CTYPE", "English_United States.utf8"))
 script <- sub("^--file=", "", grep("^--file=", commandArgs(), value = TRUE))
 paper <- dirname(dirname(normalizePath(script, winslash = "/")))
+source(file.path(paper, "replication/harmonize_occupation.R"))
 cjc <- file.path(dirname(paper), "CJC-Monitor")
 input <- if (length(args)) args[1] else file.path(cjc, "Datos/Processed/Paper-GEIH_base_modelo_personas_2008_2025.dta")
 out <- file.path(paper, "replication/regression_output")
@@ -13,7 +14,7 @@ sizes <- c("Solo", "2-3", "4-5", "6-10", "11-19", "20-30", "31-50", "51-100", "1
 cols <- c("anio", "depto", "edad", "sector", "tamano_empresa", "educacion", "posicion_ocupacional_label", "mujer", "formal", "fex", "log_ingreso_hora_real")
 write_csv <- function(x, name) write.csv(x, file.path(out, paste0(name, ".csv")), row.names = FALSE, fileEncoding = "UTF-8")
 prepare <- function(path) {
-  d <- read_dta(path, col_select = all_of(cols))
+  d <- harmonize_occupation(read_dta(path, col_select = all_of(cols)))
   message("Read ", nrow(d), " rows from ", basename(path))
   d %>% mutate(row_id = row_number(), across(c(anio, depto, sector, educacion, posicion_ocupacional_label), factor),
     edad = as.numeric(edad), edad2 = edad^2, tamano_empresa = factor(tamano_empresa, levels = sizes)) %>%
@@ -28,7 +29,7 @@ prepare <- function(path) {
       log_size_midpoint_sq = log_size_midpoint^2)
 }
 cache_path <- file.path(paper, "build/regression_sample.rds")
-cache_signature <- c(file.info(input)$size, as.numeric(file.info(input)$mtime))
+cache_signature <- list(file.info(input)$size, as.numeric(file.info(input)$mtime), occupation_harmonization_version)
 d <- if (file.exists(cache_path)) readRDS(cache_path) else NULL
 if (is.null(d) || !identical(attr(d, "cache_signature"), cache_signature)) {
   d <- prepare(input)
@@ -50,6 +51,17 @@ hash_rows <- function(x) {
   unname(tools::md5sum(path))
 }
 fit_model <- function(name, rhs, data = d, cluster = ~sector) {
+  cache_dir <- file.path(paper, "build/reconciled_models")
+  dir.create(cache_dir, recursive = TRUE, showWarnings = FALSE)
+  cache_file <- file.path(cache_dir, paste0(name, ".rds"))
+  key <- list(signature = cache_signature, rhs = rhs, cluster = deparse(cluster),
+    rows = hash_rows(data$row_id))
+  cached <- if (file.exists(cache_file)) readRDS(cache_file) else NULL
+  if (!is.null(cached) && identical(cached$key, key)) {
+    models[[name]] <<- cached$model
+    message("Reusing ", name)
+    return(invisible(cached$model))
+  }
   message("Estimating ", name)
   m <- feols(as.formula(paste("log_ingreso_hora_real ~", rhs)), data = data,
     weights = ~fex, cluster = cluster)
@@ -57,6 +69,7 @@ fit_model <- function(name, rhs, data = d, cluster = ~sector) {
     df = degrees_freedom(m, "t"), rhs = rhs, cluster = deparse(cluster),
     sample_hash = hash_rows(data$row_id[obs(m)]))
   models[[name]] <<- ans
+  saveRDS(list(key = key, model = ans), cache_file)
   invisible(ans)
 }
 unit <- function(m, term) {
@@ -191,8 +204,8 @@ validation <- bind_rows(lapply(seq_len(nrow(reference)), function(i) {
     informal_se_error = r$std.error[r$parameter == "informal"]-row$informal_se,
     formal_se_error = r$std.error[r$parameter == "formal"]-row$formal_se)
 }))
-stopifnot(max(abs(as.matrix(validation[, 4:7]))) < 1e-7)
-write_csv(validation, "preferred_replication_check")
+write_csv(validation, "previous_table_comparison")
+write_csv(checks[checks$model == "geo_interacted4", ], "preferred_replication_check")
 
 # Optional historical-data check is read-only and never changes the canonical outputs.
 if (length(args) >= 2) {
@@ -224,6 +237,7 @@ if (length(args) >= 2) {
   rm(old)
 }
 writeLines(c(paste("Input MD5:", unname(tools::md5sum(input))),
+  paste("Occupation harmonization:", occupation_harmonization_version),
   paste("Input rows in common sample:", nrow(d)),
   "Inference: two-sided Student t with fixest cluster degrees of freedom for all contrasts.",
   trimws(capture.output(sessionInfo()), which = "right")), file.path(out, "provenance.txt"))

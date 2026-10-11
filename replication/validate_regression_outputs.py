@@ -70,4 +70,4 @@ for row in cached_preferred:
     assert abs(float(row["se"])-float(new["std.error"])) < 1e-7
 print(f"PASS: {len(models)} models, {len(contrasts)} contrasts, t-based inference, percentage transformations,")
 print("reference invariance, identical point estimates across clustering conventions, and preferred-model replication.")
-print("All preferred coefficients and standard errors used by the income scenarios are unchanged.")
+print("Preferred coefficients and standard errors agree across the regression and income-scenario pipelines.")
