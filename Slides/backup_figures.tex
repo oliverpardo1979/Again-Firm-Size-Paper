@@ -1,0 +1,75 @@
+\sectionframe{Appendix. Comparison Specifications and Shape Checks}
+
+\begin{frame}{A Common Size Premium across Formality Groups}
+  \centering
+  \includegraphics[width=0.98\textwidth,height=0.80\textheight,keepaspectratio]{fig57_en.png}
+  \source{Paper Figure 10. Comparison specification with sector-year effects. The fully controlled 101+/solo premium is 43.2\%. This is not the preferred interacted model.}
+\end{frame}
+
+\begin{frame}{Size-by-Formality Profiles with Simpler Controls}
+  \centering
+  \includegraphics[width=0.98\textwidth,height=0.80\textheight,keepaspectratio]{fig74_en.png}
+  \source{Paper Figure 11. Comparison model with worker controls and sector-year effects, without occupational-position or department controls.}
+\end{frame}
+
+\begin{frame}{Dynamics under the Common-Premium Restriction}
+  \centering
+  \includegraphics[width=0.98\textwidth,height=0.76\textheight,keepaspectratio]{fig59_en.png}
+  \source{Paper Figure 12. Comparison model with a common size premium across formality groups. Positive but insignificant linear trends do not replace the preferred endpoint tests.}
+\end{frame}
+
+\begin{frame}{Formality Endpoints with Simpler Controls}
+  \centering
+  \includegraphics[width=0.98\textwidth,height=0.76\textheight,keepaspectratio]{fig76_en.png}
+  \source{Paper Figure 13. Sector-year comparison specification, without occupational-position or department controls. Reference is solo work within the same formality-year group.}
+\end{frame}
+
+\begin{frame}{Large-Firm Dynamics with Simpler Controls}
+  \centering
+  \includegraphics[width=0.98\textwidth,height=0.80\textheight,keepaspectratio]{fig75_en.png}
+  \source{Paper Figure 14. Sector-year comparison specification. Each series compares 101+ workers with solo workers of the same formality status.}
+\end{frame}
+
+\begin{frame}{A Quadratic Approximation with Preferred Controls}
+  \centering
+  \includegraphics[width=0.98\textwidth,height=0.76\textheight,keepaspectratio]{preferred_quadratic_en.png}
+  \source{Paper Figure 15. Quadratic in log assigned size, interacted with formality and anchored at solo work. Tables 34--35 report coefficients and restriction tests.}
+\end{frame}
+
+\begin{frame}{Why Keep the Categorical Model?}
+  \begin{itemize}
+    \item A low-order polynomial reduces the number of coefficients but imposes a shape on the ordered categories.
+    \item We use log assigned size, not the category's ordinal index. The bins have unequal widths.
+    \item The quadratic summarizes the broad profiles, but the categorical restrictions are rejected within both formality groups.
+    \item The rejection persists when 101+ is assigned 101, 150, or 250 workers. No cubic is fitted.
+  \end{itemize}
+  \source{Paper Tables 34--35. Fair and Dominguez (1991) motivate the low-order restriction. The categorical specification remains the baseline.}
+\end{frame}
+
+\begin{frame}{Why Can Confidence Intervals Overlap?}
+  \small
+  \[
+  \operatorname{Var}(\widehat b_g-\widehat b_h)
+  =\operatorname{Var}(\widehat b_g)+\operatorname{Var}(\widehat b_h)
+   -2\operatorname{Cov}(\widehat b_g,\widehat b_h).
+  \]
+  \begin{itemize}
+    \item Each plotted interval compares a size category with solo work.
+    \item Testing 101+ against 11--19 uses the difference of their coefficients and their covariance.
+    \item Overlap between the separate intervals is not a test of that difference.
+    \item Changing the reference category gives the same direct contrast and uncertainty.
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{Selected References}
+  \scriptsize
+  \begin{itemize}
+    \item Balkan, B., and S. Tumen (2016). Firm-Size Wage Gaps along the Formal-Informal Divide: Theory and Evidence. \textit{Industrial Relations}, 55(2), 235--266.
+    \item Bloom, N., F. Guvenen, B. S. Smith, J. Song, and T. von Wachter (2018). The Disappearing Large-Firm Wage Premium. \textit{AEA Papers and Proceedings}, 108, 317--322.
+    \item Colonnelli, E., J. T{\aa}g, M. Webb, and S. Wolter (2018). A Cross-Country Comparison of Dynamics in the Large Firm Wage Premium. \textit{AEA Papers and Proceedings}, 108, 323--327.
+    \item Diegmann, A., S. M\"uller, and B. Schoefer (2026). Off the Labor Supply Curve: The Zero Employer Size Wage Effect Within Large Firms. \textit{NBER Working Paper} 35265.
+    \item Fair, R. C., and K. M. Dominguez (1991). Effects of the Changing U.S. Age Distribution on Macroeconomic Equations. \textit{American Economic Review}, 81(5), 1276--1294.
+    \item Hsieh, C.-T., and P. J. Klenow (2009). Misallocation and Manufacturing TFP in China and India. \textit{Quarterly Journal of Economics}, 124(4), 1403--1448.
+    \item Reed, T., and T. T. Tran (2019). The Large-Firm Wage Premium in Developing Economies. \textit{World Bank Policy Research Working Paper} 8997.
+  \end{itemize}
+\end{frame}

@@ -1,0 +1,22 @@
+# Academic presentation
+
+Compile `presentacion_javeriana.tex` at the repository root in Overleaf.
+The main talk is in English. Backup slides retain all paper figures and tables.
+The appendix is excluded from the main-talk slide denominator.
+
+## Updating the evidence
+
+1. Compile the latest `main.tex` to `build/main.pdf` and `build/main.aux`.
+2. Run `python replication/build_presentation_assets.py`.
+3. Update the narrative and selected results in `Slides/main_results.tex`.
+4. Run `python replication/validate_presentation.py`.
+5. Compile the presentation, check the log, and inspect rendered slides.
+
+`Slides/generated/` contains native LaTeX tables exported from the paper's
+included table files, not new estimates. Parenthesized standard errors use a
+smaller font than coefficients. Long tables are split into consecutive slides.
+`coverage.json` records all figure files, table sources, labels, paper numbers,
+and source hashes. Unreferenced or silenced paper tables are not exported.
+
+Generated files are committed so Overleaf needs neither Python nor the raw
+microdata. Figures remain linked to the same English assets used in the paper.
