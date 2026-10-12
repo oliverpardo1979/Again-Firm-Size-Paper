@@ -66,15 +66,18 @@ validation = []
 for scenario, _, target in SCENARIOS:
     for method, field in (("predicted_common_smear", "weekly_predicted"),
                           ("observed_residual_preserved", "weekly_observed")):
-        for population in ("all", "target_group"):
+        for population in ("all", "target_group", "movers"):
             baseline = change = 0.0
             for g in groups:
                 size, formal = g["tamano_empresa"], int(g["formal"])
+                dest = destination(size, formal, scenario)
+                if population == "movers" and dest == (size, formal):
+                    continue
                 if population == "target_group" and target != "All":
                     if formal != (1 if target == "Formal" else 0):
                         continue
                 mass = float(g["sum_w"]) * float(g[field])
-                delta = profiles[destination(size, formal, scenario)] - profiles[size, formal]
+                delta = profiles[dest] - profiles[size, formal]
                 baseline += mass
                 change += mass * math.expm1(delta)
             independent = 100 * change / baseline
