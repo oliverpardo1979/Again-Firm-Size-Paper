@@ -18,14 +18,14 @@
       "number": 3,
       "label": "tab:descriptive-worker-characteristics-2025",
       "source": "Paper/sections/descriptive_worker_characteristics_2025_table.tex",
-      "sha256": "3936dfdc9d284ee0c609a8c7c9bfe102c2a4e5c4082c1dcbc4031dfb181fa832",
+      "sha256": "69181fbc5ecb8410222387f36f031fbea461ea6728f29b0fa1ca52219d49a7df",
       "parts": 1
     },
     {
       "number": 4,
       "label": "tab:formal-worker-profile-2025",
       "source": "Paper/sections/descriptive_formal_worker_profile_2025_table.tex",
-      "sha256": "fa1f99a11ca56812dd0161b71ad02c654e35630d64a1656412728b018fa722b4",
+      "sha256": "6f0f0f4df30d8659767494808fb66e84ed97dd6c6df85d8ee51e8a0380d43413",
       "parts": 1
     },
     {
@@ -228,7 +228,7 @@
       "number": 33,
       "label": "tab:firm-size-elasticity-benchmark",
       "source": "Paper/sections/regression_elasticity_benchmark_table.tex",
-      "sha256": "53eabd1601025e776bb3388d7aaacaf5bdad2b5199810ea5781db780193a4dd0",
+      "sha256": "4e893c4be05eecf3d96b76f3ead264d39ce954a7ed860dbb7b540ada32a3697a",
       "parts": 1
     },
     {
