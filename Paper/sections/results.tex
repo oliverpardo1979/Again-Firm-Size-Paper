@@ -239,7 +239,8 @@ to 18.7, 37.4, and 47.4 percent, respectively.
   \label{fig:preferred-formality-endpoints}
 \end{figure}
 
-Table~\ref{tab:preferred-endpoint-changes} reports the joint endpoint tests.
+Table~\ref{tab:preferred-endpoint-changes} tests the 2008--2025 change for each
+size-formality comparison using the regression that estimates both years jointly.
 The formal 101+/solo premium increases by
 0.9 percentage points, with \(p=0.861\). None of the formal endpoint changes
 is significant at 5 percent. The informal 101+/solo premium increases by
@@ -279,13 +280,16 @@ show little net change between the formal endpoints and a larger informal
 gap in 2025, with inference on that widening sensitive to clustering.
 They do not describe a uniform decline across Colombian workers.
 
-The simpler dynamic results remain in Appendix
-Figure~\ref{fig:firm-size-wage-premium-over-time} and
-Table~\ref{tab:firm-size-premium-trend-test}, with alternative bases in
+For comparison, we also allow each size coefficient in
+Equation~(\ref{eq:common-premium}) to vary by year while retaining common
+size premiums across formality groups and constant worker-control coefficients.
+Appendix Figure~\ref{fig:firm-size-wage-premium-over-time} reports these
+annual estimates. A companion model imposes a constant annual change in
+each size-to-solo log-wage gap. Table~\ref{tab:firm-size-premium-trend-test}
+reports positive but statistically insignificant annual changes, with
+alternative reference categories in
 Tables~\ref{tab:firm-size-premium-trend-test-101-reference} and
-\ref{tab:firm-size-premium-trend-test-11-19-reference}.
-Those models impose a common premium across formality groups and yield
-positive but insignificant linear trends. Appendix
+\ref{tab:firm-size-premium-trend-test-11-19-reference}. Appendix
 Figures~\ref{fig:adjusted-formality-endpoints} and
 \ref{fig:large-firm-formality-premium-over-time} retain the simpler
 formality-specific profiles. These are comparison specifications, not the
@@ -351,12 +355,15 @@ sector, department, weekly hours, and survey weights remain fixed. Workers
 already in the destination category retain their baseline predictions.
 
 Let \(\widehat{\ell}_i\) be fitted log hourly income from
-Equation~(\ref{eq:main}), including the fixed effects. We construct baseline
-hourly income as \(\widehat w_i=S\exp(\widehat{\ell}_i)\), where \(S\) is the
-survey-weighted mean of exponentiated residuals in 2025. This factor accounts
+Equation~(\ref{eq:main}), including the fixed effects, for worker \(i\)'s
+observed size and formality status. A residual is the difference between
+observed and fitted log income. Define \(S\) as the survey-weighted mean of
+exponentiated residuals in 2025. We construct baseline hourly income as
+\(\widehat w_i=S\exp(\widehat{\ell}_i)\). This retransformation factor accounts
 for the fact that exponentiating a mean log income does not generally recover
 mean income in levels. We assume the same factor across workers and
-destinations. If scenario \(c\) changes worker \(i\)'s size-formality component
+destinations. Let \(g(i)\) denote worker \(i\)'s size category. If scenario
+\(c\) changes the worker's size-formality component
 \(\phi F_i+\beta_{g(i)}+\theta_{g(i)}F_i\) by
 \(\widehat\Delta_i^c\), counterfactual hourly income is
 \(\widehat w_i^c=\widehat w_i\exp(\widehat\Delta_i^c)\).
@@ -364,7 +371,8 @@ For a change in size or formality alone, this difference is one of the
 contrasts in Equation~(\ref{eq:preferred-contrasts}). For a joint change, we
 subtract the origin component from the destination component directly. Let
 \(\mathcal I_{2025}\) denote the 2025 estimation sample. With expansion weight
-\(a_i\) and weekly hours \(h_i\), the reported change is
+\(a_i\) and weekly hours \(h_i\), denote the percentage change in total
+predicted weekly labor income under scenario \(c\) by \(G_c\). It is
 \begin{equation}\label{eq:income-counterfactual}
   G_c=100\left[
   \frac{\sum_{i\in\mathcal I_{2025}}a_i h_i\widehat w_i
@@ -406,7 +414,7 @@ profile is higher in several intermediate categories than in 101+, so workers
 starting in those categories receive lower predictions. Finally, assigning
 everyone to formal 101+ employment raises total predicted income by
 25.4 percent. This combined scenario is calculated directly. The separate
-percentages cannot simply be added: informal workers undergo both changes,
+percentages cannot simply be added. Informal workers undergo both changes,
 the corresponding wage ratios compound multiplicatively, and the estimated
 size premium itself depends on formality.
 

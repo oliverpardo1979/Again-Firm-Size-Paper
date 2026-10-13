@@ -41,16 +41,19 @@ to differ.
 \input{Paper/sections/regression_local_geography_robustness_11_19_reference_table}
 \FloatBarrier
 
-The simpler interacted comparison model is
+The simpler interacted comparison model includes worker characteristics and
+sector-year fixed effects but omits occupational-position and department
+controls. Write its formality coefficient as \(\widetilde\phi\), its informal
+size coefficients as \(\widetilde\beta_g\), and its formal-minus-informal
+size differences as \(\widetilde\theta_g\). Tildes distinguish these
+coefficients from the preferred model's coefficients. The regression is
 \begin{equation}\label{eq:formality-interaction}
   \ln(w_{ist}) = \alpha + \widetilde{\phi}F_{ist}
   + \sum_{g\neq g_0}(\widetilde{\beta}_g+
        \widetilde{\theta}_g F_{ist})D_{ig}
   + X_{ist}'\gamma+\lambda_{s\times t}+\varepsilon_{ist}.
 \end{equation}
-Tildes distinguish these coefficients from the preferred model's coefficients.
-This regression includes worker characteristics and sector-year effects, but
-not occupational-position or department controls. Its inference clusters by
+Its inference clusters by
 sector. The informal 101+/solo premium is 39.9 percent, and the formal
 premium is 16.6 percent, with a sector-clustered \(p\)-value of 0.1001 for the
 latter. Formal 101+ workers nevertheless earn 8.9--14.1 percent more than
@@ -72,25 +75,30 @@ income scenarios.
 \input{Paper/sections/regression_formality_interaction_coefficients_11_19_reference}
 \FloatBarrier
 
-The earlier dynamic benchmark interacts size with year but constrains the
-premium to be common across formality groups:
+The dynamic comparison model interacts size with year but constrains the
+premium to be common across formality groups. Let \(\tau\) range over survey
+years and \(\mathbf{1}\{t=\tau\}\) equal one when an observation belongs to
+year \(\tau\), and zero otherwise. The coefficient \(b_{g\tau}\) is the
+size-to-solo log-wage gap for category \(g\) in that year. The model is
 \begin{equation}\label{eq:dynamic-benchmark}
   \ln(w_{ist}) = \alpha
   + \sum_{\tau}\sum_{g\neq g_0} b_{g\tau}D_{ig}\mathbf{1}\{t=\tau\}
   + X_{ist}'\gamma+\phi F_{ist}
   + \lambda_{s\times t}+\varepsilon_{ist}.
 \end{equation}
-Its linear-trend counterpart is
+For the linear-trend version, define \(Trend_t=t-2008\) and let \(\delta_g\)
+be the annual change in category \(g\)'s log-wage gap relative to solo work.
+This gives
 \begin{equation}\label{eq:trend-benchmark}
   \ln(w_{ist}) = \alpha
   + \sum_{g\neq g_0}(b_g+\delta_g Trend_t)D_{ig}
   + X_{ist}'\gamma+\phi F_{ist}
-  + \lambda_{s\times t}+\varepsilon_{ist},
+  + \lambda_{s\times t}+\varepsilon_{ist}.
 \end{equation}
-where \(Trend_t=t-2008\). Two-sided tests of \(H_0:\delta_g=0\) do not reject
-zero trends at 5 percent. These common-premium trends differ from the preferred
-within-formality endpoint contrasts. The alternative-reference trend tables
-use 101+ and 11--19 workers as the respective bases.
+Two-sided tests of \(H_0:\delta_g=0\) do not reject
+zero trends at 5 percent. These trends constrain premiums to be common across
+formality groups, unlike the preferred 2008--2025 comparisons. The remaining
+trend tables use 101+ and 11--19 workers as reference categories.
 
 \begin{figure}[htbp]
   \centering
@@ -125,8 +133,9 @@ comparison reproducible.
 \end{figure}
 \FloatBarrier
 
-The earlier log-log comparison uses the same assigned sizes as the preferred
-elasticity exercise but retains the simpler controls:
+The log-log comparison uses the same assigned sizes as the preferred
+elasticity exercise but retains the simpler controls. Its coefficient
+\(\eta\) is a common elasticity across formality groups:
 \begin{equation}\label{eq:elasticity}
   \ln(w_{ist}) = \alpha+\eta\ln(\widetilde{Size}_{ist})
   + X_{ist}'\gamma+\phi F_{ist}
@@ -134,7 +143,7 @@ elasticity exercise but retains the simpler controls:
 \end{equation}
 The raw model includes assigned log size only. The controlled model includes
 worker characteristics, formality, and sector-year effects. Formal and
-informal slopes in this earlier exercise come from separate regressions,
+informal slopes in this comparison come from separate regressions,
 which omit the constant formality indicator. All use sector clustering.
 
 \input{Paper/sections/regression_elasticity_benchmark_table}

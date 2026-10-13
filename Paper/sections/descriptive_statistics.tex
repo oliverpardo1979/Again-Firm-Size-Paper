@@ -1,6 +1,6 @@
 \section{Descriptive Statistics}
 
-The descriptive section is organized around the empirical facts that motivate the regression analysis. We first document where workers are located in the firm-size distribution and how wages per hour vary across that distribution. We then
+This section reports raw comparisons, meaning differences in weighted means without adjusting for other worker characteristics. We first document where workers are located in the firm-size distribution and how wages per hour vary across that distribution. We then
 place the raw firm-size wage gap next to other remuneration gaps, describe worker composition by firm size, and examine whether the raw firm-size pattern appears within formality status, sex, education groups, and economic sectors.
 
 Table~\ref{tab:descriptive-core-size-2008-2025} establishes two raw facts behind the paper. First, mean real hourly income is substantially higher in large firms than in solo work. In 2008, solo workers earned 5,388 Colombian pesos at 2025 prices per hour on average, compared with 12,943 pesos among workers in firms with 101 or more workers, a ratio of 2.4 to 1. By 2025, the corresponding means were 6,534 and 16,859 pesos, a ratio of 2.6 to 1. Appendix Tables~\ref{tab:descriptive-core-size-2008-2025-101-reference} and \ref{tab:descriptive-core-size-2008-2025-11-19-reference} report the same means using alternative reference categories. Relative to 101+ workers, solo workers earned 42 percent of the large-firm mean in 2008 and 39 percent in 2025. Relative to workers in firms with 11--19 workers, 101+ workers earned 1.49 times as much in 2008 and 1.45 times as much in 2025. The all-worker mean increased from 7,752 to 10,295 pesos, equivalent to 1.7 percent annualized real growth between 2008 and 2025. Average weekly hours in the analytic sample declined from 47.8 to 43.8 over the same period. This decline helps explain why real hourly income grew faster than implied monthly labor income per worker, which increased by 1.5 percent per year. Neither weekly hours nor implied monthly income is reported in the table.
@@ -47,11 +47,11 @@ Figure~\ref{fig:income-formality-comparison} shows the raw relationship between 
   \label{fig:income-formality-comparison}
 \end{figure}
 
-Table~\ref{tab:formal-worker-profile-2025} helps interpret the left panel of Figure~\ref{fig:income-formality-comparison}. Formal solo work is a heterogeneous category. By occupational position, 82.1 percent are own-account workers and 16.2 percent are domestic workers. By education, 50.9 percent have higher education. By sector, 22.8 percent work in professional and administrative services and 15.6 percent in transport. These percentages describe different dimensions, not mutually exclusive groups. The high education share makes worker composition a plausible explanation for the high raw mean among formal solo workers, but the category is not made up exclusively of professionals. Establishing how much of the U-shape survives observable worker differences requires the regressions below.
+Table~\ref{tab:formal-worker-profile-2025} helps interpret the left panel of Figure~\ref{fig:income-formality-comparison}. Formal solo work is a heterogeneous category. By occupational position, 82.1 percent are own-account workers and 16.2 percent are domestic workers. By education, 50.9 percent have higher education. By sector, 22.8 percent work in professional and administrative services and 15.6 percent in transport. These percentages describe different dimensions, not mutually exclusive groups. The high education share makes worker composition a plausible explanation for the high raw mean among formal solo workers, but the category is not made up exclusively of professionals. These means do not establish whether the U-shape would remain after accounting for differences in education and other worker characteristics.
 
 \input{Paper/sections/descriptive_formal_worker_profile_2025_table}
 
-Figure~\ref{fig:minwage-distribution-formality-size} provides a second view of the same formality-size split. Instead of means, it shows smoothed wage distributions on a logarithmic scale relative to an hourly minimum-wage benchmark in 2025. The benchmark converts the statutory monthly minimum of 1,423,500 pesos using 45 weekly hours and $52/12$ weeks per month. It is an annual approximation, not a worker-specific legal compliance threshold. The vertical line marks this benchmark. The labels on the right, rather than the heights of the curves, report each size category's employment share within its formality group. Among formal workers, the categories from 4--5 to 51--100 workers are visibly concentrated around the benchmark. Appendix Table~\ref{tab:minimum-wage-bunching-2025} quantifies this pattern: between 36.9 and 42.7 percent of formal workers in these categories earn within 10 percent of the hourly benchmark. Appendix Table~\ref{tab:minimum-wage-monthly-bunching-2025} shows a similar pattern using implied monthly labor income: between 39.1 and 46.3 percent of formal workers in firms with 4--100 workers earn within 10 percent of the monthly minimum. Formal solo workers and formal workers in 101+ firms have higher 75th percentiles, at 2.11 and 2.46 monthly minimum wages, respectively. Among informal workers, 73.5 percent of solo workers and 65.9 percent of workers in firms with 2--3 workers earn less than 0.9 times the hourly benchmark. The figure therefore shows concentration near the minimum among intermediate-size formal categories and substantial employment below that benchmark among informal workers.
+To compare wage distributions with the minimum wage, we first define an hourly benchmark for 2025. We divide the statutory monthly minimum of 1,423,500 pesos by 45 weekly hours and $52/12$ weeks per month. This is an annual approximation, not a worker-specific legal compliance threshold. Figure~\ref{fig:minwage-distribution-formality-size} shows kernel densities, or smoothed distributions, of hourly income relative to this benchmark for each size-formality group. The horizontal axis uses a logarithmic scale, and the vertical line marks income equal to the benchmark. The labels on the right, rather than the heights of the curves, report each size category's employment share within its formality group. Among formal workers, the categories from 4--5 to 51--100 workers are visibly concentrated around the benchmark. Appendix Table~\ref{tab:minimum-wage-bunching-2025} quantifies this pattern. Between 36.9 and 42.7 percent of formal workers in these categories earn within 10 percent of the hourly benchmark. Appendix Table~\ref{tab:minimum-wage-monthly-bunching-2025} shows a similar pattern using implied monthly labor income. Between 39.1 and 46.3 percent of formal workers in firms with 4--100 workers earn within 10 percent of the monthly minimum. Formal solo workers and formal workers in 101+ firms have higher 75th percentiles, the income levels below which 75 percent of each group falls, at 2.11 and 2.46 monthly minimum wages, respectively. Among informal workers, 73.5 percent of solo workers and 65.9 percent of workers in firms with 2--3 workers earn less than 0.9 times the hourly benchmark. The figure therefore shows concentration near the minimum among intermediate-size formal categories and substantial employment below that benchmark among informal workers.
 
 \begin{figure}[!htbp]
   \centering
@@ -62,7 +62,7 @@ Figure~\ref{fig:minwage-distribution-formality-size} provides a second view of t
 
 Figure~\ref{fig:income-sex-comparison} shows that the raw firm-size pattern is
 similar for men and women. In 2025, among men, solo workers earned 6,816 pesos
-per hour, compared with 16,929 pesos in firms with 101 or more workers; among
+per hour, compared with 16,929 pesos in firms with 101 or more workers. Among
 women, the corresponding means were 6,133 and 16,777 pesos. The absolute
 large-firm gaps are similar: 10,113 pesos for men and 10,644 pesos for women.
 Relative to each sex's solo-worker mean, the corresponding ratios are 2.5
@@ -112,6 +112,7 @@ nonmonotonicity within sectors as well as differences between them.
   \label{fig:income-sector-comparison}
 \end{figure}
 
+\FloatBarrier
 Taken together, the descriptive evidence motivates the regression analysis
 below. The central pattern is not only that mean hourly income is higher in
 larger firm-size categories. The tables and figures also provide suggestive
@@ -119,7 +120,7 @@ evidence that a firm-size wage premium appears within each sex, within each
 education group, in most economic activities, and even within both formal and
 informal employment. At the same time, the descriptive results show strong
 differences in worker composition by formality, education, sector, and
-occupational position across firm sizes. The econometric exercise therefore asks how much of the raw
-firm-size premium survives after controlling for observable worker
-characteristics and occupational position within formal and informal employment,
-while absorbing sector-department-year conditions.
+occupational position across firm sizes. The next section explains how we
+estimate wage differences between firm sizes while accounting for these
+characteristics jointly, comparing workers within each formality group and
+within the same sector, department, and year.
