@@ -5,14 +5,8 @@
 \label{subsec:preferred-specification}
 
 We begin with a regression of log real hourly labor income on firm-size
-indicators alone. A size indicator equals one for workers in that category
-and zero otherwise. Solo work is the omitted reference category, so each
-size coefficient measures a difference in log income, expressed in log points,
-relative to solo workers.
-We then add sector-year fixed effects, worker characteristics, and formality
-in sequence. A sector-year fixed effect is a separate intercept for each
-economic sector in each survey year. It accounts for wage differences shared
-by workers in that sector and year.
+indicators alone, with solo work as the reference category. We then add
+sector-year fixed effects, worker characteristics, and formality in sequence.
 
 Let \(i\), \(s\), and \(t\) index workers, sectors, and survey years.
 The outcome \(w_{ist}\) is the real hourly income defined in the data section.
@@ -22,12 +16,8 @@ age squared, and education indicators. Unlike the four-group descriptive
 comparisons, these indicators retain the six education categories and the
 ``does not know/not reported'' group, with lower secondary as the education
 reference. The formality indicator \(F_{ist}\) equals one for pension
-contributors and zero for noncontributors. Denote the intercept by
-\(\alpha\), the size coefficients by \(b_g\), the worker-control coefficients
-by \(\gamma\), the formality coefficient by \(\phi\), and the sector-year
-fixed effects by \(\lambda_{s\times t}\). The error \(\varepsilon_{ist}\)
-captures log income not accounted for by these terms. With all these
-controls, the initial specification is
+contributors and zero for noncontributors. With sector-year fixed effects
+\(\lambda_{s\times t}\), the initial specification with all these controls is
 \begin{equation}\label{eq:common-premium}
   \ln(w_{ist}) = \alpha
   + \sum_{g\neq g_0} b_g D_{ig}
@@ -45,16 +35,12 @@ informal workers.
 
 We next retain this common-premium restriction while adding geographic
 controls and occupational position. First, we add department-year fixed
-effects to Equation~(\ref{eq:common-premium}), allowing each department its
-own intercept in each year. We then replace the separate sector-year and
-department-year effects with one intercept for each sector-department-year
-combination, which we call a cell. Finally, we add a separate intercept for
-each occupational position. Table~\ref{tab:firm-size-local-geography-robustness}
-reports these extensions. The specifications with sector-department-year
-effects exclude 139 observations that are alone in their cell, called
-singleton cells, leaving
-5,268,375 observations. Such observations provide no within-cell comparison
-from which to estimate the size coefficients.
+effects to Equation~(\ref{eq:common-premium}). We then replace the separate
+sector-year and department-year effects with sector-department-year fixed
+effects, before adding occupational-position fixed effects.
+Table~\ref{tab:firm-size-local-geography-robustness} reports these extensions.
+The specifications with sector-department-year effects exclude 139 singleton
+observations, leaving 5,268,375 observations.
 
 Our preferred specification then allows each size coefficient to differ
 between formal and informal workers by interacting the size indicators with
@@ -74,12 +60,10 @@ definitions above. The preferred model is
   + X_{isdt}'\gamma + \rho_{o(i)} + \lambda_{s\times d\times t}
   + \varepsilon_{isdt}.
 \end{equation}
-The sector-department-year fixed effects absorb wage differences common to
-workers in the same sector and department in a given year. The size
-coefficients compare firm-size categories within these cells, separately by
+The size coefficients compare firm-size categories within sector-department-year
+cells, separately by
 formality and conditional on the included worker and occupational-position
-controls. The regression accounts for these characteristics jointly rather
-than pairing workers who are identical on every characteristic. Controlling for occupational position
+controls. Controlling for occupational position
 is relevant because solo work and employment in larger firms differ substantially
 in the prevalence of own-account and wage employment. These controls describe
 conditional comparisons, rather than identifying the total effect of moving
@@ -91,8 +75,7 @@ preferred specification. Columns (1)--(3) provide comparisons with progressively
 more detailed geographic controls. The estimation sample for column (4)
 contains 5,268,375 observations.
 
-We use ``contrast'' to mean a difference between two categories calculated
-from the regression coefficients. For any estimated log-wage contrast
+For any estimated log-wage contrast
 \(\widehat{\Delta}\), we report the percentage gap
 as \(100[\exp(\widehat{\Delta})-1]\). The underlying wage ratio is a ratio
 of exponentiated conditional mean log incomes, not automatically a ratio of
@@ -109,8 +92,7 @@ denote the formal-minus-informal log-wage difference at size \(g\). Then
   \Delta^{I\to F}_{g} &= \phi+\theta_g. \nonumber
 \end{align}
 For the third comparison, the percentage premium uses informal workers as
-the denominator. Changing the omitted size category, also called changing
-the normalization, to 101+ or
+the denominator. Changing the omitted size category to 101+ or
 11--19 workers leaves fitted log incomes unchanged. A given pairwise contrast
 and its standard error are also unchanged, although the coefficients displayed
 relative to the new base differ. These are adjusted wage comparisons. Interpreting them as the gains
@@ -123,28 +105,21 @@ coefficients fixed.
 \subsection{Inference and Comparison Specifications}
 \label{subsec:inference}
 
-Statistical inference describes the sampling uncertainty of the estimated
-coefficients and contrasts. We allow regression errors to be correlated
-within specified groups, called clusters, when calculating standard errors.
-The preferred model groups observations by sector and department, allowing
-correlation across workers and years within each of 559 clusters. This does
-not allow unrestricted correlation across departments within a sector.
-We therefore also group observations by sector alone as a sensitivity check.
-This permits that broader correlation but leaves only 17 clusters. Changing
-the clustering level changes standard errors and tests, not the fitted
-coefficients. The initial sequence in
+We cluster standard errors by sector-department, allowing dependence across
+workers and years within 559 clusters. As a sensitivity check, we also
+cluster by sector, allowing dependence across departments but leaving only
+17 clusters. The initial sequence in
 Table~\ref{tab:firm-size-wage-premium-regressions} uses sector clustering.
 The geographic and occupational-position extensions use sector-department
 clustering.
 
-Tests of individual coefficients and contrasts are two-sided, allowing
-either a positive or a negative difference. Their \(p\)-values and 95 percent
+Tests of individual coefficients and contrasts are two-sided. Their
+\(p\)-values and 95 percent
 confidence intervals use a Student t distribution with \(G-1\) degrees of
 freedom, where \(G\) is the number of clusters. This gives 16 degrees of
 freedom for sector clustering and 558 for the preferred model. The variance
 of a contrast includes the covariances between its coefficients. For joint
-hypotheses about several coefficients, we use Wald \(F\) tests, which test
-the specified restrictions together using that covariance information.
+hypotheses, we use Wald \(F\) tests.
 Their numerator degrees of freedom equal the number of restrictions, and
 their denominator degrees of freedom equal \(G-1\).
 
@@ -163,8 +138,7 @@ comparisons.
 
 We extend Equation~(\ref{eq:main}) by allowing the firm-size premiums, the
 formality coefficient, and all worker and occupational-position coefficients
-to vary by year. We add the subscript \(t\) to these coefficients to denote
-their year-specific values:
+to vary by year:
 \begin{equation}\label{eq:preferred-dynamics}
   \ln(w_{isdt}) = \phi_t F_{isdt}
   + \sum_{g\neq g_0}(\beta_{gt}+\theta_{gt}F_{isdt})D_{ig}
@@ -196,9 +170,7 @@ Appendix Table~\ref{tab:preferred-extension-clustering} checks how these
 
 \subsection{Approximate Firm-Size Elasticities}
 
-A firm-size wage elasticity measures the percentage wage difference
-associated with a 1 percent difference in firm size, conditional on the
-included controls. GEIH reports size categories rather than exact worker
+GEIH reports size categories rather than exact worker
 counts. To obtain an approximate elasticity, we assign sizes of 1, 2.5,
 4.5, 8, 15, 25, 40.5, 75.5, and 150 to the nine firm-size categories in
 their stated order. Let \(\widetilde{Size}_{isdt}\) denote this assigned size.
@@ -228,7 +200,6 @@ sensitivity of the elasticity tests to sector clustering. The appendix also
 retains a version with fewer controls in Equation~(\ref{eq:elasticity}) for
 comparison. We also estimate a quadratic extension, adding the square of log
 assigned size and allowing both size coefficients to differ by formality.
-This lets the slope change with size rather than remain constant.
 Equation~(\ref{eq:polynomial-size-profile}) sets out that model. Its tests ask
 whether a linear and a squared term per formality group can reproduce the
 eight category-specific contrasts in Equation~(\ref{eq:main}), and check
