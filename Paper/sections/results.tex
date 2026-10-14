@@ -69,7 +69,7 @@ formal solo workers, and this difference is statistically significant at the
 1 percent level. The 51--100 category has an 8.9 percent premium over formal
 solo work, also significant at the 1 percent level. The smaller categories
 do not form a uniformly increasing sequence relative to solo work. In
-particular, the 2--3 category is 7.0 percent below formal solo workers.
+particular, formal workers in the 2--3 category earn 7.0 percent less than formal solo workers.
 The estimates for 4--50 workers range from -2.2 to 6.1 percent and are not
 statistically different from zero at the 5 percent level. The evidence of a
 formal premium relative to solo work is strongest in the two largest categories.
@@ -190,8 +190,8 @@ test does not reject equality (\(p=0.897\)). This similarity does not extend
 to the entire size profile. Relative to solo work, the premium in firms with
 11--19 workers remains substantially larger among informal employees, at
 24.7 percent, than among formal employees, at 6.5 percent. The table's summary
-rows report both comparisons. A joint Wald test rejects equality of all eight
-formal and informal size contrasts relative to solo work (\(p<0.001\)).
+rows report both comparisons. A Wald test rejects the joint null that all eight
+size contrasts relative to solo work are equal across formality groups (\(p<0.001\)).
 Both conclusions also hold under sector
 clustering. Thus, the larger informal premium in the full sample's 101+/solo
 comparison does not generalize to salaried employment alone, although
@@ -344,52 +344,9 @@ for the preferred categorical estimates.
 \subsection{Illustrative Income Counterfactuals}
 \label{subsec:income-counterfactuals}
 
-The preferred estimates describe wage differences between groups. We now ask
-how much total predicted labor income would change if workers received the
-pay associated with another firm-size or formality category. We apply the
-pooled coefficients from column (4) of
-Table~\ref{tab:firm-size-local-geography-formality-robustness} to the 341,282
-observations in the 2025 estimation sample. Each scenario changes only firm
-size, formality, or both. Worker characteristics, occupational position,
-sector, department, weekly hours, and survey weights remain fixed. Workers
-already in the destination category retain their baseline predictions.
-
-Let \(\widehat{\ell}_i\) be fitted log hourly income from
-Equation~(\ref{eq:main}), including the fixed effects, for worker \(i\)'s
-observed size and formality status. Define \(S\) as the survey-weighted mean of
-exponentiated residuals in 2025. We construct baseline hourly income as
-\(\widehat w_i=S\exp(\widehat{\ell}_i)\). This retransformation factor accounts
-for the fact that exponentiating a mean log income does not generally recover
-mean income in levels. We assume the same factor across workers and
-destinations. Let \(g(i)\) denote worker \(i\)'s size category. If scenario
-\(c\) changes the worker's size-formality component
-\(\phi F_i+\beta_{g(i)}+\theta_{g(i)}F_i\) by
-\(\widehat\Delta_i^c\), counterfactual hourly income is
-\(\widehat w_i^c=\widehat w_i\exp(\widehat\Delta_i^c)\).
-For a change in size or formality alone, this difference is one of the
-contrasts in Equation~(\ref{eq:preferred-contrasts}). For a joint change, we
-subtract the origin component from the destination component directly. Let
-\(\mathcal I_{2025}\) denote the 2025 estimation sample. With expansion weight
-\(a_i\) and weekly hours \(h_i\), denote the percentage change in total
-predicted weekly labor income under scenario \(c\) by \(G_c\). It is
-\begin{equation}\label{eq:income-counterfactual}
-  G_c=100\left[
-  \frac{\sum_{i\in\mathcal I_{2025}}a_i h_i\widehat w_i
-        \exp(\widehat\Delta_i^c)}
-       {\sum_{i\in\mathcal I_{2025}}a_i h_i\widehat w_i}-1\right].
-\end{equation}
-Thus, the outcome is total predicted weekly labor income. Its percentage
-change weights each individual's percentage change by that individual's share
-of baseline income, including survey weights and hours. It is not the average
-percentage wage change across workers. The common factor \(S\)
-cancels from this ratio. The target-group calculation restricts both sums to
-workers initially in the relevant formality group, including those already
-at the destination. Restricting both sums to workers whose size or formality
-changes gives the result for reassigned workers. Because the workers and their
-weights remain the same before and after reassignment, this is also the
-percentage change in their mean predicted weekly income.
-
-Table~\ref{tab:income-counterfactuals-2025} reports four scenarios. Assigning
+Table~\ref{tab:income-counterfactuals-2025} reports four scenarios for the 2025
+workforce using the calculations in Section~\ref{subsec:income-counterfactual-method}
+and the pooled preferred coefficients. Assigning
 informal workers the formal pay prediction at their current firm size raises
 their group's predicted income by 41.9 percent and total predicted income by
 13.5 percent. The aggregate change is smaller because informal workers account
@@ -420,14 +377,11 @@ size premium itself depends on formality.
 Appendix Table~\ref{tab:income-counterfactual-sensitivity} reports alternative
 destinations and a calculation that starts from observed rather than predicted
 income. Multiplying observed income by the estimated destination-to-origin
-wage ratio preserves each worker's residual, the difference between observed
-and fitted log income. This alternative gives similar aggregate changes. Appendix
+wage ratio preserves each worker's log-wage residual. This alternative gives
+similar aggregate changes. Appendix
 Table~\ref{tab:income-counterfactual-support} examines how strongly the
 scenarios extrapolate beyond observed destination groups. For example,
 39.1 percent of intended movers to informal 101+ employment have no observed
 counterpart with the same sector, department, and occupational position in
-that destination in 2025. These scenarios quantify changes in predicted labor
-income under a fixed estimated wage structure. They are not causal estimates
-of reallocation or formalization, and they do not incorporate adjustments in
-wages, employment, or production. Section~\ref{sec:discussion} discusses their
-interpretation.
+that destination in 2025. Section~\ref{sec:discussion} discusses the
+interpretation and limitations of these scenarios.
