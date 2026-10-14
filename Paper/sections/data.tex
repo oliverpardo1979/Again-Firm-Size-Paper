@@ -2,14 +2,13 @@
 
 The empirical analysis uses microdata from the Gran Encuesta Integrada de Hogares (GEIH), Colombia's nationally representative labor force survey produced by the National Administrative Department of Statistics (DANE). Our sample covers 2008--2019 and 2021--2025. We exclude 2020 because of pandemic-related data limitations \citep{DANE2020GEIH}. The data combine separate annual samples rather than following the same workers over time.
 
-The sample is restricted to employed workers with positive labor income, valid weekly hours, and positive survey expansion weights. An expansion weight indicates how many workers in the surveyed population a respondent represents. We use these weights to calculate employment shares and income averages. We convert reported monthly labor income and weekly hours to a common hourly basis using 12 months and 52 weeks per year. Let \(i\) index workers and \(t\) survey years. Denote reported monthly labor income by \(MonthlyIncome_{it}\), weekly hours by \(WeeklyHours_{it}\), and the end-of-year Consumer Price Index by \(CPI_t\). Real hourly labor income in constant 2025 Colombian pesos, \(w_{it}\), is
+The sample is restricted to employed workers with positive labor income and valid weekly hours. Let \(i\) index workers and \(t\) survey years. Denote reported monthly labor income by \(MonthlyIncome_{it}\), weekly hours by \(WeeklyHours_{it}\), and the end-of-year Consumer Price Index by \(CPI_t\). Real hourly labor income in constant 2025 Colombian pesos, \(w_{it}\), is
 
 \begin{equation}
   w_{it} =
   \frac{12 \times MonthlyIncome_{it}}{52 \times WeeklyHours_{it}}\times
   \frac{CPI_{2025}}{CPI_t}.    
 \end{equation}
-The factors 12 and 52 convert the reported monthly income and weekly hours to the same time unit. They are not observations of each worker's annual income or hours. When reporting implied monthly income, we reverse the hourly conversion by multiplying real hourly income by reported weekly hours and \(52/12\).
 
 Firm size is measured using the worker-reported firm-size variable in GEIH. We recode responses into categories that are comparable across survey years: Solo, 2--3, 4--5, 6--10, 11--19, 20--30, 31--50, 51--100, and 101+. Solo identifies respondents who report working alone. It is distinct from occupational position, which identifies whether they are own-account workers, employees, or employers. The newer questionnaire separates 101--200 and 201+ workers. We combine both categories into 101+ to maintain comparability with earlier years. The data do not contain employer identifiers, so we cannot link respondents who work for the same firm.
 
