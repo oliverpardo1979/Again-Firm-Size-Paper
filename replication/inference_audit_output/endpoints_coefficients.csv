@@ -1,0 +1,66 @@
+term,original_term,estimate
+v00,2008:tamano_empresa::2-3,0.05958243906587485
+v01,2008:tamano_empresa::4-5,0.21280030782297948
+v02,2008:tamano_empresa::6-10,0.24814849225709806
+v03,2008:tamano_empresa::11-19,0.30428092911639826
+v04,2008:tamano_empresa::20-30,0.35999329966205673
+v05,2008:tamano_empresa::31-50,0.32571412593815535
+v06,2008:tamano_empresa::51-100,0.34962640557688973
+v07,2008:tamano_empresa::101+,0.30417990469843037
+v08,2008:formal,0.42149517560650374
+v09,2008:mujer,-0.2001749227043566
+v10,2008:edad,4.107131846252582
+v11,2008:edad2,-4.020634609879466
+v12,2008:educacion::Básica primaria,-0.13845204170509917
+v13,2008:educacion::Media,0.14047261037762493
+v14,2008:educacion::Ninguno,-0.3281298799979469
+v15,"2008:educacion::No sabe, no informa",0.107080283682775
+v16,2008:educacion::Preescolar,0.45671540345332984
+v17,2008:educacion::Superior o universitaria,0.6649278793001154
+v18,2008:posicion_ocupacional_label::Jornalero o peón,0.002252154520267169
+v19,2008:posicion_ocupacional_label::Obrero o empleado de empresa particular,-0.09316262986766688
+v20,2008:posicion_ocupacional_label::Obrero o empleado del gobierno,0.12971359771997726
+v21,2008:posicion_ocupacional_label::Otro,-0.17983692979709076
+v22,2008:posicion_ocupacional_label::Patrón o empleador,0.5696583390553478
+v23,2008:posicion_ocupacional_label::Trabajador familiar sin remuneración,-1.213618934788169
+v24,2008:posicion_ocupacional_label::Trabajador por cuenta propia,-0.042327313686488566
+v25,2008:posicion_ocupacional_label::Trabajador sin remuneración en otros hogares,-0.9057920639621209
+v26,2008:formal:tamano_empresa::2-3,-0.18640606122462522
+v27,2008:formal:tamano_empresa::4-5,-0.26824941089558285
+v28,2008:formal:tamano_empresa::6-10,-0.24734629116547957
+v29,2008:formal:tamano_empresa::11-19,-0.2709687155348681
+v30,2008:formal:tamano_empresa::20-30,-0.339497804389187
+v31,2008:formal:tamano_empresa::31-50,-0.3025636697450751
+v32,2008:formal:tamano_empresa::51-100,-0.3134058433180731
+v33,2008:formal:tamano_empresa::101+,-0.18510037773023047
+v34,2025:tamano_empresa::2-3,0.17111183266228008
+v35,2025:tamano_empresa::4-5,0.31772930840234465
+v36,2025:tamano_empresa::6-10,0.3882620020924351
+v37,2025:tamano_empresa::11-19,0.40463269166572186
+v38,2025:tamano_empresa::20-30,0.3715421991791761
+v39,2025:tamano_empresa::31-50,0.3603614215927641
+v40,2025:tamano_empresa::51-100,0.38969493289142015
+v41,2025:tamano_empresa::101+,0.45580169266017934
+v42,2025:formal,0.5655697443643726
+v43,2025:mujer,-0.17773571505705793
+v44,2025:edad,2.951793705508495
+v45,2025:edad2,-3.0422356126988244
+v46,2025:educacion::Básica primaria,-0.087750993073671
+v47,2025:educacion::Media,0.06311849370199044
+v48,2025:educacion::Ninguno,-0.2110577218803586
+v49,2025:educacion::Preescolar,-0.50661489911809
+v50,2025:educacion::Superior o universitaria,0.4678015989150834
+v51,2025:posicion_ocupacional_label::Jornalero o peón,0.29090392067646054
+v52,2025:posicion_ocupacional_label::Obrero o empleado de empresa particular,0.20571252266695167
+v53,2025:posicion_ocupacional_label::Obrero o empleado del gobierno,0.5508476241178853
+v54,2025:posicion_ocupacional_label::Otro,-0.11008161203536129
+v55,2025:posicion_ocupacional_label::Patrón o empleador,0.7632094475666434
+v56,2025:posicion_ocupacional_label::Trabajador por cuenta propia,0.25103063032529294
+v57,2025:formal:tamano_empresa::2-3,-0.28660009537638137
+v58,2025:formal:tamano_empresa::4-5,-0.3451118210025626
+v59,2025:formal:tamano_empresa::6-10,-0.39559694963646147
+v60,2025:formal:tamano_empresa::11-19,-0.3771342732229036
+v61,2025:formal:tamano_empresa::20-30,-0.36152753108281915
+v62,2025:formal:tamano_empresa::31-50,-0.3203159570884996
+v63,2025:formal:tamano_empresa::51-100,-0.32919672628343816
+v64,2025:formal:tamano_empresa::101+,-0.3289097456732615

@@ -106,10 +106,15 @@ coefficients fixed.
 \subsection{Inference and Comparison Specifications}
 \label{subsec:inference}
 
-We cluster standard errors by sector-department, allowing dependence across
-workers and years within 559 clusters. As a sensitivity check, we also
-cluster by sector, allowing dependence across departments but leaving only
-17 clusters. The initial sequence leading to
+We cluster standard errors for the preferred model by sector-department,
+allowing dependence across workers and years within
+559 intersections. We compare this inference with clustering by sector
+(17 clusters), by department (33 clusters), and by sector and department
+separately in a two-way covariance estimator. Sector clustering permits
+dependence across departments within a sector, whereas department clustering
+permits dependence across sectors within a department. Two-way clustering
+allows both, unlike clustering on their intersections
+\citep{CameronMiller2015}. The initial sequence leading to
 Equation~(\ref{eq:common-premium}) uses sector clustering.
 The geographic and occupational-position extensions use sector-department
 clustering.
@@ -117,15 +122,22 @@ clustering.
 Tests of individual coefficients and contrasts are two-sided. Their
 \(p\)-values and 95 percent
 confidence intervals use a Student t distribution with \(G-1\) degrees of
-freedom, where \(G\) is the number of clusters. This gives 16 degrees of
-freedom for sector clustering and 558 for the preferred model. The variance
+freedom, where \(G\) is the number of clusters. Two-way tests use the
+smaller cluster count, giving 16 degrees of freedom. The variance
 of a contrast includes the covariances between its coefficients. For joint
 hypotheses, we use Wald \(F\) tests.
 Their numerator degrees of freedom equal the number of restrictions, and
 their denominator degrees of freedom equal \(G-1\).
 
-We also hold the sample fixed to separate changes in the controls from
-changes in clustering.
+Because sector clustering leaves only 17 clusters, we also report
+null-imposed wild cluster bootstrap tests following
+\citet{RoodmanEtAl2019}. We use the WCR11 procedure with Rademacher weights
+and 9,999 draws for sector, department, and two-way inference. In the
+two-way version, bootstrap weights are drawn by sector and test statistics
+use the two-way covariance estimator. These are two-sided, pointwise tests,
+without adjustment for multiple comparisons. Coefficients, samples, and
+survey weights are held fixed across inference methods. The bootstrap
+\(p\)-values supplement rather than replace the baseline confidence intervals.
 
 The results therefore proceed from a common size premium with sequential
 controls to the preferred formality-specific estimates. The appendix reports
@@ -166,8 +178,8 @@ pointwise tests, not tests of all changes jointly, and they are not adjusted
 for multiple comparisons. A positive difference means that the
 conditional size-to-solo wage ratio increased. It does not establish a steady
 annual rise or identify which group's wages changed.
-We also check how these
-2008--2025 tests change under sector rather than sector-department clustering.
+We also apply the alternative clustering and bootstrap procedures described
+in Section~\ref{subsec:inference} to the 101+/solo endpoint changes.
 
 \subsection{Approximate Firm-Size Elasticities}
 
@@ -196,8 +208,8 @@ assigned to 101+. They also impose a constant slope within each formality
 group, whereas Equation~(\ref{eq:main}) allows each category to differ.
 We compare them with the literature means reported by
 \citet{DiegmannMullerSchoefer2026}, recognizing differences in populations and
-controls. We assess the
-sensitivity of the elasticity tests to sector clustering. The appendix also
+controls. We assess the elasticity tests using the same alternative
+clustering and bootstrap procedures. The appendix also
 retains a version with fewer controls in Equation~(\ref{eq:elasticity}) for
 comparison. We also estimate a quadratic extension, adding the square of log
 assigned size and allowing both size coefficients to differ by formality.

@@ -1,0 +1,41 @@
+WCR11, null imposed, two-sided, Rademacher weights, 9999 replications.
+Seed 20261018. Multiway covariance uses the minimum cluster correction.
+Two-way bootstrap draws weights by sector, the smaller dimension (17 clusters).
+WLS fixed effects are removed exactly through weighted within-cell moments.
+All clustering dimensions contain complete sector-department-year FE cells.
+The compressed square-root representation preserves cluster X'X and X'y.
+Finite-N scaling cancels between observed and bootstrap t-statistics.
+Invalid bootstrap t-statistics dropped internally by the package are counted in discarded_boot_t.
+R version 4.5.2 (2025-10-31 ucrt)
+Platform: x86_64-w64-mingw32/x64
+Running under: Windows 11 x64 (build 26200)
+
+Matrix products: default
+  LAPACK version 3.12.1
+
+locale:
+[1] LC_COLLATE=C                        LC_CTYPE=English_United States.utf8
+[3] LC_MONETARY=C                       LC_NUMERIC=C
+[5] LC_TIME=C
+
+time zone: America/Montevideo
+tzcode source: internal
+
+attached base packages:
+[1] stats     graphics  grDevices utils     datasets  methods   base
+
+other attached packages:
+[1] fixest_0.14.1           fwildclusterboot_0.14.3
+
+loaded via a namespace (and not attached):
+ [1] stringmagic_1.2.0    nlme_3.1-169         cli_3.6.6
+ [4] TH.data_1.1-5        rlang_1.2.0          estimability_1.5.1
+ [7] Formula_1.2-5        generics_0.1.4       xtable_1.8-8
+[10] gtools_3.9.5         zoo_1.8-15           dqrng_0.4.1
+[13] grid_4.5.2           MASS_7.3-65          mvtnorm_1.3-7
+[16] JuliaConnectoR_1.1.6 numDeriv_2016.8-1.1  multcomp_1.4-30
+[19] compiler_4.5.2       codetools_0.2-20     sandwich_3.1-1
+[22] emmeans_2.0.3        coda_0.19-4.1        Rcpp_1.1.1-1.1
+[25] dreamerr_1.5.0       summclust_0.7.0      lattice_0.22-9
+[28] collapse_2.1.6       splines_4.5.2        parallel_4.5.2
+[31] Matrix_1.7-4         tools_4.5.2          survival_3.8-3

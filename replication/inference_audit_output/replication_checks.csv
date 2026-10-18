@@ -1,0 +1,7 @@
+model,check,max_error
+preferred,coefficients,3.3977543001384447e-12
+preferred,Sector-department covariance,7.668475229816174e-14
+preferred,Sector covariance,8.160399439516297e-14
+preferred,compressed coefficient equivalence,1.915134717478395e-13
+endpoints,compressed coefficient equivalence,1.0899170455047624e-11
+elasticity,compressed coefficient equivalence,5.764277943853813e-13

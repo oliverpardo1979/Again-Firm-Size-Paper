@@ -1,0 +1,45 @@
+Tables~\ref{tab:preferred-clustering-comparison} and
+\ref{tab:preferred-wild-bootstrap} extend the inference comparison while
+holding coefficients and samples fixed. The first reports conventional tests
+with sector-department intersections, sector, department, and two-way sector
+and department clustering. The preferred and elasticity models contain
+5,268,375 observations, 559 intersections, 17 sectors, and 33 departments.
+The joint endpoint model contains 489,796 observations and 540 intersections,
+with the same numbers of sectors and departments. The second table reports
+the wild cluster bootstrap tests described in Section~\ref{subsec:inference}.
+
+The formal 101+/solo premium is not significant with sector bootstrap
+inference (\(p=0.184\)) or two-way bootstrap inference (\(p=0.188\)). By
+contrast, every formal 101+ comparison with the categories from 2--3 through
+51--100 remains significant at 5 percent. All eight informal size-to-solo
+comparisons and all nine formal-informal wage gaps also remain significant
+under each bootstrap convention. The tables display selected contrasts,
+and the replication files report all 45 contrasts. The two-way bootstrap
+\(p\)-value for the difference between the formal and informal 101+/solo
+log-wage gaps is 0.092, compared with 0.0015 for the difference between their
+elasticities. The 101+/solo contrast and the elasticity therefore provide
+different evidence about how the size-pay relationship differs by formality.
+
+The informal 2008--2025 increase has bootstrap \(p\)-values of 0.111 with
+sector clustering, 0.266 with department clustering, and 0.273 with two-way
+clustering. It is not significant under any of these bootstrap conventions.
+The formal change is also insignificant. For that last comparison only,
+two-way studentization produces 209 invalid bootstrap statistics, which the
+software discards. Its reported \(p\)-value uses the remaining 9,790 draws.
+The sector and department bootstrap tests of the formal change retain all
+9,999 draws and give \(p=0.886\) and \(p=0.928\).
+
+These checks address alternative assumptions about residual dependence,
+not the exact GEIH sampling variance. GEIH uses stratified, multistage
+geographical sampling, with successive selections ending in segments of
+approximately ten dwellings \citep{DANE2008GEIHDesign,DANE2025GEIHDesign}.
+The model file retains expansion weights but not the sampling-stratum,
+primary-unit, or segment identifiers needed to reconstruct that design.
+Sector-department intersections can separate workers who belong to the
+same household or geographical sampling unit but work in different sectors.
+Department and two-way clustering allow dependence across such sectors,
+but neither reproduces the survey's stratification and selection stages.
+
+\input{Paper/sections/regression_inference_clustering_table}
+\input{Paper/sections/regression_inference_bootstrap_table}
+\FloatBarrier

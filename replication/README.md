@@ -284,6 +284,51 @@ within `1e-7`, so the income scenarios and the abstract's main magnitudes do not
 change. The earlier editorial audit is a historical record. Its numerical
 pending item is resolved by this reconciliation.
 
+## Clustering and Wild Bootstrap Audit
+
+The appendix comparison is generated from `inference_audit_output/`. It holds
+the preferred model, joint endpoint model, and interacted elasticity model
+fixed while comparing sector-department intersections, sector, department,
+and two-way sector and department clustering. The wild cluster bootstrap
+uses `fwildclusterboot` 0.14.3, WCR11 with the null imposed, Rademacher weights,
+9,999 draws, and seed 20261018. Two-way studentization draws bootstrap weights
+by sector, the dimension with fewer clusters.
+
+The two appendix tables can be rebuilt from the committed aggregate outputs
+without microdata:
+
+```sh
+python replication/build_inference_tables.py
+```
+
+To rerun the audit, follow the commands and dependency information in
+`inference_audit_output/README.md`. `inference_audit_prepare.py` reads the model
+file from the sibling CJC-Monitor checkout and accumulates weighted within-cell
+cross-products in bounded-memory chunks. `inference_audit_bootstrap.R` uses
+their square-root representation with the established bootstrap package.
+`validate_inference_compression.R` independently verifies equivalence to
+individual WLS with explicit fixed effects on synthetic test data.
+`inference_audit_validate.py` checks the original empirical results and
+records the survey-design identifiers available in local source metadata.
+
+The full comparison contains 45 contrasts, with 180 conventional tests and
+135 bootstrap tests. The appendix displays 19 contrasts. No bootstrap
+confidence intervals or multiple-testing adjustments are claimed. The formal
+endpoint change with two-way studentization loses 209 invalid draws. This is
+flagged in the table and raw output rather than treated as a complete run.
+
+The main tables retain their stated baseline covariance convention. The text
+now distinguishes the robust informal premium and formal 101+ advantages over
+non-solo categories from the sensitive formal 101+/solo and informal endpoint
+tests. This audit does not reconstruct the exact GEIH sampling variance,
+because the model file lacks the required design identifiers.
+
+`build/inference_audit/` contains private computational caches and is excluded
+from Git. Only aggregate tests, verification results, and source variable
+metadata are published. The previously displayed two-convention extension
+table remains available in its source file but is superseded in the PDF by
+the expanded comparison and bootstrap tables.
+
 ## Illustrative Income Counterfactuals
 
 The exercise applies the preferred pooled size-by-formality model to the 2025 estimation sample. It includes sex, age, age squared, education, occupational-position controls, and sector-department-year fixed effects. Estimation uses GEIH expansion weights and sector-department clustering.

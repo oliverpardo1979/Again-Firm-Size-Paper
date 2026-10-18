@@ -1,0 +1,44 @@
+\begin{table}[htbp]
+  \centering
+  \caption{Wild cluster bootstrap tests for preferred-model contrasts}
+  \label{tab:preferred-wild-bootstrap}
+  \small
+  \setlength{\tabcolsep}{5pt}
+  \begin{tabular}{@{}p{0.40\textwidth}rrrr@{}}
+    \toprule
+    Contrast & Estimate & $p$ (S) & $p$ (D) & $p$ (S+D) \\
+    \midrule
+    \multicolumn{5}{l}{\textit{A. Within-formality log-wage gaps}} \\
+    Formal 101+/solo & 0.153 & 0.1835 & $<0.001$ & 0.1883 \\
+    Informal 101+/solo & 0.316 & $<0.001$ & $<0.001$ & $<0.001$ \\
+    Formal minus informal, 101+/solo & -0.163 & 0.0859 & $<0.001$ & 0.0917 \\
+    Formal 101+/2--3 & 0.225 & $<0.001$ & $<0.001$ & $<0.001$ \\
+    Formal 101+/4--5 & 0.175 & 0.0015 & $<0.001$ & 0.0020 \\
+    Formal 101+/6--10 & 0.140 & 0.0033 & $<0.001$ & 0.0037 \\
+    Formal 101+/11--19 & 0.113 & 0.0035 & $<0.001$ & 0.0032 \\
+    Formal 101+/20--30 & 0.114 & $<0.001$ & $<0.001$ & $<0.001$ \\
+    Formal 101+/31--50 & 0.093 & 0.0059 & $<0.001$ & 0.0039 \\
+    Formal 101+/51--100 & 0.067 & 0.0237 & $<0.001$ & 0.0169 \\
+    Informal 101+/11--19 & -0.038 & 0.2165 & 0.0324 & 0.2095 \\
+    \midrule
+    \multicolumn{5}{l}{\textit{B. Formal-minus-informal log-wage gaps}} \\
+    Solo & 0.466 & $<0.001$ & $<0.001$ & $<0.001$ \\
+    11--19 & 0.152 & $<0.001$ & $<0.001$ & $<0.001$ \\
+    101+ & 0.303 & $<0.001$ & $<0.001$ & $<0.001$ \\
+    \midrule
+    \multicolumn{5}{l}{\textit{C. Change in the 101+/solo log-wage gap, 2008--2025}} \\
+    Formal & 0.008 & 0.8862 & 0.9284 & 0.9330$^{\dagger}$ \\
+    Informal & 0.152 & 0.1113 & 0.2663 & 0.2728 \\
+    \midrule
+    \multicolumn{5}{l}{\textit{D. Approximate firm-size elasticities}} \\
+    Formal & 0.040 & 0.0155 & $<0.001$ & 0.0173 \\
+    Informal & 0.097 & $<0.001$ & $<0.001$ & $<0.001$ \\
+    Formal-minus-informal & -0.057 & $<0.001$ & $<0.001$ & 0.0015 \\
+    \bottomrule
+  \end{tabular}
+  \vspace{0.3em}
+  \begin{minipage}{0.98\textwidth}
+    \footnotesize
+    Notes: Contrasts and specifications match Table~\ref{tab:preferred-clustering-comparison}. S and D denote sector and department clustering. S+D uses two-way covariance with bootstrap weights drawn by sector. Tests are two-sided WCR11 with the null imposed, Rademacher weights, and 9,999 draws. $\dagger$ The package discarded 209 invalid bootstrap $t$-statistics for this test, leaving 9,790 draws. All other displayed tests retained 9,999 valid draws. Tests are pointwise, without multiple-testing adjustment.
+  \end{minipage}
+\end{table}

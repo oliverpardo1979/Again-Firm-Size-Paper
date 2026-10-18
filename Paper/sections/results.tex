@@ -67,15 +67,12 @@ therefore rises sharply across the smallest categories, but does not increase
 monotonically through the largest category.
 
 Among formal workers, the preferred estimates also reveal a large-firm
-advantage. Formal workers in 101+ firms earn 16.5 percent more than observably comparable
-formal solo workers, and this difference is statistically significant at the
-1 percent level. The 51--100 category has an 8.9 percent premium over formal
-solo work, also significant at the 1 percent level. The smaller categories
+advantage in the point estimates. Formal workers in 101+ firms earn an estimated
+16.5 percent more than observably comparable formal solo workers. The 51--100
+category has an 8.9 percent premium over formal solo work. The smaller categories
 do not form a uniformly increasing sequence relative to solo work. In
 particular, formal workers in the 2--3 category earn 7.0 percent less than formal solo workers.
-The estimates for 4--50 workers range from -2.2 to 6.1 percent and are not
-statistically different from zero at the 5 percent level. The evidence of a
-formal premium relative to solo work is strongest in the two largest categories.
+The estimates for 4--50 workers range from -2.2 to 6.1 percent.
 
 Figure~\ref{fig:preferred-formality-premium} displays the within-formality
 contrasts from Equation~(\ref{eq:main}). The larger informal premium relative to solo work
@@ -88,6 +85,10 @@ The informal estimates flatten across intermediate categories and fall at
   \includegraphics[width=0.95\textwidth]{preferred_formality_premiums_\figurelang.png}
   \caption{Firm-size premiums by formality in the preferred specification}
   \label{fig:preferred-formality-premium}
+  \begin{minipage}{0.95\textwidth}
+    \footnotesize
+    Notes: Confidence intervals use sector-department clustering.
+  \end{minipage}
 \end{figure}
 
 Appendix Table~\ref{tab:preferred-clustering-sensitivity} compares the
@@ -98,21 +99,29 @@ is 16.6 percent with sector-year effects and 16.5 percent with the preferred
 controls. In Equation~(\ref{eq:main}), its standard error is 0.037 log points
 under sector-department clustering, compared with 0.091 under sector
 clustering. The corresponding two-sided \(p\)-values are below 0.001 and
-0.113. Thus, the point estimate is stable, but its significance at 5 percent
-depends on the clustering convention. The informal 101+/solo contrast remains
-significant under both conventions. Statistical significance statements for
-the preferred tables below use sector-department clustering.
+0.113. Appendix Tables~\ref{tab:preferred-clustering-comparison} and
+\ref{tab:preferred-wild-bootstrap} extend this check to department and
+two-way clustering and to wild cluster bootstrap inference. The formal
+101+/solo bootstrap \(p\)-value is 0.184 with sector clustering and 0.188
+with two-way clustering. None of the formal size-to-solo contrasts is
+significant at 5 percent under either bootstrap convention. All eight
+informal size-to-solo contrasts remain significant. The preferred regression
+tables in the main text and their associated confidence intervals retain
+sector-department clustering, but the formal
+101+/solo significance should not be treated as robust.
 
 Table~\ref{tab:firm-size-local-geography-formality-robustness-101-reference}
 reports the specifications in
 Table~\ref{tab:firm-size-local-geography-formality-robustness} with 101+ workers
 as the reference within each formality group. In column (4), which corresponds
-to Equation~(\ref{eq:main}), every smaller formal category is below formal
-101+ workers, and all these differences are statistically significant.
+to Equation~(\ref{eq:main}), every smaller formal category has a lower
+point estimate than formal 101+ workers. All seven comparisons with formal
+categories from 2--3 through 51--100 remain significant at 5 percent under
+the alternative clustering and bootstrap procedures, unlike the solo comparison.
 Expressed with the smaller category as the denominator, the 101+ premium is
 approximately 7.0 percent relative to 51--100 workers and 25.2 percent relative
-to 2--3 workers. Among informal workers, by contrast, 101+ workers earn more
-than solo workers and workers in firms with 2--5 workers, but not more than
+to 2--3 workers. Among informal workers, by contrast, the point estimates
+put 101+ workers above solo workers and workers in firms with 2--5 workers, but not above
 every intermediate category.
 
 \input{Paper/sections/regression_local_geography_formality_robustness_101_reference_table}
@@ -122,8 +131,10 @@ makes the intermediate comparison explicit. In column (4), formal 101+ workers
 earn 0.113 log points, or approximately 12.0 percent, more than formal workers
 in firms with 11--19 workers. Informal 101+ workers, however, earn 0.038 log
 points, or approximately 3.7 percent, less than informal workers in that
-reference category. Both contrasts are statistically significant at the
-5 percent level. The same regression therefore implies different answers
+reference category. The formal contrast remains significant under two-way
+bootstrap inference (\(p=0.003\)), whereas the informal contrast does not
+(\(p=0.210\)), despite its significance under sector-department clustering.
+The same regression therefore implies different answers
 depending on both formality and the sizes being compared. These are
 alternative normalizations of each specification, not separate robustness
 checks. In particular, column (4) in all three tables comes from the same
@@ -136,8 +147,8 @@ from Equation~(\ref{eq:main}), using the contrasts defined in
 Equation~(\ref{eq:preferred-contrasts}). Formal workers earn 59.3 percent more
 than informal workers within solo work, 32.4 percent more in 2--3 firms,
 and 35.4 percent more in 101+ firms. Across the 4--100 categories, the gaps
-range from 15.4 to 20.8 percent. All are statistically significant under
-the preferred inference. These comparisons hold firm size fixed, whereas
+range from 15.4 to 20.8 percent. All nine gaps remain significant under
+each alternative clustering and bootstrap procedure. These comparisons hold firm size fixed, whereas
 Figure~\ref{fig:preferred-formality-premium} holds formality fixed.
 
 \input{Paper/sections/regression_preferred_formality_gap_table}
@@ -147,7 +158,7 @@ The contrast with the literature is most direct for the informal profile.
 than formal jobs in Turkey. Our preferred estimates show a similar contrast
 when larger categories are compared with solo work. They also show a
 statistically significant advantage of the largest formal employers over
-smaller formal categories. This distinction complements evidence that firm
+the non-solo formal categories. This distinction complements evidence that firm
 size and formality are closely related in Colombia
 \citep{OteroCortesEtAl2025,DazaGamboa2013,GutierrezRodriguezLesmes2023} and the
 Ecuadorian evidence that controlling for firm size can eliminate an apparent
@@ -246,6 +257,10 @@ to 18.7, 37.4, and 47.4 percent, respectively.
   \includegraphics[width=0.95\textwidth]{preferred_formality_endpoints_\figurelang.png}
   \caption{Firm-size premiums by formality with preferred controls, 2008 and 2025}
   \label{fig:preferred-formality-endpoints}
+  \begin{minipage}{0.95\textwidth}
+    \footnotesize
+    Notes: Confidence intervals use sector-department clustering.
+  \end{minipage}
 \end{figure}
 
 Table~\ref{tab:preferred-endpoint-changes} tests the 2008--2025 change for each
@@ -257,11 +272,13 @@ is significant at 5 percent. The informal 101+/solo premium increases by
 22.2 percentage points, with \(p=0.011\) under sector-department clustering.
 The informal increases for 2--3, 4--5, and 6--10 workers are also significant.
 The remaining informal changes are not significant at 5 percent in the
-pointwise tests. Appendix Table~\ref{tab:preferred-extension-clustering}
-shows that sector clustering raises the \(p\)-value for the informal 101+/solo
-change to 0.090. Thus, the estimated widening is economically sizeable,
-but its statistical significance depends on the assumed extent of residual
-dependence across departments within sectors.
+pointwise tests. Appendix Table~\ref{tab:preferred-clustering-comparison}
+shows that sector, department, and two-way clustering raise the \(p\)-value
+for the informal 101+/solo change to 0.090, 0.124, and 0.199, respectively.
+The corresponding wild bootstrap \(p\)-values in
+Table~\ref{tab:preferred-wild-bootstrap} are 0.111, 0.266, and 0.273.
+Thus, the point estimates suggest a sizeable widening, but the increase
+is not statistically significant under any of these bootstrap procedures.
 
 \input{Paper/sections/regression_preferred_endpoint_changes_table}
 
@@ -269,9 +286,10 @@ Figure~\ref{fig:preferred-large-firm-dynamics} reports the annual 101+/solo
 premiums from Equation~(\ref{eq:preferred-dynamics}), showing why the endpoint
 comparison should not be read as a steady trend. The formal premium reaches
 25.7 percent in 2012, falls to 5.9 percent in 2021, and recovers to
-13.5 percent in 2025. Its baseline confidence interval excludes zero in
-every year except 2021. The informal premium is positive and significant
-throughout, but also fluctuates. It falls to 28.7 percent in 2021 before
+13.5 percent in 2025. With sector-department clustering, its confidence
+interval excludes zero in every year except 2021, and the informal premium
+is positive and significant throughout. The latter also fluctuates,
+falling to 28.7 percent in 2021 before
 reaching 57.7 percent in 2025.
 
 \begin{figure}[htbp]
@@ -279,6 +297,10 @@ reaching 57.7 percent in 2025.
   \includegraphics[width=0.95\textwidth]{preferred_large_firm_dynamics_\figurelang.png}
   \caption{Large-firm premiums by formality with preferred controls in each year}
   \label{fig:preferred-large-firm-dynamics}
+  \begin{minipage}{0.95\textwidth}
+    \footnotesize
+    Notes: Confidence intervals use sector-department clustering.
+  \end{minipage}
 \end{figure}
 
 These results qualify comparisons with the literature on the evolution of
@@ -288,7 +310,8 @@ to decline with national income and over time across developing economies.
 \citet{ColonnelliTagWebbWolter2018} find no common trajectory across Brazil,
 Germany, Sweden, and the United Kingdom. Our preferred-control estimates
 show little net change between the formal endpoints and a larger informal
-gap in 2025, with inference on that widening sensitive to clustering.
+gap in 2025, but the informal widening is not significant under the
+bootstrap checks.
 They do not describe a uniform decline across Colombian workers.
 
 For comparison, Equation~(\ref{eq:dynamic-benchmark}) allows each size
@@ -327,11 +350,12 @@ formal workers and 0.097 for informal workers. The formal estimate is close
 in magnitude to the literature's observable-controls mean, whereas the informal
 estimate is about 2.7 times that benchmark. The informal slope exceeds the
 formal slope by 0.057, a statistically significant difference
-(\(p<0.001\)). These are two contrasts from one regression, with common
+(two-way bootstrap \(p=0.0015\)). These are two contrasts from one regression, with common
 worker and occupational-position coefficients. They are not estimates from
 separate samples or a decomposition of the common elasticity.
-Appendix Table~\ref{tab:preferred-extension-clustering} shows that both
-slopes remain positive and significant with sector-clustered inference.
+Appendix Tables~\ref{tab:preferred-clustering-comparison} and
+\ref{tab:preferred-wild-bootstrap} show that both slopes and their difference
+remain significant under all the clustering and bootstrap procedures examined.
 
 The literature comparison concerns magnitudes across different populations,
 size measures, and controls, not tests against a common population parameter.

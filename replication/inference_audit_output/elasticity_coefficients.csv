@@ -1,0 +1,21 @@
+term,original_term,estimate
+v00,formal,0.37350005221070415
+v01,mujer,-0.20578424663435488
+v02,edad,3.624973554450656
+v03,edad2,-3.6612651267214273
+v04,educacion::Básica primaria,-0.12272502296570442
+v05,educacion::Media,0.08032020129537232
+v06,educacion::Ninguno,-0.26189174675304744
+v07,"educacion::No sabe, no informa",-0.11161974163321575
+v08,educacion::Preescolar,-0.2673426876674844
+v09,educacion::Superior o universitaria,0.5433957908694961
+v10,posicion_ocupacional_label::Jornalero o peón,-0.1800135255919031
+v11,posicion_ocupacional_label::Obrero o empleado de empresa particular,-0.33691250915686766
+v12,posicion_ocupacional_label::Obrero o empleado del gobierno,-0.046388225499342184
+v13,posicion_ocupacional_label::Otro,-0.7476279827921744
+v14,posicion_ocupacional_label::Patrón o empleador,0.24137365908495667
+v15,posicion_ocupacional_label::Trabajador familiar sin remuneración,-1.42717788659467
+v16,posicion_ocupacional_label::Trabajador por cuenta propia,-0.3241661507410569
+v17,posicion_ocupacional_label::Trabajador sin remuneración en otros hogares,-1.1539875055496793
+v18,log_size,0.09664758582324562
+v19,formal:log_size,-0.0570402620593502

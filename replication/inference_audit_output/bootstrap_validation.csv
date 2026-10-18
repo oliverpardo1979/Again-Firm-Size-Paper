@@ -1,0 +1,136 @@
+"model","contrast","clustering","t_error"
+"preferred","Informal 2-3/solo","Sector",-2.8599345114344e-13
+"preferred","Informal 2-3/solo","Department",-3.74811293113453e-13
+"preferred","Informal 2-3/solo","Two-way sector + department",-2.65565347490337e-13
+"preferred","Informal 4-5/solo","Sector",-1.75859327100625e-13
+"preferred","Informal 4-5/solo","Department",-1.72306613421824e-12
+"preferred","Informal 4-5/solo","Two-way sector + department",-1.90070181815827e-13
+"preferred","Informal 6-10/solo","Sector",-2.75335310107039e-14
+"preferred","Informal 6-10/solo","Department",-1.68398628375144e-12
+"preferred","Informal 6-10/solo","Two-way sector + department",-9.05941988094128e-14
+"preferred","Informal 11-19/solo","Sector",-1.20792265079217e-13
+"preferred","Informal 11-19/solo","Department",-8.20676859802916e-13
+"preferred","Informal 11-19/solo","Two-way sector + department",-8.88178419700125e-14
+"preferred","Informal 20-30/solo","Sector",-4.70734562441066e-13
+"preferred","Informal 20-30/solo","Department",1.84030568561866e-12
+"preferred","Informal 20-30/solo","Two-way sector + department",-3.12638803734444e-13
+"preferred","Informal 31-50/solo","Sector",-1.01962882581574e-12
+"preferred","Informal 31-50/solo","Department",-1.79056769411545e-12
+"preferred","Informal 31-50/solo","Two-way sector + department",-9.78772618509538e-13
+"preferred","Informal 51-100/solo","Sector",-6.48370246381091e-13
+"preferred","Informal 51-100/solo","Department",2.06057393370429e-12
+"preferred","Informal 51-100/solo","Two-way sector + department",-4.10338429901458e-13
+"preferred","Informal 101+/solo","Sector",-4.33431068813661e-13
+"preferred","Informal 101+/solo","Department",-4.15667500419659e-12
+"preferred","Informal 101+/solo","Two-way sector + department",-6.48370246381091e-13
+"preferred","Informal 101+/2-3","Sector",2.8421709430404e-14
+"preferred","Informal 101+/2-3","Department",-1.33937305690779e-12
+"preferred","Informal 101+/2-3","Two-way sector + department",-2.16715534406831e-13
+"preferred","Informal 101+/4-5","Sector",6.72795152922845e-13
+"preferred","Informal 101+/4-5","Department",1.92734717074927e-13
+"preferred","Informal 101+/4-5","Two-way sector + department",6.04849503815785e-13
+"preferred","Informal 101+/6-10","Sector",2.16326956348212e-13
+"preferred","Informal 101+/6-10","Department",6.86117829218347e-13
+"preferred","Informal 101+/6-10","Two-way sector + department",2.45914399954472e-13
+"preferred","Informal 101+/11-19","Sector",4.13225009765483e-13
+"preferred","Informal 101+/11-19","Department",1.43751677228465e-12
+"preferred","Informal 101+/11-19","Two-way sector + department",4.84945417156268e-13
+"preferred","Informal 101+/20-30","Sector",-1.40554234917545e-13
+"preferred","Informal 101+/20-30","Department",-4.21440660147709e-13
+"preferred","Informal 101+/20-30","Two-way sector + department",-1.35669253609194e-13
+"preferred","Informal 101+/31-50","Sector",8.06910094297564e-13
+"preferred","Informal 101+/31-50","Department",1.09423581307055e-12
+"preferred","Informal 101+/31-50","Two-way sector + department",1.03916875104915e-12
+"preferred","Informal 101+/51-100","Sector",1.0973444375395e-12
+"preferred","Informal 101+/51-100","Department",-2.1138646388863e-13
+"preferred","Informal 101+/51-100","Two-way sector + department",1.65822910958013e-12
+"preferred","Formal 2-3/solo","Sector",-1.32338584535319e-13
+"preferred","Formal 2-3/solo","Department",-3.71258579434652e-13
+"preferred","Formal 2-3/solo","Two-way sector + department",-1.43218770176645e-13
+"preferred","Formal 4-5/solo","Sector",-2.13107309576799e-13
+"preferred","Formal 4-5/solo","Department",-1.22923893286497e-12
+"preferred","Formal 4-5/solo","Two-way sector + department",-2.29427588038789e-13
+"preferred","Formal 6-10/solo","Sector",-1.28480559524746e-13
+"preferred","Formal 6-10/solo","Department",-6.52145004664817e-13
+"preferred","Formal 6-10/solo","Two-way sector + department",-1.39277478439226e-13
+"preferred","Formal 11-19/solo","Sector",-2.05613304160579e-13
+"preferred","Formal 11-19/solo","Department",-9.28590537796481e-13
+"preferred","Formal 11-19/solo","Two-way sector + department",-2.22599716437344e-13
+"preferred","Formal 20-30/solo","Sector",6.0507154842071e-14
+"preferred","Formal 20-30/solo","Department",1.52233781136601e-12
+"preferred","Formal 20-30/solo","Two-way sector + department",7.00550728538474e-14
+"preferred","Formal 31-50/solo","Sector",-1.7519319328585e-13
+"preferred","Formal 31-50/solo","Department",-1.23456800338317e-13
+"preferred","Formal 31-50/solo","Two-way sector + department",-1.82853732155763e-13
+"preferred","Formal 51-100/solo","Sector",-8.19344592173366e-14
+"preferred","Formal 51-100/solo","Department",1.47082346302341e-12
+"preferred","Formal 51-100/solo","Two-way sector + department",-6.08402217494586e-14
+"preferred","Formal 101+/solo","Sector",-2.55351295663786e-14
+"preferred","Formal 101+/solo","Department",2.77111666946439e-12
+"preferred","Formal 101+/solo","Two-way sector + department",-2.88657986402541e-15
+"preferred","Formal 101+/2-3","Sector",2.01616501271928e-13
+"preferred","Formal 101+/2-3","Department",2.26840768391412e-12
+"preferred","Formal 101+/2-3","Two-way sector + department",3.68594044175552e-13
+"preferred","Formal 101+/4-5","Sector",2.24709140184132e-13
+"preferred","Formal 101+/4-5","Department",9.2477137059177e-12
+"preferred","Formal 101+/4-5","Two-way sector + department",9.05053809674428e-13
+"preferred","Formal 101+/6-10","Sector",3.46389583683049e-13
+"preferred","Formal 101+/6-10","Department",4.52615722679184e-12
+"preferred","Formal 101+/6-10","Two-way sector + department",5.32018873400375e-13
+"preferred","Formal 101+/11-19","Sector",4.78728168218368e-13
+"preferred","Formal 101+/11-19","Department",6.79278855386656e-12
+"preferred","Formal 101+/11-19","Two-way sector + department",5.7021054544748e-13
+"preferred","Formal 101+/20-30","Sector",-1.87405646556726e-13
+"preferred","Formal 101+/20-30","Department",-3.28981286656926e-12
+"preferred","Formal 101+/20-30","Two-way sector + department",-1.36779476633819e-13
+"preferred","Formal 101+/31-50","Sector",5.44453371276177e-13
+"preferred","Formal 101+/31-50","Department",8.46611669658159e-12
+"preferred","Formal 101+/31-50","Two-way sector + department",6.53699316899292e-13
+"preferred","Formal 101+/51-100","Sector",2.28261853862932e-13
+"preferred","Formal 101+/51-100","Department",3.59001717242791e-12
+"preferred","Formal 101+/51-100","Two-way sector + department",2.8377300509419e-13
+"preferred","Formal-minus-informal 101+/solo","Sector",-1.23456800338317e-13
+"preferred","Formal-minus-informal 101+/solo","Department",-3.41060513164848e-13
+"preferred","Formal-minus-informal 101+/solo","Two-way sector + department",-1.21680443498917e-13
+"preferred","Formal-informal at Solo","Sector",-1.77635683940025e-14
+"preferred","Formal-informal at Solo","Department",1.64490643328463e-12
+"preferred","Formal-informal at Solo","Two-way sector + department",1.68753899743024e-14
+"preferred","Formal-informal at 2-3","Sector",-1.59872115546023e-14
+"preferred","Formal-informal at 2-3","Department",8.88178419700125e-14
+"preferred","Formal-informal at 2-3","Two-way sector + department",1.77635683940025e-15
+"preferred","Formal-informal at 4-5","Sector",3.78364006792253e-13
+"preferred","Formal-informal at 4-5","Department",2.1387336346379e-12
+"preferred","Formal-informal at 4-5","Two-way sector + department",5.71098723867181e-13
+"preferred","Formal-informal at 6-10","Sector",-3.28626015289046e-14
+"preferred","Formal-informal at 6-10","Department",-1.49213974509621e-12
+"preferred","Formal-informal at 6-10","Two-way sector + department",-1.89182003396127e-13
+"preferred","Formal-informal at 11-19","Sector",-4.9649173661237e-13
+"preferred","Formal-informal at 11-19","Department",3.48165940522449e-13
+"preferred","Formal-informal at 11-19","Two-way sector + department",-1.35003119794419e-13
+"preferred","Formal-informal at 20-30","Sector",2.89546164822241e-13
+"preferred","Formal-informal at 20-30","Department",-1.57207580286922e-12
+"preferred","Formal-informal at 20-30","Two-way sector + department",-5.52446977053478e-13
+"preferred","Formal-informal at 31-50","Sector",-1.22923893286497e-12
+"preferred","Formal-informal at 31-50","Department",-2.35012009852653e-12
+"preferred","Formal-informal at 31-50","Two-way sector + department",-2.57749377396976e-12
+"preferred","Formal-informal at 51-100","Sector",-1.06936681731895e-12
+"preferred","Formal-informal at 51-100","Department",-2.48334686148155e-12
+"preferred","Formal-informal at 51-100","Two-way sector + department",-1.85984561085206e-12
+"preferred","Formal-informal at 101+","Sector",4.17443857259059e-13
+"preferred","Formal-informal at 101+","Department",4.44089209850063e-13
+"preferred","Formal-informal at 101+","Two-way sector + department",4.42312853010662e-13
+"endpoints","Informal change 101+/solo 2008-2025","Sector",3.92108567837113e-12
+"endpoints","Informal change 101+/solo 2008-2025","Department",5.32840438438598e-12
+"endpoints","Informal change 101+/solo 2008-2025","Two-way sector + department",3.88755694302745e-12
+"endpoints","Formal change 101+/solo 2008-2025","Sector",8.88245033081603e-12
+"endpoints","Formal change 101+/solo 2008-2025","Department",6.54784559905863e-12
+"endpoints","Formal change 101+/solo 2008-2025","Two-way sector + department",6.31454610822146e-12
+"elasticity","Informal elasticity","Sector",-2.64677169070637e-13
+"elasticity","Informal elasticity","Department",-1.17594822768297e-12
+"elasticity","Informal elasticity","Two-way sector + department",-4.15667500419659e-13
+"elasticity","Formal elasticity","Sector",8.92619311798626e-14
+"elasticity","Formal elasticity","Department",-6.03961325396085e-14
+"elasticity","Formal elasticity","Two-way sector + department",8.65973959207622e-14
+"elasticity","Formal-minus-informal elasticity","Sector",-3.46389583683049e-14
+"elasticity","Formal-minus-informal elasticity","Department",7.86926079854311e-13
+"elasticity","Formal-minus-informal elasticity","Two-way sector + department",3.5527136788005e-14
