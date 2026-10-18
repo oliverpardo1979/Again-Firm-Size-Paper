@@ -54,12 +54,9 @@ rows.extend([r"    \midrule", line([r"Implied 101+/solo premium (\%)"] + [
     f'{float(select(predictions, top=150, group=g, size="101+")["premium"]):.1f}' for g in ("Formal", "Informal")])])
 table("regression_preferred_quadratic_table.tex", "Quadratic size profiles with preferred controls",
       "tab:polynomial-size-profile", "lcc", ["Term", "Formal workers", "Informal workers"], rows,
-      r"The columns report linear combinations from one interacted regression, Equation~(\ref{eq:polynomial-size-profile}), "
-      r"on the preferred sample of 5,268,375 observations. It includes sex, age, age squared, education, occupational position, "
-      r"and sector-department-year fixed effects, with GEIH weights. Assigned sizes are 1, 2.5, 4.5, 8, 15, 25, 40.5, 75.5, and 150. "
-      r"The reference is solo work within the same formality group. Parentheses contain sector-department-clustered standard errors. "
-      r"The last row is $100[\exp(a_{1f}\ln150+a_{2f}(\ln150)^2)-1]$. "
-      r"Two-sided coefficient tests use 558 degrees of freedom. * $p<0.10$, ** $p<0.05$, *** $p<0.01$.")
+      r"Both columns come from Equation~(\ref{eq:polynomial-size-profile}) on the preferred sample, with 101+ assigned "
+      r"150 workers. The last row reports percentage premiums relative to solo work within each formality group. "
+      r"Parentheses contain sector-department-clustered standard errors. * $p<0.10$, ** $p<0.05$, *** $p<0.01$.")
 
 rows = []
 for clustering in ("Sector-department", "Sector"):
@@ -73,10 +70,10 @@ for clustering in ("Sector-department", "Sector"):
 table("regression_preferred_quadratic_sensitivity_table.tex", "Top-bin sensitivity and tests of the quadratic restriction",
       "tab:quadratic-preferred-sensitivity", "rrrrrr",
       [r"Size for 101+", r"Formal (\%)", r"Informal (\%)", r"$p_F$", r"$p_I$", r"$p_{Joint}$"], rows,
-      r"Formal and informal percentages are the implied 101+/solo premiums from the quadratic model, re-estimated for "
+      r"Formal and informal percentages are the implied 101+/solo premiums from Equation~(\ref{eq:polynomial-size-profile}), re-estimated for "
       r"each assigned top-bin size. All other size assignments, observations, controls, and weights remain fixed. The "
       r"$p$-values test whether the unrestricted categorical profiles from Equation~(\ref{eq:main}) lie on the specified "
       r"quadratic. Wald tests use an $F_{q,G-1}$ reference distribution, with $q=6$ within each formality group and "
-      r"$q=12$ jointly. There are 559 sector-department clusters or 17 sector clusters. These are approximate tests, "
-      r"especially with only 17 clusters. The value 150 is the baseline assignment, not an observed mean for 101+.")
+      r"$q=12$ jointly. There are 559 sector-department clusters or 17 sector clusters. "
+      r"The value 150 is the baseline assignment, not an observed mean for 101+.")
 print("Generated two preferred quadratic tables.")

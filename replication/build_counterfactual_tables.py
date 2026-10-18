@@ -124,12 +124,10 @@ for scenario, title, target in SCENARIOS[:4]:
 main = table(
     "Illustrative changes in predicted labor income, 2025",
     "tab:income-counterfactuals-2025", r">{\raggedright\arraybackslash}p{0.42\textwidth}lrr", "\n".join(body),
-    r"Percentage changes in weighted total predicted weekly labor income, using column (4) of "
-    r"Table~\ref{tab:firm-size-local-geography-formality-robustness} and Equation~(\ref{eq:income-counterfactual}). "
+    r"Percentage changes in total predicted weekly labor income from Equation~(\ref{eq:income-counterfactual}), "
+    r"using the pooled coefficients from Equation~(\ref{eq:main}). "
     r"The target-group denominator includes all workers initially in that group, including those already at the "
-    r"destination. The all-worker denominator includes the entire 2025 sample. Hours, worker characteristics, "
-    r"occupational position, sector, department, weights, and the estimated wage structure remain fixed. These are "
-    r"conditional income scenarios, not estimated causal effects or output gains.")
+    r"destination. The all-worker denominator includes the entire 2025 sample.")
 (SECTIONS / "income_counterfactuals_2025_table.tex").write_text(main, encoding="utf-8")
 
 body = [r"    Scenario & Predicted baseline & Observed baseline \\",
@@ -142,13 +140,11 @@ for i, (scenario, title, _) in enumerate(SCENARIOS):
 sensitivity = table(
     "Income scenarios with alternative baselines and destinations",
     "tab:income-counterfactual-sensitivity", r">{\raggedright\arraybackslash}p{0.52\textwidth}cc", "\n".join(body),
-    r"All entries are percentage changes in total weekly labor income for the entire 2025 sample. The predicted "
-    r"baseline uses exponentiated fitted log income multiplied by the common retransformation factor defined in "
-    r"Section~\ref{subsec:income-counterfactual-method}. The observed baseline multiplies observed income by the same "
-    r"estimated destination-to-origin wage ratio, preserving each worker's log residual. Both calculations use fixed "
-    r"hours and GEIH weights. In the last two rows, the destination maximizes the estimated size component within each "
-    r"formality group. These destinations are 101+ for formal workers and 51--100 for informal workers. Informal 101+ "
-    r"workers are also assigned to 51--100.", "p")
+    r"Percentage changes in total weekly labor income for the entire 2025 sample. The predicted baseline uses "
+    r"Equation~(\ref{eq:income-counterfactual}). The observed baseline rescales observed income by the same estimated "
+    r"wage ratios, preserving log residuals. Both use pooled coefficients from Equation~(\ref{eq:main}). In the last two "
+    r"rows, destinations maximize the estimated size component within each formality group, including moves from "
+    r"informal 101+ to informal 51--100.", "p")
 (SECTIONS / "income_counterfactual_sensitivity_table.tex").write_text(sensitivity, encoding="utf-8")
 
 body = [r"    \multicolumn{5}{l}{\textit{A. Intended moves and absent destination cells (\%)}} \\",

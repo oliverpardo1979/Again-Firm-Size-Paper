@@ -47,7 +47,10 @@ To compare wage distributions with the minimum wage, we first define an hourly b
 
 \begin{figure}[!htbp]
   \centering
-  \includegraphics[width=\textwidth]{fig77_\figurelang.png}
+  % Keep the density curves intact while replacing the legacy benchmark labels.
+  \includegraphics[width=\textwidth,trim=0 24bp 0 45.6bp,clip]{fig77_\figurelang.png}
+  \par\smallskip
+  {\small\textbf{Hourly income / hourly minimum-wage benchmark (log scale)}\par}
   \caption{Smoothed hourly wage distributions relative to the minimum-wage benchmark by firm size and formality status, 2025}
   \label{fig:minwage-distribution-formality-size}
 \end{figure}

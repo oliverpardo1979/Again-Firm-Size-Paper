@@ -60,12 +60,12 @@ lines.extend([test_row(r"Equal 101+/solo premiums: $p$", "101+/solo equality"),
               r"    \bottomrule", r"  \end{tabular}", r"  \vspace{0.3em}",
               r"  \begin{minipage}{0.95\textwidth}", r"  \footnotesize",
               r"  Notes: Main rows report within-formality log-wage contrasts relative to 11--19 workers. Summary premiums use "
-              r"solo work as the reference and equal $100[\exp(b)-1]$. Each column pair estimates Equation~(\ref{eq:main}) on "
-              r"the indicated sample. Salaried workers comprise private, government, and domestic employees and day laborers. "
+              r"solo work as the reference and are in percent. Each column pair estimates Equation~(\ref{eq:main}) on "
+              r"the indicated sample. "
               r"The restricted sample excludes 66 additional singleton cells. Standard errors in parentheses use "
               r"sector-department clustering, with $G=559$ clusters in the full sample and $G=555$ among employees. Equality "
-              r"tests compare the formal and informal 101+/solo log contrasts (two-sided $t$ test) and jointly compare all eight "
-              r"size contrasts relative to solo work (Wald $F$ test with eight numerator degrees of freedom). Both use $G-1$ "
+              r"tests compare formal and informal log contrasts relative to solo work, individually for 101+ "
+              r"(two-sided $t$ test) and jointly across all sizes (Wald $F$ test with eight numerator degrees of freedom). Both use $G-1$ "
               r"denominator degrees of freedom. * $p<0.10$, ** $p<0.05$, *** $p<0.01$.",
               r"  \end{minipage}", r"\end{table}", ""])
 (ROOT / "Paper/sections/regression_salaried_robustness_table.tex").write_text("\n".join(lines), encoding="utf-8", newline="\n")
