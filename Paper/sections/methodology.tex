@@ -34,17 +34,17 @@ We next retain this common-premium restriction while adding geographic
 controls and occupational position. First, we add department-year fixed
 effects to Equation~(\ref{eq:common-premium}). We then replace the separate
 sector-year and department-year effects with sector-department-year fixed
-effects, before adding occupational-position fixed effects. Let \(d\) index
-departments and \(o(i)\) denote worker \(i\)'s occupational position. Write
-\(\rho_{o(i)}\) for its fixed effect and \(\lambda_{s\times d\times t}\)
+effects, before adding occupational-position fixed effects. Let \(d\) and
+\(o\) index departments and occupational positions. Write
+\(\rho_o\) for the occupational-position fixed effect and \(\lambda_{s\times d\times t}\)
 for the sector-department-year fixed effect. The specification with both
 sets of fixed effects is
 \begin{equation}\label{eq:common-premium-geography}
-  \ln(w_{isdt}) = \alpha
+  \ln(w_{iosdt}) = \alpha
   + \sum_{g\neq g_0} \beta_g D_{ig}
-  + X_{isdt}'\gamma + \phi F_{isdt}
-  + \rho_{o(i)} + \lambda_{s\times d\times t}
-  + \varepsilon_{isdt}.
+  + X_{iosdt}'\gamma + \phi F_{iosdt}
+  + \rho_o + \lambda_{s\times d\times t}
+  + \varepsilon_{iosdt}.
 \end{equation}
 Table~\ref{tab:firm-size-local-geography-robustness} reports these extensions.
 Column (4) corresponds to Equation~(\ref{eq:common-premium-geography}).
@@ -62,10 +62,10 @@ gap relative to formal solo work is \(\beta_g+\theta_g\). We normalize
 log-wage gap among solo workers. The remaining variables retain their
 definitions above. The preferred model is
 \begin{equation}\label{eq:main}
-  \ln(w_{isdt}) = \alpha + \phi F_{isdt}
-  + \sum_{g\neq g_0}(\beta_g+\theta_g F_{isdt})D_{ig}
-  + X_{isdt}'\gamma + \rho_{o(i)} + \lambda_{s\times d\times t}
-  + \varepsilon_{isdt}.
+  \ln(w_{iosdt}) = \alpha + \phi F_{iosdt}
+  + \sum_{g\neq g_0}(\beta_g+\theta_g F_{iosdt})D_{ig}
+  + X_{iosdt}'\gamma + \rho_o + \lambda_{s\times d\times t}
+  + \varepsilon_{iosdt}.
 \end{equation}
 The size coefficients compare firm-size categories within sector-department-year
 cells, separately by
@@ -147,10 +147,10 @@ We extend Equation~(\ref{eq:main}) by allowing the firm-size premiums, the
 formality coefficient, and all worker and occupational-position coefficients
 to vary by year:
 \begin{equation}\label{eq:preferred-dynamics}
-  \ln(w_{isdt}) = \phi_t F_{isdt}
-  + \sum_{g\neq g_0}(\beta_{gt}+\theta_{gt}F_{isdt})D_{ig}
-  + X_{isdt}'\gamma_t+\rho_{o(i),t}
-  + \lambda_{s\times d\times t}+\varepsilon_{isdt}.
+  \ln(w_{iosdt}) = \phi_t F_{iosdt}
+  + \sum_{g\neq g_0}(\beta_{gt}+\theta_{gt}F_{iosdt})D_{ig}
+  + X_{iosdt}'\gamma_t+\rho_{ot}
+  + \lambda_{s\times d\times t}+\varepsilon_{iosdt}.
 \end{equation}
 The fixed effects absorb the intercepts. Estimating this model separately by
 year gives the annual profiles. Each regression includes the preferred worker
@@ -180,15 +180,15 @@ Appendix Table~\ref{tab:preferred-extension-clustering} checks how these
 GEIH reports size categories rather than exact worker
 counts. To obtain an approximate elasticity, we assign sizes of 1, 2.5,
 4.5, 8, 15, 25, 40.5, 75.5, and 150 to the nine firm-size categories in
-their stated order. Let \(\widetilde{Size}_{isdt}\) denote this assigned size.
+their stated order. Let \(\widetilde{Size}_{iosdt}\) denote this assigned size.
 We replace the size indicators with its logarithm and an interaction with
 formality. Write \(\eta\) for the informal elasticity and \(\kappa\) for
 the formal-minus-informal elasticity difference. The model is
 \begin{equation}\label{eq:preferred-elasticity}
-  \ln(w_{isdt})=\alpha+\phi F_{isdt}
-  +(\eta+\kappa F_{isdt})\ln(\widetilde{Size}_{isdt})
-  +X_{isdt}'\gamma+\rho_{o(i)}+\lambda_{s\times d\times t}
-  +\varepsilon_{isdt}.
+  \ln(w_{iosdt})=\alpha+\phi F_{iosdt}
+  +(\eta+\kappa F_{iosdt})\ln(\widetilde{Size}_{iosdt})
+  +X_{iosdt}'\gamma+\rho_o+\lambda_{s\times d\times t}
+  +\varepsilon_{iosdt}.
 \end{equation}
 The formal elasticity is \(\eta+\kappa\). Both elasticities come from a single interacted regression,
 with the preferred sample, controls, weights, and clustering. The coefficient
