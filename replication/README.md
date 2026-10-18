@@ -1,5 +1,39 @@
 # Regression Replication and Income Counterfactuals
 
+## Own-Account Workers in 101+ Units
+
+`Rscript --vanilla replication/audit_own_account_large_firms.R` profiles
+own-account workers in the 101+ category in 2025. An optional first argument
+specifies the paper's input DTA. It matches the descriptive-table sample before
+regression singleton exclusions and verifies the three own-account shares in
+Table 4 against raw occupational code 4. Only aggregate outputs are saved in
+`own_account_output/`. Composition percentages use survey weights, while
+observation counts are unweighted survey records, not population totals.
+Detailed categories with fewer than 20 observations within a formality group
+are pooled for export.
+
+There are 10,547 formal and 770 informal own-account observations in 101+ units.
+The formal group accounts for 9.6 percent of formal workers in 101+ units.
+Within this group, 45.7 percent work in public administration and defence,
+20.3 percent in health and social assistance, and 13.0 percent in education.
+Their mean age is 38.2 years, 55.7 percent are women, and 85.6 percent have higher
+education. Mean hourly income is 23,010 pesos of 2025. The less numerous
+informal own-account group has a different composition, led by arts, recreation
+and other services (23.2 percent) and transport and storage (15.5 percent).
+
+The [2025 GEIH manual](https://microdatos.dane.gov.co/index.php/catalog/886/download/24400)
+classifies public- and private-sector service contractors as own-account workers
+(printed pages 89--90). Page 115 permits non-solo sizes for partnerships,
+unpaid family assistance, and public- or private-sector contractors, and
+explicitly assigns state contractors to 101+. These instructions explain why
+own-account status and large-unit size are not inherently inconsistent.
+The paper input does not retain a contractor indicator or the original
+independent-work arrangement question. Its `ocupacion` variable repeats
+occupational position rather than providing a detailed profession.
+The sector profile is consistent with service contracting but cannot establish
+the share of contractors or distinguish public from private providers in health
+and education. No observations are recoded or removed on this basis.
+
 ## Occupational-Position Harmonization and Salaried Robustness
 
 `harmonize_occupation.R` corrects P6430 at input time without overwriting the

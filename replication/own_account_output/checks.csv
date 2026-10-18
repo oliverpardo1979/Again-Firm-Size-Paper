@@ -1,0 +1,5 @@
+"check","passed"
+"Occupation code 4 agrees with own-account label",TRUE
+"All three formal own-account shares reproduce Table 4 to one decimal",TRUE
+"Within-group composition shares sum to 100",TRUE
+"No individual records exported",TRUE
