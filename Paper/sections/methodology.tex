@@ -72,62 +72,14 @@ For each contrast \(\Delta\), we obtain \(\widehat{\Delta}\) by replacing
 the model coefficients with their estimates and report the percentage gap
 as \(100[\exp(\widehat{\Delta})-1]\). This transformation compares
 exponentiated conditional mean log incomes, not necessarily arithmetic mean
-incomes as in the descriptive tables.
+incomes as in the descriptive tables. For \(\widehat{\Delta}^{I\to F}_g\),
+the percentage gap is relative to informal workers of the same size category.
 
-For the third comparison, the percentage premium uses informal workers as
-the denominator. Changing the omitted size category to 101+ or
-11--19 workers leaves fitted log incomes unchanged. A given pairwise contrast
-and its standard error are also unchanged, although the coefficients displayed
-relative to the new base differ. These are adjusted wage comparisons. Interpreting them as the gains
-from actual worker movements requires additional assumptions about selection
-and the response of employers and wages, discussed in Section~\ref{sec:discussion}.
-Section~\ref{subsec:income-counterfactuals} uses these contrasts in illustrative
-income scenarios for the 2025 workforce, holding hours and the estimated
-coefficients fixed.
-
-\subsection{Inference and Comparison Specifications}
-\label{subsec:inference}
-
-We cluster standard errors for the preferred model by sector-department,
-allowing dependence across workers and years within
-559 intersections. We compare this inference with clustering by sector
-(17 clusters), by department (33 clusters), and by sector and department
-separately in a two-way covariance estimator. Sector clustering permits
-dependence across departments within a sector, whereas department clustering
-permits dependence across sectors within a department. Two-way clustering
-allows both, unlike clustering on their intersections
-\citep{CameronMiller2015}. The initial sequence leading to
-Equation~(\ref{eq:common-premium}) uses sector clustering.
-The geographic and occupational-position extensions use sector-department
-clustering.
-
-Tests of individual coefficients and contrasts are two-sided. Their
-\(p\)-values and 95 percent
-confidence intervals use a Student t distribution with \(G-1\) degrees of
-freedom, where \(G\) is the number of clusters. Two-way tests use the
-smaller cluster count, giving 16 degrees of freedom. The variance
-of a contrast includes the covariances between its coefficients. For joint
-hypotheses, we use Wald \(F\) tests.
-Their numerator degrees of freedom equal the number of restrictions, and
-their denominator degrees of freedom equal \(G-1\).
-
-Because sector clustering leaves only 17 clusters, we also report
-null-imposed wild cluster bootstrap tests following
-\citet{RoodmanEtAl2019}. We use the WCR11 procedure with Rademacher weights
-and 9,999 draws for sector, department, and two-way inference. In the
-two-way version, bootstrap weights are drawn by sector and test statistics
-use the two-way covariance estimator. These are two-sided, pointwise tests,
-without adjustment for multiple comparisons. Coefficients, samples, and
-survey weights are held fixed across inference methods. The bootstrap
-\(p\)-values supplement rather than replace the baseline confidence intervals.
-
-The results therefore proceed from a common size premium with sequential
-controls to the preferred formality-specific estimates. The appendix reports
-alternative reference categories and additional comparisons, including a
-size-by-formality model with sector-year effects but without occupational-position
-or department controls, defined in Equation~(\ref{eq:formality-interaction}).
-Those supplementary estimates do not replace the preferred within-formality
-comparisons.
+Standard errors are clustered by sector for Equation~(\ref{eq:common-premium})
+and by sector-department for Equations~(\ref{eq:common-premium-geography})
+and~(\ref{eq:main}). Tests of individual coefficients and contrasts are
+two-sided. The appendix details the alternative clustering and wild cluster
+bootstrap procedures.
 
 \subsection{Changes over Time}
 
@@ -161,7 +113,7 @@ for multiple comparisons. A positive difference means that the
 conditional size-to-solo wage ratio increased. It does not establish a steady
 annual rise or identify which group's wages changed.
 We also apply the alternative clustering and bootstrap procedures described
-in Section~\ref{subsec:inference} to the 101+/solo endpoint changes.
+in the appendix to the 101+/solo endpoint changes.
 
 \subsection{Approximate Firm-Size Elasticities}
 
