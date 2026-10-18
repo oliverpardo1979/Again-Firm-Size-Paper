@@ -66,12 +66,6 @@ in the prevalence of own-account and wage employment. %These controls describe c
 
 %We estimate the preferred model with GEIH expansion weights using the same 5,268,375 observations as Equation~(\ref{eq:common-premium-geography}).
 
-For any estimated log-wage contrast
-\(\widehat{\Delta}\), we report the percentage gap
-as \(100[\exp(\widehat{\Delta})-1]\). The underlying wage ratio is a ratio
-of exponentiated conditional mean log incomes, not automatically a ratio of
-arithmetic mean incomes as in the descriptive tables.
-
 The model distinguishes three comparisons. For an origin size \(g\) and a
 destination size \(h\), which may be larger or smaller, let
 \(\Delta^F_{g\to h}\) and \(\Delta^I_{g\to h}\) denote the formal and
@@ -82,6 +76,13 @@ denote the formal-minus-informal log-wage difference at size \(g\). Then
   \Delta^{I}_{g\to h} &= \beta_h-\beta_g, \label{eq:preferred-contrasts}\\
   \Delta^{I\to F}_{g} &= \phi+\theta_g. \nonumber
 \end{align}
+
+For each contrast \(\Delta\), we obtain \(\widehat{\Delta}\) by replacing
+the model coefficients with their estimates and report the percentage gap
+as \(100[\exp(\widehat{\Delta})-1]\). This transformation compares
+exponentiated conditional mean log incomes, not necessarily arithmetic mean
+incomes as in the descriptive tables.
+
 For the third comparison, the percentage premium uses informal workers as
 the denominator. Changing the omitted size category to 101+ or
 11--19 workers leaves fitted log incomes unchanged. A given pairwise contrast
