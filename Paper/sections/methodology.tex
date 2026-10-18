@@ -118,8 +118,8 @@ the formal-minus-informal elasticity difference. The model is
   +X_i'\gamma+\rho_o+\lambda_{s\times d\times t}
   +\varepsilon_{iosdt}.
 \end{equation}
-The formal elasticity is \(\eta+\kappa\). Both elasticities come from a single interacted regression,
-with the preferred sample, controls, weights, and clustering. We test
+The formal elasticity is \(\eta+\kappa\). Both elasticities come from a single interacted regression
+with the preferred sample and controls. We test
 \(H_0:\kappa=0\) to assess whether the slopes differ between formality groups. We also
 report a raw regression of log income on log assigned size alone and a
 common-slope version imposing
@@ -129,9 +129,7 @@ These slopes depend on the assigned sizes, especially the value
 assigned to 101+. They also impose a constant slope within each formality
 group, whereas Equation~(\ref{eq:main}) allows each category to differ.
 We compare them with the literature means reported by
-\citet{DiegmannMullerSchoefer2026}, recognizing differences in populations and
-controls. We assess the elasticity tests using the same alternative
-clustering and bootstrap procedures. The appendix also
+\citet{DiegmannMullerSchoefer2026}. The appendix
 retains a version with fewer controls in Equation~(\ref{eq:elasticity}) for
 comparison. We also estimate a quadratic extension, adding the square of log
 assigned size and allowing both size coefficients to differ by formality.
@@ -162,8 +160,7 @@ size category. If scenario
 \(\widehat\Delta_i^c\), counterfactual hourly income is
 \(\widehat w_i^c=\widehat w_i\exp(\widehat\Delta_i^c)\).
 For a change in size or formality alone, this estimated difference is obtained
-from the corresponding contrast in Equation~(\ref{eq:preferred-contrasts}). For a joint change, we
-subtract the origin component from the destination component directly. Let
+from the corresponding contrast in Equation~(\ref{eq:preferred-contrasts}). Let
 \(\mathcal I_{2025}\) denote the 2025 sample. With expansion weight
 \(a_i\) and weekly hours \(h_i\), the percentage change in total
 predicted weekly labor income under scenario \(c\) is
@@ -175,8 +172,7 @@ predicted weekly labor income under scenario \(c\) is
 \end{equation}
 This percentage change weights each individual's percentage change by that
 individual's share of baseline income, including survey weights and hours.
-It is not the average percentage wage change across workers. The common
-factor \(S\) cancels from this ratio. The target-group calculation restricts
+It is not the average percentage wage change across workers. The target-group calculation restricts
 both sums to workers initially in the relevant formality group, including
 those already at the destination. Restricting both sums to workers whose
 size or formality changes gives the result for reassigned workers. Because

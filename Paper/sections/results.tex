@@ -12,8 +12,6 @@ Adding sex, age, age squared, and education lowers it to 0.598 in column (3),
 and adding formality lowers it to 0.359 in column (4). The final coefficient
 corresponds to a conditional premium of 43.2 percent. All four estimates are
 statistically significant, and all four columns use the same sample.
-The reduction therefore reflects the added controls rather than changes in
-which observations enter the regressions.
 
 \input{Paper/sections/regression_firm_size_table}
 
@@ -23,8 +21,7 @@ conditional gap remains. This pattern is consistent with evidence that worker
 composition accounts for part, but not all, of size-related wage differences
 \citep{BrownMedoff1989,troske1999evidence,Schaffner1998,
 SoderbomTealWambugu2005,reed2019large,iregui2012diferenciales}.
-The model still constrains the size coefficients to be common across formality
-groups. Adding formality as a control allows a level difference between formal
+Adding formality as a control allows a level difference between formal
 and informal workers, but does not allow their firm-size premiums to differ.
 
 Table~\ref{tab:firm-size-local-geography-robustness} keeps that restriction
@@ -35,8 +32,7 @@ Equation~(\ref{eq:common-premium-geography}) also controls for occupational
 position, giving a coefficient of 0.338 in
 column (4), equivalent to a 40.2 percent premium. Thus, more detailed
 controls do not eliminate the common-premium estimate, although it does not
-decline at every step. The next subsection asks whether a common size premium
-adequately describes formal and informal employment.
+decline at every step.
 
 \input{Paper/sections/regression_local_geography_robustness_table}
 \FloatBarrier
@@ -47,18 +43,12 @@ adequately describes formal and informal employment.
 Table~\ref{tab:firm-size-local-geography-formality-robustness} relaxes the
 common-premium restriction by interacting each size indicator with formality.
 Its four columns use the same control sequence as
-Table~\ref{tab:firm-size-local-geography-robustness}. Column (4), our preferred model in
-Equation~(\ref{eq:main}), includes worker characteristics, occupational-position
-controls, and sector-department-year fixed effects. Columns (1)--(3) show how
-the estimates change as geographic controls are added before controlling for
-occupational position. All four columns allow the size coefficients to differ
-between formal and informal workers and cluster standard errors by
-sector-department cells.
+Table~\ref{tab:firm-size-local-geography-robustness}. Column (4) is our preferred
+specification in Equation~(\ref{eq:main}).
 
 \input{Paper/sections/regression_local_geography_formality_robustness_table}
 
-Among informal workers, column (4) shows a large wage gap between solo work and
-employment in larger units. The premium relative to informal solo workers is
+In column (4), the premium relative to informal solo workers is
 12.0 percent in firms with 2--3 workers, 29.0 percent in firms with 4--5 workers,
 and 38.2 percent in firms with 6--10 workers. It reaches 42.4--45.1 percent
 across the 11--100 categories and is 37.1 percent in 101+ firms. All these
@@ -66,17 +56,14 @@ comparisons with informal solo work are statistically significant. The premium
 therefore rises sharply across the smallest categories, but does not increase
 monotonically through the largest category.
 
-Among formal workers, the preferred estimates also reveal a large-firm
-advantage in the point estimates. Formal workers in 101+ firms earn an estimated
+Formal workers in 101+ firms earn an estimated
 16.5 percent more than observably comparable formal solo workers. The 51--100
-category has an 8.9 percent premium over formal solo work. The smaller categories
-do not form a uniformly increasing sequence relative to solo work. In
-particular, formal workers in the 2--3 category earn 7.0 percent less than formal solo workers.
+category has an 8.9 percent premium over formal solo work. Formal workers in
+the 2--3 category earn 7.0 percent less than formal solo workers.
 The estimates for 4--50 workers range from -2.2 to 6.1 percent.
 
 Figure~\ref{fig:preferred-formality-premium} displays the within-formality
-contrasts from Equation~(\ref{eq:main}). The larger informal premium relative to solo work
-does not imply that every increase in firm size corresponds to higher wages.
+contrasts from Equation~(\ref{eq:main}).
 The informal estimates flatten across intermediate categories and fall at
 101+, whereas the formal 101+ estimate is the largest in its panel.
 
@@ -106,10 +93,7 @@ two-way clustering and to wild cluster bootstrap inference. The formal
 101+/solo bootstrap \(p\)-value is 0.184 with sector clustering and 0.188
 with two-way clustering. None of the formal size-to-solo contrasts is
 significant at 5 percent under either bootstrap convention. All eight
-informal size-to-solo contrasts remain significant. The preferred regression
-tables in the main text and their associated confidence intervals retain
-sector-department clustering, but the formal
-101+/solo significance should not be treated as robust.
+informal size-to-solo contrasts remain significant.
 
 Table~\ref{tab:firm-size-local-geography-formality-robustness-101-reference}
 reports the specifications in
@@ -135,8 +119,7 @@ points, or approximately 3.7 percent, less than informal workers in that
 reference category. The formal contrast remains significant under two-way
 bootstrap inference (\(p=0.003\)), whereas the informal contrast does not
 (\(p=0.210\)), despite its significance under sector-department clustering.
-The same regression therefore implies different answers
-depending on both formality and the sizes being compared. Changing the
+Changing the
 reference category leaves fitted log incomes and any given pairwise contrast
 and its standard error unchanged. Column (4) in all three tables estimates
 Equation~(\ref{eq:main}).
@@ -154,7 +137,6 @@ Figure~\ref{fig:preferred-formality-premium} holds formality fixed.
 
 \input{Paper/sections/regression_preferred_formality_gap_table}
 
-The contrast with the literature is most direct for the informal profile.
 \citet{BalkanTumen2016} find a more pronounced firm-size wage gap among informal
 than formal jobs in Turkey. Our preferred estimates show a similar contrast
 when larger categories are compared with solo work. They also show a
@@ -163,9 +145,7 @@ the non-solo formal categories. This distinction complements evidence that firm
 size and formality are closely related in Colombia
 \citep{OteroCortesEtAl2025,DazaGamboa2013,GutierrezRodriguezLesmes2023} and the
 Ecuadorian evidence that controlling for firm size can eliminate an apparent
-formal-sector premium in wages net of taxes \citep{ElBadaouiStroblWalsh2010}. The Colombian
-within-formality size comparisons cannot be reduced to a contrast between
-formal and informal employment.
+formal-sector premium in wages net of taxes \citep{ElBadaouiStroblWalsh2010}.
 
 Appendix Figure~\ref{fig:firm-size-wage-premium} displays the common-premium
 estimates from Equation~(\ref{eq:common-premium}), reported in column (4) of
@@ -186,8 +166,7 @@ Table~\ref{tab:formal-101-contrasts} reports its
 formal 101+ comparisons, and Table~\ref{tab:formal-wage-gap-by-size} its
 formal-informal gaps. Tables~\ref{tab:formality-interaction-coefficients-101-reference}
 and \ref{tab:formality-interaction-coefficients-11-19-reference} show its
-alternative normalizations. These simpler results do not replace the
-preferred comparisons above.
+alternative normalizations.
 
 \subsection{Salaried Workers}
 \label{subsec:salaried-workers}
@@ -214,8 +193,7 @@ among formal employees and 20.6 percent among informal employees, and a direct
 test does not reject equality (\(p=0.897\)). This similarity does not extend
 to the entire size profile. Relative to solo work, the premium in firms with
 11--19 workers remains substantially larger among informal employees, at
-24.7 percent, than among formal employees, at 6.5 percent. The table's summary
-rows report both comparisons. A Wald test rejects the joint null that all eight
+24.7 percent, than among formal employees, at 6.5 percent. A Wald test rejects the joint null that all eight
 size contrasts relative to solo work are equal across formality groups (\(p<0.001\)).
 Both conclusions also hold under sector
 clustering. Thus, the larger informal premium in the full sample's 101+/solo
@@ -239,9 +217,7 @@ formality-related differences across intermediate firm sizes remain.
 
 The dynamic exercise asks whether the conditional wage gap between a given
 firm-size category and solo work widened or narrowed within each formality
-group. We use Equation~(\ref{eq:preferred-dynamics}), allowing all worker and
-occupational-position coefficients to vary by year while retaining
-sector-department fixed effects within each year.
+group.
 
 Figure~\ref{fig:preferred-formality-endpoints} compares the adjusted profiles
 from Equation~(\ref{eq:preferred-dynamics}) estimated separately for 2008
@@ -304,8 +280,7 @@ reaching 57.7 percent in 2025.
   \end{minipage}
 \end{figure}
 
-These results qualify comparisons with the literature on the evolution of
-the premium. \citet{BloomGuvenenSmithSongVonWachter2018} document a decline
+\citet{BloomGuvenenSmithSongVonWachter2018} document a decline
 in the United States, and \citet{reed2019large} find that the premium tends
 to decline with national income and over time across developing economies.
 \citet{ColonnelliTagWebbWolter2018} find no common trajectory across Brazil,
@@ -313,7 +288,6 @@ Germany, Sweden, and the United Kingdom. Our preferred-control estimates
 show little net change between the formal endpoints and a larger informal
 gap in 2025, but the informal widening is not significant under the
 bootstrap checks.
-They do not describe a uniform decline across Colombian workers.
 
 For comparison, Equation~(\ref{eq:dynamic-benchmark}) allows each size
 coefficient to vary by year while retaining common
@@ -329,8 +303,7 @@ Tables~\ref{tab:firm-size-premium-trend-test-101-reference} and
 Figures~\ref{fig:adjusted-formality-endpoints} and
 \ref{fig:large-firm-formality-premium-over-time} report the simpler
 formality-specific profiles from Equation~(\ref{eq:formality-interaction})
-estimated separately by year. These are comparison specifications, not the
-source of the preferred dynamic results above.
+estimated separately by year.
 
 \subsection{Benchmarking the Firm-Size Wage Elasticity}
 \label{subsec:elasticity-benchmark}
@@ -351,9 +324,7 @@ formal workers and 0.097 for informal workers. The formal estimate is close
 in magnitude to the literature's observable-controls mean, whereas the informal
 estimate is about 2.7 times that benchmark. The informal slope exceeds the
 formal slope by \(-\widehat{\kappa}=0.057\), a statistically significant difference
-(two-way bootstrap \(p=0.0015\)). These are two contrasts from one regression, with common
-worker and occupational-position coefficients. They are not estimates from
-separate samples or a decomposition of the common elasticity.
+(two-way bootstrap \(p=0.0015\)).
 Appendix Tables~\ref{tab:preferred-clustering-comparison} and
 \ref{tab:preferred-wild-bootstrap} show that both slopes and their difference
 remain significant under all the clustering and bootstrap procedures examined.
@@ -363,8 +334,6 @@ size measures, and controls, not tests against a common population parameter.
 The assigned-size slopes also summarize the entire size distribution.
 A positive informal slope does not contradict the lower categorical estimate
 for informal 101+ workers than for several intermediate categories.
-The categorical preferred model does not impose the elasticity model's
-constant slope within each formality group.
 
 Appendix Table~\ref{tab:firm-size-elasticity-benchmark} retains the simpler
 elasticities of 0.026 for formal workers and 0.130 for informal workers.
@@ -374,9 +343,7 @@ Appendix Table~\ref{tab:polynomial-size-profile} reports the quadratic model in
 Equation~(\ref{eq:polynomial-size-profile}), which uses the preferred controls.
 Figure~\ref{fig:polynomial-size-profile} overlays its curves on the categorical
 estimates from Equation~(\ref{eq:main}).
-The curves summarize the broad profiles but do not reproduce all categorical
-differences. The restriction tests in
-Table~\ref{tab:quadratic-preferred-sensitivity} reject this restriction on
+The tests in Table~\ref{tab:quadratic-preferred-sensitivity} reject the quadratic restriction on
 Equation~(\ref{eq:main}) within
 both formality groups, including under alternative assignments for 101+.
 The quadratic is therefore a descriptive approximation, not a replacement
@@ -411,7 +378,7 @@ does not raise every informal worker's predicted income. The estimated informal
 profile is higher in several intermediate categories than in 101+, so workers
 starting in those categories receive lower predictions. Finally, assigning
 everyone to formal 101+ employment raises total predicted income by
-25.4 percent. This combined scenario is calculated directly. The separate
+25.4 percent. The separate
 percentages cannot simply be added. Informal workers undergo both changes,
 the corresponding wage ratios compound multiplicatively, and the estimated
 size premium itself depends on formality.
@@ -426,5 +393,4 @@ Table~\ref{tab:income-counterfactual-support} examines how strongly the
 same scenarios extrapolate beyond observed destination groups. For example,
 39.1 percent of intended movers to informal 101+ employment have no observed
 counterpart with the same sector, department, and occupational position in
-that destination in 2025. Section~\ref{sec:discussion} discusses the
-interpretation and limitations of these scenarios.
+that destination in 2025.
