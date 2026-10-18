@@ -22,8 +22,7 @@ contributors and zero for noncontributors. With sector-year fixed effects
   + \lambda_{s\times t}+\varepsilon_{ist}.
 \end{equation}
 All stages in this sequence use the same 5,268,514 complete observations
-and GEIH expansion weights. Table~\ref{tab:firm-size-wage-premium-regressions}
-reports the sequence in the results section.
+and GEIH expansion weights.
 This sequence describes how the size coefficients change after accounting
 for observed differences between workers and sectors. It does not decompose
 the wage gap into causal contributions. Even after adding \(F\), the model
@@ -46,8 +45,6 @@ sets of fixed effects is
   + \rho_o + \lambda_{s\times d\times t}
   + \varepsilon_{iosdt}.
 \end{equation}
-Table~\ref{tab:firm-size-local-geography-robustness} reports these extensions.
-Column (4) corresponds to Equation~(\ref{eq:common-premium-geography}).
 The specifications with sector-department-year effects exclude 139 singleton
 observations, leaving 5,268,375 observations.
 
@@ -76,11 +73,8 @@ in the prevalence of own-account and wage employment. These controls describe
 conditional comparisons, rather than identifying the total effect of moving
 from own-account work to a salaried job.
 
-We estimate the model with GEIH expansion weights. Column (4) of
-Table~\ref{tab:firm-size-local-geography-formality-robustness} reports this
-preferred specification. Columns (1)--(3) provide comparisons with progressively
-more detailed geographic controls. The sample for column (4)
-contains 5,268,375 observations.
+We estimate the preferred model with GEIH expansion weights using the same
+5,268,375 observations as Equation~(\ref{eq:common-premium-geography}).
 
 For any estimated log-wage contrast
 \(\widehat{\Delta}\), we report the percentage gap
@@ -115,8 +109,8 @@ coefficients fixed.
 We cluster standard errors by sector-department, allowing dependence across
 workers and years within 559 clusters. As a sensitivity check, we also
 cluster by sector, allowing dependence across departments but leaving only
-17 clusters. The initial sequence in
-Table~\ref{tab:firm-size-wage-premium-regressions} uses sector clustering.
+17 clusters. The initial sequence leading to
+Equation~(\ref{eq:common-premium}) uses sector clustering.
 The geographic and occupational-position extensions use sector-department
 clustering.
 
