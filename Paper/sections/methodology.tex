@@ -85,12 +85,19 @@ bootstrap procedures.
 
 We extend Equation~(\ref{eq:main}) by allowing the firm-size premiums, the
 formality coefficient, and all worker and occupational-position coefficients
-to vary by year:
+to vary by year. Let \(\mathcal T\) denote the sample years and
+\(\mathbf{1}\{t=\tau\}\) the indicator for year \(\tau\). The model is
 \begin{equation}\label{eq:preferred-dynamics}
-  \ln(w_{iosdt}) = \phi_t F_i
-  + \sum_{g\neq g_0}(\beta_{gt}+\theta_{gt}F_i)D_{ig}
-  + X_i'\gamma_t+\rho_{ot}
-  + \lambda_{s\times d\times t}+\varepsilon_{iosdt}.
+  \begin{aligned}
+    \ln(w_{iosdt}) ={}&
+    \sum_{\tau\in\mathcal T}\mathbf{1}\{t=\tau\}
+    \left[
+      \phi_\tau F_i
+      + \sum_{g\neq g_0}(\beta_{g\tau}+\theta_{g\tau}F_i)D_{ig}
+      + X_i'\gamma_\tau+\rho_{o\tau}
+    \right] \\
+    &+ \lambda_{s\times d\times t}+\varepsilon_{iosdt}.
+  \end{aligned}
 \end{equation}
 The fixed effects absorb the intercepts. Estimating this model separately by
 year gives the annual profiles. Each regression includes the preferred worker
