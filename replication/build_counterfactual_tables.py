@@ -126,10 +126,10 @@ main = table(
     "tab:income-counterfactuals-2025", r">{\raggedright\arraybackslash}p{0.42\textwidth}lrr", "\n".join(body),
     r"Percentage changes in weighted total predicted weekly labor income, using column (4) of "
     r"Table~\ref{tab:firm-size-local-geography-formality-robustness} and Equation~(\ref{eq:income-counterfactual}). "
-    r"The target-group denominator includes all workers initially in that group, including those already at the destination. "
-    r"The all-worker denominator includes the entire 2025 sample. Hours, worker characteristics, occupational position, "
-    r"sector, department, weights, and the estimated wage structure remain fixed. Other workers retain their baseline predictions. "
-    r"The final row changes size and formality jointly. These are conditional income scenarios, not estimated causal effects or output gains.")
+    r"The target-group denominator includes all workers initially in that group, including those already at the "
+    r"destination. The all-worker denominator includes the entire 2025 sample. Hours, worker characteristics, "
+    r"occupational position, sector, department, weights, and the estimated wage structure remain fixed. These are "
+    r"conditional income scenarios, not estimated causal effects or output gains.")
 (SECTIONS / "income_counterfactuals_2025_table.tex").write_text(main, encoding="utf-8")
 
 body = [r"    Scenario & Predicted baseline & Observed baseline \\",
@@ -142,12 +142,13 @@ for i, (scenario, title, _) in enumerate(SCENARIOS):
 sensitivity = table(
     "Income scenarios with alternative baselines and destinations",
     "tab:income-counterfactual-sensitivity", r">{\raggedright\arraybackslash}p{0.52\textwidth}cc", "\n".join(body),
-    r"All entries are percentage changes in total weekly labor income for the entire 2025 sample. "
-    r"The predicted baseline uses exponentiated fitted log income multiplied by the common retransformation factor defined in Section~\ref{subsec:income-counterfactuals}. The observed baseline "
-    r"multiplies observed income by the same estimated destination-to-origin wage ratio, preserving each worker's log residual. "
-    r"Both calculations use fixed hours and GEIH weights. In the last two rows, the destination maximizes the estimated size component "
-    r"within each formality group. These destinations are 101+ for formal workers and 51--100 for informal workers. "
-    r"They are not worker-specific optimal choices or welfare optima, and include informal 101+ workers assigned to 51--100.", "p")
+    r"All entries are percentage changes in total weekly labor income for the entire 2025 sample. The predicted "
+    r"baseline uses exponentiated fitted log income multiplied by the common retransformation factor defined in "
+    r"Section~\ref{subsec:income-counterfactual-method}. The observed baseline multiplies observed income by the same "
+    r"estimated destination-to-origin wage ratio, preserving each worker's log residual. Both calculations use fixed "
+    r"hours and GEIH weights. In the last two rows, the destination maximizes the estimated size component within each "
+    r"formality group. These destinations are 101+ for formal workers and 51--100 for informal workers. Informal 101+ "
+    r"workers are also assigned to 51--100.", "p")
 (SECTIONS / "income_counterfactual_sensitivity_table.tex").write_text(sensitivity, encoding="utf-8")
 
 body = [r"    \multicolumn{5}{l}{\textit{A. Intended moves and absent destination cells (\%)}} \\",
@@ -176,13 +177,12 @@ support = table(
     "tab:income-counterfactual-support",
     r">{\raggedright\arraybackslash}p{0.40\textwidth}cccc",
     "\n".join(body),
-    r"Destination cells are defined by sector, department, occupational position, size, and formality. "
-    r"Panel A reports intended movers as a percentage of all workers. The absent-destination columns instead use intended movers "
-    r"as their denominator. Pooled counts use all estimation years. Panel B permits a move only when its destination meets the "
-    r"stated unweighted observation count. Otherwise the worker stays at origin. The all-worker income denominator is unchanged. "
-    r"\textit{None} means that no intended move qualifies, not that the estimated wage contrast is zero. "
-    r"For the joint selected-destination scenario, the 2025 $n\geq30$ column contains only formal moves. "
-    r"These thresholds check whether the destination category is represented in the sample. They do not establish that a transition is feasible or that origin and destination workers have the same characteristics.", "p")
+    r"Destination cells are defined by sector, department, occupational position, size, and formality. Panel A reports "
+    r"intended movers as a percentage of all workers. The absent-destination columns instead use intended movers as "
+    r"their denominator. Pooled counts use all estimation years. Panel B permits a move only when its destination "
+    r"meets the stated unweighted observation count. Otherwise the worker stays at origin. The all-worker income "
+    r"denominator is unchanged. \textit{None} means that no intended move qualifies. For the joint "
+    r"selected-destination scenario, the 2025 $n\geq30$ column contains only formal moves.", "p")
 (SECTIONS / "income_counterfactual_support_table.tex").write_text(support, encoding="utf-8")
 print(f"Validated {len(validation)} aggregate changes and generated three tables.")
 print(f"Maximum independent error: {max(abs(r['error_pp']) for r in validation):.3g} pp")

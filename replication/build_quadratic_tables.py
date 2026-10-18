@@ -73,11 +73,10 @@ for clustering in ("Sector-department", "Sector"):
 table("regression_preferred_quadratic_sensitivity_table.tex", "Top-bin sensitivity and tests of the quadratic restriction",
       "tab:quadratic-preferred-sensitivity", "rrrrrr",
       [r"Size for 101+", r"Formal (\%)", r"Informal (\%)", r"$p_F$", r"$p_I$", r"$p_{Joint}$"], rows,
-      r"Formal and informal percentages are the implied 101+/solo premiums from the quadratic model, re-estimated for each assigned top-bin size. "
-      r"All other size assignments, observations, controls, and weights remain fixed. The $p$-values test whether the unrestricted "
-      r"categorical profiles from Equation~(\ref{eq:main}) lie on the specified quadratic. There are six restrictions per formality group "
-      r"and twelve jointly. Cluster-robust Wald statistics divided by the number of restrictions use an $F_{q,G-1}$ reference distribution. "
-      r"There are 559 sector-department clusters or 17 sector clusters. These are approximate tests, especially with only 17 clusters. "
-      r"The repeated percentages emphasize that changing clustering does not change point estimates. The value 150 is the baseline assignment, "
-      r"not an observed mean for 101+.")
+      r"Formal and informal percentages are the implied 101+/solo premiums from the quadratic model, re-estimated for "
+      r"each assigned top-bin size. All other size assignments, observations, controls, and weights remain fixed. The "
+      r"$p$-values test whether the unrestricted categorical profiles from Equation~(\ref{eq:main}) lie on the specified "
+      r"quadratic. Wald tests use an $F_{q,G-1}$ reference distribution, with $q=6$ within each formality group and "
+      r"$q=12$ jointly. There are 559 sector-department clusters or 17 sector clusters. These are approximate tests, "
+      r"especially with only 17 clusters. The value 150 is the baseline assignment, not an observed mean for 101+.")
 print("Generated two preferred quadratic tables.")

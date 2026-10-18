@@ -59,17 +59,14 @@ lines.extend([test_row(r"Equal 101+/solo premiums: $p$", "101+/solo equality"),
               "} & \\multicolumn{2}{c}{" + f'{int(models["Salaried"]["n"]):,}' + r"} \\",
               r"    \bottomrule", r"  \end{tabular}", r"  \vspace{0.3em}",
               r"  \begin{minipage}{0.95\textwidth}", r"  \footnotesize",
-              r"  Notes: Main rows report within-formality log-wage contrasts relative to 11--19 workers. "
-              r"Summary premiums use solo work as the reference and equal $100[\exp(b)-1]$. "
-              r"Each column pair comes from one size-by-formality regression with sex, age, age squared, education, "
-              r"occupational-position controls, sector-department-year fixed effects, and GEIH expansion weights. "
-              r"Salaried workers comprise private, government, and domestic employees and day laborers. "
+              r"  Notes: Main rows report within-formality log-wage contrasts relative to 11--19 workers. Summary premiums use "
+              r"solo work as the reference and equal $100[\exp(b)-1]$. Each column pair estimates Equation~(\ref{eq:main}) on "
+              r"the indicated sample. Salaried workers comprise private, government, and domestic employees and day laborers. "
               r"The restricted sample excludes 66 additional singleton cells. Standard errors in parentheses use "
-              r"sector-department clustering, with $G=559$ clusters in the full sample and $G=555$ among employees. "
-              r"Equality tests compare the formal and informal 101+/solo log contrasts (two-sided $t$ test) "
-              r"and jointly compare all eight size contrasts relative to solo work (Wald $F$ test with eight numerator "
-              r"degrees of freedom). Both use the full coefficient covariance and $G-1$ denominator degrees of freedom. "
-              r"* $p<0.10$, ** $p<0.05$, *** $p<0.01$.",
+              r"sector-department clustering, with $G=559$ clusters in the full sample and $G=555$ among employees. Equality "
+              r"tests compare the formal and informal 101+/solo log contrasts (two-sided $t$ test) and jointly compare all eight "
+              r"size contrasts relative to solo work (Wald $F$ test with eight numerator degrees of freedom). Both use $G-1$ "
+              r"denominator degrees of freedom. * $p<0.10$, ** $p<0.05$, *** $p<0.01$.",
               r"  \end{minipage}", r"\end{table}", ""])
 (ROOT / "Paper/sections/regression_salaried_robustness_table.tex").write_text("\n".join(lines), encoding="utf-8", newline="\n")
 print("Generated salaried-only robustness table.")

@@ -49,9 +49,9 @@ table("regression_preferred_formality_gap_table.tex", "Formal-informal wage gaps
       "tab:preferred-formality-gap", "lccc", ["Firm size", "Log-wage gap", "Premium", "$p$-value"],
       [line([r["size"], f'{float(r["estimate"]):.3f}{stars(r)}', f'{float(r["premium"]):.1f}\\%', pvalue(r)]) for r in gaps],
       r"Each row compares formal with informal workers in the same firm-size category using Equation~(\ref{eq:main}). "
-      r"The contrast is $\widehat\phi+\widehat\theta_g$, with $\theta_{Solo}=0$. Percent premiums are $100[\exp(\widehat\phi+\widehat\theta_g)-1]$. "
-      r"The model includes worker characteristics, occupational position, and sector-department-year fixed effects. "
-      r"Two-sided tests use sector-department-clustered standard errors. * $p<0.10$, ** $p<0.05$, *** $p<0.01$.")
+      r"The contrast is $\widehat\phi+\widehat\theta_g$, with $\theta_{Solo}=0$. Percent premiums are "
+      r"$100[\exp(\widehat\phi+\widehat\theta_g)-1]$. Two-sided tests use sector-department-clustered standard errors. * "
+      r"$p<0.10$, ** $p<0.05$, *** $p<0.01$.")
 
 changes = read("endpoint_changes")
 rows = []
@@ -98,10 +98,10 @@ for group in ("Formal", "Informal"):
 table("regression_preferred_clustering_table.tex", "Separating controls from clustering in the 101+/solo comparison",
       "tab:preferred-clustering-sensitivity", "lrrrrr",
       ["Controls", "Premium (\\%)", "S.E. (SD)", "$p$ (SD)", "S.E. (S)", "$p$ (S)"], rows,
-      r"All rows use the same 5,268,375 observations, GEIH weights, size-by-formality interactions, and sex, age, age squared, and education controls. "
-      r"The reference is solo work within each formality group. SD denotes sector-department clustering and S denotes sector clustering. "
-      r"Standard errors are in log points. Changing clustering leaves the coefficient unchanged. "
-      r"Two-sided tests use 558 and 16 degrees of freedom, respectively. The last row in each panel is the preferred specification.", size="scriptsize")
+      r"All rows use the same 5,268,375 observations, GEIH weights, size-by-formality interactions, and sex, age, age "
+      r"squared, and education controls. The reference is solo work within each formality group. SD denotes "
+      r"sector-department clustering and S denotes sector clustering. Standard errors are in log points. Two-sided tests "
+      r"use 558 and 16 degrees of freedom, respectively. The last row in each panel is the preferred specification.", size="scriptsize")
 rows = []
 extension_sensitivity = read("extension_clustering_sensitivity")
 for exercise, title in [("Endpoint change, 101+/solo", "Change in the 101+/solo log-wage gap, 2008--2025"), ("Elasticity", "Approximate firm-size elasticity")]:
@@ -116,8 +116,8 @@ for exercise, title in [("Endpoint change, 101+/solo", "Change in the 101+/solo 
 table("regression_preferred_extension_clustering_table.tex", "Clustering sensitivity of changes over time and elasticities",
       "tab:preferred-extension-clustering", "lrrrrr",
       ["Workers", "Estimate", "S.E. (SD)", "$p$ (SD)", "S.E. (S)", "$p$ (S)"], rows,
-      r"SD denotes sector-department clustering and S denotes sector clustering. Changing clustering leaves coefficients unchanged. "
-      r"The first panel reports the 2025 minus 2008 change in the log-wage contrast from the joint endpoint model, not a percentage-point change. "
-      r"The second panel reports slopes from Equation~(\ref{eq:preferred-elasticity}). Two-sided tests use 539 SD degrees of freedom "
-      r"for the endpoint model, 558 for elasticities, and 16 for sector clustering in both models.")
+      r"SD denotes sector-department clustering and S denotes sector clustering. The first panel reports the 2025 minus "
+      r"2008 change in the log-wage contrast from the joint endpoint model, not a percentage-point change. The second "
+      r"panel reports slopes from Equation~(\ref{eq:preferred-elasticity}). Two-sided tests use 539 SD degrees of "
+      r"freedom for the endpoint model, 558 for elasticities, and 16 for sector clustering in both models.")
 print("Generated five preferred-model tables.")
