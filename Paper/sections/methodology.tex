@@ -188,8 +188,8 @@ the formal-minus-informal elasticity difference. The model is
   +\varepsilon_{iosdt}.
 \end{equation}
 The formal elasticity is \(\eta+\kappa\). Both elasticities come from a single interacted regression,
-with the preferred sample, controls, weights, and clustering. The coefficient
-\(\kappa\) tests whether the slopes differ between formality groups. We also
+with the preferred sample, controls, weights, and clustering. We test
+\(H_0:\kappa=0\) to assess whether the slopes differ between formality groups. We also
 report a raw regression of log income on log assigned size alone and a
 common-slope version imposing
 \(\kappa=0\), with formality and the preferred controls included in the latter.
@@ -226,12 +226,12 @@ exponentiated residuals in 2025. We construct baseline hourly income as
 \(\widehat w_i=S\exp(\widehat{\ell}_i)\). We assume the same retransformation
 factor across workers and destinations. Let \(g(i)\) denote worker \(i\)'s
 size category. If scenario
-\(c\) changes the worker's size-formality component
-\(\phi F_i+\beta_{g(i)}+\theta_{g(i)}F_i\) by
+\(c\) changes the worker's estimated size-formality component
+\(\widehat{\phi}F_i+\widehat{\beta}_{g(i)}+\widehat{\theta}_{g(i)}F_i\) by
 \(\widehat\Delta_i^c\), counterfactual hourly income is
 \(\widehat w_i^c=\widehat w_i\exp(\widehat\Delta_i^c)\).
-For a change in size or formality alone, this difference is one of the
-contrasts in Equation~(\ref{eq:preferred-contrasts}). For a joint change, we
+For a change in size or formality alone, this estimated difference is obtained
+from the corresponding contrast in Equation~(\ref{eq:preferred-contrasts}). For a joint change, we
 subtract the origin component from the destination component directly. Let
 \(\mathcal I_{2025}\) denote the 2025 sample. With expansion weight
 \(a_i\) and weekly hours \(h_i\), the percentage change in total

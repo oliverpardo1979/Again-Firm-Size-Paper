@@ -48,7 +48,7 @@ coefficients = read("coefficients")
 predictions = read("category_predictions")
 tests = read("restriction_tests")
 rows = []
-for term, label in [("linear", r"Log assigned size ($a_{1f}$)"), ("quadratic", r"Squared log assigned size ($a_{2f}$)")]:
+for term, label in [("linear", r"Log assigned size ($\widehat{a}_{1f}$)"), ("quadratic", r"Squared log assigned size ($\widehat{a}_{2f}$)")]:
     rows.append(line([label] + [coefficient(select(coefficients, top=150, group=g, term=term)) for g in ("Formal", "Informal")]))
 rows.extend([r"    \midrule", line([r"Implied 101+/solo premium (\%)"] + [
     f'{float(select(predictions, top=150, group=g, size="101+")["premium"]):.1f}' for g in ("Formal", "Informal")])])
