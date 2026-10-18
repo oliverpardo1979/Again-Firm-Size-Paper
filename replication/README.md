@@ -1,5 +1,18 @@
 # Regression Replication and Income Counterfactuals
 
+## Sector Income Figure
+
+`Rscript --vanilla replication/plot_sector_income.R` regenerates Figure 5 in
+English and Spanish, as PNG and vector PDF files. It uses the unchanged
+aggregate cells in `Paper/tables/descriptive_wage_by_sector_year_size.csv`,
+exported by `Code/02.4_PaperDescriptives.R` in CJC-Monitor and used in the
+previous four-column figure. No microdata are needed for this layout update.
+The script preserves the sector order, income means, employment shares, and
+separate income scales by sector. It checks the endpoint comparisons quoted in
+the text. Bubble areas represent employment shares within each sector-year.
+The manuscript uses the vector version, sized for a full-page two-column
+layout with readable type at the final printed size.
+
 ## Own-Account Workers in 101+ Units
 
 `Rscript --vanilla replication/audit_own_account_large_firms.R` profiles
