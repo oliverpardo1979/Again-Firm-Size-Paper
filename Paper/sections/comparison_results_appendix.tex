@@ -48,10 +48,10 @@ size coefficients as \(\widetilde\beta_g\), and its formal-minus-informal
 size differences as \(\widetilde\theta_g\). Tildes distinguish these
 coefficients from the preferred model's coefficients. The regression is
 \begin{equation}\label{eq:formality-interaction}
-  \ln(w_{ist}) = \alpha + \widetilde{\phi}F_{ist}
+  \ln(w_{ist}) = \alpha + \widetilde{\phi}F_i
   + \sum_{g\neq g_0}(\widetilde{\beta}_g+
-       \widetilde{\theta}_g F_{ist})D_{ig}
-  + X_{ist}'\gamma+\lambda_{s\times t}+\varepsilon_{ist}.
+       \widetilde{\theta}_g F_i)D_{ig}
+  + X_i'\gamma+\lambda_{s\times t}+\varepsilon_{ist}.
 \end{equation}
 Its inference clusters by
 sector. The informal 101+/solo premium is 39.9 percent, and the formal
@@ -82,7 +82,7 @@ size-to-solo log-wage gap for category \(g\) in that year. The model is
 \begin{equation}\label{eq:dynamic-benchmark}
   \ln(w_{ist}) = \alpha
   + \sum_{\tau}\sum_{g\neq g_0} \beta_{g\tau}D_{ig}\mathbf{1}\{t=\tau\}
-  + X_{ist}'\gamma+\phi F_{ist}
+  + X_i'\gamma+\phi F_i
   + \lambda_{s\times t}+\varepsilon_{ist}.
 \end{equation}
 For the linear-trend version, define \(Trend_t=t-2008\) and let \(\delta_g\)
@@ -91,7 +91,7 @@ This gives
 \begin{equation}\label{eq:trend-benchmark}
   \ln(w_{ist}) = \alpha
   + \sum_{g\neq g_0}(\beta_g+\delta_g Trend_t)D_{ig}
-  + X_{ist}'\gamma+\phi F_{ist}
+  + X_i'\gamma+\phi F_i
   + \lambda_{s\times t}+\varepsilon_{ist}.
 \end{equation}
 Two-sided tests of \(H_0:\delta_g=0\) do not reject
@@ -137,7 +137,7 @@ elasticity exercise but retains the simpler controls. Its coefficient
 \(\eta\) is a common elasticity across formality groups:
 \begin{equation}\label{eq:elasticity}
   \ln(w_{ist}) = \alpha+\eta\ln(\widetilde{Size}_{ist})
-  + X_{ist}'\gamma+\phi F_{ist}
+  + X_i'\gamma+\phi F_i
   + \lambda_{s\times t}+\varepsilon_{ist}.
 \end{equation}
 The raw model includes assigned log size only. The controlled model includes

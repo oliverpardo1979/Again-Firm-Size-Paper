@@ -11,14 +11,14 @@ sector-year fixed effects, worker characteristics, and formality in sequence.
 Let \(i\), \(s\), and \(t\) index workers, sectors, and survey years.
 The outcome \(w_{ist}\) is the real hourly income defined in the data section.
 Write \(D_{ig}\) for the indicator of size category \(g\), and \(g_0\) for
-solo work. The vector \(X_{ist}\) contains a female-worker indicator, age,
-age squared, and education indicators. The formality indicator \(F_{ist}\) equals one for pension
+solo work. The vector \(X_i\) contains a female-worker indicator, age,
+age squared, and education indicators. The formality indicator \(F_i\) equals one for pension
 contributors and zero for noncontributors. With sector-year fixed effects
 \(\lambda_{s\times t}\), the initial specification with all these controls is
 \begin{equation}\label{eq:common-premium}
   \ln(w_{ist}) = \alpha
   + \sum_{g\neq g_0} \beta_g D_{ig}
-  + X_{ist}'\gamma + \phi F_{ist}
+  + X_i'\gamma + \phi F_i
   + \lambda_{s\times t}+\varepsilon_{ist}.
 \end{equation}
 All stages in this sequence use the same 5,268,514 complete observations
@@ -42,7 +42,7 @@ sets of fixed effects is
 \begin{equation}\label{eq:common-premium-geography}
   \ln(w_{iosdt}) = \alpha
   + \sum_{g\neq g_0} \beta_g D_{ig}
-  + X_{iosdt}'\gamma + \phi F_{iosdt}
+  + X_i'\gamma + \phi F_i
   + \rho_o + \lambda_{s\times d\times t}
   + \varepsilon_{iosdt}.
 \end{equation}
@@ -62,9 +62,9 @@ gap relative to formal solo work is \(\beta_g+\theta_g\). We normalize
 log-wage gap among solo workers. The remaining variables retain their
 definitions above. The preferred model is
 \begin{equation}\label{eq:main}
-  \ln(w_{iosdt}) = \alpha + \phi F_{iosdt}
-  + \sum_{g\neq g_0}(\beta_g+\theta_g F_{iosdt})D_{ig}
-  + X_{iosdt}'\gamma + \rho_o + \lambda_{s\times d\times t}
+  \ln(w_{iosdt}) = \alpha + \phi F_i
+  + \sum_{g\neq g_0}(\beta_g+\theta_g F_i)D_{ig}
+  + X_i'\gamma + \rho_o + \lambda_{s\times d\times t}
   + \varepsilon_{iosdt}.
 \end{equation}
 The size coefficients compare firm-size categories within sector-department-year
@@ -147,9 +147,9 @@ We extend Equation~(\ref{eq:main}) by allowing the firm-size premiums, the
 formality coefficient, and all worker and occupational-position coefficients
 to vary by year:
 \begin{equation}\label{eq:preferred-dynamics}
-  \ln(w_{iosdt}) = \phi_t F_{iosdt}
-  + \sum_{g\neq g_0}(\beta_{gt}+\theta_{gt}F_{iosdt})D_{ig}
-  + X_{iosdt}'\gamma_t+\rho_{ot}
+  \ln(w_{iosdt}) = \phi_t F_i
+  + \sum_{g\neq g_0}(\beta_{gt}+\theta_{gt}F_i)D_{ig}
+  + X_i'\gamma_t+\rho_{ot}
   + \lambda_{s\times d\times t}+\varepsilon_{iosdt}.
 \end{equation}
 The fixed effects absorb the intercepts. Estimating this model separately by
@@ -185,9 +185,9 @@ We replace the size indicators with its logarithm and an interaction with
 formality. Write \(\eta\) for the informal elasticity and \(\kappa\) for
 the formal-minus-informal elasticity difference. The model is
 \begin{equation}\label{eq:preferred-elasticity}
-  \ln(w_{iosdt})=\alpha+\phi F_{iosdt}
-  +(\eta+\kappa F_{iosdt})\ln(\widetilde{Size}_{iosdt})
-  +X_{iosdt}'\gamma+\rho_o+\lambda_{s\times d\times t}
+  \ln(w_{iosdt})=\alpha+\phi F_i
+  +(\eta+\kappa F_i)\ln(\widetilde{Size}_{iosdt})
+  +X_i'\gamma+\rho_o+\lambda_{s\times d\times t}
   +\varepsilon_{iosdt}.
 \end{equation}
 The formal elasticity is \(\eta+\kappa\). Both elasticities come from a single interacted regression,
