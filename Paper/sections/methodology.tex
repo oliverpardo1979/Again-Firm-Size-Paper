@@ -7,12 +7,12 @@
 %We begin with a regression of log real hourly labor income on firm-size indicators alone, with solo work as the reference category. We then add sector-year fixed effects, worker characteristics, and formality in sequence.
 
 Let \(i\), \(s\), and \(t\) index workers, sectors, and survey years.
-The outcome \(w_{ist}\) is the real hourly income defined in the data section.
+The variable \(w_{ist}\) denotes real hourly income.
 Write \(D_{ig}\) for the indicator of size category \(g\), and \(g_0\) for
 solo work. The vector \(X_i\) contains a female-worker indicator, age,
 age squared, and education indicators. The formality indicator \(F_i\) equals one for pension
 contributors and zero for noncontributors. With sector-year fixed effects
-\(\lambda_{s\times t}\), the initial specification with all these controls is
+\(\lambda_{s\times t}\), we estimate
 \begin{equation}\label{eq:common-premium}
   \ln(w_{ist}) = \alpha
   + \sum_{g\neq g_0} \beta_g D_{ig}
@@ -23,11 +23,10 @@ contributors and zero for noncontributors. With sector-year fixed effects
 
 %We next retain this common-premium restriction while adding geographic controls and occupational position. First, we add department-year fixed effects to Equation~(\ref{eq:common-premium}). We then replace the separate
 %sector-year and department-year effects with sector-department-year fixed effects, before adding occupational-position fixed effects. 
-Next, we replace the sector-year fixed effects with sector-department-year fixed effects and add occupational fixed effects. Let \(d\) and
-\(o\) index departments and occupational positions. Write
-\(\rho_o\) for the occupational-position fixed effect and \(\lambda_{s\times d\times t}\)
-for the sector-department-year fixed effect. The specification with both
-sets of fixed effects is
+Next, we add occupational-position fixed effects \(\rho_o\) and replace
+the sector-year effects with sector-department-year fixed effects
+\(\lambda_{s\times d\times t}\). The indices \(o\) and \(d\) denote
+occupational positions and departments.
 \begin{equation}\label{eq:common-premium-geography}
   \ln(w_{iosdt}) = \alpha
   + \sum_{g\neq g_0} \beta_g D_{ig}
@@ -37,16 +36,13 @@ sets of fixed effects is
 \end{equation}
 %The specifications with sector-department-year effects exclude 139 singleton observations, leaving 5,268,375 observations.
 
-Our next and preferred specification then allows each size coefficient to differ
+Our preferred specification allows each size coefficient to differ
 between formal and informal workers by interacting the size indicators with
-the formality indicator in Equation~(\ref{eq:common-premium-geography}).
-In this model, the coefficient \(\beta_g\) is the informal log-wage gap
-relative to informal solo work. The interaction coefficient \(\theta_g\)
-is the difference between the formal and informal size gaps, so the formal
-gap relative to formal solo work is \(\beta_g+\theta_g\). We normalize
+\(F_i\). For size \(g\), the log-wage gap relative to solo workers of the
+same formality status is \(\beta_g\) for informal workers and
+\(\beta_g+\theta_g\) for formal workers. We normalize
 \(\beta_{g_0}=\theta_{g_0}=0\), making \(\phi\) the formal-informal
-log-wage gap among solo workers. The remaining variables retain their
-definitions above. The preferred model is
+log-wage gap among solo workers.
 \begin{equation}\label{eq:main}
   \ln(w_{iosdt}) = \alpha + \phi F_i
   + \sum_{g\neq g_0}(\beta_g+\theta_g F_i)D_{ig}
@@ -57,8 +53,7 @@ definitions above. The preferred model is
 
 %We estimate the preferred model with GEIH expansion weights using the same 5,268,375 observations as Equation~(\ref{eq:common-premium-geography}).
 
-The model distinguishes three comparisons. For an origin size \(g\) and a
-destination size \(h\), which may be larger or smaller, let
+For an origin size \(g\) and a destination size \(h\), let
 \(\Delta^F_{g\to h}\) and \(\Delta^I_{g\to h}\) denote the formal and
 informal within-status log-wage differences. Let \(\Delta^{I\to F}_g\)
 denote the formal-minus-informal log-wage difference at size \(g\). Then
@@ -68,12 +63,10 @@ denote the formal-minus-informal log-wage difference at size \(g\). Then
   \Delta^{I\to F}_{g} &= \phi+\theta_g. \nonumber
 \end{align}
 
-For each contrast \(\Delta\), we obtain \(\widehat{\Delta}\) by replacing
-the model coefficients with their estimates and report the percentage gap
-as \(100[\exp(\widehat{\Delta})-1]\). This transformation compares
+For each estimated contrast \(\widehat{\Delta}\), we report the percentage gap
+\(100[\exp(\widehat{\Delta})-1]\). This transformation compares
 exponentiated conditional mean log incomes, not necessarily arithmetic mean
-incomes as in the descriptive tables. For \(\widehat{\Delta}^{I\to F}_g\),
-the percentage gap is relative to informal workers of the same size category.
+incomes as in the descriptive tables.
 
 Standard errors are clustered by sector for Equation~(\ref{eq:common-premium})
 and by sector-department for Equations~(\ref{eq:common-premium-geography})
@@ -99,28 +92,16 @@ to vary by year. Let \(\mathcal T\) denote the sample years and
     &+ \lambda_{s\times d\times t}+\varepsilon_{iosdt}.
   \end{aligned}
 \end{equation}
-The fixed effects absorb the intercepts. Estimating this model separately by
-year gives the annual profiles. Each regression includes the preferred worker
-and occupational-position controls and sector-department fixed effects.
-The annual samples partition the preferred pooled sample. This extension
-allows changes in other conditional wage differences rather than forcing
-them into the estimated size premiums.
+We estimate annual premiums using separate regressions for each year.
 
 To test the change between 2008 and 2025, we estimate both years jointly,
-interacting all non-fixed-effect regressors with an indicator equal to one
-in 2025 and zero in 2008. The
-point estimates reproduce the separate endpoint regressions. Joint estimation
-also retains the covariance between the endpoint estimates within a
-sector-department cluster. For informal workers, the null is
+using the fully year-interacted specification in
+Equation~(\ref{eq:preferred-dynamics}). Joint estimation retains the
+covariance between the two years' estimates within sector-department clusters.
+For informal workers, the null is
 \(H_0:\beta_{g,2025}-\beta_{g,2008}=0\). For formal workers, it is
 \(H_0:(\beta_{g,2025}+\theta_{g,2025})-(\beta_{g,2008}+\theta_{g,2008})=0\).
-Each two-sided test concerns one size-formality comparison. These are
-pointwise tests, not tests of all changes jointly, and they are not adjusted
-for multiple comparisons. A positive difference means that the
-conditional size-to-solo wage ratio increased. It does not establish a steady
-annual rise or identify which group's wages changed.
-We also apply the alternative clustering and bootstrap procedures described
-in the appendix to the 101+/solo endpoint changes.
+The tests are unadjusted for multiple comparisons.
 
 \subsection{Approximate Firm-Size Elasticities}
 
