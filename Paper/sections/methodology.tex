@@ -17,7 +17,7 @@ contributors and zero for noncontributors. With sector-year fixed effects
 \(\lambda_{s\times t}\), the initial specification with all these controls is
 \begin{equation}\label{eq:common-premium}
   \ln(w_{ist}) = \alpha
-  + \sum_{g\neq g_0} b_g D_{ig}
+  + \sum_{g\neq g_0} \beta_g D_{ig}
   + X_{ist}'\gamma + \phi F_{ist}
   + \lambda_{s\times t}+\varepsilon_{ist}.
 \end{equation}
@@ -27,24 +27,34 @@ reports the sequence in the results section.
 This sequence describes how the size coefficients change after accounting
 for observed differences between workers and sectors. It does not decompose
 the wage gap into causal contributions. Even after adding \(F\), the model
-constrains each size coefficient \(b_g\) to be the same for formal and
+constrains each size coefficient \(\beta_g\) to be the same for formal and
 informal workers.
 
 We next retain this common-premium restriction while adding geographic
 controls and occupational position. First, we add department-year fixed
 effects to Equation~(\ref{eq:common-premium}). We then replace the separate
 sector-year and department-year effects with sector-department-year fixed
-effects, before adding occupational-position fixed effects.
+effects, before adding occupational-position fixed effects. Let \(d\) index
+departments and \(o(i)\) denote worker \(i\)'s occupational position. Write
+\(\rho_{o(i)}\) for its fixed effect and \(\lambda_{s\times d\times t}\)
+for the sector-department-year fixed effect. The specification with both
+sets of fixed effects is
+\begin{equation}\label{eq:common-premium-geography}
+  \ln(w_{isdt}) = \alpha
+  + \sum_{g\neq g_0} \beta_g D_{ig}
+  + X_{isdt}'\gamma + \phi F_{isdt}
+  + \rho_{o(i)} + \lambda_{s\times d\times t}
+  + \varepsilon_{isdt}.
+\end{equation}
 Table~\ref{tab:firm-size-local-geography-robustness} reports these extensions.
+Column (4) corresponds to Equation~(\ref{eq:common-premium-geography}).
 The specifications with sector-department-year effects exclude 139 singleton
 observations, leaving 5,268,375 observations.
 
 Our preferred specification then allows each size coefficient to differ
 between formal and informal workers by interacting the size indicators with
-the formality indicator. Let \(d\) index departments and \(o(i)\) denote
-worker \(i\)'s occupational position. Write \(\rho_{o(i)}\) for its fixed
-effect and \(\lambda_{s\times d\times t}\) for the sector-department-year
-fixed effect. The coefficient \(\beta_g\) is the informal log-wage gap
+the formality indicator in Equation~(\ref{eq:common-premium-geography}).
+In this model, the coefficient \(\beta_g\) is the informal log-wage gap
 relative to informal solo work. The interaction coefficient \(\theta_g\)
 is the difference between the formal and informal size gaps, so the formal
 gap relative to formal solo work is \(\beta_g+\theta_g\). We normalize

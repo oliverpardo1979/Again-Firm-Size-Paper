@@ -77,11 +77,11 @@ income scenarios.
 
 The dynamic comparison model interacts size with year but constrains the
 premium to be common across formality groups. Let \(\tau\) index survey
-years. The coefficient \(b_{g\tau}\) is the
+years. The coefficient \(\beta_{g\tau}\) is the
 size-to-solo log-wage gap for category \(g\) in that year. The model is
 \begin{equation}\label{eq:dynamic-benchmark}
   \ln(w_{ist}) = \alpha
-  + \sum_{\tau}\sum_{g\neq g_0} b_{g\tau}D_{ig}\mathbf{1}\{t=\tau\}
+  + \sum_{\tau}\sum_{g\neq g_0} \beta_{g\tau}D_{ig}\mathbf{1}\{t=\tau\}
   + X_{ist}'\gamma+\phi F_{ist}
   + \lambda_{s\times t}+\varepsilon_{ist}.
 \end{equation}
@@ -90,7 +90,7 @@ be the annual change in category \(g\)'s log-wage gap relative to solo work.
 This gives
 \begin{equation}\label{eq:trend-benchmark}
   \ln(w_{ist}) = \alpha
-  + \sum_{g\neq g_0}(b_g+\delta_g Trend_t)D_{ig}
+  + \sum_{g\neq g_0}(\beta_g+\delta_g Trend_t)D_{ig}
   + X_{ist}'\gamma+\phi F_{ist}
   + \lambda_{s\times t}+\varepsilon_{ist}.
 \end{equation}
