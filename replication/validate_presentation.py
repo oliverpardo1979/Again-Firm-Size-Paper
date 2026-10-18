@@ -1,8 +1,10 @@
 """Check presentation coverage, selected regression rows, and PDF layout logs."""
 
 import argparse
+import csv
 import hashlib
 import json
+import math
 import re
 from pathlib import Path
 
@@ -46,6 +48,8 @@ def validate():
     results = read(ROOT / "Slides/main_results.tex")
     backup = read(ROOT / "Slides/backup_figures.tex")
     all_slides = main + results + backup
+    for source, digest in manifest["summary_sources"].items():
+        assert hashlib.sha256((ROOT / source).read_bytes()).hexdigest() == digest, source
     references = read(ROOT / "Slides/generated/paper_references.tex")
     for label in re.findall(r"\\paperref\{([^}]+)\}", all_slides):
         assert "paperref@" + label + r"\endcsname" in references, label
@@ -61,6 +65,41 @@ def validate():
         original = set(numeric(strip_spacing(table_body(read(source)))))
         actual = set(numeric(strip_spacing(generated)))
         assert original <= actual, (source, original - actual)
+
+    bootstrap_table = read(ROOT / "Slides/generated/bootstrap_summary.tex")
+    with (ROOT / "replication/inference_audit_output/wild_bootstrap.csv").open(
+        encoding="utf-8", newline=""
+    ) as stream:
+        bootstrap = {(r["model"], r["contrast"], r["clustering"]): r
+                     for r in csv.DictReader(stream)}
+    for contrast in ("Formal 101+/solo", "Informal 101+/solo",
+                     "Formal 101+/11-19", "Informal 101+/11-19"):
+        sector = bootstrap[("preferred", contrast, "Sector")]
+        two_way = bootstrap[("preferred", contrast, "Two-way sector + department")]
+        premium = 100 * math.expm1(float(sector["estimate"]))
+        cells = [contrast.replace("11-19", "11--19"), f"{premium:.1f}"]
+        for row in (sector, two_way):
+            p = float(row["p_wild"])
+            cells.append(r"$<0.001$" if p < 0.001 else f"{p:.3f}")
+        assert " & ".join(cells) + r" \\" in bootstrap_table, contrast
+
+    income_table = read(ROOT / "Slides/generated/income_movers.tex")
+    assert r"Reassigned workers\\Mean income" in income_table
+    assert r"All workers\\Total income" in income_table
+    with (ROOT / "replication/output/scenario_results.csv").open(newline="") as stream:
+        scenarios = {(r["scenario"], r["population"]): r for r in csv.DictReader(stream)
+                     if r["support"] == "unrestricted" and r["metric"] == "weekly"
+                     and r["method"] == "predicted_common_smear"}
+    for scenario, label in (
+        ("formalize_same_size", "Informal to formal, same size"),
+        ("formal_to_101", "Formal to formal 101+"),
+        ("informal_to_101", "Informal to informal 101+"),
+    ):
+        gains = [float(scenarios[(scenario, p)]["gain_pct"]) for p in ("movers", "all")]
+        expected = f"{label} & {gains[0]:.1f} & {gains[1]:.1f}" + r" \\"
+        assert expected in income_table, scenario
+    assert r"\rho_{o(i)}" not in all_slides
+    assert r"\sum_{\tau\in\mathcal T}\mathbf{1}\{t=\tau\}" in results
 
     preferred = read(ROOT / "Paper/sections/regression_local_geography_formality_robustness_table.tex")
     informal, formal = table_body(preferred).split(r"\textit{Formal workers}")
@@ -94,6 +133,10 @@ def validate():
     positions = [results.index(r"\begin{frame}{" + title + "}") for title in titles]
     assert positions == sorted(positions)
     paper = expand(ROOT / "main.tex")
+    for kind, key in (("table", "tables"), ("figure", "figures")):
+        blocks = re.findall(r"\\begin\{" + kind + r"\}.*?\\end\{" + kind + r"\}", paper, re.S)
+        expected = [re.search(r"\\label\{([^}]+)\}", block)[1] for block in blocks]
+        assert [entry["label"] for entry in manifest[key]] == expected, key
     sequence = ["tab:firm-size-wage-premium-regressions", "tab:firm-size-local-geography-robustness",
                 "tab:firm-size-local-geography-formality-robustness"]
     table_positions = [paper.index(r"\label{" + label + "}") for label in sequence]
@@ -109,6 +152,7 @@ def validate():
         assert not defects, "\n".join(defects)
     print(f"PASS: {len(manifest['figures'])} figures and {len(manifest['tables'])} paper tables covered.")
     print("PASS: source hashes, numeric coverage, preferred/salaried regression rows, and worker characteristics.")
+    print("PASS: bootstrap summaries, reassigned-worker denominators, and dynamic notation.")
 
 
 def render():

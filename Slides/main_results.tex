@@ -2,7 +2,7 @@
 
 \begin{frame}{Start with the Simplest Specification}
   \[
-  \ln w_{ist}=\alpha+\sum_{g\ne Solo}b_g D_{ig}+\epsilon_{ist}.
+  \ln w_{ist}=\alpha+\sum_{g\ne g_0}\beta_g D_{ig}+\varepsilon_{ist}.
   \]
   \begin{enumerate}
     \item Start with firm-size indicators alone.
@@ -12,7 +12,7 @@
   \end{enumerate}
   \vspace{0.2cm}
   \idea{This sequence still imposes the same size coefficients on formal and informal workers.}
-  \source{Paper Table~\paperref{tab:firm-size-wage-premium-regressions}. The four columns use the same 5,268,514 observations and GEIH expansion weights.}
+  \source{Paper Table~\paperref{tab:firm-size-wage-premium-regressions}. $g_0$ denotes solo work. Column (4) estimates Equation~(\paperref{eq:common-premium}). All columns use the same 5,268,514 observations.}
 \end{frame}
 
 \begin{frame}{Adding Controls Reduces the 101+/Solo Premium}
@@ -34,52 +34,52 @@
   \end{adjustbox}\endgroup
   \par\vspace{0.15cm}
   {\small The final 101+/solo coefficient is 0.338, or 40.2\%. But should one size premium describe both formal and informal employment?}
-  \source{Paper Table~\paperref{tab:firm-size-local-geography-robustness}. Same common-premium restriction. SEs now cluster by sector-department. Columns (3)--(4) exclude 139 singleton observations.}
+  \source{Paper Table~\paperref{tab:firm-size-local-geography-robustness}. Column (4) estimates Equation~(\paperref{eq:common-premium-geography}). SEs cluster by sector-department. Columns (3)--(4) exclude 139 singleton observations.}
 \end{frame}
 
 \begin{frame}{The Preferred Specification}
   \small
   \begin{align*}
-  \ln w_{isdt}={}&\alpha+\phi F_i+
-    \sum_{g\ne Solo}(\beta_g+\theta_g F_i)D_{ig}\\
-    &+X_i'\gamma+\rho_{o(i)}+\lambda_{s\times d\times t}+\epsilon_{isdt}.
+  \ln w_{iosdt}={}&\alpha+\phi F_i+
+    \sum_{g\ne g_0}(\beta_g+\theta_g F_i)D_{ig}\\
+    &+X_i'\gamma+\rho_o+\lambda_{s\times d\times t}+\varepsilon_{iosdt}.
   \end{align*}
   \begin{itemize}
     \item $F_i$ indicates pension contribution. $D_{ig}$ indicates firm-size category.
     \item $X_i$ includes sex, age, age squared, and education.
-    \item $\rho_{o(i)}$ controls for occupational position, including own-account work.
+    \item $\rho_o$ controls for occupational position, including own-account work.
     \item $\lambda_{s\times d\times t}$ compares workers within the same sector, department, and year.
-    \item GEIH expansion weights. 5,268,375 observations.
+    \item Solo work is the reference within each formality group: $\beta_{g_0}=\theta_{g_0}=0$.
   \end{itemize}
-  \source{Paper Equation~(\paperref{eq:main}) and Table~\paperref{tab:firm-size-local-geography-formality-robustness}, column (4). Baseline inference clusters by sector-department (559 clusters).}
+  \source{Paper Equation~(\paperref{eq:main}) and Table~\paperref{tab:firm-size-local-geography-formality-robustness}, column (4). 5,268,375 observations. Baseline inference uses 559 sector-department clusters.}
 \end{frame}
 
 \begin{frame}{What the Coefficients Compare}
   \begin{center}
-  \begin{tabular}{ll}
+  \small
+  \begin{tabular}{lll}
   \toprule
-  Log-income comparison & Estimated contrast \\
+  Log-income comparison & Contrast & Coefficients \\
   \midrule
-  Informal size $g$ vs. informal solo & $\beta_g$ \\
-  Formal size $g$ vs. formal solo & $\beta_g+\theta_g$ \\
-  Formal vs. informal, same size $g$ & $\phi+\theta_g$ \\
+  Informal, size $g$ to $h$ & $\Delta^I_{g\to h}$ & $\beta_h-\beta_g$ \\
+  Formal, size $g$ to $h$ & $\Delta^F_{g\to h}$ & $(\beta_h+\theta_h)-(\beta_g+\theta_g)$ \\
+  Informal to formal, size $g$ & $\Delta^{I\to F}_g$ & $\phi+\theta_g$ \\
   \bottomrule
   \end{tabular}
   \end{center}
   \vspace{0.25cm}
   \begin{itemize}
-    \item Convert a log contrast $b$ to a percentage as $100[\exp(b)-1]$.
-    \item Comparisons between two non-reference sizes subtract their coefficients.
-    \item Their standard errors use the covariance between those coefficients.
+    \item For each estimated contrast $\widehat\Delta$, report $100[\exp(\widehat\Delta)-1]$.
+    \item These are ratios of exponentiated conditional mean log incomes, not necessarily ratios of arithmetic means.
   \end{itemize}
-  \source{Changing the reference category changes neither fitted values nor pairwise comparisons.}
+  \source{Paper Equation~(\paperref{eq:preferred-contrasts}). Changing the reference category leaves fitted values and pairwise comparisons unchanged.}
 \end{frame}
 
 \begin{frame}{Preferred Regression Output}
   \centering\small
   \begin{tabular}{lcc}
   \toprule
-  Firm size & Informal: $\beta_g$ & Formal: $\beta_g+\theta_g$ \\
+  Firm size & Informal: $\widehat\beta_g$ & Formal: $\widehat\beta_g+\widehat\theta_g$ \\
   \midrule
   2--3 & 0.113*** \sereg{0.013} & -0.072** \sereg{0.029} \\
   4--5 & 0.255*** \sereg{0.016} & -0.022 \sereg{0.033} \\
@@ -99,7 +99,7 @@
 \begin{frame}{Adjusted Premiums by Formality}
   \centering
   \includegraphics[width=0.98\textwidth,height=0.80\textheight,keepaspectratio]{preferred_formality_premiums_en.png}
-  \source{Paper Figure~\paperref{fig:preferred-formality-premium}. Preferred controls. Reference is solo work within each formality group. Bars show 95\% confidence intervals.}
+  \source{Paper Figure~\paperref{fig:preferred-formality-premium}, Equation~(\paperref{eq:main}). Reference is solo work within formality. Bars use sector-department clustering. Alternative inference follows.}
 \end{frame}
 
 \begin{frame}{The Comparison Depends on the Starting Size}
@@ -114,11 +114,11 @@
   \end{tabular}
   \par\vspace{0.4cm}
   \begin{itemize}
-    \item Formal 101+ workers earn more than every smaller formal category under baseline inference.
+    \item The formal 101+ advantage over categories from 2--3 through 51--100 survives the bootstrap checks.
     \item Informal premiums rise sharply across the smallest sizes, then flatten and fall at 101+.
     \item A larger informal 101+/solo premium does not imply gains at every step toward larger firms.
   \end{itemize}
-  \source{Paper Tables~\paperref{tab:firm-size-local-geography-formality-robustness}--\paperref{tab:firm-size-local-geography-formality-robustness-11-19-reference}. Both 101+/11--19 contrasts are significant at 5\% with sector-department clustering.}
+  \source{Paper Tables~\paperref{tab:firm-size-local-geography-formality-robustness}--\paperref{tab:firm-size-local-geography-formality-robustness-11-19-reference}. The informal 101+/11--19 contrast is not significant under sector or two-way bootstrap inference.}
 \end{frame}
 
 \begin{frame}{Formal Workers Earn More at Each Firm Size}
@@ -133,29 +133,22 @@
   \par\vspace{0.4cm}
   \begin{itemize}
     \item These contrasts hold firm size fixed, unlike the preceding figure.
-    \item All are positive and significant under baseline inference.
+    \item All nine gaps remain positive and significant under every clustering and bootstrap procedure examined.
     \item The size premium is not just a comparison between formal and informal jobs.
   \end{itemize}
   \source{Paper Table~\paperref{tab:preferred-formality-gap}. Formal relative to informal workers, conditional on preferred controls. These are associations, not effects of formalization.}
 \end{frame}
 
-\begin{frame}{Inference Depends on the Clustering Assumption}
+\begin{frame}{Which Comparisons Survive the Bootstrap Checks?}
   \small\centering
-  \begin{tabular}{lrrr}
-  \toprule
-  Formal 101+/solo contrast & Estimate & Log S.E. & $p$-value \\
-  \midrule
-  Sector-department clustering & 16.5\% & 0.037 & $<0.001$ \\
-  Sector clustering & 16.5\% & 0.091 & 0.113 \\
-  \bottomrule
-  \end{tabular}
+  \input{Slides/generated/bootstrap_summary}
   \par\vspace{0.35cm}
   \begin{itemize}
-    \item The point estimate is unchanged. Sector clustering permits dependence across departments within a sector.
-    \item There are 559 sector-department clusters but only 17 sector clusters.
-    \item The informal 101+/solo premium remains significant under both conventions.
+    \item Coefficients and samples stay fixed. Only inference changes.
+    \item There are 559 sector-department intersections, but 17 sectors and 33 departments.
+    \item The formal 101+/solo contrast is sensitive. The advantage over intermediate formal categories is not.
   \end{itemize}
-  \source{Paper Table~\paperref{tab:preferred-clustering-sensitivity}. Two-sided tests with cluster-based degrees of freedom.}
+  \source{Paper Tables~\paperref{tab:preferred-clustering-comparison}--\paperref{tab:preferred-wild-bootstrap}. Two-sided wild cluster bootstrap, 9,999 draws. Two-way inference allows dependence within sectors and within departments.}
 \end{frame}
 
 \sectionframe{4. Salaried Workers}
@@ -175,7 +168,7 @@
 \begin{frame}{Adjusted Premiums among Salaried Workers}
   \centering
   \includegraphics[width=0.98\textwidth,height=0.80\textheight,keepaspectratio]{salaried_formality_premiums_en.png}
-  \source{Paper Figure~\paperref{fig:salaried-formality-premium}. Same vertical scale as Figure~\paperref{fig:preferred-formality-premium}. Reference is solo employees within each formality group.}
+  \source{Paper Figure~\paperref{fig:salaried-formality-premium}, Equation~(\paperref{eq:main}) on salaried workers. Same scale as Figure~\paperref{fig:preferred-formality-premium}. Reference is solo work within formality. Intervals use sector-department clustering.}
 \end{frame}
 
 \begin{frame}{Salaried-Worker Regression Output}
@@ -222,21 +215,27 @@
 \sectionframe{5. Dynamics and Elasticities}
 
 \begin{frame}{Has the Conditional Premium Changed?}
+  \small
+  \begin{align*}
+    \ln w_{iosdt}={}&\sum_{\tau\in\mathcal T}\mathbf{1}\{t=\tau\}
+    \left[\phi_\tau F_i+\sum_{g\ne g_0}(\beta_{g\tau}+\theta_{g\tau}F_i)D_{ig}
+    +X_i'\gamma_\tau+\rho_{o\tau}\right]\\
+    &+\lambda_{s\times d\times t}+\varepsilon_{iosdt}.
+  \end{align*}
   \begin{itemize}
-    \item Estimate the size-by-formality profile in each year with the preferred controls.
-    \item Allow worker and occupational-position coefficients to vary by year.
-    \item Include sector-department fixed effects within each year.
-    \item Test 2008--2025 changes in a joint endpoint regression, retaining cross-year covariance within clusters.
+    \item All size, formality, worker-control, and occupational-position coefficients vary by year.
+    \item Annual profiles come from separate yearly regressions.
+    \item Test 2008--2025 changes jointly, retaining cross-year covariance within clusters.
   \end{itemize}
   \vspace{0.2cm}
   \idea{All change tests are two-sided. Widening and narrowing are both possible.}
-  \source{Paper Equation~(\paperref{eq:preferred-dynamics}). A change in the gap does not by itself identify which group's wage growth caused it.}
+  \source{Paper Equation~(\paperref{eq:preferred-dynamics}). $\mathcal T$ is the set of sample years. Endpoint tests are pointwise, without multiple-testing adjustment.}
 \end{frame}
 
 \begin{frame}{Adjusted Profiles in 2008 and 2025}
   \centering
   \includegraphics[width=0.98\textwidth,height=0.80\textheight,keepaspectratio]{preferred_formality_endpoints_en.png}
-  \source{Paper Figure~\paperref{fig:preferred-formality-endpoints}. Each premium is relative to solo work in the same formality-year group.}
+  \source{Paper Figure~\paperref{fig:preferred-formality-endpoints}, Equation~(\paperref{eq:preferred-dynamics}). Reference is solo work within each formality-year group. Intervals use sector-department clustering.}
 \end{frame}
 
 \begin{frame}{Endpoint Changes Differ by Formality}
@@ -252,16 +251,16 @@
   \par\vspace{0.35cm}
   \begin{itemize}
     \item Formal endpoint changes are small and not significant at 5\%.
-    \item The informal 101+/solo gap widens, but its $p$-value rises to 0.090 with sector clustering.
+    \item The informal increase is not significant under bootstrap inference: $p=0.111$ by sector and $p=0.273$ with two-way clustering.
     \item The endpoint comparison is not a test of a steady linear trend.
   \end{itemize}
-  \source{Paper Tables~\paperref{tab:preferred-endpoint-changes} and \paperref{tab:preferred-extension-clustering}. Changes are computed before rounding. Baseline $p$-values use sector-department clustering.}
+  \source{Paper Tables~\paperref{tab:preferred-endpoint-changes} and \paperref{tab:preferred-wild-bootstrap}. Changes are computed before rounding. The table above reports baseline sector-department $p$-values.}
 \end{frame}
 
 \begin{frame}{The Annual Path Is Not a Steady Trend}
   \centering
   \includegraphics[width=0.98\textwidth,height=0.80\textheight,keepaspectratio]{preferred_large_firm_dynamics_en.png}
-  \source{Paper Figure~\paperref{fig:preferred-large-firm-dynamics}. Annual 101+/solo contrasts with preferred controls. 2020 is excluded.}
+  \source{Paper Figure~\paperref{fig:preferred-large-firm-dynamics}, Equation~(\paperref{eq:preferred-dynamics}). Annual 101+/solo contrasts. Intervals use sector-department clustering. 2020 is excluded.}
 \end{frame}
 
 \begin{frame}{Contrast with Previous Evidence on Changes over Time}
@@ -269,7 +268,7 @@
     \item Bloom et al. (2018) document a declining large-firm premium in the United States.
     \item Reed and Tran (2019) report declines with national income and over time across developing economies.
     \item Colonnelli et al. (2018) find no common trajectory across Brazil, Germany, Sweden, and the United Kingdom.
-    \item Colombia shows little net change in the formal endpoints and a larger informal gap in 2025, with inference sensitive to clustering.
+    \item Colombia shows little net change in the formal endpoints. The informal point estimates rise, but the increase is not significant under bootstrap inference.
   \end{itemize}
   \source{The relevant comparison is the time path of size-related wage gaps, not the dispersion of firm-specific pay effects.}
 \end{frame}
@@ -277,9 +276,10 @@
 \begin{frame}{Why Estimate an Approximate Elasticity?}
   \small
   \[
-  \ln w_i=\alpha+\phi F_i+\eta\ln\widetilde{Size}_i
-       +\kappa F_i\ln\widetilde{Size}_i
-       +X_i'\gamma+\rho_{o(i)}+\lambda_{sdt}+\epsilon_i.
+  \begin{aligned}
+  \ln w_{iosdt}={}&\alpha+\phi F_i+(\eta+\kappa F_i)\ln\widetilde{Size}_{iosdt}\\
+       &+X_i'\gamma+\rho_o+\lambda_{s\times d\times t}+\varepsilon_{iosdt}.
+  \end{aligned}
   \]
   \begin{itemize}
     \item A log-log slope provides a compact comparison with the literature.
@@ -287,7 +287,7 @@
     \item The informal slope is $\eta$. The formal slope is $\eta+\kappa$.
     \item Both slopes come from one regression with preferred controls, not separate samples.
   \end{itemize}
-  \source{An assigned-size approximation. The categorical baseline does not impose a constant elasticity.}
+  \source{Paper Equation~(\paperref{eq:preferred-elasticity}). An assigned-size approximation. The categorical model does not impose a constant elasticity.}
 \end{frame}
 
 \begin{frame}{Benchmarking the Elasticities}
@@ -296,10 +296,10 @@
   \input{Slides/generated/preferred_elasticities}
   \par\vspace{0.2cm}
   \begin{itemize}
-    \item The informal slope exceeds the formal slope by 0.057 ($p<0.001$).
+    \item The informal slope exceeds the formal slope by $-\widehat\kappa=0.057$ (two-way bootstrap $p=0.0015$).
     \item Different populations and controls limit the benchmark to a comparison of magnitudes.
   \end{itemize}
-  \source{Paper Table~\paperref{tab:preferred-elasticities}. Standard errors use sector-department clustering. Literature means from Diegmann et al. (2026).}
+  \source{Paper Tables~\paperref{tab:preferred-elasticities} and \paperref{tab:preferred-wild-bootstrap}. Displayed SEs use sector-department clustering. Literature means from Diegmann et al. (2026).}
 \end{frame}
 
 \sectionframe{6. Illustrative Income Scenarios}
@@ -319,37 +319,28 @@
   \small
   \[
   \widehat w_i^c=\widehat w_i\exp(\widehat\Delta_i^c),\qquad
-  G_c=100\left[\frac{\sum_i a_i h_i\widehat w_i\exp(\widehat\Delta_i^c)}
-                         {\sum_i a_i h_i\widehat w_i}-1\right].
+  G_c=100\left[\frac{\sum_{i\in\mathcal I_{2025}} a_i h_i\widehat w_i\exp(\widehat\Delta_i^c)}
+                         {\sum_{i\in\mathcal I_{2025}} a_i h_i\widehat w_i}-1\right].
   \]
   \begin{itemize}
     \item $\widehat\Delta_i^c$ is the difference between destination and origin size-formality coefficients.
-    \item $a_i$ is the survey weight and $h_i$ is weekly hours.
+    \item $\widehat w_i$ is baseline predicted hourly income, $a_i$ the survey weight, and $h_i$ weekly hours.
     \item $G_c$ measures the change in total predicted weekly labor income, not the average percentage change across workers.
-    \item Baseline income uses a common retransformation factor, which cancels from the ratio.
+    \item Restrict both sums to reassigned workers to obtain the change in their mean predicted weekly income.
   \end{itemize}
-  \source{Paper Section~\paperref{subsec:income-counterfactuals}. The target-group calculation restricts both sums to that group's initial members.}
+  \source{Paper Equation~(\paperref{eq:income-counterfactual}). $\mathcal I_{2025}$ is the 2025 sample. Baseline income uses a common retransformation factor across workers and destinations.}
 \end{frame}
 
 \begin{frame}{Illustrative Income Changes in 2025}
   \centering\small
-  \begin{tabular}{p{0.54\textwidth}rr}
-  \toprule
-  Assignment & Target group & All workers \\
-  \midrule
-  Informal to formal, same firm size & 41.9\% & 13.5\% \\
-  Formal to formal 101+ & 5.4\% & 3.6\% \\
-  Informal to informal 101+ & 23.8\% & 7.7\% \\
-  Everyone to formal 101+ & 25.4\% & 25.4\% \\
-  \bottomrule
-  \end{tabular}
+  \input{Slides/generated/income_movers}
   \par\vspace{0.3cm}
   \begin{itemize}
-    \item Already-large formal workers receive no change in the formal-101+ scenario.
+    \item Reassigned-worker means exclude those already at the destination. The all-worker total includes everyone.
     \item Some intermediate-size informal workers receive lower predictions when assigned to 101+.
-    \item The combined scenario is calculated directly. The separate percentages cannot be added.
+    \item Assigning everyone to formal 101+ raises total predicted income by 25.4\%. The separate percentages cannot be added.
   \end{itemize}
-  \source{Paper Table~\paperref{tab:income-counterfactuals-2025}. Percent changes in total predicted labor income, with hours and the estimated wage structure fixed.}
+  \source{Paper Section~\paperref{subsec:income-counterfactuals} and Table~\paperref{tab:income-counterfactuals-2025}. Changes in predicted weekly labor income, with hours and the estimated wage structure fixed.}
 \end{frame}
 
 \begin{frame}{The Scenarios Extrapolate Beyond Observed Jobs}
@@ -397,7 +388,7 @@
   \begin{enumerate}
     \item The preferred full-sample 101+/solo premium is 37.1\% among informal workers and 16.5\% among formal workers.
     \item Among employees alone, those premiums are similar, at 20.6\% and 20.2\%, but intermediate-size profiles still differ.
-    \item Formal endpoints change little. Informal widening between 2008 and 2025 is sizeable but sensitive to clustering.
+    \item Formal endpoints change little. The informal point estimates rise, without statistically robust evidence of widening.
     \item Approximate elasticities are 0.097 among informal workers and 0.040 among formal workers.
     \item Conditional wage gaps and illustrative income scenarios motivate further work on constraints to growth and reallocation. They do not identify causal productivity gains.
   \end{enumerate}

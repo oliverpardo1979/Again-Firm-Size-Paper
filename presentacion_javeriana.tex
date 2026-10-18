@@ -95,7 +95,7 @@
   \vspace{0.35cm}
   \begin{itemize}
     \item How much higher is real hourly pay in large firms relative to solo work and micro-firms?
-    \item How much remains after accounting for worker characteristics, occupational position, and local sector-year conditions?
+    \item How much remains after accounting for worker characteristics, occupational position, and sector-department-year effects?
     \item Did the gap widen or narrow between 2008 and 2025?
     \item Does the size-wage relationship differ between formal and informal employment?
   \end{itemize}
@@ -107,7 +107,7 @@
       \idea{Empirical fact}
       \vspace{0.25cm}
       \begin{itemize}
-        \item Real hourly pay rises with firm size.
+        \item Large firms pay more than solo work in the raw data.
         \item The relationship survives controls for observable characteristics.
         \item The full-sample 101+/solo premium is 37.1\% among informal and 16.5\% among formal workers.
       \end{itemize}
@@ -117,7 +117,7 @@
       \vspace{0.25cm}
       \begin{itemize}
         \item The premium does not prove causality or misallocation by itself.
-        \item It is a diagnostic magnitude for wage inequality, segmentation, and possible frictions.
+        \item The significance of the formal 101+/solo contrast depends on the inference procedure.
         \item The salaried-only comparison qualifies the full-sample contrast between formal and informal workers.
       \end{itemize}
     \end{column}
@@ -155,9 +155,9 @@
   \begin{itemize}
     \item The conditional premium means that observationally similar workers earn more in larger firms.
     \item It does not prove that moving the same worker to a larger firm would raise aggregate output.
-    \item The remaining gap may reflect unobserved selection, match quality, rents, firm wage policies, or productivity.
-    \item We therefore interpret the premium as a diagnostic statistic, not as direct proof of efficiency or inefficiency.
+    \item The remaining gap may reflect unobserved worker characteristics or differences in employers' pay practices.
   \end{itemize}
+  \source{Brown and Medoff (1989), Oi and Idson (1999), and the paper's discussion.}
 \end{frame}
 
 \begin{frame}{Data}
@@ -167,8 +167,8 @@
   \begin{itemize}
     \item Source: Gran Encuesta Integrada de Hogares, DANE.
     \item Period: 2008--2019 and 2021--2025.
-    \item We exclude 2020 because the pandemic disrupted labor-market outcomes and survey collection.
-    \item Working sample: 5.35 million worker observations pooled across repeated cross-sections, not a worker panel.
+    \item We exclude 2020 because of pandemic-related data limitations.
+    \item Sample: 5.35 million worker observations pooled across repeated cross-sections, not a worker panel.
     \item Regression sample: 5.27 million observations with complete controls.
   \end{itemize}
 \end{frame}
@@ -202,6 +202,18 @@
   \end{columns}
 \end{frame}
 
+\begin{frame}{Firm Size and Occupational Position}
+  \idea{Solo work describes the size of the reported unit, not the worker's occupational position.}
+  \vspace{0.3cm}
+  \begin{itemize}
+    \item A household's sole domestic employee is a solo worker, but not an own-account worker.
+    \item Own-account workers may report larger units when working with partners, unpaid family helpers, or as contractors.
+    \item GEIH assigns state contractors to 101+ despite their own-account status.
+    \item Occupational position is recorded separately and included as a control.
+  \end{itemize}
+  \source{Paper Section 2. DANE's GEIH collection manual (2025), pp. 89--90 and 115.}
+\end{frame}
+
 \begin{frame}{Formality}
   \idea{We define formality through pension contribution.}
 
@@ -210,8 +222,8 @@
     \item A worker is formal if the worker contributes to pensions.
     \item A worker is informal if the worker does not contribute to pensions.
     \item Employed pension recipients are excluded from the formal-informal comparisons.
-    \item The definition captures access to contributory social security.
-    \item The definition does not use firm size, which is important because firm size is the variable we want to study.
+    \item This is a worker-level measure, not a measure of the firm's legal registration.
+    \item The definition does not use firm size.
   \end{itemize}
 \end{frame}
 
@@ -283,7 +295,7 @@
     \toprule
     2025 comparison & Ratio between extremes & Reading \\
     \midrule
-    Women / men & 1.01 & Small gap in weighted means \\
+    Women / men & 1.01 & Small gap in means \\
     Formal / informal & 2.43 & Very large gap \\
     Higher education / preschool or less & 4.08 & Larger than the size gap \\
     Information and communication / agriculture & 3.63 & Very large sector gap \\
@@ -328,9 +340,10 @@
 
 \begin{frame}{Minimum Wage Bunching by Firm Size and Formality}
   \centering
-  \includegraphics[width=0.96\textwidth,height=0.76\textheight,keepaspectratio]{fig77_en.png}
-
-  \source{Hourly income divided by an annual minimum-wage conversion benchmark, not an individual legal compliance threshold. Labels show employment shares within formality groups.}
+  \includegraphics[width=0.96\textwidth,height=0.71\textheight,keepaspectratio,trim=0 24bp 0 45.6bp,clip]{fig77_en.png}
+  \par\smallskip
+  {\small Hourly income / hourly minimum-wage benchmark (log scale)}
+  \source{Paper Figure~\paperref{fig:minwage-distribution-formality-size}. Benchmark: 1,423,500 pesos divided by $45\times52/12$ hours. This is not an individual legal compliance threshold. Shares are within formality groups.}
 \end{frame}
 
 \begin{frame}{How to Read the U-Shape among Formal Workers}
@@ -338,12 +351,12 @@
 
   \vspace{0.35cm}
   \begin{itemize}
-    \item Formal solo work is a selected but heterogeneous category.
     \item In 2025, 82.1\% of formal solo workers were own-account workers.
     \item 50.9\% had higher education.
-    \item But there was also a concentration in domestic work and transport.
-    \item The descriptive U-shape may therefore reflect composition within formal solo work, not a pure premium for formal solo work.
+    \item 16.2\% were domestic workers.
+    \item Worker composition is a plausible explanation for their high mean income.
   \end{itemize}
+  \source{Paper Table~\paperref{tab:formal-worker-profile-2025}.}
 \end{frame}
 
 \begin{frame}{The Raw Premium Appears within Men and Women}
@@ -360,11 +373,21 @@
   \source{The 101+/solo ratio was 2.1 for preschool or less, 1.8 for primary, 1.5 for secondary, and 1.7 for higher education.}
 \end{frame}
 
-\begin{frame}{The Premium Also Appears in Most Sectors}
+\begin{frame}{Firm-Size Wage Gaps by Sector (1/2)}
   \centering
-  \includegraphics[width=0.98\textwidth,height=0.80\textheight,keepaspectratio]{fig71_en.png}
+  {\scriptsize Mean real hourly income in 2025 pesos\par}
+  \includegraphics[width=0.76\textwidth,trim=13bp 285bp 0 0,clip]{fig71_en.pdf}
+  \par
+  % Repeat the common size axis and bubble legend below the upper four rows.
+  \includegraphics[width=0.76\textwidth,trim=13bp 0 0 437bp,clip]{fig71_en.pdf}
+  \source{Paper Figure~\paperref{fig:income-sector-comparison}. The 101+/solo ratio in agriculture was about 1.9 in both years. In manufacturing, it rose from 2.35 to 2.63.}
+\end{frame}
 
-  \source{In 2025, hourly pay in 101+ firms exceeded solo-worker pay in all 16 included sectors.}
+\begin{frame}{Firm-Size Wage Gaps by Sector (2/2)}
+  \centering
+  {\scriptsize Mean real hourly income in 2025 pesos\par}
+  \includegraphics[width=0.76\textwidth,trim=13bp 0 0 219bp,clip]{fig71_en.pdf}
+  \source{Paper Figure~\paperref{fig:income-sector-comparison}. The 101+/solo advantage appears in 14 of 16 sectors in both years and all 16 in 2025. It need not increase at every size category.}
 \end{frame}
 
 \input{Slides/main_results}

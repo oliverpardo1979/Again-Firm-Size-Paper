@@ -4,8 +4,10 @@ Run after compiling main.tex, then compile presentacion_javeriana.tex.
 Generated TeX is committed, so Overleaf does not need Python.
 """
 
+import csv
 import hashlib
 import json
+import math
 import re
 from pathlib import Path
 
@@ -110,7 +112,21 @@ def table_parts(block):
         result = [(head, first), (second[:cut], second[cut + len(r"\midrule"):])]
     else:
         items = merge_se_rows(rows(body))
-        if "descriptive-wage-gaps-2025" in block:
+        if any(label in block for label in (
+            "tab:preferred-clustering-comparison", "tab:preferred-wild-bootstrap"
+        )):
+            # Keep each inference panel together, including its heading.
+            groups = []
+            for item in items:
+                if re.search(r"\\multicolumn\{\d+\}\{l\}\{\\textit\{[A-D]\.", item):
+                    groups.append([])
+                groups[-1].append(item)
+            chunks = [[]]
+            for panel in groups:
+                if chunks[-1] and len(chunks[-1]) + len(panel) > 13:
+                    chunks.append([])
+                chunks[-1].extend(panel)
+        elif "descriptive-wage-gaps-2025" in block:
             chunks = [items[:8], items[8:16], items[16:]]
             chunks[2][0] = "Activity " + chunks[2][0]
         elif 13 < len(items) <= 18 and any(r"\midrule" in item for item in items[7:]):
@@ -162,6 +178,48 @@ def slide_notes(label, original):
                 r"(3)--(4) $s\times d\times t$. "
                 "Column (4) adds occupational position. SEs cluster by sector-department." + stars)
     return original
+
+
+def export_summary_tables():
+    """Use saved estimates for the main-talk bootstrap and mover comparisons."""
+    bootstrap_path = ROOT / "replication/inference_audit_output/wild_bootstrap.csv"
+    scenario_path = ROOT / "replication/output/scenario_results.csv"
+    with bootstrap_path.open(encoding="utf-8", newline="") as stream:
+        bootstrap = {(r["model"], r["contrast"], r["clustering"]): r
+                     for r in csv.DictReader(stream)}
+    pvalue = lambda value: r"$<0.001$" if float(value) < 0.001 else f"{float(value):.3f}"
+    lines = [r"\begin{tabular}{lrrr}", r"\toprule",
+             r"Contrast & Premium (\%) & $p$ (sector) & $p$ (two-way) \\", r"\midrule"]
+    for contrast in ("Formal 101+/solo", "Informal 101+/solo",
+                     "Formal 101+/11-19", "Informal 101+/11-19"):
+        sector = bootstrap[("preferred", contrast, "Sector")]
+        two_way = bootstrap[("preferred", contrast, "Two-way sector + department")]
+        premium = 100 * math.expm1(float(sector["estimate"]))
+        label = contrast.replace("11-19", "11--19")
+        lines.append(f"{label} & {premium:.1f} & {pvalue(sector['p_wild'])}"
+                     f" & {pvalue(two_way['p_wild'])}" + r" \\")
+    lines.append(r"\bottomrule\end{tabular}")
+    (OUT / "bootstrap_summary.tex").write_text("\n".join(lines) + "\n", encoding="utf-8")
+
+    with scenario_path.open(encoding="utf-8", newline="") as stream:
+        scenarios = {(r["scenario"], r["population"]): r for r in csv.DictReader(stream)
+                     if r["support"] == "unrestricted" and r["metric"] == "weekly"
+                     and r["method"] == "predicted_common_smear"}
+    lines = [r"\begin{tabular}{p{0.44\textwidth}rr}", r"\toprule",
+             r"Assignment & \shortstack{Reassigned workers\\Mean income (\%)}"
+             r" & \shortstack{All workers\\Total income (\%)} \\", r"\midrule"]
+    for scenario, label in (
+        ("formalize_same_size", "Informal to formal, same size"),
+        ("formal_to_101", "Formal to formal 101+"),
+        ("informal_to_101", "Informal to informal 101+"),
+    ):
+        movers = float(scenarios[(scenario, "movers")]["gain_pct"])
+        all_workers = float(scenarios[(scenario, "all")]["gain_pct"])
+        lines.append(f"{label} & {movers:.1f} & {all_workers:.1f}" + r" \\")
+    lines.append(r"\bottomrule\end{tabular}")
+    (OUT / "income_movers.tex").write_text("\n".join(lines) + "\n", encoding="utf-8")
+    return {p.relative_to(ROOT).as_posix(): hashlib.sha256(p.read_bytes()).hexdigest()
+            for p in (bootstrap_path, scenario_path)}
 
 
 def main():
@@ -238,7 +296,10 @@ def main():
             assert stale.resolve().parent == OUT.resolve()
             assert stale.read_text(encoding="utf-8").startswith("% Generated from ")
             stale.unlink()
-    (OUT / "coverage.json").write_text(json.dumps({"tables": entries, "figures": figures}, indent=2) + "\n", encoding="utf-8")
+    summary_sources = export_summary_tables()
+    (OUT / "coverage.json").write_text(json.dumps({
+        "tables": entries, "figures": figures, "summary_sources": summary_sources
+    }, indent=2) + "\n", encoding="utf-8")
     print(f"Exported {len(entries)} paper tables to {len(frames)} backup frames.")
     print(json.dumps(figures, indent=2))
 

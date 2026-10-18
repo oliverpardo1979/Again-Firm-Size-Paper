@@ -1,5 +1,15 @@
 \sectionframe{Appendix. Comparison Specifications and Shape Checks}
 
+\begin{frame}{Survey Design and Inference}
+  \begin{itemize}
+    \item GEIH uses stratified, multistage geographic sampling. The model file lacks the sampling-stratum and primary-unit identifiers.
+    \item Clustering checks assess residual dependence, not the exact survey-design variance.
+    \item Compare sector-department intersections, sectors, departments, and two-way sector and department clustering.
+    \item Bootstrap tests impose the null and use WCR11 with Rademacher weights and 9,999 draws. They are two-sided and pointwise.
+  \end{itemize}
+  \source{Paper Tables~\paperref{tab:preferred-clustering-comparison}--\paperref{tab:preferred-wild-bootstrap}. Cameron and Miller (2015), Roodman et al. (2019). For two-way tests, bootstrap weights are drawn by sector.}
+\end{frame}
+
 \begin{frame}{A Common Size Premium across Formality Groups}
   \centering
   \includegraphics[width=0.98\textwidth,height=0.80\textheight,keepaspectratio]{fig57_en.png}
@@ -21,13 +31,13 @@
 \begin{frame}{Formality Endpoints with Simpler Controls}
   \centering
   \includegraphics[width=0.98\textwidth,height=0.76\textheight,keepaspectratio]{fig76_en.png}
-  \source{Paper Figure~\paperref{fig:adjusted-formality-endpoints}. Sector-year comparison specification, without occupational-position or department controls. Reference is solo work within the same formality-year group.}
+  \source{Paper Figure~\paperref{fig:adjusted-formality-endpoints}. Equation~(\paperref{eq:formality-interaction}) estimated by year with sector effects, without occupational-position or department controls. Reference is solo work within each formality-year group.}
 \end{frame}
 
 \begin{frame}{Large-Firm Dynamics with Simpler Controls}
   \centering
   \includegraphics[width=0.98\textwidth,height=0.80\textheight,keepaspectratio]{fig75_en.png}
-  \source{Paper Figure~\paperref{fig:large-firm-formality-premium-over-time}. Sector-year comparison specification. Each series compares 101+ workers with solo workers of the same formality status.}
+  \source{Paper Figure~\paperref{fig:large-firm-formality-premium-over-time}. Equation~(\paperref{eq:formality-interaction}) estimated by year with sector effects. Each series compares 101+ workers with solo workers of the same formality status.}
 \end{frame}
 
 \begin{frame}{A Quadratic Approximation with Preferred Controls}

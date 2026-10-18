@@ -26,3 +26,11 @@ renumbering the slides. The main-talk table aliases are also label-based.
 
 Generated files are committed so Overleaf needs neither Python nor the raw
 microdata. Figures remain linked to the same English assets used in the paper.
+
+The main-talk bootstrap summary is generated from
+`replication/inference_audit_output/wild_bootstrap.csv`. The income summary uses
+`replication/output/scenario_results.csv` and distinguishes the change in mean
+weekly income among reassigned workers from the change in total weekly income
+across all workers. These source hashes are recorded in `coverage.json`.
+The sector figure is displayed across two slides using the current vector PDF,
+with the shared size axis and bubble legend repeated for the upper panels.
