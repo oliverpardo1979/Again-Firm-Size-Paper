@@ -1,3 +1,64 @@
+\sectionframe{Appendix. Salaried Workers}
+
+\begin{frame}{Does the Result Depend on Including Self-Employment?}
+  \begin{itemize}
+    \item Restrict the sample to private-sector employees, government employees, domestic workers, and day laborers.
+    \item Exclude own-account workers, employers, unpaid workers, and other occupational positions.
+    \item Re-estimate the preferred model with the same controls, weights, and fixed-effect structure.
+    \item The restricted sample contains 2,682,009 observations.
+  \end{itemize}
+  \vspace{0.2cm}
+  \idea{Controlling for occupational position is not equivalent to restricting the sample to employees.}
+  \source{Paper Section~\paperref{subsec:salaried-workers} and Table~\paperref{tab:salaried-robustness}. Occupational codes are recoded so that each employment relationship has the same code across questionnaires.}
+\end{frame}
+
+\begin{frame}{Adjusted Premiums among Salaried Workers}
+  \centering
+  \includegraphics[width=0.98\textwidth,height=0.80\textheight,keepaspectratio]{salaried_formality_premiums_en.png}
+  \source{Paper Figure~\paperref{fig:salaried-formality-premium}, Equation~(\paperref{eq:main}) on salaried workers. Same scale as Figure~\paperref{fig:preferred-formality-premium}. Reference is solo work within formality. Intervals use sector-department clustering.}
+\end{frame}
+
+\begin{frame}{Salaried-Worker Regression Output}
+  \centering\small
+  \begin{tabular}{lcc}
+  \toprule
+  Firm size & Informal & Formal \\
+  \midrule
+  Solo & -0.221*** \sereg{0.016} & -0.063*** \sereg{0.022} \\
+  2--3 & -0.178*** \sereg{0.010} & -0.080*** \sereg{0.013} \\
+  4--5 & -0.081*** \sereg{0.007} & -0.056*** \sereg{0.007} \\
+  6--10 & -0.029*** \sereg{0.005} & -0.021*** \sereg{0.005} \\
+  11--19 & Reference & Reference \\
+  20--30 & 0.007 \sereg{0.007} & 0.009*** \sereg{0.003} \\
+  31--50 & 0.009 \sereg{0.010} & 0.032*** \sereg{0.004} \\
+  51--100 & 0.023* \sereg{0.013} & 0.060*** \sereg{0.006} \\
+  101+ & -0.033** \sereg{0.016} & 0.121*** \sereg{0.012} \\
+  \bottomrule
+  \end{tabular}
+  \par\vspace{0.15cm}
+  \regnote{Log contrasts relative to 11--19 employees of the same formality status. Standard errors use 555 sector-department clusters. * $p<0.10$, ** $p<0.05$, *** $p<0.01$.}
+\end{frame}
+
+\begin{frame}{Similar Endpoints Do Not Mean Identical Profiles}
+  \centering\small
+  \begin{tabular}{lrrrr}
+  \toprule
+   & \multicolumn{2}{c}{All workers} & \multicolumn{2}{c}{Salaried workers} \\
+   & Formal & Informal & Formal & Informal \\
+  \midrule
+  101+/solo premium & 16.5\% & 37.1\% & 20.2\% & 20.6\% \\
+  11--19/solo premium & 4.0\% & 42.4\% & 6.5\% & 24.7\% \\
+  \bottomrule
+  \end{tabular}
+  \par\vspace{0.3cm}
+  \begin{itemize}
+    \item Among employees, equality of the formal and informal 101+/solo contrasts is not rejected ($p=0.897$).
+    \item Equality of all eight size contrasts is rejected jointly ($p<0.001$).
+    \item Both conclusions hold with sector clustering too.
+  \end{itemize}
+  \source{Paper Table~\paperref{tab:salaried-robustness}. The restricted-sample comparison does not identify a causal contribution of self-employment.}
+\end{frame}
+
 \sectionframe{Appendix. Comparison Specifications and Shape Checks}
 
 \begin{frame}{Survey Design and Inference}

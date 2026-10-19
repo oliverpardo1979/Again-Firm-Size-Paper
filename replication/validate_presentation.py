@@ -116,7 +116,7 @@ def validate():
         assert displayed[size] == [informal[size], formal[size]], (size, displayed[size])
 
     salary_source = selected_rows(read(ROOT / "Paper/sections/regression_salaried_robustness_table.tex"))
-    salary_display = selected_rows(frame(results, "Salaried-Worker Regression Output"))
+    salary_display = selected_rows(frame(backup, "Salaried-Worker Regression Output"))
     for size, cells in salary_display.items():
         assert cells == salary_source[size][-2:], (size, cells, salary_source[size])
 
