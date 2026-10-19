@@ -47,6 +47,22 @@ The sector profile is consistent with service contracting but cannot establish
 the share of contractors or distinguish public from private providers in health
 and education. No observations are recoded or removed on this basis.
 
+## Formal Solo Workers by Education
+
+`Rscript --vanilla replication/audit_formal_solo_education.R` reproduces the
+additional breakdown accompanying Table 4 and in the presentation's U-shape
+slide. An optional first argument specifies the paper's input DTA. The script
+uses the 2025 descriptive sample of formal solo workers. It compares those with
+and without higher education, and reports selected activities within the former
+group. Own-account shares are within each education group. The selected activity
+shares use formal solo workers with higher education as the denominator. Income is measured
+per hour in 2025 pesos. Only aggregate outputs are saved in `formal_solo_output/`.
+The checks reproduce the reported education and own-account shares and both
+income means. Activity codes 6910 and 6920 identify legal and accounting
+services in the [DANE CIIU classification](https://www.dane.gov.co/files/sen/nomenclatura/ciiu/CIIU_Rev_4_AC2021.pdf).
+They describe economic activities, not each worker's individual profession.
+No regression or sample definition changes in this exercise.
+
 ## Occupational-Position Harmonization and Salaried Robustness
 
 `harmonize_occupation.R` corrects P6430 at input time without overwriting the
