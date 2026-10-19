@@ -10,6 +10,18 @@
   \source{Paper Tables~\paperref{tab:preferred-clustering-comparison}--\paperref{tab:preferred-wild-bootstrap}. Cameron and Miller (2015), Roodman et al. (2019). For two-way tests, bootstrap weights are drawn by sector.}
 \end{frame}
 
+\begin{frame}{Which Comparisons Survive the Bootstrap Checks?}
+  \small\centering
+  \input{Slides/generated/bootstrap_summary}
+  \par\vspace{0.35cm}
+  \begin{itemize}
+    \item Coefficients and samples stay fixed. Only inference changes.
+    \item There are 559 sector-department intersections, but 17 sectors and 33 departments.
+    \item The formal 101+/solo contrast is sensitive. The advantage over intermediate formal categories is not.
+  \end{itemize}
+  \source{Paper Tables~\paperref{tab:preferred-clustering-comparison}--\paperref{tab:preferred-wild-bootstrap}. Two-sided wild cluster bootstrap, 9,999 draws. Two-way inference allows dependence within sectors and within departments.}
+\end{frame}
+
 \begin{frame}{A Common Size Premium across Formality Groups}
   \centering
   \includegraphics[width=0.98\textwidth,height=0.80\textheight,keepaspectratio]{fig57_en.png}
