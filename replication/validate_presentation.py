@@ -45,6 +45,7 @@ def selected_rows(text):
 def validate():
     manifest = json.loads(read(ROOT / "Slides/generated/coverage.json"))
     main = read(ROOT / "presentacion_javeriana.tex")
+    assert r"\newcommand{\source}[1]{}" in main, "Source footers must stay hidden."
     results = read(ROOT / "Slides/main_results.tex")
     backup = read(ROOT / "Slides/backup_figures.tex")
     all_slides = main + results + backup

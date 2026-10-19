@@ -3,6 +3,9 @@
 Compile `presentacion_javeriana.tex` at the repository root in Overleaf.
 The main talk is in English. Backup slides retain all paper figures and tables.
 The appendix is excluded from the main-talk slide denominator.
+The `\source{...}` annotations remain in the TeX for traceability but are not
+displayed in the PDF. Regression interpretation notes and appendix table notes
+remain visible.
 
 ## Updating the evidence
 
