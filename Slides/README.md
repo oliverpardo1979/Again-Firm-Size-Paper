@@ -13,6 +13,11 @@ remain visible.
 The main talk has no section-divider or separate closing slide. Leave the
 conclusions (slide 20) visible when questions begin.
 
+Shortening means selecting which slides to present, not deleting the others.
+Consider both the main talk and existing backup slides when making the selection.
+Keep unselected slides after the conclusions. The overview, motivation, full
+data slide, roadmap, and contact slide also remain available there.
+
 | Slides | Content | Suggested time |
 | --- | --- | --- |
 | 1--3 | Question, data, and definitions | 2 minutes |

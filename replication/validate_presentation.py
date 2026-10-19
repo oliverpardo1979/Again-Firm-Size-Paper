@@ -55,6 +55,8 @@ def validate():
     assert main_body.count(r"\begin{frame}") == 20, "The main talk must contain 20 slides."
     assert r"\sectionframe" not in main_body, "Section dividers belong in the appendix."
     assert r"\input{Slides/backup_talk_details}" in main.split(r"\appendix", 1)[1]
+    for title in ("Roadmap", "Main Results", "Why Firm Size Matters", "Data", "Discussion"):
+        assert r"\begin{frame}{" + title + "}" in all_slides, title
     for source, digest in manifest["summary_sources"].items():
         assert hashlib.sha256((ROOT / source).read_bytes()).hexdigest() == digest, source
     references = read(ROOT / "Slides/generated/paper_references.tex")
