@@ -118,16 +118,20 @@ def table(caption, label, columns, body, notes, placement="htbp"):
 """
 
 
-body = [r"    Scenario & \shortstack[l]{Initial\\target group} & \shortstack[r]{Target group\\(\%)} & \shortstack[r]{All workers\\(\%)} \\", r"    \midrule"]
+body = [r"    Scenario & \shortstack[l]{Initial\\group} & \shortstack[r]{Group total\\(\%)} & \shortstack[r]{Reassigned\\mean (\%)} & \shortstack[r]{All-worker\\total (\%)} \\", r"    \midrule"]
 for scenario, title, target in SCENARIOS[:4]:
-    body.append(f"    {title} & {target} & {gain(scenario, population='target_group'):.1f} & {gain(scenario):.1f} " + r"\\[0.5em]")
+    if scenario == "combined_formal_101":
+        body.append(r"    \midrule")
+    body.append(f"    {title} & {target} & {gain(scenario, population='target_group'):.1f} "
+                f"& {gain(scenario, population='movers'):.1f} & {gain(scenario):.1f} " + r"\\[0.5em]")
 main = table(
     "Illustrative changes in predicted labor income, 2025",
-    "tab:income-counterfactuals-2025", r">{\raggedright\arraybackslash}p{0.42\textwidth}lrr", "\n".join(body),
-    r"Percentage changes in total predicted weekly labor income from Equation~(\ref{eq:income-counterfactual}), "
+    "tab:income-counterfactuals-2025", r">{\raggedright\arraybackslash}p{0.33\textwidth}lrrr", "\n".join(body),
+    r"Percentage changes in predicted weekly labor income from Equation~(\ref{eq:income-counterfactual}), "
     r"using the pooled coefficients from Equation~(\ref{eq:main}). "
-    r"The target-group denominator includes all workers initially in that group, including those already at the "
-    r"destination. The all-worker denominator includes the entire 2025 sample.")
+    r"Group totals include everyone initially in the indicated group. Reassigned means use only workers whose "
+    r"size or formality changes. The all-worker total includes the entire 2025 sample. In the last row, both "
+    r"formal and informal workers are assigned to formal 101+ employment. Workers already there retain their baseline income.")
 (SECTIONS / "income_counterfactuals_2025_table.tex").write_text(main, encoding="utf-8")
 
 body = [r"    Scenario & Predicted baseline & Observed baseline \\",

@@ -94,6 +94,7 @@ def validate():
         ("formalize_same_size", "Informal to formal, same size"),
         ("formal_to_101", "Formal to formal 101+"),
         ("informal_to_101", "Informal to informal 101+"),
+        ("combined_formal_101", "All workers to formal 101+"),
     ):
         gains = [float(scenarios[(scenario, p)]["gain_pct"]) for p in ("movers", "all")]
         expected = f"{label} & {gains[0]:.1f} & {gains[1]:.1f}" + r" \\"

@@ -212,7 +212,10 @@ def export_summary_tables():
         ("formalize_same_size", "Informal to formal, same size"),
         ("formal_to_101", "Formal to formal 101+"),
         ("informal_to_101", "Informal to informal 101+"),
+        ("combined_formal_101", "All workers to formal 101+"),
     ):
+        if scenario == "combined_formal_101":
+            lines.append(r"\midrule")
         movers = float(scenarios[(scenario, "movers")]["gain_pct"])
         all_workers = float(scenarios[(scenario, "all")]["gain_pct"])
         lines.append(f"{label} & {movers:.1f} & {all_workers:.1f}" + r" \\")
