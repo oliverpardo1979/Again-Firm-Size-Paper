@@ -48,7 +48,13 @@ def validate():
     assert r"\newcommand{\source}[1]{}" in main, "Source footers must stay hidden."
     results = read(ROOT / "Slides/main_results.tex")
     backup = read(ROOT / "Slides/backup_figures.tex")
-    all_slides = main + results + backup
+    details = read(ROOT / "Slides/backup_talk_details.tex")
+    all_slides = main + results + details + backup
+    main_body = main.split(r"\begin{document}", 1)[1].split(r"\appendix", 1)[0]
+    main_body = main_body.replace(r"\input{Slides/main_results}", results)
+    assert main_body.count(r"\begin{frame}") == 20, "The main talk must contain 20 slides."
+    assert r"\sectionframe" not in main_body, "Section dividers belong in the appendix."
+    assert r"\input{Slides/backup_talk_details}" in main.split(r"\appendix", 1)[1]
     for source, digest in manifest["summary_sources"].items():
         assert hashlib.sha256((ROOT / source).read_bytes()).hexdigest() == digest, source
     references = read(ROOT / "Slides/generated/paper_references.tex")
@@ -101,7 +107,7 @@ def validate():
         expected = f"{label} & {gains[0]:.1f} & {gains[1]:.1f}" + r" \\"
         assert expected in income_table, scenario
     assert r"\rho_{o(i)}" not in all_slides
-    assert r"\sum_{\tau\in\mathcal T}\mathbf{1}\{t=\tau\}" in results
+    assert r"\sum_{\tau\in\mathcal T}\mathbf{1}\{t=\tau\}" in details
 
     preferred = read(ROOT / "Paper/sections/regression_local_geography_formality_robustness_table.tex")
     informal, formal = table_body(preferred).split(r"\textit{Formal workers}")
@@ -111,7 +117,7 @@ def validate():
             result[match[1]] = numeric(match[2].split("&")[-1])
         return result
     informal, formal = panel_rows(informal), panel_rows(formal)
-    displayed = selected_rows(frame(results, "Preferred Regression Output"))
+    displayed = selected_rows(frame(details, "Preferred Regression Output"))
     for size in informal:
         assert displayed[size] == [informal[size], formal[size]], (size, displayed[size])
 
@@ -130,10 +136,11 @@ def validate():
     ):
         assert selected_rows(read(ROOT / f"Slides/generated/{alias}.tex")) == selected_rows(
             read(ROOT / f"Paper/sections/{source}.tex")), alias
-    titles = ["Start with the Simplest Specification", "Adding Controls Reduces the 101+/Solo Premium",
-              "Then Add Geography and Occupational Position", "The Preferred Specification"]
+    titles = ["Adding Controls Reduces the 101+/Solo Premium", "The Preferred Specification"]
     positions = [results.index(r"\begin{frame}{" + title + "}") for title in titles]
     assert positions == sorted(positions)
+    assert details.index("Start with the Simplest Specification") < details.index(
+        "Then Add Geography and Occupational Position") < details.index("Preferred Regression Output")
     paper = expand(ROOT / "main.tex")
     presentation = expand(ROOT / "presentacion_javeriana.tex")
     assert "bootstrap" not in paper.lower(), "Bootstrap results must stay omitted from the paper."
@@ -156,6 +163,7 @@ def validate():
         defects = re.findall(r".*(?:Overfull|undefined references|Undefined control sequence|Missing character).*", log)
         assert not defects, "\n".join(defects)
     print(f"PASS: {len(manifest['figures'])} figures and {len(manifest['tables'])} paper tables covered.")
+    print("PASS: 20 main slides, sequential controls before the preferred model, and detailed slides in the appendix.")
     print("PASS: source hashes, numeric coverage, preferred/salaried regression rows, and worker characteristics.")
     print("PASS: bootstrap summaries, reassigned-worker denominators, and dynamic notation.")
 
