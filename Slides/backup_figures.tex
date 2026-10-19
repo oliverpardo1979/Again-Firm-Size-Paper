@@ -66,22 +66,12 @@
     \item GEIH uses stratified, multistage geographic sampling. The model file lacks the sampling-stratum and primary-unit identifiers.
     \item Clustering checks assess residual dependence, not the exact survey-design variance.
     \item Compare sector-department intersections, sectors, departments, and two-way sector and department clustering.
-    \item Bootstrap tests impose the null and use WCR11 with Rademacher weights and 9,999 draws. They are two-sided and pointwise.
   \end{itemize}
-  \source{Paper Tables~\paperref{tab:preferred-clustering-comparison}--\paperref{tab:preferred-wild-bootstrap}. Cameron and Miller (2015), Roodman et al. (2019). For two-way tests, bootstrap weights are drawn by sector.}
+  \source{Paper Table~\paperref{tab:preferred-clustering-comparison}. Cameron and Miller (2015).}
 \end{frame}
 
-\begin{frame}{Which Comparisons Survive the Bootstrap Checks?}
-  \small\centering
-  \input{Slides/generated/bootstrap_summary}
-  \par\vspace{0.35cm}
-  \begin{itemize}
-    \item Coefficients and samples stay fixed. Only inference changes.
-    \item There are 559 sector-department intersections, but 17 sectors and 33 departments.
-    \item The formal 101+/solo contrast is sensitive. The advantage over intermediate formal categories is not.
-  \end{itemize}
-  \source{Paper Tables~\paperref{tab:preferred-clustering-comparison}--\paperref{tab:preferred-wild-bootstrap}. Two-sided wild cluster bootstrap, 9,999 draws. Two-way inference allows dependence within sectors and within departments.}
-\end{frame}
+% Temporarily omitted from the presentation.
+% \input{Slides/backup_bootstrap}
 
 \begin{frame}{A Common Size Premium across Formality Groups}
   \centering

@@ -135,6 +135,9 @@ def validate():
     positions = [results.index(r"\begin{frame}{" + title + "}") for title in titles]
     assert positions == sorted(positions)
     paper = expand(ROOT / "main.tex")
+    presentation = expand(ROOT / "presentacion_javeriana.tex")
+    assert "bootstrap" not in paper.lower(), "Bootstrap results must stay omitted from the paper."
+    assert "bootstrap" not in presentation.lower(), "Bootstrap results must stay omitted from the slides."
     for kind, key in (("table", "tables"), ("figure", "figures")):
         blocks = re.findall(r"\\begin\{" + kind + r"\}.*?\\end\{" + kind + r"\}", paper, re.S)
         expected = [re.search(r"\\label\{([^}]+)\}", block)[1] for block in blocks]

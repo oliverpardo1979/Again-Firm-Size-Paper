@@ -302,6 +302,11 @@ pending item is resolved by this reconciliation.
 
 ## Clustering and Wild Bootstrap Audit
 
+Bootstrap results are temporarily omitted from the paper and presentation PDFs.
+The table source, summary slide, code, and aggregate outputs remain in the
+repository. The conventional clustering comparison remains in both appendices.
+The description below documents the full retained audit.
+
 The appendix comparison is generated from `inference_audit_output/`. It holds
 the preferred model, joint endpoint model, and interacted elasticity model
 fixed while comparing sector-department intersections, sector, department,

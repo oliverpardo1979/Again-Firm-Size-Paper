@@ -1,12 +1,10 @@
-Tables~\ref{tab:preferred-clustering-comparison} and
-\ref{tab:preferred-wild-bootstrap} extend the inference comparison while
-holding coefficients and samples fixed. The first reports conventional tests
+Table~\ref{tab:preferred-clustering-comparison} extends the inference
+comparison while holding coefficients and samples fixed. It reports tests
 with sector-department intersections, sector, department, and two-way sector
 and department clustering. The preferred and elasticity models contain
 5,268,375 observations, 559 intersections, 17 sectors, and 33 departments.
 The joint endpoint model contains 489,796 observations and 540 intersections,
-with the same numbers of sectors and departments. The second table reports
-wild cluster bootstrap tests.
+with the same numbers of sectors and departments.
 
 Sector-department clustering allows dependence across workers and years
 within each intersection. Sector clustering permits dependence across
@@ -23,36 +21,23 @@ For joint hypotheses, we use Wald \(F\) tests. Their numerator degrees of
 freedom equal the number of restrictions, and their denominator degrees of
 freedom equal \(G-1\).
 
-Because sector clustering leaves only 17 clusters, we also report
-null-imposed wild cluster bootstrap tests following \citet{RoodmanEtAl2019}.
-We use the WCR11 procedure with Rademacher weights and 9,999 draws for sector,
-department, and two-way inference. In the two-way version, bootstrap weights
-are drawn by sector and test statistics use the two-way covariance estimator.
-These are two-sided, pointwise tests, without adjustment for multiple
-comparisons. Coefficients, samples, and survey weights are held fixed across
-inference methods. The bootstrap \(p\)-values supplement rather than replace
-the baseline confidence intervals.
-
-The formal 101+/solo premium is not significant with sector bootstrap
-inference (\(p=0.184\)) or two-way bootstrap inference (\(p=0.188\)). By
+The formal 101+/solo premium is not significant at 5 percent with sector
+clustering (\(p=0.113\)) or two-way clustering (\(p=0.090\)). By
 contrast, every formal 101+ comparison with the categories from 2--3 through
 51--100 remains significant at 5 percent. All eight informal size-to-solo
 comparisons and all nine formal-informal wage gaps also remain significant
-under each bootstrap convention. The tables display selected contrasts,
-and the replication files report all 45 contrasts. The two-way bootstrap
-\(p\)-value for the difference between the formal and informal 101+/solo
-log-wage gaps is 0.092, compared with 0.0015 for the difference between their
-elasticities. The 101+/solo contrast and the elasticity therefore provide
-different evidence about how the size-pay relationship differs by formality.
+under each clustering procedure. The table displays selected contrasts,
+and the replication files report all 45 contrasts. The difference between
+the formal and informal 101+/solo log-wage gaps is significant with two-way
+clustering (\(p=0.0495\)), but not at 5 percent with sector clustering
+(\(p=0.0603\)). Their elasticity difference remains significant under
+every clustering procedure (\(p<0.001\)).
 
-The informal 2008--2025 increase has bootstrap \(p\)-values of 0.111 with
-sector clustering, 0.266 with department clustering, and 0.273 with two-way
-clustering. It is not significant under any of these bootstrap conventions.
-The formal change is also insignificant. For that last comparison only,
-two-way studentization produces 209 invalid bootstrap statistics, which the
-software discards. Its reported \(p\)-value uses the remaining 9,790 draws.
-The sector and department bootstrap tests of the formal change retain all
-9,999 draws and give \(p=0.886\) and \(p=0.928\).
+The informal 2008--2025 increase has \(p\)-values of 0.090 with sector
+clustering, 0.124 with department clustering, and 0.199 with two-way
+clustering. It is not significant at 5 percent under any of these
+alternatives, although it is significant with sector-department clustering
+(\(p=0.011\)). The formal change is insignificant under every procedure.
 
 These checks address alternative assumptions about residual dependence,
 not the exact GEIH sampling variance. GEIH uses stratified, multistage
@@ -66,5 +51,6 @@ Department and two-way clustering allow dependence across such sectors,
 but neither reproduces the survey's stratification and selection stages.
 
 \input{Paper/sections/regression_inference_clustering_table}
-\input{Paper/sections/regression_inference_bootstrap_table}
+% Temporarily omitted from the manuscript. Source and replication outputs are retained.
+% \input{Paper/sections/regression_inference_bootstrap_table}
 \FloatBarrier
