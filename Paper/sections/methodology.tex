@@ -140,18 +140,29 @@ sensitivity to the size assigned to 101+.
 \subsection{Income Counterfactuals}
 \label{subsec:income-counterfactual-method}
 
-We construct illustrative income counterfactuals for the 22.6 million workers
-represented by the 2025 sample using the pooled preferred coefficients from
-Equation~(\ref{eq:main}). All estimated coefficients and fixed effects remain
-unchanged, as do worker characteristics, occupational position, sector,
-department, weekly hours, and survey weights.
+We ask how much labor income would change if workers moved into formal
+employment, into larger firms, or both, under an unchanged wage structure.
+The exercise combines the estimated wage differences with the distribution
+of workers and their initial earnings to quantify changes for reassigned
+workers and for the workforce as a whole.
+
+We consider four separate scenarios for the 22.6 million workers represented
+by the 2025 sample. First, informal workers become formal without changing
+firm size. Second, formal workers move to firms with 101 or more workers
+while remaining formal. Third, informal workers move to that size category
+while remaining informal. Fourth, all workers are assigned to formal
+employment in firms with 101 or more workers.
+
+We implement these illustrative scenarios using the pooled preferred
+coefficients from Equation~(\ref{eq:main}). All estimated coefficients and
+fixed effects remain unchanged, as do worker characteristics, occupational
+position, sector, department, weekly hours, and survey weights.
 
 Write \(F_i^c\) and \(D_{ig}^c\) for worker \(i\)'s assignments in scenario
 \(c\). Formalization at the same firm size sets \(F_i^c=1\) for informal
 workers, with \(D_{ig}^c=D_{ig}\). Reallocation to 101+ employment sets
 \(D_{i,101+}^c=1\) and all other size indicators to zero, with
-\(F_i^c=F_i\). We apply this size reassignment separately to formal and
-informal workers. The joint scenario combines \(F_i^c=1\) with the same
+\(F_i^c=F_i\). The joint scenario combines \(F_i^c=1\) with the same
 101+ assignment for all workers. Workers outside the target group or
 already at the destination retain their observed assignments.
 
