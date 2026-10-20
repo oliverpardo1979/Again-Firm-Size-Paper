@@ -184,6 +184,7 @@ def export_summary_tables():
     """Use saved estimates for the main-talk bootstrap and mover comparisons."""
     bootstrap_path = ROOT / "replication/inference_audit_output/wild_bootstrap.csv"
     scenario_path = ROOT / "replication/output/scenario_results.csv"
+    sample_path = ROOT / "replication/output/sample_audit.csv"
     with bootstrap_path.open(encoding="utf-8", newline="") as stream:
         bootstrap = {(r["model"], r["contrast"], r["clustering"]): r
                      for r in csv.DictReader(stream)}
@@ -205,9 +206,15 @@ def export_summary_tables():
         scenarios = {(r["scenario"], r["population"]): r for r in csv.DictReader(stream)
                      if r["support"] == "unrestricted" and r["metric"] == "weekly"
                      and r["method"] == "predicted_common_smear"}
-    lines = [r"\begin{tabular}{p{0.44\textwidth}rr}", r"\toprule",
-             r"Assignment & \shortstack{Reassigned workers\\Mean income (\%)}"
-             r" & \shortstack{All workers\\Total income (\%)} \\", r"\midrule"]
+    with sample_path.open(encoding="utf-8", newline="") as stream:
+        sample = {r["item"]: float(r["value"]) for r in csv.DictReader(stream)}
+    workers_millions = sample["target_weight_sum"] / 1e6
+    lines = [rf"{{\small Workers represented in 2025: {workers_millions:.1f} million.\par}}",
+             r"\vspace{0.2cm}",
+             r"\begin{tabular}{p{0.36\textwidth}rrr}", r"\toprule",
+             r"Assignment & \shortstack{Workers\\reassigned\\(\%)}"
+             r" & \shortstack{Reassigned workers\\Mean income\\gain (\%)}"
+             r" & \shortstack{All workers\\Total income\\gain (\%)} \\", r"\midrule"]
     for scenario, label in (
         ("formalize_same_size", "Informal to formal, same size"),
         ("formal_to_101", "Formal to formal 101+"),
@@ -218,11 +225,12 @@ def export_summary_tables():
             lines.append(r"\midrule")
         movers = float(scenarios[(scenario, "movers")]["gain_pct"])
         all_workers = float(scenarios[(scenario, "all")]["gain_pct"])
-        lines.append(f"{label} & {movers:.1f} & {all_workers:.1f}" + r" \\")
+        moved_share = float(scenarios[(scenario, "all")]["moved_worker_share_pct"])
+        lines.append(f"{label} & {moved_share:.1f} & {movers:.1f} & {all_workers:.1f}" + r" \\")
     lines.append(r"\bottomrule\end{tabular}")
     (OUT / "income_movers.tex").write_text("\n".join(lines) + "\n", encoding="utf-8")
     return {p.relative_to(ROOT).as_posix(): hashlib.sha256(p.read_bytes()).hexdigest()
-            for p in (bootstrap_path, scenario_path)}
+            for p in (bootstrap_path, scenario_path, sample_path)}
 
 
 def main():

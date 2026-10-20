@@ -101,6 +101,20 @@ def validate():
     income_table = read(ROOT / "Slides/generated/income_movers.tex")
     assert r"Reassigned workers\\Mean income" in income_table
     assert r"All workers\\Total income" in income_table
+    assert r"Workers\\reassigned\\(\%)" in income_table
+    with (ROOT / "replication/output/sample_audit.csv").open(newline="") as stream:
+        sample = {r["item"]: float(r["value"]) for r in csv.DictReader(stream)}
+    with (ROOT / "replication/output/baseline_groups_2025.csv").open(newline="") as stream:
+        groups = list(csv.DictReader(stream))
+    total_workers = sum(float(r["sum_w"]) for r in groups)
+    assert math.isclose(total_workers, sample["target_weight_sum"], rel_tol=1e-12)
+    assert f"Workers represented in 2025: {total_workers / 1e6:.1f} million." in income_table
+    reassigned = {
+        "formalize_same_size": lambda r: r["formal"] == "0",
+        "formal_to_101": lambda r: r["formal"] == "1" and r["tamano_empresa"] != "101+",
+        "informal_to_101": lambda r: r["formal"] == "0" and r["tamano_empresa"] != "101+",
+        "combined_formal_101": lambda r: not (r["formal"] == "1" and r["tamano_empresa"] == "101+"),
+    }
     with (ROOT / "replication/output/scenario_results.csv").open(newline="") as stream:
         scenarios = {(r["scenario"], r["population"]): r for r in csv.DictReader(stream)
                      if r["support"] == "unrestricted" and r["metric"] == "weekly"
@@ -112,7 +126,10 @@ def validate():
         ("combined_formal_101", "All workers to formal 101+"),
     ):
         gains = [float(scenarios[(scenario, p)]["gain_pct"]) for p in ("movers", "all")]
-        expected = f"{label} & {gains[0]:.1f} & {gains[1]:.1f}" + r" \\"
+        moved_share = float(scenarios[(scenario, "all")]["moved_worker_share_pct"])
+        expanded_movers = sum(float(r["sum_w"]) for r in groups if reassigned[scenario](r))
+        assert math.isclose(moved_share, 100 * expanded_movers / total_workers, rel_tol=1e-12)
+        expected = f"{label} & {moved_share:.1f} & {gains[0]:.1f} & {gains[1]:.1f}" + r" \\"
         assert expected in income_table, scenario
     assert r"\rho_{o(i)}" not in all_slides
     assert r"\sum_{\tau\in\mathcal T}\mathbf{1}\{t=\tau\}" in details

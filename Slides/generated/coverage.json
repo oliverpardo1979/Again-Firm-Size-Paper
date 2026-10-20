@@ -325,6 +325,7 @@
   ],
   "summary_sources": {
     "replication/inference_audit_output/wild_bootstrap.csv": "0d62f481ec24fe76ecd47a22a90e905001bd88e485ccc026dd725be437857087",
-    "replication/output/scenario_results.csv": "2c4fef2051fd378121bbfad3486354379875540eaf89995897d1cd9dceae3636"
+    "replication/output/scenario_results.csv": "2c4fef2051fd378121bbfad3486354379875540eaf89995897d1cd9dceae3636",
+    "replication/output/sample_audit.csv": "b79fea03973ce30f554bd5ee896b4caf137865a3fff744128d3199ada4508545"
   }
 }
