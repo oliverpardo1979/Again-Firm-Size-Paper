@@ -28,6 +28,9 @@ key = lambda r: tuple(r[k] for k in ("scenario", "support", "method", "metric", 
 indexed = {key(r): r for r in rows}
 assert len(indexed) == len(rows), "Duplicate scenario outputs"
 groups = read("baseline_groups_2025.csv")
+sample = {r["item"]: float(r["value"]) for r in read("sample_audit.csv")}
+total_workers = sum(float(g["sum_w"]) for g in groups)
+assert math.isclose(total_workers, sample["target_weight_sum"], rel_tol=1e-12)
 profiles = {(r["size"], int(r["formal"])): float(r["log_profile"])
             for r in read("estimated_size_formality_profiles.csv")}
 diagnostics = {r["scenario"]: r for r in read("support_diagnostics.csv")}
@@ -63,7 +66,16 @@ def destination(size, formal, scenario):
 
 # Independently reconstruct totals from 18 origin groups, not from the R transition helper.
 validation = []
+reassigned_workers = {}
 for scenario, _, target in SCENARIOS:
+    reassigned_workers[scenario] = sum(
+        float(g["sum_w"]) for g in groups
+        if destination(g["tamano_empresa"], int(g["formal"]), scenario)
+        != (g["tamano_empresa"], int(g["formal"]))
+    )
+    moved_share = 100 * reassigned_workers[scenario] / total_workers
+    assert math.isclose(moved_share, float(result(scenario)["moved_worker_share_pct"]), rel_tol=1e-12)
+    assert math.isclose(moved_share, float(diagnostics[scenario]["intended_move_share_pct"]), rel_tol=1e-12)
     for method, field in (("predicted_common_smear", "weekly_predicted"),
                           ("observed_residual_preserved", "weekly_observed")):
         for population in ("all", "target_group", "movers"):
@@ -118,17 +130,19 @@ def table(caption, label, columns, body, notes, placement="htbp"):
 """
 
 
-body = [r"    Scenario & \shortstack[l]{Initial\\group} & \shortstack[r]{Group total\\(\%)} & \shortstack[r]{Reassigned\\mean (\%)} & \shortstack[r]{All-worker\\total (\%)} \\", r"    \midrule"]
+body = [r"    Scenario & \shortstack[l]{Initial\\group} & \shortstack[r]{Workers\\reassigned\\(millions)} & \shortstack[r]{Group total\\(\%)} & \shortstack[r]{Reassigned\\mean (\%)} & \shortstack[r]{All-worker\\total (\%)} \\", r"    \midrule"]
 for scenario, title, target in SCENARIOS[:4]:
     if scenario == "combined_formal_101":
         body.append(r"    \midrule")
-    body.append(f"    {title} & {target} & {gain(scenario, population='target_group'):.1f} "
+    body.append(f"    {title} & {target} & {reassigned_workers[scenario] / 1e6:.2f} "
+                f"& {gain(scenario, population='target_group'):.1f} "
                 f"& {gain(scenario, population='movers'):.1f} & {gain(scenario):.1f} " + r"\\[0.5em]")
 main = table(
     "Illustrative changes in predicted labor income, 2025",
-    "tab:income-counterfactuals-2025", r">{\raggedright\arraybackslash}p{0.33\textwidth}lrrr", "\n".join(body),
-    r"Percentage changes in predicted weekly labor income from Equation~(\ref{eq:income-counterfactual}), "
+    "tab:income-counterfactuals-2025", r"@{}>{\raggedright\arraybackslash}p{0.27\textwidth}lrrrr@{}", "\n".join(body),
+    r"Income columns report percentage changes in predicted weekly labor income from Equation~(\ref{eq:income-counterfactual}), "
     r"using the pooled coefficients from Equation~(\ref{eq:main}). "
+    f"The 2025 sample represents {total_workers / 1e6:.1f} million workers. "
     r"Group totals include everyone initially in the indicated group. Reassigned means use only workers whose "
     r"size or formality changes. The all-worker total includes the entire 2025 sample. In the last row, both "
     r"formal and informal workers are assigned to formal 101+ employment. Workers already there retain their baseline income.")
@@ -185,4 +199,7 @@ support = table(
     r"selected-destination scenario, the 2025 $n\geq30$ column contains only formal moves.", "p")
 (SECTIONS / "income_counterfactual_support_table.tex").write_text(support, encoding="utf-8")
 print(f"Validated {len(validation)} aggregate changes and generated three tables.")
+print(f"Workers represented in 2025: {total_workers:,.0f}")
+for scenario, title, _ in SCENARIOS[:4]:
+    print(f"{title}: {reassigned_workers[scenario]:,.0f} workers reassigned")
 print(f"Maximum independent error: {max(abs(r['error_pp']) for r in validation):.3g} pp")
