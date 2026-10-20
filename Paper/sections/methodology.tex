@@ -169,17 +169,13 @@ already at the destination retain their observed assignments.
 Let \(\widehat{\ell}_i\) be fitted log hourly income from
 Equation~(\ref{eq:main}), including the fixed effects, for worker \(i\)'s
 observed size and formality status. Replacing \(F_i\) and \(D_{ig}\) with
-\(F_i^c\) and \(D_{ig}^c\) gives the counterfactual fitted value
-\(\widehat{\ell}_i^c\). The change in predicted log hourly income is
-\begin{equation}\label{eq:income-log-change}
+\(F_i^c\) and \(D_{ig}^c\) gives counterfactual fitted log hourly income
+\begin{equation}\label{eq:income-counterfactual-prediction}
   \begin{aligned}
-    \widehat\Delta_i^c
-    &= \widehat{\ell}_i^c-\widehat{\ell}_i \\
-    &= \widehat\phi(F_i^c-F_i)
-    + \sum_{g\neq g_0}\left[
-      \widehat\beta_g(D_{ig}^c-D_{ig})
-      + \widehat\theta_g(F_i^cD_{ig}^c-F_iD_{ig})
-    \right].
+    \widehat{\ell}_i^c ={}& \widehat\alpha + \widehat\phi F_i^c
+    + \sum_{g\neq g_0}(\widehat\beta_g+\widehat\theta_g F_i^c)D_{ig}^c \\
+    &+ X_i'\widehat\gamma + \widehat\rho_o
+    + \widehat\lambda_{s\times d\times t}.
   \end{aligned}
 \end{equation}
 
@@ -191,7 +187,7 @@ cancels from the income ratio.}
 \begin{equation}\label{eq:income-counterfactual}
   G_c=100\left[
   \frac{\sum_{i\in\mathcal I_{2025}}a_i h_i
-        \exp(\widehat{\ell}_i+\widehat\Delta_i^c)}
+        \exp(\widehat{\ell}_i^c)}
        {\sum_{i\in\mathcal I_{2025}}a_i h_i
         \exp(\widehat{\ell}_i)}-1\right].
 \end{equation}
