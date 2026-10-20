@@ -101,7 +101,7 @@ def validate():
     income_table = read(ROOT / "Slides/generated/income_movers.tex")
     assert r"Reassigned workers\\Mean income" in income_table
     assert r"All workers\\Total income" in income_table
-    assert r"Workers\\reassigned\\(\%)" in income_table
+    assert r"Workers\\reassigned\\(millions)" in income_table
     with (ROOT / "replication/output/sample_audit.csv").open(newline="") as stream:
         sample = {r["item"]: float(r["value"]) for r in csv.DictReader(stream)}
     with (ROOT / "replication/output/baseline_groups_2025.csv").open(newline="") as stream:
@@ -129,7 +129,7 @@ def validate():
         moved_share = float(scenarios[(scenario, "all")]["moved_worker_share_pct"])
         expanded_movers = sum(float(r["sum_w"]) for r in groups if reassigned[scenario](r))
         assert math.isclose(moved_share, 100 * expanded_movers / total_workers, rel_tol=1e-12)
-        expected = f"{label} & {moved_share:.1f} & {gains[0]:.1f} & {gains[1]:.1f}" + r" \\"
+        expected = f"{label} & {expanded_movers / 1e6:.2f} & {gains[0]:.1f} & {gains[1]:.1f}" + r" \\"
         assert expected in income_table, scenario
     assert r"\rho_{o(i)}" not in all_slides
     assert r"\sum_{\tau\in\mathcal T}\mathbf{1}\{t=\tau\}" in details

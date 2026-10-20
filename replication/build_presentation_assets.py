@@ -212,7 +212,7 @@ def export_summary_tables():
     lines = [rf"{{\small Workers represented in 2025: {workers_millions:.1f} million.\par}}",
              r"\vspace{0.2cm}",
              r"\begin{tabular}{p{0.36\textwidth}rrr}", r"\toprule",
-             r"Assignment & \shortstack{Workers\\reassigned\\(\%)}"
+             r"Assignment & \shortstack{Workers\\reassigned\\(millions)}"
              r" & \shortstack{Reassigned workers\\Mean income\\gain (\%)}"
              r" & \shortstack{All workers\\Total income\\gain (\%)} \\", r"\midrule"]
     for scenario, label in (
@@ -226,7 +226,8 @@ def export_summary_tables():
         movers = float(scenarios[(scenario, "movers")]["gain_pct"])
         all_workers = float(scenarios[(scenario, "all")]["gain_pct"])
         moved_share = float(scenarios[(scenario, "all")]["moved_worker_share_pct"])
-        lines.append(f"{label} & {moved_share:.1f} & {movers:.1f} & {all_workers:.1f}" + r" \\")
+        moved_millions = workers_millions * moved_share / 100
+        lines.append(f"{label} & {moved_millions:.2f} & {movers:.1f} & {all_workers:.1f}" + r" \\")
     lines.append(r"\bottomrule\end{tabular}")
     (OUT / "income_movers.tex").write_text("\n".join(lines) + "\n", encoding="utf-8")
     return {p.relative_to(ROOT).as_posix(): hashlib.sha256(p.read_bytes()).hexdigest()
