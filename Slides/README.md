@@ -1,7 +1,7 @@
 # Academic presentation
 
 Compile `presentacion_javeriana.tex` at the repository root in Overleaf.
-The main talk is in English and has 20 slides for a 20-minute presentation,
+The main talk is in English and has 18 slides for a 20-minute presentation,
 followed by 10 minutes for questions. Backup slides retain all paper figures and tables.
 The appendix is excluded from the main-talk slide denominator.
 The `\source{...}` annotations remain in the TeX for traceability but are not
@@ -11,7 +11,7 @@ remain visible.
 ## Main talk and questions
 
 The main talk has no section-divider or separate closing slide. Leave the
-conclusions (slide 20) visible when questions begin.
+conclusions (slide 18) visible when questions begin.
 
 Shortening means selecting which slides to present, not deleting the others.
 Consider both the main talk and existing backup slides when making the selection.
@@ -22,15 +22,17 @@ data slide, roadmap, and contact slide also remain available there.
 | --- | --- | --- |
 | 1--3 | Question, data, and definitions | 2 minutes |
 | 4--7 | Employment, hourly income, formality, and worker composition | 4 minutes |
-| 8--12 | Sequential controls, preferred model, and conditional comparisons | 6 minutes |
-| 13--16 | Minimum wages, dynamics, and elasticity benchmarks | 4 minutes |
-| 17--18 | Income scenarios and results | 2 minutes |
-| 19--20 | Interpretation, policy, and conclusions | 2 minutes |
+| 8--12 | Sequential controls, preferred model, minimum wages, and conditional comparisons | 6 minutes |
+| 13--14 | Dynamics | 4 minutes |
+| 15--16 | Income scenarios and results | 2 minutes |
+| 17--18 | Interpretation, policy, and conclusions | 2 minutes |
 
 `backup_talk_details.tex` retains the additional descriptive figures, full
 variable definitions, detailed regression output and equations, and scenario
 support checks. `backup_figures.tex` retains the salaried-worker exercise and
 other comparison specifications. All paper tables follow in the final appendix.
+The international elasticity comparison follows the approximate-elasticity
+specification in `backup_talk_details.tex`.
 
 ## Updating the evidence
 

@@ -52,7 +52,13 @@ def validate():
     all_slides = main + results + details + backup
     main_body = main.split(r"\begin{document}", 1)[1].split(r"\appendix", 1)[0]
     main_body = main_body.replace(r"\input{Slides/main_results}", results)
-    assert main_body.count(r"\begin{frame}") == 20, "The main talk must contain 20 slides."
+    main_body = re.sub(r"(?m)^\s*%.*$", "", main_body)
+    main_slide_count = main_body.count(r"\begin{frame}")
+    assert 0 < main_slide_count <= 20, "The main talk must contain at most 20 slides."
+    elasticity_title = r"\begin{frame}{Benchmarking the Elasticities}"
+    assert elasticity_title not in main_body, "Elasticity benchmarks belong in the appendix."
+    assert details.count(elasticity_title) == 1
+    assert details.index("Why Estimate an Approximate Elasticity?") < details.index(elasticity_title)
     assert r"\sectionframe" not in main_body, "Section dividers belong in the appendix."
     assert r"\input{Slides/backup_talk_details}" in main.split(r"\appendix", 1)[1]
     for title in ("Roadmap", "Main Results", "Why Firm Size Matters", "Data", "Discussion"):
@@ -165,7 +171,7 @@ def validate():
         defects = re.findall(r".*(?:Overfull|undefined references|Undefined control sequence|Missing character).*", log)
         assert not defects, "\n".join(defects)
     print(f"PASS: {len(manifest['figures'])} figures and {len(manifest['tables'])} paper tables covered.")
-    print("PASS: 20 main slides, sequential controls before the preferred model, and detailed slides in the appendix.")
+    print(f"PASS: {main_slide_count} main slides, sequential controls before the preferred model, and elasticity benchmarks in the appendix.")
     print("PASS: source hashes, numeric coverage, preferred/salaried regression rows, and worker characteristics.")
     print("PASS: bootstrap summaries, reassigned-worker denominators, and dynamic notation.")
 
