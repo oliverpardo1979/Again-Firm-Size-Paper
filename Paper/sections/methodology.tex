@@ -183,20 +183,17 @@ observed size and formality status. Replacing \(F_i\) and \(D_{ig}\) with
   \end{aligned}
 \end{equation}
 
-We construct baseline hourly income as
-\(\widehat w_i=S\exp(\widehat{\ell}_i)\), where \(S\) is the survey-weighted
-mean of exponentiated residuals in 2025. We assume the same retransformation
-factor across workers and destinations, so counterfactual hourly income is
-\(\widehat w_i^c=S\exp(\widehat{\ell}_i^c)
-=\widehat w_i\exp(\widehat\Delta_i^c)\).
 Let \(\mathcal I_{2025}\) denote the 2025 sample. With expansion weight
 \(a_i\) and weekly hours \(h_i\), the percentage change in total
-predicted weekly labor income under scenario \(c\) is
+predicted weekly labor income under scenario \(c\) is\footnote{We assume a
+common retransformation factor across workers and destinations, which
+cancels from the income ratio.}
 \begin{equation}\label{eq:income-counterfactual}
   G_c=100\left[
-  \frac{\sum_{i\in\mathcal I_{2025}}a_i h_i\widehat w_i
-        \exp(\widehat\Delta_i^c)}
-       {\sum_{i\in\mathcal I_{2025}}a_i h_i\widehat w_i}-1\right].
+  \frac{\sum_{i\in\mathcal I_{2025}}a_i h_i
+        \exp(\widehat{\ell}_i+\widehat\Delta_i^c)}
+       {\sum_{i\in\mathcal I_{2025}}a_i h_i
+        \exp(\widehat{\ell}_i)}-1\right].
 \end{equation}
 This percentage change weights each individual's percentage change by that
 individual's share of baseline income, including survey weights and hours.
