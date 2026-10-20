@@ -34,24 +34,36 @@
   \source{Paper Figure~\paperref{fig:preferred-formality-premium}, Equation~(\paperref{eq:main}). Reference is solo work within formality. Bars use sector-department clustering. Alternative clustering is reported in the appendix.}
 \end{frame}
 
-\begin{frame}{The Comparison Depends on the Starting Size}
+
+\begin{frame}{Minimum Wage Bunching by Firm Size and Formality}
   \centering
-  \begin{tabular}{lrr}
-  \toprule
-  Conditional wage comparison & Formal & Informal \\
-  \midrule
-  101+ relative to solo & 16.5\% & 37.1\% \\
-  101+ relative to 11--19 & 12.0\% & -3.7\% \\
-  \bottomrule
-  \end{tabular}
-  \par\vspace{0.4cm}
-  \begin{itemize}
-    \item The formal 101+ advantage over categories from 2--3 through 51--100 remains significant with alternative clustering.
-    \item Informal premiums rise sharply across the smallest sizes, then flatten and fall at 101+.
-    \item A larger informal 101+/solo premium does not imply gains at every step toward larger firms.
-  \end{itemize}
-  \source{Paper Tables~\paperref{tab:firm-size-local-geography-formality-robustness}--\paperref{tab:firm-size-local-geography-formality-robustness-11-19-reference}. The informal 101+/11--19 contrast is not significant at 5\% with sector or two-way clustering.}
+  \includegraphics[width=0.96\textwidth,height=0.67\textheight,keepaspectratio,trim=0 24bp 0 45.6bp,clip]{fig77_en.png}
+  \par\smallskip
+  {\small Hourly income / hourly minimum-wage benchmark (log scale)\par}
+  \vspace{0.1cm}
+%  {\small Concentration near a common wage floor may compress pay differences across intermediate formal sizes. The distributions do not establish causality.\par}
+  \source{Paper Figure~\paperref{fig:minwage-distribution-formality-size}. Hourly benchmark, not an individual legal compliance threshold. Monthly-income comparisons are in the appendix.}
 \end{frame}
+
+
+%\begin{frame}{The Comparison Depends on the Starting Size}
+%  \centering
+%  \begin{tabular}{lrr}
+%  \toprule
+%  Conditional wage comparison & Formal & Informal \\
+%  \midrule
+%  101+ relative to solo & 16.5\% & 37.1\% \\
+%  101+ relative to 11--19 & 12.0\% & -3.7\% \\
+%  \bottomrule
+%  \end{tabular}
+%  \par\vspace{0.4cm}
+%  \begin{itemize}
+%    \item The formal 101+ advantage over categories from 2--3 through 51--100 remains significant with alternative clustering.
+%    \item Informal premiums rise sharply across the smallest sizes, then flatten and fall at 101+.
+%    \item A larger informal 101+/solo premium does not imply gains at every step toward larger firms.
+%  \end{itemize}
+%  \source{Paper Tables~\paperref{tab:firm-size-local-geography-formality-robustness}--\paperref{tab:firm-size-local-geography-formality-robustness-11-19-reference}. The informal 101+/11--19 contrast is not significant at 5\% with sector or two-way clustering.}
+%\end{frame}
 
 \begin{frame}{Formal Workers Earn More at Each Firm Size}
   \centering\small
@@ -63,25 +75,15 @@
   \bottomrule
   \end{tabular}
   \par\vspace{0.4cm}
-  \begin{itemize}
-    \item These contrasts hold firm size fixed, unlike the preceding size comparisons.
-    \item All nine gaps remain positive and significant under every clustering procedure examined.
-    \item The size premium is not just a comparison between formal and informal jobs.
-  \end{itemize}
-  \source{Paper Table~\paperref{tab:preferred-formality-gap}. Formal relative to informal workers, conditional on preferred controls. These are associations, not effects of formalization.}
+%  \begin{itemize}
+%    \item These contrasts hold firm size fixed, unlike the preceding size comparisons.
+%    \item All nine gaps remain positive and significant under every clustering procedure examined.
+%    \item The size premium is not just a comparison between formal and informal jobs.
+%  \end{itemize}
+%  \source{Paper Table~\paperref{tab:preferred-formality-gap}. Formal relative to informal workers, conditional on preferred controls. These are associations, not effects of formalization.}
 \end{frame}
 
-\begin{frame}{Minimum Wage Bunching by Firm Size and Formality}
-  \centering
-  \includegraphics[width=0.96\textwidth,height=0.67\textheight,keepaspectratio,trim=0 24bp 0 45.6bp,clip]{fig77_en.png}
-  \par\smallskip
-  {\small Hourly income / hourly minimum-wage benchmark (log scale)\par}
-  \vspace{0.1cm}
-  {\small Concentration near a common wage floor may compress pay differences across intermediate formal sizes. The distributions do not establish causality.\par}
-  \source{Paper Figure~\paperref{fig:minwage-distribution-formality-size}. Hourly benchmark, not an individual legal compliance threshold. Monthly-income comparisons are in the appendix.}
-\end{frame}
-
-\begin{frame}{The Annual Path Is Not a Steady Trend}
+\begin{frame}{The Premium has changed over time}
   \centering
   {\small Re-estimate the preferred model in each year, allowing all coefficients to vary.\par}
   \includegraphics[width=0.98\textwidth,height=0.74\textheight,keepaspectratio]{preferred_large_firm_dynamics_en.png}
@@ -101,8 +103,8 @@
   \par\vspace{0.25cm}
   \begin{itemize}
     \item The formal premium ends close to its initial level. The informal estimate rises by 22.2 percentage points.
-    \item The informal increase is not significant at 5\% with sector ($p=0.090$) or two-way clustering ($p=0.199$).
-    \item Its direction contrasts with declines reported by Bloom et al. (2018) for the US and Reed and Tran (2019) across developing economies. Their populations and size comparisons differ from ours.
+    %\item The informal increase is not significant at 5\% with sector ($p=0.090$) or two-way clustering ($p=0.199$).
+    \item Its direction contrasts with declines reported by Bloom et al. (2018) for the US and Reed and Tran (2019) across developing economies. %Their populations and size comparisons differ from ours.
   \end{itemize}
   \source{Paper Tables~\paperref{tab:preferred-endpoint-changes} and \paperref{tab:preferred-clustering-comparison}. Two-sided tests. Changes are computed before rounding. This is not a test of a steady linear trend.}
 \end{frame}
@@ -113,14 +115,16 @@
   \setlength{\tabcolsep}{4pt}
   \input{Slides/generated/preferred_elasticities}
   \par\vspace{0.2cm}
-  \begin{itemize}
-    \item The informal slope exceeds the formal slope by 0.057 ($p<0.001$ with two-way clustering).
-    \item Different populations and controls limit the benchmark to a comparison of magnitudes.
-  \end{itemize}
+%  \begin{itemize}
+%    \item The informal slope exceeds the formal slope by 0.057 ($p<0.001$ with two-way clustering).
+%    \item Different populations and controls limit the benchmark to a comparison of magnitudes.
+%  \end{itemize}
   \source{Paper Tables~\paperref{tab:preferred-elasticities} and \paperref{tab:preferred-clustering-comparison}. Displayed SEs use sector-department clustering. Literature means from Diegmann et al. (2026).}
 \end{frame}
 
-\begin{frame}{What Would Income Be under Another Size or Formality?}
+\section{Numerical Exercise}
+
+\begin{frame}{What Would Labor Income Be under Worker Reallocation?}
   \begin{itemize}
     \item Apply the pooled preferred coefficients to the 341,282 observations in the 2025 estimation sample.
     \item Change firm size, formality, or both. Keep worker characteristics, occupational position, sector, department, and hours fixed.

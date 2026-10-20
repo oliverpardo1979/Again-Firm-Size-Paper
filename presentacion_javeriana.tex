@@ -90,41 +90,54 @@
   {\normalsize Centro Javeriano de Competitividad}
 \end{frame}
 
-\begin{frame}{The Question}
-  \idea{How much of Colombia's firm-size wage gap remains after controlling for worker characteristics?}
+\section{Motivation}
+
+\begin{frame}{Motivation}
+  \idea{How much productivity can be achieved by scaling up small firms in Colombia? }
   \vspace{0.3cm}
   \begin{itemize}
-    \item Employment is concentrated in solo work and micro-firms. Pay differences across firm sizes matter for wage inequality.
+    \item Employment is concentrated in solo work and micro-firms.
+    \item Wages are higher in bigger firms -- the wage-size premium
+    \item How much of the premium survives controls?
     \item Does the conditional premium differ between formal and informal workers?
     \item Has it increased or decreased between 2008 and 2025?
-    \item What income changes do the estimated gaps imply under hypothetical worker reallocations?
+    \item What income gains does the premium imply under hypothetical worker reallocations?
   \end{itemize}
 \end{frame}
+
+\section{Data and Definitions}
 
 \begin{frame}{Data and Definitions}
   \small
   \begin{itemize}
-    \item DANE's GEIH, 2008--2025 excluding 2020 because of pandemic-related data limitations. Repeated cross-sections, not a worker panel.
-    \item 5.35 million worker observations. 5.27 million enter the regressions.
-    \item Outcome: real hourly labor income in 2025 Colombian pesos, including self-employment income.
-    \item Nine firm-size categories: solo, 2--3, 4--5, 6--10, 11--19, 20--30, 31--50, 51--100, and 101+.
-    \item Solo work describes reported unit size, not necessarily own-account work.
-    \item Formal workers contribute to pensions. Employed pension recipients are excluded from formal-informal comparisons. This definition does not use firm size.
+    \item Household Survey (DANE's GEIH),    
+    \item Workers report the size of the firm they work.
+    \item 2008--2025 excluding 2020.
+    %\item 5.35 million worker observations. 5.27 million enter the regressions.
+    \item Outcome: hourly labor income in 2025 Colombian pesos, including self-employment income.
+    \item Nine firm-size categories:  
+    \begin{itemize}
+        \item Solo, 2--3, 4--5, 6--10, 11--19, 20--30, 31--50, 51--100, and 101+.
+    \end{itemize}
+    %\item Solo work describes reported unit size, not necessarily own-account work.
+    \item Formality defined by contribution to pensions.
   \end{itemize}
 \end{frame}
 
+\section{Descriptive Statistics}
+
 \begin{frame}{First Fact: Employment Remains Concentrated at the Bottom}
-  \begin{columns}[T,totalwidth=\textwidth]
-    \begin{column}{0.32\textwidth}
-      \bigstat{35\%}{of employment in 2025 was solo work}{cjcblue}
-    \end{column}
-    \begin{column}{0.32\textwidth}
-      \bigstat{61\%}{was in solo work or firms with up to ten workers}{cjcblue}
-    \end{column}
-    \begin{column}{0.32\textwidth}
-      \bigstat{25\%}{was in firms with 101 or more workers}{cjcgreen}
-    \end{column}
-  \end{columns}
+  %\begin{columns}[T,totalwidth=\textwidth]
+  %  \begin{column}{0.32\textwidth}
+   %   \bigstat{35\%}{of employment in 2025 was solo work}{cjcblue}
+   % \end{column}
+   % \begin{column}{0.32\textwidth}
+   %   \bigstat{61\%}{was in solo work or firms with up to ten workers}{cjcblue}
+   % \end{column}
+   % \begin{column}{0.32\textwidth}
+    %  \bigstat{25\%}{was in firms with 101 or more workers}{cjcgreen}
+    %\end{column}
+  %\end{columns}
 
   \vspace{0.45cm}
   \begin{center}
@@ -198,6 +211,8 @@
 
   \source{Source: authors' calculations using GEIH, 2025.}
 \end{frame}
+
+\section{Results}
 
 \input{Slides/main_results}
 
