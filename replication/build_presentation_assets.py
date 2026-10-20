@@ -212,7 +212,7 @@ def export_summary_tables():
     lines = [rf"{{\small Workers represented in 2025: {workers_millions:.1f} million.\par}}",
              r"\vspace{0.2cm}",
              r"\begin{tabular}{p{0.36\textwidth}rrr}", r"\toprule",
-             r"Assignment & \shortstack{Workers\\reassigned\\(millions)}"
+             r"Allocation & \shortstack{Workers\\reassigned\\(millions)}"
              r" & \shortstack{Reassigned workers\\Mean income\\gain (\%)}"
              r" & \shortstack{All workers\\Total income\\gain (\%)} \\", r"\midrule"]
     for scenario, label in (

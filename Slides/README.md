@@ -1,7 +1,7 @@
 # Academic presentation
 
 Compile `presentacion_javeriana.tex` at the repository root in Overleaf.
-The main talk is in English and has 18 slides for a 20-minute presentation,
+The main talk is in English and has 16 slides for a 20-minute presentation,
 followed by 10 minutes for questions. Backup slides retain all paper figures and tables.
 The appendix is excluded from the main-talk slide denominator.
 The `\source{...}` annotations remain in the TeX for traceability but are not
@@ -11,21 +11,23 @@ remain visible.
 ## Main talk and questions
 
 The main talk has no section-divider or separate closing slide. Leave the
-conclusions (slide 18) visible when questions begin.
+conclusions (slide 16) visible when questions begin.
 
 Shortening means selecting which slides to present, not deleting the others.
 Consider both the main talk and existing backup slides when making the selection.
 Keep unselected slides after the conclusions. The overview, motivation, full
 data slide, roadmap, and contact slide also remain available there.
+The endpoint-comparison and income-scenario setup slides (formerly 14 and 15)
+are commented out in `main_results.tex`, with their code retained.
 
 | Slides | Content | Suggested time |
 | --- | --- | --- |
 | 1--3 | Question, data, and definitions | 2 minutes |
 | 4--7 | Employment, hourly income, formality, and worker composition | 4 minutes |
 | 8--12 | Sequential controls, preferred model, minimum wages, and conditional comparisons | 6 minutes |
-| 13--14 | Dynamics | 4 minutes |
-| 15--16 | Income scenarios and results | 2 minutes |
-| 17--18 | Interpretation, policy, and conclusions | 2 minutes |
+| 13 | Dynamics | 4 minutes |
+| 14 | Income scenarios and results | 2 minutes |
+| 15--16 | Interpretation, policy, and conclusions | 2 minutes |
 
 `backup_talk_details.tex` retains the additional descriptive figures, full
 variable definitions, detailed regression output and equations, and scenario

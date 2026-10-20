@@ -55,6 +55,11 @@ def validate():
     main_body = re.sub(r"(?m)^\s*%.*$", "", main_body)
     main_slide_count = main_body.count(r"\begin{frame}")
     assert 0 < main_slide_count <= 20, "The main talk must contain at most 20 slides."
+    for title in ("Endpoint Changes Differ by Formality",
+                  "What Would Labor Income Be under Worker Reallocation?"):
+        assert r"%\begin{frame}{" + title + "}" in results, title
+        assert r"\begin{frame}{" + title + "}" not in main_body, title
+    assert r"\begin{frame}{Illustrative Income Changes in 2025}" in main_body
     elasticity_title = r"\begin{frame}{Benchmarking the Elasticities}"
     assert elasticity_title not in main_body, "Elasticity benchmarks belong in the appendix."
     assert details.count(elasticity_title) == 1
@@ -99,6 +104,7 @@ def validate():
         assert " & ".join(cells) + r" \\" in bootstrap_table, contrast
 
     income_table = read(ROOT / "Slides/generated/income_movers.tex")
+    assert r"Allocation & \shortstack{Workers" in income_table
     assert r"Reassigned workers\\Mean income" in income_table
     assert r"All workers\\Total income" in income_table
     assert r"Workers\\reassigned\\(millions)" in income_table
