@@ -142,12 +142,18 @@ sensitivity to the size assigned to 101+.
 
 We construct illustrative income counterfactuals for the 22.6 million workers
 represented by the 2025 sample using the pooled preferred coefficients from
-Equation~(\ref{eq:main}). Each scenario changes only firm size, formality,
-or both. Worker characteristics, occupational position, sector, department,
-weekly hours, and survey weights remain fixed. The joint scenario assigns
-both formal and informal workers to formal employment in firms with 101 or
-more workers. Workers already in the
-destination category retain their baseline predictions.
+Equation~(\ref{eq:main}). All estimated coefficients and fixed effects remain
+unchanged, as do worker characteristics, occupational position, sector,
+department, weekly hours, and survey weights.
+
+Formalization at the same firm size sets \(F_i=1\) for informal workers
+without changing their size indicators \(D_{ig}\). Reallocation to 101+
+employment within each formality group sets \(D_{i,101+}=1\) and
+\(D_{ig}=0\) for every other size category, keeping \(F_i\) fixed. We apply
+this size reassignment separately to formal and informal workers. The joint
+scenario combines \(F_i=1\) with the same 101+ assignment for all workers.
+In each scenario, the interaction terms \(F_iD_{ig}\) change accordingly.
+Workers already in the destination category retain their baseline predictions.
 
 Let \(\widehat{\ell}_i\) be fitted log hourly income from
 Equation~(\ref{eq:main}), including the fixed effects, for worker \(i\)'s
