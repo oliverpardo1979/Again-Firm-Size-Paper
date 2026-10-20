@@ -146,29 +146,39 @@ Equation~(\ref{eq:main}). All estimated coefficients and fixed effects remain
 unchanged, as do worker characteristics, occupational position, sector,
 department, weekly hours, and survey weights.
 
-Formalization at the same firm size sets \(F_i=1\) for informal workers
-without changing their size indicators \(D_{ig}\). Reallocation to 101+
-employment within each formality group sets \(D_{i,101+}=1\) and
-\(D_{ig}=0\) for every other size category, keeping \(F_i\) fixed. We apply
-this size reassignment separately to formal and informal workers. The joint
-scenario combines \(F_i=1\) with the same 101+ assignment for all workers.
-In each scenario, the interaction terms \(F_iD_{ig}\) change accordingly.
-Workers already in the destination category retain their baseline predictions.
+Write \(F_i^c\) and \(D_{ig}^c\) for worker \(i\)'s assignments in scenario
+\(c\). Formalization at the same firm size sets \(F_i^c=1\) for informal
+workers, with \(D_{ig}^c=D_{ig}\). Reallocation to 101+ employment sets
+\(D_{i,101+}^c=1\) and all other size indicators to zero, with
+\(F_i^c=F_i\). We apply this size reassignment separately to formal and
+informal workers. The joint scenario combines \(F_i^c=1\) with the same
+101+ assignment for all workers. Workers outside the target group or
+already at the destination retain their observed assignments.
 
 Let \(\widehat{\ell}_i\) be fitted log hourly income from
 Equation~(\ref{eq:main}), including the fixed effects, for worker \(i\)'s
-observed size and formality status. Define \(S\) as the survey-weighted mean of
-exponentiated residuals in 2025. We construct baseline hourly income as
-\(\widehat w_i=S\exp(\widehat{\ell}_i)\). We assume the same retransformation
-factor across workers and destinations. Let \(g(i)\) denote worker \(i\)'s
-size category. If scenario
-\(c\) changes the worker's estimated size-formality component
-\(\widehat{\phi}F_i+\widehat{\beta}_{g(i)}+\widehat{\theta}_{g(i)}F_i\) by
-\(\widehat\Delta_i^c\), counterfactual hourly income is
-\(\widehat w_i^c=\widehat w_i\exp(\widehat\Delta_i^c)\).
-For a change in size or formality alone, this estimated difference is obtained
-from the corresponding coefficients in Equation~(\ref{eq:main}). Let
-\(\mathcal I_{2025}\) denote the 2025 sample. With expansion weight
+observed size and formality status. Replacing \(F_i\) and \(D_{ig}\) with
+\(F_i^c\) and \(D_{ig}^c\) gives the counterfactual fitted value
+\(\widehat{\ell}_i^c\). The change in predicted log hourly income is
+\begin{equation}\label{eq:income-log-change}
+  \begin{aligned}
+    \widehat\Delta_i^c
+    &= \widehat{\ell}_i^c-\widehat{\ell}_i \\
+    &= \widehat\phi(F_i^c-F_i)
+    + \sum_{g\neq g_0}\left[
+      \widehat\beta_g(D_{ig}^c-D_{ig})
+      + \widehat\theta_g(F_i^cD_{ig}^c-F_iD_{ig})
+    \right].
+  \end{aligned}
+\end{equation}
+
+We construct baseline hourly income as
+\(\widehat w_i=S\exp(\widehat{\ell}_i)\), where \(S\) is the survey-weighted
+mean of exponentiated residuals in 2025. We assume the same retransformation
+factor across workers and destinations, so counterfactual hourly income is
+\(\widehat w_i^c=S\exp(\widehat{\ell}_i^c)
+=\widehat w_i\exp(\widehat\Delta_i^c)\).
+Let \(\mathcal I_{2025}\) denote the 2025 sample. With expansion weight
 \(a_i\) and weekly hours \(h_i\), the percentage change in total
 predicted weekly labor income under scenario \(c\) is
 \begin{equation}\label{eq:income-counterfactual}
