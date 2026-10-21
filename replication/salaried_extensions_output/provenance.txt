@@ -1,0 +1,46 @@
+Run: 2026-10-20 21:15:29.261067
+Occupation recoding: P6430-framework-2026-10-11-v1
+Salaried employees: private-sector, government, domestic, and day laborers, with formal and informal jobs retained.
+Same preferred specification, expansion weights, pooled years and singleton exclusions as the existing salaried exercise.
+Annual regressions let every slope vary across years. Joint endpoint model preserves within-cluster cross-year covariance.
+Endpoint p-values test changes in log premiums, not ratios of arithmetic mean wages.
+Income scenarios use each population's own pooled coefficients and fitted sector-department-year effects on its 2025 workers.
+Sector, department, occupational position, worker characteristics and hours stay fixed. No equilibrium response is modeled.
+Common retransformation factors cancel from gains. Income totals cover the indicated population, not always the entire workforce.
+Expansion factors are used as stored. The full target reproduces the manuscript's 22.6 million workers.
+Salaried_full_coefficients is a composition-only bridge, not the main salaried estimate.
+Source data and existing manuscript tables, figures, PDFs and replication outputs are unchanged.
+R version 4.5.2 (2025-10-31 ucrt)
+Platform: x86_64-w64-mingw32/x64
+Running under: Windows 11 x64 (build 26200)
+
+Matrix products: default
+  LAPACK version 3.12.1
+
+locale:
+[1] LC_COLLATE=C                        LC_CTYPE=English_United States.utf8
+[3] LC_MONETARY=C                       LC_NUMERIC=C
+[5] LC_TIME=C
+
+time zone: America/Mexico_City
+tzcode source: internal
+
+attached base packages:
+[1] stats     graphics  grDevices utils     datasets  methods   base
+
+other attached packages:
+[1] fixest_0.14.1 dplyr_1.2.1
+
+loaded via a namespace (and not attached):
+ [1] vctrs_0.7.3         stringmagic_1.2.0   nlme_3.1-169
+ [4] cli_3.6.6           TH.data_1.1-5       rlang_1.2.0
+ [7] estimability_1.5.1  Formula_1.2-5       generics_0.1.4
+[10] xtable_1.8-8        glue_1.8.1          zoo_1.8-15
+[13] grid_4.5.2          tibble_3.3.1        MASS_7.3-65
+[16] mvtnorm_1.3-7       lifecycle_1.0.5     numDeriv_2016.8-1.1
+[19] multcomp_1.4-30     compiler_4.5.2      codetools_0.2-20
+[22] coda_0.19-4.1       sandwich_3.1-1      emmeans_2.0.3
+[25] Rcpp_1.1.1-1.1      pkgconfig_2.0.3     dreamerr_1.5.0
+[28] lattice_0.22-9      R6_2.6.1            tidyselect_1.2.1
+[31] splines_4.5.2       pillar_1.11.1       magrittr_2.0.5
+[34] Matrix_1.7-4        tools_4.5.2         survival_3.8-3

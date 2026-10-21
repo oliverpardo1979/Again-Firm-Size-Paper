@@ -1,0 +1,644 @@
+"model","term","estimate"
+"salaried_pooled","tamano_empresa::2-3",0.0425223614099366
+"salaried_pooled","tamano_empresa::4-5",0.13997555980885
+"salaried_pooled","tamano_empresa::6-10",0.19118213088486
+"salaried_pooled","tamano_empresa::11-19",0.220675496024137
+"salaried_pooled","tamano_empresa::20-30",0.228076407432084
+"salaried_pooled","tamano_empresa::31-50",0.229708470821439
+"salaried_pooled","tamano_empresa::51-100",0.243439182088146
+"salaried_pooled","tamano_empresa::101+",0.187666853174559
+"salaried_pooled","formal",0.301662768798648
+"salaried_pooled","mujer",-0.112370374336979
+"salaried_pooled","edad",0.0331223062714488
+"salaried_pooled","edad2",-0.000310034567241261
+"salaried_pooled","educacion::Básica primaria",-0.0794263603449621
+"salaried_pooled","educacion::Media",0.0471586804551355
+"salaried_pooled","educacion::Ninguno",-0.179172519879935
+"salaried_pooled","educacion::No sabe, no informa",-0.0730446728607267
+"salaried_pooled","educacion::Preescolar",-0.265815707867386
+"salaried_pooled","educacion::Superior o universitaria",0.494261277311977
+"salaried_pooled","posicion_ocupacional_label::Jornalero o peón",-0.119958315923805
+"salaried_pooled","posicion_ocupacional_label::Obrero o empleado de empresa particular",-0.0582355883916162
+"salaried_pooled","posicion_ocupacional_label::Obrero o empleado del gobierno",0.360348570918266
+"salaried_pooled","formal:tamano_empresa::2-3",-0.0600050154737746
+"salaried_pooled","formal:tamano_empresa::4-5",-0.132961806264489
+"salaried_pooled","formal:tamano_empresa::6-10",-0.149312848371866
+"salaried_pooled","formal:tamano_empresa::11-19",-0.158034759115194
+"salaried_pooled","formal:tamano_empresa::20-30",-0.156558671046926
+"salaried_pooled","formal:tamano_empresa::31-50",-0.135021360594829
+"salaried_pooled","formal:tamano_empresa::51-100",-0.121041893859886
+"salaried_pooled","formal:tamano_empresa::101+",-0.00370380944605309
+"salaried_year2008","tamano_empresa::2-3",-0.0315194182196997
+"salaried_year2008","tamano_empresa::4-5",0.0841144309208597
+"salaried_year2008","tamano_empresa::6-10",0.147533770679687
+"salaried_year2008","tamano_empresa::11-19",0.204357904937828
+"salaried_year2008","tamano_empresa::20-30",0.243064778167518
+"salaried_year2008","tamano_empresa::31-50",0.187184882475109
+"salaried_year2008","tamano_empresa::51-100",0.238674709161157
+"salaried_year2008","tamano_empresa::101+",0.184500864781554
+"salaried_year2008","formal",0.356998337662372
+"salaried_year2008","mujer",-0.127773549403504
+"salaried_year2008","edad",0.0380096587832857
+"salaried_year2008","edad2",-0.000365180002077278
+"salaried_year2008","educacion::Básica primaria",-0.100804632049846
+"salaried_year2008","educacion::Media",0.0912649023858385
+"salaried_year2008","educacion::Ninguno",-0.218946935875535
+"salaried_year2008","educacion::No sabe, no informa",0.125754859401846
+"salaried_year2008","educacion::Preescolar",0.181181229641996
+"salaried_year2008","educacion::Superior o universitaria",0.589673300952757
+"salaried_year2008","posicion_ocupacional_label::Jornalero o peón",-0.0224901893403727
+"salaried_year2008","posicion_ocupacional_label::Obrero o empleado de empresa particular",0.0998062892563628
+"salaried_year2008","posicion_ocupacional_label::Obrero o empleado del gobierno",0.391777021086831
+"salaried_year2008","formal:tamano_empresa::2-3",-0.113432470298262
+"salaried_year2008","formal:tamano_empresa::4-5",-0.211917623377071
+"salaried_year2008","formal:tamano_empresa::6-10",-0.1871147689687
+"salaried_year2008","formal:tamano_empresa::11-19",-0.206242503258569
+"salaried_year2008","formal:tamano_empresa::20-30",-0.261424319996149
+"salaried_year2008","formal:tamano_empresa::31-50",-0.196180981213226
+"salaried_year2008","formal:tamano_empresa::51-100",-0.229950784496081
+"salaried_year2008","formal:tamano_empresa::101+",-0.0994057567006816
+"salaried_year2009","tamano_empresa::2-3",0.0221715813057306
+"salaried_year2009","tamano_empresa::4-5",0.112582081478598
+"salaried_year2009","tamano_empresa::6-10",0.192596245527014
+"salaried_year2009","tamano_empresa::11-19",0.238907745157421
+"salaried_year2009","tamano_empresa::20-30",0.206116739901588
+"salaried_year2009","tamano_empresa::31-50",0.207632241609428
+"salaried_year2009","tamano_empresa::51-100",0.27535896946709
+"salaried_year2009","tamano_empresa::101+",0.170010986336781
+"salaried_year2009","formal",0.284139367649749
+"salaried_year2009","mujer",-0.119363393081272
+"salaried_year2009","edad",0.0394401302034452
+"salaried_year2009","edad2",-0.000387665160454119
+"salaried_year2009","educacion::Básica primaria",-0.0789329151540144
+"salaried_year2009","educacion::Media",0.0964614469273712
+"salaried_year2009","educacion::Ninguno",-0.220030053556587
+"salaried_year2009","educacion::No sabe, no informa",0.068463716110991
+"salaried_year2009","educacion::Preescolar",-0.185796248554504
+"salaried_year2009","educacion::Superior o universitaria",0.602106583219113
+"salaried_year2009","posicion_ocupacional_label::Jornalero o peón",-0.0591098428422513
+"salaried_year2009","posicion_ocupacional_label::Obrero o empleado de empresa particular",0.0488984253247968
+"salaried_year2009","posicion_ocupacional_label::Obrero o empleado del gobierno",0.362726336927095
+"salaried_year2009","formal:tamano_empresa::2-3",-0.0184697466023458
+"salaried_year2009","formal:tamano_empresa::4-5",-0.0894403437520062
+"salaried_year2009","formal:tamano_empresa::6-10",-0.121890239006648
+"salaried_year2009","formal:tamano_empresa::11-19",-0.151087798778381
+"salaried_year2009","formal:tamano_empresa::20-30",-0.116154347505066
+"salaried_year2009","formal:tamano_empresa::31-50",-0.109562280150307
+"salaried_year2009","formal:tamano_empresa::51-100",-0.138686515653141
+"salaried_year2009","formal:tamano_empresa::101+",0.0381348696234909
+"salaried_year2010","tamano_empresa::2-3",0.0322947922996337
+"salaried_year2010","tamano_empresa::4-5",0.116398550859169
+"salaried_year2010","tamano_empresa::6-10",0.189306854443752
+"salaried_year2010","tamano_empresa::11-19",0.16941332153702
+"salaried_year2010","tamano_empresa::20-30",0.219036333595431
+"salaried_year2010","tamano_empresa::31-50",0.161687932533149
+"salaried_year2010","tamano_empresa::51-100",0.223669487298398
+"salaried_year2010","tamano_empresa::101+",0.1391909247574
+"salaried_year2010","formal",0.251851360540179
+"salaried_year2010","mujer",-0.127078782180193
+"salaried_year2010","edad",0.0364176427372707
+"salaried_year2010","edad2",-0.000341984841508851
+"salaried_year2010","educacion::Básica primaria",-0.0889593648273579
+"salaried_year2010","educacion::Media",0.0685906325808305
+"salaried_year2010","educacion::Ninguno",-0.17405199068676
+"salaried_year2010","educacion::No sabe, no informa",-0.0188173608826957
+"salaried_year2010","educacion::Preescolar",-0.180028797438641
+"salaried_year2010","educacion::Superior o universitaria",0.578412102697636
+"salaried_year2010","posicion_ocupacional_label::Jornalero o peón",-0.18340958348553
+"salaried_year2010","posicion_ocupacional_label::Obrero o empleado de empresa particular",-0.0996956792274264
+"salaried_year2010","posicion_ocupacional_label::Obrero o empleado del gobierno",0.259145038464376
+"salaried_year2010","formal:tamano_empresa::2-3",-0.0190501674260073
+"salaried_year2010","formal:tamano_empresa::4-5",-0.0250543342476544
+"salaried_year2010","formal:tamano_empresa::6-10",-0.0937917932938941
+"salaried_year2010","formal:tamano_empresa::11-19",-0.0497148345866059
+"salaried_year2010","formal:tamano_empresa::20-30",-0.0861184984343115
+"salaried_year2010","formal:tamano_empresa::31-50",0.0127119257616197
+"salaried_year2010","formal:tamano_empresa::51-100",-0.0349713740033799
+"salaried_year2010","formal:tamano_empresa::101+",0.119833542243903
+"salaried_year2011","tamano_empresa::2-3",0.0557003847895809
+"salaried_year2011","tamano_empresa::4-5",0.153788076963267
+"salaried_year2011","tamano_empresa::6-10",0.207526166928292
+"salaried_year2011","tamano_empresa::11-19",0.246951524258148
+"salaried_year2011","tamano_empresa::20-30",0.225344833324189
+"salaried_year2011","tamano_empresa::31-50",0.225658065544333
+"salaried_year2011","tamano_empresa::51-100",0.305873921424865
+"salaried_year2011","tamano_empresa::101+",0.165055657009105
+"salaried_year2011","formal",0.311570478915952
+"salaried_year2011","mujer",-0.11632249661329
+"salaried_year2011","edad",0.0382087934315533
+"salaried_year2011","edad2",-0.000367885558703774
+"salaried_year2011","educacion::Básica primaria",-0.0962971093510121
+"salaried_year2011","educacion::Media",0.0622508656818331
+"salaried_year2011","educacion::Ninguno",-0.224099870405236
+"salaried_year2011","educacion::No sabe, no informa",0.151698034924018
+"salaried_year2011","educacion::Preescolar",-0.485449689029083
+"salaried_year2011","educacion::Superior o universitaria",0.545927245439058
+"salaried_year2011","posicion_ocupacional_label::Jornalero o peón",-0.0124376877475053
+"salaried_year2011","posicion_ocupacional_label::Obrero o empleado de empresa particular",0.062098302678063
+"salaried_year2011","posicion_ocupacional_label::Obrero o empleado del gobierno",0.458584155281938
+"salaried_year2011","formal:tamano_empresa::2-3",-0.0959492480423147
+"salaried_year2011","formal:tamano_empresa::4-5",-0.172449365659183
+"salaried_year2011","formal:tamano_empresa::6-10",-0.159290156120335
+"salaried_year2011","formal:tamano_empresa::11-19",-0.194385547006716
+"salaried_year2011","formal:tamano_empresa::20-30",-0.147077230555798
+"salaried_year2011","formal:tamano_empresa::31-50",-0.138719587975302
+"salaried_year2011","formal:tamano_empresa::51-100",-0.20157976058532
+"salaried_year2011","formal:tamano_empresa::101+",0.0363744296651696
+"salaried_year2012","tamano_empresa::2-3",0.0648782965852037
+"salaried_year2012","tamano_empresa::4-5",0.168328497474598
+"salaried_year2012","tamano_empresa::6-10",0.227024548509436
+"salaried_year2012","tamano_empresa::11-19",0.256333010705704
+"salaried_year2012","tamano_empresa::20-30",0.278664298069655
+"salaried_year2012","tamano_empresa::31-50",0.287952343404195
+"salaried_year2012","tamano_empresa::51-100",0.294949548204703
+"salaried_year2012","tamano_empresa::101+",0.141903736951988
+"salaried_year2012","formal",0.311748805673675
+"salaried_year2012","mujer",-0.118785511090379
+"salaried_year2012","edad",0.0386380835855375
+"salaried_year2012","edad2",-0.000370535051315563
+"salaried_year2012","educacion::Básica primaria",-0.0872842184738381
+"salaried_year2012","educacion::Media",0.0484809696842145
+"salaried_year2012","educacion::Ninguno",-0.187353145693241
+"salaried_year2012","educacion::No sabe, no informa",-0.153705001993931
+"salaried_year2012","educacion::Preescolar",0.0030475344820131
+"salaried_year2012","educacion::Superior o universitaria",0.499229760177587
+"salaried_year2012","posicion_ocupacional_label::Jornalero o peón",-0.194767865755418
+"salaried_year2012","posicion_ocupacional_label::Obrero o empleado de empresa particular",-0.112193881343326
+"salaried_year2012","posicion_ocupacional_label::Obrero o empleado del gobierno",0.292103581732507
+"salaried_year2012","formal:tamano_empresa::2-3",-0.0590243895440921
+"salaried_year2012","formal:tamano_empresa::4-5",-0.14772363531479
+"salaried_year2012","formal:tamano_empresa::6-10",-0.179570544561845
+"salaried_year2012","formal:tamano_empresa::11-19",-0.158431719760378
+"salaried_year2012","formal:tamano_empresa::20-30",-0.190897943378374
+"salaried_year2012","formal:tamano_empresa::31-50",-0.162730503861148
+"salaried_year2012","formal:tamano_empresa::51-100",-0.165014498118157
+"salaried_year2012","formal:tamano_empresa::101+",0.0591298328096812
+"salaried_year2013","tamano_empresa::2-3",0.0326594331844907
+"salaried_year2013","tamano_empresa::4-5",0.137126391941365
+"salaried_year2013","tamano_empresa::6-10",0.196283330065166
+"salaried_year2013","tamano_empresa::11-19",0.265143319035613
+"salaried_year2013","tamano_empresa::20-30",0.204597543030185
+"salaried_year2013","tamano_empresa::31-50",0.27086554980419
+"salaried_year2013","tamano_empresa::51-100",0.202470196443047
+"salaried_year2013","tamano_empresa::101+",0.156306003027542
+"salaried_year2013","formal",0.305966537133146
+"salaried_year2013","mujer",-0.122616464093714
+"salaried_year2013","edad",0.0402903814208005
+"salaried_year2013","edad2",-0.000398252431936824
+"salaried_year2013","educacion::Básica primaria",-0.0787704568344365
+"salaried_year2013","educacion::Media",0.0555451711889425
+"salaried_year2013","educacion::Ninguno",-0.192356772893248
+"salaried_year2013","educacion::No sabe, no informa",-0.254628098764761
+"salaried_year2013","educacion::Preescolar",-1.07767337598981
+"salaried_year2013","educacion::Superior o universitaria",0.505598961031525
+"salaried_year2013","posicion_ocupacional_label::Jornalero o peón",-0.02325533849894
+"salaried_year2013","posicion_ocupacional_label::Obrero o empleado de empresa particular",0.0376163460842141
+"salaried_year2013","posicion_ocupacional_label::Obrero o empleado del gobierno",0.439024718278485
+"salaried_year2013","formal:tamano_empresa::2-3",-0.0808109256322043
+"salaried_year2013","formal:tamano_empresa::4-5",-0.146616517416958
+"salaried_year2013","formal:tamano_empresa::6-10",-0.14653765654316
+"salaried_year2013","formal:tamano_empresa::11-19",-0.210778387695171
+"salaried_year2013","formal:tamano_empresa::20-30",-0.125457969170573
+"salaried_year2013","formal:tamano_empresa::31-50",-0.175058560448268
+"salaried_year2013","formal:tamano_empresa::51-100",-0.068801160946304
+"salaried_year2013","formal:tamano_empresa::101+",0.0261800607783158
+"salaried_year2014","tamano_empresa::2-3",0.0512580441546859
+"salaried_year2014","tamano_empresa::4-5",0.148379354835261
+"salaried_year2014","tamano_empresa::6-10",0.201966632999418
+"salaried_year2014","tamano_empresa::11-19",0.214529546095663
+"salaried_year2014","tamano_empresa::20-30",0.290474208169767
+"salaried_year2014","tamano_empresa::31-50",0.305389432519275
+"salaried_year2014","tamano_empresa::51-100",0.243556076887665
+"salaried_year2014","tamano_empresa::101+",0.20867007481947
+"salaried_year2014","formal",0.310594870936751
+"salaried_year2014","mujer",-0.132151101028566
+"salaried_year2014","edad",0.039491310867044
+"salaried_year2014","edad2",-0.000381305023534982
+"salaried_year2014","educacion::Básica primaria",-0.0941616319305686
+"salaried_year2014","educacion::Media",0.0402345864607885
+"salaried_year2014","educacion::Ninguno",-0.16604306200583
+"salaried_year2014","educacion::No sabe, no informa",-0.0400233294176432
+"salaried_year2014","educacion::Preescolar",-0.326975199062002
+"salaried_year2014","educacion::Superior o universitaria",0.499443572174224
+"salaried_year2014","posicion_ocupacional_label::Jornalero o peón",-0.184947239223369
+"salaried_year2014","posicion_ocupacional_label::Obrero o empleado de empresa particular",-0.0640078090008082
+"salaried_year2014","posicion_ocupacional_label::Obrero o empleado del gobierno",0.331784941730352
+"salaried_year2014","formal:tamano_empresa::2-3",-0.0994125429359363
+"salaried_year2014","formal:tamano_empresa::4-5",-0.158742451881646
+"salaried_year2014","formal:tamano_empresa::6-10",-0.184719679057461
+"salaried_year2014","formal:tamano_empresa::11-19",-0.165225752369852
+"salaried_year2014","formal:tamano_empresa::20-30",-0.225354156503933
+"salaried_year2014","formal:tamano_empresa::31-50",-0.220807308572058
+"salaried_year2014","formal:tamano_empresa::51-100",-0.116595257758149
+"salaried_year2014","formal:tamano_empresa::101+",-0.0516338041158519
+"salaried_year2015","tamano_empresa::2-3",0.0566824448147782
+"salaried_year2015","tamano_empresa::4-5",0.148696826551662
+"salaried_year2015","tamano_empresa::6-10",0.200724370609156
+"salaried_year2015","tamano_empresa::11-19",0.199412397048187
+"salaried_year2015","tamano_empresa::20-30",0.192212414453093
+"salaried_year2015","tamano_empresa::31-50",0.236209010596148
+"salaried_year2015","tamano_empresa::51-100",0.297885584053898
+"salaried_year2015","tamano_empresa::101+",0.164044462932908
+"salaried_year2015","formal",0.308524634832321
+"salaried_year2015","mujer",-0.119410393739437
+"salaried_year2015","edad",0.0328718267545196
+"salaried_year2015","edad2",-0.000311326708429638
+"salaried_year2015","educacion::Básica primaria",-0.0796519159221293
+"salaried_year2015","educacion::Media",0.050998729103441
+"salaried_year2015","educacion::Ninguno",-0.186395953226047
+"salaried_year2015","educacion::No sabe, no informa",-0.11364639931985
+"salaried_year2015","educacion::Preescolar",-0.571151828717522
+"salaried_year2015","educacion::Superior o universitaria",0.473558203326022
+"salaried_year2015","posicion_ocupacional_label::Jornalero o peón",-0.399361740654329
+"salaried_year2015","posicion_ocupacional_label::Obrero o empleado de empresa particular",-0.306940857077663
+"salaried_year2015","posicion_ocupacional_label::Obrero o empleado del gobierno",0.118178090688789
+"salaried_year2015","formal:tamano_empresa::2-3",-0.100310605144489
+"salaried_year2015","formal:tamano_empresa::4-5",-0.171049890787033
+"salaried_year2015","formal:tamano_empresa::6-10",-0.190568715617789
+"salaried_year2015","formal:tamano_empresa::11-19",-0.173514510853583
+"salaried_year2015","formal:tamano_empresa::20-30",-0.154844699475921
+"salaried_year2015","formal:tamano_empresa::31-50",-0.163164617080521
+"salaried_year2015","formal:tamano_empresa::51-100",-0.196103006132601
+"salaried_year2015","formal:tamano_empresa::101+",-0.0218013713962009
+"salaried_year2016","tamano_empresa::2-3",0.0432150284077228
+"salaried_year2016","tamano_empresa::4-5",0.146089196360275
+"salaried_year2016","tamano_empresa::6-10",0.17431311146785
+"salaried_year2016","tamano_empresa::11-19",0.22097145230626
+"salaried_year2016","tamano_empresa::20-30",0.239090248703271
+"salaried_year2016","tamano_empresa::31-50",0.214858356384181
+"salaried_year2016","tamano_empresa::51-100",0.22107188704845
+"salaried_year2016","tamano_empresa::101+",0.167308880765165
+"salaried_year2016","formal",0.255119132427119
+"salaried_year2016","mujer",-0.122699535364068
+"salaried_year2016","edad",0.0328909487516547
+"salaried_year2016","edad2",-0.000305464259079257
+"salaried_year2016","educacion::Básica primaria",-0.0848096451182506
+"salaried_year2016","educacion::Media",0.0415565953391433
+"salaried_year2016","educacion::Ninguno",-0.185290415028857
+"salaried_year2016","educacion::No sabe, no informa",-0.275463958703522
+"salaried_year2016","educacion::Preescolar",-0.417656994250345
+"salaried_year2016","educacion::Superior o universitaria",0.461357769621482
+"salaried_year2016","posicion_ocupacional_label::Jornalero o peón",-0.133344658681607
+"salaried_year2016","posicion_ocupacional_label::Obrero o empleado de empresa particular",-0.0585921090253045
+"salaried_year2016","posicion_ocupacional_label::Obrero o empleado del gobierno",0.427358715317627
+"salaried_year2016","formal:tamano_empresa::2-3",-0.0537241113039295
+"salaried_year2016","formal:tamano_empresa::4-5",-0.151234368014366
+"salaried_year2016","formal:tamano_empresa::6-10",-0.131740345184607
+"salaried_year2016","formal:tamano_empresa::11-19",-0.157860795637402
+"salaried_year2016","formal:tamano_empresa::20-30",-0.14915287186139
+"salaried_year2016","formal:tamano_empresa::31-50",-0.115300297285248
+"salaried_year2016","formal:tamano_empresa::51-100",-0.0860840109105165
+"salaried_year2016","formal:tamano_empresa::101+",0.0114486734439527
+"salaried_year2017","tamano_empresa::2-3",0.0363864937212477
+"salaried_year2017","tamano_empresa::4-5",0.128134752124438
+"salaried_year2017","tamano_empresa::6-10",0.165551880650401
+"salaried_year2017","tamano_empresa::11-19",0.198347983878768
+"salaried_year2017","tamano_empresa::20-30",0.198602970852586
+"salaried_year2017","tamano_empresa::31-50",0.148192535354682
+"salaried_year2017","tamano_empresa::51-100",0.131129551514022
+"salaried_year2017","tamano_empresa::101+",0.119520226947078
+"salaried_year2017","formal",0.217296809961393
+"salaried_year2017","mujer",-0.105051181021508
+"salaried_year2017","edad",0.033376306137201
+"salaried_year2017","edad2",-0.000316763627127822
+"salaried_year2017","educacion::Básica primaria",-0.0762782638067579
+"salaried_year2017","educacion::Media",0.0360345595024635
+"salaried_year2017","educacion::Ninguno",-0.170916065461874
+"salaried_year2017","educacion::No sabe, no informa",0.424303259069724
+"salaried_year2017","educacion::Preescolar",-0.101024281237957
+"salaried_year2017","educacion::Superior o universitaria",0.467143719772363
+"salaried_year2017","posicion_ocupacional_label::Jornalero o peón",-0.301902239372784
+"salaried_year2017","posicion_ocupacional_label::Obrero o empleado de empresa particular",-0.240626639122043
+"salaried_year2017","posicion_ocupacional_label::Obrero o empleado del gobierno",0.217156717295666
+"salaried_year2017","formal:tamano_empresa::2-3",-0.0444642357106169
+"salaried_year2017","formal:tamano_empresa::4-5",-0.105906787548454
+"salaried_year2017","formal:tamano_empresa::6-10",-0.111327504301117
+"salaried_year2017","formal:tamano_empresa::11-19",-0.10190157086619
+"salaried_year2017","formal:tamano_empresa::20-30",-0.0933939956085208
+"salaried_year2017","formal:tamano_empresa::31-50",-0.026230985883716
+"salaried_year2017","formal:tamano_empresa::51-100",0.0137607845399099
+"salaried_year2017","formal:tamano_empresa::101+",0.073269926609683
+"salaried_year2018","tamano_empresa::2-3",0.0695044854600884
+"salaried_year2018","tamano_empresa::4-5",0.165608649934011
+"salaried_year2018","tamano_empresa::6-10",0.197256402296158
+"salaried_year2018","tamano_empresa::11-19",0.237164388638223
+"salaried_year2018","tamano_empresa::20-30",0.266654164231324
+"salaried_year2018","tamano_empresa::31-50",0.263491457722904
+"salaried_year2018","tamano_empresa::51-100",0.215739567083457
+"salaried_year2018","tamano_empresa::101+",0.214005135664007
+"salaried_year2018","formal",0.265013700528766
+"salaried_year2018","mujer",-0.100529850340827
+"salaried_year2018","edad",0.0325644250532276
+"salaried_year2018","edad2",-0.000310044132348286
+"salaried_year2018","educacion::Básica primaria",-0.0690021705476542
+"salaried_year2018","educacion::Media",0.0374876017969648
+"salaried_year2018","educacion::Ninguno",-0.173501082389172
+"salaried_year2018","educacion::No sabe, no informa",-0.13994956592942
+"salaried_year2018","educacion::Preescolar",-0.299991568163113
+"salaried_year2018","educacion::Superior o universitaria",0.448477189457434
+"salaried_year2018","posicion_ocupacional_label::Jornalero o peón",-0.101643537959452
+"salaried_year2018","posicion_ocupacional_label::Obrero o empleado de empresa particular",-0.0953814392504303
+"salaried_year2018","posicion_ocupacional_label::Obrero o empleado del gobierno",0.394719681279803
+"salaried_year2018","formal:tamano_empresa::2-3",-0.0123604447725372
+"salaried_year2018","formal:tamano_empresa::4-5",-0.103897858027975
+"salaried_year2018","formal:tamano_empresa::6-10",-0.115418153528608
+"salaried_year2018","formal:tamano_empresa::11-19",-0.120909782651653
+"salaried_year2018","formal:tamano_empresa::20-30",-0.140762538585272
+"salaried_year2018","formal:tamano_empresa::31-50",-0.121324819273796
+"salaried_year2018","formal:tamano_empresa::51-100",-0.0488904223380722
+"salaried_year2018","formal:tamano_empresa::101+",0.00894912313956375
+"salaried_year2019","tamano_empresa::2-3",0.0445275570237704
+"salaried_year2019","tamano_empresa::4-5",0.13254575937885
+"salaried_year2019","tamano_empresa::6-10",0.195935913665516
+"salaried_year2019","tamano_empresa::11-19",0.189537127140152
+"salaried_year2019","tamano_empresa::20-30",0.2132415490539
+"salaried_year2019","tamano_empresa::31-50",0.219206232655528
+"salaried_year2019","tamano_empresa::51-100",0.176307149684544
+"salaried_year2019","tamano_empresa::101+",0.167807738627187
+"salaried_year2019","formal",0.297771499239543
+"salaried_year2019","mujer",-0.0986769817485021
+"salaried_year2019","edad",0.0323670932633328
+"salaried_year2019","edad2",-0.000302586603044855
+"salaried_year2019","educacion::Básica primaria",-0.0615990418519843
+"salaried_year2019","educacion::Media",0.0435492419364135
+"salaried_year2019","educacion::Ninguno",-0.139047314929778
+"salaried_year2019","educacion::No sabe, no informa",-0.24415759627528
+"salaried_year2019","educacion::Preescolar",-0.701003614502742
+"salaried_year2019","educacion::Superior o universitaria",0.459128464947449
+"salaried_year2019","posicion_ocupacional_label::Jornalero o peón",-0.130034949006928
+"salaried_year2019","posicion_ocupacional_label::Obrero o empleado de empresa particular",-0.0436697459665357
+"salaried_year2019","posicion_ocupacional_label::Obrero o empleado del gobierno",0.484971598395683
+"salaried_year2019","formal:tamano_empresa::2-3",-0.0458186641836944
+"salaried_year2019","formal:tamano_empresa::4-5",-0.118541691241764
+"salaried_year2019","formal:tamano_empresa::6-10",-0.153879472975083
+"salaried_year2019","formal:tamano_empresa::11-19",-0.132015472994206
+"salaried_year2019","formal:tamano_empresa::20-30",-0.156876406465202
+"salaried_year2019","formal:tamano_empresa::31-50",-0.134147698806374
+"salaried_year2019","formal:tamano_empresa::51-100",-0.0506895208527753
+"salaried_year2019","formal:tamano_empresa::101+",0.00375498103017335
+"salaried_year2021","tamano_empresa::2-3",0.0367463621862225
+"salaried_year2021","tamano_empresa::4-5",0.09886496596538
+"salaried_year2021","tamano_empresa::6-10",0.141127805778335
+"salaried_year2021","tamano_empresa::11-19",0.167220123516691
+"salaried_year2021","tamano_empresa::20-30",0.155066156298274
+"salaried_year2021","tamano_empresa::31-50",0.188291520451427
+"salaried_year2021","tamano_empresa::51-100",0.244918519648108
+"salaried_year2021","tamano_empresa::101+",0.212291586819235
+"salaried_year2021","formal",0.316434532064714
+"salaried_year2021","mujer",-0.101375990709956
+"salaried_year2021","edad",0.0300365347221969
+"salaried_year2021","edad2",-0.000271095787348253
+"salaried_year2021","educacion::Básica primaria",-0.0735322411732478
+"salaried_year2021","educacion::Media",0.0447968284594725
+"salaried_year2021","educacion::Ninguno",-0.168595423575273
+"salaried_year2021","educacion::No sabe, no informa",0.0961835133562115
+"salaried_year2021","educacion::Preescolar",-0.120942774449359
+"salaried_year2021","educacion::Superior o universitaria",0.515508328722454
+"salaried_year2021","posicion_ocupacional_label::Jornalero o peón",-0.0562049797193755
+"salaried_year2021","posicion_ocupacional_label::Obrero o empleado de empresa particular",0.0107477644899796
+"salaried_year2021","posicion_ocupacional_label::Obrero o empleado del gobierno",0.268630995373067
+"salaried_year2021","formal:tamano_empresa::2-3",-0.0548717908554019
+"salaried_year2021","formal:tamano_empresa::4-5",-0.106197912974118
+"salaried_year2021","formal:tamano_empresa::6-10",-0.111878055971681
+"salaried_year2021","formal:tamano_empresa::11-19",-0.111008165794998
+"salaried_year2021","formal:tamano_empresa::20-30",-0.100911225844956
+"salaried_year2021","formal:tamano_empresa::31-50",-0.106971273067117
+"salaried_year2021","formal:tamano_empresa::51-100",-0.128096349023336
+"salaried_year2021","formal:tamano_empresa::101+",-0.0513391084195334
+"salaried_year2022","tamano_empresa::2-3",0.0481925833926602
+"salaried_year2022","tamano_empresa::4-5",0.140724154028818
+"salaried_year2022","tamano_empresa::6-10",0.180350942339571
+"salaried_year2022","tamano_empresa::11-19",0.226551303570407
+"salaried_year2022","tamano_empresa::20-30",0.242470138398794
+"salaried_year2022","tamano_empresa::31-50",0.275850256204938
+"salaried_year2022","tamano_empresa::51-100",0.187464953348437
+"salaried_year2022","tamano_empresa::101+",0.342588556004074
+"salaried_year2022","formal",0.321633697996297
+"salaried_year2022","mujer",-0.123353653307105
+"salaried_year2022","edad",0.0290384327420192
+"salaried_year2022","edad2",-0.000254447758678694
+"salaried_year2022","educacion::Básica primaria",-0.0840533994481201
+"salaried_year2022","educacion::Media",0.031339215914761
+"salaried_year2022","educacion::Ninguno",-0.179010990788372
+"salaried_year2022","educacion::No sabe, no informa",0.141164813383178
+"salaried_year2022","educacion::Preescolar",0.00713422935122018
+"salaried_year2022","educacion::Superior o universitaria",0.50395034895835
+"salaried_year2022","posicion_ocupacional_label::Jornalero o peón",-0.0445674769914384
+"salaried_year2022","posicion_ocupacional_label::Obrero o empleado de empresa particular",-0.0568839073910492
+"salaried_year2022","posicion_ocupacional_label::Obrero o empleado del gobierno",0.340860662759289
+"salaried_year2022","formal:tamano_empresa::2-3",-0.0615615413157453
+"salaried_year2022","formal:tamano_empresa::4-5",-0.15170248149221
+"salaried_year2022","formal:tamano_empresa::6-10",-0.149582275848349
+"salaried_year2022","formal:tamano_empresa::11-19",-0.194876364113457
+"salaried_year2022","formal:tamano_empresa::20-30",-0.196210662554746
+"salaried_year2022","formal:tamano_empresa::31-50",-0.194427170811359
+"salaried_year2022","formal:tamano_empresa::51-100",-0.0797991638963484
+"salaried_year2022","formal:tamano_empresa::101+",-0.152444365771176
+"salaried_year2023","tamano_empresa::2-3",0.0731335865739342
+"salaried_year2023","tamano_empresa::4-5",0.180812706954991
+"salaried_year2023","tamano_empresa::6-10",0.213636197164474
+"salaried_year2023","tamano_empresa::11-19",0.264268653491527
+"salaried_year2023","tamano_empresa::20-30",0.243461702617668
+"salaried_year2023","tamano_empresa::31-50",0.256285566004543
+"salaried_year2023","tamano_empresa::51-100",0.283281400025476
+"salaried_year2023","tamano_empresa::101+",0.317388382202255
+"salaried_year2023","formal",0.36681582376035
+"salaried_year2023","mujer",-0.112145881470736
+"salaried_year2023","edad",0.0292646567490442
+"salaried_year2023","edad2",-0.000268447698292859
+"salaried_year2023","educacion::Básica primaria",-0.0697291328281285
+"salaried_year2023","educacion::Media",0.0323697759222072
+"salaried_year2023","educacion::Ninguno",-0.147537600784299
+"salaried_year2023","educacion::No sabe, no informa",0.720901561959485
+"salaried_year2023","educacion::Preescolar",-0.275605230743007
+"salaried_year2023","educacion::Superior o universitaria",0.48041986171553
+"salaried_year2023","posicion_ocupacional_label::Jornalero o peón",0.134291378120661
+"salaried_year2023","posicion_ocupacional_label::Obrero o empleado de empresa particular",0.127976087056285
+"salaried_year2023","posicion_ocupacional_label::Obrero o empleado del gobierno",0.587733906479946
+"salaried_year2023","formal:tamano_empresa::2-3",-0.0788775649038564
+"salaried_year2023","formal:tamano_empresa::4-5",-0.174230936915064
+"salaried_year2023","formal:tamano_empresa::6-10",-0.176621084674949
+"salaried_year2023","formal:tamano_empresa::11-19",-0.217212430169473
+"salaried_year2023","formal:tamano_empresa::20-30",-0.174305527842862
+"salaried_year2023","formal:tamano_empresa::31-50",-0.177549371689228
+"salaried_year2023","formal:tamano_empresa::51-100",-0.180584257011596
+"salaried_year2023","formal:tamano_empresa::101+",-0.129973830180049
+"salaried_year2024","tamano_empresa::2-3",0.0276913284527913
+"salaried_year2024","tamano_empresa::4-5",0.139199663648631
+"salaried_year2024","tamano_empresa::6-10",0.185108506815092
+"salaried_year2024","tamano_empresa::11-19",0.203380644687036
+"salaried_year2024","tamano_empresa::20-30",0.245700079368238
+"salaried_year2024","tamano_empresa::31-50",0.247713295768094
+"salaried_year2024","tamano_empresa::51-100",0.287432591718963
+"salaried_year2024","tamano_empresa::101+",0.268778908631498
+"salaried_year2024","formal",0.308004953482047
+"salaried_year2024","mujer",-0.0940765114624876
+"salaried_year2024","edad",0.0256804064599807
+"salaried_year2024","edad2",-0.000230051692560062
+"salaried_year2024","educacion::Básica primaria",-0.0685237649484072
+"salaried_year2024","educacion::Media",0.0328337850232079
+"salaried_year2024","educacion::Ninguno",-0.164231085970153
+"salaried_year2024","educacion::No sabe, no informa",-0.695555612636043
+"salaried_year2024","educacion::Preescolar",0.0467823852383009
+"salaried_year2024","educacion::Superior o universitaria",0.461976228182893
+"salaried_year2024","posicion_ocupacional_label::Jornalero o peón",-0.0702626807118163
+"salaried_year2024","posicion_ocupacional_label::Obrero o empleado de empresa particular",-0.0227844933990144
+"salaried_year2024","posicion_ocupacional_label::Obrero o empleado del gobierno",0.454219218079803
+"salaried_year2024","formal:tamano_empresa::2-3",-0.0510515800435209
+"salaried_year2024","formal:tamano_empresa::4-5",-0.134864291234491
+"salaried_year2024","formal:tamano_empresa::6-10",-0.138945230646186
+"salaried_year2024","formal:tamano_empresa::11-19",-0.143828290058299
+"salaried_year2024","formal:tamano_empresa::20-30",-0.18655949201222
+"salaried_year2024","formal:tamano_empresa::31-50",-0.160256538047269
+"salaried_year2024","formal:tamano_empresa::51-100",-0.173101342781713
+"salaried_year2024","formal:tamano_empresa::101+",-0.0779212414079069
+"salaried_year2025","tamano_empresa::2-3",0.0391642214956638
+"salaried_year2025","tamano_empresa::4-5",0.151463757035854
+"salaried_year2025","tamano_empresa::6-10",0.207222885356074
+"salaried_year2025","tamano_empresa::11-19",0.245506228886158
+"salaried_year2025","tamano_empresa::20-30",0.217289299973592
+"salaried_year2025","tamano_empresa::31-50",0.182576619015504
+"salaried_year2025","tamano_empresa::51-100",0.304683434883595
+"salaried_year2025","tamano_empresa::101+",0.329703443138856
+"salaried_year2025","formal",0.338218049672827
+"salaried_year2025","mujer",-0.0951563197365941
+"salaried_year2025","edad",0.026029263767163
+"salaried_year2025","edad2",-0.000238628246589556
+"salaried_year2025","educacion::Básica primaria",-0.0721202032038686
+"salaried_year2025","educacion::Media",0.0256563527566224
+"salaried_year2025","educacion::Ninguno",-0.154473426265348
+"salaried_year2025","educacion::Preescolar",-0.245672317783361
+"salaried_year2025","educacion::Superior o universitaria",0.438571338446555
+"salaried_year2025","posicion_ocupacional_label::Jornalero o peón",-0.498370213520004
+"salaried_year2025","posicion_ocupacional_label::Obrero o empleado de empresa particular",-0.467849033766107
+"salaried_year2025","posicion_ocupacional_label::Obrero o empleado del gobierno",0.0306845848845316
+"salaried_year2025","formal:tamano_empresa::2-3",-0.073291449756459
+"salaried_year2025","formal:tamano_empresa::4-5",-0.134219330632352
+"salaried_year2025","formal:tamano_empresa::6-10",-0.178221527384943
+"salaried_year2025","formal:tamano_empresa::11-19",-0.186148472504781
+"salaried_year2025","formal:tamano_empresa::20-30",-0.160098061141648
+"salaried_year2025","formal:tamano_empresa::31-50",-0.0929192702438009
+"salaried_year2025","formal:tamano_empresa::51-100",-0.188516411954918
+"salaried_year2025","formal:tamano_empresa::101+",-0.158416256771535
+"all_endpoints","tamano_empresa::2-3",0.059582439065981
+"all_endpoints","tamano_empresa::4-5",0.212800307823128
+"all_endpoints","tamano_empresa::6-10",0.248148492257254
+"all_endpoints","tamano_empresa::11-19",0.304280929116536
+"all_endpoints","tamano_empresa::20-30",0.359993299662128
+"all_endpoints","tamano_empresa::31-50",0.32571412593861
+"all_endpoints","tamano_empresa::51-100",0.349626405577737
+"all_endpoints","tamano_empresa::101+",0.304179904699083
+"all_endpoints","formal",0.42149517560672
+"all_endpoints","mujer",-0.200174922704439
+"all_endpoints","edad",0.0410713184627417
+"all_endpoints","edad2",-0.000402063460990488
+"all_endpoints","educacion::Básica primaria",-0.138452041705052
+"all_endpoints","educacion::Media",0.140472610377608
+"all_endpoints","educacion::Ninguno",-0.328129879997694
+"all_endpoints","educacion::No sabe, no informa",0.10708028368284
+"all_endpoints","educacion::Preescolar",0.456715403453535
+"all_endpoints","educacion::Superior o universitaria",0.66492787930006
+"all_endpoints","posicion_ocupacional_label::Jornalero o peón",0.00225215452386296
+"all_endpoints","posicion_ocupacional_label::Obrero o empleado de empresa particular",-0.0931626298638671
+"all_endpoints","posicion_ocupacional_label::Obrero o empleado del gobierno",0.129713597723567
+"all_endpoints","posicion_ocupacional_label::Otro",-0.179836929793079
+"all_endpoints","posicion_ocupacional_label::Patrón o empleador",0.56965833905887
+"all_endpoints","posicion_ocupacional_label::Trabajador familiar sin remuneración",-1.21361893478467
+"all_endpoints","posicion_ocupacional_label::Trabajador por cuenta propia",-0.0423273136829798
+"all_endpoints","posicion_ocupacional_label::Trabajador sin remuneración en otros hogares",-0.905792063959082
+"all_endpoints","formal:tamano_empresa::2-3",-0.186406061225016
+"all_endpoints","formal:tamano_empresa::4-5",-0.268249410896054
+"all_endpoints","formal:tamano_empresa::6-10",-0.247346291165909
+"all_endpoints","formal:tamano_empresa::11-19",-0.270968715535256
+"all_endpoints","formal:tamano_empresa::20-30",-0.339497804389385
+"all_endpoints","formal:tamano_empresa::31-50",-0.302563669745723
+"all_endpoints","formal:tamano_empresa::51-100",-0.313405843319225
+"all_endpoints","formal:tamano_empresa::101+",-0.18510037773115
+"all_endpoints","post:tamano_empresa::2-3",0.111529393596402
+"all_endpoints","post:tamano_empresa::4-5",0.104929000579337
+"all_endpoints","post:tamano_empresa::6-10",0.140113509835366
+"all_endpoints","post:tamano_empresa::11-19",0.100351762549503
+"all_endpoints","post:tamano_empresa::20-30",0.0115488995173246
+"all_endpoints","post:tamano_empresa::31-50",0.0346472956542404
+"all_endpoints","post:tamano_empresa::51-100",0.040068527313549
+"all_endpoints","post:tamano_empresa::101+",0.151621787961098
+"all_endpoints","formal:post",0.144074568757858
+"all_endpoints","mujer:post",0.0224392076474094
+"all_endpoints","edad:post",-0.0115533814076693
+"all_endpoints","edad2:post",9.78398997207557e-05
+"all_endpoints","post:educacion::Básica primaria",0.0507010486313334
+"all_endpoints","post:educacion::Media",-0.0773541166756479
+"all_endpoints","post:educacion::Ninguno",0.117072158117307
+"all_endpoints","post:educacion::Preescolar",-0.963330302571297
+"all_endpoints","post:educacion::Superior o universitaria",-0.197126280385074
+"all_endpoints","post:posicion_ocupacional_label::Empleado doméstico",-0.293357944009302
+"all_endpoints","post:posicion_ocupacional_label::Jornalero o peón",-0.00470617785531977
+"all_endpoints","post:posicion_ocupacional_label::Obrero o empleado de empresa particular",0.00551720852315896
+"all_endpoints","post:posicion_ocupacional_label::Obrero o empleado del gobierno",0.127776082386665
+"all_endpoints","post:posicion_ocupacional_label::Otro",-0.223602626249665
+"all_endpoints","post:posicion_ocupacional_label::Patrón o empleador",-0.0998068354989557
+"all_endpoints","formal:post:tamano_empresa::2-3",-0.10019403415154
+"all_endpoints","formal:post:tamano_empresa::4-5",-0.0768624101066919
+"all_endpoints","formal:post:tamano_empresa::6-10",-0.148250658470745
+"all_endpoints","formal:post:tamano_empresa::11-19",-0.106165557687904
+"all_endpoints","formal:post:tamano_empresa::20-30",-0.0220297266937095
+"all_endpoints","formal:post:tamano_empresa::31-50",-0.017752287342832
+"all_endpoints","formal:post:tamano_empresa::51-100",-0.0157908829639108
+"all_endpoints","formal:post:tamano_empresa::101+",-0.143809367941884
+"salaried_endpoints","tamano_empresa::2-3",-0.0315194182196583
+"salaried_endpoints","tamano_empresa::4-5",0.0841144309209634
+"salaried_endpoints","tamano_empresa::6-10",0.147533770679714
+"salaried_endpoints","tamano_empresa::11-19",0.204357904937947
+"salaried_endpoints","tamano_empresa::20-30",0.243064778167385
+"salaried_endpoints","tamano_empresa::31-50",0.187184882475114
+"salaried_endpoints","tamano_empresa::51-100",0.238674709161422
+"salaried_endpoints","tamano_empresa::101+",0.184500864781654
+"salaried_endpoints","formal",0.356998337662944
+"salaried_endpoints","mujer",-0.127773549403429
+"salaried_endpoints","edad",0.03800965878308
+"salaried_endpoints","edad2",-0.000365180002074685
+"salaried_endpoints","educacion::Básica primaria",-0.10080463204976
+"salaried_endpoints","educacion::Media",0.0912649023858234
+"salaried_endpoints","educacion::Ninguno",-0.218946935875652
+"salaried_endpoints","educacion::No sabe, no informa",0.125754859401705
+"salaried_endpoints","educacion::Preescolar",0.181181229641532
+"salaried_endpoints","educacion::Superior o universitaria",0.589673300952663
+"salaried_endpoints","posicion_ocupacional_label::Jornalero o peón",-0.0224901893404506
+"salaried_endpoints","posicion_ocupacional_label::Obrero o empleado de empresa particular",0.0998062892563092
+"salaried_endpoints","posicion_ocupacional_label::Obrero o empleado del gobierno",0.391777021086752
+"salaried_endpoints","formal:tamano_empresa::2-3",-0.11343247029863
+"salaried_endpoints","formal:tamano_empresa::4-5",-0.211917623377499
+"salaried_endpoints","formal:tamano_empresa::6-10",-0.187114768969057
+"salaried_endpoints","formal:tamano_empresa::11-19",-0.206242503258999
+"salaried_endpoints","formal:tamano_empresa::20-30",-0.261424319996362
+"salaried_endpoints","formal:tamano_empresa::31-50",-0.196180981213526
+"salaried_endpoints","formal:tamano_empresa::51-100",-0.229950784496694
+"salaried_endpoints","formal:tamano_empresa::101+",-0.0994057567011026
+"salaried_endpoints","post:tamano_empresa::2-3",0.0706836397152983
+"salaried_endpoints","post:tamano_empresa::4-5",0.0673493261148774
+"salaried_endpoints","post:tamano_empresa::6-10",0.0596891146763232
+"salaried_endpoints","post:tamano_empresa::11-19",0.0411483239481987
+"salaried_endpoints","post:tamano_empresa::20-30",-0.0257754781938146
+"salaried_endpoints","post:tamano_empresa::31-50",-0.00460826345962406
+"salaried_endpoints","post:tamano_empresa::51-100",0.0660087257221225
+"salaried_endpoints","post:tamano_empresa::101+",0.145202578357161
+"salaried_endpoints","formal:post",-0.0187802879901255
+"salaried_endpoints","mujer:post",0.0326172296668365
+"salaried_endpoints","edad:post",-0.0119803950159186
+"salaried_endpoints","edad2:post",0.000126551755485146
+"salaried_endpoints","post:educacion::Básica primaria",0.0286844288458928
+"salaried_endpoints","post:educacion::Media",-0.0656085496292007
+"salaried_endpoints","post:educacion::Ninguno",0.0644735096103025
+"salaried_endpoints","post:educacion::Preescolar",-0.426853547424892
+"salaried_endpoints","post:educacion::Superior o universitaria",-0.151101962506112
+"salaried_endpoints","post:posicion_ocupacional_label::Empleado doméstico",0.361092436113658
+"salaried_endpoints","post:posicion_ocupacional_label::Jornalero o peón",-0.114787587978841
+"salaried_endpoints","post:posicion_ocupacional_label::Obrero o empleado de empresa particular",-0.206562886821161
+"salaried_endpoints","formal:post:tamano_empresa::2-3",0.0401410205421513
+"salaried_endpoints","formal:post:tamano_empresa::4-5",0.0776982927451542
+"salaried_endpoints","formal:post:tamano_empresa::6-10",0.00889324158410432
+"salaried_endpoints","formal:post:tamano_empresa::11-19",0.0200940307542368
+"salaried_endpoints","formal:post:tamano_empresa::20-30",0.101326258854698
+"salaried_endpoints","formal:post:tamano_empresa::31-50",0.10326171096974
+"salaried_endpoints","formal:post:tamano_empresa::51-100",0.0414343725417936
+"salaried_endpoints","formal:post:tamano_empresa::101+",-0.0590105000704355

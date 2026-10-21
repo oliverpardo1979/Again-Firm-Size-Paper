@@ -146,6 +146,48 @@ For a complete rebuild, run the regression table updater before
 `validate_regression_outputs.py`. That validator checks agreement between
 the regression and income-scenario outputs from the same harmonization version.
 
+## Salaried Dynamics and Income Scenarios
+
+After generating the corrected preferred models, salaried model, and
+income-counterfactual cache, run:
+
+```sh
+Rscript --vanilla replication/salaried_extensions.R
+python replication/validate_salaried_extensions.py
+python replication/build_salaried_extensions_tables.py
+python replication/validate_salaried_extensions.py --manuscript
+```
+
+The estimator reads the existing, signature-checked regression and income
+caches. It re-estimates the pooled preferred specification and every annual
+model on salaried workers, retaining the occupational-position control.
+Joint 2008/2025 regressions interact all slopes with year and retain cross-year
+cluster covariance. The exported endpoint tests use sector-department, sector,
+department, and two-way clustering. Annual and joint endpoint coefficients
+must agree. Comparisons also retain 11--19 as an alternative reference.
+
+Income scenarios use each population's own pooled coefficients and fitted
+fixed effects on its 2025 workers. Both numerator and denominator refer to
+the population indicated, not always to the whole workforce. The restricted
+2025 estimation sample contains 185,829 observations, representing 12.71
+million employees. Full-sample totals represent 22.59 million workers. The
+four scenarios preserve hours, other worker characteristics, occupational
+position, sector, and department. A separate `Salaried_full_coefficients`
+calculation applies the full-sample predictions to the employee population
+to distinguish a population change from re-estimation. It is not a causal
+decomposition. Observed-income and destination-support checks are also
+exported, but the main comparison tables use predicted incomes and
+unrestricted assignments, as in the full-sample exercise.
+
+Only aggregate results are committed in `salaried_extensions_output/`.
+Private fitted-income and model caches remain ignored under
+`build/salaried_extensions/`. The validator independently reconstructs
+endpoint tests from covariance matrices and income changes from
+origin-destination income totals and model coefficients. It also checks
+agreement with existing full-sample outputs. The manuscript option checks
+the two generated tables, their placement and references, and key numerical
+claims. No existing regression table or figure is replaced.
+
 ## Preferred-Model Extensions
 
 The main results now use the preferred controls for within-formality premiums,

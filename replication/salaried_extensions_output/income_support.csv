@@ -1,0 +1,13 @@
+"sample","scenario","absent_destination_pct_of_movers","fewer_than_30_pct_of_movers"
+"All","formalize_same_size",5.99890505177962,66.1366818043432
+"All","formal_to_101",6.87141567867341,25.1445435719147
+"All","informal_to_101",39.1262184909267,100
+"All","combined_formal_101",17.284877599193,63.0678235613757
+"Salaried","formalize_same_size",3.59921352175911,62.1868145480958
+"Salaried","formal_to_101",3.65874035111644,8.33028581559305
+"Salaried","informal_to_101",30.6932741760709,100
+"Salaried","combined_formal_101",10.2517636625367,22.2168240413625
+"Salaried_full_coefficients","formalize_same_size",3.59921352175911,62.1868145480958
+"Salaried_full_coefficients","formal_to_101",3.65874035111644,8.33028581559305
+"Salaried_full_coefficients","informal_to_101",30.6932741760709,100
+"Salaried_full_coefficients","combined_formal_101",10.2517636625367,22.2168240413625
