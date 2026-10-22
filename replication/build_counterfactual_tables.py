@@ -34,7 +34,7 @@ assert math.isclose(total_workers, sample["target_weight_sum"], rel_tol=1e-12)
 profiles = {(r["size"], int(r["formal"])): float(r["log_profile"])
             for r in read("estimated_size_formality_profiles.csv")}
 diagnostics = {r["scenario"]: r for r in read("support_diagnostics.csv")}
-assert sum(int(g["n"]) for g in groups) == 341282
+assert sum(int(g["n"]) for g in groups) == 341056
 assert math.isclose(sum(float(g["worker_share_pct"]) for g in groups), 100, abs_tol=1e-9)
 checks = read("coefficient_replication_check.csv")
 assert len(checks) == 8

@@ -20,7 +20,7 @@ OUT = ROOT / "replication/inference_audit_output"
 CACHE = ROOT / "build/inference_audit"
 OUT.mkdir(exist_ok=True)
 CACHE.mkdir(exist_ok=True)
-SOURCE = ROOT.parent / "CJC-Monitor/Datos/Processed/Paper-GEIH_base_modelo_personas_2008_2025.dta"
+SOURCE = ROOT / "data/GEIH_primary_income_2008_2025.dta"
 coefs = pd.read_csv(ROOT / "replication/preferred_output/coefficients.csv")
 terms = coefs.loc[coefs.model.eq("preferred"), "term"].tolist()
 all_terms = terms + ["log_size", "formal:log_size"]
@@ -52,10 +52,7 @@ else:
             ok &= chunk.fex.gt(0) & chunk.educacion.ne("") & chunk.sector.ne("")
             d = chunk.loc[ok].copy()
             assert not d.anio.eq(2020).any()
-            modern = d.anio.ge(2021)
-            raw_occ = d.posicion_ocupacional_label.copy()
-            d.loc[modern & raw_occ.eq(occupation[6]), "posicion_ocupacional_label"] = occupation[7]
-            d.loc[modern & raw_occ.eq(occupation[7]), "posicion_ocupacional_label"] = occupation[8]
+            # The corrected input already uses aligned occupational-position codes.
             assert d.posicion_ocupacional_label.isin(occupation).all()
             vals = {}
             for name in all_terms:
@@ -97,9 +94,9 @@ else:
     (CACHE / "cell_keys.json").write_text(json.dumps(keys), encoding="utf-8")
     (CACHE / "signature.json").write_text(json.dumps(signature), encoding="utf-8")
 
-assert counts.sum() == 5268514, counts.sum()
+assert counts.sum() == 5426316, counts.sum()
 keep = counts > 1
-assert counts[keep].sum() == 5268375
+assert counts[keep].sum() == 5426174
 moments, counts = moments[keep], counts[keep]
 keys = [k for k, take in zip(keys, keep) if take]
 within = moments[:, 1:, 1:] - (moments[:, 1:, :1] @ moments[:, :1, 1:]) / moments[:, :1, :1]

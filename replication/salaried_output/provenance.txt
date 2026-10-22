@@ -1,4 +1,4 @@
-Occupation harmonization: P6430-framework-2026-10-11-v1
+Occupation harmonization: P6430-framework-2026-10-21-v2
 Employees: private-sector, government, domestic, and day laborers. Formal and informal workers retained.
 Same pooled preferred controls. One size-by-formality regression for the employee sample.
 Same wage/hour measurement. 11-19 is the fitted reference; other bases are linear contrasts.
@@ -16,7 +16,7 @@ locale:
 [3] LC_MONETARY=C                       LC_NUMERIC=C
 [5] LC_TIME=C
 
-time zone: America/Bogota
+time zone: America/Mexico_City
 tzcode source: internal
 
 attached base packages:

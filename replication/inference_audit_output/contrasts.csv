@@ -22,74 +22,74 @@ preferred,Informal 101+/31-50,v07,1.0,tamano_empresa::101+
 preferred,Informal 101+/51-100,v06,-1.0,tamano_empresa::51-100
 preferred,Informal 101+/51-100,v07,1.0,tamano_empresa::101+
 preferred,Formal 2-3/solo,v00,1.0,tamano_empresa::2-3
-preferred,Formal 2-3/solo,v26,1.0,formal:tamano_empresa::2-3
+preferred,Formal 2-3/solo,v25,1.0,formal:tamano_empresa::2-3
 preferred,Formal 4-5/solo,v01,1.0,tamano_empresa::4-5
-preferred,Formal 4-5/solo,v27,1.0,formal:tamano_empresa::4-5
+preferred,Formal 4-5/solo,v26,1.0,formal:tamano_empresa::4-5
 preferred,Formal 6-10/solo,v02,1.0,tamano_empresa::6-10
-preferred,Formal 6-10/solo,v28,1.0,formal:tamano_empresa::6-10
+preferred,Formal 6-10/solo,v27,1.0,formal:tamano_empresa::6-10
 preferred,Formal 11-19/solo,v03,1.0,tamano_empresa::11-19
-preferred,Formal 11-19/solo,v29,1.0,formal:tamano_empresa::11-19
+preferred,Formal 11-19/solo,v28,1.0,formal:tamano_empresa::11-19
 preferred,Formal 20-30/solo,v04,1.0,tamano_empresa::20-30
-preferred,Formal 20-30/solo,v30,1.0,formal:tamano_empresa::20-30
+preferred,Formal 20-30/solo,v29,1.0,formal:tamano_empresa::20-30
 preferred,Formal 31-50/solo,v05,1.0,tamano_empresa::31-50
-preferred,Formal 31-50/solo,v31,1.0,formal:tamano_empresa::31-50
+preferred,Formal 31-50/solo,v30,1.0,formal:tamano_empresa::31-50
 preferred,Formal 51-100/solo,v06,1.0,tamano_empresa::51-100
-preferred,Formal 51-100/solo,v32,1.0,formal:tamano_empresa::51-100
+preferred,Formal 51-100/solo,v31,1.0,formal:tamano_empresa::51-100
 preferred,Formal 101+/solo,v07,1.0,tamano_empresa::101+
-preferred,Formal 101+/solo,v33,1.0,formal:tamano_empresa::101+
+preferred,Formal 101+/solo,v32,1.0,formal:tamano_empresa::101+
 preferred,Formal 101+/2-3,v00,-1.0,tamano_empresa::2-3
 preferred,Formal 101+/2-3,v07,1.0,tamano_empresa::101+
-preferred,Formal 101+/2-3,v26,-1.0,formal:tamano_empresa::2-3
-preferred,Formal 101+/2-3,v33,1.0,formal:tamano_empresa::101+
+preferred,Formal 101+/2-3,v25,-1.0,formal:tamano_empresa::2-3
+preferred,Formal 101+/2-3,v32,1.0,formal:tamano_empresa::101+
 preferred,Formal 101+/4-5,v01,-1.0,tamano_empresa::4-5
 preferred,Formal 101+/4-5,v07,1.0,tamano_empresa::101+
-preferred,Formal 101+/4-5,v27,-1.0,formal:tamano_empresa::4-5
-preferred,Formal 101+/4-5,v33,1.0,formal:tamano_empresa::101+
+preferred,Formal 101+/4-5,v26,-1.0,formal:tamano_empresa::4-5
+preferred,Formal 101+/4-5,v32,1.0,formal:tamano_empresa::101+
 preferred,Formal 101+/6-10,v02,-1.0,tamano_empresa::6-10
 preferred,Formal 101+/6-10,v07,1.0,tamano_empresa::101+
-preferred,Formal 101+/6-10,v28,-1.0,formal:tamano_empresa::6-10
-preferred,Formal 101+/6-10,v33,1.0,formal:tamano_empresa::101+
+preferred,Formal 101+/6-10,v27,-1.0,formal:tamano_empresa::6-10
+preferred,Formal 101+/6-10,v32,1.0,formal:tamano_empresa::101+
 preferred,Formal 101+/11-19,v03,-1.0,tamano_empresa::11-19
 preferred,Formal 101+/11-19,v07,1.0,tamano_empresa::101+
-preferred,Formal 101+/11-19,v29,-1.0,formal:tamano_empresa::11-19
-preferred,Formal 101+/11-19,v33,1.0,formal:tamano_empresa::101+
+preferred,Formal 101+/11-19,v28,-1.0,formal:tamano_empresa::11-19
+preferred,Formal 101+/11-19,v32,1.0,formal:tamano_empresa::101+
 preferred,Formal 101+/20-30,v04,-1.0,tamano_empresa::20-30
 preferred,Formal 101+/20-30,v07,1.0,tamano_empresa::101+
-preferred,Formal 101+/20-30,v30,-1.0,formal:tamano_empresa::20-30
-preferred,Formal 101+/20-30,v33,1.0,formal:tamano_empresa::101+
+preferred,Formal 101+/20-30,v29,-1.0,formal:tamano_empresa::20-30
+preferred,Formal 101+/20-30,v32,1.0,formal:tamano_empresa::101+
 preferred,Formal 101+/31-50,v05,-1.0,tamano_empresa::31-50
 preferred,Formal 101+/31-50,v07,1.0,tamano_empresa::101+
-preferred,Formal 101+/31-50,v31,-1.0,formal:tamano_empresa::31-50
-preferred,Formal 101+/31-50,v33,1.0,formal:tamano_empresa::101+
+preferred,Formal 101+/31-50,v30,-1.0,formal:tamano_empresa::31-50
+preferred,Formal 101+/31-50,v32,1.0,formal:tamano_empresa::101+
 preferred,Formal 101+/51-100,v06,-1.0,tamano_empresa::51-100
 preferred,Formal 101+/51-100,v07,1.0,tamano_empresa::101+
-preferred,Formal 101+/51-100,v32,-1.0,formal:tamano_empresa::51-100
-preferred,Formal 101+/51-100,v33,1.0,formal:tamano_empresa::101+
-preferred,Formal-minus-informal 101+/solo,v33,1.0,formal:tamano_empresa::101+
+preferred,Formal 101+/51-100,v31,-1.0,formal:tamano_empresa::51-100
+preferred,Formal 101+/51-100,v32,1.0,formal:tamano_empresa::101+
+preferred,Formal-minus-informal 101+/solo,v32,1.0,formal:tamano_empresa::101+
 preferred,Formal-informal at Solo,v08,1.0,formal
 preferred,Formal-informal at 2-3,v08,1.0,formal
-preferred,Formal-informal at 2-3,v26,1.0,formal:tamano_empresa::2-3
+preferred,Formal-informal at 2-3,v25,1.0,formal:tamano_empresa::2-3
 preferred,Formal-informal at 4-5,v08,1.0,formal
-preferred,Formal-informal at 4-5,v27,1.0,formal:tamano_empresa::4-5
+preferred,Formal-informal at 4-5,v26,1.0,formal:tamano_empresa::4-5
 preferred,Formal-informal at 6-10,v08,1.0,formal
-preferred,Formal-informal at 6-10,v28,1.0,formal:tamano_empresa::6-10
+preferred,Formal-informal at 6-10,v27,1.0,formal:tamano_empresa::6-10
 preferred,Formal-informal at 11-19,v08,1.0,formal
-preferred,Formal-informal at 11-19,v29,1.0,formal:tamano_empresa::11-19
+preferred,Formal-informal at 11-19,v28,1.0,formal:tamano_empresa::11-19
 preferred,Formal-informal at 20-30,v08,1.0,formal
-preferred,Formal-informal at 20-30,v30,1.0,formal:tamano_empresa::20-30
+preferred,Formal-informal at 20-30,v29,1.0,formal:tamano_empresa::20-30
 preferred,Formal-informal at 31-50,v08,1.0,formal
-preferred,Formal-informal at 31-50,v31,1.0,formal:tamano_empresa::31-50
+preferred,Formal-informal at 31-50,v30,1.0,formal:tamano_empresa::31-50
 preferred,Formal-informal at 51-100,v08,1.0,formal
-preferred,Formal-informal at 51-100,v32,1.0,formal:tamano_empresa::51-100
+preferred,Formal-informal at 51-100,v31,1.0,formal:tamano_empresa::51-100
 preferred,Formal-informal at 101+,v08,1.0,formal
-preferred,Formal-informal at 101+,v33,1.0,formal:tamano_empresa::101+
+preferred,Formal-informal at 101+,v32,1.0,formal:tamano_empresa::101+
 endpoints,Informal change 101+/solo 2008-2025,v07,-1.0,2008:tamano_empresa::101+
-endpoints,Informal change 101+/solo 2008-2025,v41,1.0,2025:tamano_empresa::101+
+endpoints,Informal change 101+/solo 2008-2025,v40,1.0,2025:tamano_empresa::101+
 endpoints,Formal change 101+/solo 2008-2025,v07,-1.0,2008:tamano_empresa::101+
-endpoints,Formal change 101+/solo 2008-2025,v33,-1.0,2008:formal:tamano_empresa::101+
-endpoints,Formal change 101+/solo 2008-2025,v41,1.0,2025:tamano_empresa::101+
-endpoints,Formal change 101+/solo 2008-2025,v64,1.0,2025:formal:tamano_empresa::101+
-elasticity,Informal elasticity,v18,1.0,log_size
-elasticity,Formal elasticity,v18,1.0,log_size
-elasticity,Formal elasticity,v19,1.0,formal:log_size
-elasticity,Formal-minus-informal elasticity,v19,1.0,formal:log_size
+endpoints,Formal change 101+/solo 2008-2025,v32,-1.0,2008:formal:tamano_empresa::101+
+endpoints,Formal change 101+/solo 2008-2025,v40,1.0,2025:tamano_empresa::101+
+endpoints,Formal change 101+/solo 2008-2025,v63,1.0,2025:formal:tamano_empresa::101+
+elasticity,Informal elasticity,v17,1.0,log_size
+elasticity,Formal elasticity,v17,1.0,log_size
+elasticity,Formal elasticity,v18,1.0,formal:log_size
+elasticity,Formal-minus-informal elasticity,v18,1.0,formal:log_size

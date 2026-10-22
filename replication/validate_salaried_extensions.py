@@ -219,7 +219,7 @@ for row in read("replication_checks"):
     assert abs(float(row["error"])) < float(row["tolerance"])
 for row in read("sample_audit"):
     close(row["workers_2025"], float(row["formal_workers_2025"]) + float(row["informal_workers_2025"]), "sample partition", 1e-5)
-    expected = {"All": (5268375, 341282), "Salaried": (2682009, 185829)}[row["sample"]]
+    expected = {"All": (5426174, 341056), "Salaried": (2765713, 185827)}[row["sample"]]
     assert (int(row["pooled_observations"]), int(row["observations_2025"])) == expected
 
 manuscript_checks = ""
@@ -264,9 +264,9 @@ if "--manuscript" in sys.argv:
     assert r"\ref{eq:income-counterfactual}" in income_text
     assert r"\ref{eq:main}" in income_text
     plain = " ".join(subsection.split())
-    for claim in ("20.3 percent in 2008", "39.1 percent in 2025", "18.8 percentage points",
-                  "8.9 to 18.7 percent", r"p=0.038", r"p=0.094", r"p=0.404", r"p=0.027",
-                  "12.71 million", "7.68 million", "25.6 percent", "11.9 percent", "12.6 percent",
+    for claim in ("22.9 percent in 2008", "39.0 percent in 2025", "16.1 percentage points",
+                  "15.4 to 19.0 percent", r"p=0.061", r"p=0.498", r"p=0.117", r"p=0.082",
+                  "12.71 million", "7.68 million", "26.5 percent", "12.3 percent", "13.0 percent",
                   "32.4 percent rather than 55.1 percent"):
         assert claim in plain, claim
     abstract = lambda name: re.search(r"\\begin\{abstract\}(.*?)\\end\{abstract\}",

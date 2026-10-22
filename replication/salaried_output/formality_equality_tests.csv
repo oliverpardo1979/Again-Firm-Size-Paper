@@ -1,9 +1,9 @@
 "sample","clustering","test","estimate","std.error","statistic","df_num","df_den","p.value"
-"All","Sector-department","101+/solo equality",-0.163108886398039,0.0352199455313224,-4.63115101222914,NA,558,4.52891537272526e-06
-"All","Sector-department","Joint profile equality",NA,NA,26.4905999674812,8,558,7.7863422503812e-35
-"All","Sector","101+/solo equality",-0.163108886398039,0.0806916919580652,-2.02138389269127,NA,16,0.0602966874356907
-"All","Sector","Joint profile equality",NA,NA,19.3899669698828,8,16,7.43233574555395e-07
-"Salaried","Sector-department","101+/solo equality",-0.00370380944632576,0.0286535995021054,-0.129261576579711,NA,554,0.897197588427996
-"Salaried","Sector-department","Joint profile equality",NA,NA,19.4195556232604,8,554,7.23766538471677e-26
-"Salaried","Sector","101+/solo equality",-0.00370380944632576,0.028447663195935,-0.130197317818885,NA,16,0.898033160817595
-"Salaried","Sector","Joint profile equality",NA,NA,33.6876636688314,8,16,1.37736324272669e-08
+"All","Sector-department","101+/solo equality",-0.15578501871434,0.035106222625295,-4.43753292335396,NA,558,1.09681910046052e-05
+"All","Sector-department","Joint profile equality",NA,NA,27.10098725931,8,558,1.40100305694094e-35
+"All","Sector","101+/solo equality",-0.15578501871434,0.0801660654448323,-1.9432788406155,NA,16,0.0697889811958913
+"All","Sector","Joint profile equality",NA,NA,23.7320521253034,8,16,1.77314546683974e-07
+"Salaried","Sector-department","101+/solo equality",-0.00413790545768755,0.0292797891955731,-0.141322925177111,NA,554,0.887666212673311
+"Salaried","Sector-department","Joint profile equality",NA,NA,20.58074026354,8,554,2.25001020187434e-27
+"Salaried","Sector","101+/solo equality",-0.00413790545768755,0.0298490385179234,-0.138627763678313,NA,16,0.891474097398179
+"Salaried","Sector","Joint profile equality",NA,NA,33.8112188920736,8,16,1.34052810026409e-08

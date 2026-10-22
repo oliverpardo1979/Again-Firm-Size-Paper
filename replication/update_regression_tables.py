@@ -134,6 +134,7 @@ for ref, suffix in [("Solo", ""), ("101+", "_101_reference"), ("11-19", "_11_19_
             count += 1
     assert count == 16
     path.write_text("\n".join(lines)+"\n", encoding="utf-8", newline="\n")
+    patch_rows(path.name, {}, stats=[f"geo_interacted{k}" for k in range(1, 5)])
 
 rows = {}
 for r in read("formal_101_contrasts"):

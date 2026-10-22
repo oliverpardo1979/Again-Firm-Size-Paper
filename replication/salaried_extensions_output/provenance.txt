@@ -1,5 +1,5 @@
-Run: 2026-10-20 21:15:29.261067
-Occupation recoding: P6430-framework-2026-10-11-v1
+Run: 2026-10-21 23:31:58.890465
+Occupation recoding: P6430-framework-2026-10-21-v2
 Salaried employees: private-sector, government, domestic, and day laborers, with formal and informal jobs retained.
 Same preferred specification, expansion weights, pooled years and singleton exclusions as the existing salaried exercise.
 Annual regressions let every slope vary across years. Joint endpoint model preserves within-cluster cross-year covariance.

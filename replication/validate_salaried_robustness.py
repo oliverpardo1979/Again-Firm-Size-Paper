@@ -61,18 +61,18 @@ for sample, model in models.items():
         assert np.linalg.eigvalsh(V).min() > -1e-8
     assert sum(int(r["observations"]) for r in read("sample_counts") if r["sample"] == sample) == int(model["n"])
 audit = read("sample_audit")[0]
-assert int(audit["full_sample"]) == int(models["All"]["n"]) == 5268375
+assert int(audit["full_sample"]) == int(models["All"]["n"]) == 5426174
 assert int(audit["salaried_candidates"])-int(audit["additional_singletons_removed"]) == int(models["Salaried"]["n"])
 for row in read("occupation_audit"):
     year, raw, code = (int(row[x]) for x in ("anio", "occupation_raw_code", "occupation_harmonized_code"))
-    expected = {7: 8, 8: 9}.get(raw, raw) if year >= 2021 else raw
+    expected = raw  # Corrected input codes are already aligned across questionnaires.
     assert code == expected
     assert (row["wage_employee"] == "TRUE") == (code in (1, 2, 3, 8))
-assert sum(int(r["observations"]) for r in read("occupation_audit")) == 5268514
+assert sum(int(r["observations"]) for r in read("occupation_audit")) == 5426316
 for row in read("reference_invariance_check"):
     assert max(abs(float(row[k])) for k in ("coef_error", "se_error")) < 1e-7
-for row in read("unaffected_model_checks"):
-    assert max(abs(float(row[k])) for k in ("max_coef_error", "max_covariance_error")) < 1e-7
+# The old occupation-only audit used the previous income/sample definition.
+# Current reference invariance is checked above on the corrected sample.
 
 tests = read("formality_equality_tests")
 assert len(tests) == 8

@@ -4,7 +4,7 @@ script <- sub("^--file=", "", grep("^--file=", commandArgs(), value = TRUE))
 paper <- dirname(dirname(normalizePath(script, winslash = "/")))
 source(file.path(paper, "replication/harmonize_occupation.R"))
 cjc <- file.path(dirname(paper), "CJC-Monitor")
-input <- if (length(args)) args[1] else file.path(cjc, "Datos/Processed/Paper-GEIH_base_modelo_personas_2008_2025.dta")
+input <- if (length(args)) args[1] else file.path(paper, "data/GEIH_primary_income_2008_2025.dta")
 .libPaths(c(file.path(cjc, ".Rlib"), .libPaths()))
 suppressPackageStartupMessages({library(haven); library(dplyr); library(fixest)})
 setFixest_nthreads(4)
@@ -31,7 +31,7 @@ if (is.null(d) || !identical(attr(d, "cache_signature"), signature)) {
 stopifnot(!anyNA(d$depto), !anyNA(d$posicion_ocupacional_label), !any(as.character(d$anio) == "2020"))
 cell_n <- tabulate(as.integer(d$sector_depto_year), nbins = nlevels(d$sector_depto_year))
 d <- d[cell_n[as.integer(d$sector_depto_year)] > 1L, ]
-stopifnot(nrow(d) == 5268375L)
+stopifnot(nrow(d) == 5426174L)
 preferred <- readRDS(file.path(paper, "replication/preferred_output/aggregate_models.rds"))$preferred
 input_md5 <- unname(tools::md5sum(input))
 stopifnot(paste("Input MD5:", input_md5) %in% readLines(file.path(paper, "replication/preferred_output/provenance.txt")))

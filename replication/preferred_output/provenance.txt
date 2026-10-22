@@ -1,5 +1,5 @@
-Input MD5: 2687fad5d9fd22b521db1cecd507e527
-Occupation harmonization: P6430-framework-2026-10-11-v1
+Input MD5: 9c8532a90e3ec255de1ff3b9b292ed0d
+Occupation harmonization: P6430-framework-2026-10-21-v2
 All models use the preferred sample, GEIH weights, and two-sided cluster-t inference.
 Annual models allow all slopes to vary by year. Endpoint changes use a joint fully interacted model.
 Elasticities by formality are linear contrasts of one interacted model, not separate regressions.
@@ -16,7 +16,7 @@ locale:
 [3] LC_MONETARY=C                       LC_NUMERIC=C
 [5] LC_TIME=C
 
-time zone: America/Bogota
+time zone: America/Mexico_City
 tzcode source: internal
 
 attached base packages:

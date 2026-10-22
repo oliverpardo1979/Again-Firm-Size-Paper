@@ -1,0 +1,21 @@
+exercise,field,rows,maximum_error
+"Annual profiles, both samples",estimate,544,2.269972404489451e-14
+"Annual profiles, both samples",se,544,6.770278782042283e-14
+"Annual profiles, both samples",p_value,544,6.81010803305071e-13
+"Annual profiles, both samples",premium,544,2.3945290195115376e-12
+"Annual profiles, both samples",ci_low,544,1.2009948591185093e-11
+"Annual profiles, both samples",ci_high,544,1.540101379760017e-11
+"Preferred pooled contrasts, both samples",estimate,96,9.320044735972033e-13
+"Preferred pooled contrasts, both samples",se,96,1.0400014183176154e-13
+"Preferred pooled contrasts, both samples",p_value,96,2.1544988015875788e-11
+"Preferred pooled contrasts, both samples",premium,96,1.1690204360093048e-10
+"Preferred pooled contrasts, both samples",ci_low,96,1.1119993814645568e-10
+"Preferred pooled contrasts, both samples",ci_high,96,1.2650147596104944e-10
+Public 2025 reconstruction,age,341066,0.0
+Public 2025 reconstruction,weight,341066,0.0
+Public 2025 reconstruction,hours,341066,0.0
+Public 2025 reconstruction,primary_monthly,341066,0.0
+Public 2025 reconstruction,log_primary,341066,0.0
+Public 2025 reconstruction,occupation,341066,0.0
+Public 2025 reconstruction,formal,341066,0.0
+Public 2025 reconstruction,size,341066,0.0

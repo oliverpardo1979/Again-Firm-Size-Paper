@@ -142,7 +142,7 @@ for row in read(OUT, "summaries"):
     assert (row["turn_within_support"] == "TRUE") == (1 < turn < top)
     close(row["elasticity_solo"], linear)
     close(row["elasticity_top"], linear+2*quadratic*math.log(top))
-    assert int(row["n"]) == 5268375
+    assert int(row["n"]) == 5426174
 
 table = (ROOT / "Paper/sections/regression_preferred_quadratic_table.tex").read_text(encoding="utf-8")
 for row in read(OUT, "coefficients"):
@@ -158,6 +158,6 @@ for lang in ("en", "es"):
     assert path.stat().st_size > 10000
 assert len(tests) == 18
 assert (OUT / "provenance.txt").read_text().splitlines()[0] == (PREFERRED / "provenance.txt").read_text().splitlines()[0]
-print(json.dumps({"status": "passed", "models": 3, "preferred_sample": 5268375,
+print(json.dumps({"status": "passed", "models": 3, "preferred_sample": 5426174,
     "profile_and_coefficient_checks": checks, "independent_Wald_tests": len(tests),
     "top_bin_assignments": [101, 150, 250], "degree": 2}, indent=2))

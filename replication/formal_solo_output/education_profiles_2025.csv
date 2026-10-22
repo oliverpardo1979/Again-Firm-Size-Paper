@@ -1,3 +1,3 @@
-"higher_education","observations","own_account_pct","mean_hourly_income_2025_cop","share_of_formal_solo_pct"
-FALSE,4241,68.2650927034864,9949.98679804067,49.1418400389354
-TRUE,4765,95.5466685384165,21825.5110597664,50.8581599610646
+higher_education,observations,own_account_pct,mean_hourly_income_2025_cop,share_of_formal_solo_pct
+False,4239,68.25203152128306,9835.008241239842,49.18020731410744
+True,4762,95.53799119550112,21332.80026020797,50.81979268589255

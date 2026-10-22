@@ -1,100 +1,100 @@
 contrast,clustering,field,error
-Informal change 101+/solo 2008-2025,Sector-department,estimate,6.509237593377293e-13
-Informal change 101+/solo 2008-2025,Sector-department,se,4.3021142204224816e-15
-Informal change 101+/solo 2008-2025,Sector-department,p,3.5359909444920845e-13
-Informal elasticity,Sector-department,estimate,8.129608097817709e-14
-Informal elasticity,Sector-department,se,2.7000970903579002e-15
-Informal elasticity,Sector-department,p,2.741405252292168e-96
-Informal change 101+/solo 2008-2025,Sector,estimate,6.509237593377293e-13
-Informal change 101+/solo 2008-2025,Sector,se,2.1899149160731213e-14
-Informal change 101+/solo 2008-2025,Sector,p,1.3343076643579366e-12
-Informal elasticity,Sector,estimate,8.129608097817709e-14
-Informal elasticity,Sector,se,6.898995263959762e-15
-Informal elasticity,Sector,p,7.789973418718138e-22
-Formal change 101+/solo 2008-2025,Sector-department,estimate,4.956000887457179e-13
-Formal change 101+/solo 2008-2025,Sector-department,se,1.2205514376972815e-14
-Formal change 101+/solo 2008-2025,Sector-department,p,8.694378550444526e-12
-Formal elasticity,Sector-department,estimate,3.440303597557204e-14
-Formal elasticity,Sector-department,se,9.974659986866641e-17
-Formal elasticity,Sector-department,p,2.9614725850515157e-26
-Formal change 101+/solo 2008-2025,Sector,estimate,4.956000887457179e-13
-Formal change 101+/solo 2008-2025,Sector,se,8.849865285043279e-14
-Formal change 101+/solo 2008-2025,Sector,p,8.45534753324273e-12
-Formal elasticity,Sector,estimate,3.440303597557204e-14
-Formal elasticity,Sector,se,4.4998726966838376e-15
-Formal elasticity,Sector,p,1.1699842483725575e-14
-Informal 2-3/solo,Sector-department,estimate,1.511013536514838e-13
-Informal 2-3/solo,Sector-department,se,5.901529265273098e-15
-Informal 2-3/solo,Sector-department,p,5.407185445079205e-27
-Formal 2-3/solo,Sector-department,estimate,1.0049044929516526e-12
-Formal 2-3/solo,Sector-department,se,3.1988300897012323e-15
-Formal 2-3/solo,Sector-department,p,1.1806996352836663e-12
-Informal 4-5/solo,Sector-department,estimate,2.0949908474676704e-13
-Informal 4-5/solo,Sector-department,se,9.499345754448996e-15
-Informal 4-5/solo,Sector-department,p,3.192397114081394e-57
-Formal 4-5/solo,Sector-department,estimate,1.0139007688980683e-12
-Formal 4-5/solo,Sector-department,se,1.8943180357666733e-15
-Formal 4-5/solo,Sector-department,p,1.964078899518995e-11
-Informal 6-10/solo,Sector-department,estimate,1.4349632593280148e-13
-Informal 6-10/solo,Sector-department,se,9.197503869629031e-15
-Informal 6-10/solo,Sector-department,p,9.609734631520935e-74
-Formal 6-10/solo,Sector-department,estimate,9.399009348598497e-13
-Formal 6-10/solo,Sector-department,se,3.497202527569243e-15
-Formal 6-10/solo,Sector-department,p,2.0741963702164412e-11
-Informal 11-19/solo,Sector-department,estimate,2.9398705692074145e-13
-Informal 11-19/solo,Sector-department,se,1.5602102942935403e-14
-Informal 11-19/solo,Sector-department,p,2.151003712841898e-77
-Formal 11-19/solo,Sector-department,estimate,1.0539971673217963e-12
-Formal 11-19/solo,Sector-department,se,1.1900203045200897e-14
-Formal 11-19/solo,Sector-department,p,1.2379791636263349e-11
-Informal 20-30/solo,Sector-department,estimate,1.2445600106048005e-13
-Informal 20-30/solo,Sector-department,se,7.008282842946301e-16
-Informal 20-30/solo,Sector-department,p,4.173302827619814e-84
-Formal 20-30/solo,Sector-department,estimate,1.0332013022917863e-12
-Formal 20-30/solo,Sector-department,se,1.2302658891627516e-14
-Formal 20-30/solo,Sector-department,p,1.225938794924275e-11
-Informal 31-50/solo,Sector-department,estimate,4.1866510258614653e-13
-Informal 31-50/solo,Sector-department,se,2.6000035457940385e-14
-Informal 31-50/solo,Sector-department,p,8.594759163212993e-70
-Formal 31-50/solo,Sector-department,estimate,1.0634063074554945e-12
-Formal 31-50/solo,Sector-department,se,1.4002687898084787e-14
-Formal 31-50/solo,Sector-department,p,4.404497599974633e-12
-Informal 51-100/solo,Sector-department,estimate,3.417266469796232e-13
-Informal 51-100/solo,Sector-department,se,1.899869150889799e-14
-Informal 51-100/solo,Sector-department,p,1.5855660020411197e-72
-Formal 51-100/solo,Sector-department,estimate,1.0380030168732901e-12
-Formal 51-100/solo,Sector-department,se,1.3402473575396812e-14
-Formal 51-100/solo,Sector-department,p,6.30299631931841e-13
-Informal 101+/solo,Sector-department,estimate,2.1135315719789105e-12
-Informal 101+/solo,Sector-department,se,1.1909917496666367e-13
-Informal 101+/solo,Sector-department,p,3.8760833354068485e-62
-Formal 101+/solo,Sector-department,estimate,1.1138867606064196e-12
-Formal 101+/solo,Sector-department,se,1.3100631690576847e-14
-Formal 101+/solo,Sector-department,p,5.074770898644276e-15
-Formal-informal at Solo,Sector-department,estimate,1.3022916078853086e-12
-Formal-informal at Solo,Sector-department,se,7.800010637382115e-14
-Formal-informal at Solo,Sector-department,p,9.224890889826268e-58
-Formal-informal at 2-3,Sector-department,estimate,1.4627188349436437e-13
-Formal-informal at 2-3,Sector-department,se,8.900866155236997e-15
-Formal-informal at 2-3,Sector-department,p,4.447644184028061e-80
-Formal-informal at 4-5,Sector-department,estimate,7.92976795338518e-14
-Formal-informal at 4-5,Sector-department,se,2.0001361678012586e-15
-Formal-informal at 4-5,Sector-department,p,2.5271376295485204e-52
-Formal-informal at 6-10,Sector-department,estimate,2.188804693048496e-13
-Formal-informal at 6-10,Sector-department,se,2.600350490489234e-15
-Formal-informal at 6-10,Sector-department,p,4.557569988196932e-41
-Formal-informal at 11-19,Sector-department,estimate,4.5602410736478305e-14
-Formal-informal at 11-19,Sector-department,se,2.3991225672759242e-15
-Formal-informal at 11-19,Sector-department,p,1.126033634150074e-43
-Formal-informal at 20-30,Sector-department,estimate,1.4430123762565472e-13
-Formal-informal at 20-30,Sector-department,se,6.701236787698406e-15
-Formal-informal at 20-30,Sector-department,p,2.433287130279703e-44
-Formal-informal at 31-50,Sector-department,estimate,1.799949078673535e-13
-Formal-informal at 31-50,Sector-department,se,5.599687380453133e-15
-Formal-informal at 31-50,Sector-department,p,7.807114396717857e-48
-Formal-informal at 51-100,Sector-department,estimate,7.702172233337023e-14
-Formal-informal at 51-100,Sector-department,se,4.6004866582904924e-15
-Formal-informal at 51-100,Sector-department,p,9.463792368555666e-54
-Formal-informal at 101+,Sector-department,estimate,1.9251267247000214e-12
-Formal-informal at 101+,Sector-department,se,5.159761506945415e-14
-Formal-informal at 101+,Sector-department,p,1.2837845024716425e-64
+Informal change 101+/solo 2008-2025,Sector-department,estimate,1.7298107390928408e-12
+Informal change 101+/solo 2008-2025,Sector-department,se,1.2899403767363538e-14
+Informal change 101+/solo 2008-2025,Sector-department,p,1.9189988140211334e-13
+Informal elasticity,Sector-department,estimate,7.899236820207989e-14
+Informal elasticity,Sector-department,se,3.900525735733851e-15
+Informal elasticity,Sector-department,p,1.0193411583947171e-96
+Informal change 101+/solo 2008-2025,Sector,estimate,1.7298107390928408e-12
+Informal change 101+/solo 2008-2025,Sector,se,1.5229484340295585e-13
+Informal change 101+/solo 2008-2025,Sector,p,1.470400190495269e-12
+Informal elasticity,Sector,estimate,7.899236820207989e-14
+Informal elasticity,Sector,se,9.098624631498353e-15
+Informal elasticity,Sector,p,7.371213233613168e-21
+Formal change 101+/solo 2008-2025,Sector-department,estimate,1.5323992075266801e-12
+Formal change 101+/solo 2008-2025,Sector-department,se,1.2975731600306517e-15
+Formal change 101+/solo 2008-2025,Sector-department,p,2.4669821740985753e-11
+Formal elasticity,Sector-department,estimate,4.6400383535427636e-14
+Formal elasticity,Sector-department,se,2.0001361678012586e-15
+Formal elasticity,Sector-department,p,8.024934077393624e-28
+Formal change 101+/solo 2008-2025,Sector,estimate,1.5323992075266801e-12
+Formal change 101+/solo 2008-2025,Sector,se,1.5079604231971189e-13
+Formal change 101+/solo 2008-2025,Sector,p,2.40213404723022e-11
+Formal elasticity,Sector,estimate,4.6400383535427636e-14
+Formal elasticity,Sector,se,7.89993070959838e-15
+Formal elasticity,Sector,p,7.1002231871730714e-15
+Informal 2-3/solo,Sector-department,estimate,1.5469570069370775e-13
+Informal 2-3/solo,Sector-department,se,8.800252193630342e-15
+Informal 2-3/solo,Sector-department,p,2.638532651976664e-26
+Formal 2-3/solo,Sector-department,estimate,6.000755448098971e-14
+Formal 2-3/solo,Sector-department,se,1.3697376566312869e-14
+Formal 2-3/solo,Sector-department,p,8.729995892853282e-14
+Informal 4-5/solo,Sector-department,estimate,1.8279822100453202e-13
+Informal 4-5/solo,Sector-department,se,1.1803058530546195e-14
+Informal 4-5/solo,Sector-department,p,1.5543925348732533e-58
+Formal 4-5/solo,Sector-department,estimate,1.5049766988184388e-13
+Formal 4-5/solo,Sector-department,se,1.4405143744511406e-14
+Formal 4-5/solo,Sector-department,p,2.6963986599071177e-12
+Informal 6-10/solo,Sector-department,estimate,1.8318679906315083e-13
+Informal 6-10/solo,Sector-department,se,1.1900203045200897e-14
+Informal 6-10/solo,Sector-department,p,1.1674480604883609e-73
+Formal 6-10/solo,Sector-department,estimate,9.489978247678721e-14
+Formal 6-10/solo,Sector-department,se,1.489780521168882e-14
+Formal 6-10/solo,Sector-department,p,2.196132165011022e-12
+Informal 11-19/solo,Sector-department,estimate,3.270717030545711e-13
+Informal 11-19/solo,Sector-department,se,2.2898349882893854e-14
+Informal 11-19/solo,Sector-department,p,1.9877709554384023e-77
+Formal 11-19/solo,Sector-department,estimate,5.51017564909273e-14
+Formal 11-19/solo,Sector-department,se,1.4002687898084787e-14
+Formal 11-19/solo,Sector-department,p,7.847056338050606e-13
+Informal 20-30/solo,Sector-department,estimate,2.651212582804874e-13
+Informal 20-30/solo,Sector-department,se,1.3298390166838203e-14
+Informal 20-30/solo,Sector-department,p,5.7489411753408616e-86
+Formal 20-30/solo,Sector-department,estimate,1.463967835846347e-13
+Formal 20-30/solo,Sector-department,se,1.0401401961956935e-14
+Formal 20-30/solo,Sector-department,p,1.5779044737485037e-12
+Informal 31-50/solo,Sector-department,estimate,4.666822484011846e-13
+Informal 31-50/solo,Sector-department,se,3.3698738244325455e-14
+Informal 31-50/solo,Sector-department,p,1.1647115523029823e-69
+Formal 31-50/solo,Sector-department,estimate,5.689893001203927e-14
+Formal 31-50/solo,Sector-department,se,1.4700046735427463e-14
+Formal 31-50/solo,Sector-department,p,2.590982983718959e-13
+Informal 51-100/solo,Sector-department,estimate,5.6710192097853e-13
+Informal 51-100/solo,Sector-department,se,2.3800406090401793e-14
+Informal 51-100/solo,Sector-department,p,2.8372784545468203e-71
+Formal 51-100/solo,Sector-department,estimate,9.189871086334733e-14
+Formal 51-100/solo,Sector-department,se,1.589700593385146e-14
+Formal 51-100/solo,Sector-department,p,5.3099885599650065e-14
+Informal 101+/solo,Sector-department,estimate,7.224221221235894e-13
+Informal 101+/solo,Sector-department,se,6.330005963839369e-14
+Informal 101+/solo,Sector-department,p,1.856024443140654e-61
+Formal 101+/solo,Sector-department,estimate,9.758860386455126e-14
+Formal 101+/solo,Sector-department,se,2.1899149160731213e-14
+Formal 101+/solo,Sector-department,p,4.1212896268426336e-16
+Formal-informal at Solo,Sector-department,estimate,3.191891195797325e-14
+Formal-informal at Solo,Sector-department,se,1.43982048506075e-14
+Formal-informal at Solo,Sector-department,p,2.5489446269465807e-58
+Formal-informal at 2-3,Sector-department,estimate,1.8340884366807586e-13
+Formal-informal at 2-3,Sector-department,se,4.000272335602517e-15
+Formal-informal at 2-3,Sector-department,p,3.9240202128661226e-78
+Formal-informal at 4-5,Sector-department,estimate,8.049116928532385e-16
+Formal-informal at 4-5,Sector-department,se,7.997075224253081e-16
+Formal-informal at 4-5,Sector-department,p,1.2709814714367595e-52
+Formal-informal at 6-10,Sector-department,estimate,5.700995231450179e-14
+Formal-informal at 6-10,Sector-department,se,9.003214840319629e-16
+Formal-informal at 6-10,Sector-department,p,6.663892363327472e-41
+Formal-informal at 11-19,Sector-department,estimate,2.404743071338089e-13
+Formal-informal at 11-19,Sector-department,se,1.700029006457271e-15
+Formal-informal at 11-19,Sector-department,p,1.0982561250710278e-44
+Formal-informal at 20-30,Sector-department,estimate,8.690270725253413e-14
+Formal-informal at 20-30,Sector-department,se,2.9004576518332215e-15
+Formal-informal at 20-30,Sector-department,p,1.403355992008205e-47
+Formal-informal at 31-50,Sector-department,estimate,3.7761460625063137e-13
+Formal-informal at 31-50,Sector-department,se,7.89993070959838e-15
+Formal-informal at 31-50,Sector-department,p,1.6929933029586866e-50
+Formal-informal at 51-100,Sector-department,estimate,4.436173650645969e-13
+Formal-informal at 51-100,Sector-department,se,4.5016074201598144e-15
+Formal-informal at 51-100,Sector-department,p,8.794470981933089e-55
+Formal-informal at 101+,Sector-department,estimate,5.928035839986023e-13
+Formal-informal at 101+,Sector-department,se,2.2599977445025843e-14
+Formal-informal at 101+,Sector-department,p,1.5653516680273097e-66

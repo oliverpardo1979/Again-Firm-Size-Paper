@@ -8,7 +8,7 @@ paper <- dirname(dirname(normalizePath(sub("^--file=", "", script_arg), winslash
 source(file.path(paper, "replication/harmonize_occupation.R"))
 root <- file.path(dirname(paper), "CJC-Monitor")
 data_path <- normalizePath(if (length(args)) args[1] else
-  file.path(root, "Datos/Processed/Paper-GEIH_base_modelo_personas_2008_2025.dta"),
+  file.path(paper, "data/GEIH_primary_income_2008_2025.dta"),
   winslash = "/", mustWork = TRUE)
 out <- if (length(args) >= 2) args[2] else file.path(paper, "replication/output")
 dir.create(out, recursive = TRUE, showWarnings = FALSE)
@@ -62,7 +62,7 @@ if (is.null(saved) || !identical(saved$signature, signature)) {
   message("Estimation complete: ", nobs(fit), " observations")
   used <- obs(fit)
   d <- d[used, ]
-  stopifnot(nrow(d) == nobs(fit), nobs(fit) == 5268375L)
+  stopifnot(nrow(d) == nobs(fit), nobs(fit) == 5426174L)
   d$eta <- fitted(fit)
   d$log_residual <- residuals(fit)
   pooled_cells <- d %>% group_by(sector, depto, posicion_ocupacional_label, tamano_empresa, formal) %>%

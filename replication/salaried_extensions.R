@@ -26,16 +26,16 @@ stopifnot(identical(signature[[3]], occupation_harmonization_version),
           signature[[2]] == income_cache$signature$mtime,
           all(d$wage_employee == (d$occupation_harmonized_code %in% c(1, 2, 3, 8))),
           !any(as.character(d$anio) == "2020"))
-source_info <- file.info(file.path(cjc, "Datos/Processed/Paper-GEIH_base_modelo_personas_2008_2025.dta"))
+source_info <- file.info(file.path(paper, "data/GEIH_primary_income_2008_2025.dta"))
 stopifnot(source_info$size == signature[[1]], as.numeric(source_info$mtime) == signature[[2]])
 remove_singletons <- function(x) {
   n <- tabulate(as.integer(x$sector_depto_year), nbins = nlevels(x$sector_depto_year))
   x[n[as.integer(x$sector_depto_year)] > 1L, ]
 }
 d <- remove_singletons(d)
-stopifnot(nrow(d) == 5268375L)
+stopifnot(nrow(d) == 5426174L)
 employee <- remove_singletons(d[d$wage_employee, ])
-stopifnot(nrow(employee) == 2682009L)
+stopifnot(nrow(employee) == 2765713L)
 edu <- grep("secundaria", levels(d$educacion), value = TRUE, ignore.case = TRUE)
 stopifnot(length(edu) == 1L)
 base <- paste0("i(tamano_empresa, ref = 'Solo') * formal + mujer + edad + edad2 + ",

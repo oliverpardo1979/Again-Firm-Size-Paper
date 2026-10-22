@@ -1,138 +1,122 @@
 "anio","occupation_raw_code","occupation_harmonized_code","posicion_ocupacional_label","wage_employee","observations"
-"2008",1,1,"Obrero o empleado de empresa particular",TRUE,53769
-"2008",2,2,"Obrero o empleado del gobierno",TRUE,10411
-"2008",3,3,"Empleado doméstico",TRUE,6860
-"2008",4,4,"Trabajador por cuenta propia",FALSE,67923
-"2008",5,5,"Patrón o empleador",FALSE,6470
-"2008",6,6,"Trabajador familiar sin remuneración",FALSE,127
-"2008",7,7,"Trabajador sin remuneración en otros hogares",FALSE,11
-"2008",8,8,"Jornalero o peón",TRUE,2890
-"2008",9,9,"Otro",FALSE,57
-"2009",1,1,"Obrero o empleado de empresa particular",TRUE,95068
-"2009",2,2,"Obrero o empleado del gobierno",TRUE,17222
-"2009",3,3,"Empleado doméstico",TRUE,12881
-"2009",4,4,"Trabajador por cuenta propia",FALSE,127635
-"2009",5,5,"Patrón o empleador",FALSE,11954
-"2009",6,6,"Trabajador familiar sin remuneración",FALSE,334
-"2009",7,7,"Trabajador sin remuneración en otros hogares",FALSE,25
-"2009",8,8,"Jornalero o peón",TRUE,5484
-"2009",9,9,"Otro",FALSE,220
-"2010",1,1,"Obrero o empleado de empresa particular",TRUE,111117
-"2010",2,2,"Obrero o empleado del gobierno",TRUE,18811
-"2010",3,3,"Empleado doméstico",TRUE,14390
-"2010",4,4,"Trabajador por cuenta propia",FALSE,149398
-"2010",5,5,"Patrón o empleador",FALSE,13440
-"2010",6,6,"Trabajador familiar sin remuneración",FALSE,370
-"2010",7,7,"Trabajador sin remuneración en otros hogares",FALSE,31
-"2010",8,8,"Jornalero o peón",TRUE,5598
+"2008",1,1,"Obrero o empleado de empresa particular",TRUE,106085
+"2008",2,2,"Obrero o empleado del gobierno",TRUE,20779
+"2008",3,3,"Empleado doméstico",TRUE,13614
+"2008",4,4,"Trabajador por cuenta propia",FALSE,133973
+"2008",5,5,"Patrón o empleador",FALSE,12396
+"2008",6,6,"Trabajador familiar sin remuneración",FALSE,1
+"2008",8,8,"Jornalero o peón",TRUE,6048
+"2008",9,9,"Otro",FALSE,81
+"2009",1,1,"Obrero o empleado de empresa particular",TRUE,103759
+"2009",2,2,"Obrero o empleado del gobierno",TRUE,18849
+"2009",3,3,"Empleado doméstico",TRUE,14014
+"2009",4,4,"Trabajador por cuenta propia",FALSE,138296
+"2009",5,5,"Patrón o empleador",FALSE,13001
+"2009",6,6,"Trabajador familiar sin remuneración",FALSE,1
+"2009",8,8,"Jornalero o peón",TRUE,5843
+"2009",9,9,"Otro",FALSE,230
+"2010",1,1,"Obrero o empleado de empresa particular",TRUE,111050
+"2010",2,2,"Obrero o empleado del gobierno",TRUE,18802
+"2010",3,3,"Empleado doméstico",TRUE,14386
+"2010",4,4,"Trabajador por cuenta propia",FALSE,148879
+"2010",5,5,"Patrón o empleador",FALSE,13376
+"2010",8,8,"Jornalero o peón",TRUE,5592
 "2010",9,9,"Otro",FALSE,299
-"2011",1,1,"Obrero o empleado de empresa particular",TRUE,115808
-"2011",2,2,"Obrero o empleado del gobierno",TRUE,18308
-"2011",3,3,"Empleado doméstico",TRUE,14529
-"2011",4,4,"Trabajador por cuenta propia",FALSE,155657
-"2011",5,5,"Patrón o empleador",FALSE,14237
-"2011",6,6,"Trabajador familiar sin remuneración",FALSE,266
-"2011",7,7,"Trabajador sin remuneración en otros hogares",FALSE,19
-"2011",8,8,"Jornalero o peón",TRUE,5549
+"2011",1,1,"Obrero o empleado de empresa particular",TRUE,115767
+"2011",2,2,"Obrero o empleado del gobierno",TRUE,18304
+"2011",3,3,"Empleado doméstico",TRUE,14528
+"2011",4,4,"Trabajador por cuenta propia",FALSE,155113
+"2011",5,5,"Patrón o empleador",FALSE,14167
+"2011",8,8,"Jornalero o peón",TRUE,5545
 "2011",9,9,"Otro",FALSE,340
-"2012",1,1,"Obrero o empleado de empresa particular",TRUE,116867
-"2012",2,2,"Obrero o empleado del gobierno",TRUE,17768
-"2012",3,3,"Empleado doméstico",TRUE,13713
-"2012",4,4,"Trabajador por cuenta propia",FALSE,149598
-"2012",5,5,"Patrón o empleador",FALSE,13445
-"2012",6,6,"Trabajador familiar sin remuneración",FALSE,236
-"2012",7,7,"Trabajador sin remuneración en otros hogares",FALSE,20
-"2012",8,8,"Jornalero o peón",TRUE,5287
-"2012",9,9,"Otro",FALSE,368
-"2013",1,1,"Obrero o empleado de empresa particular",TRUE,118329
-"2013",2,2,"Obrero o empleado del gobierno",TRUE,17000
-"2013",3,3,"Empleado doméstico",TRUE,13187
-"2013",4,4,"Trabajador por cuenta propia",FALSE,144900
-"2013",5,5,"Patrón o empleador",FALSE,11197
-"2013",6,6,"Trabajador familiar sin remuneración",FALSE,158
-"2013",7,7,"Trabajador sin remuneración en otros hogares",FALSE,16
-"2013",8,8,"Jornalero o peón",TRUE,5032
-"2013",9,9,"Otro",FALSE,321
-"2014",1,1,"Obrero o empleado de empresa particular",TRUE,124415
-"2014",2,2,"Obrero o empleado del gobierno",TRUE,18238
-"2014",3,3,"Empleado doméstico",TRUE,13128
-"2014",4,4,"Trabajador por cuenta propia",FALSE,148966
-"2014",5,5,"Patrón o empleador",FALSE,10585
-"2014",6,6,"Trabajador familiar sin remuneración",FALSE,139
-"2014",7,7,"Trabajador sin remuneración en otros hogares",FALSE,13
-"2014",8,8,"Jornalero o peón",TRUE,4546
-"2014",9,9,"Otro",FALSE,319
-"2015",1,1,"Obrero o empleado de empresa particular",TRUE,129192
-"2015",2,2,"Obrero o empleado del gobierno",TRUE,18240
-"2015",3,3,"Empleado doméstico",TRUE,12987
-"2015",4,4,"Trabajador por cuenta propia",FALSE,150353
-"2015",5,5,"Patrón o empleador",FALSE,10770
-"2015",6,6,"Trabajador familiar sin remuneración",FALSE,89
-"2015",7,7,"Trabajador sin remuneración en otros hogares",FALSE,7
-"2015",8,8,"Jornalero o peón",TRUE,4789
-"2015",9,9,"Otro",FALSE,306
-"2016",1,1,"Obrero o empleado de empresa particular",TRUE,128132
-"2016",2,2,"Obrero o empleado del gobierno",TRUE,17888
-"2016",3,3,"Empleado doméstico",TRUE,12261
-"2016",4,4,"Trabajador por cuenta propia",FALSE,146323
-"2016",5,5,"Patrón o empleador",FALSE,10238
-"2016",6,6,"Trabajador familiar sin remuneración",FALSE,12
+"2012",1,1,"Obrero o empleado de empresa particular",TRUE,116816
+"2012",2,2,"Obrero o empleado del gobierno",TRUE,17757
+"2012",3,3,"Empleado doméstico",TRUE,13708
+"2012",4,4,"Trabajador por cuenta propia",FALSE,148990
+"2012",5,5,"Patrón o empleador",FALSE,13362
+"2012",8,8,"Jornalero o peón",TRUE,5286
+"2012",9,9,"Otro",FALSE,365
+"2013",1,1,"Obrero o empleado de empresa particular",TRUE,118284
+"2013",2,2,"Obrero o empleado del gobierno",TRUE,16985
+"2013",3,3,"Empleado doméstico",TRUE,13182
+"2013",4,4,"Trabajador por cuenta propia",FALSE,144235
+"2013",5,5,"Patrón o empleador",FALSE,11108
+"2013",8,8,"Jornalero o peón",TRUE,5031
+"2013",9,9,"Otro",FALSE,319
+"2014",1,1,"Obrero o empleado de empresa particular",TRUE,124369
+"2014",2,2,"Obrero o empleado del gobierno",TRUE,18228
+"2014",3,3,"Empleado doméstico",TRUE,13125
+"2014",4,4,"Trabajador por cuenta propia",FALSE,148372
+"2014",5,5,"Patrón o empleador",FALSE,10512
+"2014",8,8,"Jornalero o peón",TRUE,4545
+"2014",9,9,"Otro",FALSE,318
+"2015",1,1,"Obrero o empleado de empresa particular",TRUE,129128
+"2015",2,2,"Obrero o empleado del gobierno",TRUE,18229
+"2015",3,3,"Empleado doméstico",TRUE,12982
+"2015",4,4,"Trabajador por cuenta propia",FALSE,149684
+"2015",5,5,"Patrón o empleador",FALSE,10708
+"2015",8,8,"Jornalero o peón",TRUE,4788
+"2015",9,9,"Otro",FALSE,303
+"2016",1,1,"Obrero o empleado de empresa particular",TRUE,128080
+"2016",2,2,"Obrero o empleado del gobierno",TRUE,17880
+"2016",3,3,"Empleado doméstico",TRUE,12258
+"2016",4,4,"Trabajador por cuenta propia",FALSE,145715
+"2016",5,5,"Patrón o empleador",FALSE,10186
 "2016",8,8,"Jornalero o peón",TRUE,4644
-"2016",9,9,"Otro",FALSE,301
-"2017",1,1,"Obrero o empleado de empresa particular",TRUE,124442
-"2017",2,2,"Obrero o empleado del gobierno",TRUE,16048
-"2017",3,3,"Empleado doméstico",TRUE,11658
-"2017",4,4,"Trabajador por cuenta propia",FALSE,140916
-"2017",5,5,"Patrón o empleador",FALSE,10243
-"2017",8,8,"Jornalero o peón",TRUE,4824
-"2017",9,9,"Otro",FALSE,225
-"2018",1,1,"Obrero o empleado de empresa particular",TRUE,122011
-"2018",2,2,"Obrero o empleado del gobierno",TRUE,15795
-"2018",3,3,"Empleado doméstico",TRUE,11121
-"2018",4,4,"Trabajador por cuenta propia",FALSE,141720
-"2018",5,5,"Patrón o empleador",FALSE,10119
-"2018",8,8,"Jornalero o peón",TRUE,4646
+"2016",9,9,"Otro",FALSE,300
+"2017",1,1,"Obrero o empleado de empresa particular",TRUE,124389
+"2017",2,2,"Obrero o empleado del gobierno",TRUE,16042
+"2017",3,3,"Empleado doméstico",TRUE,11653
+"2017",4,4,"Trabajador por cuenta propia",FALSE,140375
+"2017",5,5,"Patrón o empleador",FALSE,10181
+"2017",8,8,"Jornalero o peón",TRUE,4822
+"2017",9,9,"Otro",FALSE,224
+"2018",1,1,"Obrero o empleado de empresa particular",TRUE,121967
+"2018",2,2,"Obrero o empleado del gobierno",TRUE,15790
+"2018",3,3,"Empleado doméstico",TRUE,11117
+"2018",4,4,"Trabajador por cuenta propia",FALSE,141230
+"2018",5,5,"Patrón o empleador",FALSE,10061
+"2018",8,8,"Jornalero o peón",TRUE,4644
 "2018",9,9,"Otro",FALSE,177
-"2019",1,1,"Obrero o empleado de empresa particular",TRUE,131785
-"2019",2,2,"Obrero o empleado del gobierno",TRUE,17194
-"2019",3,3,"Empleado doméstico",TRUE,11833
-"2019",4,4,"Trabajador por cuenta propia",FALSE,145433
-"2019",5,5,"Patrón o empleador",FALSE,10269
-"2019",8,8,"Jornalero o peón",TRUE,5082
+"2019",1,1,"Obrero o empleado de empresa particular",TRUE,131753
+"2019",2,2,"Obrero o empleado del gobierno",TRUE,17187
+"2019",3,3,"Empleado doméstico",TRUE,11830
+"2019",4,4,"Trabajador por cuenta propia",FALSE,145017
+"2019",5,5,"Patrón o empleador",FALSE,10223
+"2019",8,8,"Jornalero o peón",TRUE,5080
 "2019",9,9,"Otro",FALSE,232
-"2021",1,1,"Obrero o empleado de empresa particular",TRUE,123633
-"2021",2,2,"Obrero o empleado del gobierno",TRUE,20300
+"2021",1,1,"Obrero o empleado de empresa particular",TRUE,123605
+"2021",2,2,"Obrero o empleado del gobierno",TRUE,20296
 "2021",3,3,"Empleado doméstico",TRUE,9667
-"2021",4,4,"Trabajador por cuenta propia",FALSE,144081
-"2021",5,5,"Patrón o empleador",FALSE,5893
-"2021",6,6,"Trabajador familiar sin remuneración",FALSE,1
-"2021",7,8,"Jornalero o peón",TRUE,7653
-"2021",8,9,"Otro",FALSE,853
-"2022",1,1,"Obrero o empleado de empresa particular",TRUE,149724
-"2022",2,2,"Obrero o empleado del gobierno",TRUE,19474
+"2021",4,4,"Trabajador por cuenta propia",FALSE,143849
+"2021",5,5,"Patrón o empleador",FALSE,5866
+"2021",8,8,"Jornalero o peón",TRUE,7653
+"2021",9,9,"Otro",FALSE,851
+"2022",1,1,"Obrero o empleado de empresa particular",TRUE,149714
+"2022",2,2,"Obrero o empleado del gobierno",TRUE,19472
 "2022",3,3,"Empleado doméstico",TRUE,12404
-"2022",4,4,"Trabajador por cuenta propia",FALSE,156896
-"2022",5,5,"Patrón o empleador",FALSE,7886
-"2022",7,8,"Jornalero o peón",TRUE,7837
-"2022",8,9,"Otro",FALSE,122
-"2023",1,1,"Obrero o empleado de empresa particular",TRUE,145890
+"2022",4,4,"Trabajador por cuenta propia",FALSE,156629
+"2022",5,5,"Patrón o empleador",FALSE,7849
+"2022",8,8,"Jornalero o peón",TRUE,7837
+"2022",9,9,"Otro",FALSE,122
+"2023",1,1,"Obrero o empleado de empresa particular",TRUE,145884
 "2023",2,2,"Obrero o empleado del gobierno",TRUE,17615
 "2023",3,3,"Empleado doméstico",TRUE,12177
-"2023",4,4,"Trabajador por cuenta propia",FALSE,151933
-"2023",5,5,"Patrón o empleador",FALSE,7520
-"2023",7,8,"Jornalero o peón",TRUE,7786
-"2023",8,9,"Otro",FALSE,138
-"2024",1,1,"Obrero o empleado de empresa particular",TRUE,143945
-"2024",2,2,"Obrero o empleado del gobierno",TRUE,17455
-"2024",3,3,"Empleado doméstico",TRUE,11719
-"2024",4,4,"Trabajador por cuenta propia",FALSE,141569
-"2024",5,5,"Patrón o empleador",FALSE,7060
-"2024",7,8,"Jornalero o peón",TRUE,8259
-"2024",8,9,"Otro",FALSE,128
-"2025",1,1,"Obrero o empleado de empresa particular",TRUE,148413
+"2023",4,4,"Trabajador por cuenta propia",FALSE,151654
+"2023",5,5,"Patrón o empleador",FALSE,7465
+"2023",8,8,"Jornalero o peón",TRUE,7786
+"2023",9,9,"Otro",FALSE,138
+"2024",1,1,"Obrero o empleado de empresa particular",TRUE,143936
+"2024",2,2,"Obrero o empleado del gobierno",TRUE,17454
+"2024",3,3,"Empleado doméstico",TRUE,11718
+"2024",4,4,"Trabajador por cuenta propia",FALSE,141301
+"2024",5,5,"Patrón o empleador",FALSE,7028
+"2024",8,8,"Jornalero o peón",TRUE,8259
+"2024",9,9,"Otro",FALSE,127
+"2025",1,1,"Obrero o empleado de empresa particular",TRUE,148412
 "2025",2,2,"Obrero o empleado del gobierno",TRUE,17194
 "2025",3,3,"Empleado doméstico",TRUE,11852
-"2025",4,4,"Trabajador por cuenta propia",FALSE,148100
-"2025",5,5,"Patrón o empleador",FALSE,7200
-"2025",7,8,"Jornalero o peón",TRUE,8383
-"2025",8,9,"Otro",FALSE,150
+"2025",4,4,"Trabajador por cuenta propia",FALSE,147886
+"2025",5,5,"Patrón o empleador",FALSE,7190
+"2025",8,8,"Jornalero o peón",TRUE,8382
+"2025",9,9,"Otro",FALSE,150

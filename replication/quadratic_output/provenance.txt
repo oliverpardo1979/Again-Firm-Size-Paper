@@ -1,6 +1,6 @@
-Input MD5: 2687fad5d9fd22b521db1cecd507e527
-N: 5268375
-Occupation harmonization: P6430-framework-2026-10-11-v1
+Input MD5: 9c8532a90e3ec255de1ff3b9b292ed0d
+N: 5426174
+Occupation harmonization: P6430-framework-2026-10-21-v2
 Quadratic only. One interacted regression per assigned 101+ size (101, 150, 250).
 Same preferred controls, estimation sample, GEIH weights, and sector-department inference.
 Wald F tests use the unrestricted preferred categorical model: 6 restrictions per group, 12 jointly.
@@ -17,7 +17,7 @@ locale:
 [3] LC_MONETARY=C                       LC_NUMERIC=C
 [5] LC_TIME=C
 
-time zone: America/Bogota
+time zone: America/Mexico_City
 tzcode source: internal
 
 attached base packages:

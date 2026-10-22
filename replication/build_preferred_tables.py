@@ -96,7 +96,7 @@ table("regression_preferred_clustering_table.tex", "Separating controls from clu
       "tab:preferred-clustering-sensitivity", "lrrrrr",
       ["Controls", "Premium (\\%)", "S.E. (SD)", "$p$ (SD)", "S.E. (S)", "$p$ (S)"], rows,
       r"Specifications from columns (1), (3), and (4) of Table~\ref{tab:firm-size-local-geography-formality-robustness}, "
-      r"estimated on the same 5,268,375 observations. The reference is solo work within each formality group. SD denotes "
+      r"estimated on the same 5,426,174 observations. The reference is solo work within each formality group. SD denotes "
       r"sector-department clustering and S denotes sector clustering. Standard errors are in log points. Two-sided tests "
       r"use 558 and 16 degrees of freedom, respectively.", size="scriptsize")
 rows = []

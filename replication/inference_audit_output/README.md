@@ -1,5 +1,18 @@
 # Clustered-inference audit
 
+## Current Versus Historical Outputs
+
+The conventional CSVs, coefficient files, cluster counts, and model metadata
+were regenerated on 21 October 2026 using the corrected primary-job-income
+sample. `comparison_all_contrasts.csv` now contains conventional tests only.
+The narrative below and all wild-bootstrap files describe the historical
+18 October sample. They are retained for the audit trail, not as results for
+the current manuscript. The bootstrap remains omitted from the manuscript.
+Two-way conventional covariance uses the inclusion-exclusion formula without
+an eigenvalue repair, consistently in the full and salaried pipelines.
+
+## Historical Audit
+
 18 October 2026. Manuscript baseline c76f6f5. This audit was completed separately before author review. Its comparisons were subsequently incorporated into the appendix, with corresponding changes to inference statements in the manuscript. Coefficients and baseline covariance estimates remain unchanged.
 
 ## Main findings

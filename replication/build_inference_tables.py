@@ -1,5 +1,6 @@
 """Build appendix inference comparisons from validated aggregate audit outputs."""
 import csv
+import sys
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -13,8 +14,11 @@ def read(name):
 
 
 conventional = read("conventional.csv")
-wild = read("wild_bootstrap.csv")
-assert len(conventional) == 180 and len(wild) == 135
+include_bootstrap = "--include-bootstrap" in sys.argv
+wild = read("wild_bootstrap.csv") if include_bootstrap else []
+assert len(conventional) == 180
+if include_bootstrap:
+    assert len(wild) == 135
 
 
 def select(rows, label, clustering):
@@ -100,7 +104,8 @@ def make_table(bootstrap):
             r"Equation~(\ref{eq:preferred-dynamics}), and D uses Equation~(\ref{eq:preferred-elasticity}). "
             r"Estimates in A--C are in log points, not percentages or percentage-point changes. "
             r"SD denotes sector-department intersections, S sector, D department, and S+D two-way sector and department clustering. "
-            r"Two-sided $t$ tests use 558 SD degrees of freedom (539 for C), 16 for S and S+D, and 32 for D."
+            r"Two-sided $t$ tests use the number of clusters minus one degree of freedom, "
+            r"with the smaller cluster count for S+D."
         )
     spec = "@{}p{0.40\\textwidth}" + "r" * (len(headings) - 1) + "@{}"
     text = "\n".join([
@@ -115,5 +120,6 @@ def make_table(bootstrap):
 
 
 make_table(False)
-make_table(True)
-print("Generated two inference tables from 19 audited contrasts each.")
+if include_bootstrap:
+    make_table(True)
+print("Generated inference table from 19 audited contrasts. Bootstrap is opt-in.")

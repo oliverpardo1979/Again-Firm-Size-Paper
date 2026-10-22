@@ -1,0 +1,27 @@
+{
+  "version": "primary-income-2026-10-21",
+  "observations": 5426316,
+  "income_components": [
+    "P6500",
+    "P6590S1",
+    "P6600S1",
+    "P6750"
+  ],
+  "excluded_second_job_component": "P7070",
+  "missing_codes": [
+    98,
+    99
+  ],
+  "age_bounds_inclusive": [
+    15,
+    120
+  ],
+  "positive_primary_income": true,
+  "weekly_hours": "main job, positive and at most 168",
+  "weight_divisor": 12,
+  "weight_2008_2009": "CNPV 2018 retrospective factors",
+  "weight_2010_2019": "official empalme FEX_C, not bare CNPV 2018 factors",
+  "weight_2021_2025": "marco 2018 FEX_C18",
+  "occupation_codes": "aligned across questionnaires, not raw post-2020 codes",
+  "price_conversion": "same annual end-of-year CPI factors as the previous paper"
+}

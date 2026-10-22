@@ -1,164 +1,164 @@
 "check","error","tolerance"
-"Existing salaried coefficient 2-3 0",-3.99680288865056e-13,1e-07
-"Existing salaried standard error 2-3 0",-1.46532092015761e-14,1e-07
-"Existing salaried coefficient 2-3 1",-5.98632254877884e-13,1e-07
-"Existing salaried standard error 2-3 1",5.47790979243956e-14,1e-07
-"Existing salaried coefficient 4-5 0",-4.21662704752634e-13,1e-07
-"Existing salaried standard error 4-5 0",-2.39686742675715e-14,1e-07
-"Existing salaried coefficient 4-5 1",-6.36601882320065e-13,1e-07
-"Existing salaried standard error 4-5 1",4.76632622259388e-14,1e-07
-"Existing salaried coefficient 6-10 0",-3.77697872977478e-13,1e-07
-"Existing salaried standard error 6-10 0",-2.03205507975923e-14,1e-07
-"Existing salaried coefficient 6-10 1",-6.33493257851114e-13,1e-07
-"Existing salaried standard error 6-10 1",5.02584085460001e-14,1e-07
-"Existing salaried coefficient 11-19 0",-2.49134046725885e-13,1e-07
-"Existing salaried standard error 11-19 0",-4.87804241444678e-15,1e-07
-"Existing salaried coefficient 11-19 1",-7.96251953261162e-13,1e-07
-"Existing salaried standard error 11-19 1",4.90267548780565e-14,1e-07
-"Existing salaried coefficient 20-30 0",-3.9057646006313e-13,1e-07
-"Existing salaried standard error 20-30 0",-1.89136900585751e-14,1e-07
-"Existing salaried coefficient 20-30 1",-6.40154595998865e-13,1e-07
-"Existing salaried standard error 20-30 1",4.80067374741822e-14,1e-07
-"Existing salaried coefficient 31-50 0",-6.34381436270814e-13,1e-07
-"Existing salaried standard error 31-50 0",-4.58834359395865e-14,1e-07
-"Existing salaried coefficient 31-50 1",-6.25499652073813e-13,1e-07
-"Existing salaried standard error 31-50 1",4.94777829818105e-14,1e-07
-"Existing salaried coefficient 51-100 0",-5.92415005939984e-13,1e-07
-"Existing salaried standard error 51-100 0",-3.22138149488893e-14,1e-07
-"Existing salaried coefficient 51-100 1",-6.3593574850529e-13,1e-07
-"Existing salaried standard error 51-100 1",5.04665753631173e-14,1e-07
-"Existing salaried coefficient 101+ 0",-9.09494701772928e-13,1e-07
-"Existing salaried standard error 101+ 0",-5.77905778786914e-14,1e-07
-"Existing salaried coefficient 101+ 1",-6.3682392692499e-13,1e-07
-"Existing salaried standard error 101+ 1",4.14529521819418e-14,1e-07
+"Existing salaried coefficient 2-3 0",-5.96189764223709e-13,1e-07
+"Existing salaried standard error 2-3 0",-1.83898035688301e-14,1e-07
+"Existing salaried coefficient 2-3 1",4.98934227266545e-13,1e-07
+"Existing salaried standard error 2-3 1",-9.89659743044768e-14,1e-07
+"Existing salaried coefficient 4-5 0",-6.28830321147689e-13,1e-07
+"Existing salaried standard error 4-5 0",-3.12926767831456e-14,1e-07
+"Existing salaried coefficient 4-5 1",4.63629135083465e-13,1e-07
+"Existing salaried standard error 4-5 1",-1.01342545466565e-13,1e-07
+"Existing salaried coefficient 6-10 0",-5.73985303731206e-13,1e-07
+"Existing salaried standard error 6-10 0",-2.53408405370692e-14,1e-07
+"Existing salaried coefficient 6-10 1",4.72288874675542e-13,1e-07
+"Existing salaried standard error 6-10 1",-1.04163205838503e-13,1e-07
+"Existing salaried coefficient 11-19 0",-9.32365296080206e-13,1e-07
+"Existing salaried standard error 11-19 0",-8.59035065303715e-15,1e-07
+"Existing salaried coefficient 11-19 1",5.96189764223709e-13,1e-07
+"Existing salaried standard error 11-19 1",-9.61279666977788e-14,1e-07
+"Existing salaried coefficient 20-30 0",-6.55475673738692e-13,1e-07
+"Existing salaried standard error 20-30 0",-2.89612084314328e-14,1e-07
+"Existing salaried coefficient 20-30 1",4.78728168218368e-13,1e-07
+"Existing salaried standard error 20-30 1",-9.84698433903475e-14,1e-07
+"Existing salaried coefficient 31-50 0",-5.26689802882174e-13,1e-07
+"Existing salaried standard error 31-50 0",-2.06223926824123e-14,1e-07
+"Existing salaried coefficient 31-50 1",4.56523707725864e-13,1e-07
+"Existing salaried standard error 31-50 1",-9.73006397675391e-14,1e-07
+"Existing salaried coefficient 51-100 0",-7.8159700933611e-13,1e-07
+"Existing salaried standard error 51-100 0",-3.08052194863961e-14,1e-07
+"Existing salaried coefficient 51-100 1",4.76063632959267e-13,1e-07
+"Existing salaried standard error 51-100 1",-9.67143032326589e-14,1e-07
+"Existing salaried coefficient 101+ 0",-9.2059693201918e-13,1e-07
+"Existing salaried standard error 101+ 0",-4.19941859064465e-14,1e-07
+"Existing salaried coefficient 101+ 1",4.68514116391816e-13,1e-07
+"Existing salaried standard error 101+ 1",-1.00117830692525e-13,1e-07
 "Existing full-sample joint endpoint coefficients",0,1e-07
 "Existing full-sample endpoint covariance",0,1e-07
-"Annual/joint endpoints All 2008 Solo 2-3 0",9.94621052186062e-14,1e-07
-"Annual/joint endpoints All 2025 Solo 2-3 0",6.16173778666962e-15,1e-07
-"Annual/joint endpoints All 2008 Solo 2-3 1",-2.420563749439e-13,1e-07
-"Annual/joint endpoints All 2025 Solo 2-3 1",-5.82311976415895e-14,1e-07
-"Annual/joint endpoints All 2008 Solo 4-5 0",1.41914258122711e-13,1e-07
-"Annual/joint endpoints All 2025 Solo 4-5 0",8.65973959207622e-15,1e-07
-"Annual/joint endpoints All 2008 Solo 4-5 1",-2.78638223605299e-13,1e-07
-"Annual/joint endpoints All 2025 Solo 4-5 1",-5.66491298314986e-14,1e-07
-"Annual/joint endpoints All 2008 Solo 6-10 0",1.60343960331488e-13,1e-07
-"Annual/joint endpoints All 2025 Solo 6-10 0",2.05391259555654e-14,1e-07
-"Annual/joint endpoints All 2008 Solo 6-10 1",-2.16687778831215e-13,1e-07
-"Annual/joint endpoints All 2025 Solo 6-10 1",-6.20614670765463e-14,1e-07
-"Annual/joint endpoints All 2008 Solo 11-19 0",1.50213175231784e-13,1e-07
-"Annual/joint endpoints All 2025 Solo 11-19 0",3.05311331771918e-15,1e-07
-"Annual/joint endpoints All 2008 Solo 11-19 1",-2.12607709215717e-13,1e-07
-"Annual/joint endpoints All 2025 Solo 11-19 1",-4.66848781854878e-14,1e-07
-"Annual/joint endpoints All 2008 Solo 20-30 0",5.73985303731206e-14,1e-07
-"Annual/joint endpoints All 2025 Solo 20-30 0",6.82787160144471e-15,1e-07
-"Annual/joint endpoints All 2008 Solo 20-30 1",-7.09432512735475e-14,1e-07
-"Annual/joint endpoints All 2025 Solo 20-30 1",-6.15618667154649e-14,1e-07
-"Annual/joint endpoints All 2008 Solo 31-50 0",4.67126337611035e-13,1e-07
-"Annual/joint endpoints All 2025 Solo 31-50 0",-1.0991207943789e-14,1e-07
-"Annual/joint endpoints All 2008 Solo 31-50 1",-1.45716771982052e-13,1e-07
-"Annual/joint endpoints All 2025 Solo 31-50 1",-4.96269692007445e-14,1e-07
-"Annual/joint endpoints All 2008 Solo 51-100 0",8.45323810949594e-13,1e-07
-"Annual/joint endpoints All 2025 Solo 51-100 0",2.67563748934663e-14,1e-07
-"Annual/joint endpoints All 2008 Solo 51-100 1",-2.57793786317961e-13,1e-07
-"Annual/joint endpoints All 2025 Solo 51-100 1",-6.11732886568461e-14,1e-07
-"Annual/joint endpoints All 2008 Solo 101+ 0",6.23057161419638e-13,1e-07
-"Annual/joint endpoints All 2025 Solo 101+ 0",-1.26121335597418e-13,1e-07
-"Annual/joint endpoints All 2008 Solo 101+ 1",-2.1183055309848e-13,1e-07
-"Annual/joint endpoints All 2025 Solo 101+ 1",-6.21724893790088e-14,1e-07
-"Annual/joint endpoints All 2008 11-19 Solo 0",-1.50213175231784e-13,1e-07
-"Annual/joint endpoints All 2025 11-19 Solo 0",-3.05311331771918e-15,1e-07
-"Annual/joint endpoints All 2008 11-19 Solo 1",2.12607709215717e-13,1e-07
-"Annual/joint endpoints All 2025 11-19 Solo 1",4.66848781854878e-14,1e-07
-"Annual/joint endpoints All 2008 11-19 2-3 0",-5.07649478009853e-14,1e-07
-"Annual/joint endpoints All 2025 11-19 2-3 0",3.10862446895044e-15,1e-07
-"Annual/joint endpoints All 2008 11-19 2-3 1",-2.94486657281823e-14,1e-07
-"Annual/joint endpoints All 2025 11-19 2-3 1",-1.15463194561016e-14,1e-07
-"Annual/joint endpoints All 2008 11-19 4-5 0",-8.29891710907305e-15,1e-07
-"Annual/joint endpoints All 2025 11-19 4-5 0",5.57887069874141e-15,1e-07
-"Annual/joint endpoints All 2008 11-19 4-5 1",-6.60305143895812e-14,1e-07
-"Annual/joint endpoints All 2025 11-19 4-5 1",-9.96425164601078e-15,1e-07
-"Annual/joint endpoints All 2008 11-19 6-10 0",1.01307850997046e-14,1e-07
-"Annual/joint endpoints All 2025 11-19 6-10 0",1.74860126378462e-14,1e-07
-"Annual/joint endpoints All 2008 11-19 6-10 1",-4.08006961549745e-15,1e-07
-"Annual/joint endpoints All 2025 11-19 6-10 1",-1.53765888910584e-14,1e-07
-"Annual/joint endpoints All 2008 11-19 20-30 0",-9.28146448586631e-14,1e-07
-"Annual/joint endpoints All 2025 11-19 20-30 0",3.77475828372553e-15,1e-07
-"Annual/joint endpoints All 2008 11-19 20-30 1",1.4166445794217e-13,1e-07
-"Annual/joint endpoints All 2025 11-19 20-30 1",-1.48769885299771e-14,1e-07
-"Annual/joint endpoints All 2008 11-19 31-50 0",3.16913162379251e-13,1e-07
-"Annual/joint endpoints All 2025 11-19 31-50 0",-1.40443212615082e-14,1e-07
-"Annual/joint endpoints All 2008 11-19 31-50 1",6.68909372336657e-14,1e-07
-"Annual/joint endpoints All 2025 11-19 31-50 1",-2.94209101525666e-15,1e-07
-"Annual/joint endpoints All 2008 11-19 51-100 0",6.95110635717811e-13,1e-07
-"Annual/joint endpoints All 2025 11-19 51-100 0",2.37032615757471e-14,1e-07
-"Annual/joint endpoints All 2008 11-19 51-100 1",-4.51860771022439e-14,1e-07
-"Annual/joint endpoints All 2025 11-19 51-100 1",-1.44884104713583e-14,1e-07
-"Annual/joint endpoints All 2008 11-19 101+ 0",4.72843986187854e-13,1e-07
-"Annual/joint endpoints All 2025 11-19 101+ 0",-1.29174448915137e-13,1e-07
-"Annual/joint endpoints All 2008 11-19 101+ 1",7.7715611723761e-16,1e-07
-"Annual/joint endpoints All 2025 11-19 101+ 1",-1.54876111935209e-14,1e-07
-"Annual/joint endpoints Salaried 2008 Solo 2-3 0",4.14113188185183e-14,1e-07
-"Annual/joint endpoints Salaried 2025 Solo 2-3 0",-2.37587727269783e-14,1e-07
-"Annual/joint endpoints Salaried 2008 Solo 2-3 1",-3.26294546937334e-13,1e-07
-"Annual/joint endpoints Salaried 2025 Solo 2-3 1",-4.32986979603811e-14,1e-07
-"Annual/joint endpoints Salaried 2008 Solo 4-5 0",1.0369483049999e-13,1e-07
-"Annual/joint endpoints Salaried 2025 Solo 4-5 0",-1.31006316905768e-14,1e-07
-"Annual/joint endpoints Salaried 2008 Solo 4-5 1",-3.24407167795471e-13,1e-07
-"Annual/joint endpoints Salaried 2025 Solo 4-5 1",-5.99520433297585e-15,1e-07
-"Annual/joint endpoints Salaried 2008 Solo 6-10 0",2.74225087082414e-14,1e-07
-"Annual/joint endpoints Salaried 2025 Solo 6-10 0",-3.59712259978551e-14,1e-07
-"Annual/joint endpoints Salaried 2008 Solo 6-10 1",-3.29625216011209e-13,1e-07
-"Annual/joint endpoints Salaried 2025 Solo 6-10 1",-4.48530101948563e-14,1e-07
-"Annual/joint endpoints Salaried 2008 Solo 11-19 0",1.19015908239817e-13,1e-07
-"Annual/joint endpoints Salaried 2025 Solo 11-19 0",-1.22124532708767e-14,1e-07
-"Annual/joint endpoints Salaried 2008 Solo 11-19 1",-3.10862446895044e-13,1e-07
-"Annual/joint endpoints Salaried 2025 Solo 11-19 1",7.32747196252603e-15,1e-07
-"Annual/joint endpoints Salaried 2008 Solo 20-30 0",-1.32782673745169e-13,1e-07
-"Annual/joint endpoints Salaried 2025 Solo 20-30 0",-2.19824158875781e-14,1e-07
-"Annual/joint endpoints Salaried 2008 Solo 20-30 1",-3.45945494473199e-13,1e-07
-"Annual/joint endpoints Salaried 2025 Solo 20-30 1",-3.79696274421804e-14,1e-07
-"Annual/joint endpoints Salaried 2008 Solo 31-50 0",4.66293670342566e-15,1e-07
-"Annual/joint endpoints Salaried 2025 Solo 31-50 0",-1.4210854715202e-14,1e-07
-"Annual/joint endpoints Salaried 2008 Solo 31-50 1",-2.95541369155217e-13,1e-07
-"Annual/joint endpoints Salaried 2025 Solo 31-50 1",0,1e-07
-"Annual/joint endpoints Salaried 2008 Solo 51-100 0",2.65121258280487e-13,1e-07
-"Annual/joint endpoints Salaried 2025 Solo 51-100 0",-5.06261699229071e-14,1e-07
-"Annual/joint endpoints Salaried 2008 Solo 51-100 1",-3.47721851312599e-13,1e-07
-"Annual/joint endpoints Salaried 2025 Solo 51-100 1",-3.28626015289046e-14,1e-07
-"Annual/joint endpoints Salaried 2008 Solo 101+ 0",9.99200722162641e-14,1e-07
-"Annual/joint endpoints Salaried 2025 Solo 101+ 0",-4.08562073062058e-14,1e-07
-"Annual/joint endpoints Salaried 2008 Solo 101+ 1",-3.21076498721595e-13,1e-07
-"Annual/joint endpoints Salaried 2025 Solo 101+ 1",-4.44089209850063e-14,1e-07
-"Annual/joint endpoints Salaried 2008 11-19 Solo 0",-1.19015908239817e-13,1e-07
-"Annual/joint endpoints Salaried 2025 11-19 Solo 0",1.22124532708767e-14,1e-07
-"Annual/joint endpoints Salaried 2008 11-19 Solo 1",3.10862446895044e-13,1e-07
-"Annual/joint endpoints Salaried 2025 11-19 Solo 1",-7.32747196252603e-15,1e-07
-"Annual/joint endpoints Salaried 2008 11-19 2-3 0",-7.76045894212984e-14,1e-07
-"Annual/joint endpoints Salaried 2025 11-19 2-3 0",-1.15463194561016e-14,1e-07
-"Annual/joint endpoints Salaried 2008 11-19 2-3 1",-1.54321000422897e-14,1e-07
-"Annual/joint endpoints Salaried 2025 11-19 2-3 1",-5.06261699229071e-14,1e-07
-"Annual/joint endpoints Salaried 2008 11-19 4-5 0",-1.53210777398272e-14,1e-07
-"Annual/joint endpoints Salaried 2025 11-19 4-5 0",-8.88178419700125e-16,1e-07
-"Annual/joint endpoints Salaried 2008 11-19 4-5 1",-1.35447209004269e-14,1e-07
-"Annual/joint endpoints Salaried 2025 11-19 4-5 1",-1.33226762955019e-14,1e-07
-"Annual/joint endpoints Salaried 2008 11-19 6-10 0",-9.15933995315754e-14,1e-07
-"Annual/joint endpoints Salaried 2025 11-19 6-10 0",-2.37587727269783e-14,1e-07
-"Annual/joint endpoints Salaried 2008 11-19 6-10 1",-1.87627691161651e-14,1e-07
-"Annual/joint endpoints Salaried 2025 11-19 6-10 1",-5.21804821573824e-14,1e-07
-"Annual/joint endpoints Salaried 2008 11-19 20-30 0",-2.51798581984986e-13,1e-07
-"Annual/joint endpoints Salaried 2025 11-19 20-30 0",-9.76996261670138e-15,1e-07
-"Annual/joint endpoints Salaried 2008 11-19 20-30 1",-3.50830475781549e-14,1e-07
-"Annual/joint endpoints Salaried 2025 11-19 20-30 1",-4.52970994047064e-14,1e-07
-"Annual/joint endpoints Salaried 2008 11-19 31-50 0",-1.14352971536391e-13,1e-07
-"Annual/joint endpoints Salaried 2025 11-19 31-50 0",-1.99840144432528e-15,1e-07
-"Annual/joint endpoints Salaried 2008 11-19 31-50 1",1.53210777398272e-14,1e-07
-"Annual/joint endpoints Salaried 2025 11-19 31-50 1",-7.32747196252603e-15,1e-07
-"Annual/joint endpoints Salaried 2008 11-19 51-100 0",1.46105350040671e-13,1e-07
-"Annual/joint endpoints Salaried 2025 11-19 51-100 0",-3.84137166520304e-14,1e-07
-"Annual/joint endpoints Salaried 2008 11-19 51-100 1",-3.68594044175552e-14,1e-07
-"Annual/joint endpoints Salaried 2025 11-19 51-100 1",-4.01900734914307e-14,1e-07
-"Annual/joint endpoints Salaried 2008 11-19 101+ 0",-1.90958360235527e-14,1e-07
-"Annual/joint endpoints Salaried 2025 11-19 101+ 0",-2.8643754035329e-14,1e-07
-"Annual/joint endpoints Salaried 2008 11-19 101+ 1",-1.02140518265514e-14,1e-07
-"Annual/joint endpoints Salaried 2025 11-19 101+ 1",-5.17363929475323e-14,1e-07
+"Annual/joint endpoints All 2008 Solo 2-3 0",3.67067487516692e-14,1e-07
+"Annual/joint endpoints All 2025 Solo 2-3 0",3.80251385934116e-15,1e-07
+"Annual/joint endpoints All 2008 Solo 2-3 1",1.1486644968528e-13,1e-07
+"Annual/joint endpoints All 2025 Solo 2-3 1",-4.23827639650654e-14,1e-07
+"Annual/joint endpoints All 2008 Solo 4-5 0",5.61772850460329e-14,1e-07
+"Annual/joint endpoints All 2025 Solo 4-5 0",1.2712053631958e-14,1e-07
+"Annual/joint endpoints All 2008 Solo 4-5 1",1.48103751484996e-13,1e-07
+"Annual/joint endpoints All 2025 Solo 4-5 1",-4.14807077575574e-14,1e-07
+"Annual/joint endpoints All 2008 Solo 6-10 0",9.753309271332e-14,1e-07
+"Annual/joint endpoints All 2025 Solo 6-10 0",-2.22044604925031e-16,1e-07
+"Annual/joint endpoints All 2008 Solo 6-10 1",1.12188036638372e-13,1e-07
+"Annual/joint endpoints All 2025 Solo 6-10 1",-3.71092045980959e-14,1e-07
+"Annual/joint endpoints All 2008 Solo 11-19 0",-7.23310300543289e-14,1e-07
+"Annual/joint endpoints All 2025 Solo 11-19 0",-1.4432899320127e-15,1e-07
+"Annual/joint endpoints All 2008 Solo 11-19 1",1.2972956042745e-13,1e-07
+"Annual/joint endpoints All 2025 Solo 11-19 1",-5.295763827462e-14,1e-07
+"Annual/joint endpoints All 2008 Solo 20-30 0",-1.26565424807268e-14,1e-07
+"Annual/joint endpoints All 2025 Solo 20-30 0",5.27355936696949e-15,1e-07
+"Annual/joint endpoints All 2008 Solo 20-30 1",1.40110145707695e-13,1e-07
+"Annual/joint endpoints All 2025 Solo 20-30 1",-4.27158308724529e-14,1e-07
+"Annual/joint endpoints All 2008 Solo 31-50 0",8.80406858527749e-14,1e-07
+"Annual/joint endpoints All 2025 Solo 31-50 0",-6.36712904622527e-14,1e-07
+"Annual/joint endpoints All 2008 Solo 31-50 1",1.37334588146132e-13,1e-07
+"Annual/joint endpoints All 2025 Solo 31-50 1",-4.50195436485501e-14,1e-07
+"Annual/joint endpoints All 2008 Solo 51-100 0",-1.59428026336172e-13,1e-07
+"Annual/joint endpoints All 2025 Solo 51-100 0",5.96189764223709e-14,1e-07
+"Annual/joint endpoints All 2008 Solo 51-100 1",1.53210777398272e-13,1e-07
+"Annual/joint endpoints All 2025 Solo 51-100 1",-5.40678612992451e-14,1e-07
+"Annual/joint endpoints All 2008 Solo 101+ 0",4.51194637207664e-13,1e-07
+"Annual/joint endpoints All 2025 Solo 101+ 0",-4.17443857259059e-14,1e-07
+"Annual/joint endpoints All 2008 Solo 101+ 1",1.4033219031262e-13,1e-07
+"Annual/joint endpoints All 2025 Solo 101+ 1",-4.17443857259059e-14,1e-07
+"Annual/joint endpoints All 2008 11-19 Solo 0",7.23310300543289e-14,1e-07
+"Annual/joint endpoints All 2025 11-19 Solo 0",1.4432899320127e-15,1e-07
+"Annual/joint endpoints All 2008 11-19 Solo 1",-1.2972956042745e-13,1e-07
+"Annual/joint endpoints All 2025 11-19 Solo 1",5.295763827462e-14,1e-07
+"Annual/joint endpoints All 2008 11-19 2-3 0",1.09051656593806e-13,1e-07
+"Annual/joint endpoints All 2025 11-19 2-3 0",5.24580379135386e-15,1e-07
+"Annual/joint endpoints All 2008 11-19 2-3 1",-1.48492329543615e-14,1e-07
+"Annual/joint endpoints All 2025 11-19 2-3 1",1.05748743095546e-14,1e-07
+"Annual/joint endpoints All 2008 11-19 4-5 0",1.28508315100362e-13,1e-07
+"Annual/joint endpoints All 2025 11-19 4-5 0",1.41414657761629e-14,1e-07
+"Annual/joint endpoints All 2008 11-19 4-5 1",1.83741910575463e-14,1e-07
+"Annual/joint endpoints All 2025 11-19 4-5 1",1.14769305170626e-14,1e-07
+"Annual/joint endpoints All 2008 11-19 6-10 0",1.69864122767649e-13,1e-07
+"Annual/joint endpoints All 2025 11-19 6-10 0",1.19348975147204e-15,1e-07
+"Annual/joint endpoints All 2008 11-19 6-10 1",-1.75415237890775e-14,1e-07
+"Annual/joint endpoints All 2025 11-19 6-10 1",1.58484336765241e-14,1e-07
+"Annual/joint endpoints All 2008 11-19 20-30 0",5.96744875736022e-14,1e-07
+"Annual/joint endpoints All 2025 11-19 20-30 0",6.68909372336657e-15,1e-07
+"Annual/joint endpoints All 2008 11-19 20-30 1",1.03805852802452e-14,1e-07
+"Annual/joint endpoints All 2025 11-19 20-30 1",1.02418074021671e-14,1e-07
+"Annual/joint endpoints All 2008 11-19 31-50 0",1.60371715907104e-13,1e-07
+"Annual/joint endpoints All 2025 11-19 31-50 0",-6.222800053024e-14,1e-07
+"Annual/joint endpoints All 2008 11-19 31-50 1",7.60502771868232e-15,1e-07
+"Annual/joint endpoints All 2025 11-19 31-50 1",7.93809462606987e-15,1e-07
+"Annual/joint endpoints All 2008 11-19 51-100 0",-8.70969962818435e-14,1e-07
+"Annual/joint endpoints All 2025 11-19 51-100 0",6.10622663543836e-14,1e-07
+"Annual/joint endpoints All 2008 11-19 51-100 1",2.34812169708221e-14,1e-07
+"Annual/joint endpoints All 2025 11-19 51-100 1",-1.11022302462516e-15,1e-07
+"Annual/joint endpoints All 2008 11-19 101+ 0",5.23525667261993e-13,1e-07
+"Annual/joint endpoints All 2025 11-19 101+ 0",-4.03010957938932e-14,1e-07
+"Annual/joint endpoints All 2008 11-19 101+ 1",1.06026298851702e-14,1e-07
+"Annual/joint endpoints All 2025 11-19 101+ 1",1.12132525487141e-14,1e-07
+"Annual/joint endpoints Salaried 2008 Solo 2-3 0",2.17603712826531e-14,1e-07
+"Annual/joint endpoints Salaried 2025 Solo 2-3 0",-3.10862446895044e-14,1e-07
+"Annual/joint endpoints Salaried 2008 Solo 2-3 1",1.7394974349827e-12,1e-07
+"Annual/joint endpoints Salaried 2025 Solo 2-3 1",-2.39808173319034e-14,1e-07
+"Annual/joint endpoints Salaried 2008 Solo 4-5 0",5.45119505090952e-14,1e-07
+"Annual/joint endpoints Salaried 2025 Solo 4-5 0",-2.37587727269783e-14,1e-07
+"Annual/joint endpoints Salaried 2008 Solo 4-5 1",1.76869630053034e-12,1e-07
+"Annual/joint endpoints Salaried 2025 Solo 4-5 1",-1.48769885299771e-14,1e-07
+"Annual/joint endpoints Salaried 2008 Solo 6-10 0",1.64313007644523e-14,1e-07
+"Annual/joint endpoints Salaried 2025 Solo 6-10 0",-2.02060590481778e-14,1e-07
+"Annual/joint endpoints Salaried 2008 Solo 6-10 1",1.7927881401647e-12,1e-07
+"Annual/joint endpoints Salaried 2025 Solo 6-10 1",-1.84297022087776e-14,1e-07
+"Annual/joint endpoints Salaried 2008 Solo 11-19 0",3.98570065840431e-14,1e-07
+"Annual/joint endpoints Salaried 2025 Solo 11-19 0",-1.46549439250521e-14,1e-07
+"Annual/joint endpoints Salaried 2008 Solo 11-19 1",1.74338321556888e-12,1e-07
+"Annual/joint endpoints Salaried 2025 Solo 11-19 1",-9.32587340685131e-15,1e-07
+"Annual/joint endpoints Salaried 2008 Solo 20-30 0",-1.23456800338317e-13,1e-07
+"Annual/joint endpoints Salaried 2025 Solo 20-30 0",-2.09832151654155e-14,1e-07
+"Annual/joint endpoints Salaried 2008 Solo 20-30 1",1.81454851144736e-12,1e-07
+"Annual/joint endpoints Salaried 2025 Solo 20-30 1",-2.09832151654155e-14,1e-07
+"Annual/joint endpoints Salaried 2008 Solo 31-50 0",2.05391259555654e-14,1e-07
+"Annual/joint endpoints Salaried 2025 Solo 31-50 0",-2.33146835171283e-14,1e-07
+"Annual/joint endpoints Salaried 2008 Solo 31-50 1",1.82709403162562e-12,1e-07
+"Annual/joint endpoints Salaried 2025 Solo 31-50 1",-3.21964677141295e-14,1e-07
+"Annual/joint endpoints Salaried 2008 Solo 51-100 0",1.38666855775682e-13,1e-07
+"Annual/joint endpoints Salaried 2025 Solo 51-100 0",-2.50910403565285e-14,1e-07
+"Annual/joint endpoints Salaried 2008 Solo 51-100 1",1.79067871641791e-12,1e-07
+"Annual/joint endpoints Salaried 2025 Solo 51-100 1",-2.1538326677728e-14,1e-07
+"Annual/joint endpoints Salaried 2008 Solo 101+ 0",-2.8466118351389e-13,1e-07
+"Annual/joint endpoints Salaried 2025 Solo 101+ 0",-1.68753899743024e-14,1e-07
+"Annual/joint endpoints Salaried 2008 Solo 101+ 1",1.82032167117541e-12,1e-07
+"Annual/joint endpoints Salaried 2025 Solo 101+ 1",-9.76996261670138e-15,1e-07
+"Annual/joint endpoints Salaried 2008 11-19 Solo 0",-3.98570065840431e-14,1e-07
+"Annual/joint endpoints Salaried 2025 11-19 Solo 0",1.46549439250521e-14,1e-07
+"Annual/joint endpoints Salaried 2008 11-19 Solo 1",-1.74338321556888e-12,1e-07
+"Annual/joint endpoints Salaried 2025 11-19 Solo 1",9.32587340685131e-15,1e-07
+"Annual/joint endpoints Salaried 2008 11-19 2-3 0",-1.80966353013901e-14,1e-07
+"Annual/joint endpoints Salaried 2025 11-19 2-3 0",-1.64313007644523e-14,1e-07
+"Annual/joint endpoints Salaried 2008 11-19 2-3 1",-3.88578058618805e-15,1e-07
+"Annual/joint endpoints Salaried 2025 11-19 2-3 1",-1.46549439250521e-14,1e-07
+"Annual/joint endpoints Salaried 2008 11-19 4-5 0",1.46549439250521e-14,1e-07
+"Annual/joint endpoints Salaried 2025 11-19 4-5 0",-9.10382880192628e-15,1e-07
+"Annual/joint endpoints Salaried 2008 11-19 4-5 1",2.53130849614536e-14,1e-07
+"Annual/joint endpoints Salaried 2025 11-19 4-5 1",-5.55111512312578e-15,1e-07
+"Annual/joint endpoints Salaried 2008 11-19 6-10 0",-2.34257058195908e-14,1e-07
+"Annual/joint endpoints Salaried 2025 11-19 6-10 0",-5.55111512312578e-15,1e-07
+"Annual/joint endpoints Salaried 2008 11-19 6-10 1",4.94049245958195e-14,1e-07
+"Annual/joint endpoints Salaried 2025 11-19 6-10 1",-9.10382880192628e-15,1e-07
+"Annual/joint endpoints Salaried 2008 11-19 20-30 0",-1.63313806922361e-13,1e-07
+"Annual/joint endpoints Salaried 2025 11-19 20-30 0",-6.32827124036339e-15,1e-07
+"Annual/joint endpoints Salaried 2008 11-19 20-30 1",7.11652958784725e-14,1e-07
+"Annual/joint endpoints Salaried 2025 11-19 20-30 1",-1.16573417585641e-14,1e-07
+"Annual/joint endpoints Salaried 2008 11-19 31-50 0",-1.93178806284777e-14,1e-07
+"Annual/joint endpoints Salaried 2025 11-19 31-50 0",-8.65973959207622e-15,1e-07
+"Annual/joint endpoints Salaried 2008 11-19 31-50 1",8.37108160567368e-14,1e-07
+"Annual/joint endpoints Salaried 2025 11-19 31-50 1",-2.28705943072782e-14,1e-07
+"Annual/joint endpoints Salaried 2008 11-19 51-100 0",9.88098491916389e-14,1e-07
+"Annual/joint endpoints Salaried 2025 11-19 51-100 0",-1.04360964314765e-14,1e-07
+"Annual/joint endpoints Salaried 2008 11-19 51-100 1",4.72955008490317e-14,1e-07
+"Annual/joint endpoints Salaried 2025 11-19 51-100 1",-1.22124532708767e-14,1e-07
+"Annual/joint endpoints Salaried 2008 11-19 101+ 0",-3.24518190097933e-13,1e-07
+"Annual/joint endpoints Salaried 2025 11-19 101+ 0",-2.22044604925031e-15,1e-07
+"Annual/joint endpoints Salaried 2008 11-19 101+ 1",7.69384556065233e-14,1e-07
+"Annual/joint endpoints Salaried 2025 11-19 101+ 1",-4.44089209850063e-16,1e-07
 "Full-sample income-cache coefficients",0,1e-07

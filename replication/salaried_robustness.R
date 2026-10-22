@@ -18,7 +18,7 @@ write_csv(d %>% count(anio, occupation_raw_code, occupation_harmonized_code,
 sizes <- levels(d$tamano_empresa)
 cell_n <- tabulate(as.integer(d$sector_depto_year), nbins = nlevels(d$sector_depto_year))
 d <- d[cell_n[as.integer(d$sector_depto_year)] > 1L, ]
-stopifnot(nrow(d) == 5268375L)
+stopifnot(nrow(d) == 5426174L)
 employee <- d[d$wage_employee, ]
 before_singletons <- nrow(employee)
 cell_n <- tabulate(as.integer(employee$sector_depto_year), nbins = nlevels(employee$sector_depto_year))
@@ -118,7 +118,7 @@ write_csv(data.frame(full_sample = nrow(d), salaried_candidates = before_singlet
   additional_singletons_removed = before_singletons-nrow(employee), salaried_estimation_sample = nrow(employee)), "sample_audit")
 # Preserve the effect of the coding correction separately from sample restriction.
 old_path <- file.path(paper, "build/occupation_previous_preferred_models.rds")
-if (file.exists(old_path)) {
+if ("--historical-occupation-audit" %in% args && file.exists(old_path)) {
   previous <- readRDS(old_path)
   old <- previous$preferred
   old$base <- "Solo"

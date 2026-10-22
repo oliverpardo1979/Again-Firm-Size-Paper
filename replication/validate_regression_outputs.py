@@ -56,8 +56,8 @@ for row in read("preferred_replication_check"):
 
 models = {r["model"]: r for r in read("models")}
 assert models["simple"]["sample_hash"] == models["geo_interacted1"]["sample_hash"]
-assert int(models["common1"]["n"]) == int(models["simple"]["n"]) == 5268514
-assert int(models["geo_interacted4"]["n"]) == 5268375
+assert int(models["common1"]["n"]) == int(models["simple"]["n"]) == 5426316
+assert int(models["geo_interacted4"]["n"]) == 5426174
 assert int(models["simple"]["df"]) == 16
 assert int(models["geo_interacted4"]["df"]) == 558
 with (ROOT / "replication/output/preferred_coefficients.csv").open(encoding="utf-8-sig", newline="") as f:

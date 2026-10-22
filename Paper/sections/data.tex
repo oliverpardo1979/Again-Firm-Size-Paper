@@ -2,13 +2,13 @@
 
 The empirical analysis uses microdata from the Gran Encuesta Integrada de Hogares (GEIH), Colombia's nationally representative labor force survey produced by the National Administrative Department of Statistics (DANE). Our sample covers 2008--2019 and 2021--2025. We exclude 2020 because of pandemic-related data limitations \citep{DANE2020GEIH}. The data combine separate annual samples rather than following the same workers over time.
 
-The sample is restricted to employed workers with positive labor income and valid weekly hours. The initial sample contains 5,353,440 observations across survey years, of which 5,268,514 have complete information on the variables used in the regressions.
+The sample is restricted to employed workers aged 15--120 with positive income from the main job, valid weekly hours in that job, and complete information on the regression variables. It contains 5,426,316 observations and covers all twelve months of each included year.
 
 Workers are classified by their occupational position in the main job. The salaried workers sample comprises private-sector employees, government employees, domestic workers, and day laborers. The full sample also includes non-salaried workers: own-account workers, employers, unpaid family workers, unpaid workers in businesses of other households, and other workers.
 
-Monthly labor income includes earnings from the main job and may also include earnings from a second job. A worker classified as unpaid in the main job can therefore have positive labor income from another job and meet the sample's inclusion criteria.
+We construct monthly labor income from reported main-job cash earnings, food and housing payments in kind, and earnings from self-employment or an employer's business. Income from a second job is excluded. Two observations classified as unpaid report positive main-job income and are retained under the same income criterion.
 
-Let \(i\) index workers and \(t\) survey years. Denote reported monthly labor income by \(MonthlyIncome_{it}\), weekly hours in the main job by \(WeeklyHours_{it}\), and the end-of-year Consumer Price Index by \(CPI_t\). Real hourly labor income in constant 2025 Colombian pesos, \(w_{it}\), is
+Let \(i\) index workers and \(t\) survey years. Denote monthly labor income from the main job by \(MonthlyIncome_{it}\), weekly hours in that job by \(WeeklyHours_{it}\), and the end-of-year Consumer Price Index by \(CPI_t\). Real hourly labor income in constant 2025 Colombian pesos, \(w_{it}\), is
 
 \begin{equation}
   w_{it} =
@@ -16,7 +16,7 @@ Let \(i\) index workers and \(t\) survey years. Denote reported monthly labor in
   \frac{CPI_{2025}}{CPI_t}.    
 \end{equation}
 
-For workers with multiple jobs, this measure need not equal hourly earnings from the main job alone.
+We use DANE expansion weights based on population projections from the 2018 census. For 2010--2019, these also incorporate DANE's adjustment linking the old and new survey frames \citep{DANE2022GEIHEmpalme}. For 2008--2009, we use the retrospective population-calibrated weights, and for 2021--2025 the new-frame weights. Annual employment counts are averages of the monthly estimates.
 
 Firm size is measured using the worker-reported firm-size variable for the main job in GEIH. We recode responses into categories that are comparable across survey years: Solo, 2--3, 4--5, 6--10, 11--19, 20--30, 31--50, 51--100, and 101+. Solo identifies respondents who report working alone, irrespective of occupational position. For example, a household's sole domestic employee is classified as a solo worker. Own-account workers can report larger units when they work with partners or unpaid family helpers, or as contractors for public or private entities. The GEIH explicitly assigns state contractors to 101+ despite their own-account status \citep[pp.~89--90, 115]{DANE2025GEIHManual}. The newer questionnaire separates 101--200 and 201+ workers. We combine both categories into 101+ to maintain comparability with earlier years. The data do not contain employer identifiers, so we cannot link respondents who work for the same firm.
 

@@ -17,6 +17,7 @@ def read(name):
 
 contrasts = {(r["model"], r["reference"], r["size"], r["parameter"]): r for r in read("contrasts")}
 coefficients = {(r["model"], r["term"]): r for r in read("coefficients")}
+models = {r["model"]: r for r in read("models")}
 
 
 def lines(file):
@@ -60,10 +61,20 @@ def check_p(cell, row):
         assert abs(float(cell)-p) <= .000500001, (cell, p)
 
 
+def check_model_stats(text, family):
+    ns = cells(text[row_at(text, "Observations")])
+    r2s = cells(text[row_at(text, "$R^2$")])
+    for j in range(1, 5):
+        model = models[f"{family}{j}"]
+        assert int(ns[j].replace(",", "")) == int(model["n"]), (family, j, ns)
+        assert abs(float(r2s[j])-float(model["r2"])) <= .000500001, (family, j, r2s)
+
+
 for ref, suffix in [("Solo", ""), ("101+", "_101_reference"), ("11-19", "_11_19_reference")]:
     for family in ["common", "geo_common"]:
         file = f"regression_firm_size_table{suffix}.tex" if family == "common" else f"regression_local_geography_robustness{suffix}_table.tex"
         text = lines(file)
+        check_model_stats(text, family)
         for size in (s for s in SIZES if s != ref):
             index = row_at(text, f"Firm size: {size}")
             cs, ses = cells(text[index]), cells(text[index+1])
@@ -80,6 +91,7 @@ for ref, suffix in [("Solo", ""), ("101+", "_101_reference"), ("11-19", "_11_19_
             check_coef(cs[j], r)
             check_se(ses[j], r)
     text = lines(f"regression_local_geography_formality_robustness{suffix}_table.tex")
+    check_model_stats(text, "geo_interacted")
     group = "informal"
     for line in text:
         if r"\textit{Formal workers}" in line:
@@ -132,16 +144,17 @@ for sample, label in [("raw", "Raw"), ("full", "Full sample"), ("formal", "Forma
     assert abs(float(re.match(r"(-?\d+\.\d+)", cs[3])[1])-float(r["premium"])) <= .050001
     assert cs[3].split(r"\%")[1] == expected_stars(r)
 
-# The descriptive table uses current endpoint data and must not be changed by regression reconciliation.
+# Descriptive rows are checked against the current regenerated aggregates.
 text = lines("descriptive_core_size_2008_2025_table.tex")
-desc = {(r["anio"], r["tamano_empresa"]): r for r in read("descriptive_reference_check")}
+with (ROOT / "Paper/tables/descriptive_core_size_2008_2025.csv").open(encoding="utf-8-sig", newline="") as f:
+    desc = {r['firm_size']: r for r in csv.DictReader(f)}
 for size in SIZES+["All workers"]:
     cs = cells(text[row_at(text, size)])
+    r = desc[size]
     for j, year in enumerate(["2008", "2025"]):
-        r = desc[year, size]
-        assert abs(float(cs[1+j].replace(r"\%", ""))-float(r["share"])) <= .050001
-        assert abs(float(cs[3+j].replace(",", ""))-float(r["hourly_income"])) <= .50001
-        assert abs(float(cs[5+j])-float(r["ratio_to_solo"])) <= .050001
-    cagr = 100*((float(desc["2025", size]["hourly_income"])/float(desc["2008", size]["hourly_income"]))**(1/17)-1)
+        assert abs(float(cs[1+j].replace(r"\%", ""))-100*float(r["employment_share_"+year])) <= .050001
+        assert abs(float(cs[3+j].replace(",", ""))-float(r["mean_income_"+year])) <= .50001
+        assert abs(float(cs[5+j])-float(r["wage_ratio_"+year])) <= .050001
+    cagr = 100*((float(r["mean_income_2025"])/float(r["mean_income_2008"]))**(1/17)-1)
     assert abs(float(cs[7].replace(r"\%", ""))-cagr) <= .050001
 print(f"PASS: {count} coefficient/SE/significance cells, all 19 regression tables, and the descriptive endpoint table.")

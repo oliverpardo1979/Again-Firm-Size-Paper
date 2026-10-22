@@ -2,7 +2,7 @@
 
 This repository contains the manuscript files for *Beyond Formality: The Firm-Size Wage Premium in Colombia*.
 
-The repository contains the LaTeX sources, tables, figures, bibliography, and replication code for the illustrative income counterfactuals. Raw GEIH microdata are not stored here and should be obtained directly from DANE.
+The repository contains the LaTeX sources, tables, figures, bibliography, and replication code for the regressions, descriptives, and illustrative income counterfactuals. The current results use main-job income and hours, complete annual coverage, and consistent age and population-weight criteria. See [replication instructions](replication/README.md). Raw GEIH microdata are not stored here and should be obtained directly from DANE.
 
 ## Main files
 
@@ -16,7 +16,7 @@ The repository contains the LaTeX sources, tables, figures, bibliography, and re
 - `Paper/figures/`: figures used in the manuscript.
 - `Paper/tables/`: table assets used in the manuscript.
 - `Paper/references.bib`: bibliography.
-- `replication/`: income-counterfactual code, aggregate outputs, and reproduction instructions.
+- `replication/`: public-data reconstruction, estimation and figure code, aggregate outputs, and reproduction instructions.
 
 ## Data
 

@@ -6,6 +6,7 @@ cjc <- file.path(dirname(paper), "CJC-Monitor")
 .libPaths(c(file.path(cjc, ".Rlib"), .libPaths()))
 suppressPackageStartupMessages({library(haven); library(dplyr)})
 source(file.path(paper, "replication/harmonize_occupation.R"))
+# Historical input. The primary-income reconstruction retains the original person keys.
 input <- if (length(args)) args[1] else file.path(cjc, "Datos/Processed/Paper-GEIH_base_modelo_personas_2008_2025.dta")
 out <- file.path(paper, "replication/own_account_output")
 dir.create(out, recursive = TRUE, showWarnings = FALSE)
