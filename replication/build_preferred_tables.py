@@ -87,7 +87,7 @@ for group in ("Formal", "Informal"):
     if rows:
         rows.append(r"    \midrule")
     rows.append(r"    \multicolumn{6}{l}{\textit{" + group + r" workers}} \\")
-    for model, label in [("sector_year", "Sector-year FE"), ("sector_dept_year", "Sector-department-year FE"), ("preferred", "+ Occupational position")]:
+    for model, label in [("sector_year", "Sector-year FE"), ("sector_dept_year", "Sector-department-year FE"), ("preferred", "+ Status in employment")]:
         sd = select(sensitivity, model=model, group=group, clustering="Sector-department")
         s = select(sensitivity, model=model, group=group, clustering="Sector")
         assert abs(float(sd["estimate"])-float(s["estimate"])) < 1e-12

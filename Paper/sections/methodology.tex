@@ -21,12 +21,12 @@ contributors and zero for noncontributors. With sector-year fixed effects
 \end{equation}
 %All stages in this sequence use the same 5,268,514 complete observations and GEIH expansion weights. This sequence describes how the size coefficients change after accounting for observed differences between workers and sectors. Even after adding \(F\), the model constrains each size coefficient \(\beta_g\) to be the same for formal and informal workers.
 
-%We next retain this common-premium restriction while adding geographic controls and occupational position. First, we add department-year fixed effects to Equation~(\ref{eq:common-premium}). We then replace the separate
-%sector-year and department-year effects with sector-department-year fixed effects, before adding occupational-position fixed effects. 
-Next, we add occupational-position fixed effects \(\rho_o\) and replace
+%We next retain this common-premium restriction while adding geographic controls and status in employment. First, we add department-year fixed effects to Equation~(\ref{eq:common-premium}). We then replace the separate
+%sector-year and department-year effects with sector-department-year fixed effects, before adding status-in-employment fixed effects.
+Next, we add status-in-employment fixed effects \(\rho_o\) and replace
 the sector-year effects with sector-department-year fixed effects
 \(\lambda_{s\times d\times t}\). The indices \(o\) and \(d\) denote
-occupational positions and departments.
+status-in-employment categories and departments.
 \begin{equation}\label{eq:common-premium-geography}
   \ln(w_{iosdt}) = \alpha
   + \sum_{g\neq g_0} \beta_g D_{ig}
@@ -49,7 +49,7 @@ log-wage gap among solo workers.
   + X_i'\gamma + \rho_o + \lambda_{s\times d\times t}
   + \varepsilon_{iosdt}.
 \end{equation}
-%The size coefficients compare firm-size categories within sector-department-year cells, separately by formality and conditional on the included worker controls and occupational fixed effects. Controlling for occupational position is relevant because solo work and employment in larger firms differ substantially in the prevalence of own-account and wage employment. %These controls describe conditional comparisons, rather than identifying the total effect of moving from own-account work to a salaried job.
+%The size coefficients compare firm-size categories within sector-department-year cells, separately by formality and conditional on the included worker controls and status-in-employment fixed effects. Controlling for status in employment is relevant because solo work and employment in larger firms differ substantially in the prevalence of own-account and wage employment. %These controls describe conditional comparisons, rather than identifying the total effect of moving from own-account work to a salaried job.
 
 %We estimate the preferred model with GEIH expansion weights using the same 5,268,375 observations as Equation~(\ref{eq:common-premium-geography}).
 
@@ -76,7 +76,7 @@ The appendix details the alternative clustering procedures.
 \subsection{Changes over Time}
 
 We extend Equation~(\ref{eq:main}) by allowing the firm-size premiums, the
-formality coefficient, and all worker and occupational-position coefficients
+formality coefficient, and all worker and status-in-employment coefficients
 to vary by year. Let \(\mathcal T\) denote the sample years and
 \(\mathbf{1}\{t=\tau\}\) the indicator for year \(\tau\). The model is
 \begin{equation}\label{eq:preferred-dynamics}
@@ -155,8 +155,7 @@ employment in firms with 101 or more workers.
 
 We implement these illustrative scenarios using the pooled preferred
 coefficients from Equation~(\ref{eq:main}). All estimated coefficients and
-fixed effects remain unchanged, as do worker characteristics, occupational
-position, sector, department, weekly hours, and survey weights.
+fixed effects remain unchanged, as do worker characteristics, status in employment, sector, department, weekly hours, and survey weights.
 
 Write \(F_i^c\) and \(D_{ig}^c\) for worker \(i\)'s assignments in scenario
 \(c\). Formalization at the same firm size sets \(F_i^c=1\) for informal

@@ -191,7 +191,7 @@ support = table(
     "tab:income-counterfactual-support",
     r">{\raggedright\arraybackslash}p{0.40\textwidth}cccc",
     "\n".join(body),
-    r"Destination cells are defined by sector, department, occupational position, size, and formality. Panel A reports "
+    r"Destination cells are defined by sector, department, status in employment, size, and formality. Panel A reports "
     r"intended movers as a percentage of all workers. The absent-destination columns instead use intended movers as "
     r"their denominator. Pooled counts use all estimation years. Panel B permits a move only when its destination "
     r"meets the stated unweighted observation count. Otherwise the worker stays at origin. The all-worker income "
