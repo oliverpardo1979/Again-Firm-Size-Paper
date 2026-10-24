@@ -86,23 +86,6 @@ def validate():
         actual = set(numeric(strip_spacing(generated)))
         assert original <= actual, (source, original - actual)
 
-    bootstrap_table = read(ROOT / "Slides/generated/bootstrap_summary.tex")
-    with (ROOT / "replication/inference_audit_output/wild_bootstrap.csv").open(
-        encoding="utf-8", newline=""
-    ) as stream:
-        bootstrap = {(r["model"], r["contrast"], r["clustering"]): r
-                     for r in csv.DictReader(stream)}
-    for contrast in ("Formal 101+/solo", "Informal 101+/solo",
-                     "Formal 101+/11-19", "Informal 101+/11-19"):
-        sector = bootstrap[("preferred", contrast, "Sector")]
-        two_way = bootstrap[("preferred", contrast, "Two-way sector + department")]
-        premium = 100 * math.expm1(float(sector["estimate"]))
-        cells = [contrast.replace("11-19", "11--19"), f"{premium:.1f}"]
-        for row in (sector, two_way):
-            p = float(row["p_wild"])
-            cells.append(r"$<0.001$" if p < 0.001 else f"{p:.3f}")
-        assert " & ".join(cells) + r" \\" in bootstrap_table, contrast
-
     income_table = read(ROOT / "Slides/generated/income_movers.tex")
     assert r"Allocation & \shortstack{Workers" in income_table
     assert r"Reassigned workers\\Mean income" in income_table
@@ -137,6 +120,18 @@ def validate():
         assert math.isclose(moved_share, 100 * expanded_movers / total_workers, rel_tol=1e-12)
         expected = f"{label} & {expanded_movers / 1e6:.2f} & {gains[0]:.1f} & {gains[1]:.1f}" + r" \\"
         assert expected in income_table, scenario
+    salary_income_table = read(ROOT / "Slides/generated/salaried_income_movers.tex")
+    with (ROOT / "replication/salaried_extensions_output/income_scenarios.csv").open(newline="") as stream:
+        salary_scenarios = {(r["scenario"], r["population"]): r for r in csv.DictReader(stream)
+                            if r["sample"] == "Salaried" and r["support"] == "unrestricted"
+                            and r["metric"] == "weekly" and r["method"] == "predicted"}
+    for scenario in reassigned:
+        total, movers = salary_scenarios[(scenario, "all")], salary_scenarios[(scenario, "movers")]
+        expected = (f"& {float(total['workers_moved']) / 1e6:.2f}"
+                    f" & {float(movers['gain_pct']):.1f} & {float(total['gain_pct']):.1f}" + r" \\")
+        assert expected in salary_income_table, scenario
+    assert "occupational position" not in all_slides.lower()
+    assert "occupational-position" not in all_slides.lower()
     assert r"\rho_{o(i)}" not in all_slides
     assert r"\sum_{\tau\in\mathcal T}\mathbf{1}\{t=\tau\}" in details
 
@@ -160,6 +155,25 @@ def validate():
     characteristics = selected_rows(read(ROOT / "Paper/sections/descriptive_worker_characteristics_2025_table.tex"))
     for size, cells in selected_rows(frame(main, "Why the Raw Relationship Is Not Enough")).items():
         assert cells == characteristics[size], (size, cells)
+    with (ROOT / "Paper/tables/descriptive_core_size_2008_2025.csv").open(newline="") as stream:
+        descriptive = {r["firm_size"]: r for r in csv.DictReader(stream)}
+    for size, cells in selected_rows(frame(main, "Second Fact: Hourly Pay Rises with Firm Size")).items():
+        r = descriptive[size]
+        expected = [f"{float(r[k]):,.0f}" for k in ("mean_income_2008", "mean_income_2025")]
+        expected += [f"{float(r['wage_ratio_2025']):.1f}", f"{float(r['annualized_change']):.1f}"]
+        assert cells == [numeric(c) for c in expected], (size, cells, expected)
+    for label, sizes in (
+        ("Solo", ["Solo"]), ("2--10 workers", ["2-3", "4-5", "6-10"]),
+        ("11--100 workers", ["11-19", "20-30", "31-50", "51-100"]),
+        ("101+ workers", ["101+"]),
+    ):
+        shares = [100 * sum(float(descriptive[s][f"employment_share_{year}"]) for s in sizes)
+                  for year in (2008, 2025)]
+        assert f"{label} & {shares[0]:.1f}\\% & {shares[1]:.1f}\\%" in main, label
+    gap_source = read(ROOT / "Paper/sections/regression_preferred_formality_gap_table.tex")
+    gaps = re.findall(r"& ([\d.]+)\\% &", table_body(gap_source))
+    assert "Gap (\\%) & " + " & ".join(gaps) in results
+    assert table_body(read(ROOT / "Slides/generated/salaried_dynamics.tex")).count("0.061") == 1
 
     for alias, source in (
         ("sequential_controls", "regression_firm_size_table"),
@@ -171,7 +185,7 @@ def validate():
     positions = [results.index(r"\begin{frame}{" + title + "}") for title in titles]
     assert positions == sorted(positions)
     assert details.index("Start with the Simplest Specification") < details.index(
-        "Then Add Geography and Occupational Position") < details.index("Preferred Regression Output")
+        "Then Add Geography and Status in Employment") < details.index("Preferred Regression Output")
     paper = expand(ROOT / "main.tex")
     presentation = expand(ROOT / "presentacion_javeriana.tex")
     assert "bootstrap" not in paper.lower(), "Bootstrap results must stay omitted from the paper."
@@ -196,7 +210,7 @@ def validate():
     print(f"PASS: {len(manifest['figures'])} figures and {len(manifest['tables'])} paper tables covered.")
     print(f"PASS: {main_slide_count} main slides, sequential controls before the preferred model, and elasticity benchmarks in the appendix.")
     print("PASS: source hashes, numeric coverage, preferred/salaried regression rows, and worker characteristics.")
-    print("PASS: bootstrap summaries, reassigned-worker denominators, and dynamic notation.")
+    print("PASS: both samples' income summaries, reassigned-worker denominators, and dynamic notation.")
 
 
 def render():

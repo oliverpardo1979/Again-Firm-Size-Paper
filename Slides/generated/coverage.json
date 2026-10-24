@@ -4,245 +4,259 @@
       "number": 1,
       "label": "tab:descriptive-core-size-2008-2025",
       "source": "Paper/sections/descriptive_core_size_2008_2025_table.tex",
-      "sha256": "c7004974da057ab9af27d27aaceb26968744c4fadf4de0dddd40dbf785ff477d",
+      "sha256": "a3980a58dec33d779cec07ac8baca378899792c4e24f7af956602b86be4fc941",
       "parts": 1
     },
     {
       "number": 2,
       "label": "tab:descriptive-wage-gaps-2025",
       "source": "Paper/sections/descriptive_wage_gaps_2025_table.tex",
-      "sha256": "5b33e4027a4bbc63f704c0f0da9b157ee5cb64de223f67a8022e4e0dda52d88f",
+      "sha256": "12ffc5f0e887c02919ef826c2c9b21790883df190d7b5a2c3f4b4b5f1cb237ad",
       "parts": 3
     },
     {
       "number": 3,
       "label": "tab:descriptive-worker-characteristics-2025",
       "source": "Paper/sections/descriptive_worker_characteristics_2025_table.tex",
-      "sha256": "7bc16d68aea8388859dd7a521b4a70355ee48ec8dfc251e5e63272648dc68f64",
+      "sha256": "af1ee2612a226f79f103f4f4e6954a7f7ffba5a0f07233565898f618d80145e5",
       "parts": 1
     },
     {
       "number": 4,
       "label": "tab:formal-worker-profile-2025",
       "source": "Paper/sections/descriptive_formal_worker_profile_2025_table.tex",
-      "sha256": "99dab5ed107471f8854c74e929731155fae614b600f9722403105e71c17a4aa7",
+      "sha256": "fbbcdf4729df29cdfe2a4cd975f2c0f2ea898e15c39ea0a5c738f1de1ee5c897",
       "parts": 1
     },
     {
       "number": 5,
       "label": "tab:firm-size-wage-premium-regressions",
       "source": "Paper/sections/regression_firm_size_table.tex",
-      "sha256": "8ba170f45dcd95e8eae0293c0c2f80590212e1f2286da645974bc466829f6940",
+      "sha256": "a12b8b32f83248d959d1554b8b0a005e01be87695b83ee4c2107cbc344da4823",
       "parts": 1
     },
     {
       "number": 6,
       "label": "tab:firm-size-local-geography-robustness",
       "source": "Paper/sections/regression_local_geography_robustness_table.tex",
-      "sha256": "2f0e1b52188d2a772ac9fb893825e7cbfc1e22430ba4296cbdc0c80ac9a71f2f",
+      "sha256": "1613bd49958fc0643cd182508f4852a56e9bee696ad644e426e903410a91c00f",
       "parts": 1
     },
     {
       "number": 7,
       "label": "tab:firm-size-local-geography-formality-robustness",
       "source": "Paper/sections/regression_local_geography_formality_robustness_table.tex",
-      "sha256": "10d252ca610b83ea660481c8fe7a59130768fc0ce766d0b36f3dce21fa9202ec",
+      "sha256": "fed3dc880989590b98062f2b1dae9a912a057a35133bbdc0f43a295f77e3a888",
       "parts": 2
     },
     {
       "number": 8,
-      "label": "tab:firm-size-local-geography-formality-robustness-101-reference",
-      "source": "Paper/sections/regression_local_geography_formality_robustness_101_reference_table.tex",
-      "sha256": "c20721d88944474173e3f90d1e3a7fce30d1b9f1e9869184ba19b3feb17491e9",
-      "parts": 2
+      "label": "tab:preferred-formality-gap",
+      "source": "Paper/sections/regression_preferred_formality_gap_table.tex",
+      "sha256": "c168b1c77bdee5ef96030bc1feb11899d07965f724d7ce9addf04b90c8fe5c31",
+      "parts": 1
     },
     {
       "number": 9,
-      "label": "tab:firm-size-local-geography-formality-robustness-11-19-reference",
-      "source": "Paper/sections/regression_local_geography_formality_robustness_11_19_reference_table.tex",
-      "sha256": "671c66017e78d32fe772b21a196b22ed1eab66d7971e269380b77aa1f3b86dc0",
+      "label": "tab:salaried-robustness",
+      "source": "Paper/sections/regression_salaried_robustness_table.tex",
+      "sha256": "4a8710bf20a6c0db7953c230acd936ab578c89f5645dec51e0d2dd03d990cc34",
       "parts": 2
     },
     {
       "number": 10,
-      "label": "tab:preferred-formality-gap",
-      "source": "Paper/sections/regression_preferred_formality_gap_table.tex",
-      "sha256": "79e671fa3838b0f07b4e753f17ff71ff1a80a5b165a00ea50f9d79c2cd49d6ef",
+      "label": "tab:salaried-dynamic-comparison",
+      "source": "Paper/sections/regression_salaried_dynamic_comparison_table.tex",
+      "sha256": "ae0203897061eb2c5233db328de13ce645a1156cb647d68b365afe6d43a36468",
       "parts": 1
     },
     {
       "number": 11,
-      "label": "tab:salaried-robustness",
-      "source": "Paper/sections/regression_salaried_robustness_table.tex",
-      "sha256": "c3115595a97e18a329fd418c6276b4d417504e19bd05fd5bc2d6dcf51f662107",
-      "parts": 2
+      "label": "tab:salaried-income-comparison",
+      "source": "Paper/sections/income_salaried_comparison_table.tex",
+      "sha256": "e50ccdaa19c69cda95cdffa944083fbf6c1196d0d8e46cdf4d097b6ab688bb0d",
+      "parts": 1
     },
     {
       "number": 12,
       "label": "tab:preferred-endpoint-changes",
       "source": "Paper/sections/regression_preferred_endpoint_changes_table.tex",
-      "sha256": "0c2401785e087f8fe942ae383590d7bc68c333ffb191bd625419dedceef3e626",
+      "sha256": "236570505570ad41878d59ca5f2681e5e10c966437175ded3c5de36885ef5ab8",
       "parts": 2
     },
     {
       "number": 13,
       "label": "tab:preferred-elasticities",
       "source": "Paper/sections/regression_preferred_elasticity_table.tex",
-      "sha256": "2beeb9dbe2dc1fd933200fbdbbcc1df1ccb26c47379452f3dd6b24a7aa59e70b",
+      "sha256": "2a994dfce7e0d090e101915e7afab5d39260429295e94598f005d4889fcb0d85",
       "parts": 1
     },
     {
       "number": 14,
       "label": "tab:income-counterfactuals-2025",
       "source": "Paper/sections/income_counterfactuals_2025_table.tex",
-      "sha256": "20e347b6093c1a6a9018012393e831735fb8173c31668253fab257505fbad1e1",
+      "sha256": "b6df7660f87eb1ac5c3510d40daca57383ac331c58f2554b785f52d09c4ae8e6",
       "parts": 1
     },
     {
       "number": 15,
       "label": "tab:minimum-wage-bunching-2025",
       "source": "Paper/sections/minimum_wage_bunching_2025_table.tex",
-      "sha256": "b45096e56c22db70a4d83fc0155e03838f445ff2e6b0238ee9e6af9af7742e52",
+      "sha256": "fbc09a38c08652fc70d0836cd2932ac5e041c005f93c7ba757bc72535ce2de2f",
       "parts": 2
     },
     {
       "number": 16,
       "label": "tab:minimum-wage-monthly-bunching-2025",
       "source": "Paper/sections/minimum_wage_monthly_bunching_2025_table.tex",
-      "sha256": "f08db5ac2382c53bf20bab79270a28ea09ab3a12c81827707ec51c00162acd85",
+      "sha256": "857d9b74ef40b560743da2b8f927233a2e03b72f623203a6bef9f33cd143611f",
       "parts": 2
     },
     {
       "number": 17,
       "label": "tab:preferred-clustering-sensitivity",
       "source": "Paper/sections/regression_preferred_clustering_table.tex",
-      "sha256": "6932b8d945b0783432b7cd612f57f1c3b1b0580e3e04764404c0a0a9ac67a846",
+      "sha256": "efb8754b848be29de5fca1ef8c58dc4b514e4c20e1280f6ba99ca9526d71e8da",
       "parts": 2
     },
     {
       "number": 18,
       "label": "tab:preferred-clustering-comparison",
       "source": "Paper/sections/regression_inference_clustering_table.tex",
-      "sha256": "31e061aad3f1c08f10ad264198ce2f341fb7bbd4c9ae7f1f5b588766b3f4c194",
+      "sha256": "fab8913c4632bfa278bf010d1d8e8d8fb29eef996c4fd1adf73c88f83eecb7b0",
       "parts": 2
     },
     {
       "number": 19,
       "label": "tab:firm-size-wage-premium-regressions-101-reference",
       "source": "Paper/sections/regression_firm_size_table_101_reference.tex",
-      "sha256": "b799b6b8c9d9ac6f3789f936bab7d146476231befd9e1ae51a8bbec9d7724bfb",
+      "sha256": "353d0643f916f0e76f430579fe38eba91b66583b3bf04683a2bfb7b53b26f7df",
       "parts": 1
     },
     {
       "number": 20,
       "label": "tab:firm-size-wage-premium-regressions-11-19-reference",
       "source": "Paper/sections/regression_firm_size_table_11_19_reference.tex",
-      "sha256": "2282918ca6ad672c4ce3719ab16f2953f9c257f4330d0443f9778b0b8a4a2ab3",
+      "sha256": "8dc08558fba5a07c065ff9df56ec1e1f25e02d5983df56aff358a2a558b892f0",
       "parts": 1
     },
     {
       "number": 21,
       "label": "tab:firm-size-local-geography-robustness-101-reference",
       "source": "Paper/sections/regression_local_geography_robustness_101_reference_table.tex",
-      "sha256": "edad7e9b81e92e70d06a4d0698d7964ce40a2295e0e7d9e821bb0ccdee9d1826",
+      "sha256": "063d50846b9f3b08e9502ee424ebd6528acc8f33e1a59815348bfcc5eb61f634",
       "parts": 1
     },
     {
       "number": 22,
       "label": "tab:firm-size-local-geography-robustness-11-19-reference",
       "source": "Paper/sections/regression_local_geography_robustness_11_19_reference_table.tex",
-      "sha256": "a47264327e7887b6909b7c92cfd8b2e3bc5c6ab2f9c3cb6f5d6d58a4f8844c1a",
+      "sha256": "79e403891bf137ee442cffc1735e9fbafb74965bc66b84c6aa5c8908a9f18811",
       "parts": 1
     },
     {
       "number": 23,
-      "label": "tab:formality-interaction-coefficients",
-      "source": "Paper/sections/regression_formality_interaction_coefficients_table.tex",
-      "sha256": "79321cdb2ff691cdd2e27e570a898a078de52a683d0617caee48f208dbf3e18d",
-      "parts": 1
+      "label": "tab:firm-size-local-geography-formality-robustness-101-reference",
+      "source": "Paper/sections/regression_local_geography_formality_robustness_101_reference_table.tex",
+      "sha256": "33a5a2c8e0b3fe45605aa23215785b4941fa897b405af05d5aeb8f3a839d76c4",
+      "parts": 2
     },
     {
       "number": 24,
-      "label": "tab:formal-101-contrasts",
-      "source": "Paper/sections/regression_formal_101_contrasts_table.tex",
-      "sha256": "9aac103b96b210ed8e23bfe2aa26b1677dd63dfde27e63a53629ef40460d2a48",
-      "parts": 1
+      "label": "tab:firm-size-local-geography-formality-robustness-11-19-reference",
+      "source": "Paper/sections/regression_local_geography_formality_robustness_11_19_reference_table.tex",
+      "sha256": "f72c7c9a2af83b0e417b623ef55aeaa024512dfb1ccc438643ea6ab951f5ff54",
+      "parts": 2
     },
     {
       "number": 25,
-      "label": "tab:formal-wage-gap-by-size",
-      "source": "Paper/sections/regression_formality_gap_by_size_table.tex",
-      "sha256": "1a29dea085c875e6842233c56e7a348ae7bc7e96a86a78e2ee34bc0b96cd78fa",
+      "label": "tab:formality-interaction-coefficients",
+      "source": "Paper/sections/regression_formality_interaction_coefficients_table.tex",
+      "sha256": "b7628944cced85690f30d9825b1837f4a579015ed92417845ce30010370264ca",
       "parts": 1
     },
     {
       "number": 26,
-      "label": "tab:formality-interaction-coefficients-101-reference",
-      "source": "Paper/sections/regression_formality_interaction_coefficients_101_reference.tex",
-      "sha256": "d37b9ed5eb9adf7c6bb9c1817adde4f22b6234728acf96ed27ccaf67a29144fd",
+      "label": "tab:formal-101-contrasts",
+      "source": "Paper/sections/regression_formal_101_contrasts_table.tex",
+      "sha256": "be7ed6385ddc9a714240be39e28a9d41524f4f455e50e18bee28c5def820870d",
       "parts": 1
     },
     {
       "number": 27,
-      "label": "tab:formality-interaction-coefficients-11-19-reference",
-      "source": "Paper/sections/regression_formality_interaction_coefficients_11_19_reference.tex",
-      "sha256": "aa5142b5fc7a2751b1b0fa997981020ccaa5cc9ced7e2d3dc4db651070f06aa2",
+      "label": "tab:formal-wage-gap-by-size",
+      "source": "Paper/sections/regression_formality_gap_by_size_table.tex",
+      "sha256": "8fc11d51afe2be056d1d00184e72a8e6df0cec9e8b44f9ba9daba70f21a04d8b",
       "parts": 1
     },
     {
       "number": 28,
-      "label": "tab:firm-size-premium-trend-test",
-      "source": "Paper/sections/regression_firm_size_trend_test.tex",
-      "sha256": "b24841fb8005ec4c727852801e77dfd0b3234910f607863a2bac057ff0654be4",
+      "label": "tab:formality-interaction-coefficients-101-reference",
+      "source": "Paper/sections/regression_formality_interaction_coefficients_101_reference.tex",
+      "sha256": "fbddef75a00211fb1d7f354180803889db57e3b75205079cba4b6713c9229f18",
       "parts": 1
     },
     {
       "number": 29,
-      "label": "tab:firm-size-premium-trend-test-101-reference",
-      "source": "Paper/sections/regression_firm_size_trend_test_101_reference.tex",
-      "sha256": "643e831efce05a71a0e421b4798c1ed0e6b0f96f5e607548bc17c4e7181ea071",
+      "label": "tab:formality-interaction-coefficients-11-19-reference",
+      "source": "Paper/sections/regression_formality_interaction_coefficients_11_19_reference.tex",
+      "sha256": "d7bc22cd6b2cb4d518b4c8f4e89a86e108315c895f1d1b2a3f8ddabde9e86b8e",
       "parts": 1
     },
     {
       "number": 30,
-      "label": "tab:firm-size-premium-trend-test-11-19-reference",
-      "source": "Paper/sections/regression_firm_size_trend_test_11_19_reference.tex",
-      "sha256": "3f6767d225ce30171b6c1de3eb50168f7bbfcca2fd4b0430cfc2a5643f6513df",
+      "label": "tab:firm-size-premium-trend-test",
+      "source": "Paper/sections/regression_firm_size_trend_test.tex",
+      "sha256": "e561611ceea23fb91f398b8941c346229d3df46f8caa12addef90bb454475afc",
       "parts": 1
     },
     {
       "number": 31,
-      "label": "tab:firm-size-elasticity-benchmark",
-      "source": "Paper/sections/regression_elasticity_benchmark_table.tex",
-      "sha256": "03db4566c5cb104f5589befb0dad6379ad1b6b303fbb50ed9742255b95d63f29",
+      "label": "tab:firm-size-premium-trend-test-101-reference",
+      "source": "Paper/sections/regression_firm_size_trend_test_101_reference.tex",
+      "sha256": "35052bcaf3d3284bcb56ba46550bea6665fb77a802d4e56181c59da79a6b2b43",
       "parts": 1
     },
     {
       "number": 32,
-      "label": "tab:polynomial-size-profile",
-      "source": "Paper/sections/regression_preferred_quadratic_table.tex",
-      "sha256": "609b9b01a23d3bac15e336134f4361eb741b86d2db9840ad629b6b4b58807601",
+      "label": "tab:firm-size-premium-trend-test-11-19-reference",
+      "source": "Paper/sections/regression_firm_size_trend_test_11_19_reference.tex",
+      "sha256": "48589c32a1c7c7c20b443deae3cf691d416835d0aa467afef830ceaafd3ef3c8",
       "parts": 1
     },
     {
       "number": 33,
-      "label": "tab:quadratic-preferred-sensitivity",
-      "source": "Paper/sections/regression_preferred_quadratic_sensitivity_table.tex",
-      "sha256": "830c4c96d9705fe1488ea8c485c59eba10c906a0feecc6101ec317b6f996fa3c",
+      "label": "tab:firm-size-elasticity-benchmark",
+      "source": "Paper/sections/regression_elasticity_benchmark_table.tex",
+      "sha256": "3c126f1daa0dcebc52056b8467239c95fcec84888c7794389242bd2b1c691249",
       "parts": 1
     },
     {
       "number": 34,
-      "label": "tab:income-counterfactual-sensitivity",
-      "source": "Paper/sections/income_counterfactual_sensitivity_table.tex",
-      "sha256": "835cae4d507134d36bffdf1c678be94ad5902bd7a0b1675b5380c8a1de316aaa",
+      "label": "tab:polynomial-size-profile",
+      "source": "Paper/sections/regression_preferred_quadratic_table.tex",
+      "sha256": "3edc61d96e9f267747d94c18ac2c6f40a59686c8edb907d780372f0041617c99",
       "parts": 1
     },
     {
       "number": 35,
+      "label": "tab:quadratic-preferred-sensitivity",
+      "source": "Paper/sections/regression_preferred_quadratic_sensitivity_table.tex",
+      "sha256": "4a2a967f1d7ef01ba6483a72aa26027006072f039c5b88875ec55d0b3c78a1a2",
+      "parts": 1
+    },
+    {
+      "number": 36,
+      "label": "tab:income-counterfactual-sensitivity",
+      "source": "Paper/sections/income_counterfactual_sensitivity_table.tex",
+      "sha256": "2f10e45f869043425bd43507f614de95f0c1de702b736792b8ec45d8ee1a3658",
+      "parts": 1
+    },
+    {
+      "number": 37,
       "label": "tab:income-counterfactual-support",
       "source": "Paper/sections/income_counterfactual_support_table.tex",
-      "sha256": "49925b9a4bf7b4dd515e175d8dfda5212dd6a588b0794f11f31477be124ceb05",
+      "sha256": "ad8ff08900c330c700a8cefb0ceb4a7bed002f93c1ae97b0a968e0a4b23154b0",
       "parts": 2
     }
   ],
@@ -324,8 +338,8 @@
     }
   ],
   "summary_sources": {
-    "replication/inference_audit_output/wild_bootstrap.csv": "0d62f481ec24fe76ecd47a22a90e905001bd88e485ccc026dd725be437857087",
-    "replication/output/scenario_results.csv": "2c4fef2051fd378121bbfad3486354379875540eaf89995897d1cd9dceae3636",
-    "replication/output/sample_audit.csv": "b79fea03973ce30f554bd5ee896b4caf137865a3fff744128d3199ada4508545"
+    "replication/output/scenario_results.csv": "91d006f550cdc301c1d5ec7dac37a794667fe0e0a7a3107527dea4a42a070b89",
+    "replication/output/sample_audit.csv": "59e1db8078cfb3e321ff352c439e8b1e508f644c9b3157dde65cfa9c96663368",
+    "replication/salaried_extensions_output/income_scenarios.csv": "0e772c2de655770c061b348230b814cd87b89d81095a355fe5f8886c15f7073e"
   }
 }

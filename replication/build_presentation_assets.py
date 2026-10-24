@@ -7,7 +7,6 @@ Generated TeX is committed, so Overleaf does not need Python.
 import csv
 import hashlib
 import json
-import math
 import re
 from pathlib import Path
 
@@ -162,7 +161,7 @@ def slide_notes(label, original):
         return ("Within-formality log contrasts relative to " + base + " workers. "
                 r"All columns include worker controls and GEIH weights. FE: (1) $s\times t$, "
                 r"(2) $s\times t$ and $d\times t$, (3)--(4) $s\times d\times t$. "
-                "Column (4) adds occupational position and is preferred. "
+                "Column (4) adds status in employment and is preferred. "
                 "SEs cluster by sector-department." + stars)
     if label == "tab:salaried-robustness":
         return (r"Main rows are log contrasts relative to 11--19 workers within formality. "
@@ -176,32 +175,15 @@ def slide_notes(label, original):
                 "All columns include worker characteristics and formality. "
                 r"FE: (1) $s\times t$, (2) $s\times t$ and $d\times t$, "
                 r"(3)--(4) $s\times d\times t$. "
-                "Column (4) adds occupational position. SEs cluster by sector-department." + stars)
+                "Column (4) adds status in employment. SEs cluster by sector-department." + stars)
     return original
 
 
 def export_summary_tables():
-    """Use saved estimates for the main-talk bootstrap and mover comparisons."""
-    bootstrap_path = ROOT / "replication/inference_audit_output/wild_bootstrap.csv"
+    """Use current saved estimates for the mover comparisons in both samples."""
     scenario_path = ROOT / "replication/output/scenario_results.csv"
     sample_path = ROOT / "replication/output/sample_audit.csv"
-    with bootstrap_path.open(encoding="utf-8", newline="") as stream:
-        bootstrap = {(r["model"], r["contrast"], r["clustering"]): r
-                     for r in csv.DictReader(stream)}
-    pvalue = lambda value: r"$<0.001$" if float(value) < 0.001 else f"{float(value):.3f}"
-    lines = [r"\begin{tabular}{lrrr}", r"\toprule",
-             r"Contrast & Premium (\%) & $p$ (sector) & $p$ (two-way) \\", r"\midrule"]
-    for contrast in ("Formal 101+/solo", "Informal 101+/solo",
-                     "Formal 101+/11-19", "Informal 101+/11-19"):
-        sector = bootstrap[("preferred", contrast, "Sector")]
-        two_way = bootstrap[("preferred", contrast, "Two-way sector + department")]
-        premium = 100 * math.expm1(float(sector["estimate"]))
-        label = contrast.replace("11-19", "11--19")
-        lines.append(f"{label} & {premium:.1f} & {pvalue(sector['p_wild'])}"
-                     f" & {pvalue(two_way['p_wild'])}" + r" \\")
-    lines.append(r"\bottomrule\end{tabular}")
-    (OUT / "bootstrap_summary.tex").write_text("\n".join(lines) + "\n", encoding="utf-8")
-
+    salary_path = ROOT / "replication/salaried_extensions_output/income_scenarios.csv"
     with scenario_path.open(encoding="utf-8", newline="") as stream:
         scenarios = {(r["scenario"], r["population"]): r for r in csv.DictReader(stream)
                      if r["support"] == "unrestricted" and r["metric"] == "weekly"
@@ -230,8 +212,31 @@ def export_summary_tables():
         lines.append(f"{label} & {moved_millions:.2f} & {movers:.1f} & {all_workers:.1f}" + r" \\")
     lines.append(r"\bottomrule\end{tabular}")
     (OUT / "income_movers.tex").write_text("\n".join(lines) + "\n", encoding="utf-8")
+    with salary_path.open(encoding="utf-8", newline="") as stream:
+        salary = {(r["scenario"], r["population"]): r for r in csv.DictReader(stream)
+                  if r["sample"] == "Salaried" and r["support"] == "unrestricted"
+                  and r["metric"] == "weekly" and r["method"] == "predicted"}
+    workers = float(salary[("combined_formal_101", "all")]["workers_total"])
+    lines = [rf"{{\small Salaried workers represented in 2025: {workers / 1e6:.2f} million.\par}}",
+             r"\vspace{0.2cm}", r"\begin{tabular}{p{0.36\textwidth}rrr}", r"\toprule",
+             r"Allocation & \shortstack{Workers\\reassigned\\(millions)}"
+             r" & \shortstack{Reassigned workers\\Mean income\\gain (\%)}"
+             r" & \shortstack{All salaried workers\\Total income\\gain (\%)} \\", r"\midrule"]
+    for scenario, label in (
+        ("formalize_same_size", "Informal to formal, same size"),
+        ("formal_to_101", "Formal to formal 101+"),
+        ("informal_to_101", "Informal to informal 101+"),
+        ("combined_formal_101", "All workers to formal 101+"),
+    ):
+        if scenario == "combined_formal_101":
+            lines.append(r"\midrule")
+        total, moved = salary[(scenario, "all")], salary[(scenario, "movers")]
+        lines.append(f"{label} & {float(total['workers_moved']) / 1e6:.2f}"
+                     f" & {float(moved['gain_pct']):.1f} & {float(total['gain_pct']):.1f}" + r" \\")
+    lines.append(r"\bottomrule\end{tabular}")
+    (OUT / "salaried_income_movers.tex").write_text("\n".join(lines) + "\n", encoding="utf-8")
     return {p.relative_to(ROOT).as_posix(): hashlib.sha256(p.read_bytes()).hexdigest()
-            for p in (bootstrap_path, scenario_path, sample_path)}
+            for p in (scenario_path, sample_path, salary_path)}
 
 
 def main():
@@ -248,6 +253,7 @@ def main():
         "tab:firm-size-wage-premium-regressions": "sequential_controls.tex",
         "tab:firm-size-local-geography-robustness": "common_geography.tex",
         "tab:preferred-elasticities": "preferred_elasticities.tex",
+        "tab:salaried-dynamic-comparison": "salaried_dynamics.tex",
     }
     expected_files = set()
 

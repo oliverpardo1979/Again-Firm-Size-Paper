@@ -26,8 +26,8 @@
     \begin{column}{0.49\textwidth}
       \vspace{0.25cm}
       \begin{itemize}
-        \item The size-wage relationship is steeper in informal employment.
-        \item Assigning everyone to formal 101+ jobs implies 25.4\% higher total predicted labor income, holding hours and the estimated wage structure fixed.
+        \item Among salaried workers, the formal and informal 101+/solo premiums are both about 21\%.
+        \item Assigning everyone to formal 101+ jobs implies 25.9\% higher total predicted labor income in the full sample and 12.3\% in the salaried workers sample.
         \item The premium does not prove causality or misallocation by itself.
       \end{itemize}
     \end{column}
@@ -53,8 +53,9 @@
     \item Source: Gran Encuesta Integrada de Hogares, DANE.
     \item Period: 2008--2019 and 2021--2025.
     \item We exclude 2020 because of pandemic-related data limitations.
-    \item Sample: 5.35 million worker observations pooled across repeated cross-sections (not a worker panel).
-    \item Regression sample: 5.27 million observations with complete controls.
+    \item Sample: 5.43 million observations across repeated cross-sections, covering all twelve months of each included year.
+    \item Ages 15--120, positive main-job income, valid main-job hours, and complete controls.
+    \item Income excludes earnings from secondary jobs. Pension recipients are excluded from the formal-informal comparison.
   \end{itemize}
 \end{frame}
 
@@ -71,7 +72,7 @@
         \frac{CPI_{2025}}{CPI_t}
       \]
       \vspace{0.1cm}
-      {\small Real hourly labor income in constant 2025 Colombian pesos.}
+      {\small Income and hours refer to the main job. Real hourly labor income is in constant 2025 Colombian pesos.}
     \end{column}
     \begin{column}{0.48\textwidth}
       \idea{Firm size}
@@ -87,14 +88,14 @@
   \end{columns}
 \end{frame}
 
-\begin{frame}{Firm Size and Occupational Position}
-  \idea{Solo work describes the size of the reported unit, not the worker's occupational position.}
+\begin{frame}{Firm Size and Status in Employment}
+  \idea{Solo work describes the size of the reported unit, not the worker's status in employment.}
   \vspace{0.3cm}
   \begin{itemize}
     \item A household's sole domestic employee is a solo worker, but not an own-account worker.
     \item Own-account workers may report larger units when working with partners, unpaid family helpers, or as contractors.
     \item GEIH assigns state contractors to 101+ despite their own-account status.
-    \item Occupational position is recorded separately and included as a control.
+    \item Status in employment is recorded separately and included as a control.
   \end{itemize}
   %\source{Paper Section 2. DANE's GEIH collection manual (2025), pp. 89--90 and 115.}
 \end{frame}
@@ -123,11 +124,11 @@
     \toprule
     2025 comparison & Ratio between extremes & Reading \\
     \midrule
-    Women / men & 1.01 & Small gap in means \\
+    Women / men & 1.02 & Small gap in means \\
     Formal / informal & 2.43 & Very large gap \\
-    Higher education / preschool or less & 4.08 & Larger than the size gap \\
-    Information and communication / agriculture & 3.63 & Very large sector gap \\
-    101+ / solo & 2.58 & Large firm-size gap \\
+    Higher education / preschool or less & 4.06 & Larger than the size gap \\
+    Information and communication / agriculture & 3.68 & Very large sector gap \\
+    101+ / solo & 2.59 & Large firm-size gap \\
     \bottomrule
   \end{tabular}
   \end{center}
@@ -141,9 +142,9 @@
   \vspace{0.35cm}
   \begin{itemize}
     \item In 2025, 82.1\% of formal solo workers were own-account workers and 16.2\% were domestic workers.
-    \item 50.9\% had higher education.
+    \item 50.8\% had higher education.
     \item Among those with higher education, 95.5\% were own-account workers, with legal and accounting services among the most common activities.
-    \item Mean hourly income was 21,826 pesos with higher education, versus 9,950 without it.
+    \item Mean hourly income was 21,333 pesos with higher education, versus 9,835 without it.
   \end{itemize}
   \source{Paper Table~\paperref{tab:formal-worker-profile-2025} and accompanying text. All figures refer to formal solo workers in 2025. Income in 2025 pesos.}
 \end{frame}
@@ -159,7 +160,7 @@
   \centering
   \includegraphics[width=0.96\textwidth,height=0.79\textheight,keepaspectratio]{fig72_en.png}
 
-  \source{The 101+/solo ratio was 2.1 for preschool or less, 1.8 for primary, 1.5 for secondary, and 1.7 for higher education.}
+  \source{The 101+/solo ratio was 2.1 for preschool or less, 1.9 for primary, 1.5 for secondary, and 1.7 for higher education.}
 \end{frame}
 
 \begin{frame}{Firm-Size Wage Gaps by Sector (1/2)}
@@ -169,7 +170,7 @@
   \par
   % Repeat the common size axis and bubble legend below the upper four rows.
   \includegraphics[width=0.76\textwidth,trim=13bp 0 0 437bp,clip]{fig71_en.pdf}
-  \source{Paper Figure~\paperref{fig:income-sector-comparison}. The 101+/solo ratio in agriculture was about 1.9 in both years. In manufacturing, it rose from 2.35 to 2.63.}
+  \source{Paper Figure~\paperref{fig:income-sector-comparison}. The 101+/solo ratio in agriculture declined from about 2.5 to 2.0. In manufacturing, it rose from 2.46 to 2.68.}
 \end{frame}
 
 \begin{frame}{Firm-Size Wage Gaps by Sector (2/2)}
@@ -193,18 +194,18 @@
   \end{enumerate}
   \vspace{0.2cm}
   \idea{This sequence still imposes the same size coefficients on formal and informal workers.}
-  %\source{Paper Table~\paperref{tab:firm-size-wage-premium-regressions}. $g_0$ denotes solo work. Column (4) estimates Equation~(\paperref{eq:common-premium}). All columns use the same 5,268,514 observations.}
+  %\source{Paper Table~\paperref{tab:firm-size-wage-premium-regressions}. $g_0$ denotes solo work. Column (4) estimates Equation~(\paperref{eq:common-premium}). All columns use the same 5,426,316 observations.}
 \end{frame}
 
-\begin{frame}{Then Add Geography and Occupational Position}
+\begin{frame}{Then Add Geography and Status in Employment}
   \centering\begingroup\fontsize{8.5}{10}\selectfont
   \setlength{\tabcolsep}{4pt}
   \begin{adjustbox}{max width=\textwidth,max totalheight=0.68\textheight}
     \input{Slides/generated/common_geography}
   \end{adjustbox}\endgroup
   \par\vspace{0.15cm}
-  {\small The final 101+/solo coefficient is 0.338, or 40.2\%. But should one size premium describe both formal and informal employment?}
-  %\source{Paper Table~\paperref{tab:firm-size-local-geography-robustness}. Column (4) estimates Equation~(\paperref{eq:common-premium-geography}). SEs cluster by sector-department. Columns (3)--(4) exclude 139 singleton observations.}
+  {\small The final 101+/solo coefficient is 0.343, or 41.0\%. But should one size premium describe both formal and informal employment?}
+  %\source{Paper Table~\paperref{tab:firm-size-local-geography-robustness}. Column (4) estimates Equation~(\paperref{eq:common-premium-geography}). SEs cluster by sector-department. Columns (3)--(4) exclude 142 singleton observations.}
 \end{frame}
 
 \begin{frame}{What the Coefficients Compare}
@@ -225,7 +226,7 @@
     \item For each estimated contrast $\widehat\Delta$, report $100[\exp(\widehat\Delta)-1]$.
     \item These are ratios of exponentiated conditional mean log incomes, not necessarily ratios of arithmetic means.
   \end{itemize}
-  %\source{Paper Equation~(\paperref{eq:preferred-contrasts}). Changing the reference category leaves fitted values and pairwise comparisons unchanged.}
+  %\source{Contrasts from Paper Equation~(\paperref{eq:main}). Changing the reference category leaves fitted values and pairwise comparisons unchanged.}
 \end{frame}
 
 \begin{frame}{Preferred Regression Output}
@@ -234,14 +235,14 @@
   \toprule
   Firm size & Informal: $\widehat\beta_g$ & Formal: $\widehat\beta_g+\widehat\theta_g$ \\
   \midrule
-  2--3 & 0.113*** \sereg{0.013} & -0.072** \sereg{0.029} \\
-  4--5 & 0.255*** \sereg{0.016} & -0.022 \sereg{0.033} \\
-  6--10 & 0.324*** \sereg{0.017} & 0.013 \sereg{0.034} \\
-  11--19 & 0.354*** \sereg{0.018} & 0.039 \sereg{0.032} \\
-  20--30 & 0.362*** \sereg{0.017} & 0.039 \sereg{0.031} \\
-  31--50 & 0.363*** \sereg{0.020} & 0.059* \sereg{0.031} \\
-  51--100 & 0.372*** \sereg{0.020} & 0.085*** \sereg{0.031} \\
-  101+ & 0.316*** \sereg{0.019} & 0.153*** \sereg{0.037} \\
+  2--3 & 0.112*** \sereg{0.013} & -0.075*** \sereg{0.028} \\
+  4--5 & 0.257*** \sereg{0.016} & -0.023 \sereg{0.033} \\
+  6--10 & 0.324*** \sereg{0.017} & 0.014 \sereg{0.034} \\
+  11--19 & 0.354*** \sereg{0.018} & 0.041 \sereg{0.031} \\
+  20--30 & 0.364*** \sereg{0.017} & 0.043 \sereg{0.031} \\
+  31--50 & 0.363*** \sereg{0.020} & 0.064** \sereg{0.031} \\
+  51--100 & 0.375*** \sereg{0.020} & 0.089*** \sereg{0.031} \\
+  101+ & 0.315*** \sereg{0.019} & 0.159*** \sereg{0.037} \\
   \bottomrule
   \end{tabular}
   \par\vspace{0.25cm}
@@ -258,7 +259,7 @@
     &+\lambda_{s\times d\times t}+\varepsilon_{iosdt}.
   \end{align*}
   \begin{itemize}
-    \item All size, formality, worker-control, and occupational-position coefficients vary by year.
+    \item All size, formality, worker-control, and status-in-employment coefficients vary by year.
     \item Annual profiles come from separate yearly regressions.
     \item Test 2008--2025 changes jointly, retaining cross-year covariance within clusters.
   \end{itemize}
@@ -318,13 +319,12 @@
 \begin{frame}{Aggregating the Predicted Income Changes}
   \small
   \[
-  \widehat w_i^c=\widehat w_i\exp(\widehat\Delta_i^c),\qquad
-  G_c=100\left[\frac{\sum_{i\in\mathcal I_{2025}} a_i h_i\widehat w_i\exp(\widehat\Delta_i^c)}
-                         {\sum_{i\in\mathcal I_{2025}} a_i h_i\widehat w_i}-1\right].
+  G_c=100\left[\frac{\sum_{i\in\mathcal I_{2025}} a_i h_i\exp(\widehat\ell_i^c)}
+                         {\sum_{i\in\mathcal I_{2025}} a_i h_i\exp(\widehat\ell_i)}-1\right].
   \]
   \begin{itemize}
-    \item $\widehat\Delta_i^c$ is the difference between destination and origin size-formality coefficients.
-    \item $\widehat w_i$ is baseline predicted hourly income, $a_i$ the survey weight, and $h_i$ weekly hours.
+    \item $\widehat\ell_i$ is fitted log hourly income. $\widehat\ell_i^c$ changes the size indicators, formality indicator, or both in the preferred equation.
+    \item Hold all coefficients, fixed effects, other characteristics, and weekly hours $h_i$ fixed. $a_i$ is the expansion weight.
     \item $G_c$ measures the change in total predicted weekly labor income, not the average percentage change across workers.
     \item Restrict both sums to reassigned workers to obtain the change in their mean predicted weekly income.
   \end{itemize}
@@ -333,8 +333,8 @@
 
 \begin{frame}{The Scenarios Extrapolate Beyond Observed Jobs}
   \begin{itemize}
-    \item For assignment to informal 101+, 39.1\% of intended movers have no observed destination counterpart in the same sector, department, and occupational position in 2025.
-    \item Requiring 30 pooled destination observations reduces the all-worker predicted income change from 7.7\% to 3.8\%.
+    \item For assignment to informal 101+, 39.0\% of intended movers have no observed destination counterpart in the same sector, department, and status in employment in 2025.
+    \item Requiring 30 pooled destination observations reduces the all-worker predicted income change from 7.6\% to 3.8\%.
     \item Requiring 30 destination observations in 2025 permits no such moves.
     \item These checks change who is reassigned. They do not establish whether transitions are feasible.
   \end{itemize}
@@ -343,8 +343,8 @@
 
 \begin{frame}{Minimum Wages May Help Explain the Formal Profile}
   \begin{itemize}
-    \item Among formal workers in firms with 4--100 workers, 39.1--46.3\% have implied monthly income within 10\% of the minimum wage.
-    \item The corresponding shares are 17.8\% for formal solo workers and 29.2\% for formal 101+ workers.
+    \item Among formal workers in firms with 4--100 workers, 39.3--47.1\% have monthly main-job income within 10\% of the minimum wage.
+    \item The corresponding shares are 17.9\% for formal solo workers and 29.4\% for formal 101+ workers.
     \item Concentration around a common wage floor could compress differences across intermediate formal sizes.
     \item The distributions do not identify the causal effect of the minimum wage on the size premium.
   \end{itemize}

@@ -7,7 +7,7 @@
     \input{Slides/generated/sequential_controls}
   \end{adjustbox}\endgroup
   \par\vspace{0.15cm}
-  {\small The 101+/solo coefficient falls from 1.017 to 0.359 log points. The latter corresponds to a 43.2\% premium.}
+  {\small The 101+/solo coefficient falls from 1.028 to 0.372 log points. The latter corresponds to a 45.1\% premium.}
   \source{Paper Table~\paperref{tab:firm-size-wage-premium-regressions}. Reference is solo work. Sector-clustered SEs in parentheses. * $p<0.10$, ** $p<0.05$, *** $p<0.01$.}
 \end{frame}
 
@@ -21,11 +21,11 @@
   \begin{itemize}
     \item $F_i$ indicates pension contribution. $D_{ig}$ indicates firm-size category.
     \item $X_i$ includes sex, age, age squared, and education.
-    \item $\rho_o$ controls for occupational position, including own-account work.
+    \item $\rho_o$ controls for status in employment, including own-account work.
     \item $\lambda_{s\times d\times t}$ compares workers within the same sector, department, and year.
     \item Solo work is the reference within each formality group: $\beta_{g_0}=\theta_{g_0}=0$.
   \end{itemize}
-  %\source{Paper Equation~(\paperref{eq:main}) and Table~\paperref{tab:firm-size-local-geography-formality-robustness}, column (4). 5,268,375 observations. Baseline inference uses 559 sector-department clusters.}
+  %\source{Paper Equation~(\paperref{eq:main}) and Table~\paperref{tab:firm-size-local-geography-formality-robustness}, column (4). 5,426,174 observations. Baseline inference uses 559 sector-department clusters.}
 \end{frame}
 
 \begin{frame}{Adjusted Premiums by Formality}
@@ -52,8 +52,8 @@
 %  \toprule
 %  Conditional wage comparison & Formal & Informal \\
 %  \midrule
-%  101+ relative to solo & 16.5\% & 37.1\% \\
-%  101+ relative to 11--19 & 12.0\% & -3.7\% \\
+%  101+ relative to solo & 17.2\% & 37.0\% \\
+%  101+ relative to 11--19 & 12.5\% & -3.9\% \\
 %  \bottomrule
 %  \end{tabular}
 %  \par\vspace{0.4cm}
@@ -71,7 +71,7 @@
   \toprule
   Size & Solo & 2--3 & 4--5 & 6--10 & 11--19 & 20--30 & 31--50 & 51--100 & 101+ \\
   \midrule
-  Gap (\%) & 59.3 & 32.4 & 20.8 & 16.8 & 16.4 & 15.4 & 17.7 & 19.6 & 35.4 \\
+  Gap (\%) & 59.6 & 32.4 & 20.7 & 17.0 & 16.7 & 15.8 & 18.4 & 19.9 & 36.6 \\
   \bottomrule
   \end{tabular}
   \par\vspace{0.4cm}
@@ -83,10 +83,12 @@
 %  \source{Paper Table~\paperref{tab:preferred-formality-gap}. Formal relative to informal workers, conditional on preferred controls. These are associations, not effects of formalization.}
 \end{frame}
 
-\begin{frame}{The Premium has changed over time}
+\begin{frame}{The Informal Premium Rises between 2008 and 2025}
   \centering
   {\small Re-estimate the preferred model in each year, allowing all coefficients to vary.\par}
-  \includegraphics[width=0.98\textwidth,height=0.74\textheight,keepaspectratio]{preferred_large_firm_dynamics_en.png}
+  \includegraphics[width=0.98\textwidth,height=0.62\textheight,keepaspectratio]{preferred_large_firm_dynamics_en.png}
+  \par\smallskip
+  {\small The informal estimate rises from 33.2\% to 57.1\%. The formal change is not significant. Evidence of an informal increase is weaker among salaried workers and sensitive to clustering.\par}
   \source{Paper Figure~\paperref{fig:preferred-large-firm-dynamics}, Equation~(\paperref{eq:preferred-dynamics}). Annual 101+/solo contrasts. Intervals use sector-department clustering. 2020 is excluded.}
 \end{frame}
 
@@ -97,14 +99,14 @@
 %  \toprule
 %  101+/solo premium & 2008 & 2025 & Change (pp) & \shortstack{$p$-value\\Sector-department} \\
 %  \midrule
-%  Formal & 12.6\% & 13.5\% & 0.9 & 0.861 \\
-%  Informal & 35.6\% & 57.7\% & 22.2 & 0.011 \\
+%  Formal & 16.6\% & 13.5\% & -3.2 & 0.467 \\
+%  Informal & 33.2\% & 57.1\% & 23.8 & 0.002 \\
 %  \bottomrule
 %  \end{tabular}
 %  \par\vspace{0.25cm}
 %  \begin{itemize}
-%    \item The formal premium ends close to its initial level. The informal estimate rises by 22.2 percentage points.
-%    %\item The informal increase is not significant at 5\% with sector ($p=0.090$) or two-way clustering ($p=0.199$).
+%    \item The formal premium ends close to its initial level. The informal estimate rises by 23.8 percentage points.
+%    %\item The informal increase is significant at 5\% with sector clustering ($p=0.040$), but not two-way clustering ($p=0.118$).
 %    \item Its direction contrasts with declines reported by Bloom et al. (2018) for the US and Reed and Tran (2019) across developing economies. %Their populations and size comparisons differ from ours.
 %  \end{itemize}
 %  \source{Paper Tables~\paperref{tab:preferred-endpoint-changes} and \paperref{tab:preferred-clustering-comparison}. Two-sided tests. Changes are computed before rounding. This is not a test of a steady linear trend.}
@@ -116,7 +118,7 @@
 %\begin{frame}{What Would Labor Income Be under Worker Reallocation?}
 %  \begin{itemize}
 %    \item Apply the pooled preferred coefficients to workers in the 2025 sample.
-%    \item Change firm size, formality, or both. Keep worker characteristics, occupational position, sector, department, and hours fixed.
+%    \item Change firm size, formality, or both. Keep worker characteristics, status in employment, sector, department, and hours fixed.
 %    \item Workers already at the destination keep their baseline predictions.
 %    \item Job availability and wage responses are not modeled. Some assignments extrapolate to sparsely observed jobs.
 %  \end{itemize}
@@ -128,7 +130,10 @@
   \centering\small
   \setlength{\tabcolsep}{4pt}
   \input{Slides/generated/income_movers}
-  \par\vspace{0.3cm}
+  \par\vspace{0.2cm}
+  {\small Keep worker characteristics, status in employment, sector, department, hours, and estimated coefficients fixed.\par}
+  \par\smallskip
+  {\small Salaried workers sample: the joint scenario gives 12.3\% higher total income and 26.5\% higher mean income for the 7.68 million reassigned workers.\par}
   %\begin{itemize}
   %  \item Workers already at the destination are not counted as reassigned.
   %  \item The last row assigns both formal and informal workers to formal 101+. Formal workers already there keep their baseline income.
@@ -139,18 +144,21 @@
 
 \begin{frame}{Interpretation and Policy}
   \begin{itemize}
-    \item Persistent gaps for comparable workers motivate attention to barriers to formal employment and firm growth.
+    \item Persistent conditional gaps motivate attention to barriers to formal employment and firm growth. They do not identify the effects of removing those barriers.
     %\item Formal 101+ workers also earn more than intermediate-size formal workers. Growth within formal employment should not be ignored.
     \item Support for informal firms should not subsidize remaining informal or weaken incentives to comply.
-    \item The premium can also reflect unobserved worker characteristics and employer pay practices. Neither the regressions nor the income scenarios identify productivity gains.
+    \item If output per hour rose proportionately with predicted labor income, the joint scenario would raise Colombia's productivity from about 22\% to 28\% of the US level, ceteris paribus.
   \end{itemize}
+  \vspace{0.25cm}
+  \idea{Nearly all of the international productivity gap would remain, even under this comprehensive reassignment.}
+  \note{OECD Compendium of Productivity Indicators 2026, Figure 2.1. GDP per hour worked in 2024, purchasing power parity. The comparison assumes proportional income and productivity changes. It does not measure a causal productivity gain.}
 \end{frame}
 
 \begin{frame}{Conclusions}
-  \begin{enumerate}
-    \item The preferred 101+/solo premium is 37.1\% among informal workers and 16.5\% among formal workers. Formal workers earn more within every size category.
-    \item The informal size-wage relationship is steeper. %Approximate elasticities are 0.097 for informal and 0.040 for formal workers.
-    \item The formal 101+/solo estimate in 2025 is close to its 2008 level. The informal estimate rises substantially.
-    \item Allocating everyone to formal 101+ jobs implies about 25\% higher total predicted labor income. This is not a causal policy effect.
-  \end{enumerate}
+  \begin{itemize}
+    \item Firm size is associated with income beyond the formal-informal divide: the full-sample 101+/solo premiums are 37.0\% for informal and 17.2\% for formal workers.
+    \item Among salaried workers, both premiums are about 21\%. The larger informal premium in the full sample does not describe employees alone.
+    \item The informal estimate rises over time, but the salaried-worker increase is not significant at 5\% under our preferred clustering. Formal changes are not significant in either sample.
+    \item The scenarios imply substantial income gains for reassigned workers. Even if productivity rose proportionately with income, nearly all of the gap with the US would remain.
+  \end{itemize}
 \end{frame}

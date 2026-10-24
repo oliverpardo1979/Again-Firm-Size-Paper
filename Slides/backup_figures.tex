@@ -3,13 +3,13 @@
 \begin{frame}{Does the Result Depend on Including Self-Employment?}
   \begin{itemize}
     \item Restrict the sample to private-sector employees, government employees, domestic workers, and day laborers.
-    \item Exclude own-account workers, employers, unpaid workers, and other occupational positions.
+    \item Exclude own-account workers, employers, unpaid workers, and other non-salaried workers.
     \item Re-estimate the preferred model with the same controls, weights, and fixed-effect structure.
-    \item The restricted sample contains 2,682,009 observations.
+    \item The restricted estimation sample contains 2,765,713 observations.
   \end{itemize}
   \vspace{0.2cm}
-  \idea{Controlling for occupational position is not equivalent to restricting the sample to employees.}
-  \source{Paper Section~\paperref{subsec:salaried-workers} and Table~\paperref{tab:salaried-robustness}. Occupational codes are recoded so that each employment relationship has the same code across questionnaires.}
+  \idea{Controlling for status in employment is not equivalent to restricting the sample to employees.}
+  \source{Paper Section~\paperref{subsec:salaried-workers} and Table~\paperref{tab:salaried-robustness}. Status-in-employment codes use a consistent classification across questionnaires.}
 \end{frame}
 
 \begin{frame}{Adjusted Premiums among Salaried Workers}
@@ -24,15 +24,15 @@
   \toprule
   Firm size & Informal & Formal \\
   \midrule
-  Solo & -0.221*** \sereg{0.016} & -0.063*** \sereg{0.022} \\
-  2--3 & -0.178*** \sereg{0.010} & -0.080*** \sereg{0.013} \\
-  4--5 & -0.081*** \sereg{0.007} & -0.056*** \sereg{0.007} \\
-  6--10 & -0.029*** \sereg{0.005} & -0.021*** \sereg{0.005} \\
+  Solo & -0.226*** \sereg{0.016} & -0.064*** \sereg{0.023} \\
+  2--3 & -0.180*** \sereg{0.011} & -0.082*** \sereg{0.013} \\
+  4--5 & -0.080*** \sereg{0.007} & -0.058*** \sereg{0.007} \\
+  6--10 & -0.028*** \sereg{0.005} & -0.022*** \sereg{0.006} \\
   11--19 & Reference & Reference \\
-  20--30 & 0.007 \sereg{0.007} & 0.009*** \sereg{0.003} \\
-  31--50 & 0.009 \sereg{0.010} & 0.032*** \sereg{0.004} \\
-  51--100 & 0.023* \sereg{0.013} & 0.060*** \sereg{0.006} \\
-  101+ & -0.033** \sereg{0.016} & 0.121*** \sereg{0.012} \\
+  20--30 & 0.011* \sereg{0.007} & 0.011*** \sereg{0.003} \\
+  31--50 & 0.009 \sereg{0.010} & 0.035*** \sereg{0.004} \\
+  51--100 & 0.030** \sereg{0.012} & 0.062*** \sereg{0.006} \\
+  101+ & -0.033** \sereg{0.017} & 0.125*** \sereg{0.012} \\
   \bottomrule
   \end{tabular}
   \par\vspace{0.15cm}
@@ -46,17 +46,48 @@
    & \multicolumn{2}{c}{All workers} & \multicolumn{2}{c}{Salaried workers} \\
    & Formal & Informal & Formal & Informal \\
   \midrule
-  101+/solo premium & 16.5\% & 37.1\% & 20.2\% & 20.6\% \\
-  11--19/solo premium & 4.0\% & 42.4\% & 6.5\% & 24.7\% \\
+  101+/solo premium & 17.2\% & 37.0\% & 20.8\% & 21.3\% \\
+  11--19/solo premium & 4.2\% & 42.5\% & 6.6\% & 25.3\% \\
   \bottomrule
   \end{tabular}
   \par\vspace{0.3cm}
   \begin{itemize}
-    \item Among employees, equality of the formal and informal 101+/solo contrasts is not rejected ($p=0.897$).
+    \item Among employees, equality of the formal and informal 101+/solo contrasts is not rejected ($p=0.888$).
     \item Equality of all eight size contrasts is rejected jointly ($p<0.001$).
     \item Both conclusions hold with sector clustering too.
   \end{itemize}
   \source{Paper Table~\paperref{tab:salaried-robustness}. The restricted-sample comparison does not identify a causal contribution of self-employment.}
+\end{frame}
+
+\begin{frame}{Changes over Time in the Two Samples}
+  \centering\small
+  \begin{adjustbox}{max width=\textwidth}
+    \input{Slides/generated/salaried_dynamics}
+  \end{adjustbox}
+  \par\vspace{0.3cm}
+  \begin{itemize}
+    \item The informal estimate increases in both samples. Among salaried workers, the change is not significant at 5\% with sector-department or sector clustering.
+    \item Formal changes are not significant in either sample. These endpoint comparisons do not establish a steady trend.
+  \end{itemize}
+  \source{Paper Table~\paperref{tab:salaried-dynamic-comparison}. Tests concern changes in log-wage contrasts.}
+\end{frame}
+
+\begin{frame}{Income Scenarios for Salaried Workers}
+  \centering\small
+  \setlength{\tabcolsep}{4pt}
+  \input{Slides/generated/salaried_income_movers}
+  \par\vspace{0.3cm}
+  {\small Re-estimate the preferred model on salaried workers. The joint total-income change is 12.3\%, compared with 25.9\% in the full sample.\par}
+  \source{Paper Table~\paperref{tab:salaried-income-comparison}. Weekly income. Hold hours and estimated coefficients fixed within each sample.}
+\end{frame}
+
+\begin{frame}{Why the Aggregate Gains Differ across Samples}
+  \begin{itemize}
+    \item The full sample includes many low-income non-salaried workers. They account for much of the reassignment in the joint scenario.
+    \item Keeping the full-sample coefficients but calculating income changes only for salaried workers gives 13.0\%, close to the 12.3\% from re-estimation.
+    \item Much of the difference therefore reflects who enters the income calculation. The sample comparison does not identify a causal effect of self-employment.
+  \end{itemize}
+  \source{Paper discussion and replication/salaried_extensions_output/income_scenarios.csv, full-sample coefficients applied to salaried workers.}
 \end{frame}
 
 \sectionframe{Appendix. Comparison Specifications and Shape Checks}
@@ -76,13 +107,13 @@
 \begin{frame}{A Common Size Premium across Formality Groups}
   \centering
   \includegraphics[width=0.98\textwidth,height=0.80\textheight,keepaspectratio]{fig57_en.png}
-  \source{Paper Figure~\paperref{fig:firm-size-wage-premium}. Comparison specification with sector-year effects. The fully controlled 101+/solo premium is 43.2\%. This is not the preferred interacted model.}
+  \source{Paper Figure~\paperref{fig:firm-size-wage-premium}. Comparison specification with sector-year effects. The fully controlled 101+/solo premium is 45.1\%. This is not the preferred interacted model.}
 \end{frame}
 
 \begin{frame}{Size-by-Formality Profiles with Simpler Controls}
   \centering
   \includegraphics[width=0.98\textwidth,height=0.80\textheight,keepaspectratio]{fig74_en.png}
-  \source{Paper Figure~\paperref{fig:firm-size-formality-premium}. Comparison model with worker controls and sector-year effects, without occupational-position or department controls.}
+  \source{Paper Figure~\paperref{fig:firm-size-formality-premium}. Comparison model with worker controls and sector-year effects, without status-in-employment or department controls.}
 \end{frame}
 
 \begin{frame}{Dynamics under the Common-Premium Restriction}
@@ -94,7 +125,7 @@
 \begin{frame}{Formality Endpoints with Simpler Controls}
   \centering
   \includegraphics[width=0.98\textwidth,height=0.76\textheight,keepaspectratio]{fig76_en.png}
-  \source{Paper Figure~\paperref{fig:adjusted-formality-endpoints}. Equation~(\paperref{eq:formality-interaction}) estimated by year with sector effects, without occupational-position or department controls. Reference is solo work within each formality-year group.}
+  \source{Paper Figure~\paperref{fig:adjusted-formality-endpoints}. Equation~(\paperref{eq:formality-interaction}) estimated by year with sector effects, without status-in-employment or department controls. Reference is solo work within each formality-year group.}
 \end{frame}
 
 \begin{frame}{Large-Firm Dynamics with Simpler Controls}
@@ -143,6 +174,7 @@
     \item Diegmann, A., S. M\"uller, and B. Schoefer (2026). Off the Labor Supply Curve: The Zero Employer Size Wage Effect Within Large Firms. \textit{NBER Working Paper} 35265.
     \item Fair, R. C., and K. M. Dominguez (1991). Effects of the Changing U.S. Age Distribution on Macroeconomic Equations. \textit{American Economic Review}, 81(5), 1276--1294.
     \item Hsieh, C.-T., and P. J. Klenow (2009). Misallocation and Manufacturing TFP in China and India. \textit{Quarterly Journal of Economics}, 124(4), 1403--1448.
+    \item OECD (2026). \textit{OECD Compendium of Productivity Indicators 2026}, Figure 2.1. OECD Publishing. \href{https://doi.org/10.1787/734a5e68-en}{doi:10.1787/734a5e68-en}.
     \item Reed, T., and T. T. Tran (2019). The Large-Firm Wage Premium in Developing Economies. \textit{World Bank Policy Research Working Paper} 8997.
   \end{itemize}
 \end{frame}

@@ -33,6 +33,8 @@ are commented out in `main_results.tex`, with their code retained.
 variable definitions, detailed regression output and equations, and scenario
 support checks. `backup_figures.tex` retains the salaried-worker exercise and
 other comparison specifications. All paper tables follow in the final appendix.
+The salaried-worker appendix includes the dynamic and income-scenario comparisons.
+The main conclusions summarize what this sample restriction changes.
 The international elasticity comparison follows the approximate-elasticity
 specification in `backup_talk_details.tex`.
 
@@ -51,7 +53,7 @@ smaller font than coefficients. Long tables are split into consecutive slides.
 and source hashes. Unreferenced or silenced paper tables are not exported.
 
 The main results proceed from the sequential-controls table to the preferred
-formality interaction with geographic and occupational controls. The intermediate
+formality interaction with geographic and status-in-employment controls. The intermediate
 geographic-control table and detailed equations are available for questions.
 Paper references in slides use `\paperref{label}`. The exporter obtains their
 numbers from `build/main.aux`, so moving paper tables does not require manually
@@ -61,12 +63,15 @@ Generated files are committed so Overleaf needs neither Python nor the raw
 microdata. Figures remain linked to the same English assets used in the paper.
 
 Bootstrap results are temporarily omitted from both PDFs. The original summary
-slide is retained in `backup_bootstrap.tex`, without an active input. Its table
-is still generated from `replication/inference_audit_output/wild_bootstrap.csv`.
+slide is retained in `backup_bootstrap.tex`, without an active input. Its old table
+is preserved but is not regenerated or treated as current evidence.
 The paper's bootstrap table and replication outputs are also retained.
 The income summary uses
 `replication/output/scenario_results.csv` and distinguishes the change in mean
 weekly income among reassigned workers from the change in total weekly income
 across all workers. These source hashes are recorded in `coverage.json`.
+The salaried summary uses `replication/salaried_extensions_output/income_scenarios.csv`.
+Both summaries now use main-job income and the corrected sample. The joint
+scenario gives 25.9% for the full-sample total and 12.3% for the salaried total.
 The sector figure is displayed across two slides using the current vector PDF,
 with the shared size axis and bubble legend repeated for the upper panels.
