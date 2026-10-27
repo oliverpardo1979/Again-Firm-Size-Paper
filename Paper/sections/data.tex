@@ -6,7 +6,12 @@ The sample is restricted to employed workers aged 15--120 with positive income f
 
 Workers are classified by their status in employment in the main job. The salaried workers sample comprises private-sector employees, government employees, domestic workers, and day laborers. The full sample also includes non-salaried workers: own-account workers, employers, unpaid family workers, unpaid workers in businesses of other households, and other workers.
 
-We construct monthly labor income from reported main-job cash earnings, food and housing payments in kind, and earnings from self-employment or an employer's business. Income from a second job is excluded. Two observations classified as unpaid report positive main-job income and are retained under the same income criterion.
+We construct monthly labor income from reported main-job cash earnings, food and housing payments in kind, and earnings from self-employment or business ownership. Income from a second job is excluded. Two observations classified as unpaid report positive main-job income and are retained under the same income criterion.
+
+Before the remaining sample restrictions, the positive-income criterion excludes
+16.0 percent of employed workers aged 15--120 in 2017, 8.5 percent in 2019,
+and 3.1 percent in 2025. Most of these exclusions in each of these years
+reflect missing values for all main-job income components rather than reported zero or negative income.
 
 Let \(i\) index workers and \(t\) survey years. Denote monthly labor income from the main job by \(MonthlyIncome_{it}\), weekly hours in that job by \(WeeklyHours_{it}\), and the end-of-year Consumer Price Index by \(CPI_t\). Real hourly labor income in constant 2025 Colombian pesos, \(w_{it}\), is
 
@@ -22,7 +27,7 @@ Firm size is measured using the worker-reported firm-size variable for the main 
 
 %The education variable distinguishes no education, preschool, primary, lower secondary, upper secondary, and higher education, as well as a separate ``does not know/not reported'' response. The descriptive education comparisons combine no education and preschool into ``preschool or less,'' and the two secondary categories into ``secondary.'' Only these descriptive education comparisons omit the ``does not know/not reported'' group.
 
-Formality is defined using pension contribution status. Workers who contribute to pensions are classified as formal, while workers who do not contribute are classified as informal. This definition follows the social-protection approach used in Latin American labor-market measurement, which identifies informality through lack of access to social-security benefits such as pension or health insurance \citep{WorldBankLACInformality2026}. Note this is a worker-level measure of formality, not a measure of the firm's formality status.
+Formality is defined using pension contribution status. Workers who report already receiving a pension are excluded from the entire analysis sample. Workers who contribute to pensions are classified as formal, while workers who do not contribute are classified as informal. This definition follows the social-protection approach used in Latin American labor-market measurement, which identifies informality through lack of access to social-security benefits such as pension or health insurance \citep{WorldBankLACInformality2026}. This is a worker-level measure of formality, not a measure of the firm's formality status.
 
 %We group economic-activity codes from successive versions of Colombia's industrial classification (CIIU) into a common set of broad sectors. The geographic variable identifies departments, treating Bogot\'a as a department-equivalent Capital District.
 %We recode status in employment so that each code denotes the same employment relationship across survey questionnaires \citep{DANE2025GEIHQuestionnaire}.

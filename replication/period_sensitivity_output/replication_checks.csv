@@ -1,0 +1,184 @@
+"check","error","tolerance"
+"Complete observations All 2010",0,1e-07
+"Complete observations All 2011",0,1e-07
+"Complete observations All 2012",0,1e-07
+"Complete observations All 2013",0,1e-07
+"Complete observations All 2014",0,1e-07
+"Complete observations All 2015",0,1e-07
+"Complete observations All 2016",0,1e-07
+"Complete observations All 2017",0,1e-07
+"Complete observations All 2018",0,1e-07
+"Complete observations All 2019",0,1e-07
+"Complete observations All 2021",0,1e-07
+"Complete observations All 2022",0,1e-07
+"Complete observations All 2023",0,1e-07
+"Complete observations All 2024",0,1e-07
+"Complete observations All 2025",0,1e-07
+"Retained annual sample All 2010",0,1e-07
+"Retained annual sample All 2011",0,1e-07
+"Retained annual sample All 2012",0,1e-07
+"Retained annual sample All 2013",0,1e-07
+"Retained annual sample All 2014",0,1e-07
+"Retained annual sample All 2015",0,1e-07
+"Retained annual sample All 2016",0,1e-07
+"Retained annual sample All 2017",0,1e-07
+"Retained annual sample All 2018",0,1e-07
+"Retained annual sample All 2019",0,1e-07
+"Retained annual sample All 2021",0,1e-07
+"Retained annual sample All 2022",0,1e-07
+"Retained annual sample All 2023",0,1e-07
+"Retained annual sample All 2024",0,1e-07
+"Retained annual sample All 2025",0,1e-07
+"Unchanged 2025 population All observations_2025",0,1e-06
+"Unchanged 2025 population All workers_2025",2.98023223876953e-08,1e-06
+"Unchanged 2025 population All formal_workers_2025",-3.72529029846191e-08,1e-06
+"Unchanged 2025 population All informal_workers_2025",-3.72529029846191e-08,1e-06
+"Unchanged 2025 population All weighted_weekly_hours_2025",1.4210854715202e-14,1e-06
+"Annual/joint endpoint coefficient All 2010 2-3 Informal",-2.43693953905222e-14,1e-07
+"Annual/joint endpoint coefficient All 2025 2-3 Informal",5.52335954751015e-15,1e-07
+"Annual/joint endpoint coefficient All 2010 2-3 Formal",3.00211244752546e-13,1e-07
+"Annual/joint endpoint coefficient All 2025 2-3 Formal",-5.89944759710193e-14,1e-07
+"Annual/joint endpoint coefficient All 2010 4-5 Informal",-1.20181642415673e-14,1e-07
+"Annual/joint endpoint coefficient All 2025 4-5 Informal",1.2712053631958e-14,1e-07
+"Annual/joint endpoint coefficient All 2010 4-5 Formal",3.4626815303973e-13,1e-07
+"Annual/joint endpoint coefficient All 2025 4-5 Formal",-5.78981307342019e-14,1e-07
+"Annual/joint endpoint coefficient All 2010 6-10 Informal",2.85327317328665e-14,1e-07
+"Annual/joint endpoint coefficient All 2025 6-10 Informal",5.55111512312578e-17,1e-07
+"Annual/joint endpoint coefficient All 2010 6-10 Formal",3.0218882951516e-13,1e-07
+"Annual/joint endpoint coefficient All 2025 6-10 Formal",-5.24129351031632e-14,1e-07
+"Annual/joint endpoint coefficient All 2010 11-19 Informal",-1.06303854607859e-13,1e-07
+"Annual/joint endpoint coefficient All 2025 11-19 Informal",3.21964677141295e-15,1e-07
+"Annual/joint endpoint coefficient All 2010 11-19 Formal",3.35849403843014e-13,1e-07
+"Annual/joint endpoint coefficient All 2025 11-19 Formal",-4.88220575078913e-14,1e-07
+"Annual/joint endpoint coefficient All 2010 20-30 Informal",-7.82707232360735e-14,1e-07
+"Annual/joint endpoint coefficient All 2025 20-30 Informal",8.77076189453874e-15,1e-07
+"Annual/joint endpoint coefficient All 2010 20-30 Formal",3.512745649914e-13,1e-07
+"Annual/joint endpoint coefficient All 2025 20-30 Formal",-4.58123122770715e-14,1e-07
+"Annual/joint endpoint coefficient All 2010 31-50 Informal",3.89133170131117e-14,1e-07
+"Annual/joint endpoint coefficient All 2025 31-50 Informal",-7.2553074659254e-14,1e-07
+"Annual/joint endpoint coefficient All 2010 31-50 Formal",3.35134697770911e-13,1e-07
+"Annual/joint endpoint coefficient All 2025 31-50 Formal",-5.53862511409875e-14,1e-07
+"Annual/joint endpoint coefficient All 2010 51-100 Informal",-2.2770674235062e-13,1e-07
+"Annual/joint endpoint coefficient All 2025 51-100 Informal",6.78901379558283e-14,1e-07
+"Annual/joint endpoint coefficient All 2010 51-100 Formal",3.69565489322099e-13,1e-07
+"Annual/joint endpoint coefficient All 2025 51-100 Formal",-4.50819936936853e-14,1e-07
+"Annual/joint endpoint coefficient All 2010 101+ Informal",1.55153667691366e-13,1e-07
+"Annual/joint endpoint coefficient All 2025 101+ Informal",-7.01105840050786e-14,1e-07
+"Annual/joint endpoint coefficient All 2010 101+ Formal",3.68705066478014e-13,1e-07
+"Annual/joint endpoint coefficient All 2025 101+ Formal",-5.92859095149834e-14,1e-07
+"Complete observations Salaried 2010",0,1e-07
+"Complete observations Salaried 2011",0,1e-07
+"Complete observations Salaried 2012",0,1e-07
+"Complete observations Salaried 2013",0,1e-07
+"Complete observations Salaried 2014",0,1e-07
+"Complete observations Salaried 2015",0,1e-07
+"Complete observations Salaried 2016",0,1e-07
+"Complete observations Salaried 2017",0,1e-07
+"Complete observations Salaried 2018",0,1e-07
+"Complete observations Salaried 2019",0,1e-07
+"Complete observations Salaried 2021",0,1e-07
+"Complete observations Salaried 2022",0,1e-07
+"Complete observations Salaried 2023",0,1e-07
+"Complete observations Salaried 2024",0,1e-07
+"Complete observations Salaried 2025",0,1e-07
+"Retained annual sample Salaried 2010",0,1e-07
+"Retained annual sample Salaried 2011",0,1e-07
+"Retained annual sample Salaried 2012",0,1e-07
+"Retained annual sample Salaried 2013",0,1e-07
+"Retained annual sample Salaried 2014",0,1e-07
+"Retained annual sample Salaried 2015",0,1e-07
+"Retained annual sample Salaried 2016",0,1e-07
+"Retained annual sample Salaried 2017",0,1e-07
+"Retained annual sample Salaried 2018",0,1e-07
+"Retained annual sample Salaried 2019",0,1e-07
+"Retained annual sample Salaried 2021",0,1e-07
+"Retained annual sample Salaried 2022",0,1e-07
+"Retained annual sample Salaried 2023",0,1e-07
+"Retained annual sample Salaried 2024",0,1e-07
+"Retained annual sample Salaried 2025",0,1e-07
+"Unchanged 2025 population Salaried observations_2025",0,1e-06
+"Unchanged 2025 population Salaried workers_2025",2.04890966415405e-08,1e-06
+"Unchanged 2025 population Salaried formal_workers_2025",-3.72529029846191e-09,1e-06
+"Unchanged 2025 population Salaried informal_workers_2025",3.72529029846191e-09,1e-06
+"Unchanged 2025 population Salaried weighted_weekly_hours_2025",0,1e-06
+"Annual/joint endpoint coefficient Salaried 2010 2-3 Informal",1.53675683289833e-13,1e-07
+"Annual/joint endpoint coefficient Salaried 2025 2-3 Informal",-1.73402958658642e-14,1e-07
+"Annual/joint endpoint coefficient Salaried 2010 2-3 Formal",1.71862871156669e-12,1e-07
+"Annual/joint endpoint coefficient Salaried 2025 2-3 Formal",-2.44179676478495e-14,1e-07
+"Annual/joint endpoint coefficient Salaried 2010 4-5 Informal",1.54154466969203e-13,1e-07
+"Annual/joint endpoint coefficient Salaried 2025 4-5 Informal",-3.03090885722668e-14,1e-07
+"Annual/joint endpoint coefficient Salaried 2010 4-5 Formal",1.7050527656437e-12,1e-07
+"Annual/joint endpoint coefficient Salaried 2025 4-5 Formal",-4.5921599856058e-14,1e-07
+"Annual/joint endpoint coefficient Salaried 2010 6-10 Informal",1.92457161318771e-13,1e-07
+"Annual/joint endpoint coefficient Salaried 2025 6-10 Informal",-4.30211422042248e-15,1e-07
+"Annual/joint endpoint coefficient Salaried 2010 6-10 Formal",1.73420999782792e-12,1e-07
+"Annual/joint endpoint coefficient Salaried 2025 6-10 Formal",-4.20150025881583e-15,1e-07
+"Annual/joint endpoint coefficient Salaried 2010 11-19 Informal",1.3086753902769e-13,1e-07
+"Annual/joint endpoint coefficient Salaried 2025 11-19 Informal",-2.38697950294409e-14,1e-07
+"Annual/joint endpoint coefficient Salaried 2010 11-19 Formal",1.7071899449661e-12,1e-07
+"Annual/joint endpoint coefficient Salaried 2025 11-19 Formal",-3.08295056150598e-14,1e-07
+"Annual/joint endpoint coefficient Salaried 2010 20-30 Informal",2.34812169708221e-14,1e-07
+"Annual/joint endpoint coefficient Salaried 2025 20-30 Informal",-1.89293025698589e-14,1e-07
+"Annual/joint endpoint coefficient Salaried 2010 20-30 Formal",1.7625900738949e-12,1e-07
+"Annual/joint endpoint coefficient Salaried 2025 20-30 Formal",-2.5951463200613e-14,1e-07
+"Annual/joint endpoint coefficient Salaried 2010 31-50 Informal",2.1913026948539e-13,1e-07
+"Annual/joint endpoint coefficient Salaried 2025 31-50 Informal",-1.55431223447522e-14,1e-07
+"Annual/joint endpoint coefficient Salaried 2010 31-50 Formal",1.75506831290306e-12,1e-07
+"Annual/joint endpoint coefficient Salaried 2025 31-50 Formal",-1.91374693869761e-14,1e-07
+"Annual/joint endpoint coefficient Salaried 2010 51-100 Informal",2.44360087719997e-13,1e-07
+"Annual/joint endpoint coefficient Salaried 2025 51-100 Informal",-3.01980662698043e-14,1e-07
+"Annual/joint endpoint coefficient Salaried 2010 51-100 Formal",1.71737624121704e-12,1e-07
+"Annual/joint endpoint coefficient Salaried 2025 51-100 Formal",-3.43197692487252e-14,1e-07
+"Annual/joint endpoint coefficient Salaried 2010 101+ Informal",1.68781655318639e-13,1e-07
+"Annual/joint endpoint coefficient Salaried 2025 101+ Informal",-3.08642000845794e-14,1e-07
+"Annual/joint endpoint coefficient Salaried 2010 101+ Formal",1.74060765800732e-12,1e-07
+"Annual/joint endpoint coefficient Salaried 2025 101+ Formal",-4.18554080283684e-14,1e-07
+"Nonmovers unchanged All formalize_same_size",0,1e-07
+"Individual/aggregate income ratio All formalize_same_size all",0,1e-09
+"Individual/aggregate income ratio All formalize_same_size movers",0,1e-09
+"Individual/aggregate income ratio All formalize_same_size target_group",0,1e-09
+"Nonmovers unchanged All formal_to_101",0,1e-07
+"Individual/aggregate income ratio All formal_to_101 all",0,1e-09
+"Individual/aggregate income ratio All formal_to_101 movers",1.77635683940025e-15,1e-09
+"Individual/aggregate income ratio All formal_to_101 target_group",8.88178419700125e-16,1e-09
+"Nonmovers unchanged All informal_to_101",0,1e-07
+"Individual/aggregate income ratio All informal_to_101 all",0,1e-09
+"Individual/aggregate income ratio All informal_to_101 movers",0,1e-09
+"Individual/aggregate income ratio All informal_to_101 target_group",0,1e-09
+"Nonmovers unchanged All combined_formal_101",0,1e-07
+"Individual/aggregate income ratio All combined_formal_101 all",0,1e-09
+"Individual/aggregate income ratio All combined_formal_101 movers",7.105427357601e-15,1e-09
+"Individual/aggregate income ratio All combined_formal_101 target_group",0,1e-09
+"Nonmovers unchanged Salaried formalize_same_size",0,1e-07
+"Individual/aggregate income ratio Salaried formalize_same_size all",0,1e-09
+"Individual/aggregate income ratio Salaried formalize_same_size movers",0,1e-09
+"Individual/aggregate income ratio Salaried formalize_same_size target_group",0,1e-09
+"Nonmovers unchanged Salaried formal_to_101",0,1e-07
+"Individual/aggregate income ratio Salaried formal_to_101 all",0,1e-09
+"Individual/aggregate income ratio Salaried formal_to_101 movers",0,1e-09
+"Individual/aggregate income ratio Salaried formal_to_101 target_group",0,1e-09
+"Nonmovers unchanged Salaried informal_to_101",0,1e-07
+"Individual/aggregate income ratio Salaried informal_to_101 all",-2.22044604925031e-16,1e-09
+"Individual/aggregate income ratio Salaried informal_to_101 movers",-1.77635683940025e-15,1e-09
+"Individual/aggregate income ratio Salaried informal_to_101 target_group",-1.77635683940025e-15,1e-09
+"Nonmovers unchanged Salaried combined_formal_101",0,1e-07
+"Individual/aggregate income ratio Salaried combined_formal_101 all",0,1e-09
+"Individual/aggregate income ratio Salaried combined_formal_101 movers",0,1e-09
+"Individual/aggregate income ratio Salaried combined_formal_101 target_group",0,1e-09
+"Nonmovers unchanged Salaried_full_coefficients formalize_same_size",0,1e-07
+"Individual/aggregate income ratio Salaried_full_coefficients formalize_same_size all",-8.88178419700125e-16,1e-09
+"Individual/aggregate income ratio Salaried_full_coefficients formalize_same_size movers",0,1e-09
+"Individual/aggregate income ratio Salaried_full_coefficients formalize_same_size target_group",0,1e-09
+"Nonmovers unchanged Salaried_full_coefficients formal_to_101",0,1e-07
+"Individual/aggregate income ratio Salaried_full_coefficients formal_to_101 all",-4.44089209850063e-16,1e-09
+"Individual/aggregate income ratio Salaried_full_coefficients formal_to_101 movers",0,1e-09
+"Individual/aggregate income ratio Salaried_full_coefficients formal_to_101 target_group",0,1e-09
+"Nonmovers unchanged Salaried_full_coefficients informal_to_101",0,1e-07
+"Individual/aggregate income ratio Salaried_full_coefficients informal_to_101 all",-4.44089209850063e-16,1e-09
+"Individual/aggregate income ratio Salaried_full_coefficients informal_to_101 movers",0,1e-09
+"Individual/aggregate income ratio Salaried_full_coefficients informal_to_101 target_group",0,1e-09
+"Nonmovers unchanged Salaried_full_coefficients combined_formal_101",0,1e-07
+"Individual/aggregate income ratio Salaried_full_coefficients combined_formal_101 all",-1.77635683940025e-15,1e-09
+"Individual/aggregate income ratio Salaried_full_coefficients combined_formal_101 movers",0,1e-09
+"Individual/aggregate income ratio Salaried_full_coefficients combined_formal_101 target_group",-1.77635683940025e-15,1e-09
+"Baseline reference files unchanged",0,1e-07

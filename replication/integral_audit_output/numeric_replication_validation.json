@@ -1,0 +1,8 @@
+{
+  "matched_csv_files": 101,
+  "failures": [],
+  "atol": 1e-07,
+  "rtol": 1e-09,
+  "copied_or_older_files_not_tested": [],
+  "scope": "CSV files generated after the clean run began. No model-cache or PDF byte comparison."
+}

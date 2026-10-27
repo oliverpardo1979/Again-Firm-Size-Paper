@@ -1,0 +1,30 @@
+{
+  "records_compared": 5426316,
+  "chunks_compared": 28,
+  "months_rebuilt": 204,
+  "years_rebuilt": [
+    2008,
+    2009,
+    2010,
+    2011,
+    2012,
+    2013,
+    2014,
+    2015,
+    2016,
+    2017,
+    2018,
+    2019,
+    2021,
+    2022,
+    2023,
+    2024,
+    2025
+  ],
+  "baseline_sha256": "8af266035f0095e67d5c2becf352f9184b083d5726fe5ef4a09edeb3205d3b27",
+  "rebuilt_sha256": "6fb3e215d7036f2dd35842bb508658252c52ddccff20fe3db1b2d64c3a993513",
+  "all_columns_equal_rtol": 1e-12,
+  "all_columns_equal_atol": 1e-10,
+  "source_archives": 86,
+  "note": "Stata file byte hashes can differ because of creation timestamps."
+}

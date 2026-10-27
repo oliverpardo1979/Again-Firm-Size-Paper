@@ -55,6 +55,7 @@ def main():
             'formal': x.formal.astype('int32'), 'formalidad': x.formal.map({0: 'Informal', 1: 'Formal'}),
             'fex': x.weight, 'horas': x.hours, 'ingreso_laboral_hora': hourly,
             'ingreso_hora_real': np.exp(x.log_primary), 'log_ingreso_hora_real': x.log_primary,
+            # Legacy schema field. Pension-response exclusions occur upstream.
             'factor_precios_2025': x.price_factor, 'pensionado_ocupado': 0,
             'primary_monthly': x.primary_monthly,
         })
@@ -83,6 +84,7 @@ def main():
         'weight_2010_2019': 'official empalme FEX_C, not bare CNPV 2018 factors',
         'weight_2021_2025': 'marco 2018 FEX_C18',
         'occupation_codes': 'aligned across questionnaires, not raw post-2020 codes',
+        'formality_responses': {'formal': 1, 'informal': 2, 'excluded_pension_recipient': 3},
         'price_conversion': 'same annual end-of-year CPI factors as the previous paper',
     }, indent=2) + '\n')
     print(args.output, flush=True)

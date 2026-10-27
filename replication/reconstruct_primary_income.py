@@ -72,6 +72,18 @@ def build(year):
             d[c] = np.nan
         d[c + '_observed'] = d[c].mask(d[c].isin([98, 99]))
     d['primary_monthly'] = d[[c + '_observed' for c in MAIN]].sum(axis=1, min_count=1)
+    eligible = d.OCI.eq(1) & age.between(15, 120)
+    income_status = pd.Series('positive', index=d.index)
+    income_status.loc[d.primary_monthly.le(0)] = 'zero_or_negative'
+    income_status.loc[d.primary_monthly.isna()] = 'all_components_missing'
+    selection = d.loc[eligible, ['salaried', 'formal', 'size']].copy()
+    selection['income_status'] = income_status.loc[eligible]
+    selection['sentinel_component'] = d.loc[eligible, MAIN].isin([98, 99]).any(axis=1).astype(int)
+    selection['year'] = year
+    selection.groupby(['year', 'salaried', 'formal', 'size', 'income_status'], dropna=False).agg(
+        observations=('income_status', 'size'),
+        any_sentinel=('sentinel_component', 'sum'),
+    ).reset_index().to_csv(OUT / f'income_selection_{year}.csv', index=False)
     d['log_primary'] = np.log((12 * d.primary_monthly / (52 * d.hours) * price[0]).where(d.primary_monthly.gt(0)))
     controls = ['age', 'female', 'formal', 'size', 'education', 'sector', 'department', 'occupation']
     masks = {

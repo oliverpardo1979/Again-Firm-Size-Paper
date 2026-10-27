@@ -1,0 +1,9 @@
+{
+  "source": "DANE, national CPI linked index, December 2018 = 100",
+  "url": "https://www.dane.gov.co/files/operaciones/IPC/sep2026/anex-IPC-Indices-sep2026.xlsx",
+  "sheet": "IndicesIPC",
+  "month": "December",
+  "workbook_sha256": "56f8e5e6e9d235d411e487b2284beba1be8eaeee69b7b9516bfa8ea8443c0676",
+  "factors_checked": 17,
+  "maximum_absolute_error": 4.884981308350689e-15
+}

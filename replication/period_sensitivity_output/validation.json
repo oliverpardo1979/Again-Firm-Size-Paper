@@ -1,0 +1,24 @@
+{
+  "status": "passed",
+  "numerical_comparisons": 27072,
+  "models": 4,
+  "sample_months": 360,
+  "annual_profiles_reused": 480,
+  "pooled_profiles": 64,
+  "formality_gaps": 36,
+  "endpoint_levels": 128,
+  "joint_endpoint_changes": 64,
+  "income_scenarios": 36,
+  "dynamic_formality_tests": 12,
+  "saved_2010_fit_contrasts": 32,
+  "R_Python_precision_contrasts": 20,
+  "input_md5": "9c8532a90e3ec255de1ff3b9b292ed0d",
+  "versions": {
+    "python": "3.12.14",
+    "numpy": "2.5.3",
+    "pandas": "3.0.1",
+    "scipy": "1.18.1"
+  },
+  "scope": "Adopted processed input. No fresh raw reconstruction or bootstrap.",
+  "endpoint_comparison": "2010/2025 versus 2008/2025 changes cover different intervals."
+}

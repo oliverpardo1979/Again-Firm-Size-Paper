@@ -1,0 +1,18 @@
+year,n,salaried_n,workers,minimum_age,weight_variable,weight_method
+2008,292977,146526,15210383.593329847,15.0,FEX_C18,CNPV2018 retrospective population calibration
+2009,293993,142465,15874304.357823282,15.0,FEX_C18,CNPV2018 retrospective population calibration
+2010,312384,149830,16500269.352934211,15.0,FEX_C,"Official GEIH empalme, CNPV2018 population calibration and frame bridge"
+2011,323764,154144,17091047.370310266,15.0,FEX_C,"Official GEIH empalme, CNPV2018 population calibration and frame bridge"
+2012,316284,153567,17438183.213247925,15.0,FEX_C,"Official GEIH empalme, CNPV2018 population calibration and frame bridge"
+2013,309144,153482,17541796.55525875,15.0,FEX_C,"Official GEIH empalme, CNPV2018 population calibration and frame bridge"
+2014,319469,160267,17809692.139012612,15.0,FEX_C,"Official GEIH empalme, CNPV2018 population calibration and frame bridge"
+2015,325822,165127,18227258.427360285,15.0,FEX_C,"Official GEIH empalme, CNPV2018 population calibration and frame bridge"
+2016,319063,162862,18184059.339257598,15.0,FEX_C,"Official GEIH empalme, CNPV2018 population calibration and frame bridge"
+2017,307686,156906,18173528.43849226,15.0,FEX_C,"Official GEIH empalme, CNPV2018 population calibration and frame bridge"
+2018,304986,153518,18370014.43925569,15.0,FEX_C,"Official GEIH empalme, CNPV2018 population calibration and frame bridge"
+2019,321322,165850,19222425.337183937,15.0,FEX_C,"Official GEIH empalme, CNPV2018 population calibration and frame bridge"
+2021,311787,161221,17386287.544670112,15.0,FEX_C18,"GEIH marco2018, CNPV2018 population calibration"
+2022,354027,189427,20330771.848333277,15.0,FEX_C18,"GEIH marco2018, CNPV2018 population calibration"
+2023,342719,183462,21212634.49321937,15.0,FEX_C18,"GEIH marco2018, CNPV2018 population calibration"
+2024,329823,181367,21281528.812423248,15.0,FEX_C18,"GEIH marco2018, CNPV2018 population calibration"
+2025,341066,185840,22564075.035450302,15.0,FEX_C18,"GEIH marco2018, CNPV2018 population calibration"

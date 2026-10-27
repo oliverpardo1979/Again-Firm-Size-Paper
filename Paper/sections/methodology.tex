@@ -63,7 +63,7 @@ log-wage gap among solo workers.
 %  \Delta^{I\to F}_{g} &= \phi+\theta_g. \nonumber
 %\end{align}
 
-For each log points difference \(\widehat{\Delta}\), we report the percentage gap
+For each estimated log-wage contrast \(\widehat{\Delta}\), we report the percentage gap
 \(100[\exp(\widehat{\Delta})-1]\). This transformation compares
 exponentiated conditional mean log incomes%, not necessarily arithmetic mean incomes as in the descriptive tables
 .
@@ -71,6 +71,12 @@ exponentiated conditional mean log incomes%, not necessarily arithmetic mean inc
 Standard errors are clustered by sector for Equation~(\ref{eq:common-premium})
 and by sector-department for Equations~(\ref{eq:common-premium-geography})
 and~(\ref{eq:main}). %Tests of individual coefficients and contrasts are two-sided. 
+Table~\ref{tab:firm-size-local-geography-robustness} also reports
+Equation~(\ref{eq:common-premium}) with sector-department clustering to
+compare the geographic specifications under the same clustering convention.
+The coefficients in its first column match Table~\ref{tab:firm-size-wage-premium-regressions},
+column (4), but the standard errors use the different grouping.
+Reported \(p\)-values are unadjusted for multiple comparisons.
 The appendix details the alternative clustering procedures.
 
 \subsection{Changes over Time}
@@ -140,8 +146,8 @@ sensitivity to the size assigned to 101+.
 \subsection{Income Counterfactuals}
 \label{subsec:income-counterfactual-method}
 
-We ask how much labor income would change if workers moved into formal
-employment, into larger firms, or both, under an unchanged wage structure.
+We ask how much predicted labor income would change if workers moved into formal
+employment, into larger firms, or both.
 The exercise combines the estimated wage differences with the distribution
 of workers and their initial earnings to quantify changes for reassigned
 workers and for the workforce as a whole.

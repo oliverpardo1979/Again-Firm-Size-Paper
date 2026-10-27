@@ -1,4 +1,8 @@
-"""Compare the integrated pipeline with the approved pre-adoption audit."""
+"""Historical comparison with the supplied pre-adoption audit.
+
+This imports that audit's coverage diagnostics. For a fresh all-year raw-data
+check, use validate_reconstruction.py instead.
+"""
 from pathlib import Path
 import argparse
 import json
@@ -69,4 +73,5 @@ if args.downloads:
     (out / 'downloaded_source_manifest.json').write_text(json.dumps(records, indent=2) + '\n')
 pd.DataFrame(checks).to_csv(out / 'independent_pipeline_checks.csv', index=False)
 print(pd.DataFrame(checks).to_string(index=False))
-print('Validated all 204 year-month cells and the public 2025 reconstruction.')
+print('Checked imported coverage totals for 204 months against the supplied historical audit.')
+print('Only 2025 worker records are compared here when available. Use validate_reconstruction.py for all years.')

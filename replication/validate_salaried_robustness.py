@@ -144,7 +144,10 @@ for label, test in [("Equal 101+/solo premiums", "101+/solo equality"), ("Equal 
 results = (ROOT / "Paper/sections/results.tex").read_text(encoding="utf-8")
 table_input = r"\input{Paper/sections/regression_salaried_robustness_table}"
 assert results.count(table_input) == 1
-assert results.index(table_input) < results.index(r"\subsection{Dynamic Results}")
+# Check section membership rather than a fixed order of subsections.
+salaried_section = results.split(r"\subsection{Salaried Workers}", 1)[1]
+salaried_section = salaried_section.split(r"\subsection{", 1)[0]
+assert table_input in salaried_section
 assert table_input not in (ROOT / "Paper/sections/comparison_results_appendix.tex").read_text(encoding="utf-8")
 
 # Verify all plotted values and the common vertical scale against the source CSVs.

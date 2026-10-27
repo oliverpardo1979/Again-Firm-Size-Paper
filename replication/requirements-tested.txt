@@ -1,0 +1,6 @@
+# Direct Python dependencies observed in the tested Python 3.12.14 environment.
+# Numerical pipeline, validators, and image checks. Not a transitive lock file.
+numpy==2.5.3
+pandas==3.0.1
+scipy==1.18.1
+Pillow==12.3.0

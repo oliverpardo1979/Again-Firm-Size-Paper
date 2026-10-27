@@ -1,0 +1,5 @@
+"model","n","r2","df","df_sector","clusters","sector_clusters","formula","warnings"
+"all_pooled",4839217,0.439539179127323,558,16,559,17,"i(tamano_empresa, ref = 'Solo') * formal + mujer + edad + edad2 + i(educacion, ref = 'Básica secundaria') + i(posicion_ocupacional_label) | sector_depto_year",""
+"all_endpoints",653437,0.466888429940707,538,16,539,17,"(i(tamano_empresa, ref = 'Solo') * formal + mujer + edad + edad2 + i(educacion, ref = 'Básica secundaria') + i(posicion_ocupacional_label)) * post | sector_depto_year",""
+"salaried_pooled",2476733,0.473165295262774,554,16,555,17,"i(tamano_empresa, ref = 'Solo') * formal + mujer + edad + edad2 + i(educacion, ref = 'Básica secundaria') + i(posicion_ocupacional_label) | sector_depto_year",""
+"salaried_endpoints",335655,0.510826430651324,527,16,528,17,"(i(tamano_empresa, ref = 'Solo') * formal + mujer + edad + edad2 + i(educacion, ref = 'Básica secundaria') + i(posicion_ocupacional_label)) * post | sector_depto_year",""
