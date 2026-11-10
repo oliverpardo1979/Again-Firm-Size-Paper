@@ -11,8 +11,9 @@ The current sample includes all twelve months in 2008-2019 and 2021-2025,
 workers aged 15-120, positive observed main-job income, positive usual weekly
 hours in the main job (at most 168), positive weights, and complete controls.
 There are 5,426,316 complete records. Removing fixed-effect singletons leaves
-5,426,174 observations in the preferred full-sample model and 2,765,713 in the
-salaried model.
+5,426,174 observations in each of M0, M1, and M2. The manuscript no longer
+includes a separate salaried-workers analysis. Its earlier scripts and outputs
+remain in the repository for historical comparison, not as current paper results.
 
 Primary monthly income sums P6500, P6590S1, P6600S1, and P6750, with sentinel
 values 98 and 99 treated as missing. A row with all components missing remains
@@ -30,10 +31,83 @@ frame. Monthly weights divided by 12 give annual-average worker counts.
 Original person keys are used to join income, characteristics, and weights.
 Cabecera and resto modules are mutually exclusive. Area modules are not added
 again to cabecera. All merges require unique person-month keys and complete
-matches. Occupational codes are aligned before selecting salaried workers,
-who comprise private employees, government employees, domestic workers, and day
-laborers. The Stata data label identifies already-aligned codes so that
+matches. Status-in-employment codes are aligned across questionnaires.
+The Stata data label identifies already-aligned codes so that
 `harmonize_occupation.R` does not recode them a second time.
+
+## Status-Specific Models (November 2026)
+
+The same complete sample is used in all three pooled models:
+
+- M0: size-by-formality coefficients with status-in-employment level controls.
+- M1: status-by-size intercepts and status-specific formal level differences.
+- M2: intercepts for every observed status-by-size-by-formality cell.
+
+All retain common sex, age, age-squared, and education coefficients and
+sector-department-year fixed effects. M0 and M1 are not nested. M2 nests both.
+The primary cluster is sector-department. Pooled contrasts are also reported
+with sector clustering. Dynamic endpoint tests additionally report department
+and two-way clustering. The documented fixest eigenvalue correction is used
+when a clustered covariance is not positive semidefinite.
+
+From the repository root, after building the current Stata input and the M0
+outputs with the pipeline below:
+
+```sh
+Rscript replication/status_interactions.R
+Rscript replication/status_extensions.R
+python replication/build_status_tables.py
+Rscript replication/plot_status_results.R
+python replication/validate_status_results.py
+```
+
+Both estimation scripts accept the input `.dta` path as their first argument.
+The full `run_primary_revision.py` runner now executes these steps last so that
+legacy M0 scenario generators cannot overwrite the published M2 tables.
+It does not run the historical salaried-worker scripts.
+
+Current pooled coefficients, covariance matrices, contrasts, cell counts, M2
+annual and joint-endpoint estimates, income aggregates, and validation results
+are in `status_output/`. The joint-endpoint covariance CSV is gzip-compressed
+to keep GitHub/Overleaf synchronization lightweight. The validator reads it
+directly. Labels containing `preferred` elsewhere in the source
+are legacy identifiers. `preferred_output/` and `output/` retain M0 benchmarks,
+not M2 results. The literature elasticity and quadratic checks remain explicitly
+M0-based comparisons. They are not interpreted as M2 coefficients.
+
+M2 annual regressions allow all cell intercepts and worker slopes to change by
+year. Joint 2008/2025 estimation preserves cross-year cluster covariance and is
+checked against the two separate annual fits. Annual 2020 data are not used.
+Sparse or absent cells do not produce artificial zero contrasts. The main
+reported size contrasts use solo and 11-19 references. Government and employer
+solo records are retained in estimation but their solo comparisons are not
+interpreted. Small-cell reporting thresholds do not change the estimation sample.
+Dynamic figures use 11-19 as the private-employee reference because the formal
+solo cell has only eight observations in 2008. Own-account dynamics retain the
+solo reference. The endpoint table reports both references where supported.
+
+Income scenarios use pooled M2 coefficients and the 2025 sample. Status in
+employment, other covariates, hours, weights, and absorbed effects stay fixed.
+All actual 2025 destinations exist in the pooled status-size-formality grid.
+More detailed sector-department destination cells need not exist. Support
+screens leave workers at origin and keep the all-worker denominator unchanged.
+Predicted weekly income is hours times exponentiated fitted log hourly income.
+A common retransformation factor cancels from percentage changes.
+
+The extension script reconstructs fitted values using the pooled coefficients
+and weighted residual means within fixed-effect cells. Its weighted RMSE must
+match the original pooled M2 fit. It independently checks individual and
+origin-destination aggregation. The Python validator reconstructs 736 pooled
+contrasts, endpoint tests, and all four unrestricted scenarios directly from
+the exported coefficients, covariances, and income aggregates. These checks
+are not a fresh reconstruction from raw DANE archives. The adopted input has
+MD5 `9c8532a90e3ec255de1ff3b9b292ed0d`.
+
+The extensions use R 4.5.2 and fixest 0.14.1. Ignored local caches under
+`build/status_extensions/` include input MD5, formula, observation count, and
+fixest version in their keys. `status_interactions.R` always re-estimates its
+pooled models. Its aggregate `.rds` file is reproducible but ignored by Git.
+Detailed fixed-effect support counts and individual-level files are not published.
 
 ## Software Environment
 
@@ -112,9 +186,9 @@ python replication/run_primary_revision.py --rscript /path/to/Rscript
 python replication/primary_worker_profiles.py data/primary_records
 ```
 
-The runner refreshes common-premium specifications, geographic and occupation
+The runner refreshes common-premium specifications, geographic and employment-status
 controls, size-by-formality interactions, alternative reference categories,
-annual and joint-endpoint models, salaried models, elasticities, quadratics,
+annual and joint-endpoint models, M1 and M2, elasticities, quadratics,
 income scenarios, conventional clustering comparisons, and manuscript figures
 and tables. It does not edit narrative prose or presentation sources.
 Descriptives are staged in `build/descriptive_refresh/` before their numerical
@@ -136,9 +210,9 @@ Annual models allow all slopes to vary by year. Endpoint tests use joint
 fully interacted 2008/2025 fits. Coefficients and samples stay fixed across
 clustering conventions. Quadratics stop at degree two.
 
-The income calculations use each sample's own preferred coefficients and 2025
-population. The full-sample coefficients applied to salaried workers provide a
-separate composition comparison. Workers already at the destination retain
+The published income calculations use pooled M2 coefficients and the full 2025
+population. Historical salaried-worker calculations remain in their archived
+outputs but are not refreshed or included in the paper. Workers already at the destination retain
 their baseline predictions. All-worker totals and reassigned-worker means have
 different denominators. The common retransformation factor cancels from ratios.
 
@@ -217,8 +291,7 @@ For the adopted estimation outputs, run:
 python replication/validate_regression_outputs.py
 python replication/validate_regression_tables.py
 python replication/validate_preferred_extensions.py
-python replication/validate_salaried_robustness.py
-python replication/validate_salaried_extensions.py --manuscript
+python replication/validate_status_results.py
 python replication/validate_quadratic_preferred.py
 python replication/inference_audit_validate.py
 ```

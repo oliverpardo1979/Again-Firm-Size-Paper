@@ -45,7 +45,7 @@ def table(filename, caption, label, spec, header, rows, notes, size="small"):
 
 
 gaps = read("formal_informal_gaps")
-table("regression_preferred_formality_gap_table.tex", "Formal-informal wage gaps in the preferred specification",
+table("regression_preferred_formality_gap_table.tex", "Formal-informal wage gaps in the M0 benchmark",
       "tab:preferred-formality-gap", "lccc", ["Firm size", "Log-wage gap", "Premium", "$p$-value"],
       [line([r["size"], f'{float(r["estimate"]):.3f}{stars(r)}', f'{float(r["premium"]):.1f}\\%', pvalue(r)]) for r in gaps],
       r"Formal-minus-informal contrasts from Equation~(\ref{eq:main}) at each firm size. Percentage premiums use informal "
@@ -64,7 +64,7 @@ for group in ("Formal", "Informal"):
             rows.append(line([r["size"], f"{early:.1f}", f"{late:.1f}", f"{late-early:.1f}", pvalue(r)]))
 table("regression_preferred_endpoint_changes_table.tex", "Changes in within-formality firm-size premiums, 2008--2025",
       "tab:preferred-endpoint-changes", "lrrrr", ["Firm size", "2008 (\\%)", "2025 (\\%)", "Change (pp)", "$p$-value"], rows,
-      r"Estimates from Equation~(\ref{eq:preferred-dynamics}), with solo work as the reference within each formality-year group. "
+      r"Estimates from Equation~(\ref{eq:benchmark-dynamics}), with solo work as the reference within each formality-year group. "
       r"Changes are in percentage points and calculated before rounding. Two-sided $p$-values test equality of the endpoint "
       r"log-wage contrasts using joint estimation and sector-department clustering. Tests are pointwise, not adjusted for multiple comparisons.")
 
@@ -74,9 +74,9 @@ rows = [line(["Diegmann et al. (2026)", "No worker controls", "0.062", "n.a."]),
 for sample, label in [("raw", "No controls"), ("common", "Common-slope model"), ("Formal", "Formal workers"), ("Informal", "Informal workers")]:
     r = select(elasticities, sample=sample)
     rows.append(line(["Colombia (GEIH)", label, f'{float(r["estimate"]):.3f}{stars(r)}', f'({float(r["std.error"]):.3f})']))
-table("regression_preferred_elasticity_table.tex", "Approximate firm-size elasticities with preferred controls",
+table("regression_preferred_elasticity_table.tex", "Approximate firm-size elasticities with M0 controls",
       "tab:preferred-elasticities", "p{0.29\\textwidth}p{0.37\\textwidth}cc", ["Source", "Specification", "Elasticity", "S.E."], rows,
-      r"Literature means are from Table 1 of \citet{DiegmannMullerSchoefer2026}. All Colombian estimates use the preferred sample. "
+      r"Literature means are from Table 1 of \citet{DiegmannMullerSchoefer2026}. All Colombian estimates use the common estimation sample. "
       r"Formal and informal slopes come from one regression, Equation~(\ref{eq:preferred-elasticity}). The common-slope row imposes "
       r"$\kappa=0$. Standard errors are clustered by sector-department. "
       r"* $p<0.10$, ** $p<0.05$, *** $p<0.01$.")
@@ -114,7 +114,7 @@ table("regression_preferred_extension_clustering_table.tex", "Clustering sensiti
       "tab:preferred-extension-clustering", "lrrrrr",
       ["Workers", "Estimate", "S.E. (SD)", "$p$ (SD)", "S.E. (S)", "$p$ (S)"], rows,
       r"SD denotes sector-department clustering and S denotes sector clustering. The first panel reports the 2025 minus "
-      r"2008 change in the log-wage contrast from Equation~(\ref{eq:preferred-dynamics}) estimated jointly for both years, "
+      r"2008 change in the log-wage contrast from Equation~(\ref{eq:benchmark-dynamics}) estimated jointly for both years, "
       r"not a percentage-point change. The second "
       r"panel reports slopes from Equation~(\ref{eq:preferred-elasticity}). Two-sided tests use 539 SD degrees of "
       r"freedom for the endpoint model, 558 for elasticities, and 16 for sector clustering in both models.")

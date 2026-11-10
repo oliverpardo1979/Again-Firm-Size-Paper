@@ -1,0 +1,10 @@
+Input MD5: 9c8532a90e3ec255de1ff3b9b292ed0d
+R: R version 4.5.2 (2025-10-31 ucrt)
+fixest: 0.14.1
+M2 dynamics: separate annual observed status-size-formality cell intercepts and all worker-control slopes.
+Endpoint tests: joint 2008/2025 regression retaining cross-year cluster covariance, with four clustering procedures.
+M2 scenarios: same 2025 workers, weights, hours, employment status and covariates. Fixed pooled coefficients and absorbed FE.
+Predicted baseline reconstructed using weighted within-FE residual means and verified against pooled M2 RMSE.
+No unavailable pooled destination cell is assigned a coefficient. All actual 2025 destinations must exist.
+Support restrictions leave ineligible movers at origin and keep the entire workforce denominator.
+Percentage changes compare weighted predicted weekly income totals. A common retransformation factor cancels.

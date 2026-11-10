@@ -1,7 +1,7 @@
 Table~\ref{tab:preferred-clustering-comparison} extends the inference
-comparison while holding coefficients and samples fixed. It reports tests
+comparison for M0 while holding coefficients and samples fixed. It reports tests
 with sector-department intersections, sector, department, and two-way sector
-and department clustering. The preferred and elasticity models contain
+and department clustering. The M0 and elasticity models contain
 5,426,174 observations, 559 intersections, 17 sectors, and 33 departments.
 The joint endpoint model contains 634,026 observations and 540 intersections,
 with the same numbers of sectors and departments.
@@ -32,7 +32,20 @@ with two-way clustering (\(p=0.0566\)) or sector clustering
 (\(p=0.0698\)). Their elasticity difference remains significant under
 every clustering procedure (\(p<0.001\)).
 
-The informal 2008--2025 increase has \(p\)-values of 0.040 with sector
+The endpoint rows in this comparison extend M0, not M2, by interacting all
+its coefficients with year:
+\begin{equation}\label{eq:benchmark-dynamics}
+ \ln(w_{iosdt}) =
+ \sum_{\tau\in\mathcal T}\mathbf{1}\{t=\tau\}
+ \left[\phi_\tau F_i+\sum_{g\ne g_0}(\beta_{g\tau}+\theta_{g\tau}F_i)D_{ig}
+       +X_i'\gamma_\tau+\rho_{o\tau}\right]
+ +\lambda_{s\times d\times t}+\varepsilon_{iosdt}.
+\end{equation}
+They retain common size profiles across employment categories within
+formality. M2 endpoint inference is reported separately in
+Table~\ref{tab:status-endpoint-clustering}.
+
+Under M0, the informal 2008--2025 increase has \(p\)-values of 0.040 with sector
 clustering, 0.061 with department clustering, and 0.118 with two-way
 clustering. It is significant at 5 percent with sector and sector-department
 clustering (\(p=0.002\)), but not with the other two procedures.

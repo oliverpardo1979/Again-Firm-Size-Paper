@@ -52,9 +52,9 @@ for term, label in [("linear", r"Log assigned size ($\widehat{a}_{1f}$)"), ("qua
     rows.append(line([label] + [coefficient(select(coefficients, top=150, group=g, term=term)) for g in ("Formal", "Informal")]))
 rows.extend([r"    \midrule", line([r"Implied 101+/solo premium (\%)"] + [
     f'{float(select(predictions, top=150, group=g, size="101+")["premium"]):.1f}' for g in ("Formal", "Informal")])])
-table("regression_preferred_quadratic_table.tex", "Quadratic size profiles with preferred controls",
+table("regression_preferred_quadratic_table.tex", "Quadratic size profiles with M0 controls",
       "tab:polynomial-size-profile", "lcc", ["Term", "Formal workers", "Informal workers"], rows,
-      r"Both columns come from Equation~(\ref{eq:polynomial-size-profile}) on the preferred sample, with 101+ assigned "
+      r"Both columns come from Equation~(\ref{eq:polynomial-size-profile}) on the common estimation sample, with 101+ assigned "
       r"150 workers. The last row reports percentage premiums relative to solo work within each formality group. "
       r"Parentheses contain sector-department-clustered standard errors. * $p<0.10$, ** $p<0.05$, *** $p<0.01$.")
 

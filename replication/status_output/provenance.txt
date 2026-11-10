@@ -1,0 +1,15 @@
+Input: GEIH_primary_income_2008_2025.dta
+Input MD5: 9c8532a90e3ec255de1ff3b9b292ed0d
+R: R version 4.5.2 (2025-10-31 ucrt)
+fixest: 0.14.1
+Pooled estimates promoted from the validated full-period interaction exercise of 2026-11-10.
+All models use the same 5,426,174 observations from 2008-2019 and 2021-2025.
+M0: size x formality with status-in-employment level indicators.
+M1: status x size cell intercepts and status-specific formal level differences.
+M2: observed status x size x formality cell intercepts, including all lower-order terms.
+All models retain common worker-control slopes and sector-department-year fixed effects.
+Empty cells are not estimated. Reporting flags do not delete estimation observations.
+M0 coefficients and covariance matrices reproduced the previously adopted M0 estimates.
+M2 refitting with a different reference cell reproduced all estimable contrasts and standard errors.
+Run replication/status_interactions.R to regenerate the pooled estimates.
+Run replication/status_extensions.R for M2 dynamics and income scenarios.

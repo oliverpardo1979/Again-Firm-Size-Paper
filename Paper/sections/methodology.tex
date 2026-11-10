@@ -36,7 +36,7 @@ status-in-employment categories and departments.
 \end{equation}
 %The specifications with sector-department-year effects exclude 139 singleton observations, leaving 5,268,375 observations.
 
-Our preferred specification allows each size coefficient to differ
+The formality-interacted benchmark, M0, allows each size coefficient to differ
 between formal and informal workers by interacting the size indicators with
 \(F_i\). For size \(g\), the log-wage gap relative to solo workers of the
 same formality status is \(\beta_g\) for informal workers and
@@ -63,6 +63,39 @@ log-wage gap among solo workers.
 %  \Delta^{I\to F}_{g} &= \phi+\theta_g. \nonumber
 %\end{align}
 
+M0 permits different size profiles by formality but constrains each profile
+to be common across status-in-employment categories. We relax this restriction
+in two steps. Let \(g(i)\) denote worker \(i\)'s size category.
+Model M1 includes a separate size profile for each status in employment
+and a status-specific formal-informal level difference:
+\begin{equation}\label{eq:status-size}
+  \ln(w_{iosdt}) = a_{o,g(i)}+\phi_o F_i+X_i'\gamma
+  +\lambda_{s\times d\times t}+\varepsilon_{iosdt}.
+\end{equation}
+Thus, M1 compares sizes within the same employment relationship but imposes
+the same size contrasts for its formal and informal workers. M0 and M1
+relax different restrictions and are not nested.
+
+Our most flexible specification, M2, allows every observed combination of
+status in employment, firm size, and formality to have its own intercept:
+\begin{equation}\label{eq:status-size-formality}
+  \ln(w_{iosdt}) = a_{o,g(i),F_i}+X_i'\gamma
+  +\lambda_{s\times d\times t}+\varepsilon_{iosdt}.
+\end{equation}
+M2 contains both M0 and M1 as restricted cases. All three models use the
+same sample and retain common worker-control coefficients and
+sector-department-year effects. They are estimated jointly across employment
+categories, rather than separately for each category.
+The cell-intercept notation includes the main effects and lower-order
+interactions. One observed cell is normalized to zero. An empty cell has
+no estimated intercept and cannot serve as a destination or reference.
+
+In M2, the log-wage contrast between sizes \(g\) and \(h\) at status \(o\)
+and formality \(f\) is \(a_{o,h,f}-a_{o,g,f}\). The formal-informal
+contrast at a given size and status is \(a_{o,g,1}-a_{o,g,0}\).
+We report size contrasts against solo work and against 11--19 workers,
+using the latter where solo work is not a meaningful comparison.
+
 For each estimated log-wage contrast \(\widehat{\Delta}\), we report the percentage gap
 \(100[\exp(\widehat{\Delta})-1]\). This transformation compares
 exponentiated conditional mean log incomes%, not necessarily arithmetic mean incomes as in the descriptive tables
@@ -70,7 +103,7 @@ exponentiated conditional mean log incomes%, not necessarily arithmetic mean inc
 
 Standard errors are clustered by sector for Equation~(\ref{eq:common-premium})
 and by sector-department for Equations~(\ref{eq:common-premium-geography})
-and~(\ref{eq:main}). %Tests of individual coefficients and contrasts are two-sided. 
+and models M0--M2.
 Table~\ref{tab:firm-size-local-geography-robustness} also reports
 Equation~(\ref{eq:common-premium}) with sector-department clustering to
 compare the geographic specifications under the same clustering convention.
@@ -81,32 +114,23 @@ The appendix details the alternative clustering procedures.
 
 \subsection{Changes over Time}
 
-We extend Equation~(\ref{eq:main}) by allowing the firm-size premiums, the
-formality coefficient, and all worker and status-in-employment coefficients
-to vary by year. Let \(\mathcal T\) denote the sample years and
-\(\mathbf{1}\{t=\tau\}\) the indicator for year \(\tau\). The model is
+We extend M2 by allowing its cell intercepts and worker-control coefficients
+to vary by year. Let \(\mathcal T\) denote the sample years.
 \begin{equation}\label{eq:preferred-dynamics}
-  \begin{aligned}
-    \ln(w_{iosdt}) ={}&
-    \sum_{\tau\in\mathcal T}\mathbf{1}\{t=\tau\}
-    \left[
-      \phi_\tau F_i
-      + \sum_{g\neq g_0}(\beta_{g\tau}+\theta_{g\tau}F_i)D_{ig}
-      + X_i'\gamma_\tau+\rho_{o\tau}
-    \right] \\
-    &+ \lambda_{s\times d\times t}+\varepsilon_{iosdt}.
-  \end{aligned}
+  \ln(w_{iosdt}) =
+  \sum_{\tau\in\mathcal T}\mathbf{1}\{t=\tau\}
+  \left[a_{o,g(i),F_i,\tau}+X_i'\gamma_\tau\right]
+  +\lambda_{s\times d\times t}+\varepsilon_{iosdt}.
 \end{equation}
-We estimate annual premiums using separate regressions for each year.
-
-To test the change between 2008 and 2025, we estimate both years jointly,
-using the fully year-interacted specification in
-Equation~(\ref{eq:preferred-dynamics}). Joint estimation retains the
-covariance between the two years' estimates within sector-department clusters.
-For informal workers, the null is
-\(H_0:\beta_{g,2025}-\beta_{g,2008}=0\). For formal workers, it is
-\(H_0:(\beta_{g,2025}+\theta_{g,2025})-(\beta_{g,2008}+\theta_{g,2008})=0\).
-%The tests are unadjusted for multiple comparisons.
+Annual regressions describe the path of each size contrast within the same
+employment and formality group. To test the change between 2008 and 2025,
+we estimate the two years jointly, retaining cross-year covariance within
+clusters. For sizes \(g\) and \(h\), the null is
+\[
+H_0:(a_{o,h,f,2025}-a_{o,g,f,2025})
+    -(a_{o,h,f,2008}-a_{o,g,f,2008})=0.
+\]
+We do not estimate a time comparison when either endpoint cell is absent.
 
 \subsection{Approximate Firm-Size Elasticities}
 
@@ -114,8 +138,9 @@ GEIH reports size categories rather than exact worker
 counts. To obtain an approximate elasticity, we assign sizes of 1, 2.5,
 4.5, 8, 15, 25, 40.5, 75.5, and 150 to the nine firm-size categories in
 their stated order. Let \(\widetilde{Size}_{iosdt}\) denote this assigned size.
-We replace the size indicators with its logarithm and an interaction with
-formality. Write \(\eta\) for the informal elasticity and \(\kappa\) for
+For comparison with the literature, we retain M0's restriction of common
+size coefficients across employment categories and replace the size
+indicators with its logarithm and an interaction with formality. Write \(\eta\) for the informal elasticity and \(\kappa\) for
 the formal-minus-informal elasticity difference. The model is
 \begin{equation}\label{eq:preferred-elasticity}
   \ln(w_{iosdt})=\alpha+\phi F_i
@@ -124,11 +149,11 @@ the formal-minus-informal elasticity difference. The model is
   +\varepsilon_{iosdt}.
 \end{equation}
 The formal elasticity is \(\eta+\kappa\). Both elasticities come from a single interacted regression
-with the preferred sample and controls. We test
+with the same sample and controls as M0. We test
 \(H_0:\kappa=0\) to assess whether the slopes differ between formality groups. We also
 report a raw regression of log income on log assigned size alone and a
 common-slope version imposing
-\(\kappa=0\), with formality and the preferred controls included in the latter.
+\(\kappa=0\), with formality and the M0 controls included in the latter.
 
 These slopes depend on the assigned sizes, especially the value
 assigned to 101+. They also impose a constant slope within each formality
@@ -159,8 +184,8 @@ while remaining formal. Third, informal workers move to that size category
 while remaining informal. Fourth, all workers are assigned to formal
 employment in firms with 101 or more workers.
 
-We implement these illustrative scenarios using the pooled preferred
-coefficients from Equation~(\ref{eq:main}). All estimated coefficients and
+We implement these illustrative scenarios using the pooled M2
+coefficients from Equation~(\ref{eq:status-size-formality}). All estimated coefficients and
 fixed effects remain unchanged, as do worker characteristics, status in employment, sector, department, weekly hours, and survey weights.
 In particular, keeping status in employment fixed means that a comparison for
 an own-account worker does not predict earnings after becoming a salaried employee.
@@ -174,16 +199,13 @@ workers, with \(D_{ig}^c=D_{ig}\). Reallocation to 101+ employment sets
 already at the destination retain their observed assignments.
 
 Let \(\widehat{\ell}_i\) be fitted log hourly income from
-Equation~(\ref{eq:main}), including the fixed effects, for worker \(i\)'s
+Equation~(\ref{eq:status-size-formality}), including the fixed effects, for worker \(i\)'s
 observed size and formality status. Replacing \(F_i\) and \(D_{ig}\) with
-\(F_i^c\) and \(D_{ig}^c\) gives counterfactual fitted log hourly income
+\(F_i^c\) and \(D_{ig}^c\) sets the destination size \(g^c(i)\) and formality, giving counterfactual fitted log hourly income
 \begin{equation}\label{eq:income-counterfactual-prediction}
-  \begin{aligned}
-    \widehat{\ell}_i^c ={}& \widehat\alpha + \widehat\phi F_i^c
-    + \sum_{g\neq g_0}(\widehat\beta_g+\widehat\theta_g F_i^c)D_{ig}^c \\
-    &+ X_i'\widehat\gamma + \widehat\rho_o
-    + \widehat\lambda_{s\times d\times t}.
-  \end{aligned}
+  \widehat{\ell}_i^c =
+    \widehat a_{o,g^c(i),F_i^c}
+    +X_i'\widehat\gamma+\widehat\lambda_{s\times d\times t}.
 \end{equation}
 
 Let \(\mathcal I_{2025}\) denote the 2025 sample. With expansion weight

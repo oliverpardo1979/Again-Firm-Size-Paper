@@ -25,7 +25,7 @@ for (lang in c("en", "es")) {
     scale_color_manual(values = c(categorical = "#333333", quadratic = "#0072B2"), name = NULL,
       breaks = c("categorical", "quadratic"), labels = if (es) c("Modelo con dummies", "Modelo cuadr\u00e1tico") else c("Categorical model", "Quadratic model")) +
     guides(color = guide_legend(override.aes = list(shape = c(16, NA), linetype = c(0, 1)))) +
-    labs(title = if (es) "Aproximaci\u00f3n cuadr\u00e1tica con los controles preferidos" else "Quadratic approximation with preferred controls",
+    labs(title = if (es) "Aproximaci\u00f3n cuadr\u00e1tica al modelo M0" else "Quadratic approximation to M0",
       subtitle = if (es) "Referencia: solos del mismo grupo. Barras y bandas: IC del 95%. Tama\u00f1o asignado a 101+: 150." else
         "Relative to solo workers of the same status. Bars and bands: 95% CIs. Assigned size for 101+: 150.",
       x = if (es) "Tama\u00f1o asignado de empresa (escala logar\u00edtmica)" else "Assigned firm size (log scale)",

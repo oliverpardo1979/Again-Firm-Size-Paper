@@ -13,15 +13,15 @@ args = parser.parse_args()
 steps = [
     'reconcile_regressions.R', 'update_regression_tables.py',
     'preferred_extensions.R', 'build_preferred_tables.py',
-    'salaried_robustness.R', 'build_salaried_table.py',
     'income_counterfactuals.R', 'build_counterfactual_tables.py',
-    'salaried_extensions.R', 'build_salaried_extensions_tables.py',
     'quadratic_preferred.R', 'build_quadratic_tables.py',
     'inference_audit_prepare.py', 'build_inference_tables.py',
     'plot_reconciled_regressions.R', 'plot_preferred_extensions.R',
-    'plot_salaried_robustness.R', 'plot_quadratic_preferred.R',
+    'plot_quadratic_preferred.R',
     'descriptive_statistics.R', 'minimum_wage_distributions.R',
     'update_descriptive_assets.py', 'plot_sector_income.R',
+    'status_interactions.R', 'status_extensions.R',
+    'build_status_tables.py', 'plot_status_results.R', 'validate_status_results.py',
 ]
 logs = ROOT / 'build/primary_revision_logs'
 logs.mkdir(parents=True, exist_ok=True)

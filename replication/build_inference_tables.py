@@ -86,7 +86,7 @@ def make_table(bootstrap):
             rows.append(line(values))
     if bootstrap:
         filename = "regression_inference_bootstrap_table.tex"
-        caption = "Wild cluster bootstrap tests for preferred-model contrasts"
+        caption = "Wild cluster bootstrap tests for M0 benchmark contrasts"
         label = "tab:preferred-wild-bootstrap"
         notes = (
             r"Contrasts and specifications match Table~\ref{tab:preferred-clustering-comparison}. "
@@ -97,11 +97,11 @@ def make_table(bootstrap):
         )
     else:
         filename = "regression_inference_clustering_table.tex"
-        caption = "Clustering sensitivity of preferred-model contrasts"
+        caption = "Clustering sensitivity of M0 benchmark contrasts"
         label = "tab:preferred-clustering-comparison"
         notes = (
             r"Panels A--B use Equation~(\ref{eq:main}), C uses the joint endpoint model in "
-            r"Equation~(\ref{eq:preferred-dynamics}), and D uses Equation~(\ref{eq:preferred-elasticity}). "
+            r"Equation~(\ref{eq:benchmark-dynamics}), and D uses Equation~(\ref{eq:preferred-elasticity}). "
             r"Estimates in A--C are in log points, not percentages or percentage-point changes. "
             r"SD denotes sector-department intersections, S sector, D department, and S+D two-way sector and department clustering. "
             r"Two-sided $t$ tests use the number of clusters minus one degree of freedom, "
